@@ -290,7 +290,9 @@ address {
   font-style: normal;
   line-height: inherit;
 }
-
+.dropdown{
+    padding: 4px 4px 0px 0px;
+}
 ol,
 ul {
   padding-left: 2rem;
@@ -13219,7 +13221,7 @@ button#extraDropdown {
     font-family: helvetica-bold !important;
     width: 323px;
     height: 42px;
-        padding: 0 0px 0px 20px;
+        padding: 0 0px 0px 12px;
       border-radius: 10px;
 }
 @font-face {
