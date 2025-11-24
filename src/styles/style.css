@@ -274,7 +274,9 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
+.second-banner-area {
+    height: 523px;
+}
 abbr[title] {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
@@ -15602,7 +15604,7 @@ Second Banner Area CSS
 
 .second-banner-content {
   max-width: 66%;
-  top: 120px;
+  top: 167px;
     position: absolute;
 }
 .second-banner-content .trust-info {
@@ -19296,7 +19298,7 @@ ease;
 }
 
 .oregano-font {
-    font-family: Oregano !important;
+   
     font-size:48px;
     color:#808080;
     
