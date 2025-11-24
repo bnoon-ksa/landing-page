@@ -13217,6 +13217,7 @@ button#extraDropdown {
     width: 323px;
     height: 42px;
         padding: 0 0px 0px 20px;
+      border-radius: 10px;
 }
 @font-face {
   font-family: "Alexandria";
@@ -13239,11 +13240,16 @@ a.btn.btn-outline-secondary.btn-language {
     font-family: Alexandria !important;
     font-weight: 400 !important;
     width: 110px;
+      border-radius: 10px;
 }
 .btn-appointment{
  background-color: #39bced !important;
  border:none !important;
-   font-weight: 600 !important;
+   font-weight: 400 !important;
+  width: 223px;
+      border-radius: 10px;
+      height: 42px;
+  padding: 10px;
 }
 .btn-appointment:hover {
   background-color: #39bced !important; /* apna custom color */
