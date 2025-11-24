@@ -1511,6 +1511,8 @@ ul.dropdown-menu.show {
     border-radius: 1px;
     width: 100%;
       padding: 0px;
+  background-color: hsla(0, 0%, 100%, .2);
+    backdrop-filter: blur(20px);
 }
 ul.dropdown-menu.show li:hover a{
     background-color: #000000;
@@ -13020,9 +13022,10 @@ img {
 /*================================================
 Default Btn Area CSS
 =================================================*/
+
 @font-face {
-  font-family: "Helvetica-Bold";
-  src: url("/fonts/Helvetica-Bold.ttf") format("truetype");
+  font-family: "HelveticaW01Bold";
+  src: url("/fonts/Helvetica W01 Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -13221,7 +13224,7 @@ Navbar Area CSS
 button#extraDropdown {
     font-size: 18px;
     font-weight: 400 !important;
-    font-family: helvetica-bold !important;
+    font-family: HelveticaW01Bold !important;
     width: 323px;
     height: 42px;
         padding: 0 0px 0px 12px;
@@ -13238,11 +13241,13 @@ button#extraDropdown {
     border: 1px solid #fff !important;
     color: #fff !important;
      font-weight: 400 !important;
-  font-family: Helvetica-Bold !important;
+  font-family: HelveticaW01Bold !important;
 }
 a.dropdown-item {
     padding: 5px 55px 0px;
     font-size: 18px;
+  color: #fff;
+    border: none;
 }
 a.btn.btn-outline-secondary.btn-language {
     font-family: Alexandria !important;
@@ -15851,7 +15856,7 @@ Second About Area CSS
     font-size: 18px;
     font-weight: 400;
     color: #000000 !important;
-font-family: "Helvetica-Bold" !important;
+font-family: "HelveticaW01Bold" !important;
 }
 .second-about-items .item .text {
      margin-bottom: 0;
