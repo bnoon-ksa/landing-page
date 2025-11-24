@@ -13365,7 +13365,7 @@ ul.navbar-nav {
   gap: 5px;
   align-items: center;
   font-weight: 400;
-  padding: 12px 6px 0px 7px;
+     padding: 1px 4px 0px 8px;
   font-size: 18px;
 }
 .navbar .navbar-nav .nav-item .nav-link svg path {
