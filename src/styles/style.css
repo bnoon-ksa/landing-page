@@ -15670,7 +15670,8 @@ Second Banner Area CSS
       line-height: 1.2;
 }
 .second-banner-content .banner-btn {
-  margin-top: 48px;
+  margin-top: 30px;
+    margin-bottom: 15px;
 }
 
 .urgent-help-area {
@@ -16506,6 +16507,7 @@ Service Overview Area CSS
   margin-top: 20px;
   align-items: center;
   justify-content: center;
+  height: 74px;
 }
 
 /* Doctor Dropdown */
@@ -16516,8 +16518,9 @@ Service Overview Area CSS
   border: none;
   outline: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #fff;
+  font-weight: 600;
 }
 
 /* Location Dropdown */
@@ -16536,13 +16539,15 @@ Service Overview Area CSS
 .search-button {
   width: 200px;
   padding: 12px;
-  background: #333;
+  background: #464A4E;
   color: #fff;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   border-radius: 6px;
   border: none;
   cursor: pointer;
+    border-radius: 0px;
+
 }
 
 .search-button:hover {
@@ -19331,7 +19336,7 @@ ease;
 }
 .search-bar select {
   padding: 10px 40px 10px 15px; /* right padding ensures space before arrow */
-  color: #000;
+      color: rgb(117, 117, 117);
   background-color: #fff;
 
   /* remove default arrow */
