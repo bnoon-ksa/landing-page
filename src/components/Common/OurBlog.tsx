@@ -38,7 +38,7 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
   ];
 
   return (
-    <div className="blog-area ptb-140">
+    <div className="blog-area ptb-140 mt-4 mb-5">
       <div className="container">
         <div className="section-title">
           <div className="row g-4">
