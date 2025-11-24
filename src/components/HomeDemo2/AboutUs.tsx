@@ -110,11 +110,11 @@ function AboutUs() {
 
                       {item.id === 4 ? (
                         <>
-                          <div className="d-flex justify-content-center align-items-center gap-2">
+                          <div className="d-flex justify-content-center align-items-center gap-2 text-margin">
                             <h3>2</h3>
                             <p className="mb-0 text-color">Clinics in Riyadh and Jeddah</p>
                           </div>
-                          <div className="d-flex justify-content-center align-items-center gap-2">
+                          <div className="d-flex justify-content-center align-items-center gap-2 text-margin2">
                             <h3>1</h3>
                             <p className="mb-0 text-color">Opening Soon in North Riyadh</p>
                           </div>
