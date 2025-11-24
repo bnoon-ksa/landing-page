@@ -67,14 +67,29 @@ const HowItWorks = () => {
             </div>
 
             {/* ✅ P Below Form */}
-              <p className="mt-3">
-                You can unsubscribe at any time by emailing<br />
-                communications@bnoon.sa.
-              </p>
+                 <p className="mt-3 ">
+  You can unsubscribe at any time by emailing<br />
+ <a 
+  href="mailto:communications@bnoon.sa" 
+  className="email-link"
+>
+  communications@bnoon.sa
+</a>
+
+</p>
+
             
           </div>
         </div>
       </div>
+           {/* ✅ CSS in same page */}
+      <style jsx>{`
+      a.email-link {
+    color: #404040;
+    text-decoration: underline !important;
+}
+      
+      `}</style>
     </div>
   );
 };
