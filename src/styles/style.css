@@ -393,10 +393,7 @@ pre code {
   color: inherit;
   word-break: normal;
 }
-a.navbar-brand.d-flex.align-items-center {
-    width: 183px;
-    height: 75px;
-}
+
 code {
   font-size: 0.875em;
   color: var(--bs-code-color);
@@ -1502,6 +1499,7 @@ progress {
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1293px;
+    padding: 0px;
   }
 }
 ul.dropdown-menu.show {
@@ -13255,6 +13253,7 @@ a.btn.btn-outline-secondary.btn-language {
       border-radius: 10px;
       height: 42px;
   padding: 10px;
+      font-size: 18px;
 }
 .btn-appointment:hover {
   background-color: #39bced !important; /* apna custom color */
