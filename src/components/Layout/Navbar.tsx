@@ -53,7 +53,7 @@ function Navbar() {
           <div className="d-flex align-items-center">
             <Link href="/en" className="navbar-brand d-flex align-items-center">
               <img
-                src="/images/bnoon-logo.avif"
+                src="/images/bnoon-logo.png"
                 alt="Doutor"
                 width={183}
                 height={75}
