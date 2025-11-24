@@ -105,7 +105,7 @@ function Navbar() {
             <div className="mb-3 d-flex justify-content-end gap-4 align-items-center">
               <div className="dropdown">
                 <button
-                  className="btn btn-primary dropdown-toggle btn-dropdown d-flex align-items-center gap-2"
+                  className="btn btn-primary dropdown-toggle btn-dropdown d-flex align-items-center gap-3"
                   type="button"
                   id="extraDropdown"
                   data-bs-toggle="dropdown"
