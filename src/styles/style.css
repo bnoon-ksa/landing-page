@@ -16502,7 +16502,7 @@ Service Overview Area CSS
 =================================================*/
 .search-bar {
   display: flex;
-  gap: 25px;
+  gap: 55px;
   background: #f5f5f5;
   padding: 20px;
   border-radius: 8px;
@@ -16523,18 +16523,21 @@ Service Overview Area CSS
   font-size: 18px;
   background-color: #fff;
   font-weight: 600;
+  height: 44px;
 }
 
 /* Location Dropdown */
 .location-select {
-  width: 350px;
+  width: 348px;
   padding: 12px;
   padding-right: 35px;
   border: none;
   outline: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #fff;
+      font-weight: 600;
+  height: 44px;
 }
 
 /* Search Button */
@@ -16549,7 +16552,8 @@ Service Overview Area CSS
   border: none;
   cursor: pointer;
     border-radius: 0px;
-
+width: 163px;
+    height: 44px;
 }
 
 .search-button:hover {
@@ -16574,8 +16578,7 @@ Service Overview Area CSS
 }
 .service-overview-content {
   padding-left: 0px;
-  width: 544px;
-    height: 436px;
+  width: 647px;
 }
 .search-overview-content h2, .search-overview-content .h2 {
   font-size: 38px;
