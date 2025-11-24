@@ -261,7 +261,10 @@ h4, .h4 {
     font-size: 1.5rem;
   }
 }
-
+.margin-dropdown {
+    margin: -12px 0px 2px 0px;
+    padding: 0px 0px 10px;
+}
 h5, .h5 {
   font-size: 1.25rem;
 }
@@ -13246,6 +13249,8 @@ a.btn.btn-outline-secondary.btn-language {
     font-weight: 400 !important;
     width: 110px;
       border-radius: 10px;
+  height: 42px;
+}
 }
 .btn-appointment{
  background-color: #39bced !important;
