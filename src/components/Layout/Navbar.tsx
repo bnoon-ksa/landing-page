@@ -118,7 +118,6 @@ function Navbar() {
           transform: "scaleX(-1)",
           width: "15px",
           height: "15px",
-          margin: "0px 25px 0px 0px",
         }}
       />
       Riyadh: +966 11 444 8080
@@ -128,7 +127,7 @@ function Navbar() {
     <img
       src="/images/droparrow.svg"
       alt="arrow"
-      style={{ width: "22px", height: "22px" }}
+      style={{ width: "22px", height: "22px", margin: "0px 25px 0px 0px", }}
     />
     {/* Or paste SVG directly */}
     {/* <svg width="16" height="16" ...>...</svg> */}
