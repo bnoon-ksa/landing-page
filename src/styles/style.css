@@ -15610,6 +15610,7 @@ Second Banner Area CSS
   max-width: 66%;
   top: 167px;
     position: absolute;
+  margin: 0px 10px;
 }
 .second-banner-content .trust-info {
   display: inline-flex;
