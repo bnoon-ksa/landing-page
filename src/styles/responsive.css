@@ -19,6 +19,11 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  a.btn.btn-outline-secondary.btn-language {
+    font-family: Alexandria !important;
+    font-weight: 400 !important;
+    /* width: 110px; */
+}
    .image-column {
         order: -1;
       }
