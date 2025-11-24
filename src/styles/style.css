@@ -12974,8 +12974,8 @@ img {
 }
 
 .ptb-140 {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 
 .pt-140 {
@@ -13354,6 +13354,9 @@ font-size:14px !important;
   margin-left: 25px;
   margin-right: 8px;
 }
+ul.navbar-nav {
+    margin-top: 10px;
+}
 .navbar .navbar-nav .nav-item .nav-link {
   position: relative;
   color: #ffffff;
@@ -13362,7 +13365,7 @@ font-size:14px !important;
   gap: 5px;
   align-items: center;
   font-weight: 400;
-     padding: 15px 5px;
+  padding: 12px 6px 0px 7px;
   font-size: 18px;
 }
 .navbar .navbar-nav .nav-item .nav-link svg path {
@@ -15656,7 +15659,7 @@ Second Banner Area CSS
       line-height: 1.2;
 }
 .second-banner-content .banner-btn {
-  margin-top: 25px;
+  margin-top: 48px;
 }
 
 .urgent-help-area {
