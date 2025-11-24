@@ -125,9 +125,9 @@ function Navbar() {
 
     {/* 👉 YOUR CUSTOM ICON HERE */}
     <img
-      src="/images/droparrow.png"
+      src="/images/droparrow.svg"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      style={{ width: "22px", height: "22px" }}
     />
     {/* Or paste SVG directly */}
     {/* <svg width="16" height="16" ...>...</svg> */}
