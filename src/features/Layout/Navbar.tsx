@@ -95,7 +95,7 @@ function Navbar() {
             >
               <i
                 className="bi bi-list"
-                style={{ fontSize: "2rem", color: "#ffffffff" }}
+                style={{ fontSize: "2rem", color: "#ffffffff", transform:"scaleX(-1)" }}
               ></i>
             </button>
           </div>
@@ -116,8 +116,8 @@ function Navbar() {
       data-bs-toggle="dropdown"
       aria-expanded="false"
     >
-      <FaPhone style={{ color: "white" }} />
-      الرياض : +966 11 444 8080
+      <FaPhone style={{ color: "white", transform:"scaleX(-1)"}} />
+     <span style={{ marginLeft: "auto" }}>الرياض : +966 11 444 8080</span>
     </button>
     <ul
       className="dropdown-menu text-center"
@@ -307,6 +307,14 @@ function Navbar() {
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
           transition: all 0.3s ease;
         }
+          button#extraDropdown {
+    width: 307px;
+    padding: 0px 20px;
+    height: 42px;
+    text-align: left;
+    justify-content: right;
+    direction: ltr;
+}
       `}</style>
     </>
   );
