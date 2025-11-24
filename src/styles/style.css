@@ -391,7 +391,10 @@ pre code {
   color: inherit;
   word-break: normal;
 }
-
+a.navbar-brand.d-flex.align-items-center {
+    width: 183px;
+    height: 75px;
+}
 code {
   font-size: 0.875em;
   color: var(--bs-code-color);
@@ -13245,7 +13248,7 @@ a.btn.btn-outline-secondary.btn-language {
 .btn-appointment{
  background-color: #39bced !important;
  border:none !important;
-   font-weight: 400 !important;
+   font-weight: 600 !important;
   width: 223px;
       border-radius: 10px;
       height: 42px;
@@ -13356,10 +13359,7 @@ font-size:14px !important;
   gap: 5px;
   align-items: center;
   font-weight: 400;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+     padding: 15px 5px;
   font-size: 18px;
 }
 .navbar .navbar-nav .nav-item .nav-link svg path {
