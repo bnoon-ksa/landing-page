@@ -103,36 +103,57 @@ function Navbar() {
           {/* Right side (desktop only) */}
           <div className="d-none d-md-flex flex-column align-items-end">
             <div className="mb-3 d-flex justify-content-end gap-4 align-items-center">
-              <div className="dropdown">
-                <button
-                  className="btn btn-primary dropdown-toggle btn-dropdown d-flex align-items-center gap-3"
-                  type="button"
-                  id="extraDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                   <FaPhone style={{ color: "white", transform: "scaleX(-1)", width:"15px", height:"15px" }}  />
-                  Riyadh: +966 11 444 8080
-                </button>
-                <ul className="dropdown-menu" aria-labelledby="extraDropdown">
-                  <li>
-                    <Link
-                      className="dropdown-item"
-                      href="https://api.whatsapp.com/send?phone=966114448080&text=Hello"
-                    >
-                      Riyadh: +966 11 444 8080
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="dropdown-item"
-                      href="https://api.whatsapp.com/send?phone=966126800800&text=Hello"
-                    >
-                      Jeddah: +966 12 680 0800
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+             <div className="dropdown">
+  <button
+    className="btn btn-primary dropdown-toggle btn-dropdown d-flex align-items-center justify-content-between gap-3 w-100"
+    type="button"
+    id="extraDropdown"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <div className="d-flex align-items-center gap-2">
+      <FaPhone
+        style={{
+          color: "white",
+          transform: "scaleX(-1)",
+          width: "15px",
+          height: "15px",
+        }}
+      />
+      Riyadh: +966 11 444 8080
+    </div>
+
+    {/* 👉 YOUR CUSTOM ICON HERE */}
+    <img
+      src="/images/droparrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+    {/* Or paste SVG directly */}
+    {/* <svg width="16" height="16" ...>...</svg> */}
+
+  </button>
+
+  <ul className="dropdown-menu" aria-labelledby="extraDropdown">
+    <li>
+      <Link
+        className="dropdown-item"
+        href="https://api.whatsapp.com/send?phone=966114448080&text=Hello"
+      >
+        Riyadh: +966 11 444 8080
+      </Link>
+    </li>
+    <li>
+      <Link
+        className="dropdown-item"
+        href="https://api.whatsapp.com/send?phone=966126800800&text=Hello"
+      >
+        Jeddah: +966 12 680 0800
+      </Link>
+    </li>
+  </ul>
+</div>
+
 
               {isArabic ? (
                 <Link
@@ -324,6 +345,10 @@ function Navbar() {
           right: 20px;
           top: 20px;
         }
+            /* Bootstrap dropdown default caret hide */
+  #extraDropdown.dropdown-toggle::after {
+    display: none !important;
+  }
       `}</style>
     </>
   );
