@@ -13208,7 +13208,14 @@ Navbar Area CSS
     border: 1px solid #ffffff !important;
     font-weight: 600 !important;
 }
-
+button#extraDropdown {
+    font-size: 18px;
+    font-weight: 400 !important;
+    font-family: helvetica-bold !important;
+    width: 323px;
+    height: 42px;
+    padding: 0px 10px;
+}
 .btn-language{
     background-color:  #6c757d00 !important;
     border: 1px solid #fff !important;
