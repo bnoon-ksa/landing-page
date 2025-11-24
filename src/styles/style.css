@@ -13216,6 +13216,12 @@ button#extraDropdown {
     height: 42px;
     padding: 0px 10px;
 }
+@font-face {
+  font-family: "Alexandria";
+  src: url("/fonts/Alexandria-Regular-BF6690948fea175.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .btn-language{
     background-color:  #6c757d00 !important;
     border: 1px solid #fff !important;
@@ -13223,7 +13229,15 @@ button#extraDropdown {
      font-weight: 400 !important;
   font-family: Helvetica-Bold !important;
 }
-
+a.dropdown-item {
+    padding: 5px 45px 0px;
+    font-size: 18px;
+}
+a.btn.btn-outline-secondary.btn-language {
+    font-family: Alexandria !important;
+    font-weight: 400 !important;
+    width: 110px;
+}
 .btn-appointment{
  background-color: #39bced !important;
  border:none !important;
