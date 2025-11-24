@@ -13017,6 +13017,7 @@ Default Btn Area CSS
   font-weight: bold;
   font-style: normal;
 }
+
 .banner-text{
     font-size: 14px !important;
     font-style: italic;
@@ -13214,7 +13215,7 @@ button#extraDropdown {
     font-family: helvetica-bold !important;
     width: 323px;
     height: 42px;
-    padding: 0px 10px;
+        padding: 0 0px 0px 20px;
 }
 @font-face {
   font-family: "Alexandria";
@@ -13230,7 +13231,7 @@ button#extraDropdown {
   font-family: Helvetica-Bold !important;
 }
 a.dropdown-item {
-    padding: 5px 45px 0px;
+    padding: 5px 55px 0px;
     font-size: 18px;
 }
 a.btn.btn-outline-secondary.btn-language {
