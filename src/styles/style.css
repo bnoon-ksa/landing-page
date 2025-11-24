@@ -16567,6 +16567,13 @@ Service Overview Area CSS
 .service-overview-image {
   overflow: hidden;
 }
+.service-overview-image
+ {
+    width: 544px;
+    height: 436px;
+    align-items: end;
+    margin: 0px 0px 0px 40px;
+}
 .service-overview-image img {
   transition: 0.7s;
 }
