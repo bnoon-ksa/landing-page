@@ -6,19 +6,19 @@ const Benefits = () => {
   const benefitsData = [
     {
       id: 1,
-      icon: "/images/icons/benefit1.svg",
+      icon: "/images/icons/benefit1.jpg",
       title: "Convenient & Fast",
       description: "See a doctor within minutes—no waiting rooms.",
     },
     {
       id: 2,
-      icon: "/images/icons/benefit2.svg",
+      icon: "/images/icons/benefit2.jpg",
       title: "Certified Doctors",
       description: "Licensed professionals in multiple specialties.",
     },
     {
       id: 3,
-      icon: "/images/icons/benefit3.svg",
+      icon: "/images/icons/benefit3.jpg",
       title: "Private & Secure",
       description: "End-to-end encrypted, HIPAA-compliant platform.",
     },
@@ -31,9 +31,9 @@ const Benefits = () => {
   ];
 
   const images = [
-    "/images/fertility-women.jpg",
-    "/images/baby-health-network.jpg",
-    "/images/baby-health-network-2.jpg",
+    "/images/benefit1.jpg",
+    "/images/benefit2.jpg",
+    "/images/benefit3.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
