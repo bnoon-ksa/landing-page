@@ -111,7 +111,7 @@ function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <FaPhone style={{ color: "white", transform: "scaleX(-1)" }} />
+                   <FaPhone style={{ color: "white", transform: "scaleX(-1)", width:"15px", height:"15px" }}  />
                   Riyadh: +966 11 444 8080
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="extraDropdown">
