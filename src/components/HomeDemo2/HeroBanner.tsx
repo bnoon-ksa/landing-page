@@ -19,7 +19,7 @@ function HeroBanner() {
       descColor: "#004E78",
       extra: "*Terms & Conditions Apply",
       buttonLink: "en/waad-bnoon-program",
-      buttonText: "Book Now",
+      buttonText: "Read More",
     },
     {
       video: "images/banner/banner-3.mp4",
