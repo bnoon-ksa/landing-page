@@ -63,7 +63,7 @@ function OurServices() {
 
 
   return (
-    <div className="services-area mt-5">
+    <div className="services-area mt-5 pt-3 pb-4">
       <div className="inner ptb-140">
         <div className="container">
 
