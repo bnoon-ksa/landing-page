@@ -23,7 +23,7 @@ const HowItWorksSlider = () => {
   ];
 
   return (
-    <div className="how-it-works-area ptb-140 smoke-bg-color">
+    <div className="how-it-works-area ptb-140 smoke-bg-color pt-4 pb-5">
       <div className="container">
         <div className="section-title">
           <div className="row justify-content-center align-items-center g-4">
