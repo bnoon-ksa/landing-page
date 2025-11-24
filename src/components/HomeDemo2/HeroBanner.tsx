@@ -12,15 +12,17 @@ function HeroBanner() {
   // ✅ Slides (video + text + buttonLink)
   const slides = [
     {
-      video: "images/banner/banner-2.mp4",
-      title: "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
-      desc: "<strong>Get Pregnant or Your Money Back:</strong><br><em>Peace of Mind. Less Stress</em>",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      extra: "*Terms & Conditions Apply",
-      buttonLink: "en/waad-bnoon-program",
-      buttonText: "Read More",
-    },
+  video: "images/banner/banner-2.mp4",
+  title: "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
+  desc: "<strong>Get Pregnant or Your Money Back:</strong><br><em>Peace of Mind. Less Stress</em>",
+  titleColor: "#004E78",
+  descColor: "#004E78",
+  extra: "*Terms & Conditions Apply",
+  buttonLink: "en/waad-bnoon-program",
+  buttonText: "Read More",
+
+  descClass: "special-desc",   // 👈 ADD THIS
+},
     {
       video: "images/banner/banner-3.mp4",
       title: "THE FUTURE OF<br>FERTILITY IS HERE",
@@ -140,10 +142,12 @@ function HeroBanner() {
             dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
           />
 
-          <p
-            dangerouslySetInnerHTML={{ __html: slides[currentSlide].desc }}
-            style={{ color: slides[currentSlide].descColor || "#fff" }}
-          />
+        <p
+  className={slides[currentSlide].descClass || ""}
+  dangerouslySetInnerHTML={{ __html: slides[currentSlide].desc }}
+  style={{ color: slides[currentSlide].descColor || "#fff" }}
+/>
+
 
           <div className="banner-btn">
             <Link
@@ -205,6 +209,11 @@ function HeroBanner() {
           transform: translateX(0);
           transition: all 1.5s ease;
         }
+          /* 👉 Custom style ONLY for Slide 1 Desc */
+  .special-desc {
+    margin-top: 18px;
+    line-height: 1.7;
+  }
       `}</style>
     </div>
   );
