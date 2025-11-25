@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import 'remixicon/fonts/remixicon.css';
 // ✅ Doctor data structure
 interface OurExperts {
   id: number;
