@@ -19,11 +19,27 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
   a.btn.btn-outline-secondary.btn-language {
     font-family: Alexandria !important;
     font-weight: 400 !important;
-    /* width: 110px; */
-}
+    width: 59px;
+    border-radius: 10px;
+    height: 24px;
+    font-size: 10px !important;
+  }
+
+  nav#navbar {
+    padding: 15px !important;
+    height: 70px;
+  }
+
+  a.navbar-brand {
+    width: 130px;
+    height: 39px;
+    margin: 0px 70px 10px 0px !important;
+  }
+
    .image-column {
         order: -1;
       }
@@ -35,8 +51,14 @@
 }
      .service-overview-image {
     width: 85%;
-         margin-bottom: 20px;
+    margin-bottom: 20px;
+            height: 250px;
+            margin-left:auto;
   }
+   .responsive-image {
+        width: 100% !important;
+        height: 250px !important;
+    }
   .pt-140 {
     padding-top: 20px;
   }
@@ -353,8 +375,8 @@
 
   /* Home Two Responsive */
   .second-banner-area {
-    padding-top: 50px;
-            height: 200px !important;
+            height: 117px !important;
+    padding-top: 150px;
   }
   .second-banner-area .container-fluid {
     padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -375,22 +397,38 @@
     margin-bottom: 7px;
   }
   .second-banner-content h1 {
-    font-size: 15px;
-    margin-bottom: 15px;
+    font-size: 12px;
+    margin-bottom: 8px;
   }
   .second-banner-content p {
-  font-size: 12px !important;
+  font-size: 8px !important;
   margin-bottom: 0;
   color: #ffffff;
 }
-  .second-banner-content .banner-btn {
+
+  .second-banner-content .banner-btn{
     margin-top: 10px;
-  }
-  .btn-banner {
+    margin-bottom: 5px;
+}
+   .btn-banner {
     background-color: #39bced !important;
     border: none !important;
     padding: 5px 13px !important;
-        font-size: 15px !important;
+    font-size: 8px !important;
+  }
+.btn-appointment {
+    background-color: #39bced !important;
+    border: none !important;
+    font-weight: 600 !important;
+    width: 79px;
+    border-radius: 10px;
+   height: 21px;
+    padding: 10px;
+    font-size: 18px;
+}
+.special-desc {
+    margin-top: 8px !important;
+    line-height: 1.5 !important;
 }
   .urgent-help-area {
     margin-top: 50px;
@@ -777,6 +815,7 @@
   }
   .service-overview-content {
     padding-left: 0;
+    width: 350px;
   }
   .service-overview-content h2 {
     font-size: 20px;
@@ -2040,7 +2079,7 @@
 @media (max-width: 767px) {
   .second-banner-content {
     max-width: 66%;
-    top: 40px;
+    top: 25px;
 }
   .service-overview-content h4 {
     font-size: 18px !important;
