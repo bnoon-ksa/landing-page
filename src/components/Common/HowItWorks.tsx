@@ -51,7 +51,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="work-area ptb-140">
+    <div className="work-area ptb-140 mt-2 mb-4">
       <div className="container">
         <div className="section-title">
           <div className="row justify-content-center align-items-center g-4">
