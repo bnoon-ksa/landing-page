@@ -15809,7 +15809,7 @@ Second About Area CSS
 .second-about-content {
   position: sticky;
   top: 120px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 .second-about-content .sub {
   display: inline-flex;
