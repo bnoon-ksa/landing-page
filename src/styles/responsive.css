@@ -1,4 +1,9 @@
 /* Max width 767px */
+.arrow-icon {
+    width: 12px !important;
+    height: auto;
+    margin-left: auto;
+}
 /* 📱 Responsive adjustments */
 @media (max-width: 991px) {
   .service-overview-image {
@@ -888,8 +893,8 @@
     margin-top: 30px;
   }
   .service-overview-content {
-    padding-left: 0;
-    width: 350px;
+    margin: 0px 10px;
+    width: 320px;
   }
   .service-overview-content h2 {
     font-size: 20px;
