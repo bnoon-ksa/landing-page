@@ -226,10 +226,11 @@ const OurDoctors = () => {
         font-weight: 600;
         margin: -10px 30px 10px 0px;
     }
-}
-.doctor-section {
+    .doctor-section {
     padding: 0px 25px;
 }
+}
+
     .heading {
     margin: -20px 0px;
 }
