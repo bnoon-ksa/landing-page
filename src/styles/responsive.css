@@ -19,6 +19,45 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+       .second-about-area {
+        margin: 20px 10px 0px;
+    }
+    .fertility-area {
+    overflow: hidden;
+    margin: 0px 10px;
+}
+.tool-btn{
+  font-size:14px;
+}
+  .service-overview-content {
+    width: 320px;
+    margin: 0px 10px;
+  }
+    .service-overview-area.ptb-140 {
+           padding: 20px 0px;
+  }
+  .partner-area {
+    margin: 0px 10px;
+}
+  .blog-area {
+    margin: 0px 10px;
+    padding: 0px;
+}
+.blog-card {
+    transition: 0.7s;
+    transition: 0.7s;
+    padding: 15px;
+    border: 1px solid #00000038;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+.how-it-works-area {
+    padding: 0px 10px;
+}
+    .how-it-work-card {
+        padding: 0px;
+        margin: -15px 0px 15px;
+    }
   .list-unstyled
  {
     margin-top: 65px;
@@ -63,10 +102,22 @@
   .footer-area {
     margin: 0px 0px 50px;
 }
+    .service-overview-content h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #004E78;
+}
+.service-overview-content ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+} 
      .service-overview-image {
     width: 85%;
     margin-bottom: 20px;
-            height: 220px;
+            height: 200px;
             margin-left:auto;
   }
   .mail-btn {
