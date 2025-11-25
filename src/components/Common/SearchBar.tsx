@@ -118,7 +118,10 @@ const SearchBar = () => {
       locationMenu?.classList.remove("open");
     }}
   >
-    <span>{doctor || "Select Doctor"}</span>
+    <span className={doctor ? "selected-text" : "placeholder-text"}>
+  {doctor || "Select Doctor"}
+</span>
+
     <img src="/images/arrow.png" className="arrow-icon" />
   </button>
   <div className="dropdown-menu doctor-menu">
@@ -150,7 +153,10 @@ const SearchBar = () => {
       doctorMenu?.classList.remove("open");
     }}
   >
-    <span>{location || "By Location"}</span>
+   <span className={location ? "selected-text" : "placeholder-text"}>
+  {location || "By Location"}
+</span>
+
     <img src="/images/arrow.png" className="arrow-icon" />
   </button>
   <div className="dropdown-menu location-menu">
@@ -278,6 +284,21 @@ const SearchBar = () => {
   .doctor-bar {
     margin-top: 20px;
   }
+/* Only Doctor Dropdown Scrollable */
+.dropdown-menu.doctor-menu {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.placeholder-text {
+  color: #757575 !important; /* Default grey */
+}
+
+.selected-text {
+  color: #000 !important;   /* Black when selected */
+  font-weight: 600;
+}
+
 
   /* ✅ Mobile responsive */
   @media (max-width: 767px) {
