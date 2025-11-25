@@ -64,7 +64,7 @@ function OurServices() {
 
   return (
     <div className="services-area mt-5">
-      <div className="inner ptb-140 pt-5 pb-5">
+      <div className="inner ptb-140">
         <div className="container">
 
  <div className="section-title">
@@ -108,8 +108,8 @@ function OurServices() {
                   <div className={`service-card wrap2 ${index === 1 || index === 3 ? "left-card" : ""}`}>
                     <div className="top">
                       <div
-                        className="d-flex align-items-center mb-2"
-                        style={{ justifyContent: "space-between", gap: "20px" }}
+                        className="d-flex align-items-center mb-2 space-content"
+                        style={{  gap: "20px" }}
                       >
                         <h3 className="mb-0">{service.title}</h3>
 
@@ -158,6 +158,22 @@ function OurServices() {
 }
           .service-card {
         margin: 0 6px;
+    }
+}
+    .space-content{
+    justify-content: space-between;
+    }
+    @media (max-width: 767px) {
+
+  .top h3 {
+    order: 2; /* h3 after icon */
+    margin: 0;
+  }
+  .top img {
+    order: 1; /* icon first */
+  }
+     .space-content{
+    justify-content: normal;
     }
 }
       `}</style>
