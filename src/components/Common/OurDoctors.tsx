@@ -121,13 +121,13 @@ const OurDoctors = () => {
 
 
   return (
-      <div className="container mt-5">
+      <div className="container mt-5 doctor-section">
         <div className="section-title">
           <div className="row justify-content-center align-items-center g-4">
             <div className="col-lg-10 col-md-12">
               <div className="left">
               
-                <h2>Our Physicians</h2>
+                <h2 className="heading">Our Physicians</h2>
               </div>
             </div>
             <div className="col-lg-2 col-md-12"></div>
@@ -176,6 +176,11 @@ const OurDoctors = () => {
                     <Link href={doctor.profileLink}>{doctor.name}</Link>
                   </h3>
                   <span className="sub">{doctor.qualification}</span>
+                  {doctor.location && (
+                        <div className="doctor-location location-color">
+                          <i className="ri-map-pin-line"></i> {doctor.location}
+                        </div>
+                      )}
                   <div>
                     <Link
                       href="en/request-an-appoinment"
@@ -201,6 +206,51 @@ const OurDoctors = () => {
           opacity: 0; border-radius: 10px;
         }
         .image-overlay .doctor-btn { padding: 10px 20px; color: #fff; border-radius: 5px; }
+        /* 📱 MOBILE — Always show AND appear right below qualification */
+@media (max-width: 991px) {
+  .doctor-location {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: static !important;  /* ensures it sits under qualification */
+  }
+    .location-color{
+           color: #000;
+        text-align: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        margin: -10px 30px 10px 0px;
+    }
+}
+.doctor-section {
+    padding: 0px 25px;
+}
+    .heading {
+    margin: -20px 0px;
+}
+/* 🖥 DESKTOP — Keep original hover behavior, NO UI CHANGE */
+@media (min-width: 992px) {
+  .doctor-location {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    position: absolute; /* your existing layout remains untouched */
+    bottom: 20px;       /* your original design keeps working */
+    left: 20px;   
+    display:none;      /* or whatever your theme uses */
+  }
+
+  .doctor-card:hover .doctor-location {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
       `}</style>
     </div>
   );
