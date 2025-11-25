@@ -63,7 +63,7 @@ function OurServices() {
 
 
   return (
-    <div className="services-area mt-5 pt-3 pb-4">
+    <div className="services-area mt-5">
       <div className="inner ptb-140">
         <div className="container">
 
@@ -92,9 +92,9 @@ function OurServices() {
   refs.current[index] = el;
 }}
 
-                  className={`col-md-6 mx-auto px-0`}
+                  className={`col-md-6`}
                   style={{
-                    maxWidth: "600px",
+                    
 
                     opacity: visible[index] ? 1 : 0,
                     transform: visible[index]
@@ -105,7 +105,7 @@ function OurServices() {
                     transition: "all 0.6s ease-out",
                   }}
                 >
-                  <div className="service-card wrap2">
+                  <div className={`service-card wrap2 ${index === 1 || index === 3 ? "left-card" : ""}`}>
                     <div className="top">
                       <div
                         className="d-flex align-items-center mb-2"
@@ -132,6 +132,35 @@ function OurServices() {
 
         </div>
       </div>
+      <style jsx>{`
+        .service-card .top p {
+    margin-bottom: 0;
+    margin-top: 0px !important; 
+    padding: 0px 20px 0px 0px !important;
+}
+    .service-card.wrap2 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 600px;
+}
+        .left-card {
+  margin-left: auto; /* jitna margin chahe */
+}
+@media (max-width: 767px) {
+    .service-card.wrap2 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 340px;
+}
+          .service-card {
+        margin: 0 6px;
+    }
+}
+      `}</style>
     </div>
   );
 }
