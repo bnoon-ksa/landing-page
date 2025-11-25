@@ -19,6 +19,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  .list-unstyled
+ {
+    margin-top: 65px;
+}
 .service-overview-content h2{
     font-size: 38px;
     margin-bottom: 10px;
