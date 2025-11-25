@@ -14,7 +14,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <div className="stay-area ptb-140">
+    <div className="stay-area ptb-140 pt-5">
       <div className="container">
         <div className="section-title">
           <div className="row align-items-center g-4">
