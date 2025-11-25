@@ -163,7 +163,7 @@ const OurDoctors = () => {
                         View Profile
                       </Link>
                       {doctor.location && (
-                        <div className="doctor-location">
+                        <div className="doctor-location docotrs">
                           <i className="ri-map-pin-line"></i> {doctor.location}
                         </div>
                       )}
@@ -177,7 +177,7 @@ const OurDoctors = () => {
                   </h3>
                   <span className="sub">{doctor.qualification}</span>
                   {doctor.location && (
-                        <div className="doctor-location location-color">
+                        <div className="location-color">
                           <i className="ri-map-pin-line"></i> {doctor.location}
                         </div>
                       )}
@@ -226,11 +226,10 @@ const OurDoctors = () => {
         font-weight: 600;
         margin: -10px 30px 10px 0px;
     }
-    .doctor-section {
+}
+.doctor-section {
     padding: 0px 25px;
 }
-}
-
     .heading {
     margin: -20px 0px;
 }
@@ -239,19 +238,28 @@ const OurDoctors = () => {
   .doctor-location {
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease-in-out;
     position: absolute; /* your existing layout remains untouched */
-    bottom: 20px;       /* your original design keeps working */
-    left: 20px;   
-    display:none;      /* or whatever your theme uses */
+    color: #fff;
+    margin: 10px 15px 0px;
+    display: block; /* or flex depending on your layout */
   }
-
+.location-color {
+    display: none;
+}
   .doctor-card:hover .doctor-location {
     opacity: 1;
     visibility: visible;
   }
 }
 
+@media only screen and (max-width: 767px) {
+ .doctor-location {
+    display:none !important;
+  }
+.location-color {
+    display: block;
+}
+      }
       `}</style>
     </div>
   );
