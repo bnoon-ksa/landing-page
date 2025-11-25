@@ -14,6 +14,14 @@ interface Doctor {
 
 const OurDoctors = () => {
   // ✅ Sample doctor data
+  // ✅ FIX: Hooks must be inside the component
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768);
+    }
+  }, []);
   const doctorsData: Doctor[] = [
     {
       id: 1,
@@ -135,12 +143,14 @@ const OurDoctors = () => {
         </div>
 
            {/* Motion animation for the doctors container */}
-      <motion.div
-        className="doctors-scroll-container"
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
+  <motion.div
+  initial={{ opacity: 0, x: isMobile ? 0 : -100 }}
+  animate={isMobile ? { opacity: 1, x: 0 } : undefined}
+  whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.6 }}
+>
+
         <div className="row g-4">
           {doctorsData.map((doctor) => (
             <motion.div
