@@ -14571,7 +14571,7 @@ Doctors Area CSS
 .mail-btn {
     background-color: #004e78 !important;
       border-radius: 0px !important;
-  border: none;
+  border: none !important;
 }
 .mail-btn:hover {
     background-color: #fff !important; /* hover color */
@@ -16569,7 +16569,6 @@ Service Overview Area CSS
 .service-overview-image
  {
     width: 544px;
-    height: 436px;
     align-items: end;
     margin: 0px 0px 0px 40px;
 }
