@@ -213,7 +213,7 @@ const SearchBar = () => {
   }
 
   .arrow-icon {
-    width: 18px;
+    width: 12px;
     height: auto;
     margin-left: auto;
   }
