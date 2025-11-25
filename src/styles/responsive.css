@@ -19,7 +19,17 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
-
+.service-overview-content h2{
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #004E78;
+}
+.service-overview-content h4{
+    font-size: 30px !important;
+    font-weight: 500 !important;
+    color: #004e78;
+    margin: 4px 0px 5px 0px;
+}
   a.btn.btn-outline-secondary.btn-language {
     font-family: Alexandria !important;
     font-weight: 400 !important;
@@ -52,9 +62,15 @@
      .service-overview-image {
     width: 85%;
     margin-bottom: 20px;
-            height: 250px;
+            height: 220px;
             margin-left:auto;
   }
+  .mail-btn {
+    width: 350px;
+    margin-top: 10px;
+    border: none;
+
+}
    .responsive-image {
         width: 100% !important;
         height: 250px !important;
@@ -492,13 +508,16 @@
     border: none;
     box-shadow: unset;
     position: relative;
-    padding: 15px 57px 15px 20px;
+    padding: 15px 17px 15px 0px;
     background-color: transparent;
     color: #2a3547;
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px 5px 0 0;
     transition: .7s;
+}
+  .faq-accordion .accordion .accordion-item .accordion-body {
+    padding: 0px 0px;
 }
   .second-about-btn {
     margin-top: 25px;
