@@ -48,7 +48,7 @@ const toggleAccordion = (index: number) => {
   };
 
   return (
-    <div className="faq-area">
+    <div className="faq-area pt-2">
       <div className="container">
         <div className="section-title">
           <div className="row g-4">
@@ -74,7 +74,7 @@ const toggleAccordion = (index: number) => {
                 backgroundImage: "url(/images/faqs.jpg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                minHeight: "450px",
+                minHeight: "576px",
                 borderRadius: "12px",
               }}
             ></motion.div>
