@@ -13363,7 +13363,7 @@ font-size:14px !important;
 }
 .navbar .navbar-nav .nav-item {
   position: relative;
-  margin-left: 25px;
+  margin-left: 24px;
   margin-right: 8px;
 }
 ul.navbar-nav {
@@ -15587,7 +15587,7 @@ Second Banner Area CSS
 =================================================*/
 @media (min-width: 1300px) and (max-width: 1580px) {
   .navbar .navbar-nav .nav-item {
-    margin-left: 17px;
+    margin-left: 12px;
     margin-right: 20px;
     position: relative;
     font-size: 18px;
