@@ -2082,8 +2082,8 @@
 }/*# sourceMappingURL=responsive.css.map */
 @media (max-width: 767px) {
   .service-overview-area.ptb-140 {
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
   }
    .service-card {
     margin: 0 15px; /* left-right space only on mobile */
@@ -2099,6 +2099,36 @@
   .second-banner-content {
     max-width: 66%;
     top: 25px;
+}
+      .second-about-area {
+        margin: 20px 0 0px;
+    }
+
+    .service-overview-area {
+    margin-top: 0px;
+}
+.location-select{
+    font-size: 14px !important;
+    font-weight: 700;
+}
+.doctor-select{
+    font-size: 14px !important;
+    font-weight: 700;
+}
+.search-button{
+    width: 197px;
+    padding: 12px;
+    background: #464A4E;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    width: 120px !important;
+    height: 40px;
+    margin-right: auto;
 }
   .service-overview-content h4 {
     font-size: 18px !important;
