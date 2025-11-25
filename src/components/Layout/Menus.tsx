@@ -1,4 +1,11 @@
 export const menus = [
+    {
+  id: "Home",
+  title: "Home",
+  href: "/en",
+  className: "mobile-only",
+},
+
   {
     id: "aboutus",
     title: "About Us",
@@ -43,5 +50,6 @@ export const menus = [
     id: "arabic",
     title: "العربية",
     href: "#", // placeholder — we'll handle navigation dynamically
+    className: "mobile-only",
   },
 ];
