@@ -82,7 +82,12 @@ const OurLocations = () => {
           <motion.div className="col-xl-6 col-md-12" variants={variantsRight}>
             <div
               className="service-overview-image"
-              style={{ boxShadow: "-50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
+               style={{
+  boxShadow: "-50px 50px 0px #d7f2fb",
+  overflow: "hidden",
+  marginLeft: "auto",
+  marginRight: "auto",
+}}
             >
               <img src={imageJeddah} alt="Service overview" width={580} height={450} />
             </div>
