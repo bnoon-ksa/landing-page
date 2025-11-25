@@ -19275,13 +19275,13 @@ p.popup-text {
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     .navbar .navbar-nav .nav-item {
-        margin-left: 10px;
+        margin-left: 7px;
         margin-right: 12px;
         font-size: 16px !important;
     }
       .navbar .navbar-nav .nav-item {
         margin-left: 10px;
-        margin-right: 15px;
+        margin-right: 17px;
         font-size: 12px;
     }
     .service-card {
