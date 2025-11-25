@@ -1,4 +1,11 @@
-export const menus = [
+export type MenuItem = {
+  id: string;
+  title: string;
+  href: string;
+  className?: string; // 👈 OPTIONAL property add ki
+};
+
+export const menus: MenuItem[] = [
     {
   id: "Home",
   title: "Home",
