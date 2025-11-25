@@ -65,7 +65,7 @@ const Feedbacks = () => {
                 </div>
               </div>
               <div className="col-xl-6 col-md-12">
-                <div className="service-overview-image">
+                <div className="overview-image">
                   <img
                     src={slide.img}
                     alt="Service overview"
