@@ -180,21 +180,22 @@ function Navbar() {
             </div>
 
             <div className="collapse navbar-collapse justify-content-end">
-              <ul className="navbar-nav">
-              {menus
-  .filter((item) => item.id !== "arabic") // ❌ hide Arabic on desktop
-  .map((item) => (
-    <li key={item.id} className="nav-item">
+              <ul className="navbar-nav d-none d-xl-flex">
+  {menus.map(menu => (
+    <li
+      key={menu.id}
+      className={`nav-item ${menu.className || ""}`}
+    >
       <Link
-        href={item.href || "#"}
-        className={`nav-link ${isActive(item.href || "") ? "active" : ""}`}
+        href={menu.href}
+        className={`nav-link ${isActive(menu.href) ? "active" : ""}`}
       >
-        {item.title}
+        {menu.title}
       </Link>
     </li>
   ))}
+</ul>
 
-              </ul>
             </div>
           </div>
         </div>
@@ -349,6 +350,18 @@ function Navbar() {
   #extraDropdown.dropdown-toggle::after {
     display: none !important;
   }
+    /* Default: Desktop me hide */
+.mobile-only {
+  display: none !important;
+}
+
+/* Mobile: Show only on responsive */
+@media (max-width: 1199px) {
+  .mobile-only {
+    display: block !important;
+  }
+}
+
       `}</style>
     </>
   );
