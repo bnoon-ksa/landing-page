@@ -137,7 +137,7 @@ const OurExperts = () => {
 
   return (
     <div>
-      <div className="container ptb-140">
+      <div className="container ptb-140 doctors-container">
         <div className="section-title">
           <div className="row justify-content-center align-items-center g-4">
             <div className="col-lg-10 col-md-12">
@@ -195,7 +195,7 @@ const OurExperts = () => {
             View Profile
           </Link>
           {doctor.location && (
-            <div className="doctor-location">
+            <div className="doctor-location docotr">
               <i className="ri-map-pin-line"></i> {doctor.location}
             </div>
           )}
@@ -208,6 +208,11 @@ const OurExperts = () => {
         <Link href={doctor.profileLink}>{doctor.name}</Link>
       </h3>
       <span className="sub">{doctor.qualification}</span>
+       {doctor.location && (
+            <div className="location-color">
+              <i className="ri-map-pin-line"></i> {doctor.location}
+            </div>
+          )}
       <div>
         <Link
           href="request-an-appoinment"
@@ -233,7 +238,14 @@ const OurExperts = () => {
     .doctor-card:hover .image-overlay {
       opacity: 1;
     }
-
+.location-color{
+           color: #000;
+        text-align: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 600;
+        margin: -10px 0px 10px 10px;
+    }
     .image-overlay {
       position: absolute;
       top: 0;
@@ -256,11 +268,27 @@ const OurExperts = () => {
       border-radius: 5px;
       margin-bottom: 10px;
     }
+.location-color {
+    display: none;
+}
 
     .doctor-location {
       color: #fff;
       font-size: 14px;
     }
+      @media only screen and (max-width: 767px) {
+ .doctor-location {
+    display:none !important;
+  }
+.location-color {
+    display: block;
+}
+    .doctor-card {
+        padding: 25px;
+        margin: 0px 10px !important;
+    }
+      }
+
   `}</style>
 </div>
 
