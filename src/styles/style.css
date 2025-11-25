@@ -242,7 +242,7 @@ h2, .h2 {
   }
 }
 .service-overview-area {
-    margin-top: 20px;
+    margin-top: 12px;
 }
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
@@ -15315,8 +15315,7 @@ FAQ Area CSS
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
-  margin-right: 100px;
-  border-radius: 15px;
+  border-radius: 45px !important;
 }
 
 .faq-accordion .accordion .accordion-item {
@@ -16616,10 +16615,13 @@ Service Overview Area CSS
 }
 .service-overview-content h2, .service-overview-content .h2 {
   font-size: 38px;
-  margin-bottom: 17px;
+  margin-bottom: 40px;
   color: #004E78;
 }
-
+.special-desc{
+    margin-top: 18px;
+    line-height: 53px;
+}
 .service-overview-content h4, .service-overview-content .h4 {
       font-size: 30px !important;
     font-weight: 500 !important;
