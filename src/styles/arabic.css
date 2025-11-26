@@ -13208,7 +13208,7 @@ Navbar Area CSS
     color: #fff !important;
   width: 108px;
     height: 42px;
-  border-radius:10px;
+  border-radius:10px !important;
   padding: 9px 45px !important;
 }
 button#extraDropdown {
@@ -13220,7 +13220,7 @@ button#extraDropdown {
  padding: 9px 45px !important;
   width: 223px;
     height: 42px;
-border-radius:10px;
+border-radius:10px !important;
 }
 .btn-appointment:hover {
   background-color: #39bced !important; /* apna custom color */
