@@ -1506,7 +1506,7 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    max-width: 1310px;
   }
 }
 :root {
@@ -12947,7 +12947,7 @@ h6 a:hover {
 a {
   text-decoration: none;
   outline: 0 !important;
-  transition: 0.7s;
+  transition: none;
 }
 
 :focus {
@@ -13295,6 +13295,16 @@ font-size:14px !important;
   border: none;
   padding: 0;
 }
+.dropdown-menu {
+    padding: 0px !important;
+    background-color: hsla(0, 0%, 100%, .2) !important;
+    color: #fff !important;
+    backdrop-filter: blur(20px) !important;
+}
+.dropdown-item {
+    direction: ltr;
+    color: #fff !important;
+}
 .navbar .navbar-toggler .burger-menu {
   cursor: pointer;
 }
@@ -13323,7 +13333,7 @@ font-size:14px !important;
 .navbar .navbar-nav .nav-item .nav-link {
   position: relative;
     color: #ffffff;
-    transition: 0.7s;
+    transition: none;
     display: flex;
     gap: 5px;
     align-items: center;
@@ -13335,7 +13345,7 @@ font-size:14px !important;
     font-size: 16px !important;
 }
 .navbar .navbar-nav .nav-item .nav-link svg path {
-  transition: 0.7s;
+  transition: none;
 }
 .navbar .navbar-nav .nav-item .nav-link:hover, .navbar .navbar-nav .nav-item .nav-link.active {
   color: #ffffff;
