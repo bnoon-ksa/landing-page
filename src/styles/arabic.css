@@ -12970,7 +12970,7 @@ img {
 }
 
 .ptb-140 {
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 50px;
 }
 
@@ -15649,7 +15649,7 @@ ul.dropdown-menu.show li:hover a {
 }
 .second-banner-content p {
   font-size: 30px !important;
-  margin-bottom: 0;
+  margin: 20px 0px 40px;
   color: #ffffff;
 }
 .second-banner-content .banner-btn {
@@ -19171,6 +19171,7 @@ border-radius: 30px;
 p.terms-text {
     font-size: 16px !important;
     font-style: italic;
+    margin: 10px 5px;
 }
 .national-box {
     background-color: #004E78;
