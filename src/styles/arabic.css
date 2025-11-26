@@ -254,7 +254,9 @@ h3, .h3 {
     font-size: 1.75rem;
   }
 }
-
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 1310px;
+}
 h4, .h4 {
   font-size: 18px !important;
     font-weight: 600 !important;
