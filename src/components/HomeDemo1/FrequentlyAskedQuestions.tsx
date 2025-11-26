@@ -70,13 +70,7 @@ const toggleAccordion = (index: number) => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              style={{
-                backgroundImage: "url(/images/faqs.jpg)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                minHeight: "576px",
-                borderRadius: "12px",
-              }}
+             
             ></motion.div>
           </div>
 
@@ -115,6 +109,34 @@ const toggleAccordion = (index: number) => {
           </div>
         </div>
       </div>
+      <style jsx global>{`
+  .faq-image {
+    background-image: url("/images/faqs.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 576px;
+    border-radius: 50px;
+  }
+
+.faq-accordion {
+    margin: 20px 0px 0px;
+}
+ @media (max-width: 767px) {
+  .faq-image {
+    height: 271px !important;
+    min-height: unset !important;
+  }
+    .faq-accordion {
+    margin: 0px 0px 0px !important;
+}
+.faq-area{
+margin: 0px 10px;
+}
+
+  }
+`}</style>
+
     </div>
   );
 };
