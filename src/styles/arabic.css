@@ -13206,12 +13206,21 @@ Navbar Area CSS
     background-color:  #6c757d00 !important;
     border: 1px solid #fff !important;
     color: #fff !important;
+  width: 108px;
+    height: 42px;
+  border-radius:10px;
+  padding: 9px 45px !important;
 }
-
+button#extraDropdown {
+    border-radius: 10px;
+}
 .btn-appointment{
  background-color: #39bced !important;
  border:none !important;
- padding: 6px 45px !important;
+ padding: 9px 45px !important;
+  width: 223px;
+    height: 42px;
+border-radius:10px;
 }
 .btn-appointment:hover {
   background-color: #39bced !important; /* apna custom color */
