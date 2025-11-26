@@ -104,7 +104,7 @@ function Navbar() {
           <div className="d-none d-md-flex flex-column align-items-start">
       <div
   className="mb-3 d-flex gap-4 align-items-center"
-  style={{ justifyContent: "flex-end", width: "100%" }}
+  style={{ justifyContent: "flex-end", width: "100%",gap:"32px !important" }}
 >
 
   {/* Dropdown (Phones) */}
@@ -116,8 +116,14 @@ function Navbar() {
       data-bs-toggle="dropdown"
       aria-expanded="false"
     >
-      <FaPhone style={{ color: "white", transform:"scaleX(-1)"}} />
-     <span style={{ marginLeft: "auto" }}>الرياض : +966 11 444 8080</span>
+      <FaPhone style={{ color: "white", transform:"scaleX(-1)", marginRight:"auto"}} />
+     <span style={{ margin: "0px 10px 0px 0px" }}>         +966 11 444 8080 :الرياض</span>
+           {/* ⭐ Custom Dropdown Arrow Icon */}
+  <img
+  src="/images/droparrow.svg"
+  alt="arrow"
+  style={{ width: "22px" }}
+/>
     </button>
     <ul
       className="dropdown-menu text-center"
@@ -125,10 +131,10 @@ function Navbar() {
     >
       <li>
         <Link
-          className="dropdown-item"
+          className="dropdown-item" 
           href="https://api.whatsapp.com/send?phone=966114448080&text=Hello"
         >
-          الرياض : +966 11 444 8080
+           <span style={{  marginLeft: "auto" }}>         +966 11 444 8080 :الرياض</span>
         </Link>
       </li>
       <li>
@@ -136,7 +142,7 @@ function Navbar() {
           className="dropdown-item"
           href="https://api.whatsapp.com/send?phone=966126800800&text=Hello"
         >
-          جدة : +966 12 680 0800
+         +966 12 680 0800 :جدة
         </Link>
       </li>
     </ul>
@@ -266,13 +272,43 @@ function Navbar() {
       </Offcanvas>
 
       <style jsx global>{`
+
+      .navbar .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-left: 10px;
+    margin-right: -10px !important;
+    margin-top: 10px !important;
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+    .btn-language {
+    font-size:18px !important;
+    padding: 9px 0px !important;
+    }
+      .btn-dropdown.dropdown-toggle::after {
+  display: none !important;
+}
         .mobile-offcanvas {
           width: 100vw !important;
           height: 100vh !important;
           background: #fff;
           animation: slideUp 0.5s ease forwards;
         }
-
+.dropdown-item{
+    direction: ltr;
+}
+    .navbar .navbar-nav .nav-item .nav-link{
+    padding-right: 51px !important;
+    padding-top:20px !important;
+    padding-bottom:0px !important;
+    }
+    .navbar .navbar-nav .nav-item {
+     position: relative; 
+    margin-left: 0px;
+    margin-right: 20px !important;
+}
         @keyframes slideUp {
           from {
             transform: translateY(100%);
