@@ -13277,7 +13277,7 @@ a.btn.btn-outline-secondary.btn-language {
  background-color: #004E78 !important;
  border:none !important;
 font-size:16px !important;
-  border-radius: 0px;
+  border-radius: 0px !important;
     width: 140px;
 }
 .btn-blog:hover {
@@ -13292,6 +13292,7 @@ font-size:16px !important;
 .btn:hover {
     color: var(--bs-btn-hover-color) !important;
     border-color: #ffffff !important;
+  background-color: #39bced !important;
 }
 #navbar {
   width: 100%;
@@ -14690,6 +14691,9 @@ Doctors Area CSS
 .doctor-card .content .doctor-btn {
   background-color: #004E78 !important;
   border: none;
+      font-size: 14px;
+    width: 200px;
+    height: 36px;
 }
 
 .doctor-card .content .doctor-btn:hover {
@@ -19189,6 +19193,9 @@ select.form-control:focus {
 background-color: #00000036 !important;
 border:1px solid #fff !important;
 margin:70px 0px 0px;
+font-size: 14px !important;
+    width: 126px;
+    height: 35px;
 }
 .doctor-location {
   color:#fff;
