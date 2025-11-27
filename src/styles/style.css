@@ -13291,8 +13291,9 @@ font-size:16px !important;
 }
 .btn:hover {
     color: var(--bs-btn-hover-color) !important;
-    border-color: #ffffff !important;
-  background-color: #39bced !important;
+}
+.step-btn:hover {
+    background-color: #39bced !important;
 }
 #navbar {
   width: 100%;
