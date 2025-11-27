@@ -116,7 +116,7 @@ const SearchBar = () => {
         <div className="search-bar doctor-bar">
          <div className="custom-dropdown">
   <button
-    className="dropdown-btn doctor-select"
+    className="dropdown-btn doctor-select" style={{ color: doctor === "" ? "#757575ff" : "#000" }}
     onClick={() => {
       const doctorMenu = document.querySelector(".doctor-menu");
       const locationMenu = document.querySelector(".location-menu");
@@ -148,7 +148,7 @@ const SearchBar = () => {
 
        <div className="custom-dropdown">
   <button
-    className="dropdown-btn location-select"
+    className="dropdown-btn location-select" style={{ color: doctor === "" ? "#757575ff" : "#000" }}
     onClick={() => {
       const locationMenu = document.querySelector(".location-menu");
       const doctorMenu = document.querySelector(".doctor-menu");
@@ -189,6 +189,9 @@ const SearchBar = () => {
 .search-button:hover {
     background: #39bced;
 }
+
+
+
         .animate-left {
           opacity: 0;
           transform: translateX(-50px);
@@ -208,7 +211,7 @@ const SearchBar = () => {
     gap: 65px !important;
       }
     .search-bar select{
-    color: rgb(117, 117, 117) !important;
+    color: #757575ff !important;
     }
  .arrow-icon {
     width: 12px !important;
