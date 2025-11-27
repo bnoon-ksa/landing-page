@@ -176,7 +176,7 @@ const Benefits = () => {
     }
     .service-overview-content {
     padding-left: 0;
-    margin: -45px 0px 0px 0px !important;
+    margin: 0px 0px 0px 0px !important;
 }
     .responsive-image {
       width: 100% !important;
