@@ -85,7 +85,7 @@ const Benefits = () => {
               transition: "all 0.5s ease-out",
             }}
           >
-            <div className="service-overview-content pt-5">
+            <div className="service-overview-content">
               <h2>بنون – الشبكة الرائدة لمراكز الإخصاب وصحة المرأة</h2>
               <h4>هنا من أجلكم... لنحوّل آمالكم إلى بدايات جديدة</h4>
               <p>
@@ -138,14 +138,18 @@ const Benefits = () => {
    <style jsx global>{`
   .service-overview-content h2 {
     font-size: 32px;
-    margin-bottom: 65px !important;
+    margin-bottom: 80px !important;
     color: #004E78;
   }
+    .service-overview-content {
+    padding-left: 0;
+    margin: 25px 0px 0px 0px !important;
+}
   .service-overview-content h4 {
     font-size: 20px !important;
     font-weight: 400 !important;
     color: #004E78;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .service-overview-image {
     width: 544px;
