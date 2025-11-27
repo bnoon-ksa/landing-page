@@ -113,32 +113,64 @@ const SearchBar = () => {
         </div>
 
         {/* ✅ Search Bar */}
-        <div className="search-bar">
-          <select
-            value={doctor}
-            onChange={(e) => setDoctor(e.target.value)}
-            className="doctor-select"
-          >
-            <option value="">حسب اسم الطبيب</option>
-            {doctorsToShow.map((doc, index) => (
-              <option key={index} value={doc}>
-                {doc}
-              </option>
-            ))}
-          </select>
+        <div className="search-bar doctor-bar">
+         <div className="custom-dropdown">
+  <button
+    className="dropdown-btn doctor-select"
+    onClick={() => {
+      const doctorMenu = document.querySelector(".doctor-menu");
+      const locationMenu = document.querySelector(".location-menu");
 
-          <select
-            value={location}
-            onChange={(e) => {
-              setLocation(e.target.value as LocationType);
-              setDoctor("");
-            }}
-            className="location-select"
-          >
-            <option value="">حسب الموقع</option>
-            <option value="الرياض">الرياض</option>
-            <option value="جدة">جدة</option>
-          </select>
+      doctorMenu?.classList.toggle("open");
+      locationMenu?.classList.remove("open");
+    }}
+  >
+    <span>{doctor || "حسب اسم الطبيب"}</span>
+    <img src="/images/arrow.png" className="arrow-icon" alt="" />
+  </button>
+
+  <ul className="dropdown-menu doctor-menu">
+    {doctorsToShow.map((doc, i) => (
+      <li
+        key={i}
+         className="dropdown-item"
+        onClick={() => {
+          setDoctor(doc);
+          document.querySelector(".doctor-menu")?.classList.remove("open");
+        }}
+      >
+        {doc}
+      </li>
+    ))}
+  </ul>
+</div>
+
+
+       <div className="custom-dropdown">
+  <button
+    className="dropdown-btn location-select"
+    onClick={() => {
+      const locationMenu = document.querySelector(".location-menu");
+      const doctorMenu = document.querySelector(".doctor-menu");
+
+      locationMenu?.classList.toggle("open");
+      doctorMenu?.classList.remove("open");
+    }}
+  >
+    <span>{location || "حسب الموقع"}</span>
+    <img src="/images/arrow.png" className="arrow-icon" alt="" />
+  </button>
+
+  <ul className="dropdown-menu location-menu">
+    <li className="dropdown-item" onClick={() => { setLocation("الرياض"); setDoctor(""); }}>
+      الرياض
+    </li>
+    <li className="dropdown-item" onClick={() => { setLocation("جدة"); setDoctor(""); }}>
+      جدة
+    </li>
+  </ul>
+</div>
+
 
           <button onClick={handleSearch} className="search-button">
             ابحث
@@ -148,6 +180,15 @@ const SearchBar = () => {
 
       {/* ✅ Animation CSS */}
       <style jsx>{`
+      .doctor-select,
+.location-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.search-button:hover {
+    background: #39bced;
+}
         .animate-left {
           opacity: 0;
           transform: translateX(-50px);
@@ -157,19 +198,159 @@ const SearchBar = () => {
           opacity: 1;
           transform: translateX(0);
         }
-           /* ✅ Mobile Responsive - column layout */
-  @media (max-width: 768px) {
-    .search-bar {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 10px;
+        .search-button {
+  width: 163px !important ;
+  border-radius:0px !important;
+  font-weight:400 !important;
+  height: 44px;
+  }
+  .search-bar {
+    gap: 65px !important;
+      }
+    .search-bar select{
+    color: rgb(117, 117, 117) !important;
     }
+ .arrow-icon {
+    width: 12px !important;
+    height: auto;
+    margin-right: auto;
+}
+    .doctor-menu.open {
+    background-color: #fff !important;
+}
+  .custom-dropdown {
+    position: relative;
+  }
 
+  .dropdown-btn {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #ccd6e8;
+    padding: 12px 14px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #00375f;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+
+  
+
+  .dropdown-menu {
+    position: absolute;
+    width: 600px;
+    background: #fff;
+    border: 1px solid #000000ff;
+    border-radius: 0px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    padding: 0;
+    margin: 0;
+    line-height: 10px;
+    font-size: 16px !important;
+    text-align: right;
+  }
+  .dropdown-menu.open {
+    display: block;
+  }
+  .dropdown-item {
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #000 !important;
+  }
+  .dropdown-item:hover {
+    background: #000;
+    color: #fff !important;
+  }
+
+  /* Desktop styles remain the same */
+  .doctor-select {
+    width: 600px;
+    padding: 12px 18px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    font-weight: 400;
+    height: 44px;
+    color: rgb(117, 117, 117);
+    margin-bottom: 0px;
+  }
+  .location-select {
+    width: 348px;
+    padding: 12px 18px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+    font-weight: 400;
+    height: 44px;
+    color: rgb(117, 117, 117);
+    margin-bottom: 0px;
+  }
+  .dropdown-menu.location-menu.open {
+    width: 348px;
+  }
+
+  .search-bar {
+    margin-top: 0px;
+  }
+  .doctor-bar {
+    margin-top: 20px;
+  }
+/* Only Doctor Dropdown Scrollable */
+.dropdown-menu.doctor-menu {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.placeholder-text {
+  color: #757575 !important; /* Default grey */
+}
+
+.selected-text {
+  color: #000 !important;   /* Black when selected */
+  font-weight: 600;
+}
+
+
+  /* ✅ Mobile responsive */
+  @media (max-width: 767px) {
+    .search-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 12px !important;
+      height: 200px;
+    }
     .doctor-select,
     .location-select,
     .search-button {
-      width: 100%;
+      width: 300px;
     }
+    .dropdown-menu {
+      width: 100% !important;
+    }
+    .dropdown-menu.location-menu.open {
+      width: 100% !important;
+    }
+      .search-button{
+         width: 120px !important; 
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px!important;
+    border-radius: 0px !important;
+    font-weight: 400 !important;
+   margin: 0px 175px 0px 0px;
+    height: 30px;
+    padding: 0px 20px;
+
+      }
   }
       `}</style>
     </div>
