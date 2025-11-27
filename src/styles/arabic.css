@@ -13229,10 +13229,13 @@ border-radius:10px !important;
   background-color: #39bced !important; /* apna custom color */
   border: none !important;
 }
-.btn-blog{
- background-color: #004E78 !important;
- border:none !important;
-font-size:14px !important;
+.btn-blog {
+    background-color: #004E78 !important;
+    border: none !important;
+    font-size: 12px !important;
+    width: 140px;
+    height: 34px;
+    border-radius: 0px !important;
 }
 .btn-blog:hover {
     background-color:#39bced !important; /* thoda dark shade */
@@ -14647,6 +14650,9 @@ Doctors Area CSS
   border: none;
   font-size: 12px;
     padding: 10px 70px;
+    border-radius: 12px !important;
+    width: 200px;
+    height: 36px;
 }
 
 .doctor-card .content .doctor-btn:hover {
@@ -18849,9 +18855,18 @@ Footer Area Area CSS
 }
 
 .single-footer-widget h3, .single-footer-widget .h3 {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 25px;
       color: #ffffff;
+      font-weight: 600;
+}
+.submit-btn:hover {
+    color: #004e78 !important;
+    border-color: #fff !important;
+    background-color: #fff !important;
+}
+.step-btn:hover {
+    background-color: #39bced !important;
 }
 .single-footer-widget .links {
   margin-bottom: 0;
@@ -18861,8 +18876,8 @@ Footer Area Area CSS
 .single-footer-widget .links li {
   list-style-type: none;
   margin-bottom: 10px;
-  line-height: 1;
-  font-size: 15px;
+  line-height: 18px;
+  font-size: 14px;
 }
 .single-footer-widget .links li a {
   color: #ffffff;
@@ -19125,11 +19140,15 @@ select.form-control:focus {
 background-color: #00000036 !important;
 border:1px solid #fff !important;
 margin:70px 0px 0px;
-font-size:12px !important;
+font-size:10px !important;
+width: 126px;
+    height: 33px;
+    border-radius: 10px;
 }
 .doctor-location {
   color:#fff;
   margin:10px 0px 0px;
+  font-size: 10px;
 }
 .doctors-overview-image{
 border: 1px solid #00000000;
