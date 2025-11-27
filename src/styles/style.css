@@ -282,6 +282,9 @@ p {
 .second-banner-area {
     height: 523px;
 }
+service-overview-content p {
+    line-height: 27px;
+}
 abbr[title] {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
