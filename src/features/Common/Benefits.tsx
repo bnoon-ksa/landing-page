@@ -31,9 +31,9 @@ const Benefits = () => {
   ];
 
   const images = [
-    "/images/fertility-women.jpg",
-    "/images/baby-health-network.jpg",
-    "/images/baby-health-network-2.jpg",
+    "/images/benefit1.jpg",
+    "/images/benefit2.jpg",
+    "/images/benefit3.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -73,7 +73,7 @@ const Benefits = () => {
   return (
     <div className="service-overview-area mb-5 ">
       <div className="container">
-        <div className="row justify-content-center align-items-center g-4">
+        <div className="row justify-content-center g-4">
           <div
             className={`col-xl-6 col-md-12 animate-left ${
               leftVisible ? "active" : ""
@@ -85,7 +85,7 @@ const Benefits = () => {
               transition: "all 0.5s ease-out",
             }}
           >
-            <div className="service-overview-content">
+            <div className="service-overview-content pt-5">
               <h2>بنون – الشبكة الرائدة لمراكز الإخصاب وصحة المرأة</h2>
               <h4>هنا من أجلكم... لنحوّل آمالكم إلى بدايات جديدة</h4>
               <p>
@@ -132,21 +132,55 @@ const Benefits = () => {
                 width={580}
                 height={450}
                 style={{ transition: "opacity 0.5s ease-in-out" }}
+                className="responsive-image"
               />
               {/* ✅ Responsive style only for mobile */}
-  <style jsx>{`
-    @media (max-width: 768px) {
-      .service-overview-image {
-        box-shadow: 20px 20px 0px #d7f2fb; /* smaller shadow for mobile */
-        width: 85% !important;
-      }
-
-      .responsive-image {
-        width: 100% !important;
-        height: auto !important;
-      }
+   <style jsx global>{`
+  .service-overview-content h2 {
+    font-size: 32px;
+    margin-bottom: 65px !important;
+    color: #004E78;
+  }
+  .service-overview-content h4 {
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    color: #004E78;
+    margin-bottom: 30px;
+  }
+  .service-overview-image {
+    width: 544px;
+    align-items: flex-start;
+    margin: 0 40px 0 0px;
+  }
+  @media (max-width: 768px) {
+   .service-overview-content h2 {
+    font-size: 18px;
+    margin-bottom: 15px !important;
+    color: #004E78;
+  }
+     .service-overview-content h4 {
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    color: #004E78;
+    margin-bottom: 15px;
+  }
+    .service-overview-image {
+      box-shadow: 20px 20px 0px #d7f2fb;
+      width: 85% !important;
+      
+    margin: 0 0px 25px 0px !important;
     }
-  `}</style>
+    .service-overview-content {
+    padding-left: 0;
+    margin: -45px 0px 0px 0px !important;
+}
+    .responsive-image {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+`}</style>
+
             </div>
           </div>
         </div>
