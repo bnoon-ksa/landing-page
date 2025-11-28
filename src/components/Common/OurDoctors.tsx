@@ -182,9 +182,13 @@ const OurDoctors = () => {
                 </div>
 
                 <div className="content">
-                  <h3>
-                    <Link href={doctor.profileLink}>{doctor.name}</Link>
-                  </h3>
+                 <h3 className="doctor-heading">
+  <Link href={doctor.profileLink} legacyBehavior>
+    <a className="doctor-link">{doctor.name}</a>
+  </Link>
+</h3>
+
+
                   <span className="sub">{doctor.qualification}</span>
                   {doctor.location && (
                         <div className="location-color">
@@ -207,6 +211,22 @@ const OurDoctors = () => {
       </motion.div>
 
       <style jsx>{`
+      h3 a {
+    color: #404040 !important;
+    text-decoration: none;
+}
+      .doctor-heading Link{
+       color: #404040 !important;
+      }
+      .doctor-card .content h3 {
+    font-size: 18px;
+    color: #000 !important;
+}
+    .doctor-card .content .sub {
+    font-size: 16px !important;
+    display: block;
+    margin-bottom: 10px;
+}
         .doctor-card { position: relative; overflow: hidden; }
         .image-wrapper { position: relative; }
         .doctor-card:hover .image-overlay { opacity: 1; }
@@ -234,7 +254,6 @@ const OurDoctors = () => {
         justify-content: center;
         font-size: 14px;
         font-weight: 600;
-        margin: -10px 30px 10px 0px;
     }
 }
 .doctor-section {
@@ -250,8 +269,9 @@ const OurDoctors = () => {
     visibility: hidden;
     position: absolute; /* your existing layout remains untouched */
     color: #fff;
-    margin: 10px 15px 0px;
+    margin: 10px 0px 0px 35px;
     display: block; /* or flex depending on your layout */
+    font-size: 12px;
   }
 .location-color {
     display: none;
