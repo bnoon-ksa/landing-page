@@ -75,9 +75,8 @@ const Benefits = () => {
       <div className="container">
         <div className="row justify-content-center align-items-center g-4">
           <div
-            className={`col-xl-6 col-md-12 animate-left ${
-              leftVisible ? "active" : ""
-            }`}
+            className={`col-xl-6 col-md-12 animate-left ${leftVisible ? "active" : ""
+              }`}
             ref={leftRef}
             style={{
               opacity: leftVisible ? 1 : 0,
@@ -111,9 +110,8 @@ const Benefits = () => {
           </div>
 
           <div
-            className={`col-xl-6 col-md-12 animate-right ${
-              rightVisible ? "active" : ""
-            }`}
+            className={`col-xl-6 col-md-12 animate-right ${rightVisible ? "active" : ""
+              }`}
             ref={rightRef}
             style={{
               opacity: rightVisible ? 1 : 0,
@@ -121,25 +119,67 @@ const Benefits = () => {
               transition: "all 0.5s ease-out",
             }}
           >
-        <div
-  className="service-overview-image mb-md-0 mb-5"
-  style={{
-    boxShadow: "50px 50px 0px #d7f2fb",
-    overflow: "hidden",
-    display: "inline-block",
-  }}
->
-  <img
-    src={images[currentIndex]}
-    alt="Service overview"
-    className="responsive-image"
-    width={580}
-    height={450}
-    style={{ transition: "opacity 0.5s ease-in-out" }}
-  />
+            <div className="service-overview-image mb-md-0 mb-5" style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block", }}>
 
-  {/* ✅ Responsive style only for mobile */}
-  <style jsx>{`
+              <div className="image-wrapper">
+    {images.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt="benefit"
+        className={`slide-image ${index === currentIndex ? "active" : ""}  responsive-image`}
+      />
+    ))}
+  </div>
+            </div>
+
+            {/* ✅ Responsive style only for mobile */}
+            <style jsx>{`
+  .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 436px; /* apny hisab se adjust karlena */
+  overflow: hidden;
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-image.active {
+  opacity: 1;
+}
+
+  .slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out; /* <-- cross fade speed */
+}
+
+/* Active image will fade in */
+.slider img.active {
+  opacity: 1;
+}
+
     @media (max-width: 768px) {
       .service-overview-image {
         box-shadow: 20px 20px 0px #d7f2fb; /* smaller shadow for mobile */
@@ -152,8 +192,6 @@ const Benefits = () => {
       }
     }
   `}</style>
-</div>
-
           </div>
         </div>
       </div>
