@@ -54,18 +54,15 @@ const HowItWorksSlider = () => {
         <div className="row g-4">
             {visibleSteps.map((step) => (
             <div key={step.id} className="col-lg-3 col-md-4 col-sm-6">
-              <div className="how-it-work-card">
-                <div className="image">
-                  <img
-                    src={step.imageSrc}
-                    alt={step.title}
-                    width={350}
-                    height={300}
-                   
-                  />
-                </div>
-                <h6 className="blog-text">{step.title}</h6>
-              </div>
+            <div className="how-it-work-card">
+  <div className="image">
+    <img src={step.imageSrc} alt={step.title} width={350} height={300} />
+  </div>
+  <div className="text-container">
+    <h6 className="blog-text">{step.title}</h6>
+  </div>
+</div>
+
             </div>
           ))}
         </div>
@@ -82,9 +79,31 @@ const HowItWorksSlider = () => {
         )}
       </div>
             <style jsx>{`
-       .blog-text {
-    margin: 0 0 15px;
-    font-size: 18px;
+          .how-it-work-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.how-it-work-card .image {
+  flex-shrink: 0; /* Image keeps its natural height */
+  margin-bottom: 0px;
+}
+
+.how-it-work-card .text-container {
+  flex-grow: 1; /* Stretch all text containers equally */
+  display: flex;
+  align-items: center; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+  padding: 10px;
+}
+
+.blog-text {
+  margin: 0;
+  font-size: 18px;
 }
 @media (max-width: 767px) {
       .blog-text {
