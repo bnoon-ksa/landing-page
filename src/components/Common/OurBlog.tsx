@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import 'remixicon/fonts/remixicon.css';
 
 const OurBlog = () => {
 const [hoveredId, setHoveredId] = useState<number | null>(null);
@@ -28,7 +29,8 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
     {
       id: 3,
       imageSrc: "images/blog/king-salman.avif",
-      title: "Bnoon – King Salman Road, Riyadh (Opening December 2025)",
+      title: "Bnoon – King Salman Road, Riyadh ",
+       note: "(Opening December 2025)",
       slug: "https://maps.app.goo.gl/F9Qu7tQQp74TTyNv9?g_st=iwb",
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.3583391235643!2d46.59119140000001!3d24.8174163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee69d1c7fb897%3A0x46a86841c1f1d0e8!2zUlJRQTQxNTAsIDQxNTAgS2luZyBTYWxtYW4gQmluIEFiZHVsYXppeiBSZCwgNjkzMtiMINit2Yog2KfZhNmC2YrYsdmI2KfZhtiMIFJpeWFkaCAxMzUzMiwgU2F1ZGkgQXJhYmlh!5e0!3m2!1sen!2s!4v1762873544370!5m2!1sen!2s",
       buttonLink: "en//our-clinics",
@@ -79,8 +81,10 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
 
                 <div className="content">
                   <h3>
+                     <i className="ri-map-pin-line" style={{ color: "#004E78", marginRight: "8px" }}></i>
                     <a href={post.slug} target="_blank" rel="noopener noreferrer">
                       {post.title}
+                       {post.note && <span className="small-note">{post.note}</span>}
                     </a>
                   </h3>
                   <p>{post.description}</p>
@@ -96,6 +100,22 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
       </div>
         {/* ✅ Responsive style only for mobile */}
         <style jsx>{`
+        .small-note {
+  font-size: 16px; /* smaller size for note */
+  color: #004E78;
+  margin-left: 32px;
+}
+
+        .blog-card .content h3, .blog-card .content .h3 {
+    font-size: 22px;
+    line-height: 1;
+    transition:none;
+    color: #004E78;
+    margin-top: 8px;
+}
+    .blog-card .content h3:hover, .blog-card .content .h3:hover {
+    transform: none;
+}
   .blog-card .image {
     position: relative;
     height: 201px;
@@ -122,6 +142,22 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
     opacity: 0;
     z-index: 1;
   }
+    
+    @media (max-width: 768px) {
+        .blog-card .content h3, .blog-card .content .h3 {
+    font-size: 18px;
+    line-height: 1;
+    transition:none;
+    color: #004E78;
+    margin-top: 8px;
+}
+           .small-note {
+  font-size: 13px; /* smaller size for note */
+  color: #004E78;
+  margin: 6px 0px 0px;
+   display: block; /* moves to next line */
+}
+    }
 `}</style>
 
     </div>
