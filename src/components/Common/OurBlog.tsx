@@ -58,24 +58,24 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
                 onMouseEnter={() => setHoveredId(post.id)}
                 onMouseLeave={() => setHoveredId(null)}
               >
-                <div className="image">
-            {hoveredId === post.id ? (
+             <div className="image">
+  <img
+    src={post.imageSrc}
+    alt={post.title}
+    className={hoveredId === post.id ? "fade-out" : "fade-in"}
+  />
   <iframe
-    src={post.embedMap} // <-- yahi har card ka map show karega
+    src={post.embedMap}
     width="100%"
-    height="200"
+    height="201"
     style={{ border: "0" }}
     allowFullScreen
     loading="lazy"
     referrerPolicy="no-referrer-when-downgrade"
+    className={hoveredId === post.id ? "fade-in" : "fade-out"}
   ></iframe>
-) : (
-  <a href={post.slug} target="_blank" rel="noopener noreferrer">
-    <img src={post.imageSrc} alt={post.title} />
-  </a>
-)}
+</div>
 
-                </div>
 
                 <div className="content">
                   <h3>
@@ -94,6 +94,36 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
           ))}
         </div>
       </div>
+        {/* ✅ Responsive style only for mobile */}
+        <style jsx>{`
+  .blog-card .image {
+    position: relative;
+    height: 201px;
+    overflow: hidden;
+  }
+
+  .blog-card .image img,
+  .blog-card .image iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .fade-in {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  .fade-out {
+    opacity: 0;
+    z-index: 1;
+  }
+`}</style>
+
     </div>
   );
 };
