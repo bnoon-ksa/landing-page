@@ -14633,7 +14633,7 @@ Doctors Area CSS
 }
 .doctor-card .content h3, .doctor-card .content .h3 {
   font-size: 20px;
-  margin-bottom: 12.5px;
+  margin-bottom: 0px;
 }
 .doctor-card .content .sub {
   font-size: 15px;
