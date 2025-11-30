@@ -92,9 +92,8 @@ function OurServices() {
   refs.current[index] = el;
 }}
 
-                  className={`col-md-6`}
+                  className={`col-md-6 d-flex service-boxs`}
                   style={{
-                    
 
                     opacity: visible[index] ? 1 : 0,
                     transform: visible[index]
@@ -133,6 +132,7 @@ function OurServices() {
         </div>
       </div>
       <style jsx>{`
+      
         .service-card .top p {
     margin-bottom: 0;
     margin-top: 0px !important; 
@@ -174,6 +174,9 @@ function OurServices() {
   }
      .space-content{
     justify-content: normal;
+    }
+    .service-boxs{
+    justify-content: center;
     }
 }
       `}</style>
