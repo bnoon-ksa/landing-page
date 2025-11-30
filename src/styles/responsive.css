@@ -1,4 +1,22 @@
 /* Max width 767px */
+* {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.arrow-icon {
+    width: 12px !important;
+    height: auto;
+    margin-left: auto;
+}
 .arrow-icon {
     width: 12px !important;
     height: auto;
