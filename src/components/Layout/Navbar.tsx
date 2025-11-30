@@ -285,7 +285,7 @@ function Navbar() {
         <hr
           style={{
             border: "1px solid ##00000091",
-            margin: "12px 0",
+            margin: "6px 0",
           }}
         />
       )}
@@ -319,6 +319,20 @@ function Navbar() {
 
       {/* 🌐 Custom Styles */}
       <style jsx global>{`
+      .offcanvas {
+  height: 100vh !important;
+  overflow: visible !important;
+}
+
+.offcanvas-body {
+  overflow-y: visible !important;
+}
+
+.navbar-nav {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
         .mobile-offcanvas {
           width: 100vw !important;
           height: 100vh !important;
@@ -361,7 +375,15 @@ function Navbar() {
     display: block !important;
   }
 }
+ @media only screen and (max-width: 767px) {
+ .navbar .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0px;
+    margin: 0;
+}
 
+}
       `}</style>
     </>
   );
