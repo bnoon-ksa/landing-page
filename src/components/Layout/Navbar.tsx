@@ -188,7 +188,7 @@ function Navbar() {
     >
       <Link
         href={menu.href}
-        className={`nav-link ${isActive(menu.href) ? "active" : ""}`}
+        className={`nav-link ${isActive(menu.href) ? "active-btn" : ""}`}
       >
         {menu.title}
       </Link>
@@ -263,14 +263,14 @@ function Navbar() {
       </li>
     );
   }
-
+ const isActiveBtn = pathname === item.href;
   // Normal menu items
   return (
-    <li key={item.id} className="my-3">
+    <li key={item.id} className="">
    <Link
   href={item.href || "#"}
-  className="fs-5 text-decoration-none d-block"
-  style={{ color: "#004E78" }}
+   className={`fs-5 text-decoration-none d-block ${isActiveBtn ? "active-btn" : ""}`}
+  style={{ color: "#004E78", padding: "10px 0px 10px" }}
   onClick={() => {
     handleClose();
     setTimeout(() => {
@@ -285,7 +285,7 @@ function Navbar() {
         <hr
           style={{
             border: "1px solid ##00000091",
-            margin: "6px 0",
+            margin: "0px 0",
           }}
         />
       )}
@@ -383,7 +383,19 @@ function Navbar() {
     margin: 0;
 }
 
+.lang-switch{
+font-family: Alexandria !important;
 }
+.active-btn {
+    background: #004E78 !important;
+    color: #fff !important;
+    padding: 10px 14px !important;
+    margin:0px;
+    display: inline-block;
+  }
+}
+
+
       `}</style>
     </>
   );
