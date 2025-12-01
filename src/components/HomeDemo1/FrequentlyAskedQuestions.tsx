@@ -122,6 +122,11 @@ const toggleAccordion = (index: number) => {
 .faq-accordion {
     margin: 20px 0px 0px;
 }
+    .faq-accordion .accordion .accordion-item .accordion-button{
+        font-size: 18px;
+    font-weight: 600;
+    color: rgb(64, 64, 64) !important;
+    }
  @media (max-width: 767px) {
   .faq-image {
     height: 271px !important;
@@ -133,7 +138,11 @@ const toggleAccordion = (index: number) => {
 .faq-area{
 margin: 0px 10px;
 }
-
+  .faq-accordion .accordion .accordion-item .accordion-button{
+        font-size: 12px;
+    font-weight: 600;
+    color: rgb(64, 64, 64) !important;
+    }
   }
 `}</style>
 
