@@ -50,7 +50,7 @@ function Navbar() {
         <div className="container d-flex justify-content-between align-items-center">
 
           {/* 🟢 LEFT SIDE (Logo + Mobile) */}
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center  space-mobile">
             <Link href="/ar" className="navbar-brand d-flex align-items-center">
               <img
                 src="/images/bnoon-logo.avif"
@@ -61,7 +61,7 @@ function Navbar() {
             </Link>
 
             {/* 🌐 Mobile Language Switcher */}
-            <div className="d-md-none me-5">
+            <div className="d-md-none me-5 ">
               {isArabic ? (
                 <Link
                   href={pathname.replace(/^\/ar/, "/en")}
@@ -351,6 +351,31 @@ function Navbar() {
     justify-content: right;
     direction: ltr;
 }
+    
+@media only screen and (max-width: 767px) {
+
+  nav#navbar {
+      padding: 0px !important;
+      height: 70px;
+  }
+
+  .navbar .navbar-brand {
+      padding-left: 0px;
+      width: 110px;
+      height: 39px;
+     padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-left: 70px;
+    margin-right: 10px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0;
+  }
+    .space-mobile{
+    
+    }
+}
+
       `}</style>
     </>
   );
