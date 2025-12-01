@@ -12,9 +12,17 @@ interface Doctor {
   location?: string;
 }
 
-
-
 const OurDoctors = () => {
+  // ✅ Sample doctor data
+  // ✅ FIX: Hooks must be inside the component
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768);
+    }
+  }, []);
+
   // ✅ Sample doctor data
   const doctorsData: Doctor[] = [
     {
@@ -135,27 +143,35 @@ const OurDoctors = () => {
       <motion.div
         className="doctors-scroll-container"
         initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+  animate={isMobile ? { opacity: 1, x: 0 } : undefined}
+  whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.6 }}
       >
         <div className="row g-4">
           {doctorsData.map((doctor) => (
             <div key={doctor.id} className="col-xl-3 col-md-6">
               <div className="doctor-card">
-                <div className="image-wrapper">
+                <div className="doctors-wrapper">
                   <img src={doctor.imageUrl} alt={doctor.name} style={{ borderRadius: 10, width: "100%", height: "auto" }} />
                   <div className="image-overlay">
                     <div className="overlay-content">
                       <Link href={doctor.profileLink} className="btn btn-success doctor-btn doctor-hover-btn">عرض الملف الشخصي</Link>
-                      {doctor.location && <div className="doctor-location"><i className="ri-map-pin-line"></i> {doctor.location}</div>}
+                      {doctor.location && <div className=" location-icon"><i className="ri-map-pin-line"></i> {doctor.location}</div>}
                     </div>
                   </div>
                 </div>
 
                 <div className="content">
-                  <h3><Link href={doctor.profileLink}>{doctor.name}</Link></h3>
+                  <h3 className="doctor-content">
+                    <Link href={doctor.profileLink} legacyBehavior><a className="doctor-link">{doctor.name}</a></Link>
+                    </h3>
                   <span className="sub">{doctor.qualification}</span>
+                   {doctor.location && (
+    <div className="doctor-location">
+      <i className="ri-map-pin-line"></i> {doctor.location}
+    </div>
+  )}
                   <div>
                     <Link href="ar/request-an-appoinment" className="btn btn-success doctor-btn">طلب موعد</Link>
                   </div>
@@ -167,8 +183,16 @@ const OurDoctors = () => {
       </motion.div>
 
       <style jsx>{`
+     
+        h3 a {
+    color: #404040 !important;
+    text-decoration: none;
+}
+      .ri-map-pin-line {
+    font-size: 15px;
+}
         .doctor-card { position: relative; overflow: hidden; }
-        .image-wrapper { position: relative; }
+        .doctors-wrapper { position: relative; }
         .doctor-card:hover .image-overlay { opacity: 1; }
         .image-overlay {
           position: absolute;
@@ -179,6 +203,38 @@ const OurDoctors = () => {
           border-radius: 10px;
         }
         .image-overlay .doctor-btn { padding: 10px 20px; color: #fff; border-radius: 5px; }
+        .location-icon{
+         color: #ffffffff;
+    margin: 10px 0px 0px;
+    font-size: 10px;
+        }
+           .doctor-location
+ {
+    color: #000000;
+    margin: 10px 0px 0px;
+    font-size: 13px;
+    font-weight: 600;
+    display:none;
+}
+    
+         @media (max-width: 768px) {
+   .doctor-location
+ {
+   display: block;
+    color: #000000;
+    margin: 10px 0px 0px;
+    font-size: 13px;
+    font-weight: 600;
+}
+        .doctor-card .content .doctor-btn {
+        margin-top: 5px;
+    }
+             h3 a {
+    color: #404040 !important;
+    text-decoration: none;
+    font-size:14px;
+}
+    }
       `}</style>
     </div>
   );
