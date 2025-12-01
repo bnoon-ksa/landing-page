@@ -368,6 +368,28 @@ function Navbar() {
 .mobile-only {
   display: none !important;
 }
+.dropdown-menu .dropdown-item {
+  background:hsla(0, 0%, 100%, .2);      /* Har item ka apna background */
+  backdrop-filter: blur(20px);
+  margin: 6px 0px 0px;            /* Items ke beech gap */
+  padding: 6px 45px;       /* Andar spacing */
+  border-radius: 6px;       /* Corners soft */
+  transition: background 0.3s ease;
+}
+ul.dropdown-menu.show {
+    border-radius: 8px;
+    width: 100%;
+    padding: 0px;
+    background-color: hsla(0, 0%, 100%, 0.00);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px;
+    margin: 0px;
+}
+.dropdown-menu .dropdown-item:hover {
+  background:hsla(0, 0%, 100%, .2);      /* Har item ka apna background */
+  backdrop-filter: blur(20px);
+}
 
 /* Mobile: Show only on responsive */
 @media (max-width: 1199px) {
