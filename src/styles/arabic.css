@@ -15352,7 +15352,7 @@ FAQ Area CSS
 }
 .work-item .content p {
   text-align: center;
-  direction: rtl; /* Arabic ke liye */
+  direction: ltr; /* Arabic ke liye */
 }
 
 /*================================================
