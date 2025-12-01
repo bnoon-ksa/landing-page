@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -79,16 +81,16 @@ const footerData: FooterData = {
     },
   ],
   sections: [
-     {
+    {
       title: "تواصل معنا ",
       links: [
         {
-          text: "الرياض: +966 11 444 8080    ",
+          text: "  +966 11 444 8080 \u00A0\u00A0\u00A0:الرياض",
           url: "tel:966 11 444 8080",
           isExternal: true,
         },
         {
-           text: "جدة :   +966 12 680 0800    ",
+          text: "+966 12 680 0800 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0:جدة ",
           url: "tel:+966 12 680 0800",
           isExternal: true,
         },
@@ -102,26 +104,26 @@ const footerData: FooterData = {
         { text: "انضم لفريقنا ", url: "/ar/join-our-team" },
         { text: "​المركز الإعلامي ", url: "https://globalfertilityivf.com/media/" },
         { text: "مواقعنا", url: "/ar/our-clinics" },
-         { text: "الرياض", url: "/ar/bnoon-riyadh" },
-          { text: "جدة ", url: "/ar/bnoon-jeddah" },
+        { text: "الرياض", url: "/ar/bnoon-riyadh" },
+        { text: "جدة ", url: "/ar/bnoon-jeddah" },
       ],
     },
     {
       title: "",
       links: [
-        
+
         { text: "العلاجات", url: "/ar/treatments" },
         { text: "برنامج وعد بنون", url: "/ar/waad-bnoon-program" },
         { text: "زيارتك لنا", url: "/ar/your-visit" },
-         { text: "دليل الخصوبة", url: "/ar/fertility-guide" },
+        { text: "دليل الخصوبة", url: "/ar/fertility-guide" },
         { text: "حقوق وواجبات المرضى", url: "/en/patients-rights" },
-         { text: "تواصل معنا", url: "/ar/contact-us" },
+        { text: "تواصل معنا", url: "/ar/contact-us" },
         { text: "طلب موعد", url: "/ar/request-an-appoinment" },
-         { text: "شاركونا تجربتكم", url: "/ar/submit-feedback" },
+        { text: "شاركونا تجربتكم", url: "/ar/submit-feedback" },
       ],
     },
-    
-   
+
+
   ],
   appButtons: [
     {
@@ -147,102 +149,137 @@ const footerData: FooterData = {
 
 function Footer() {
   return (
-    <footer className="footer-area">
-      <div className="mt-5 mb-lg-5 mb-0">
-        <div className="container">
-     <div className="row g-4">
- {/* Left column: Contact Us */}
-<div className="col-lg-4 col-sm-12">
-  <div className="single-footer-widget">
-    {footerData.sections[0].title && <h3>{footerData.sections[0].title}</h3>}
-    <ul className="links">
-      {footerData.sections[0].links.map((link, i) => (
-        <li key={i}>
-          {link.isExternal ? (
-            <a href={link.url} target="_blank" rel="noopener noreferrer">
-              {link.text}
-            </a>
-          ) : (
-            <Link href={link.url}>{link.text}</Link>
-          )}
-        </li>
-      ))}
-    </ul>
+    <>
+      <footer className="footer-area">
+        <div className="mt-5 mb-lg-5 mb-0">
+          <div className="container">
+            <div className="row g-4">
+              {/* Left column: Contact Us */}
+              <div className="col-lg-4 col-sm-12">
+                <div className="single-footer-widget">
+                  {footerData.sections[0].title && <h3>{footerData.sections[0].title}</h3>}
+                  <ul className="links ">
+                    {footerData.sections[0].links.map((link, i) => (
+                      <li className=" number" key={i}>
+                        {link.isExternal ? (
+                          <a href={link.url} target="_blank" rel="noopener noreferrer">
+                            {link.text}
+                          </a>
+                        ) : (
+                          <Link href={link.url}>{link.text}</Link>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
 
-    {/* Social icons */}
-    <div className="social-icons mt-3 d-flex">
-      {footerData.socialLinks.map((social, index) => (
-        <a
-          key={index}
-          href={social.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="me-3" // spacing between icons
-        >
-          <Image
-            src={social.icon}
-            alt={social.platform}
-            width={24}
-            height={24}
-          />
-        </a>
-      ))}
-    </div>
-  </div>
-</div>
+                  {/* Social icons */}
+                  <div className="social-icons mt-3 d-flex">
+                    {footerData.socialLinks.map((social, index) => (
+                      <a
+                        key={index}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="me-3"
+                      >
+                        <Image
+                          src={social.icon}
+                          alt={social.platform}
+                          width={24}
+                          height={24}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
-  {/* Right columns: last two sections */}
-<div className="col-lg-8 col-sm-12 d-flex flex-lg-row flex-column justify-content-end align-items-start">
-  {footerData.sections.slice(1).map((section, index) => (
-    <div
-      className="single-footer-widget ms-lg-4 mb-3"
-      style={{ minWidth: "150px" }}
-      key={index}
-    >
-      {section.title && <h3>{section.title}</h3>}
-      <ul className="links">
-        {section.links.map((link, linkIndex) => (
-          <li key={linkIndex}>
-            <Link href={link.url}>{link.text}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  ))}
-</div>
-
-</div>
-
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="copyright-area">
-          <div className="row g-4">
-            <div className="col-lg-6 col-md-12">
-              <p className="footer-text">
-                © <span>{footerData.copyright.text}</span>2025 All Rights Reserved{" "}
-                <a href={footerData.copyright.ownerUrl} target="_blank" rel="noopener noreferrer">
-                  {footerData.copyright.owner}
-                </a>
-              </p>
-            </div>
-            <div className="col-lg-6 col-md-12">
-              <ul className="lists footer-text">
-                {footerData.complianceBadges.map((badge, index) => (
-                  <li key={index}>{badge}</li>
+              {/* Right columns: last two sections */}
+              <div className="col-lg-8 col-sm-12 d-flex flex-lg-row flex-column justify-content-end align-items-start">
+                {footerData.sections.slice(1).map((section, index) => (
+                  <div
+                    className="single-footer-widget link-itmes ms-lg-4 mb-3 "
+                    style={{ minWidth: "150px" }}
+                    key={index}
+                  >
+                    {section.title && <h3>{section.title}</h3>}
+                    <ul className="links">
+                      {section.links.map((link, linkIndex) => (
+                        <li key={linkIndex}>
+                          <Link href={link.url}>{link.text}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* Mobile tools */}
+
+        <div className="container">
+          <div className="copyright-area">
+            <div className="row g-4">
+              <div className="col-lg-6 col-md-12">
+                <p className="footer-text">
+                  © <span>{footerData.copyright.text}</span>2025 All Rights Reserved{" "}
+                  <a href={footerData.copyright.ownerUrl} target="_blank" rel="noopener noreferrer">
+                    {footerData.copyright.owner}
+                  </a>
+                </p>
+              </div>
+              <div className="col-lg-6 col-md-12">
+                <ul className="lists footer-text">
+                  {footerData.complianceBadges.map((badge, index) => (
+                    <li key={index}>{badge}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile tools */}
         <div className="d-block d-md-none">
           <MobileTopTools />
         </div>
-    </footer>
-  );
+      </footer>
+
+    <style jsx global>{`
+ .link-itmes li a {
+    font-size: 13px !important;
 }
+        .mb-lg-5 {
+        margin-bottom: 1rem !important;
+    }
+   li.number {
+    direction: ltr;
+    margin-right: auto;
+    text-align-last: right;
+    justify-content: left;
+}
+        .number {
+          list-style-type: none;
+          margin-bottom: 10px;
+          line-height: 18px;
+          font-size: 14px;
+          direction: ltr;
+        }
+
+        /* Example extra styles */
+        .social-icons a {
+          transition: transform 0.2s;
+        }
+
+        .social-icons a:hover {
+          transform: scale(1.1);
+        }
+      `}</style>
+    </>
+
+  );
+  
+}
+
 
 export default Footer;
