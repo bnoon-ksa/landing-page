@@ -1,5 +1,35 @@
+/* Max width 767px */
+* {
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 @media (max-width: 768px) {
-    .popup-heading {
+  .navbar .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-left: 0px;
+    margin-bottom: 0;
+    padding-left: 0px;
+}
+.btn-language {
+    font-size: 12px !important;
+    width: 49px !important;
+    height: 20px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 0px !important;
+    font-family: Helvetica, sans-serif !important;
+}   .popup-heading {
         font-size: 14px !important;
         width: 90%;
         color: #fff;
