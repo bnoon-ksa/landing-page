@@ -222,7 +222,7 @@ function Navbar() {
           </Offcanvas.Title>
         </Offcanvas.Header>
 
-       <Offcanvas.Body className="d-flex flex-column justify-content-center align-items-center text-center">
+       <Offcanvas.Body className="d-flex flex-column align-items-center text-center">
   <ul className="list-unstyled w-100 px-3">
 {menus.map((item, index) => {
   // Handle Arabic button click separately
@@ -247,7 +247,7 @@ function Navbar() {
         ) : (
           <Link
             href={pathname.replace(/^\/en/, "/ar")}
-            className="fs-5 text-decoration-none d-block"
+            className="fs-5 text-decoration-none d-block lang-switch"
             style={{ color: "#004E78" }}
             onClick={() => {
   handleClose();
