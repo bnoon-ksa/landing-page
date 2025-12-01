@@ -15276,14 +15276,16 @@ FAQ Area CSS
   overflow: hidden;
 }
 
+
 .faq-image {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
-  margin-right: 100px;
-  border-radius: 15px;
+  border-radius: 40px !important;
+  width: 603px !important;
+    height: 576px !important;
 }
+
 
 .faq-accordion .accordion .accordion-item {
   border: 0;
@@ -15317,11 +15319,15 @@ FAQ Area CSS
   transition: 0.7s;
   display:none;
 }
+.faq-accordion{
+    margin-top: 40px;
+}
 .faq-accordion .accordion .accordion-item .accordion-button::after {
   display: none;
 }
 .faq-accordion .accordion .accordion-item .accordion-button:not(.collapsed) {
   color: #000000;
+      padding: 10px 0px;
 }
 .faq-accordion .accordion .accordion-item .accordion-button:not(.collapsed)::before {
   content: "\f1af";
@@ -15329,9 +15335,10 @@ FAQ Area CSS
 }
 .faq-accordion .accordion .accordion-item .accordion-button.collapsed {
   background-color: transparent;
+   padding: 10px 0px;
 }
 .faq-accordion .accordion .accordion-item .accordion-body {
-  padding: 0px 20px;
+  padding: 0px 0px 0px 20px;
 }
 .faq-accordion .accordion .accordion-item .accordion-body p a {
   color: #336AEA;
@@ -19275,7 +19282,7 @@ ease;
 
 /* custom classes */
 .font-program {
-  font-family: 'Hor' !important;
+ 
   color: #808080;
   font-size: 60px;
 }
