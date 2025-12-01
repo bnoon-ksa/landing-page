@@ -81,7 +81,7 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
 
                 <div className="content">
                   <h3>
-                     <i className="ri-map-pin-line" style={{ color: "#004E78", marginRight: "8px" }}></i>
+                     <i className="ri-map-pin-line" style={{ color: "#004E78", marginRight: "6px" }}></i>
                     <a href={post.slug} target="_blank" rel="noopener noreferrer">
                       {post.title}
                        {post.note && <span className="small-note">{post.note}</span>}
