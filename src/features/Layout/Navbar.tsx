@@ -284,8 +284,8 @@ function Navbar() {
     padding-left: 20px;
 }
     .btn-language {
-    font-size:18px !important;
-    padding: 9px 0px !important;
+    font-size:18px;
+    padding: 9px 0px;
     }
       .btn-dropdown.dropdown-toggle::after {
   display: none !important;
