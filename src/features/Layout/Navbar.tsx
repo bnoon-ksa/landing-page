@@ -218,15 +218,16 @@ function Navbar() {
         <Offcanvas.Body className="d-flex flex-column justify-content-center align-items-center text-center">
         <ul className="list-unstyled w-100 px-3">
   {menus.map((item, index) => (
-    <li key={item.id} className="my-3">
+    <li key={item.id} className="my-3 itmes">
       <Link
         href={
           item.id === "english"
             ? pathname.replace(/^\/ar/, "/en") // 👈 agar English ho to page switch kare
             : item.href || "#"
         }
-        className="fs-5 text-decoration-none d-block"
+        className=" text-decoration-none d-block"
         style={{ color: "#004E78" }}
+
         onClick={() => {
           handleClose();
           if (item.id === "english") return; // 👈 page auto handle karega
@@ -240,7 +241,7 @@ function Navbar() {
       {index !== menus.length - 1 && (
         <hr
           style={{
-            border: "1px solid #00000020",
+            border: "1px solid #0000005e",
             margin: "12px 0",
           }}
         />
@@ -358,7 +359,9 @@ function Navbar() {
       padding: 0px !important;
       height: 70px;
   }
-
+li.itmes{
+ font-size: 14px !important;
+}
   .navbar .navbar-brand {
       padding-left: 0px;
       width: 110px;
