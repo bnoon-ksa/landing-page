@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
+import 'remixicon/fonts/remixicon.css';
 const OurBlog = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const blogData = [
@@ -27,7 +28,8 @@ const OurBlog = () => {
     {
       id: 3,
       imageSrc: "images/blog/king-salman.avif",
-      title: "بنون – طريق الملك سلمان، الرياض <br />(الافتتاح في نهاية 2025)",
+  title: `بنون – طريق الملك سلمان، الرياض <br /><span style="font-size:14px; font-weight:400; color:#004E78;">(الافتتاح في نهاية 2025)</span>`,
+
       slug: "https://maps.app.goo.gl/F9Qu7tQQp74TTyNv9?g_st=iwb",
         embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.3583391235643!2d46.59119140000001!3d24.8174163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee69d1c7fb897%3A0x46a86841c1f1d0e8!2zUlJRQTQxNTAsIDQxNTAgS2luZyBTYWxtYW4gQmluIEFiZHVsYXppeiBSZCwgNjkzMtiMINit2Yog2KfZhNmC2YrYsdmI2KfZhtiMIFJpeWFkaCAxMzUzMiwgU2F1ZGkgQXJhYmlh!5e0!3m2!1sen!2s!4v1762873544370!5m2!1sen!2s",
       buttonLink: "ar/our-clinics",
@@ -82,6 +84,7 @@ const OurBlog = () => {
                 {/* Heading links to Google Maps */}
                 <div className="content">
                  <h3>
+                    <i className="ri-map-pin-line" style={{ color: "#004E78", marginLeft: "8px" }}></i>
   <a
     href={post.slug}
     target="_blank"
@@ -103,6 +106,42 @@ const OurBlog = () => {
           ))}
         </div>
       </div>
+       <style jsx global>{`
+       .small-text {
+  font-size: 16px; /* smaller size for note */
+  color: #004E78;
+  margin-left: 32px;
+}
+
+ .blog-card .content h3:hover, .blog-card .content .h3:hover {
+    transform: none;
+}
+    /* Blog card container */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* important for same height in grid */
+    min-height: 400px; /* adjust according to design */
+}
+
+/* Make image area fixed height */
+.blog-card .image {
+    height: 200px; /* all images/iframes same height */
+    overflow: hidden;
+}
+
+/* Content area fills remaining space */
+.blog-card .content {
+    flex: 1; /* ensures content area grows to fill height */
+}
+
+ @media (max-width: 767px) {
+     .blog-card .content h3 {
+        font-size: 14px;
+    }
+  }
+`}</style>
     </div>
   );
 };
