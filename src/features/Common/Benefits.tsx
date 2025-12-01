@@ -126,16 +126,62 @@ const Benefits = () => {
                 display: "inline-block",
               }}
             >
-              <img
-                src={images[currentIndex]}
-                alt="Service overview"
-                width={580}
-                height={450}
-                style={{ transition: "opacity 0.5s ease-in-out" }}
-                className="responsive-image"
-              />
+             <div className="image-wrapper">
+    {images.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt="benefit"
+        className={`slide-image ${index === currentIndex ? "active" : ""}  responsive-image`}
+      />
+    ))}
+  </div>
               {/* ✅ Responsive style only for mobile */}
    <style jsx global>{`
+    .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 432px; /* apny hisab se adjust karlena */
+  overflow: hidden;
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide-image.active {
+  opacity: 1;
+}
+
+  .slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out; /* <-- cross fade speed */
+}
+
+/* Active image will fade in */
+.slider img.active {
+  opacity: 1;
+}
   .service-overview-content h2 {
     font-size: 32px;
     margin-bottom: 80px !important;
@@ -181,6 +227,22 @@ const Benefits = () => {
     .responsive-image {
       width: 100% !important;
       height: auto !important;
+    }
+       .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px; /* apny hisab se adjust karlena */
+  overflow: hidden;
+}
+          .service-overview-image {
+        box-shadow: 20px 20px 0px #d7f2fb; /* smaller shadow for mobile */
+        width: 85% !important;
+      }
+
+      .responsive-image {
+        width: 100% !important;
+        height: auto !important;
+      }
     }
   }
 `}</style>
