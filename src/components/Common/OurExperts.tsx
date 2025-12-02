@@ -151,7 +151,7 @@ const OurExperts = () => {
         </div>
 
         {/* Filter Buttons */}
-   <div className="mb-4 d-flex gap-3">
+   <div className="mb-4 d-flex gap-5">
   <button
     className={`physicians-btn btn ${filter === "ALL" ? "active" : ""}`}
     onClick={() => setFilter("ALL")}
@@ -206,7 +206,7 @@ const OurExperts = () => {
 
     <div className="content">
       <h3>
-        <Link href={doctor.profileLink}>{doctor.name}</Link>
+        <Link className=" doctor-link" href={doctor.profileLink}>{doctor.name}</Link>
       </h3>
       <span className="sub">{doctor.qualification}</span>
        {doctor.location && (
@@ -226,12 +226,36 @@ const OurExperts = () => {
   </div>
 
   {/* Same styles from OurDoctors */}
-  <style jsx>{`
+  <style jsx global>{`
     .doctor-card {
       position: relative;
       overflow: hidden;
+      border-radius:16px;
     }
-
+       .doctor-link {
+    color: #000000 !important;
+    font-size:18px;
+    text-decoration: none !important;
+  }
+.physicians-btn {
+    width: 105px !important;
+    height: 40px !important;
+    border-radius: 0px !important;
+}
+    .doctor-card .content .sub {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 20px;
+}
+    .service-overview-content h3, .service-overview-content .h3 {
+    font-size: 30px;
+    font-weight: normal;
+    color: #004E78;
+}
+    .doctor-location {
+    color: #fff;
+    font-size: 12px !important;
+}
     .image-wrapper {
       position: relative;
     }
@@ -281,6 +305,15 @@ const OurExperts = () => {
  .doctor-location {
     display:none !important;
   }
+      .service-overview-content h3, .service-overview-content .h3 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #004E78;
+}
+        .doctor-card {
+        padding: 15px 10px !important;
+        margin: 0px 17px !important;
+    }
 .location-color {
     display: block;
 }
