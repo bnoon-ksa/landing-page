@@ -18921,9 +18921,10 @@ Footer Area Area CSS
 }
 
 .single-footer-widget h3, .single-footer-widget .h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 25px;
       color: #ffffff;
+  font-weight:600;
 }
 .single-footer-widget .links {
   margin-bottom: 0;
