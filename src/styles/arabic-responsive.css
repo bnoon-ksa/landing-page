@@ -196,7 +196,9 @@ html, body {
   }
   button.btn.btn-primary.px-5.py-2.rounded-lg.submit-btn {
     width: 100%;
+    font-size: 12px;
 }
+
   .form-input {
     width: 100%;
 }
@@ -210,6 +212,21 @@ html, body {
     position: relative;
     margin-right: 40px;
     margin: -18px 0px 0px;
+}
+.faq-accordion {
+    margin-top: 0px;
+}
+.faq-image{
+width: auto !important;
+height: 271px !important;
+        min-height: unset !important;
+}
+.step-btn {
+    background-color: #004e78 !important;
+    border: none !important;
+    border-radius: 0px !important;
+    padding: 8px 80px !important;
+    font-size: 12px !important;
 }
   .faq-accordion .accordion .accordion-item .accordion-button {
     border: none;
@@ -581,7 +598,7 @@ html, body {
     margin-bottom: 0;
   }
   .second-about-content h2 {
-    font-size: 30px;
+    font-size: 18px;
   }
   .second-about-items {
     max-width: 100%;
@@ -590,7 +607,7 @@ html, body {
     padding: 5px;
   }
   .second-about-items .item h3 {
-    font-size: 22px;
+    font-size: 20px !important;
   }
   .second-about-btn {
     margin-top: 25px;
@@ -2172,6 +2189,10 @@ html, body {
  {
     padding:18px 10px;
 }
+.fertility-area {
+    overflow: hidden;
+    margin: 0px 10px;
+}
 .blog-card .image {
     height: auto !important;
     overflow: hidden;
@@ -2191,6 +2212,9 @@ html, body {
  font-size:12px !important;
   font-weight: 600 !important;
 }
+    .second-about-area {
+        margin: 35px 0 0 !important;
+    }
 .search-button{
  font-size:12px !important;
   font-weight: 600 !important;
