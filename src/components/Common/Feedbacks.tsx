@@ -59,7 +59,7 @@ const Feedbacks = () => {
                   <h2>{slide.title}</h2>
                   <p>{slide.desc}</p>
                   {/* ✅ h3 added niche p ke */}
-                  <h3 style={{ marginTop: "15px", fontSize: "18px", color: "#004E78" }}>
+                   <h3 style={{ marginTop: "15px", fontSize: "18px", color: "rgb(64, 64, 64)",  fontWeight: "normal", }}>
                     {slide.author}
                   </h3>
                 </div>
