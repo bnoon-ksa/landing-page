@@ -308,7 +308,7 @@ function Navbar() {
     .navbar .navbar-nav .nav-item {
      position: relative; 
     margin-left: 0px;
-    margin-right: 20px !important;
+    margin-right: 20px;
 }
         @keyframes slideUp {
           from {
