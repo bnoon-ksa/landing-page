@@ -127,7 +127,7 @@ const OurDoctors = () => {
     },
   ];
  return (
-    <div className="container">
+    <div className="container doctors-section">
          <div className="section-title">
           <div className="row justify-content-center align-items-center g-4">
             <div className="col-lg-10 col-md-12">
@@ -191,7 +191,14 @@ const OurDoctors = () => {
       .ri-map-pin-line {
     font-size: 15px;
 }
-        .doctor-card { position: relative; overflow: hidden; }
+    .doctor-card .content .sub {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-weight: 100;
+}
+        .doctor-card { position: relative; overflow: hidden; border-radius: 14px;}
         .doctors-wrapper { position: relative; }
         .doctor-card:hover .image-overlay { opacity: 1; }
         .image-overlay {
@@ -226,15 +233,31 @@ const OurDoctors = () => {
     font-size: 13px;
     font-weight: 600;
 }
+        .doctor-card {
+        padding: 15px;
+    }
+    .doctors-section {
+    padding: 0px 20px;
+}
         .doctor-card .content .doctor-btn {
-        margin-top: 5px;
+        margin-top: 5px !important;
     }
              h3 a {
     color: #404040 !important;
     text-decoration: none;
     font-size:14px;
 }
+    .doctor-card {
+    position: relative;
+    overflow: hidden;
+    margin: -20px 0px 20px;
+}
     }
+@media only screen and (max-width: 767px) {
+    .doctor-card .content .doctor-btn {
+        margin-top: 15px !important;
+    }
+}
       `}</style>
     </div>
   );
