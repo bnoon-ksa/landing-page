@@ -11,6 +11,11 @@ img, video {
 html, body {
   overflow-x: hidden;
 }
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .navbar .navbar-nav .nav-item{
+    margin-right: 15px !important;
+  }
+}
 
 @media (max-width: 768px) {
   .navbar .navbar-brand {
@@ -36,11 +41,11 @@ html, body {
         padding: 40px 0px 0px;
     }
         .second-banner-content h1 {
-    font-size: 15px;
+    font-size: 13px !important;
     margin-bottom: 15px;
   }
      .second-banner-content p {
-  font-size: 12px !important;
+  font-size: 8px !important;
   margin-bottom: 0;
   color: #ffffff;
 }
@@ -84,20 +89,25 @@ html, body {
     margin-bottom: 15px;
   }
      .second-banner-content p {
-  font-size: 12px !important;
+  font-size: 8px !important;
+  margin: 0px 0px 0px !important;
   margin-bottom: 0;
   color: #ffffff;
 }
+.second-banner-content .banner-btn {
+    margin-top: 5px !important;
+}
     p.terms-text {
-    font-size: 12px !important;
+    font-size: 8px !important;
     font-style: italic;
 }
     
 .btn-banner {
     background-color: #39bced !important;
-    border: none !important;
-    padding: 4px 20px !important;
-    font-size: 13px !important;
+        border: none !important;
+        font-size: 8px !important;
+        width: 81px;
+        height: 20px;
 }
     .image-column {
         order: -1;
@@ -108,7 +118,7 @@ html, body {
   }
     .second-banner-content {
     max-width: 60%;
-    top: 40px;
+    top: 20px;
     position: absolute;
 }
   .pt-140 {
@@ -477,7 +487,7 @@ html, body {
   /* Home Two Responsive */
   .second-banner-area {
     padding-top: 50px;
-      height: 200px !important;
+      height: 125px !important;
     }
   }
   p.popup-text {
@@ -2139,9 +2149,31 @@ html, body {
 }/*# sourceMappingURL=responsive.css.map */  
  @media (max-width: 768px) {
   .search-overview-content h2, .search-overview-content .h2 {
-  font-size: 20px;
-  margin-bottom: 17px;
+  font-size: 18px;
+  margin-bottom: 12px;
   color: #004E78;
+}
+.partner-area {
+    margin: 0px 10px;
+}
+.service-overview-area {
+    margin: 0px 10px;
+}
+.doctor-select{
+  font-size:12px !important;
+  font-weight: 600 !important;
+}
+.location-select{
+ font-size:12px !important;
+  font-weight: 600 !important;
+}
+.search-button{
+ font-size:12px !important;
+  font-weight: 600 !important;
+}
+.doctor-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 p {
     margin-bottom: 15px;
