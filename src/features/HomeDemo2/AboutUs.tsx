@@ -82,8 +82,8 @@ function AboutUs() {
               {aboutData.items.map((item) => {
                 let boxWidth = "220px";
                 if (item.id === 2 || item.id === 3) boxWidth = "150px";
-                if (item.id === 4) boxWidth = "350px";
-                if (item.id === 5) boxWidth = "250px";
+                if (item.id === 4) boxWidth = "300px";
+                if (item.id === 5) boxWidth = "270px";
 
                 return (
                   <div
@@ -134,7 +134,7 @@ function AboutUs() {
       </div>
 
       {/* ✅ Scoped CSS */}
-      <style jsx>{`
+     <style jsx>{`
         /* Default: Desktop — keep items in a horizontal row */
         .second-about-items {
           display: flex;
@@ -142,7 +142,17 @@ function AboutUs() {
           justify-content: center;
           overflow-x: auto;
         }
+          .second-about-items .item h3 {
+    font-size: 28px !important;
+}
 
+.second-about-items .item p {
+    margin-bottom: 0;
+    font-size: 14px !important;
+    color: #000000 !important;
+    text-align: center;
+    font-weight: 600;
+}
         /* ✅ Mobile view (≤768px): stack vertically */
         @media (max-width: 768px) {
           .second-about-items {
@@ -166,11 +176,15 @@ function AboutUs() {
             width: 80px !important;
             height: auto !important;
           }
-
-          .second-about-items h3 {
-            font-size: 1.4rem !important;
+.second-about-content h2{
+            font-size:18px !important;
           }
-
+          .second-about-items h3 {
+            font-size:18px !important;
+          }
+        .second-about-items .item h3 {
+    font-size: 20px !important;
+}
           .second-about-items p {
             font-size: 14px !important;
           }
