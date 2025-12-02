@@ -23,7 +23,7 @@ const AboutusSection = () => {
   };
 
   return (
-    <div className="fertility-area mt-5">
+    <div className="fertility-area mt-lg-5">
       <div className="container">
         <div className="section-title">
           <div className="row justify-content-center align-items-center g-4">
