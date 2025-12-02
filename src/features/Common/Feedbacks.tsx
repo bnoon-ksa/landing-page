@@ -38,7 +38,7 @@ const Feedbacks = () => {
     <div className="service-overview-area ptb-140" style={{ position: "relative" }}>
       <div className="container">
         {/* ✅ Wrapper with fixed minHeight so dots niche hi rahen */}
-        <div style={{ position: "relative", minHeight: "450px" }}>
+        <div className="service-section" style={{ position: "relative", minHeight: "450px" }}>
           {feedbackSlides.map((slide, index) => (
             <div
               key={index}
@@ -69,7 +69,7 @@ const Feedbacks = () => {
                 </div>
               </div>
               <div className="col-xl-6 col-md-12">
-                <div className="service-overview-image">
+                <div className="service-image">
                   <img
                     src={slide.img}
                     alt="Service overview"
@@ -113,6 +113,20 @@ const Feedbacks = () => {
           ))}
         </div>
       </div>
+        <style jsx>{`
+     
+        /* ✅ Mobile view (≤768px): stack vertically */
+        @media (max-width: 768px) {
+            .service-overview-content {
+        padding-left: 0px;
+        margin: 0px -25px 0px 10px !important;
+    }
+.service-image {
+    margin: 0px -25px 0px 10px !important;
+}
+*,
+        }
+      `}</style>
     </div>
   );
 };
