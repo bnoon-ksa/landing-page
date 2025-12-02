@@ -22,15 +22,15 @@ const OurLocations = () => {
     <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
       <div className="d-flex align-items-center">
         <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-        <span>{location}</span>
+        <span className="text-color">{location}</span>
       </div>
       <div className="d-flex align-items-center">
         <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-        <span>{phone}</span>
+        <span className="text-color">{phone}</span>
       </div>
       <div className="d-flex align-items-center">
         <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-        <span>{email}</span>
+        <span className="text-color">{email}</span>
       </div>
     </div>
   );
@@ -139,6 +139,12 @@ const OurLocations = () => {
           </motion.div>
         </motion.div>
       </div>
+        <style jsx global>{`
+  span.text-color {
+    color: #004E78 !important;
+    font-size: 18px !important;
+  }
+`}</style>
     </div>
   );
 };
