@@ -330,7 +330,7 @@ const TreatmentsSection: React.FC = () => {
         <div className="row justify-content-center align-items-center g-4">
           <div className="col-lg-8 col-md-6">
             <div
-              className="left mx-lg-5"
+              className="left mx-lg-3 treatment-text"
               dangerouslySetInnerHTML={{ __html: currentContent.text }}
             />
           </div>
@@ -345,7 +345,7 @@ const TreatmentsSection: React.FC = () => {
 
         {/* Bottom text + list + second list + second text */}
         <div className="row mt-3">
-          <div className="col-lg-11 mx-lg-5">
+          <div className="col-lg-11 mx-lg-3 treatment-text">
             {/* First bottom text */}
             <div dangerouslySetInnerHTML={{ __html: currentContent.bottomText }} />
 
@@ -393,13 +393,31 @@ const TreatmentsSection: React.FC = () => {
             {/* Second text */}
             {currentContent.secondText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.secondText }}
               />
             )}
           </div>
         </div>
+           <style jsx global>{`
+.tabs-container {
+    width: 1280px;
+}
+    .tabs-btn {
+    padding: 8px 12px;
+}
+      @media only screen and (max-width: 767px) {
+.tabs-container {
+    width: 350px;
+}
+    .treatment-text{
+    font-size: 14px;
+    }
+      }
+
+  `}</style>
       </div>
+    
     </div>
   );
 };
