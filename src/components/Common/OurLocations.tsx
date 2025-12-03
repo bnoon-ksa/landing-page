@@ -47,7 +47,7 @@ const OurLocations = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div className="col-xl-6 col-md-12" variants={variantsRight}>
-            <div className="service-overview-content">
+            <div className="service-overview-content location-text">
               <h2>Bnoon - Riyadh</h2>
               <p>
                 With a legacy of excellence in fertility and women’s health, Bnoon has been proudly serving families for over 12 years in Riyadh. Renowned for its patient-first philosophy, the center combines compassionate care with advanced technology and a team of highly experienced reproductive specialists, earning its reputation as one of the most trusted names in reproductive medicine across Saudi Arabia.
@@ -94,7 +94,7 @@ const OurLocations = () => {
           </motion.div>
 
           <motion.div className="col-xl-6 col-md-12" variants={variantsLeft}>
-            <div className="service-overview-content">
+            <div className="service-overview-content location-text">
               <h2>Bnoon – Jeddah</h2>
               <p>
                 Acquired in June 2025, Bnoon Jeddah — formerly known as HealthPlus Fertility Center Jeddah — has long been recognized for its medical excellence and the trust it has built within the local community. Now as part of a leading network of fertility centers, the center reflects the group’s commitment to expanding access to world-class fertility and women’s health services across Saudi Arabia.
@@ -115,7 +115,7 @@ const OurLocations = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.div className="col-xl-6 col-md-12" variants={variantsRight}>
-            <div className="service-overview-content">
+            <div className="service-overview-content location-text">
               <h2>
                 Bnoon – King Salman Road, Riyadh <span style={{ fontSize: "18px" }}>(Opening December 2025)</span>
               </h2>
@@ -144,6 +144,9 @@ const OurLocations = () => {
     color: #004E78 !important;
     font-size: 18px !important;
   }
+    .location-text h2{
+    margin-bottom: 10px;
+    }
 `}</style>
     </div>
   );
