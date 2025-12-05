@@ -19209,6 +19209,7 @@ font-size: 14px !important;
 .doctors-overview-image{
 border: 1px solid #00000000;
 border-radius: 30px;
+      margin-left: auto;
 }
 .doctor-profile-btn{
   background-color: #004E78 !important;
@@ -19377,7 +19378,7 @@ ease;
     color: #004E78;
 }
 .doctors-overview-content {
-    width: 670px;
+    width: 730px;
 }
 .profile-text {
     color: #000;
