@@ -88,7 +88,7 @@ const DrAbdulAzizAlShahrani = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4 mt-5">
+        <div className="row g-4 mt-lg-5">
 
           <div className="col-xl-7 col-md-12">
             <div className="doctors-overview-content ">
