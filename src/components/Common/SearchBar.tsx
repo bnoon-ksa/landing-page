@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-type LocationType = "Riyadh" | "Jeddah" | "";
+type LocationType = "Riyadh" | "Jeddah" | "Al Ahsa" | "";
 
 const SearchBar = () => {
   const [doctor, setDoctor] = useState("");
@@ -23,6 +23,10 @@ const SearchBar = () => {
     "Dr. Maya Albezreh": "/en/dr-maya-albezreh",
     "Dr. Razan Ghaith": "/en/dr-razan-ghaith",
     "Dr. Maram Dadoua": "/en/dr-maram-dadoua",
+    "Dr. Rania Elsherify": "/en/dr-rania-elsherify",
+    "Dr. Bassam Nusair": "/en/dr-bassamnusair",
+    "Dr. Ahmed Al-Nowasser": "/en/dr-ahmedal-nowasser",
+    "Dr. Median Alkhalaf": "/en",
   };
 
   const handleSearch = () => {
@@ -79,13 +83,26 @@ const SearchBar = () => {
       "Dr. Razan Ghaith",
       "Dr. Maram Dadoua",
     ],
+    "Al Ahsa": [
+  "Dr. Rania Elsherify",
+  "Dr. Bassam Nusair",
+  "Dr. Ahmed Al-Nowasser",
+  "Dr. Median Alkhalaf",
+],
+
   };
 
-  const allDoctors = [...doctorsByLocation.Riyadh, ...doctorsByLocation.Jeddah];
-  const doctorsToShow =
-    location === "Riyadh" || location === "Jeddah"
-      ? doctorsByLocation[location]
-      : allDoctors;
+ const allDoctors = [
+  ...doctorsByLocation.Riyadh,
+  ...doctorsByLocation.Jeddah,
+  ...doctorsByLocation["Al Ahsa"],
+];
+
+const doctorsToShow =
+  location === "Riyadh" || location === "Jeddah" || location === "Al Ahsa"
+    ? doctorsByLocation[location as Exclude<LocationType, "">]
+    : allDoctors;
+
 
   return (
     <div className="partner-area ptb-140">
@@ -160,7 +177,7 @@ const SearchBar = () => {
     <img src="/images/arrow.png" className="arrow-icon" />
   </button>
   <div className="dropdown-menu location-menu">
-    {["Riyadh", "Jeddah"].map((loc, i) => (
+    {["Riyadh", "Jeddah", "Al Ahsa"].map((loc, i) => (
       <div
         key={i}
         className="dropdown-item"
