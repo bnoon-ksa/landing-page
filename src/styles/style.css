@@ -19214,33 +19214,13 @@ border-radius: 30px;
   background-color: #004E78 !important;
     border: none;
 }
-.doctor-profile-btn:hover {
-    background-color: #39bced !important;
-}
+
 .breadcrumb-item {
     font-weight: 600;
 }
-.lang-box {
-  display: inline-block;
-  margin-left: 28px;
-  background: #f1f1f100;   /* box bg */
-  color: #000;
-  padding: 4px 30px;
-  font-size: 14px;
-  font-weight: 500;
-  border: 1px solid #ccc; /* optional border */
-}
-.profile-text {
-  font-weight: 600;
-  color: #000;
-  border-bottom: 1px solid #0000002b; /* 👈 bottom border */
-  padding-bottom: 4px; /* thoda gap for neat look */
-}
-.profile-text-last {
-  font-weight: 600;
-  color: #000;
-  padding-bottom: 4px; /* thoda gap for neat look */
-}
+
+
+
 .doctor-content{
   padding-right:60px;
 }
@@ -19381,3 +19361,47 @@ ease;
   background-position: right 12px center; /* 👈 distance from right edge */
   background-size: 14px; /* 👈 adjust arrow size as you like */
 }
+.doctor-profile-btn {
+    background-color: #004E78 !important;
+    border: none;
+    width: 285px;
+    height: 42px;
+    text-align: center !important;
+    justify-content: center;
+    border-radius: 0px !important;
+    align-content: center;
+}
+.doctors-overview-content h2{
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #004E78;
+}
+.doctors-overview-content {
+    width: 670px;
+}
+.profile-text {
+    color: #000;
+    border-bottom: 1px solid #0000002b;
+    padding-bottom: 4px;
+    font-size: 22px !important;
+}
+.profile-text-last {
+    color: #000;
+    padding-bottom: 4px;
+     font-size: 22px !important;
+}
+.lang-box {
+  display: inline-block;
+  margin-left: 28px;
+  background: #f1f1f100;   /* box bg */
+  color: #000;
+  padding: 4px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #ccc; /* optional border */
+}
+.doctor-profile-btn:hover {
+    background-color: #39bced !important;
+    border: none;
+}
+
