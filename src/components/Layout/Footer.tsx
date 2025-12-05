@@ -104,6 +104,7 @@ const footerData: FooterData = {
         { text: "Our Locations", url: "/en/our-clinics" },
          { text: "Bnoon Riyadh", url: "/en/bnoon-riyadh" },
           { text: "Bnoon Jeddah", url: "/en/bnoon-jeddah" },
+         { text: "Bnoon Al Ahsa", url: "/en/bnoon-alahsa" },
       ],
     },
     {
