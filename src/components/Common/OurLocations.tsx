@@ -6,7 +6,7 @@ const OurLocations = () => {
   const imageRiyadh = "/images/locations/bnoon-riyadh.avif";
   const imageJeddah = "/images/locations/bnoon-jeddah.avif";
   const imageKingSalman = "/images/locations/bnoon-north-riiyadh.avif";
-
+ const imageAlahsa = "/images/locations/bnoon-alahsa.jpg";
   // Type-safe animation variants
  const variantsLeft: Variants = {
     hidden: { x: 100, opacity: 0 },
@@ -24,10 +24,12 @@ const OurLocations = () => {
         <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
         <span className="text-color">{location}</span>
       </div>
+       {phone && (
       <div className="d-flex align-items-center">
         <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
         <span className="text-color">{phone}</span>
       </div>
+    )}
       <div className="d-flex align-items-center">
         <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
         <span className="text-color">{email}</span>
@@ -64,7 +66,7 @@ const OurLocations = () => {
 
           <motion.div className="col-xl-6 col-md-12" variants={variantsLeft}>
             <div
-              className="service-overview-image"
+              className="location-overview-image"
               style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
             >
               <img src={imageRiyadh} alt="Service overview" width={580} height={450} />
@@ -81,7 +83,7 @@ const OurLocations = () => {
         >
           <motion.div className="col-xl-6 col-md-12" variants={variantsRight}>
             <div
-              className="service-overview-image"
+              className="location-overview-image"
                style={{
   boxShadow: "-50px 50px 0px #d7f2fb",
   overflow: "hidden",
@@ -131,10 +133,51 @@ const OurLocations = () => {
 
           <motion.div className="col-xl-6 col-md-12" variants={variantsLeft}>
             <div
-              className="service-overview-image"
+              className="location-overview-image"
               style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
             >
               <img src={imageKingSalman} alt="Service overview" width={580} height={450} />
+            </div>
+          </motion.div>
+        </motion.div>
+
+          {/* Al Ahsa Section */}
+        <motion.div
+          className="row justify-content-center align-items-center g-4 mt-5 flex-column-reverse flex-md-row"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.div className="col-xl-6 col-md-12" variants={variantsRight}>
+            <div
+              className="location-overview-image"
+               style={{
+  boxShadow: "-50px 50px 0px #d7f2fb",
+  overflow: "hidden",
+  marginLeft: "auto",
+  marginRight: "auto",
+}}
+            >
+              <img src={imageAlahsa} alt="Service overview" width={580} height={450} />
+            </div>
+          </motion.div>
+
+          <motion.div className="col-xl-6 col-md-12" variants={variantsLeft}>
+            <div className="service-overview-content location-text">
+              <h2>Bnoon – Al Ahsa </h2>
+              <p>
+               Situated within Almoosa Specialist Hospital,<strong> Bnoon – Al Ahsa</strong> brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to offer an exceptional patient experience, combining advanced reproductive technologies with a compassionate, holistic model of care. 
+              </p>
+              <p>
+               As part of Bnoon’s growing national network, the Al Ahsa center reinforces our commitment to ensuring families across the Kingdom have access to the highest standards of reproductive medicine, delivered by leading IVF consultants in a state-of-the-art clinical environment. 
+              </p>
+               <p>
+              Equipped with cutting-edge embryology laboratories, the center provides a comprehensive range of fertility services—including IVF, ICSI, IUI, egg and sperm freezing, PGT-AI, reproductive endocrinology, and full male and female fertility diagnostics—supported by streamlined workflows and direct collaboration with other departments within Almoosa Specialist Hospital. 
+              </p>
+               <p>
+               <strong>Bnoon – Al Ahsa</strong> marks a significant step forward in elevating fertility care across the Eastern Region, uniting innovation, clinical excellence, and unwavering support for every family’s journey to parenthood. 
+              </p>
+              {contactInfo("Bnoon – Al Ahsa", "", "info@bnoon.sa ")}
             </div>
           </motion.div>
         </motion.div>
@@ -147,6 +190,32 @@ const OurLocations = () => {
     .location-text h2{
     margin-bottom: 10px;
     }
+      /* ✅ Same size for all images */
+  .location-overview-image {
+    width: 544px;
+    align-items: end;
+    margin: 0 0 0 40px;
+    height: 420px ;
+    overflow: hidden !important;
+  }
+
+  .location-overview-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-position: center !important;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 767px) {
+    .location-overview-image {
+     width: 85%;
+        margin-bottom: 20px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align:center;
+    }
+  }
 `}</style>
     </div>
   );
