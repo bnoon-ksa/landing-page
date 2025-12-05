@@ -69,7 +69,7 @@ const DrMaramDadoua = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
 
         {/* Breadcrumbs */}
@@ -88,10 +88,10 @@ const DrMaramDadoua = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4">
+        <div className="row g-4 mt-lg-5">
 
           <div className="col-xl-7 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctors-overview-content ">
               <h2
                 ref={contentRefRiyadh}
                 className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
@@ -144,7 +144,7 @@ const DrMaramDadoua = () => {
             </div>
           </div>
           <div className="col-xl-12 col-md-12">
-            <div className="service-overview-content">
+            <div className="doctor-overview-content ">
               <p>She is currently pursuing an advanced diploma in reproductive medicine and surgery and holds certifications in ART, IUI, embryo transfer, and emergency obstetrics. Her academic contributions include a published study on infertility diagnostics in the MAR Journal (2022), and she regularly participates in regional and international fertility congresses.</p><p>
                 Fluent in Arabic and English, Dr. Maram combines medical expertise with cultural sensitivity and a patient-centered approach—serving women from adolescence to menopause with trust and care. 
               </p>
