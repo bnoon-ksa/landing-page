@@ -69,7 +69,7 @@ const DrMoussaElNaiemy = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
 
         {/* Breadcrumbs */}
@@ -89,10 +89,10 @@ const DrMoussaElNaiemy = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4">
+        <div className="row g-4 mt-lg-5">
 
           <div className="col-xl-7 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctors-overview-content">
               <h2
                 ref={contentRefRiyadh}
                 className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
@@ -103,7 +103,7 @@ const DrMoussaElNaiemy = () => {
               <p className="profile-text">
                 Executive Director</p>
               <p className="profile-text">
-                Consultant, Andrology & Male Infertility  </p>
+               Consultant, Urology, Andrology & Male Infertility  </p>
               <p className="profile-text">
                 Location: Bnoon – Jeddah </p>
               <p className="profile-text-last">
@@ -142,7 +142,7 @@ const DrMoussaElNaiemy = () => {
           </div>
 
           <div className="col-xl-12 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctor-overview-content">
 
               <p>Dr. Al Numi is an active academic contributor, having presented over 30 papers at regional and international conferences, including the American Urological Association (AUA), European Society of Human Reproduction and Embryology (ESHRE), European Society for Sexual Medicine (ESSM) and Middle East Fertility Society (MEFS). His work has been published in respected journals such as European Urology, Urology Annals, and Basic and Clinical Andrology.
               </p>
