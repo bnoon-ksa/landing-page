@@ -37,6 +37,14 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
       description:
         "To further expand access and redefine the standard of fertility care in the Kingdom...",
     },
+     {
+      id: 4,
+      imageSrc: "images/blog/bnoon-alahsa.jpg",
+      title: "Bnoon – Al Ahsa ",
+        buttonLink: "en//bnoon-alahsa",
+      description:
+        "Situated within Almoosa Specialist Hospital, Bnoon – Al Ahsa brings world-class fertility and women’s health..."
+    },
   ];
 
   return (
@@ -52,7 +60,7 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
           </div>
         </div>
 
-        <div className="row justify-content-center g-4">
+        <div className="row g-4">
           {blogData.map((post) => (
             <div key={post.id} className="col-lg-4 col-md-6">
               <div
