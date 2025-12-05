@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import ClientDrWajdiAlomariPage from "./page.client";
+import ClientDrRaniaElsherifyPage from "./page.client";
 
 export const metadata: Metadata = {
-  title: "Dr. Rania El Sherify – Best Fertility Doctor in Riyadh | Bnoon",
-  description: "",
+  title: "Dr. Rania El Sherify – Best Fertility Doctor in Riyadh | Bnoon ",
+  description:
+    "",
 };
 
-export default function ServerPage() {
-  return <ClientDrRaniaPage />;
+export default function ServerDrRaniaElsherifyPage() {
+  return <ClientDrRaniaElsherifyPage />;
 }
