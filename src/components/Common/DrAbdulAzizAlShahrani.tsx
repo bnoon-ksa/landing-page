@@ -69,7 +69,7 @@ const DrAbdulAzizAlShahrani = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
 
         {/* Breadcrumbs */}
@@ -88,10 +88,10 @@ const DrAbdulAzizAlShahrani = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4">
+        <div className="row g-4 mt-5">
 
           <div className="col-xl-7 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctors-overview-content ">
               <h2
                 ref={contentRefRiyadh}
                 className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
@@ -101,9 +101,9 @@ const DrAbdulAzizAlShahrani = () => {
                 Dr. AbdulAziz AlShahrani
               </h2>
               <p className="profile-text">
-                Group Medical Director, Bnoon </p>
+               Group Medical Director </p>
               <p className="profile-text">
-                Consultant, Obstetrics, Gynecology, Reproductive Endocrinology & Infertility (IVF), Gynecological Laparoscopic Surgery  </p>
+               Consultant, Reproductive Endorinology & Infertility (IVF), Gynecological Laproscopic Surgery</p>
               <p className="profile-text">
                 Location: Bnoon – Riyadh </p>
               <p className="profile-text-last">
@@ -113,14 +113,12 @@ const DrAbdulAzizAlShahrani = () => {
               </p>
 
               <p>
-                Dr. AbdulAziz AlShahrani is a leading Consultant in Obstetrics, Gynecology, Reproductive Endocrinology, Infertility, IVF, and Laparoscopic Surgery, and is the Group Medical Director of Bnoon in Saudi Arabia. With nearly three decades of experience in the field of reproductive medicine, Dr. AlShahrani is recognized for his clinical excellence and pioneering role in advancing fertility care in the Kingdom.
+              Dr. AbdulAziz AlShahrani is a leading Consultant in Obstetrics, Gynecology, Reproductive Endocrinology, Infertility, IVF, and Laparoscopic Surgery, and is the Group Medical Director of Bnoon in Saudi Arabia. With nearly three decades of experience in the field of reproductive medicine, Dr. AlShahrani is recognized for his clinical excellence and pioneering role in advancing fertility care in the Kingdom.
               </p>
               <p>
-                He earned his MBBS degree from King Saud University in 1994, followed by the Saudi Board in Obstetrics and Gynecology in 1999. He completed his fellowship in infertility and laparoscopic surgery at King Faisal Specialist Hospital in 2003, and pursued fellowship in IVF, reproductive medicine, and reproductive surgery at McGill University in Montreal, Canada, in 2005.
+              He earned his MBBS degree from King Saud University in 1994, followed by the Saudi Board in Obstetrics and Gynecology in 1999. He completed his fellowship in infertility and laparoscopic surgery at King Faisal Specialist Hospital in 2003, and pursued fellowship in IVF, reproductive medicine, and reproductive surgery at McGill University in Montreal, Canada, in 2005.
               </p>
-              <p>
-                Dr. Abdulaziz is an active member in the Middle East Fertility Society (MEFS), American Society of Reproductive Medicine (ASRM) and the European Society of Human Reproduction
-              </p>
+             
             </div>
           </div>
 
@@ -154,8 +152,8 @@ const DrAbdulAzizAlShahrani = () => {
   `}</style>
           </div>
           <div className="col-xl-12 col-md-12">
-            <div className="service-overview-content">
-              <p>and Embryology (ESHRE). He also serves as a founding member and vice president of the Saudi Society for Women’s Health. He regularly speaks at scientific conferences, and has led various workshops in the region.
+            <div className="doctor-overview-content">
+              <p> Dr. Abdulaziz is an active member in the Middle East Fertility Society (MEFS), American Society of Reproductive Medicine (ASRM) and the European Society of Human Reproduction and Embryology (ESHRE). He also serves as a founding member and vice president of the Saudi Society for Women’s Health. He regularly speaks at scientific conferences, and has led various workshops in the region.
               </p><p>
                 Prior founding Bnoon Medical Center in Riyadh, Dr. AlShahrani served as a consultant at leading IVF centers in Saudi Arabia. Since 2013, he has led Bnoon - Riyadh as both Medical Director and consultant, playing a vital role in its growth as a trusted destination for reproductive health and advanced minimally invasive gynecologic procedures.
               </p>
