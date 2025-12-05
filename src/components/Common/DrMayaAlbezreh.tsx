@@ -69,7 +69,7 @@ const DrMayaAlbezreh = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
 
         {/* Breadcrumbs */}
@@ -88,10 +88,10 @@ const DrMayaAlbezreh = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4">
+        <div className="row g-4 mt-lg-5">
 
           <div className="col-xl-7 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctors-overview-content">
               <h2
                 ref={contentRefRiyadh}
                 className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
@@ -101,7 +101,7 @@ const DrMayaAlbezreh = () => {
               Dr. Maya Albezreh 
               </h2>
               <p className="profile-text">
-               Consultant, Obstetrics, Gynecology & Infertility </p>
+              Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF)</p>
               <p className="profile-text">
              Location: Bnoon – Jeddah </p>
               <p className="profile-text-last">
