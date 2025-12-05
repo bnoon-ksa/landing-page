@@ -135,7 +135,7 @@ const OurExperts = () => {
       name: "Dr. Rania Elsherify ",
       qualification: "Obstetrics & Gynecology Registrar ",
       imageUrl: "/images/doctors/14.jpg",
-      profileLink: "en/dr-rania-elsherify",
+      profileLink: "dr-rania-elsherify",
        location: "Al Ahsa",
     },
      {
@@ -143,7 +143,7 @@ const OurExperts = () => {
       name: "Dr. Bassam Nusair ",
       qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
       imageUrl: "/images/doctors/15.jpg",
-      profileLink: "en/dr-bassamnusair",
+      profileLink: "dr-bassamnusair",
        location: "Al Ahsa",
     },
      {
@@ -151,7 +151,7 @@ const OurExperts = () => {
       name: "Dr. Ahmed Al-Nowasser",
       qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery  ",
       imageUrl: "/images/doctors/16.jpg",
-      profileLink: "en/dr-ahmedal-nowasser",
+      profileLink: "dr-ahmedal-nowasser",
        location: "Al Ahsa",
     },
      {
