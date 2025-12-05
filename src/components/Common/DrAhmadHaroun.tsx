@@ -69,7 +69,7 @@ const DrAhmadHaroun = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
 
         {/* Breadcrumbs */}
@@ -89,10 +89,10 @@ const DrAhmadHaroun = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4">
+        <div className="row g-4 mt-lg-5">
 
           <div className="col-xl-7 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctors-overview-content">
               <h2
                 ref={contentRefRiyadh}
                 className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
@@ -101,7 +101,7 @@ const DrAhmadHaroun = () => {
                 Dr. Ahmad Haroun
               </h2>
               <p className="profile-text">
-                Consultant, Urology & Andrology </p>
+                Consultant, Urology, Andrology & Male Infertility </p>
               <p className="profile-text">
                 Location: Bnoon – Jeddah  </p>
               <p className="profile-text-last">
@@ -153,7 +153,7 @@ const DrAhmadHaroun = () => {
           </div>
 
           <div className="col-xl-12 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctor-overview-content">
 
               <p>Throughout his career, Dr. Haroun has actively participated in international conferences and workshops, presenting his research findings and insights. He has been a speaker at prestigious events including the European Association of Urology Conference in Barcelona (2019). His achievements reflect his dedication to advancing urological care and academic excellence in Sudan and globally.
               </p>
