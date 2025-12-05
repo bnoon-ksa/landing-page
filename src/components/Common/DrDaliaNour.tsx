@@ -69,7 +69,7 @@ const DrDaliaNour = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-3">
+    <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
 
         {/* Breadcrumbs */}
@@ -89,10 +89,10 @@ const DrDaliaNour = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4 mt-5">
+        <div className="row g-4 mt-lg-5">
 
           <div className="col-xl-7 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctors-overview-content">
               <h2
                 ref={contentRefRiyadh}
                 className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
@@ -101,7 +101,7 @@ const DrDaliaNour = () => {
                 Dr. Dalia Nour
               </h2>
               <p className="profile-text">
-                Consultant, Obstetrics, Gynecology & Infertility (IVF)  </p>
+               Consultant, Obstetrics, Gynecology & Delayed Pregnancy </p>
               <p className="profile-text">
                 Location: Bnoon – Riyadh  </p>
               <p className="profile-text-last">
