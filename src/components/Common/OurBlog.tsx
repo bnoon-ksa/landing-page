@@ -43,7 +43,7 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
       title: "Bnoon – Al Ahsa ",
         buttonLink: "en//bnoon-alahsa",
       description:
-        "Situated within Almoosa Specialist Hospital, Bnoon – Al Ahsa brings world-class fertility and women’s health..."
+        "Situated within Almoosa Specialist Hospital,<strong> Bnoon – Al Ahsa </strong>brings world-class fertility and women’s health..."
     },
   ];
 
@@ -95,7 +95,12 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
                        {post.note && <span className="small-note">{post.note}</span>}
                     </a>
                   </h3>
-                  <p>{post.description}</p>
+                 <p
+  dangerouslySetInnerHTML={{
+    __html: post.description
+  }}
+></p>
+
 
                   <Link href={post.buttonLink} className="btn btn-success btn-blog">
                     Read More
