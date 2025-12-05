@@ -1,13 +1,11 @@
-"use client";
-
 import Navbar from "@/components/Layout/Navbar";
 import DrRaniaElsherify from "@/components/Common/DrRaniaElsherify";
-
-export default function ClientDrRaniaPage() {
+export default function DrRaniaElsherifyPage() {
   return (
     <>
       <Navbar />
-      <DrRaniaElsherify />
+       <DrRaniaElsherify  />
+
     </>
   );
 }
