@@ -11,14 +11,15 @@ interface OurExperts {
   qualification: string;
   imageUrl: string;
   profileLink: string;
-  location: "Riyadh" | "Jeddah";
+  location: "Riyadh" | "Jeddah" | "Al Ahsa";
+
 }
 
 const OurExperts = () => {
-  const [filter, setFilter] = useState<"ALL" | "Riyadh" | "Jeddah">("ALL");
+  const [filter, setFilter] = useState<"ALL" | "Riyadh" | "Jeddah" | "Al Ahsa">("ALL");
 // ✅ Add this here, after filter state
   const searchParams = useSearchParams();
-  const locationParam = searchParams.get("location") as "Riyadh" | "Jeddah" | null;
+  const locationParam = searchParams.get("location") as "Riyadh" | "Jeddah" | "Al Ahsa" | null;
 
   useEffect(() => {
     if (locationParam === "Riyadh" || locationParam === "Jeddah") {
@@ -129,6 +130,38 @@ const OurExperts = () => {
       profileLink: "dr-maram-dadoua",
        location: "Jeddah",
     },
+      {
+      id: 14,
+      name: "Dr. Rania Elsherify ",
+      qualification: "Obstetrics & Gynecology Registrar ",
+      imageUrl: "/images/doctors/14.jpg",
+      profileLink: "en/dr-rania-elsherify",
+       location: "Al Ahsa",
+    },
+     {
+      id: 15,
+      name: "Dr. Bassam Nusair ",
+      qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
+      imageUrl: "/images/doctors/15.jpg",
+      profileLink: "en/dr-bassamnusair",
+       location: "Al Ahsa",
+    },
+     {
+      id: 16,
+      name: "Dr. Ahmed Al-Nowasser",
+      qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery  ",
+      imageUrl: "/images/doctors/16.jpg",
+      profileLink: "en/dr-ahmedal-nowasser",
+       location: "Al Ahsa",
+    },
+     {
+      id: 17,
+      name: "Dr. Median Alkhalaf ",
+      qualification: "",
+      imageUrl: "/images/doctors/17.jpg",
+      profileLink: "",
+       location: "Al Ahsa",
+    }
   ];
   // Filtered doctors
   const filteredDoctors =
@@ -169,6 +202,12 @@ const OurExperts = () => {
     onClick={() => setFilter("Jeddah")}
   >
     JEDDAH
+  </button>
+   <button
+    className={`physicians-btn btn ${filter === "Al Ahsa" ? "active" : ""}`}
+    onClick={() => setFilter("Al Ahsa")}
+  >
+    Al Ahsa
   </button>
 </div>
 
