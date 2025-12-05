@@ -22,10 +22,15 @@ const OurExperts = () => {
   const locationParam = searchParams.get("location") as "Riyadh" | "Jeddah" | "Al Ahsa" | null;
 
   useEffect(() => {
-    if (locationParam === "Riyadh" || locationParam === "Jeddah") {
-      setFilter(locationParam); // set filter automatically from query
-    }
-  }, [locationParam]);
+  if (
+    locationParam === "Riyadh" ||
+    locationParam === "Jeddah" ||
+    locationParam === "Al Ahsa"
+  ) {
+    setFilter(locationParam);
+  }
+}, [locationParam]);
+
 
   // Your doctorsData array comes here
   const doctorsData: OurExperts[] = [
