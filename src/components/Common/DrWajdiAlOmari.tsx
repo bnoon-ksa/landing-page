@@ -69,7 +69,7 @@ const DrWajdiAlOmari = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-3">
+    <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
 
         {/* Breadcrumbs */}
@@ -89,10 +89,10 @@ const DrWajdiAlOmari = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4 mt-5">
+        <div className="row g-4 mt-lg-5">
 
           <div className="col-xl-7 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctors-overview-content">
               <h2
                 ref={contentRefRiyadh}
                 className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
@@ -101,7 +101,7 @@ const DrWajdiAlOmari = () => {
                Dr. Wajdi Al Omari
               </h2>
               <p className="profile-text">
-              Consultant – Reproductive Endocrinology & Infertility  </p>
+              Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF), Minimally Invasive Surgery</p>
               <p className="profile-text">
               Location: Bnoon – Riyadh</p>
               <p className="profile-text-last">
@@ -117,7 +117,8 @@ const DrWajdiAlOmari = () => {
 
               <p>
                Dr. Wajdi previously served as a Consultant at King Saud Medical City in Riyadh, where he has also held several leadership roles including Director of the Obstetrics and Gynecology Residency Training Program and Head of the IVF Department. From 2014 to 2019, he served as Assistant Professor at Al Majmaah University, where he was also deputy head of the obstetrics and gynecology department.  </p>
-            
+              <p>He has worked in both public and private sectors in the Kingdom. Dr. Wajdi has contributed to various research projects in fertility and has presented at national conferences. He is a certified instructor in Advanced Life Support in Obstetrics (ALSO) and is actively involved in clinical training and mentorship.  </p>
+
             </div>
           </div>
 
@@ -142,10 +143,8 @@ const DrWajdiAlOmari = () => {
           </div>
 
  <div className="col-xl-12 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctor-overview-content">
              
-              <p>He has worked in both public and private sectors in the Kingdom. Dr. Wajdi has contributed to various research projects in fertility and has presented at national conferences. He is a certified instructor in Advanced Life Support in Obstetrics (ALSO) and is actively involved in clinical training and mentorship.  </p>
-
             </div>
           </div>
         </div>
