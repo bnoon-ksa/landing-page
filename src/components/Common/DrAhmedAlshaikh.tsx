@@ -69,7 +69,7 @@ const DrAhmedAlshaikh = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
 
         {/* Breadcrumbs */}
@@ -89,10 +89,10 @@ const DrAhmedAlshaikh = () => {
         </nav>
 
         {/* Riyadh Section */}
-        <div className="row g-4">
+        <div className="row g-4 mt-lg-5">
 
           <div className="col-xl-7 col-md-12">
-            <div className="service-overview-content doctor-content">
+            <div className="doctors-overview-content">
               <h2
                 ref={contentRefRiyadh}
                 className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
@@ -101,7 +101,7 @@ const DrAhmedAlshaikh = () => {
                 Dr. Ahmed Alshaikh
               </h2>
               <p className="profile-text">
-               Consultant, Reproductive Endocrinology & Infertility (REI) and Assisted Reproductive Techniques (ART, IVF) </p>
+              Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF), Minimally Invasive Surgery</p>
               <p className="profile-text">
                Location: Bnoon – Jeddah </p>
               <p className="profile-text-last">
@@ -115,9 +115,6 @@ const DrAhmedAlshaikh = () => {
                <p>
               He completed his fellowship training program in Reproductive Endocrinology and Infertility at Karolinska University Hospital/Stockholm IVF under the mentorship of Prof. Mats Brännström. Dr. Alshaik holds a PhD degree for his research on the development of bioengineered ovaries for safe fertility preservation in female leukemia patients, focusing on basic studies in animal models.  </p>
 
-              <p>
-               Dr. Alshaik's expertise spans reproductive endocrinology and infertility, where he specializes in advanced Assisted Reproductive Techniques (ART) such as In Vitro Fertilization (IVF). His clinical practice includes managing complex cases of infertility, reproductive disorders, and fertility preservation strategies. Dr. Alshaik is renowned for his research contributions in bioengineering ovaries and his dedication to advancing reproductive medicine through innovative techniques.  </p>
-            
             </div>
           </div>
 
@@ -142,8 +139,9 @@ const DrAhmedAlshaikh = () => {
           </div>
 
  <div className="col-xl-12 col-md-12">
-            <div className="service-overview-content doctor-content">
-             
+            <div className="doctor-overview-content">
+              <p>
+             Dr. Alshaik's expertise spans reproductive endocrinology and infertility, where he specializes in advanced Assisted Reproductive Techniques (ART) such as In Vitro Fertilization (IVF). His clinical practice includes managing complex cases of infertility, reproductive disorders, and fertility preservation strategies. Dr. Alshaik is renowned for his research contributions in bioengineering ovaries and his dedication to advancing reproductive medicine through innovative techniques.  </p>
               <p>Dr. Ahmed Baker Alshaik has been recognized for his outstanding contributions to Reproductive Endocrinology and Infertility. His PhD research under the supervision of Prof. Mats Brännström has been pivotal in the field of fertility preservation. He has presented his research findings at numerous national and international conferences, including publications in esteemed scientific journals. Dr. Alshaik's commitment to patient care, education, and research exemplifies his leadership in the field of reproductive medicine. </p>
 
             </div>
