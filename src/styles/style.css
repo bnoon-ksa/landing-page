@@ -13291,6 +13291,7 @@ font-size:16px !important;
     background-color: #39bced !important;
     border: none !important;
     padding: 10px 40px !important;
+  font-weight: 400 !important;
 }
 .btn:hover {
     color: var(--bs-btn-hover-color) !important;
@@ -14209,7 +14210,7 @@ Services Area CSS
 }
 .service-card {
   border: 1px solid #EBEBEB;
-  border-radius: 15px;
+  border-radius: 35px;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -19227,7 +19228,7 @@ border-radius: 30px;
 }
 p.terms-text {
     font-size: 16px !important;
-    font-style: italic;
+    font-style: normal;
 }
 .national-box {
     background-color: #004E78;
