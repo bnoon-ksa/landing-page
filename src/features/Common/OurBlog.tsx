@@ -36,6 +36,17 @@ const OurBlog = () => {
       description:
         "مرفق رائد تبلغ مساحته 3,800 متر مربع ويضم 4 طوابق، صُمّم ليجسّد المستقبل الواعد لرعاية الخصوبة باستخدام الذكاء الاصطناعي والتكنولوجيا المتقدمة۔",
     },
+     {
+      id: 4,
+      imageSrc: "images/blog/bnoon-alahsa.jpg",
+  title:` بنون – الأحساء`,
+
+      slug: "",
+        embedMap: "",
+      buttonLink: "ar/bnoon-alahsa",
+      description:
+       "يقدّم مركز بنون – الأحساء الواقع داخل مستشفى الموسى التخصصي خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية.",
+    },
   ];
 
   return (
@@ -51,7 +62,7 @@ const OurBlog = () => {
           </div>
         </div>
 
-        <div className="row justify-content-center g-4">
+        <div className="row g-4">
           {blogData.map((post) => (
             <div key={post.id} className="col-lg-4 col-md-6">
                <div
