@@ -43,7 +43,7 @@ const OurLocations = () => {
                 ويُسجّل "بنون – الرياض" معدلات نجاح تُضاهي، بل تتجاوز في كثير من الأحيان، المعايير العالمية — ما يعكس التزامه الثابت بتقديم أفضل النتائج الممكنة.
               </p>
 
-              <div className="d-flex align-items-center mt-3 gap-4 flex-wrap">
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <span className="text-color">بنون – الرياض</span>
@@ -99,7 +99,7 @@ const OurLocations = () => {
                 ويعتمد المركز على تقنيات حديثة تشمل أنظمة مراقبة الأجنّة بتقنية التايم لابس، تخطيط علاجي مدعوم بالذكاء الاصطناعي، ومنصات رقمية لمتابعة المريض، مما يوفّر تجربة علاجية شخصية ترتكز على الأدلة العلمية وتُعزّز من راحة المرضى بمعدلات نجاح تتماشى مع النسب العالمية.
               </p>
 
-              <div className="d-flex align-items-center mt-3 gap-4 flex-wrap">
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <span className="text-color">بنون – جدة</span>
@@ -142,7 +142,7 @@ const OurLocations = () => {
               <p>
                 "بنون – طريق الملك سلمان" لا يهدف فقط إلى تقديم خدمة طبية، بل يسعى ليكون مرجعاً إقليمياً في طب الإخصاب، ومنصة تواكب تطلعات رؤية السعودية 2030 في الريادة الصحية والابتكار الطبي.
               </p>
-              <div className="d-flex align-items-center mt-3 gap-4 flex-wrap">
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <span className="text-color">بنون – طريق الملك سلمان</span>
@@ -199,7 +199,7 @@ const OurLocations = () => {
               <p>
 ويتميّز مركز بنون – الأحساء بتعاونه مع مختلف الأقسام في مستشفى الموسى التخصصي، مما يضمن رحلة علاجية سلسة ضمن بيئة علاجية تدعم المريض في كل خطوة نحو تحقيق النتائج المنشودة.  </p>
 <p>يمثّل بنون – الأحساء نقلة نوعية في تطوير خدمات الخصوبة بالمنطقة الشرقية، إذ يجمع بين الابتكار الطبي، والتميّز الطبي، والالتزام بدعم كل أسرة في رحلتها نحو الأمومة والأبوة. </p>
-              <div className="d-flex align-items-center mt-3 gap-4 flex-wrap">
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <span className="text-color">بنون – الأحساء </span>
@@ -217,7 +217,6 @@ const OurLocations = () => {
         <style jsx global>{`
   span.text-color {
     color: #004E78 !important;
-    font-size: 18px !important;
   }
     .location-text h2{
     margin-bottom: 10px;
@@ -244,6 +243,11 @@ const OurLocations = () => {
         margin-right: auto;
         text-align:center;
     }
+         span.text-color {
+    color: #004E78 !important;
+    font-size:12px;
+    margin-right:10px;
+  }
   }
 `}</style>
     </div>
