@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
+import 'remixicon/fonts/remixicon.css';
 // ✅ Doctor data structure
 interface OurExperts {
   id: number;
@@ -12,21 +13,30 @@ interface OurExperts {
   qualification: string;
   imageUrl: string;
   profileLink: string;
-  location: "الرياض" | "جدة";
+  location: "الرياض" | "جدة" | "الأحساء";
 }
 
 const OurExperts = () => {
-const [filter, setFilter] = useState<"الجميع" | "الرياض" | "جدة">("الجميع");
+  const searchParams = useSearchParams();          // ✅ first
+  const locationParam = searchParams.get("location") as  // ✅ second
+    | "الرياض"
+    | "جدة"
+    | "الأحساء"
+    | null;
 
-// ✅ Read location from URL (like ?location=الرياض)
-const searchParams = useSearchParams();
-const locationParam = searchParams.get("location") as "الرياض" | "جدة" | null;
+  const [filter, setFilter] = useState("الجميع");
 
-useEffect(() => {
-  if (locationParam === "الرياض" || locationParam === "جدة") {
-    setFilter(locationParam); // auto-filter based on query
-  }
-}, [locationParam]);
+  useEffect(() => {
+    if (
+      locationParam === "الرياض" ||
+      locationParam === "جدة" ||
+      locationParam === "الأحساء"
+    ) {
+      setFilter(locationParam);
+    }
+  }, [locationParam]);
+
+
 
   const doctorsData: OurExperts[] = [
     {
@@ -129,6 +139,38 @@ useEffect(() => {
       profileLink: "dr-maram-dadoua",
       location: "جدة",
     },
+     {
+      id: 14,
+      name: "الدكتورة رانيا الشريفي",
+      qualification: "أخصائية أمراض النساء والولادة",
+      imageUrl: "/images/doctors/14.jpg",
+      profileLink: "dr-rania-elsherify",
+       location: "الأحساء",
+    },
+     {
+      id: 15,
+      name: "الدكتور بسام نصير ",
+      qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
+      imageUrl: "/images/doctors/15.jpg",
+      profileLink: "dr-bassamnusair",
+       location: "الأحساء",
+    },
+     {
+      id: 16,
+      name: "الدكتور أحمد النواصر",
+      qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
+      imageUrl: "/images/doctors/16.jpg",
+      profileLink: "dr-ahmedal-nowasser",
+       location: "الأحساء",
+    },
+     {
+      id: 17,
+      name: "الدكتورة مدين آل خلف",
+      qualification: "",
+      imageUrl: "/images/doctors/17.jpg",
+      profileLink: "ar",
+       location: "الأحساء",
+    },
   ];
 
   // ✅ Filtered doctors
@@ -152,7 +194,7 @@ useEffect(() => {
         </div>
 
         {/* ✅ Filter Buttons */}
-        <div className="mb-4 d-flex gap-3 flex-wrap">
+        <div className="mb-4 d-flex gap-4 md:gap-5 flex-wrap">
           <button
             className={`physicians-btn btn ${filter === "الجميع" ? "active" : ""}`}
             onClick={() => setFilter("الجميع")}
@@ -170,6 +212,12 @@ useEffect(() => {
             onClick={() => setFilter("جدة")}
           >
             جدة
+          </button>
+            <button
+            className={`physicians-btn btn ${filter === "الأحساء" ? "active" : ""}`}
+            onClick={() => setFilter("الأحساء")}
+          >
+          الأحساء
           </button>
         </div>
 
@@ -190,24 +238,22 @@ useEffect(() => {
                     {/* Overlay */}
                     <div className="image-overlay">
                       <div className="overlay-content">
-                        <Link
-                          href={doctor.profileLink}
-                          className="btn btn-success doctor-btn doctor-hover-btn"
-                        >
-                          عرض الملف الشخصي
-                        </Link>
-                        <div className="doctor-location">
-                          <i className="ri-map-pin-line"></i> {doctor.location}
-                        </div>
-                      </div>
+                      <Link href={doctor.profileLink} className="btn btn-success doctor-btn doctor-hover-btn">عرض الملف الشخصي</Link>
+                      {doctor.location && <div className=" location-icon"><i className="ri-map-pin-line"></i> {doctor.location}</div>}
+                    </div>
                     </div>
                   </div>
 
                   <div className="content">
                     <h3>
-                      <Link href={doctor.profileLink}>{doctor.name}</Link>
+                      <Link className="doctor-link" href={doctor.profileLink}>{doctor.name}</Link>
                     </h3>
                     <span className="sub">{doctor.qualification}</span>
+                        {doctor.location && (
+    <div className="doctor-location">
+      <i className="ri-map-pin-line"></i> {doctor.location}
+    </div>
+  )}
                     <div>
                       <Link
                         href="request-an-appoinment"
@@ -220,7 +266,41 @@ useEffect(() => {
                 </div>
 
                 {/* ✅ CSS */}
-                <style jsx>{`
+                <style jsx global>{`
+                   .location-icon{
+         color: #ffffffff;
+    font-size: 12px;
+        }
+                 .doctor-location
+ {
+    color: #000000;
+    margin: 10px 0px 0px;
+    font-size: 13px;
+    font-weight: 600;
+    display:none;
+}
+                a.doctor-link {
+    color: #000 !important;
+}
+                .doctor-link {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+               .physicians-btn {
+    width: 92px !important;
+    height: 37px !important;
+    border-radius: 0px !important;
+}
+    .doctor-location {
+    color: #fff;
+    font-size: 12px !important;
+}
+    .doctor-btn {
+     padding: 10px 0px !important; 
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
                   .doctor-card {
                     position: relative;
                     overflow: hidden;
@@ -257,6 +337,35 @@ useEffect(() => {
                     color: #fff;
                     font-size: 14px;
                   }
+                      @media (max-width: 768px) {
+   .doctor-location
+ {
+   display: block;
+    color: #000000;
+    margin: 10px 0px 0px;
+    font-size: 13px;
+    font-weight: 600;
+}
+        .physicians-btn {
+    width: 62px !important;
+    height: 37px !important;
+    border-radius: 0px !important;
+    font-size:12px  !important;
+    padding: 6px 0px !important;
+}
+        .doctor-card {
+        padding: 25px !important;
+        margin: 15px !important;
+    }
+        .doctor-link {
+        font-size:14px;
+}
+           .doctor-btn {
+        margin-top: 5px !important;
+   margin-bottom: 0px !important;
+}
+                }
+
                 `}</style>
               </div>
             ))}
