@@ -125,6 +125,38 @@ const OurDoctors = () => {
       profileLink: "ar/dr-maram-dadoua",
        location: "جدة",
     },
+     {
+      id: 14,
+      name: "الدكتورة رانيا الشريفي",
+      qualification: "أخصائية أمراض النساء والولادة",
+      imageUrl: "images/doctors/14.jpg",
+      profileLink: "ar/dr-rania-elsherify",
+       location: "الأحساء",
+    },
+     {
+      id: 15,
+      name: "الدكتور بسام نصير ",
+      qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
+      imageUrl: "images/doctors/15.jpg",
+      profileLink: "ar/dr-bassamnusair",
+       location: "الأحساء",
+    },
+     {
+      id: 16,
+      name: "الدكتور أحمد النواصر",
+      qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
+      imageUrl: "images/doctors/16.jpg",
+      profileLink: "ar/dr-ahmedal-nowasser",
+       location: "الأحساء",
+    },
+     {
+      id: 17,
+      name: "الدكتورة مدين آل خلف",
+      qualification: "",
+      imageUrl: "images/doctors/17.jpg",
+      profileLink: "ar",
+       location: "الأحساء",
+    },
   ];
  return (
     <div className="container doctors-section">
@@ -172,8 +204,8 @@ const OurDoctors = () => {
       <i className="ri-map-pin-line"></i> {doctor.location}
     </div>
   )}
-                  <div>
-                    <Link href="ar/request-an-appoinment" className="btn btn-success doctor-btn">طلب موعد</Link>
+                  <div className="doctors-button">
+                    <Link href="ar/request-an-appoinment" className="btn btn-success doctor-btn doctors-button">طلب موعد</Link>
                   </div>
                 </div>
               </div>
@@ -256,6 +288,9 @@ const OurDoctors = () => {
 @media only screen and (max-width: 767px) {
     .doctor-card .content .doctor-btn {
         margin-top: 15px !important;
+    }
+       .doctors-button {
+        margin-top: -20px !important;
     }
 }
       `}</style>
