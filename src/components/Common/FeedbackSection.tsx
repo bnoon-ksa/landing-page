@@ -17,6 +17,7 @@ const FeedbackSection = () => {
 
   const [statusMessage, setStatusMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
 
   const headerRef = useRef<HTMLDivElement>(null);
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -166,30 +167,71 @@ if (
             style={{ maxWidth: "750px" }}
           >
             {/* Branch */}
-            <div className="mb-3">
-              <label className="form-label">
-                Select Branch{" "}
-                <span
-                  style={{
-                    color: isFieldInvalid("branch") ? "red" : "black",
-                  }}
-                >
-                  *
-                </span>
-              </label>
-              <select
-                className={`form-control ${
-                  isFieldInvalid("branch") ? "is-invalid" : ""
-                }`}
-                name="branch"
-                value={formData.branch}
-                onChange={handleChange}
-              >
-                <option value="">Select branch</option>
-                <option value="Riyadh">Riyadh</option>
-                <option value="Jeddah">Jeddah</option>
-              </select>
-            </div>
+           <div className="custom-dropdown mb-3" style={{ position: "relative" }}>
+  <label className="form-label">
+    Select Branch <span style={{ color: isFieldInvalid("branch") ? "red" : "black" }}>*</span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    className={`form-control ${isFieldInvalid("branch") ? "is-invalid" : ""}`}
+    onClick={() => setIsOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between", // text left, arrow right
+      color: formData.branch ? "#000" : "#808080",
+      padding: "6px 12px",
+    }}
+  >
+    <span>{formData.branch || "Select branch"}</span>
+
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown List */}
+  {isOpen && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+      }}
+    >
+      {["Riyadh", "Jeddah", "Al Ahsa"].map((branch) => (
+        <li
+          key={branch}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, branch }));
+            setIsOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background: formData.branch === branch ? "#004E78" : "#fff",
+            color: formData.branch === branch ? "#fff" : "#212529",
+          }}
+        >
+          {branch}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
 
             {/* Patient’s Name */}
             <div className="mb-3">
@@ -417,8 +459,8 @@ if (
               </label>
             </div>
 <div className="d-flex justify-content-center mt-3">
-  <button type="submit" className="btn btn-primary btn-blog btn-large">
-    Submit Feedback
+  <button type="submit" className="btn btn-primary btn-large feedback-btn">
+    Submit
   </button>
 </div>
              {statusMessage && (
