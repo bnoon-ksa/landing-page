@@ -162,9 +162,9 @@ const OurExperts = () => {
      {
       id: 17,
       name: "Dr. Median Alkhalaf ",
-      qualification: "",
+      qualification: "Consultant, Obstetrics & Gynecology ",
       imageUrl: "/images/doctors/17.jpg",
-      profileLink: "",
+      profileLink: "dr-median-alkhalaf",
        location: "Al Ahsa",
     }
   ];
