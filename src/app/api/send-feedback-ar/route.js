@@ -21,6 +21,7 @@ export async function POST(req) {
     await connectDB();
 
     // Save feedback to DB
+   // Save feedback to DB
       const feedback = new FeedbackAR({
       الفرع: branch,
       الاسم: name,
@@ -37,7 +38,7 @@ export async function POST(req) {
     // Choose email recipient
     const recipient =
       branch === "الرياض"
-       ? "feedback@bnoon.sa"
+        ? "feedback@bnoon.sa"
         : "feedback@bnoon.sa";
 
     // Setup Nodemailer
