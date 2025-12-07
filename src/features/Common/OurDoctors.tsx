@@ -195,7 +195,7 @@ const OurDoctors = () => {
                 </div>
 
                 <div className="content">
-                  <h3 className="content">
+                  <h3 className="doctor-text">
                     <Link href={doctor.profileLink} legacyBehavior><a className="doctor-link">{doctor.name}</a></Link>
                     </h3>
                   <span className="sub">{doctor.qualification}</span>
