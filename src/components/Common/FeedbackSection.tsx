@@ -126,8 +126,7 @@ if (
                   className="me-2"
                 />
                 <p className="mb-0">
-                  Please send your CV to:{" "}
-                  <strong>careers@bnoon.sa</strong>
+                 Fill out the form below to rate your experience.  
                 </p>
               </div>
               <div className="d-flex align-items-center">
@@ -139,8 +138,7 @@ if (
                   className="me-2"
                 />
                 <p>
-                  Follow us on LinkedIn to explore current openings and updates:{" "}
-                  <strong>Bnoon LinkedIn Page</strong>
+                 Or share your feedback at feedback@bnoon.sa 
                 </p>
               </div>
               <p>
@@ -344,6 +342,10 @@ if (
             {/* Story */}
             <div className="mb-3">
               <label className="form-label">Share your Story</label>
+                <br />
+              <small className="form-text text-muted">
+               If you’d like to share your story, please do so below. Your information will remain confidential and will only be shared publicly with your consent. Your story could offer hope and inspiration to other couples trying to conceive. 
+              </small>
               <textarea
                 className="form-control"
                 name="story"
@@ -430,7 +432,7 @@ if (
                 }`}
                 name="feedbackDetails"
                 rows={4}
-                placeholder="Write details here..."
+                placeholder=""
                 value={formData.feedbackDetails}
                 onChange={handleChange}
               ></textarea>
