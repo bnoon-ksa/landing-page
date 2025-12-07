@@ -154,7 +154,7 @@ const OurDoctors = () => {
       name: "الدكتورة مدين آل خلف",
       qualification: "",
       imageUrl: "images/doctors/17.jpg",
-      profileLink: "ar",
+      profileLink: "ar/dr-median-alkhalaf",
        location: "الأحساء",
     },
   ];
@@ -195,7 +195,7 @@ const OurDoctors = () => {
                 </div>
 
                 <div className="content">
-                  <h3 className="doctor-content">
+                  <h3 className="content">
                     <Link href={doctor.profileLink} legacyBehavior><a className="doctor-link">{doctor.name}</a></Link>
                     </h3>
                   <span className="sub">{doctor.qualification}</span>
