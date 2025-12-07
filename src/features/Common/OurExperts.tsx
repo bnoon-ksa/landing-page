@@ -165,10 +165,10 @@ const OurExperts = () => {
     },
      {
       id: 17,
-      name: "الدكتورة مدين آل خلف",
-      qualification: "",
+      name: "الدكتور مدين الخلف",
+      qualification: "استشاري أمراض النساء والولادة",
       imageUrl: "/images/doctors/17.jpg",
-      profileLink: "ar",
+      profileLink: "dr-median-alkhalaf",
        location: "الأحساء",
     },
   ];
