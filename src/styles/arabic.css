@@ -19296,7 +19296,38 @@ ease;
   color: #004E78;
   font-size: 60px;
 }
-
+.breadcrumb-item {
+    font-weight: normal !important;
+    font-size:14px;
+}
+.profile-text {
+    font-weight: normal !important;
+    color: #000;
+    border-bottom: 1px solid #0000002b;
+    padding-bottom: 4px;
+    font-size:18px !important;
+}
+    .profile-text-last {
+    font-weight:  normal !important;
+    color: #000;
+    padding-bottom: 4px;
+     font-size:18px !important;
+}
+     .doctor-content{
+     width:680px;
+     
+     }
+       .doctor-content h2{
+     margin-bottom:40px;
+     
+     }
+     .doctor-profile-btn {
+    background-color: #004E78 !important;
+    border: none;
+    width: 285px;
+    font-size: 15px !important;
+    border-radius: 0px !important;
+}
 /* ✅ Mobile responsive */
 @media (max-width: 768px) {
   .font-program {
@@ -19307,3 +19338,36 @@ ease;
     font-size: 15px;
   }
 }
+  @media (max-width: 767px) {
+   .breadcrumb-item {
+    font-weight: normal !important;
+    font-size:12px;
+}
+    .profile-text {
+    font-weight: normal !important;
+    color: #000;
+    border-bottom: 1px solid #0000002b;
+    padding-bottom: 4px;
+    font-size:14px !important;
+}
+     .profile-text-last {
+    font-weight:  normal !important;
+    color: #000;
+    padding-bottom: 4px;
+     font-size:14px !important;
+}
+     .doctor-content{
+     width:320px;
+     
+     }
+     .lang-box {
+        display: inline-block;
+       margin: 0 8px !important;
+        background: #f1f1f100;
+        color: #000;
+        padding: 4px 15px !important;
+        font-size: 12px !important;
+        font-weight: 500;
+        border: 1px solid #ccc;
+    }
+  }
