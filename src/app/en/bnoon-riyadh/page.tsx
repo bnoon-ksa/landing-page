@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ClientBnoonRiyadhPage from "./page.client";
 
 export const metadata: Metadata = {
-  title: "Bnoon – KSA’s leading network for fertility & women’s health ",
+  title: "Bnoon - Riyadh| The Fertility & Women Health Centers",
   description:
     "",
 };
