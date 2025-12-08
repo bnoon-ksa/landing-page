@@ -1328,7 +1328,7 @@ const AppointmentSection = () => {
             {/* Submit */}
             <div className="row g-3 mt-3">
               <div className="col-md-12 text-center">
-                <button type="submit" className="btn btn-primary feedback-btn btn-large mt-3">
+                <button type="submit" className="btn btn-primary btn-blog feedback-btn btn-large mt-3">
                   إرسال
                 </button>
               </div>
