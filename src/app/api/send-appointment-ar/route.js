@@ -9,9 +9,15 @@ export async function POST(req) {
     await connectDB();
     const saved = await AppointmentAR.create(data);
 
-    let recipient = "";
-    if (data.branch === "Riyadh" || data.branch === "الرياض") recipient = "appointments@bnoon.sa";
-    else if (data.branch === "Jeddah" || data.branch === "جدة") recipient = "appointments.jeddah@bnoon.sa";
+  let recipient = "";
+if (data.branch === "Riyadh" || data.branch === "الرياض") {
+  recipient = "appointments@bnoon.sa";
+} else if (data.branch === "Jeddah" || data.branch === "جدة") {
+  recipient = "appointments.jeddah@bnoon.sa";
+} else if (data.branch === "Al Ahsa" || data.branch === "الأحساء") {
+  recipient = "callcenter.alahsa@bnoon.sa"; // yahan new email dal do
+}
+
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
