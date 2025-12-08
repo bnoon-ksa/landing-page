@@ -20,7 +20,14 @@ const AppointmentSection = () => {
     preferredTime: "",
     howHeard: "",
   });
+const [isInterestOpen, setIsInterestOpen] = useState(false);
+const [isDoctorOpen, setIsDoctorOpen] = useState(false);
+const [isNationalityOpen, setIsNationalityOpen] = useState(false);
+const [isCountryOpen, setIsCountryOpen] = useState(false);
+const [isHowHeardOpen, setIsHowHeardOpen] = useState(false);
+const [isTimeOpen, setIsTimeOpen] = useState(false);
 
+const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -135,65 +142,282 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         {/* FORM START */}
         <form onSubmit={handleSubmit} className="appointment-form text-start mx-auto" style={{ maxWidth: "800px" }}>
           {/* Interest */}
-          <div className="mb-3">
-            <label className="appointmentform-label">
-              I am interested in <span style={{ color: isFieldInvalid("interest") ? "red" : "black" }}>*</span>
-            </label>
-            <select className="form-control" name="interest" value={formData.interest} onChange={handleChange}>
-              <option value="">Choose one</option>
-              <option value="Having a child">Having a child</option>
-              <option value="Generalfertilityconsultation">General fertility consultation</option>
-              <option value="Fertility preservation">Fertility preservation</option>
-              <option value="Learningabout">Learning about my fertility</option>
-              <option value="Pregnancy follow-up">Pregnancy follow-up</option>
-              <option value="Male/andrologyproblems">Male/andrology problems</option>
-              <option value="Gynecologyproblem">Gynecology problem</option>
-              <option value="Generalcheckupandscreening">General checkup and screening</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+       <div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    I am interested in{" "}
+    <span style={{ color: isFieldInvalid("interest") ? "red" : "black" }}>
+      *
+    </span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    className={`form-control ${isFieldInvalid("interest") ? "is-invalid" : ""}`}
+    onClick={() => setIsInterestOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      color: formData.interest ? "#000" : "#808080",
+      padding: "6px 12px",
+    }}
+  >
+    <span>{formData.interest || "Choose one"}</span>
+
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown List */}
+  {isInterestOpen && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+        maxHeight: "200px",
+        overflowY: "auto",
+      }}
+    >
+      {[
+        "Having a child",
+        "General fertility consultation",
+        "Fertility preservation",
+        "Learning about my fertility",
+        "Pregnancy follow-up",
+        "Male/andrology problems",
+        "Gynecology problem",
+        "General checkup and screening",
+        "Other",
+      ].map((item) => (
+        <li
+          key={item}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, interest: item }));
+            setIsInterestOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background: formData.interest === item ? "#004E78" : "#fff",
+            color: formData.interest === item ? "#fff" : "#212529",
+          }}
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
 
           {/* Branch */}
-          <div className="mb-3">
-            <label className="appointmentform-label">
-              Select Branch <span style={{ color: isFieldInvalid("branch") ? "red" : "black" }}>*</span>
-            </label>
-            <select className="form-control" name="branch" value={formData.branch} onChange={handleChange}>
-              <option value="">Select branch</option>
-              <option value="Riyadh">Riyadh</option>
-              <option value="Jeddah">Jeddah</option>
-            </select>
-          </div>
+        <div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    Select Branch{" "}
+    <span style={{ color: isFieldInvalid("branch") ? "red" : "black" }}>
+      *
+    </span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    className={`form-control ${isFieldInvalid("branch") ? "is-invalid" : ""}`}
+    onClick={() => setIsOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      color: formData.branch ? "#000" : "#808080",
+      padding: "6px 12px",
+    }}
+  >
+    <span>{formData.branch || "Select branch"}</span>
+
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown List */}
+  {isOpen && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+      }}
+    >
+      {["Riyadh", "Jeddah", "Al Ahsa"].map((branch) => (
+        <li
+          key={branch}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, branch }));
+            setIsOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background: formData.branch === branch ? "#004E78" : "#fff",
+            color: formData.branch === branch ? "#fff" : "#212529",
+          }}
+        >
+          {branch}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
 
           {/* Doctor */}
-          <div className="mb-3">
-            <label className="appointmentform-label">
-              Select Doctor <span style={{ color: isFieldInvalid("doctor") ? "red" : "black" }}>*</span>
-            </label>
-            <select className="form-control" name="doctor" value={formData.doctor} onChange={handleChange} disabled={!formData.branch}>
-              <option value="">Select Doctor</option>
-              {formData.branch === "Riyadh" &&
-                ["Dr. Abdalaziz Al-Shahrani", "Dr. Asim Al Wuhaibi", "Dr. Wajdi Al Omari", "Dr. Dalia Adel", "Dr. Moussa El Naiemy "].map((doc) => (
-                  <option key={doc} value={doc}>
-                    {doc}
-                  </option>
-                ))}
-              {formData.branch === "Jeddah" &&
-                ["Dr. Fawaz Edris", "Dr. Mazin Bishara", "Dr. Hussein Sabban ", "Dr. Ahmed Alshaikh", "Dr. Razan Ghaith ", "Dr. Maya Albezreh", "Dr. Maram Dadoua", "Dr. Ahmad Haroun"].map((doc) => (
-                  <option key={doc} value={doc}>
-                    {doc}
-                  </option>
-                ))}
-            </select>
-          </div>
+     <div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    Select Doctor{" "}
+    <span style={{ color: isFieldInvalid("doctor") ? "red" : "black" }}>
+      *
+    </span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    disabled={!formData.branch}
+    className={`form-control ${isFieldInvalid("doctor") ? "is-invalid" : ""}`}
+    onClick={() => !formData.branch || setIsDoctorOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      color: !formData.branch
+        ? "#999"
+        : formData.doctor
+        ? "#000"
+        : "#808080",
+      padding: "6px 12px",
+      background: !formData.branch ? "#f0f0f0" : "#fff",
+      cursor: !formData.branch ? "not-allowed" : "pointer",
+    }}
+  >
+    <span>
+      {!formData.branch
+        ? "Select Doctor"
+        : formData.doctor || "Select Doctor"}
+    </span>
+
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown */}
+  {isDoctorOpen && formData.branch && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+        maxHeight: "200px",
+        overflowY: "auto",
+      }}
+    >
+      {(
+        formData.branch === "Riyadh"
+          ? [
+              "Dr. Abdalaziz Al-Shahrani",
+              "Dr. Asim Al Wuhaibi",
+              "Dr. Wajdi Al Omari",
+              "Dr. Dalia Adel",
+              "Dr. Moussa El Naiemy ",
+            ]
+          : formData.branch === "Jeddah"
+          ? [
+              "Dr. Fawaz Edris",
+              "Dr. Mazin Bishara",
+              "Dr. Hussein Sabban ",
+              "Dr. Ahmed Alshaikh",
+              "Dr. Razan Ghaith ",
+              "Dr. Maya Albezreh",
+              "Dr. Maram Dadoua",
+              "Dr. Ahmad Haroun",
+            ]
+          : formData.branch === "Al Ahsa"
+          ? [
+              "Dr. Rania Elsherify",
+              "Dr. Bassam Nusair",
+              "Dr. Ahmed Al-Nowasser",
+              "Dr. Median Alkhalaf",
+            ]
+          : []
+      ).map((doc) => (
+        <li
+          key={doc}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, doctor: doc }));
+            setIsDoctorOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background: formData.doctor === doc ? "#004E78" : "#fff",
+            color: formData.doctor === doc ? "#fff" : "#212529",
+          }}
+        >
+          {doc}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
 
           {/* Name */}
-          <div className="mb-3">
-            <label className="appointmentform-label">
-              Your Name <span style={{ color: isFieldInvalid("name") ? "red" : "black" }}>*</span>
-            </label>
-            <input type="text" className="form-control" name="name" value={formData.name} onChange={handleChange} />
-          </div>
+       <div className="mb-3">
+  <label className="appointmentform-label">
+    Your Name <span style={{ color: isFieldInvalid("name") ? "red" : "black" }}>*</span>
+  </label>
+  <input
+    type="text"
+    className="form-control"
+    name="name"
+    value={formData.name}
+    onChange={handleChange}
+    placeholder="Enter your name" // <-- placeholder added
+  />
+</div>
+
 
           {/* Appointment for you */}
           <div className="mb-3">
@@ -215,34 +439,150 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           {/* Nationality */}
-          <div className="mb-3">
-            <label className="appointmentform-label">
-              Nationality <span style={{ color: isFieldInvalid("nationality") ? "red" : "black" }}>*</span>
-            </label>
-            <select className="form-control" name="nationality" value={formData.nationality} onChange={handleChange}>
-              <option value="">Select nationality</option>
-              {nationalities.map((n, i) => (
-                <option key={i} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
-          </div>
+        <div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    Nationality{" "}
+    <span style={{ color: isFieldInvalid("nationality") ? "red" : "black" }}>
+      *
+    </span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    className={`form-control ${isFieldInvalid("nationality") ? "is-invalid" : ""}`}
+    onClick={() => setIsNationalityOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between", // text left + arrow right
+      color: formData.nationality ? "#000" : "#808080",
+      padding: "6px 12px",
+    }}
+  >
+    <span>{formData.nationality || ""}</span>
+
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown List */}
+  {isNationalityOpen && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+        maxHeight: "200px",
+        overflowY: "auto",
+      }}
+    >
+      {nationalities.map((n, i) => (
+        <li
+          key={i}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, nationality: n }));
+            setIsNationalityOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background: formData.nationality === n ? "#004E78" : "#fff",
+            color: formData.nationality === n ? "#fff" : "#212529",
+          }}
+        >
+          {n}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
 
           {/* Country */}
-          <div className="mb-3">
-            <label className="appointmentform-label">
-              Country of Residence <span style={{ color: isFieldInvalid("countryOfResidence") ? "red" : "black" }}>*</span>
-            </label>
-            <select className="form-control" name="countryOfResidence" value={formData.countryOfResidence} onChange={handleChange}>
-              <option value="">Select country</option>
-              {countriesList.map((c, i) => (
-                <option key={i} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
-          </div>
+         <div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    Country of Residence{" "}
+    <span style={{ color: isFieldInvalid("countryOfResidence") ? "red" : "black" }}>
+      *
+    </span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    className={`form-control ${isFieldInvalid("countryOfResidence") ? "is-invalid" : ""}`}
+    onClick={() => setIsCountryOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      color: formData.countryOfResidence ? "#000" : "#808080",
+      padding: "6px 12px",
+    }}
+  >
+    <span>{formData.countryOfResidence || ""}</span>
+
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown List */}
+  {isCountryOpen && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+        maxHeight: "200px",
+        overflowY: "auto",
+      }}
+    >
+      {countriesList.map((c, i) => (
+        <li
+          key={i}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, countryOfResidence: c }));
+            setIsCountryOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background:
+              formData.countryOfResidence === c ? "#004E78" : "#fff",
+            color:
+              formData.countryOfResidence === c ? "#fff" : "#212529",
+          }}
+        >
+          {c}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
 
         {/* City (Saudi Arabia only) */}
 {formData.countryOfResidence === "Saudi Arabia" && (
@@ -328,39 +668,155 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           {/* Time */}
-          <div className="mb-3">
-            <label className="appointmentform-label">
-            Select preferred time for your appointment <span style={{ color: isFieldInvalid("preferredTime") ? "red" : "black" }}>*</span>
-            </label>
-            <select className="form-control" name="preferredTime" value={formData.preferredTime} onChange={handleChange}>
-              <option value="">Select time</option>
-              {["9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM"].map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
-            </select>
-          </div>
+        <div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    Select preferred time for your appointment{" "}
+    <span style={{ color: isFieldInvalid("preferredTime") ? "red" : "black" }}>*</span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    className={`form-control ${isFieldInvalid("preferredTime") ? "is-invalid" : ""}`}
+    onClick={() => setIsTimeOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      color: formData.preferredTime ? "#000" : "#808080",
+      padding: "6px 12px",
+    }}
+  >
+    <span>{formData.preferredTime || ""}</span>
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown List */}
+  {isTimeOpen && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 9999,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+        maxHeight: "210px", // 9:00-10:15 AM approx height
+        overflowY: "auto", // scrollable
+      }}
+    >
+      {[
+        "9:00 AM", "9:15 AM", "9:30 AM", "9:45 AM",
+        "10:00 AM", "10:15 AM", "10:30 AM", "10:45 AM",
+        "11:00 AM", "11:15 AM", "11:30 AM", "11:45 AM",
+        "12:00 PM", "12:15 PM", "12:30 PM", "12:45 PM",
+        "1:00 PM", "1:15 PM", "1:30 PM", "1:45 PM",
+        "2:00 PM", "2:15 PM", "2:30 PM", "2:45 PM",
+        "3:00 PM", "3:15 PM", "3:30 PM", "3:45 PM",
+        "4:00 PM", "4:15 PM", "4:30 PM", "4:45 PM",
+        "5:00 PM", "5:15 PM", "5:30 PM", "5:45 PM",
+        "6:00 PM", "6:15 PM", "6:30 PM", "6:45 PM",
+        "7:00 PM", "7:15 PM", "7:30 PM", "7:45 PM",
+        "8:00 PM"
+      ].map((time) => (
+        <li
+          key={time}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, preferredTime: time }));
+            setIsTimeOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background: formData.preferredTime === time ? "#004E78" : "#fff",
+            color: formData.preferredTime === time ? "#fff" : "#212529",
+          }}
+        >
+          {time}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
 
           {/* How heard */}
-          <div className="mb-3">
-            <label className="appointmentform-label">
-              How did you hear about us? <span style={{ color: isFieldInvalid("howHeard") ? "red" : "black" }}>*</span>
-            </label>
-            <select className="form-control" name="howHeard" value={formData.howHeard} onChange={handleChange}>
-              <option value="">Select</option>
-              <option value="Google">Google</option>
-              <option value="Instagram">Instagram</option>
-              <option value="Facebook">Facebook</option>
-              <option value="Friend">Friend</option>
-              <option value="Doctor">Doctor</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+       <div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    How did you hear about us?{" "}
+    <span style={{ color: isFieldInvalid("howHeard") ? "red" : "black" }}>*</span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    className={`form-control ${isFieldInvalid("howHeard") ? "is-invalid" : ""}`}
+    onClick={() => setIsHowHeardOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      color: formData.howHeard ? "#000" : "#808080",
+      padding: "6px 12px",
+    }}
+  >
+    <span>{formData.howHeard || ""}</span>
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown List */}
+  {isHowHeardOpen && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+      }}
+    >
+      {["Google", "Instagram", "Facebook", "Friend", "Doctor", "Other"].map((item) => (
+        <li
+          key={item}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, howHeard: item }));
+            setIsHowHeardOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background: formData.howHeard === item ? "#004E78" : "#fff",
+            color: formData.howHeard === item ? "#fff" : "#212529",
+          }}
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
 
           {/* Submit */}
           <div className="text-center">
-      <button type="submit" className="btn btn-primary btn-blog btn-large mt-3">
+      <button type="submit" className="btn btn-primary feedback-btn btn-large mt-3">
   Submit
 </button>
 
