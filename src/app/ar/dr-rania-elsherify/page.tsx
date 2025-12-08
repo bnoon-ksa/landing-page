@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ClientBnoonAlahsaPage from "./page.client";
 
 export const metadata: Metadata = {
-  title: "بنون – الشبكة الرائدة لمراكز الإخصاب وصحة المرأة في السعودية ",
+  title: "الدكتورة رانيا الشريفي - طبيبة أمراض النساء والولادة في بنون بالأحساء",
   description:
    "",
 };
@@ -10,3 +10,4 @@ export const metadata: Metadata = {
 export default function BnoonAlahsaPage() {
   return <ClientBnoonAlahsaPage />;
 }
+
