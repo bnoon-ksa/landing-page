@@ -2,8 +2,8 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
+type LocationType = "الرياض" | "جدة" | "الأحساء" | "";
 
-type LocationType = "الرياض" | "جدة" | "";
 
 const SearchBar = () => {
   const [doctor, setDoctor] = useState("");
@@ -46,14 +46,25 @@ const SearchBar = () => {
       "الدكتورة رزان غيث",
       "الدكتورة مرام دعدوع",
     ],
+     الأحساء: [
+      "الدكتورة رانيا الشريفي",
+     "الدكتور بسام نصير",
+      "الدكتور أحمد النواصر",
+      "الدكتورة مدين آل خلف",
+    ],
   };
 
-  const allDoctors = [...doctorsByLocation.الرياض, ...doctorsByLocation.جدة];
+  const allDoctors = [
+  ...doctorsByLocation.الرياض,
+  ...doctorsByLocation.جدة,
+  ...doctorsByLocation.الأحساء
+];
 
- const doctorsToShow =
-    location === "الرياض" || location === "جدة"
-      ? doctorsByLocation[location]
-      : allDoctors;
+const doctorsToShow =
+  location === "الرياض" || location === "جدة" || location === "الأحساء"
+    ? doctorsByLocation[location]
+    : allDoctors;
+
 
   // ✅ Doctor profile links (Arabic names mapped to URLs)
   const doctorProfileLinks: Record<string, string> = {
@@ -70,6 +81,10 @@ const SearchBar = () => {
     "الدكتورة مايا البزرة": "/ar/dr-maya-albezreh",
     "الدكتورة رزان غيث": "/ar/dr-razan-ghaith",
     "الدكتورة مرام دعدوع": "/ar/dr-maram-dadoua",
+     "الدكتورة رانيا الشريفي": "/ar/dr-rania-elsherify",
+      "الدكتور بسام نصير": "/ar/dr-bassamnusair",
+       "الدكتور أحمد النواصر": "/ar/dr-ahmedal-nowasser",
+        "الدكتورة مدين آل خلف": "/ar/dr-median-alkhalaf",
   };
 
   // ✅ Handle search
@@ -161,14 +176,41 @@ const SearchBar = () => {
     <img src="/images/arrow.png" className="arrow-icon" alt="" />
   </button>
 
-  <ul className="dropdown-menu location-menu">
-    <li className="dropdown-item" onClick={() => { setLocation("الرياض"); setDoctor(""); }}>
-      الرياض
-    </li>
-    <li className="dropdown-item" onClick={() => { setLocation("جدة"); setDoctor(""); }}>
-      جدة
-    </li>
-  </ul>
+ <ul className="dropdown-menu location-menu">
+  <li
+    className="dropdown-item"
+    onClick={() => {
+      setLocation("الرياض");
+      setDoctor("");
+      document.querySelector(".location-menu")?.classList.remove("open"); // 💥 FIX
+    }}
+  >
+    الرياض
+  </li>
+
+  <li
+    className="dropdown-item"
+    onClick={() => {
+      setLocation("جدة");
+      setDoctor("");
+      document.querySelector(".location-menu")?.classList.remove("open"); // 💥 FIX
+    }}
+  >
+    جدة
+  </li>
+
+  <li
+    className="dropdown-item"
+    onClick={() => {
+      setLocation("الأحساء");
+      setDoctor("");
+      document.querySelector(".location-menu")?.classList.remove("open"); // 💥 FIX
+    }}
+  >
+    الأحساء
+  </li>
+</ul>
+
 </div>
 
 
@@ -245,7 +287,7 @@ const SearchBar = () => {
   .dropdown-menu {
     position: absolute;
     width: 600px;
-    background: #fff;
+    background: #fff !important;
     border: 1px solid #000000ff;
     border-radius: 0px;
     display: none;
