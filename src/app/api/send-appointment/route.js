@@ -9,10 +9,14 @@ export async function POST(req) {
     await connectDB();
     const saved = await AppointmentEN.create(data);
 
-    const recipient =
-      data.branch === "Riyadh"
-        ? "appointments@bnoon.sa"
-        : "appointments.jeddah@bnoon.sa";
+  const recipient =
+  data.branch === "Riyadh"
+    ? "appointments@bnoon.sa"
+    : data.branch === "Jeddah"
+    ? "appointments.jeddah@bnoon.sa"
+    : data.branch === "Al Ahsa"
+    ? "callcenter.alahsa@bnoon.sa"
+    : "";
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -57,4 +61,3 @@ export async function POST(req) {
     );
   }
 }
-
