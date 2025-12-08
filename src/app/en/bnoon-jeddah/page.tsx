@@ -1,13 +1,12 @@
-import Navbar from "@/components/Layout/Navbar";
-import PageBanner from "@/components/Layout/PageBanner";
-import Jeddaharea from "@/components/Common/Jeddaharea";
-export default function AboutPage() {
-  return (
-    <>
-      <Navbar />
-      <PageBanner bgImage="/images/clinics-banner.jpg" />
-       <Jeddaharea />
+import type { Metadata } from "next";
+import ClientBnoonJeddahPage from "./page.client";
 
-    </>
-  );
+export const metadata: Metadata = {
+  title: "Bnoon – KSA’s leading network for fertility & women’s health ",
+  description:
+    "",
+};
+
+export default function BnoonJeddahPage() {
+  return <ClientBnoonJeddahPage />;
 }
