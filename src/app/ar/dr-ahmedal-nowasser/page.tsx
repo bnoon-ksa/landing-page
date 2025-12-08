@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ClientDrAhmedNowasserPage from "./page.client";
 
 export const metadata: Metadata = {
-  title: "بنون – الشبكة الرائدة لمراكز الإخصاب وصحة المرأة في السعودية ",
+  title: "الدكتور أحمد النويصر – أفضل استشاري إخصاب وعقم في الأحساء | بنون",
   description:
    "",
 };
@@ -10,3 +10,4 @@ export const metadata: Metadata = {
 export default function DrAhmedNowasser() {
   return <ClientDrAhmedNowasserPage />;
 }
+
