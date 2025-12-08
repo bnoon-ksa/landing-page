@@ -36,20 +36,20 @@ const aboutData: AboutData = {
     {
       id: 2,
       icon: { src: "images/icons/icon-2.png", alt: "icon" },
-      title: "+70",
+      title: "+80",
       description: "No. of Clinicians",
     },
     {
       id: 3,
       icon: { src: "images/icons/icon-3.png", alt: "icon" },
-      title: "+130",
+      title: "+150",
       description: "No. of Staff",
     },
     {
       id: 4,
       icon: { src: "images/icons/icon-4.png", alt: "icon" },
-      title: "Special", // dummy title (rendering time par overwrite karenge)
-      description: "No. of Locations",
+      title: "+5", // dummy title (rendering time par overwrite karenge)
+      description: "Riyadh | Jeddah | Al Ahsa |<br> Abha - under construction",
     },
     {
       id: 5,
@@ -83,8 +83,8 @@ function AboutUs() {
               {aboutData.items.map((item) => {
                 // 👇 item id ke hisaab se width set
                 let boxWidth = "250px";
-                if (item.id === 2 || item.id === 3) boxWidth = "150px";
-                if (item.id === 4) boxWidth = "290px";
+                if (item.id === 2 || item.id === 3) boxWidth = "170px";
+                if (item.id === 4) boxWidth = "270px";
                 if (item.id === 5) boxWidth = "280px";
 
                 return (
@@ -97,35 +97,32 @@ function AboutUs() {
     flex: "0 0 auto"
   }}
 >
+<div className="item">
+  <div className="icon mb-3">
+    <img
+      src={item.icon.src}
+      alt={item.icon.alt}
+      width={120}
+      height={120}
+    />
+  </div>
 
-                    <div className="item">
-                      <div className="icon mb-3">
-                        <img
-                          src={item.icon.src}
-                          alt={item.icon.alt}
-                          width={120}
-                          height={120}
-                        />
-                      </div>
+  {item.id === 4 ? (
+    <>
+      <div className="justify-content-center align-items-center gap-2 text-margin">
+        <h3>{item.title || "+5"}</h3> {/* title agar available ho to use kare */}
+        <p className="mb-0 text-color">No. of Locations</p>
+      </div>
+    </>
+  ) : (
+    <h3 dangerouslySetInnerHTML={{ __html: item.title }} />
+  )}
 
-                      {item.id === 4 ? (
-                        <>
-                          <div className="d-flex justify-content-center align-items-center gap-2 text-margin">
-                            <h3>2</h3>
-                            <p className="mb-0 text-color">Clinics in Riyadh and Jeddah</p>
-                          </div>
-                          <div className="d-flex justify-content-center align-items-center gap-2 text-margin2">
-                            <h3>1</h3>
-                            <p className="mb-0 text-color">Opening Soon in North Riyadh</p>
-                          </div>
-                        </>
-                      ) : (
-                        <h3 dangerouslySetInnerHTML={{ __html: item.title }} />
-                      )}
+  <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
 
-                      <p>{item.description}</p>
-                      {item.text && <p className="text">{item.text}</p>}
-                    </div>
+  {item.text && <p className="text">{item.text}</p>}
+</div>
+
                   </div>
                 );
               })}
