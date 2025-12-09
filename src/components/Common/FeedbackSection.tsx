@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-
+import ReCAPTCHA from "react-google-recaptcha";
 const FeedbackSection = () => {
   const [formData, setFormData] = useState({
     branch: "",
@@ -12,6 +12,7 @@ const FeedbackSection = () => {
     story: "",
     feedbackType: [] as string[],
     feedbackDetails: "",
+    recaptcha: "", 
     consent: false,
   });
 
@@ -86,6 +87,7 @@ if (
           story: "",
           feedbackType: [],
           feedbackDetails: "",
+    recaptcha: "", 
           consent: false,
         });
         setSubmitted(false);
@@ -459,6 +461,16 @@ if (
                 By filling this form, you agree to Bnoon’s Privacy Policy, and
                 you give us permission to contact you to discuss your feedback.
               </label>
+            </div>
+              <div className="my-3">
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+              onChange={(value: string | null) =>
+                setFormData((prev) => ({ ...prev, recaptcha: value || "" }))
+              }
+            />
+            
+            
             </div>
 <div className="d-flex justify-content-center mt-3">
   <button type="submit" className="btn btn-primary btn-large feedback-btn">
