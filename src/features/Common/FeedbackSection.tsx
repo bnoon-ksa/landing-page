@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 
+import ReCAPTCHA from "react-google-recaptcha";
 const FeedbackSection = () => {
   const [formData, setFormData] = useState({
     branch: "",
@@ -13,6 +14,8 @@ const FeedbackSection = () => {
     story: "",
     feedbackType: [] as string[],
     feedbackDetails: "",
+    
+  recaptcha: null as string | null,   // ⭐ FIXED
     consent: false,
   });
 
@@ -67,7 +70,11 @@ const [isOpen, setIsOpen] = useState(false); // inside FeedbackSection
       setStatusMessage(" .Please fill all required fields");
       return;
     }
-
+ // ✅ reCAPTCHA validation
+  if (!formData.recaptcha) {
+    setStatusMessage("❌ Please verify reCAPTCHA before submitting");
+    return; // stop form submission
+  }
     try {
       const res = await fetch("/api/send-feedback-ar", {
         method: "POST",
@@ -86,6 +93,8 @@ const [isOpen, setIsOpen] = useState(false); // inside FeedbackSection
           story: "",
           feedbackType: [],
           feedbackDetails: "",
+          
+  recaptcha: null as string | null,   // ⭐ FIXED
           consent: false,
         });
         setSubmitted(false);
@@ -353,6 +362,20 @@ const [isOpen, setIsOpen] = useState(false); // inside FeedbackSection
   <label className="form-check-label feedback-lable" htmlFor="consent">
    من خلال تعبئة هذا النموذج، فإنك توافق على سياسة الخصوصية الخاصة ببنون، وتسمح لنا بالتواصل معك لمتابعة ملاحظاتك إن لزم الأمر۔
   </label>
+</div>
+
+<div className="my-3">
+ <ReCAPTCHA
+  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+  hl="ar"
+  onChange={(value: string | null) =>
+    setFormData((prev) => ({
+      ...prev,
+      recaptcha: value,
+    }))
+  }
+/>
+
 </div>
 <div className="d-flex justify-content-center mt-3">
             <button type="submit" className="btn btn-primary btn-blog btn-large feedback-btn">
