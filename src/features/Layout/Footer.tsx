@@ -106,6 +106,7 @@ const footerData: FooterData = {
         { text: "مواقعنا", url: "/ar/our-clinics" },
         { text: "الرياض", url: "/ar/bnoon-riyadh" },
         { text: "جدة ", url: "/ar/bnoon-jeddah" },
+        { text: " الأحساء ", url: "/ar/bnoon-alahsa" },
       ],
     },
     {
