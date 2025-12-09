@@ -6,6 +6,7 @@ const MONGODB_URI = process.env.MONGODB_URI as string;
 // ✅ Model for Arabic subscribers
 const subscriberArSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
+  createdAt: { type: Date, default: Date.now },
 });
 
 const SubscriberAr =
