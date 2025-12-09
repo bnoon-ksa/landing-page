@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-
+import ReCAPTCHA from "react-google-recaptcha";
 const AppointmentSection = () => {
   const [formData, setFormData] = useState({
     interest: "",
@@ -19,6 +19,7 @@ const AppointmentSection = () => {
     preferredDate: "",
     preferredTime: "",
     howHeard: "",
+    recaptcha: "", 
   });
 const [isInterestOpen, setIsInterestOpen] = useState(false);
 const [isDoctorOpen, setIsDoctorOpen] = useState(false);
@@ -108,6 +109,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         preferredDate: "",
         preferredTime: "",
         howHeard: "",
+        recaptcha: "",
       });
       setSubmitted(false);
     } else {
@@ -813,7 +815,16 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     </ul>
   )}
 </div>
+<div className="my-3">
+<ReCAPTCHA
+  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+  onChange={(value: string | null) =>
+    setFormData((prev) => ({ ...prev, recaptcha: value || "" }))
+  }
+/>
 
+
+</div>
           {/* Submit */}
           <div className="text-center">
       <button type="submit" className="btn btn-primary feedback-btn btn-large mt-3">
