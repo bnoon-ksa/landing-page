@@ -19419,6 +19419,10 @@ ease;
     background-color: #004e78 !important;
     border: none  !important;
 }
+label {
+    display: inline-block;
+    color: #000;
+}
 @media (max-width: 768px) {
   .appointment-form {
     border: 1px solid #00000036;
