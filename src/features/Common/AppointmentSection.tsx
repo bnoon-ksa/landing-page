@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+
+import ReCAPTCHA from "react-google-recaptcha";
 import { Placeholder } from "react-bootstrap";
 const AppointmentSection = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +20,10 @@ const AppointmentSection = () => {
     email: "",
     preferredDate: "",
     preferredTime: "",
-    howHeard: "",
+    howHeard: "", 
+    story: "",
+  recaptcha: null as string | null,   // ⭐ FIXED
+
   });
   const nationalities = [
     "سعودي",
@@ -458,7 +463,11 @@ const AppointmentSection = () => {
       setMessage("❌ Please fill all required fields.");
       return;
     }
-
+ // ✅ reCAPTCHA validation
+  if (!formData.recaptcha) {
+    setMessage("❌ Please verify reCAPTCHA before submitting");
+    return; // stop form submission
+  }
     try {
       const response = await fetch("/api/send-appointment-ar", {
         method: "POST",
@@ -483,6 +492,9 @@ const AppointmentSection = () => {
           preferredDate: "",
           preferredTime: "",
           howHeard: "",
+           story: "",
+  recaptcha: null as string | null,   // ⭐ FIXED
+
         });
         setSubmitted(false);
       } else {
@@ -1324,9 +1336,23 @@ const AppointmentSection = () => {
             </div>
 
 
+<div className="my-3">
+ <ReCAPTCHA
+  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+  hl="ar"
+  onChange={(value: string | null) =>
+    setFormData((prev) => ({
+      ...prev,
+      recaptcha: value,
+    }))
+  }
+/>
+
+</div>
+
 
             {/* Submit */}
-            <div className="row g-3 mt-3">
+            <div className="row g-3 ">
               <div className="col-md-12 text-center">
                 <button type="submit" className="btn btn-primary btn-blog feedback-btn btn-large mt-3">
                   إرسال
