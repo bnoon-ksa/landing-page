@@ -1,8 +1,8 @@
 "use client";
-
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 const HowItWorksSlider = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const steps = [
     { id: 1, imageSrc: "/images/fertility-counselling.jpg", title: "استشارات الخصوبة وتحاليل الهرمونات " },
     { id: 2, imageSrc: "/images/intrauterine-insemination.jpg", title: " (IUI) التلقيح داخل الرحم" },
@@ -21,7 +21,20 @@ const HowItWorksSlider = () => {
     { id: 15, imageSrc: "/images/recurrent-miscarriage.jpg", title: "​حالات الإجهاض المتكرر " },
     { id: 16, imageSrc: "/images/antenatal-care-deliveries.jpg", title: "متابعة الحمل ورعاية ما قبل الولادة " },
   ];
+// Detect mobile screen
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Slice logic for mobile
+  const visibleSteps = isMobile && !showAll ? steps.slice(0, 4) : steps;
   return (
     <div className="how-it-works-area ptb-140 smoke-bg-color">
       <div className="container">
@@ -37,7 +50,7 @@ const HowItWorksSlider = () => {
         </div>
 
         <div className="row g-4">
-          {steps.map((step) => (
+          {visibleSteps.map((step) =>  (
             <div key={step.id} className="col-lg-3 col-md-4 col-sm-6">
               <div className="how-it-work-card">
                 <div className="image">
@@ -54,7 +67,21 @@ const HowItWorksSlider = () => {
             </div>
           ))}
         </div>
+               {/* Read More / Less button - mobile only */}
+        {isMobile && (
+          <div className="text-center mt-1 pb-3">
+            <button
+              className="btn btn-success btn-blog"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? "اقرأ أقل" : "المزيد"}
+            </button>
+          </div>
+        )}
       </div>
+             <style jsx>{`
+        
+      `}</style>
     </div>
   );
 };
