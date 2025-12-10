@@ -8,7 +8,12 @@ import "@fontsource/alexandria/400.css"; // Regular
 import "@fontsource/alexandria/700.css"; // Bold (optional)
 
 const cairo = Cairo({ variable: "--font-cairo", subsets: ["arabic"], weight: ["400","700"] });
+export const metadata = {
 
+  icons: {
+    icon: "/images/fav.png",
+  },
+};
 export default function ArabicLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ar" dir="rtl">
