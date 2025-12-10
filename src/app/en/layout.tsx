@@ -6,7 +6,12 @@ import Footer from "@/components/Layout/Footer";
 import GoTop from "@/components/Layout/GoTop";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ variable: "--font-plus-jakarta-sans", subsets: ["latin"] });
+export const metadata = {
 
+  icons: {
+    icon: "/images/fav.png",
+  },
+};
 export default function EnglishLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" dir="ltr">
