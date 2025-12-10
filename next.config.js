@@ -1,4 +1,3 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "standalone",
@@ -10,8 +9,10 @@ const nextConfig = {
       {
         source: "/",
         destination: "/ar",
-        permanent: true,
+        permanent: false,
       },
     ];
   },
 };
+
+module.exports = nextConfig;
