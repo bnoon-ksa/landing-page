@@ -73,7 +73,7 @@ const Riyadharea = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="service-overview-area mb-5 mt-3 mt-lg-5">
       <div className="container">
         {/* Riyadh Section */}
         <div className="row justify-content-center align-items-center g-4">
@@ -95,18 +95,18 @@ const Riyadharea = () => {
 
                 العالمية — ما يعكس التزامه الثابت بتقديم أفضل النتائج الممكنة۔   </p>
 
-              <div className="d-flex align-items-center mt-3 gap-4">
+              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span>بنون – الرياض</span>
+                  <span className="text-color">بنون – الرياض</span>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span>+966 11 444 8080</span>
+                  <span className="text-color">+966 11 444 8080</span>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span>info@bnoon.sa</span>
+                  <span className="text-color">info@bnoon.sa</span>
                 </div>
               </div>
             </div>
@@ -128,8 +128,8 @@ const Riyadharea = () => {
         </div>
 
         {/* King Salman Road Section */}
-        <div className="row justify-content-center align-items-center g-4 mt-5">
-          <div className="col-xl-6 col-md-12">
+        <div className="row justify-content-center align-items-center g-4 flex-column-reverse flex-md-row mt-5">
+          <div className="col-xl-6 col-md-12  image-loc">
             <div
               ref={imageRefKing}
               className={`service-overview-image animate-left ${imageVisibleKing ? "show" : ""}`}
@@ -151,7 +151,7 @@ const Riyadharea = () => {
             >
               <h2>
                 بنون – طريق الملك سلمان، الرياض{" "}<br />
-                <span style={{ fontSize: "18px" }}>(الافتتاح: ديسمبر 2025) </span>
+                <span style={{ fontSize: "16px" }}>(الافتتاح: ديسمبر 2025) </span>
               </h2>
               <p>
                 ضمن خطتها لتوسيع الوصول إلى علاجات الإخصاب عالية المستوى في المملكة، تعمل "بنون" على تطوير منشأة طبية متكاملة بمساحة 3,800 متر مربع في شمال الرياض على طريق الملك سلمان، والمقرّر افتتاحها نهاية عام 2025۔
@@ -166,24 +166,43 @@ const Riyadharea = () => {
               </p>
               <p>
                 "بنون – طريق الملك سلمان" لا يهدف فقط إلى تقديم خدمة طبية، بل يسعى ليكون مرجعاً إقليمياً في طب الإخصاب، ومنصة تواكب تطلعات رؤية السعودية 2030 في الريادة الصحية والابتكار الطبي۔</p>
-              <div className="d-flex align-items-center mt-3 gap-4">
+              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span>بنون – شمال الرياض (قريبًا) </span>
+                  <span className="text-color">بنون – شمال الرياض (قريبًا) </span>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span>+966 11 444 8080</span>
+                  <span className="text-color">+966 11 444 8080</span>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span>info@bnoon.sa</span>
+                  <span className="text-color">info@bnoon.sa</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+       <style jsx global>{`
+  span.text-color {
+    color: #004E78 !important;
+    font-size: 16px !important;
+  }
+.image-loc{
+text-align: right;
+}
+  /* Mobile Responsive */
+  @media (max-width: 767px) {
+   span.text-color {
+    color: #004E78 !important;
+    font-size: 14px !important;
+  }
+    .image-loc{
+text-align: left;
+}
+  }
+`}</style> 
     </div>
   );
 };
