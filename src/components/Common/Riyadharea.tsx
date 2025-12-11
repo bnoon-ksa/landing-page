@@ -73,7 +73,7 @@ const Riyadharea = () => {
 }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="service-overview-area mb-5 mt-3 mt-lg-5">
       <div className="container">
         {/* Riyadh Section */}
         <div className="row justify-content-center align-items-center g-4">
@@ -93,27 +93,27 @@ const Riyadharea = () => {
                 The center also emphasizes continuous learning, professional development, and research integration, ensuring that every patient receives care aligned with global best practices in reproductive medicine.
               </p>
 
-              <div className="d-flex align-items-center mt-3 gap-4">
+              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span>Bnoon - Riyadh</span>
+                  <span className="text-color">Bnoon - Riyadh</span>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span>+966 11 444 8080</span>
+                  <span className="text-color">+966 11 444 8080</span>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span>info@bnoon.sa</span>
+                  <span className="text-color">info@bnoon.sa</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="col-xl-6 col-md-12">
+          <div className="col-xl-6 col-md-12" >
             <div
               ref={imageRefRiyadh}
-              className={`service-overview-image animate-right ${imageVisibleRiyadh ? "show" : ""}`}
+              className={`service-overview-image image-left animate-right ${imageVisibleRiyadh ? "show" : ""}`}
               style={{
                 boxShadow: "50px 50px 0px #d7f2fb",
                 overflow: "hidden",
@@ -126,8 +126,9 @@ const Riyadharea = () => {
         </div>
 
         {/* King Salman Road Section */}
-        <div className="row justify-content-center align-items-center g-4 mt-5">
-          <div className="col-xl-6 col-md-12">
+        <div className="row justify-content-center align-items-center g-4 mt-5 flex-column-reverse flex-md-row">
+          <div className="col-xl-6 col-md-12 image-loc" style={{
+              }}>
             <div
               ref={imageRefKing}
               className={`service-overview-image animate-left ${imageVisibleKing ? "show" : ""}`}
@@ -135,7 +136,6 @@ const Riyadharea = () => {
                 boxShadow: "-50px 50px 0px #d7f2fb",
                 overflow: "hidden",
                 display: "inline-block",
-                margin: "0 0px 0 50",
               }}
             >
               <img src={imageKingSalman} alt="King Salman Road Facility" width={580} height={450} />
@@ -161,24 +161,44 @@ const Riyadharea = () => {
                 With a focus on clinical excellence, innovation, and patient-centered care, Bnoon – King Salman Road is envisioned to become a regional reference for fertility and reproductive science, supporting the broader ambitions of Saudi Vision 2030 to position the Kingdom as a hub for medical innovation and advanced healthcare delivery.
               </p>
 
-              <div className="d-flex align-items-center mt-3 gap-4">
+              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span>Bnoon – King Salman Road</span>
+                  <span className="text-color">Bnoon – King Salman Road</span>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span>+966 11 444 8080</span>
+                  <span className="text-color">+966 11 444 8080</span>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span>info@bnoon.sa</span>
+                  <span className="text-color"> info@bnoon.sa</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+       <style jsx global>{`
+  span.text-color {
+    color: #004E78 !important;
+    font-size: 18px !important;
+  }
+
+.image-loc{
+text-align: left;
+}
+  /* Mobile Responsive */
+  @media (max-width: 767px) {
+   span.text-color {
+    color: #004E78 !important;
+    font-size: 14px !important;
+  }
+.image-loc{
+text-align: right;
+}
+  }
+`}</style>
     </div>
   );
 };
