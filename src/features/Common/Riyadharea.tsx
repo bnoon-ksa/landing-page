@@ -137,7 +137,6 @@ const Riyadharea = () => {
                 boxShadow: "50px 50px 0px #d7f2fb",
                 overflow: "hidden",
                 display: "inline-block",
-                margin: "0 0px 0 50",
               }}
             >
               <img src={imageKingSalman} alt="King Salman Road Facility" width={580} height={450} />
@@ -188,15 +187,17 @@ const Riyadharea = () => {
   span.text-color {
     color: #004E78 !important;
     font-size: 16px !important;
+     margin-right:10px;
   }
 .image-loc{
-text-align: right;
+text-align: left;
 }
   /* Mobile Responsive */
   @media (max-width: 767px) {
    span.text-color {
     color: #004E78 !important;
     font-size: 14px !important;
+     margin-left:10px;
   }
     .image-loc{
 text-align: left;
