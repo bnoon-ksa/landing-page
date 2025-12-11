@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MobileTopTools from "@/components/Common/MobileTopTools"; // ye aapka custom component hoga
+import "remixicon/fonts/remixicon.css";
+
 // Define interfaces for our data structure
 interface SocialLink {
   platform: string;
@@ -102,9 +104,9 @@ const footerData: FooterData = {
         { text: "Join Our Team", url: "/en/join-our-team" },
         { text: "Media Center", url: "/en/https://globalfertilityivf.com/media/" },
         { text: "Our Locations", url: "/en/our-clinics" },
-         { text: "Bnoon Riyadh", url: "/en/bnoon-riyadh" },
-          { text: "Bnoon Jeddah", url: "/en/bnoon-jeddah" },
-         { text: "Bnoon Al Ahsa", url: "/en/bnoon-alahsa" },
+         { text: "Bnoon - Riyadh", url: "/en/bnoon-riyadh" },
+          { text: "Bnoon - Jeddah", url: "/en/bnoon-jeddah" },
+         { text: "Bnoon - Al Ahsa", url: "/en/bnoon-alahsa" },
       ],
     },
     {
@@ -198,11 +200,27 @@ function Footer() {
       <div className="single-footer-widget ms-4" style={{ minWidth: "150px" }} key={index}>
         {section.title && <h3>{section.title}</h3>}
         <ul className="links">
-          {section.links.map((link, linkIndex) => (
-            <li key={linkIndex}>
-              <Link href={link.url}>{link.text}</Link>
-            </li>
-          ))}
+         {section.links.map((link, linkIndex) => {
+  const withIcon =
+    link.text === "Bnoon - Riyadh" ||
+    link.text === "Bnoon - Jeddah" ||
+    link.text === "Bnoon - Al Ahsa";
+
+  return (
+    <li key={linkIndex} className="d-flex align-items-start">
+      <Link href={link.url} className="d-flex align-items-center">
+        {withIcon && (
+          <i
+            className="ri-map-pin-line"
+            style={{ fontSize: "14px", marginRight: "6px" }}
+          ></i>
+        )}
+        {link.text}
+      </Link>
+    </li>
+  );
+})}
+
         </ul>
       </div>
     ))}
