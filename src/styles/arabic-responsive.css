@@ -26,6 +26,9 @@ html, body {
     margin-bottom: 0;
     padding-left: 0px;
 }
+    .page-banner-area {
+        background-position: right !important;
+}
 .btn-language {
     font-size: 12px !important;
     width: 49px !important;
