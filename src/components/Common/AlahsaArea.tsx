@@ -72,7 +72,7 @@ const Riyadharea = () => {
 }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="service-overview-area mb-5 mt-3 mt-lg-5">
       <div className="container">
         {/* Riyadh Section */}
         <div className="row justify-content-center align-items-center g-4">
@@ -94,7 +94,7 @@ const Riyadharea = () => {
                <p>
                <strong>Bnoon – Al Ahsa</strong> marks a significant step forward in elevating fertility care across the Eastern Region, uniting innovation, clinical excellence, and unwavering support for every family’s journey to parenthood. 
               </p>
-              <div className="d-flex align-items-center mt-3 gap-4">
+              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
                   <span className="text-color">Bnoon – Al Ahsa</span>
@@ -133,7 +133,16 @@ const Riyadharea = () => {
     .location-text h2{
     margin-bottom: 10px;
     }
-   
+     /* Mobile Responsive */
+  @media (max-width: 767px) {
+   span.text-color {
+    color: #004E78 !important;
+    font-size: 14px !important;
+  }
+    .image-loc{
+text-align: right;
+}
+  }
   }
 `}</style>
     </div>
