@@ -43,11 +43,11 @@ const Alahsaharea = () => {
   }, []);
 
   return (
-    <div className="service-overview-area mb-5 mt-lg-5">
+    <div className="service-overview-area mb-5 mt-3 mt-lg-5">
       <div className="container">
         {/* Jeddah Section */}
         <div className="row justify-content-center align-items-center g-4 flex-column-reverse flex-md-row mt-lg-5 mt-3">
-          <div className="col-xl-6 col-md-12">
+          <div className="col-xl-6 col-md-12 image-loc">
             <div
               ref={imgRef}
               className={`mb-3 service-overview-image ${imgVisible ? "animate-left show" : "animate-left"}`}
@@ -55,7 +55,6 @@ const Alahsaharea = () => {
                 boxShadow: "50px 50px 0px #d7f2fb",
                 overflow: "hidden",
                 display: "inline-block",
-                margin: "0 0px 0 50px",
               }}
             >
               <img src={imageAlahsa} alt="Service overview" width={580} height={450} />
@@ -105,7 +104,9 @@ info@bnoon.sa</span>
     .location-text h2{
     margin-bottom: 10px;
     }
-   
+   .image-loc{
+text-align: left;
+}
  @media (max-width: 767px) {
     span.text-color {
     color: #004E78 !important;
