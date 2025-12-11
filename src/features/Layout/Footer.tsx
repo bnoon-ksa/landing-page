@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MobileTopTools from "@/features/Common/MobileTopTools"; // ye aapka custom component hoga
+
+import "remixicon/fonts/remixicon.css";
 // Define interfaces for our data structure
 interface SocialLink {
   platform: string;
@@ -205,11 +207,38 @@ function Footer() {
                   >
                     {section.title && <h3>{section.title}</h3>}
                     <ul className="links">
-                      {section.links.map((link, linkIndex) => (
-                        <li key={linkIndex}>
-                          <Link href={link.url}>{link.text}</Link>
-                        </li>
-                      ))}
+                    {section.links.map((link, linkIndex) => {
+  const withIcon =
+    link.text.trim() === "الرياض" ||
+    link.text.trim() === "جدة" ||
+    link.text.trim() === "الأحساء";
+
+  return (
+    <li key={linkIndex} className="d-flex align-items-start">
+      <Link
+        href={link.url}
+        className="d-flex align-items-center"
+        style={{
+          marginLeft: withIcon ? "18px" : "0px", // ⭐ only icon links move text
+          position: "relative",
+        }}
+      >
+        {withIcon && (
+          <i
+            className="ri-map-pin-line"
+            style={{
+              fontSize: "14px",
+              marginLeft: "10px",
+            }}
+          ></i>
+        )}
+
+        {link.text}
+      </Link>
+    </li>
+  );
+})}
+
                     </ul>
                   </div>
                 ))}
