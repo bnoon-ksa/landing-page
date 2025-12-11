@@ -20,7 +20,7 @@ const OurLocations = () => {
   };
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="service-overview-area mb-5 mt-3 mt-lg-5">
       <div className="container">
 
         {/* Riyadh Section */}
@@ -77,7 +77,7 @@ const OurLocations = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <motion.div className="col-xl-5 col-md-12" variants={variantsRight}>
+          <motion.div className="col-xl-5 col-md-12 image-loc" variants={variantsRight}>
             <div
               className="service-overview-image"
               style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
@@ -175,7 +175,7 @@ const OurLocations = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <motion.div className="col-xl-5 col-md-12" variants={variantsRight}>
+          <motion.div className="col-xl-5 col-md-12 image-loc" variants={variantsRight}>
             <div
               className="location-overview-image"
               style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
@@ -217,6 +217,7 @@ const OurLocations = () => {
         <style jsx global>{`
   span.text-color {
     color: #004E78 !important;
+    margin-right:10px;
   }
     .location-text h2{
     margin-bottom: 10px;
@@ -245,9 +246,12 @@ const OurLocations = () => {
     }
          span.text-color {
     color: #004E78 !important;
-    font-size:12px;
+    font-size:14px;
     margin-right:10px;
   }
+    .image-loc{
+text-align: left;
+}
   }
 `}</style>
     </div>
