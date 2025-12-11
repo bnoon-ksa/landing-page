@@ -99,7 +99,7 @@ info@bnoon.sa</span>
  <style jsx global>{`
   span.text-color {
     color: #004E78 !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
      margin-right:10px;
   }
     .location-text h2{
@@ -111,7 +111,7 @@ text-align: left;
  @media (max-width: 767px) {
     span.text-color {
     color: #004E78 !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
      margin-right:10px;
   }
   }
@@ -121,4 +121,5 @@ text-align: left;
 };
 
 export default  Alahsaharea;
+
 
