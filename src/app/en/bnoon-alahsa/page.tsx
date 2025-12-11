@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ClientBnoonAlahsaPage from "./page.client";
 
 export const metadata: Metadata = {
-  title: "Bnoon - Al Ahsa| The Fertility & Women Health Center",
+  title: "Bnoon - Al Ahsa | The Fertility & Women Health Center",
   description:
     "",
 };
@@ -10,4 +10,5 @@ export const metadata: Metadata = {
 export default function BnoonAlahsaPage() {
   return <ClientBnoonAlahsaPage />;
 }
+
 
