@@ -12,7 +12,7 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
       title: "Bnoon - Riyadh",
       slug: "https://maps.app.goo.gl/Uwu7B8FT8n7bYNid6",
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.1839039641172!2d46.7350649!3d24.789155499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efddca951caad%3A0xff57eb5bc69f10ea!2zQm5vb24gLSBSaXlhZGgg2KjZhtmI2YYgLSDYp9mE2LHZitin2LY!5e0!3m2!1sen!2s!4v1762873112473!5m2!1sen!2s",
-      buttonLink: "en//bnoon-riyadh",
+      buttonLink: "en/bnoon-riyadh",
       description:
         "With a legacy of excellence in fertility and women’s health, Bnoon has been proudly serving families for over 12 years...",
     },
@@ -22,7 +22,7 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
       title: "Bnoon – Jeddah",
       slug: "https://www.google.com/maps/place/HealthPlus+Fertility+%26+Women's+Health+Center+-+Jeddah/data=!4m2!3m1!1s0x0:0x403eb3afa0ca3bd7?sa=X&amp;ved=1t:2428&amp;ictx=111",
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.6924446189687!2d39.1215956!3d21.558878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3dbc1b47a93e5%3A0x403eb3afa0ca3bd7!2zQm5vb24gLSBKZWRkYWgg2KjZhtmI2YYgLSDYrNiv2KkgKGZvcm1lcmx5IGtub3duIGFzIEhlYWx0aFBsdXMgRmVydGlsaXR5IEplZGRhaCk!5e0!3m2!1sen!2s!4v1762873494627!5m2!1sen!2s",
-      buttonLink: "en//bnoon-jeddah",
+      buttonLink: "en/bnoon-jeddah",
       description:
         "Acquired in June 2025, Bnoon Jeddah — formerly known as HealthPlus Fertility Center Jeddah — has long been recognized for its...",
     },
@@ -33,7 +33,7 @@ const [hoveredId, setHoveredId] = useState<number | null>(null);
        note: "(Opening December 2025)",
       slug: "https://maps.app.goo.gl/F9Qu7tQQp74TTyNv9?g_st=iwb",
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.3583391235643!2d46.59119140000001!3d24.8174163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee69d1c7fb897%3A0x46a86841c1f1d0e8!2zUlJRQTQxNTAsIDQxNTAgS2luZyBTYWxtYW4gQmluIEFiZHVsYXppeiBSZCwgNjkzMtiMINit2Yog2KfZhNmC2YrYsdmI2KfZhtiMIFJpeWFkaCAxMzUzMiwgU2F1ZGkgQXJhYmlh!5e0!3m2!1sen!2s!4v1762873544370!5m2!1sen!2s",
-      buttonLink: "en//our-clinics",
+      buttonLink: "en/our-clinics",
       description:
         "To further expand access and redefine the standard of fertility care in the Kingdom...",
     },
