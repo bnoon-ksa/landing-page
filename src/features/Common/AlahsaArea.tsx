@@ -46,7 +46,7 @@ const Alahsaharea = () => {
     <div className="service-overview-area mb-5 mt-3 mt-lg-5">
       <div className="container">
         {/* Jeddah Section */}
-        <div className="row justify-content-center align-items-center g-4 flex-column-reverse flex-md-row mt-lg-5 mt-3">
+        <div className="row justify-content-center align-items-center g-4 flex-column-reverse flex-md-row mt-lg-5">
           <div className="col-xl-6 col-md-12 image-loc">
             <div
               ref={imgRef}
@@ -99,7 +99,8 @@ info@bnoon.sa</span>
  <style jsx global>{`
   span.text-color {
     color: #004E78 !important;
-    font-size: 18px !important;
+    font-size: 14px !important;
+     margin-right:10px;
   }
     .location-text h2{
     margin-bottom: 10px;
@@ -120,3 +121,4 @@ text-align: left;
 };
 
 export default  Alahsaharea;
+
