@@ -24,7 +24,7 @@ function HeroBannerAr() {
     {
       video: "images/ar-banner/3.mp4",
       title: "المستقبل الواعد في <br>مجال علاجات الإخصاب",
-      desc: "الآن في الرياض وجدة ",
+      desc: "الآن في الرياض وجدة والأحساء  ",
       buttonLink: "ar/request-an-appoinment",
       buttonText: "احجز الآن",
     },
@@ -76,7 +76,7 @@ function HeroBannerAr() {
   useEffect(() => {
     const handleScroll = () => {
       if (!bannerRef.current) return;
-      const speed = 0.5;
+      const speed = 0.2;
       const offset = -(window.scrollY * speed);
       setBgPosition(offset);
     };
@@ -87,7 +87,7 @@ function HeroBannerAr() {
   // ✅ Trigger reveal animation on slide change
   useEffect(() => {
     setAnimate(false);
-    const timer = setTimeout(() => setAnimate(true), 500);
+    const timer = setTimeout(() => setAnimate(true), 900);
     return () => clearTimeout(timer);
   }, [currentSlide]);
 
