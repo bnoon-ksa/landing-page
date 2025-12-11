@@ -103,6 +103,8 @@ const Jeddaharea = () => {
   span.text-color {
     color: #004E78 !important;
     font-size: 16px !important;
+     margin-right:10px;
+
   }
 .image-loc{
 text-align: left;
