@@ -38,7 +38,7 @@ const OurLocations = () => {
   );
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="service-overview-area mb-5 mt-3 mt-lg-5">
       <div className="container">
 
         {/* Riyadh Section */}
@@ -83,12 +83,10 @@ const OurLocations = () => {
         >
           <motion.div className="col-xl-6 col-md-12" variants={variantsRight}>
             <div
-              className="location-overview-image"
+              className="location-overview-image image-loc"
                style={{
   boxShadow: "-50px 50px 0px #d7f2fb",
   overflow: "hidden",
-  marginLeft: "auto",
-  marginRight: "auto",
 }}
             >
               <img src={imageJeddah} alt="Service overview" width={580} height={450} />
@@ -150,12 +148,11 @@ const OurLocations = () => {
         >
           <motion.div className="col-xl-6 col-md-12" variants={variantsRight}>
             <div
-              className="location-overview-image"
+              className="location-overview-image  image-loc"
                style={{
   boxShadow: "-50px 50px 0px #d7f2fb",
   overflow: "hidden",
-  marginLeft: "auto",
-  marginRight: "auto",
+ 
 }}
             >
               <img src={imageAlahsa} alt="Service overview" width={580} height={450} />
@@ -198,7 +195,9 @@ const OurLocations = () => {
     height: 420px ;
     overflow: hidden !important;
   }
-
+.image-loc{
+ marginRight: "auto",
+}
   .location-overview-image img {
     width: 100% !important;
     height: 100% !important;
@@ -212,9 +211,15 @@ const OurLocations = () => {
         margin-bottom: 20px;
         height: 200px;
         margin-left: auto;
-        margin-right: auto;
         text-align:center;
     }
+          span.text-color {
+    color: #004E78 !important;
+    font-size: 14px !important;
+  }
+    .image-loc{
+ marginLeft: "auto",
+}
   }
 `}</style>
     </div>
