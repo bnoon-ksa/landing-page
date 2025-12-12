@@ -122,11 +122,11 @@ import Link from "next/link";
         </div>
 
          {/* New Section with 2 Divs in one row */}
-        <div className="row justify-content-center text-center g-4">
+        <div className="row text-center g-4">
           {/* First Div */}
         <div className="col-lg-6 col-md-8">
-  <div className="p-4 location-border h-100">
-    <h5 className="mb-3">Bnoon - Riyadh</h5>
+  <div className="p-0 p-lg-4 location-border h-100">
+    <h5 className="mb-3"><strong>Bnoon - Riyadh</strong></h5>
     <p>
       Abi Jafar Bin Mansur Street, <br />
       Al-Shuhada, 13241 Riyadh, Saudi Arabia<br />
@@ -134,7 +134,7 @@ import Link from "next/link";
     </p>
 
     {/* Google Map Embed */}
-  <div className="map-responsive mt-3 text-center text-lg-start">
+  <div className="map-responsive mt-0 mt-lg-3 text-center text-lg-start">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.3932190536176!2d46.732875315003445!3d24.78915548405014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efddca951caad%3A0xff57eb5bc69f10ea!2sBnoon%20-%20Riyadh!5e0!3m2!1sen!2s!4v1695980800000!5m2!1sen!2s"
     width="90%"
@@ -156,10 +156,10 @@ import Link from "next/link";
 
           {/* Second Div */}
          <div className="col-lg-6 col-md-8">
-  <div className="p-4 location-border h-100 text-center">
-    <h5 className="mb-3">Bnoon - Jeddah</h5>
+  <div className="p-0 p-lg-4 location-border h-100 text-center">
+    <h5 className="mb-3"><strong>Bnoon - Jeddah</strong></h5>
     <p className="text-left">
-      3340 Quartz Building, Al Cornishe Road, Al Shatea, Jeddah 23412, <br />
+      3340 Quartz Building, Al Cornishe Road, Al Shatea,<br /> Jeddah 23412, 
       Saudi Arabia<br />
       +966 12 680 0800
     </p>
@@ -179,6 +179,37 @@ import Link from "next/link";
    <p className="text-center text-lg-start">
       Opening Hours:<br />
       Saturday – Thursday: 9 am – 8:30 pm <br />
+      Friday: Closed 
+    </p>
+  </div>
+</div>
+
+
+          {/* Third Div */}
+         <div className="col-lg-6 col-md-8">
+  <div className="p-0 p-lg-4 location-border h-100 text-center">
+    <h5 className="mb-3"><strong>Bnoon – Al Ahsa </strong></h5>
+    <p className="text-left">
+     South Tower, Floor 12, <br />Almoosa Specialist Hospital  
+
+Dharan Road,<br /> Al Mubarraz 36342 
+    </p>
+
+    {/* Google Map Embed */}
+    <div className="map-responsive mt-3 text-center text-lg-start">
+      <iframe
+        src="https://www.google.com/maps?q=25.436674118041992,49.57236862182617&z=17&hl=en"
+        width="90%"
+        height="250"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+   <p className="text-center text-lg-start">
+      Opening Hours:<br />
+      Saturday – Thursday: 7 am – 8 pm  <br />
       Friday: Closed 
     </p>
   </div>
