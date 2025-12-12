@@ -36,26 +36,26 @@ const aboutData: AboutData = {
     {
       id: 2,
       icon: { src: "images/icons/icon-2.png", alt: "icon" },
-      title: "+70",
+      title: "+80",
       description: "طبيباً واختصاصياً",
     },
     {
       id: 3,
       icon: { src: "images/icons/icon-3.png", alt: "icon" },
-      title: "+130",
+      title: "+150",
       description: "الكوادر الطبية والإدارية",
     },
     {
       id: 4,
       icon: { src: "images/icons/icon-4.png", alt: "icon" },
       title: "Special",
-      description: "عدد المواقع",
+      description: "",
     },
     {
       id: 5,
       icon: { src: "images/icons/icon-5.png", alt: "icon" },
       title: "+60%",
-      description: "نسبة النجاح للنساء تحت 35 عاماً  تماشياً ",
+      description: "نسبة النجاح للنساء تماشياً ",
       text: "مع معدلات النجاح عالمياً ",
     },
   ],
@@ -81,8 +81,8 @@ function AboutUs() {
             <div className="second-about-items d-flex justify-content-center">
               {aboutData.items.map((item) => {
                 let boxWidth = "220px";
-                if (item.id === 2 || item.id === 3) boxWidth = "150px";
-                if (item.id === 4) boxWidth = "300px";
+                if (item.id === 2 || item.id === 3) boxWidth = "180px";
+                if (item.id === 4) boxWidth = "220px";
                 if (item.id === 5) boxWidth = "270px";
 
                 return (
@@ -103,16 +103,19 @@ function AboutUs() {
 
                       {item.id === 4 ? (
                         <>
-                          <div className="d-flex justify-content-center align-items-center gap-2">
-                            <h3>2</h3>
+                          <div className=" d-flex  justify-content-center align-items-center gap-2">
+                            <h3 className="text-margin">5</h3>
                             <p className="mb-0 text-color">
-                              مركزان حالياً في الرياض وجدة
+                              مواقع
                             </p>
                           </div>
-                          <div className="d-flex justify-content-center align-items-center gap-2">
-                            <h3>1</h3>
+                          <div className="mt-3 d-flex justify-content-center align-items-center gap-2">
                             <p className="mb-0 text-color">
-                              واحد قيد التطوير في شمال الرياض
+
+
+                              الرياض | جدة | الأحساء<br/>
+
+                              أبها – قيد الإنشاء
                             </p>
                           </div>
                         </>
@@ -134,7 +137,10 @@ function AboutUs() {
       </div>
 
       {/* ✅ Scoped CSS */}
-     <style jsx>{`
+      <style jsx>{`
+      .text-margin{
+      margin-bottom:0px !important;
+      }
         /* Default: Desktop — keep items in a horizontal row */
         .second-about-items {
           display: flex;
