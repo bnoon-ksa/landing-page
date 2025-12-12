@@ -207,7 +207,7 @@ const OurLocations = () => {
               
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
-                  <span className="text-color">info.jeddah@bnoon.sa</span>
+                  <span className="text-color">info@bnoon.sa</span>
                 </div>
               </div>
             </div>
