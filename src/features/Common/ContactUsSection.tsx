@@ -101,9 +101,9 @@ const ContactUsSection = () => {
               />
               <h5 className="mb-3">تفضلون التحدث معنا مباشرة؟ </h5>
               <Link href="request-an-appoinment" className="btn btn-primary mb-3 contact-btn">
-              اتصلوا بنا
+                اتصلوا بنا
               </Link>
-              <p className="text-center">
+              <p className="text-center" style={{ direction: "ltr", textAlign: "left" }}>
                 +966 11 444 8080 :بنون – الرياض
                 <br />
                 +966 12 680 0800  :بنون – جدة
@@ -120,7 +120,7 @@ const ContactUsSection = () => {
               </div>
               <div className="left text-center mt-2">
                 <p className=" text-center">
-                 :نُدير في "بنون" مراكز خصوبة رائدة في المملكة، صُمّمت بعناية لتوفّر أعلى درجات الراحة والخصوصية والنتائج المثلى
+                 نُدير في "بنون" مراكز خصوبة رائدة في المملكة، صُمّمت بعناية لتوفّر أعلى درجات الراحة والخصوصية والنتائج المثلى:
                 </p>
               </div>
             </div>
@@ -128,14 +128,14 @@ const ContactUsSection = () => {
         </div>
 
         {/* New Section with 2 Divs in one row */}
-        <div className="row justify-content-center text-center g-4">
+        <div className="row text-center g-4">
           {/* First Div */}
           <div className="col-lg-6 col-md-8">
-            <div className="p-4 location-border h-100">
-              <h5 className="mb-3">بنون - الرياض</h5>
-              <p className="text-center">
-               ،شارع أبي جعفر بن منصور  <br />
-               حي الشهداء، 13241 الرياض، المملكة العربية السعودية<br />
+            <div className="p-0 p-lg-4 location-border h-100">
+              <h5 className="mb-3 fw-bold">بنون - الرياض</h5>
+              <p className="text-center" style={{ direction: "ltr" }}>
+                شارع أبي جعفر بن منصور  <br />
+                حي الشهداء، 13241 الرياض، المملكة العربية السعودية<br />
                 +966 11 444 8080
               </p>
 
@@ -152,9 +152,9 @@ const ContactUsSection = () => {
                 ></iframe>
               </div>
               <p className="text-lg-end">
-               أوقات العمل:<br />
-               من السبت إلى الخميس – 9:00 صباحاً حتى 2:30 ظهراً<br />
-               الجمعة: مغلق
+                أوقات العمل:<br />
+                من السبت إلى الخميس – 9:00 صباحاً حتى 2:30 ظهراً<br />
+                الجمعة: مغلق
               </p>
             </div>
           </div>
@@ -162,11 +162,11 @@ const ContactUsSection = () => {
 
           {/* Second Div */}
           <div className="col-lg-6 col-md-8">
-            <div className="p-4 location-border h-100 text-center">
-              <h5 className="mb-3">بنون - جدة</h5>
-              <p className="text-center">
-               مبنى كوارتز 3340، طريق الكورنيش، حي الشاطئ، جدة 23412، <br />
-               المملكة العربية السعودية<br />
+            <div className="p-0 p-lg-4 location-border h-100 text-center">
+              <h5 className="mb-3  fw-bold">بنون - جدة</h5>
+              <p className="text-center" style={{ direction: "ltr" }}>
+                مبنى كوارتز 3340، طريق الكورنيش، حي الشاطئ، جدة 23412 <br />
+                المملكة العربية السعودية<br />
                 +966 12 680 0800
               </p>
 
@@ -183,11 +183,43 @@ const ContactUsSection = () => {
                 ></iframe>
               </div>
               <p className="text-lg-end">
-               أوقات العمل:
+                أوقات العمل:
 
-<br />
-              من السبت إلى الخميس – 9:00 صباحاً حتى 8:30 مساءً <br />
-              الجمعة: مغلق
+                <br />
+                من السبت إلى الخميس – 9:00 صباحاً حتى 8:30 مساءً <br />
+                الجمعة: مغلق
+              </p>
+            </div>
+          </div>
+
+          {/* Second Div */}
+          <div className="col-lg-6 col-md-8">
+            <div className="p-0 p-lg-4 location-border h-100 text-center">
+              <h5 className="mb-3  fw-bold">بنون – الأحساء </h5>
+              <p className="text-center">
+                البرج الجنوبي، الطابق 12، مستشفى الموسى التخصصي
+                <br />
+                شارع ظهران، المبرز 36342
+              </p>
+
+              {/* Google Map Embed */}
+              <div className="map-responsive mt-3 text-center text-lg-end">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3603.047541015566!2d49.569793675389626!3d25.43667407755768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDI2JzEyLjAiTiA0OcKwMzQnMjAuNSJF!5e0!3m2!1sen!2s!4v1765545965251!5m2!1sen!2s"
+                  width="90%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <p className="text-lg-end">
+                أوقات العمل:
+
+                <br />
+                من السبت إلى الخميس – 9:00 صباحاً حتى 8 مساءً <br />
+                الجمعة: مغلق
               </p>
             </div>
           </div>
@@ -199,10 +231,10 @@ const ContactUsSection = () => {
                 </div>
                 <div className="left text-center mt-2">
                   <p className="text-center">
-                  في بنون، رأيكم يهمنا. نحن ملتزمون بتقديم أعلى معايير الرعاية، وملاحظاتكم تساعدنا على التطور والتحسّن لخدمتكم بشكل أفضل. سواء كانت ملاحظة، اقتراح، قصة، أو تقييم بسيط — نشكركم على تخصيص وقتكم لمشاركة تجربتكم معنا۔  </p>
+                    في بنون، رأيكم يهمنا. نحن ملتزمون بتقديم أعلى معايير الرعاية، وملاحظاتكم تساعدنا على التطور والتحسّن لخدمتكم بشكل أفضل. سواء كانت ملاحظة، اقتراح، قصة، أو تقييم بسيط — نشكركم على تخصيص وقتكم لمشاركة تجربتكم معنا۔  </p>
                 </div>
                 <div className="mt-4"><Link href="submit-feedback" className="btn btn-primary mb-3 contact-btn">
-              اضغط هنا 
+                  اضغط هنا
                 </Link></div>
               </div>
 
