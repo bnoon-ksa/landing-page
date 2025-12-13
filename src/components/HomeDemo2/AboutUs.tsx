@@ -49,13 +49,14 @@ const aboutData: AboutData = {
       id: 4,
       icon: { src: "images/icons/icon-4.png", alt: "icon" },
       title: "+5", // dummy title (rendering time par overwrite karenge)
-      description: "Riyadh | Jeddah | Al Ahsa |<br> Abha - under construction",
-    },
+    description:
+    'Riyadh | Jeddah | Al Ahsa |<br><span class="under-construction">Abha - under construction</span>',
+},
     {
       id: 5,
       icon: { src: "images/icons/icon-5.png", alt: "icon" },
       title: "+60%",
-      description: "Success rates for women below 35 years of age",
+      description: "Success Rates for 35 years of age",
       text: "On par with international success rates",
     },
   ],
@@ -84,44 +85,44 @@ function AboutUs() {
                 // 👇 item id ke hisaab se width set
                 let boxWidth = "250px";
                 if (item.id === 2 || item.id === 3) boxWidth = "170px";
-                if (item.id === 4) boxWidth = "270px";
-                if (item.id === 5) boxWidth = "280px";
+                if (item.id === 4) boxWidth = "250px";
+                if (item.id === 5) boxWidth = "300px";
 
                 return (
-                 <div
-  key={item.id}
-  className="item-box text-center mx-3 mt-3"
-  style={{
-    minWidth: boxWidth,
-    maxWidth: boxWidth,
-    flex: "0 0 auto"
-  }}
->
-<div className="item">
-  <div className="icon mb-3">
-    <img
-      src={item.icon.src}
-      alt={item.icon.alt}
-      width={120}
-      height={120}
-    />
-  </div>
+                  <div
+                    key={item.id}
+                    className="item-box text-center mx-3 mt-3"
+                    style={{
+                      minWidth: boxWidth,
+                      maxWidth: boxWidth,
+                      flex: "0 0 auto"
+                    }}
+                  >
+                    <div className="item">
+                      <div className="icon mb-3">
+                        <img
+                          src={item.icon.src}
+                          alt={item.icon.alt}
+                          width={120}
+                          height={120}
+                        />
+                      </div>
 
-  {item.id === 4 ? (
-    <>
-      <div className="justify-content-center align-items-center gap-2 text-margin">
-        <h3>{item.title || "+5"}</h3> {/* title agar available ho to use kare */}
-        <p className="mb-0 text-color">No. of Locations</p>
-      </div>
-    </>
-  ) : (
-    <h3 dangerouslySetInnerHTML={{ __html: item.title }} />
-  )}
+                      {item.id === 4 ? (
+                        <>
+                          <div className="justify-content-center align-items-center gap-2 text-margin">
+                            <h3>{item.title || "+5"}</h3> {/* title agar available ho to use kare */}
+                            <p className="mb-0 text-color">No. of Locations</p>
+                          </div>
+                        </>
+                      ) : (
+                        <h3 dangerouslySetInnerHTML={{ __html: item.title }} />
+                      )}
 
-  <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
+                      <p dangerouslySetInnerHTML={{ __html: item.description }}></p>
 
-  {item.text && <p className="text">{item.text}</p>}
-</div>
+                      {item.text && <p className="text">{item.text}</p>}
+                    </div>
 
                   </div>
                 );
