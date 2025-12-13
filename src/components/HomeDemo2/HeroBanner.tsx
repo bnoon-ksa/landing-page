@@ -26,7 +26,7 @@ function HeroBanner() {
     {
       video: "images/banner/banner-3.mp4",
       title: "THE FUTURE OF<br>FERTILITY IS HERE",
-      desc: "Now in Riyadh and Jeddah",
+      desc: "Now in Riyadh and Jeddah and Al Ahsa",
       buttonLink: "en/request-an-appoinment",
       buttonText: "Book Now",
     },
