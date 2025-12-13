@@ -135,16 +135,9 @@ const OurExperts = () => {
       profileLink: "dr-maram-dadoua",
        location: "Jeddah",
     },
-      {
-      id: 14,
-      name: "Dr. Rania Elsherify ",
-      qualification: "Obstetrics & Gynecology Registrar ",
-      imageUrl: "/images/doctors/14.jpg",
-      profileLink: "dr-rania-elsherify",
-       location: "Al Ahsa",
-    },
+  
      {
-      id: 15,
+      id: 14,
       name: "Dr. Bassam Nusair ",
       qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
       imageUrl: "/images/doctors/15.jpg",
@@ -152,7 +145,7 @@ const OurExperts = () => {
        location: "Al Ahsa",
     },
      {
-      id: 16,
+      id: 15,
       name: "Dr. Ahmed Al-Nowasser",
       qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery  ",
       imageUrl: "/images/doctors/16.jpg",
@@ -160,13 +153,21 @@ const OurExperts = () => {
        location: "Al Ahsa",
     },
      {
-      id: 17,
+      id: 16,
       name: "Dr. Median Alkhalaf ",
       qualification: "Consultant, Obstetrics & Gynecology ",
       imageUrl: "/images/doctors/17.jpg",
       profileLink: "dr-median-alkhalaf",
        location: "Al Ahsa",
-    }
+    },
+        {
+      id: 17,
+      name: "Dr. Rania Elsherify ",
+      qualification: "Obstetrics & Gynecology Registrar ",
+      imageUrl: "/images/doctors/14.jpg",
+      profileLink: "dr-rania-elsherify",
+       location: "Al Ahsa",
+    },
   ];
   // Filtered doctors
   const filteredDoctors =
@@ -212,7 +213,7 @@ const OurExperts = () => {
     className={`physicians-btn btn ${filter === "Al Ahsa" ? "active" : ""}`}
     onClick={() => setFilter("Al Ahsa")}
   >
-    Al Ahsa
+    AL AHSA
   </button>
 </div>
 
