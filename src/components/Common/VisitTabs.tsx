@@ -1,7 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import CustomList from "@/components/Common/CustomList";
+const tabToHash = (tab: string) =>
+  tab
+    .toLowerCase()
+    .replace(/\//g, "")     // slash remove
+    .replace(/\s+/g, "-"); // spaces → dash
 
 interface TabContent {
   text: string;
@@ -189,7 +195,12 @@ const VisitTabs: React.FC = () => {
             <button
               key={tab}
               className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => {
+  setActiveTab(tab);
+  const hash = tabToHash(tab);
+  history.replaceState(null, "", `#${hash}`);
+}}
+
             >
               {tab}
             </button>
