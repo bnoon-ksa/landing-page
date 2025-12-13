@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CustomList from "@/components/Common/CustomList";
 
 interface TabContent {
@@ -27,6 +27,11 @@ interface TabContent {
   eightList?: string[];
   nineList?: string[];
 }
+const tabToHash = (tab: string) =>
+  tab
+    .toLowerCase()
+    .replace(/[’']/g, "")   // apostrophe remove
+    .replace(/\s+/g, "-");  // spaces → dash
 
 const FertilityTabs: React.FC = () => {
   const tabs = [
@@ -472,7 +477,12 @@ const FertilityTabs: React.FC = () => {
             <button
               key={tab}
               className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
+             onClick={() => {
+  setActiveTab(tab);
+  const hash = tabToHash(tab);
+  history.replaceState(null, "", `#${hash}`);
+}}
+
             >
               {tab}
             </button>
