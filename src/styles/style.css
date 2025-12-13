@@ -15875,6 +15875,13 @@ font-family: "HelveticaW01Bold" !important;
      margin-bottom: 0;
     font-size: 14px !important;
     font-style: italic;
+     color: #6b6d70 !important;
+}
+.second-about-area .under-construction {
+   display: block;
+  margin-top: -6px;   
+  color: #6b6d70;  
+  font-weight: 600;
 }
 .second-about-items .item:last-child {
   margin-bottom: 0;
