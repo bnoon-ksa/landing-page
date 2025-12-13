@@ -388,10 +388,11 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             ]
           : formData.branch === "Al Ahsa"
           ? [
-              "Dr. Rania Elsherify",
+             
               "Dr. Bassam Nusair",
               "Dr. Ahmed Al-Nowasser",
               "Dr. Median Alkhalaf",
+             "Dr. Rania Elsherify",
             ]
           : []
       ).map((doc) => (
