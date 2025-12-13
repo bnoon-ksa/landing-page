@@ -418,7 +418,8 @@ const AppointmentSection = () => {
   const [isCityOpen, setIsCityOpen] = useState(false);
 
   const [isInterestOpen, setIsInterestOpen] = useState(false);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState<React.ReactNode>(null);
+
   const [submitted, setSubmitted] = useState(false);
   const [isDoctorOpen, setIsDoctorOpen] = useState(false);
 
@@ -476,7 +477,16 @@ const AppointmentSection = () => {
       });
 
       if (response.ok) {
-        setMessage(" .Thank you! Your request has been sent");
+       setMessage(
+  <>
+    شكراً لكم على إرسال طلب حجز موعد في بنون.
+    <br />
+    سيقوم فريقنا بالتواصل معكم خلال 48 ساعة لحجز الموعد واستكمال الخطوات اللازمة.
+    <br />
+    نتطلّع إلى التواصل معكم قريباً.
+  </>
+);
+
         setFormData({
           interest: "",
           branch: "",
@@ -1352,13 +1362,12 @@ const AppointmentSection = () => {
 
 
             {/* Submit */}
-            <div className="row g-3 ">
-              <div className="col-md-12 text-center">
+              <div className=" text-center">
                 <button type="submit" className="btn btn-primary btn-blog feedback-btn btn-large mt-3">
                   إرسال
                 </button>
               </div>
-            </div>
+           
             {message && <p className="mt-3 text-center">{message}</p>}
           </form>
 
