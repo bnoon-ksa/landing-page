@@ -29,7 +29,8 @@ const [isHowHeardOpen, setIsHowHeardOpen] = useState(false);
 const [isTimeOpen, setIsTimeOpen] = useState(false);
 
 const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState("");
+const [message, setMessage] = useState<React.ReactNode>(null);
+
   const [submitted, setSubmitted] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -93,7 +94,17 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     const data = await response.json();
 
     if (response.ok) {
-      setMessage("✅ Thank you! Your request has been sent.");
+    setMessage(
+  <>
+    <strong>Thank you for submitting your appointment request.</strong>
+    <br />
+    Our team will contact you within 48 hours to discuss your appointment request
+    and arrange the next steps.
+    <br />
+   <em>We look forward to connecting with you soon.</em>
+  </>
+);
+
       setFormData({
         interest: "",
         branch: "",
