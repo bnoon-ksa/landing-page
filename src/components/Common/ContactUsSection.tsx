@@ -198,7 +198,7 @@ Dharan Road,<br /> Al Mubarraz 36342
     {/* Google Map Embed */}
     <div className="map-responsive mt-3 text-center text-lg-start">
       <iframe
-        src="https://www.google.com/maps?q=25.436674118041992,49.57236862182617&z=17&hl=en"
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3603.0477616735334!2d49.572361099999995!3d25.4366667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDI2JzEyLjAiTiA0OcKwMzQnMjAuNSJF!5e0!3m2!1sen!2s!4v1765622876993!5m2!1sen!2s"
         width="90%"
         height="250"
         style={{ border: 0 }}
