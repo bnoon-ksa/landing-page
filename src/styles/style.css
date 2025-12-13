@@ -13260,6 +13260,7 @@ a.btn.btn-outline-secondary.btn-language {
     width: 110px;
       border-radius: 10px;
   height: 42px;
+   padding: 8px;
 }
 
 .btn-appointment{
