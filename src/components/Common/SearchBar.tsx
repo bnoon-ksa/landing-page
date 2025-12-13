@@ -23,10 +23,11 @@ const SearchBar = () => {
     "Dr. Maya Albezreh": "/en/dr-maya-albezreh",
     "Dr. Razan Ghaith": "/en/dr-razan-ghaith",
     "Dr. Maram Dadoua": "/en/dr-maram-dadoua",
-    "Dr. Rania Elsherify": "/en/dr-rania-elsherify",
+   
     "Dr. Bassam Nusair": "/en/dr-bassamnusair",
     "Dr. Ahmed Al-Nowasser": "/en/dr-ahmedal-nowasser",
     "Dr. Median Alkhalaf": "/en",
+     "Dr. Rania Elsherify": "/en/dr-rania-elsherify",
   };
 
   const handleSearch = () => {
@@ -84,10 +85,11 @@ const SearchBar = () => {
       "Dr. Maram Dadoua",
     ],
     "Al Ahsa": [
-  "Dr. Rania Elsherify",
+ 
   "Dr. Bassam Nusair",
   "Dr. Ahmed Al-Nowasser",
   "Dr. Median Alkhalaf",
+       "Dr. Rania Elsherify",
 ],
 
   };
