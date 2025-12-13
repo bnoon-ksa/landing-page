@@ -3,6 +3,23 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+const IconList: React.FC<{ items: string[] }> = ({ items }) => (
+  <ul className="custom-list mt-3">
+    {items.map((item, idx) => (
+      <li key={idx} className="d-flex align-items-center mb-2">
+        <Image
+          src="/images/icons/bnoon-symbol.avif"
+          alt="icon"
+          width={20}
+          height={20}
+          className="me-2"
+        />
+        {item}
+      </li>
+    ))}
+  </ul>
+);
+
 interface TabContent {
   text: string;
   image: string;
@@ -78,7 +95,7 @@ const TreatmentsSection: React.FC = () => {
       ],
       secondText: `3 Frequency of Therapy: 3-6 cycles
       <br />
-      Informed Consent for the treatment is essential and has to be completed by both husband and wife.`
+      Informed Consent for the treatment is essential and has to be completed by both husband and wife.   <br /><br />`
     },
 
     "Intrauterine Insemination": {
@@ -105,7 +122,7 @@ const TreatmentsSection: React.FC = () => {
       If pregnancy occurs, you need to continue on the luteal support medications with the same dose and frequency till 12 weeks or as otherwise recommended by your physician. Subsequently, a follow-up visit for pregnancy ultrasound will be arranged.<br />
       If pregnancy test is negative, you need to arrange a follow-up visit to see your physician for further discussion of future plan and recommendation.<br />
       3 Frequency of Therapy: 3-4 cycles<br />
-      Informed Consent for the treatment is essential and has to be completed by both husband and wife.`
+      Informed Consent for the treatment is essential and has to be completed by both husband and wife. <br /><br />`
     },
 
        "Swim-Up for Gender Wish": {
@@ -125,7 +142,7 @@ const TreatmentsSection: React.FC = () => {
         " The portion retained for use may be washed and centrifuged again, the swim-up method is approximately 70% accurate in sorting the sperm into male and female batches. The ‘predominantly’ male or female batch is then used to fertilize the eggs. The process of ovarian stimulation is similar as ovulation induction described previously."
       ],
 
-      secondText: `If pregnancy occurs, you need to continue on the luteal support medications with the same dose and frequency till 12 weeks or otherwise recommended by your physician. Subsequently, a follow-up visit for pregnancy ultrasound will be arranged. If pregnancy test is negative, you need to arrange a follow-up visit to see your physician for further discussion of future plan and recommendation.`
+      secondText: `If pregnancy occurs, you need to continue on the luteal support medications with the same dose and frequency till 12 weeks or otherwise recommended by your physician. Subsequently, a follow-up visit for pregnancy ultrasound will be arranged. If pregnancy test is negative, you need to arrange a follow-up visit to see your physician for further discussion of future plan and recommendation.<br /><br />`
     },
           "In Vitro Fertilization (IVF)": {
       text: `
@@ -165,7 +182,7 @@ const TreatmentsSection: React.FC = () => {
         "Women undergoing standard IVF but some emerging technical issues regarding the husband’s sperms, rescue egg freezing would save the eggs,    temporary, for later date when the husband’s sperms are ready for use."
       ],
       bottomText: ``,
-      secondText: `Informed Consent for the treatment is essential and has to be completed by the patient.`
+      secondText: `Informed Consent for the treatment is essential and has to be completed by the patient.<br /><br />`
     },
          "Preimplantation Genetic Screening (PGS)": {
       text: `
@@ -187,7 +204,7 @@ const TreatmentsSection: React.FC = () => {
       <strong>PGS</strong><br />
       PGS is performed as a part of a standard IVF cycle where multiple eggs are produced, retrieved from the ovaries and fertilized with the husband’s sperm in the Embryology Laboratory. IVF gives us access to embryo(s) in vitro. PGS is then performed by removing one or two cells from each embryo through a procedure called embryo biopsy. These cells are analyzed for the presence of chromosomal abnormalities that may contribute to failure of pregnancy. This sophisticated and technologically advanced testing attempts to identify embryos which are free of abnormalities and more able to achieve the patient’s goal of having a healthy baby.<br />
       In some situations, embryos may need to be frozen in case the testing results will take longer time to be available and the embryos will be transferred into the uterus in a future cycle.<br />
-      Informed Consent for the treatment is essential and has to be completed by both husband and wife.
+      Informed Consent for the treatment is essential and has to be completed by both husband and wife.<br /><br />
 `
 
     },
@@ -225,7 +242,7 @@ const TreatmentsSection: React.FC = () => {
       bottomText: ``,
       secondText: `At Bnoon Center, we offer genetic counselling before attempting the PGD process. You will be explained the steps of PGD treatment. Both couple and affected child, if present, are required to give sample of blood to process it for pre-PGD testing to develop the genetic probes (6-8 weeks) and once are ready, you will be contacted by the PGD coordinator to arrange your visit to your physician to start the process of IVF.<br /><br />
       PGD is performed as a part of an In Vitro Fertilization cycle where multiple eggs are produced, retrieved from the ovaries and fertilized with the husband’s sperm in the Embryology Laboratory. IVF gives us access to embryo(s) in vitro. PGD is then performed by removing one or two cells from each embryo through a procedure called embryo biopsy. These cells are analyzed for the presence of the pre-identified genetic disorder. This sophisticated and technologically advanced testing attempts to identify embryos which are free of the pre-identified genetic disease. So couple will be more able to achieve their goal of having a healthy baby.<br /><br />
-      Often, embryos need to be frozen for testing results to be available (1-2 weeks) and the embryos will be transferred into the uterus in a future cycle. Informed Consent for the treatment is essential and has to be completed by both husband and wife.
+      Often, embryos need to be frozen for testing results to be available (1-2 weeks) and the embryos will be transferred into the uterus in a future cycle. Informed Consent for the treatment is essential and has to be completed by both husband and wife.<br /><br />
 `
     },
             "Recurrent Miscarriage": {
@@ -250,7 +267,7 @@ const TreatmentsSection: React.FC = () => {
       Through our dedicated maternal fetal medicine experts, you can schedule a counselling session to address your problem and discuss your specific concerns in a relax environment respecting your privacy and understanding your needs.
       <br /><br />
       <strong>Pre conceptional Counselling</strong><br /><br />
-      Through our dedicated experts of reproductive medicine, maternal fetal medicine and medical genetics, you can schedule a counselling session to address your problem and discuss your specific concerns in a relax environment respecting your privacy and understanding your needs. Women who have pre-existing medical conditions in which pregnancy might be complicated or she has a risk being sicker if she gets pregnant will benefit from pre conceptional counselling and having a consensus opinion in regard to her family planning.
+      Through our dedicated experts of reproductive medicine, maternal fetal medicine and medical genetics, you can schedule a counselling session to address your problem and discuss your specific concerns in a relax environment respecting your privacy and understanding your needs. Women who have pre-existing medical conditions in which pregnancy might be complicated or she has a risk being sicker if she gets pregnant will benefit from pre conceptional counselling and having a consensus opinion in regard to her family planning.<br /><br />
       `,
     },
        "Antenatal care deliveries": {
@@ -265,10 +282,22 @@ const TreatmentsSection: React.FC = () => {
     // ... add other tabs here
   };
 
+const tabToHash = (tab: string) =>
+  tab.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "");
 
 
   const [activeTab, setActiveTab] = useState<string>(tabs[0]);
   const currentContent = tabContents[activeTab];
+const handleTabClick = (tab: string) => {
+  setActiveTab(tab);
+
+  const hash = tabToHash(tab);
+
+  // 👇 URL update without scrolling
+  history.replaceState(null, "", `#${hash}`);
+};
+
+
 
   return (
     
@@ -289,17 +318,19 @@ const TreatmentsSection: React.FC = () => {
           </div>
       <div className="container tabs-container">
         {/* Tabs buttons */}
-       <div className="tabs-row-container mb-4 d-flex flex-wrap justify-content-center gap-2">
+      <div className="tabs-row-container mb-4 d-flex flex-wrap justify-content-center gap-2">
   {tabs.map((tab) => (
-    <button
-      key={tab}
-      className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
-    onClick={() => setActiveTab(tab)}
-    >
-      {tab}
-    </button>
+<button
+  key={tab}
+  className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
+  onClick={() => handleTabClick(tab)}
+>
+  {tab}
+</button>
+
   ))}
 </div>
+
 
 <style jsx>{`
   @media (max-width: 768px) {
@@ -367,34 +398,27 @@ const TreatmentsSection: React.FC = () => {
               </ul>
             )}
 
-      {/* Extra text (if available) */}
-{currentContent.extraText && (
-  <div className="mt-3">{currentContent.extraText}</div>
-)}
-
-            {/* Second list */}
-            {currentContent.secondlist && (
-              <ul className="custom-list mt-3">
-                {currentContent.secondlist.map((item, index) => (
-                  <li key={index} className="d-flex align-items-center mb-2">
-                    <Image
-                      src="/images/icons/bnoon-symbol.avif"
-                      alt="icon"
-                      width={20}
-                      height={20}
-                      className="me-2"
-                    />
-                    {item}
-                  </li>
+      {/* ✅ FIXED extraText */}
+            {currentContent.extraText && (
+              <div className="mt-3">
+                {currentContent.extraText.map((text, idx) => (
+                  <div key={idx} className="mt-3">
+                    {text}
+                  </div>
                 ))}
-              </ul>
+              </div>
             )}
 
-            {/* Second text */}
+            {currentContent.secondlist && (
+              <IconList items={currentContent.secondlist} />
+            )}
+
             {currentContent.secondText && (
               <div
                 className="mt-3 treatment-text"
-                dangerouslySetInnerHTML={{ __html: currentContent.secondText }}
+                dangerouslySetInnerHTML={{
+                  __html: currentContent.secondText,
+                }}
               />
             )}
           </div>
