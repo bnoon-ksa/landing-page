@@ -195,36 +195,42 @@ function Footer() {
 </div>
 
   {/* Right columns: last two sections */}
-  <div className="col-lg-8 col-sm-12 d-flex justify-content-end">
+ <div className="col-lg-8">
+  <div className="row justify-content-lg-end">
     {footerData.sections.slice(1).map((section, index) => (
-      <div className="single-footer-widget ms-4" style={{ minWidth: "150px" }} key={index}>
+      <div
+        className="single-footer-widget col-6 col-lg-auto mb-3 mb-lg-0"
+        key={index}
+        style={{ minWidth: "170px" }}
+      >
         {section.title && <h3>{section.title}</h3>}
         <ul className="links">
-         {section.links.map((link, linkIndex) => {
-  const withIcon =
-    link.text === "Bnoon - Riyadh" ||
-    link.text === "Bnoon - Jeddah" ||
-    link.text === "Bnoon - Al Ahsa";
+          {section.links.map((link, linkIndex) => {
+            const withIcon =
+              link.text === "Bnoon - Riyadh" ||
+              link.text === "Bnoon - Jeddah" ||
+              link.text === "Bnoon - Al Ahsa";
 
-  return (
-    <li key={linkIndex} className="d-flex align-items-start">
-      <Link href={link.url} className="d-flex align-items-center">
-        {withIcon && (
-          <i
-            className="ri-map-pin-line"
-            style={{ fontSize: "14px", marginRight: "6px" }}
-          ></i>
-        )}
-        {link.text}
-      </Link>
-    </li>
-  );
-})}
-
+            return (
+              <li key={linkIndex} className="d-flex align-items-start">
+                <Link href={link.url} className="d-flex align-items-center">
+                  {withIcon && (
+                    <i
+                      className="ri-map-pin-line"
+                      style={{ fontSize: "14px", marginRight: "6px" }}
+                    ></i>
+                  )}
+                  {link.text}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     ))}
   </div>
+</div>
+
 </div>
 
         </div>
