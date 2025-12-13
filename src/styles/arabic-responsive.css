@@ -2232,4 +2232,9 @@ p {
     color: #404040;
     font-size: 12px !important;
 }
+   .feedback-btn {
+        padding: 0px !important;
+        width: 250px !important;
+        border-radius: 15px !important;
+    }
  }
