@@ -13,7 +13,8 @@ function HeroBannerAr() {
   const slides = [
     {
       video: "images/ar-banner/2.mp4",
-      title: '<span class="font-program">برنامج</span> <span class="font-xbtitre">وعد بنون</span>',
+    title: '<span class="font-program">برنامج</span> وعد بنون',
+
       desc: "الحمل أو استرداد الرسوم :<br>راحة بال. توتر أقل.",
       titleColor: "#004E78",
       descColor: "#004E78",
@@ -136,15 +137,11 @@ function HeroBannerAr() {
             animate ? "reveal-text" : "hidden-text"
           }`}
         >
-          <h1
-            style={{
-              color: slides[currentSlide].titleColor || "#fff",
-            }}
-            dangerouslySetInnerHTML={{
-              __html: slides[currentSlide].title,
-            }}
-            className="animated-heading"
-          />
+        <h1
+  style={{ color: slides[currentSlide].titleColor || "#fff" }}
+  dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
+  className="animated-heading"
+/>
 
           <p
             className="animated-desc"
@@ -204,7 +201,11 @@ function HeroBannerAr() {
       </div>
 
      {/* 🔹 Reveal Animation CSS */}
-      <style jsx>{`
+      <style jsx global>{`
+      .font-program{
+      color:#808080 !important;
+    font-size: 50px !important;
+      }
         .hidden-text {
           opacity: 0;
           transform: translateX(80px);
