@@ -125,16 +125,9 @@ const OurDoctors = () => {
       profileLink: "ar/dr-maram-dadoua",
        location: "جدة",
     },
+    
      {
       id: 14,
-      name: "الدكتورة رانيا الشريفي",
-      qualification: "أخصائية أمراض النساء والولادة",
-      imageUrl: "images/doctors/14.jpg",
-      profileLink: "ar/dr-rania-elsherify",
-       location: "الأحساء",
-    },
-     {
-      id: 15,
       name: "الدكتور بسام نصير ",
       qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/15.jpg",
@@ -142,19 +135,27 @@ const OurDoctors = () => {
        location: "الأحساء",
     },
      {
-      id: 16,
-      name: "الدكتور أحمد النواصر",
+      id: 15,
+      name: "الدكتور أحمد النويصر",
       qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/16.jpg",
       profileLink: "ar/dr-ahmedal-nowasser",
        location: "الأحساء",
     },
      {
-      id: 17,
+      id: 16,
       name: "الدكتور مدين الخلف",
       qualification: "استشاري أمراض النساء والولادة",
       imageUrl: "images/doctors/17.jpg",
       profileLink: "ar/dr-median-alkhalaf",
+       location: "الأحساء",
+    },
+     {
+      id: 17,
+      name: "الدكتورة رانيا الشريفي",
+      qualification: "أخصائية أمراض النساء والولادة",
+      imageUrl: "images/doctors/14.jpg",
+      profileLink: "ar/dr-rania-elsherify",
        location: "الأحساء",
     },
   ];
@@ -261,7 +262,7 @@ const OurDoctors = () => {
  {
    display: block;
     color: #000000;
-    margin: 10px 0px 0px;
+    margin: 0px 0px 0px;
     font-size: 13px;
     font-weight: 600;
 }
@@ -289,6 +290,13 @@ const OurDoctors = () => {
     .doctor-card .content .doctor-btn {
         margin-top: 15px !important;
     }
+            .doctor-card .content .sub {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-weight: 100;
+}
        .doctors-button {
         margin-top: -20px !important;
     }
