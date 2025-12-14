@@ -118,7 +118,7 @@ const OurDoctors = () => {
     },
     {
       id: 12,
-      name: "Dr. Moussa El Naiemy",
+      name: "Dr. Mussa AlNumi",
       qualification: "Consultant, Urology, Andrology & Male Infertility",
       imageUrl: "images/doctors/10.jpg",
       profileLink: "en/dr-moussa-el-naiemy",
