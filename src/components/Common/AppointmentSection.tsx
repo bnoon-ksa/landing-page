@@ -369,30 +369,29 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       {(
         formData.branch === "Riyadh"
           ? [
-              "Dr. Abdalaziz Al-Shahrani",
-              "Dr. Asim Al Wuhaibi",
+               "Dr. Abdalaziz Al-Shahrani",
+              "Dr. Asim Al Wohaibi",
               "Dr. Wajdi Al Omari",
-              "Dr. Dalia Adel",
-              "Dr. Moussa El Naiemy ",
+              "Dr. Dalia Nour",
+              "Dr. Mussa AlNumi ",
             ]
           : formData.branch === "Jeddah"
           ? [
               "Dr. Fawaz Edris",
               "Dr. Mazin Bishara",
-              "Dr. Hussein Sabban ",
               "Dr. Ahmed Alshaikh",
-              "Dr. Razan Ghaith ",
               "Dr. Maya Albezreh",
-              "Dr. Maram Dadoua",
               "Dr. Ahmad Haroun",
+              "Dr. Razan Ghaith ",
+              "Dr. Maram Dadoua",
             ]
           : formData.branch === "Al Ahsa"
           ? [
-             
+              
               "Dr. Bassam Nusair",
               "Dr. Ahmed Al-Nowasser",
               "Dr. Median Alkhalaf",
-             "Dr. Rania Elsherify",
+              "Dr. Rania Elsherify",
             ]
           : []
       ).map((doc) => (
