@@ -198,10 +198,10 @@ function Footer() {
               </div>
 
               {/* Right columns: last two sections */}
-              <div className="col-lg-8 col-sm-12 d-flex flex-lg-row flex-column justify-content-end align-items-start">
+              <div className="col-lg-8 col-12 d-flex flex-wrap flex-lg-row justify-content-lg-end align-items-start">
                 {footerData.sections.slice(1).map((section, index) => (
                   <div
-                    className="single-footer-widget link-itmes ms-lg-4 mb-3 "
+                    className="single-footer-widget link-itmes col-6 col-lg-auto ms-lg-4 mb-3 "
                     style={{ minWidth: "150px" }}
                     key={index}
                   >
