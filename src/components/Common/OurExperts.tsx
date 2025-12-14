@@ -190,7 +190,7 @@ const OurExperts = () => {
         </div>
 
         {/* Filter Buttons */}
-   <div className="mb-4 d-flex gap-5">
+   <div className="mb-4 d-flex  gap-2 gap-lg-5">
   <button
     className={`physicians-btn btn ${filter === "ALL" ? "active" : ""}`}
     onClick={() => setFilter("ALL")}
@@ -366,6 +366,14 @@ const OurExperts = () => {
         padding: 25px;
         margin: 0px 10px !important;
     }
+        .physicians-btn {
+    width: 90px !important;
+    height: 40px !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px!important;
+    border-radius: 0px !important;
+    font-size:12px !important;
+}
       }
 
   `}</style>
