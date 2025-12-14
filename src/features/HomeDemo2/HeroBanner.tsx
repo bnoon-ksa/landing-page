@@ -215,6 +215,12 @@ function HeroBannerAr() {
           transform: translateX(0);
           transition: all 1.5s ease;
         }
+          @media (max-width: 768px) {
+ .font-program{
+    
+    font-size: 13px !important;
+      }
+      }
       `}</style>
     
     
