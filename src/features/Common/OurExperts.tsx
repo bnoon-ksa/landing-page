@@ -139,16 +139,9 @@ const OurExperts = () => {
       profileLink: "dr-maram-dadoua",
       location: "جدة",
     },
+  
      {
       id: 14,
-      name: "الدكتورة رانيا الشريفي",
-      qualification: "أخصائية أمراض النساء والولادة",
-      imageUrl: "/images/doctors/14.jpg",
-      profileLink: "dr-rania-elsherify",
-       location: "الأحساء",
-    },
-     {
-      id: 15,
       name: "الدكتور بسام نصير ",
       qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "/images/doctors/15.jpg",
@@ -156,7 +149,7 @@ const OurExperts = () => {
        location: "الأحساء",
     },
      {
-      id: 16,
+      id: 15,
       name: "الدكتور أحمد النواصر",
       qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "/images/doctors/16.jpg",
@@ -164,11 +157,19 @@ const OurExperts = () => {
        location: "الأحساء",
     },
      {
-      id: 17,
+      id: 16,
       name: "الدكتور مدين الخلف",
       qualification: "استشاري أمراض النساء والولادة",
       imageUrl: "/images/doctors/17.jpg",
       profileLink: "dr-median-alkhalaf",
+       location: "الأحساء",
+    },
+       {
+      id: 17,
+      name: "الدكتورة رانيا الشريفي",
+      qualification: "أخصائية أمراض النساء والولادة",
+      imageUrl: "/images/doctors/14.jpg",
+      profileLink: "dr-rania-elsherify",
        location: "الأحساء",
     },
   ];
@@ -337,6 +338,21 @@ const OurExperts = () => {
                     color: #fff;
                     font-size: 14px;
                   }
+                    .doctor-card .content .sub {
+    font-size: 16px !important;
+    display: block;
+    margin-bottom: 10px;
+}
+    .doctor-card .content .doctor-btn {
+    background-color: #004E78 !important;
+    border: none;
+    font-size: 12px;
+    padding: 10px 70px;
+    border-radius: 12px !important;
+    width: 200px;
+    height: 36px;
+    margin: 0px;
+}
                       @media (max-width: 768px) {
    .doctor-location
  {
@@ -363,6 +379,12 @@ const OurExperts = () => {
            .doctor-btn {
         margin-top: 5px !important;
    margin-bottom: 0px !important;
+}
+                   .doctor-card .content .sub {
+    font-size: 12px !important;
+    display: block;
+    margin-bottom: -10px;
+    margin-top: -6px;
 }
                 }
 
