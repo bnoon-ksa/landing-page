@@ -12,10 +12,10 @@ const SearchBar = () => {
 
   const doctorProfileLinks: Record<string, string> = {
     "Dr. Abdalaziz Al-Shahrani": "/en/dr-abdalaziz-alshahrani",
-    "Dr. Asim Al Wuhaibi": "/en/dr-asim-alwohaibi",
+    "Dr. Asim Al Wohaibi": "/en/dr-asim-alwohaibi",
     "Dr. Wajdi Al Omari": "/en/dr-ahmed-alshaikh",
-    "Dr. Dalia Adel": "/en/dr-dalia-nour",
-    "Dr. Moussa El Naiemy": "/en/dr-moussa-el-naeimy",
+    "Dr. Dalia Nour": "/en/dr-dalia-nour",
+    "Dr. Mussa AlNumi": "/en/dr-moussa-el-naiemy",
     "Dr. Fawaz Edris": "/en/dr-fawaz-edris",
     "Dr. Mazin Bishara": "/en/dr-mazin-bishara",
     "Dr. Ahmed Alshaikh": "/en/our-ex/en/dr-ahmed-alshaikh",
@@ -70,17 +70,17 @@ const SearchBar = () => {
   const doctorsByLocation: Record<Exclude<LocationType, "">, string[]> = {
     Riyadh: [
       "Dr. Abdalaziz Al-Shahrani",
-      "Dr. Asim Al Wuhaibi",
+      "Dr. Asim Al Wohaibi",
       "Dr. Wajdi Al Omari",
-      "Dr. Dalia Adel",
-      "Dr. Moussa El Naiemy",
+      "Dr. Dalia Nour",
+      "Dr. Mussa AlNumi",
     ],
     Jeddah: [
       "Dr. Fawaz Edris",
       "Dr. Mazin Bishara",
       "Dr. Ahmed Alshaikh",
-      "Dr. Ahmad Haroun",
       "Dr. Maya Albezreh",
+      "Dr. Ahmad Haroun",
       "Dr. Razan Ghaith",
       "Dr. Maram Dadoua",
     ],
