@@ -3,6 +3,23 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+const IconList: React.FC<{ items: string[] }> = ({ items }) => (
+  <ul className="custom-list mt-3">
+    {items.map((item, idx) => (
+      <li key={idx} className="d-flex align-items-center mb-2">
+        <Image
+          src="/images/icons/bnoon-symbol.avif"
+          alt="icon"
+          width={20}
+          height={20}
+          className="me-2"
+        />
+        {item}
+      </li>
+    ))}
+  </ul>
+);
+
 interface TabContent {
   text: string;
   image: string;
@@ -295,11 +312,21 @@ const TreatmentsSection: React.FC = () => {
     // ... add other tabs here
   };
 
+const tabToHash = (tab: string) =>
+  tab.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "");
 
 
-  const [activeTab, setActiveTab] = useState<string>(tabs[0]);
-  const currentContent = tabContents[activeTab];
-
+   const [activeTab, setActiveTab] = useState<string>(tabs[0]);
+    const currentContent = tabContents[activeTab];
+  const handleTabClick = (tab: string) => {
+    setActiveTab(tab);
+  
+    const hash = tabToHash(tab);
+  
+    // 👇 URL update without scrolling
+    history.replaceState(null, "", `#${hash}`);
+  };
+  
   return (
 
     <div className="ptb-140">
@@ -321,11 +348,12 @@ const TreatmentsSection: React.FC = () => {
         {/* Tabs buttons */}
         <div className="tabs-row-container mb-4 d-flex flex-wrap justify-content-center gap-2">
           {tabs.map((tab) => (
-            <button
-              key={tab}
-              className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
-            >
+          <button
+  key={tab}
+  className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
+  onClick={() => handleTabClick(tab)}
+>
+
               {tab}
             </button>
           ))}
