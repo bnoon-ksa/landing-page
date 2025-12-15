@@ -12,23 +12,24 @@ const SearchBar = () => {
 
   const doctorProfileLinks: Record<string, string> = {
     "Dr. Abdalaziz Al-Shahrani": "/en/dr-abdalaziz-alshahrani",
-    "Dr. Asim Al Wohaibi": "/en/dr-asim-alwohaibi",
-    "Dr. Wajdi Al Omari": "/en/dr-ahmed-alshaikh",
-    "Dr. Dalia Nour": "/en/dr-dalia-nour",
-    "Dr. Mussa AlNumi": "/en/dr-moussa-el-naiemy",
     "Dr. Fawaz Edris": "/en/dr-fawaz-edris",
     "Dr. Mazin Bishara": "/en/dr-mazin-bishara",
+    "Dr. Bassam Nusair": "/en/dr-bassamnusair",
+    "Dr. Asim Al Wohaibi": "/en/dr-asim-alwohaibi",
     "Dr. Ahmed Alshaikh": "/en/our-ex/en/dr-ahmed-alshaikh",
-    "Dr. Ahmad Haroun": "/en/dr-ahmad-haroun",
+    "Dr. Wajdi Al Omari": "/en/dr-wajdi-alomari",
+    "Dr. Ahmed Al-Nowasser": "/en/dr-ahmedal-nowasser",
     "Dr. Maya Albezreh": "/en/dr-maya-albezreh",
+    "Dr. Dalia Nour": "/en/dr-dalia-nour",
+    "Dr. Ahmad Haroun": "/en/dr-ahmad-haroun",
+    "Dr. Mussa AlNumi": "/en/dr-moussa-el-naiemy",
     "Dr. Razan Ghaith": "/en/dr-razan-ghaith",
+    "Dr. Median Alkhalaf": "/en/dr-median-alkhalaf",
     "Dr. Maram Dadoua": "/en/dr-maram-dadoua",
    
-    "Dr. Bassam Nusair": "/en/dr-bassamnusair",
-    "Dr. Ahmed Al-Nowasser": "/en/dr-ahmedal-nowasser",
-    "Dr. Median Alkhalaf": "/en",
      "Dr. Rania Elsherify": "/en/dr-rania-elsherify",
   };
+const orderedDoctors = Object.keys(doctorProfileLinks);
 
   const handleSearch = () => {
     if (!doctor && !location) {
@@ -99,11 +100,13 @@ const SearchBar = () => {
   ...doctorsByLocation.Jeddah,
   ...doctorsByLocation["Al Ahsa"],
 ];
-
 const doctorsToShow =
-  location === "Riyadh" || location === "Jeddah" || location === "Al Ahsa"
-    ? doctorsByLocation[location as Exclude<LocationType, "">]
-    : allDoctors;
+  location
+    ? orderedDoctors.filter((doc) =>
+        doctorsByLocation[location as Exclude<LocationType, "">].includes(doc)
+      )
+    : orderedDoctors;
+
 
 
   return (
