@@ -29,7 +29,7 @@ const OurDoctors = () => {
       id: 1,
       name: "الدكتور عبد العزيز  الشهراني",
       qualification:
-        "المدير الطبي للمجموعة استشاري الإخصاب وتأخر الحمل",
+        "المدير الطبي للمجموعة استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير",
       imageUrl: "images/doctors/1.jpg",
       profileLink: "ar/dr-abdalaziz-alshahrani",
       location: "الرياض",
@@ -38,7 +38,7 @@ const OurDoctors = () => {
       id: 2,
       name: "الدكتور فواز  إدريس ",
       qualification:
-        "المدير التنفيذي، بنون - جدة استشاري أمراض النساء والولادة والحمل الحرج وطب الأمومة والأجنة والعقم وأطفال الأنابيب والمناظير ",
+        "المدير التنفيذي، بنون - جدة استشاري أمراض النساء والولادة والحمل الحرج وطب الأجنة والأمومة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/2.jpg",
       profileLink: "ar/dr-fawaz-edris",
       location: "جدة",
@@ -47,15 +47,24 @@ const OurDoctors = () => {
       id: 3,
       name: "الدكتور مازن بشارة",
       qualification:
-        "المدير الطبي، بنون - جدة استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
+       "المدير الطبي، بنون - جدة استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/3.jpg",
       profileLink: "ar/dr-mazin-bishara",
       location: "جدة",
     },
+      
+     {
+      id: 4,
+      name: "الدكتور بسام نصير ",
+      qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
+      imageUrl: "images/doctors/15.jpg",
+      profileLink: "ar/dr-bassamnusair",
+       location: "الأحساء",
+    },
     {
       id: 4,
       name: "الدكتور عاصم الوهيبي",
-      qualification: "استشاري الإخصاب وتأخر الحمل",
+      qualification: "استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/4.jpg",
       profileLink: "ar/dr-asim-alwohaibi",
       location: "الرياض",
@@ -64,7 +73,7 @@ const OurDoctors = () => {
       id: 6,
       name: "الدكتور أحمد الشيخ",
       qualification:
-        "استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب/الحقن المجهري والمناظير والغدد الصماء التناسلية",
+        "استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/6.jpg",
       profileLink: "ar/dr-ahmed-alshaikh",
       location: "جدة",
@@ -72,10 +81,26 @@ const OurDoctors = () => {
     {
       id: 7,
       name: "الدكتور وجدي  العمرى",
-      qualification: " استشاري الإخصاب وتأخر الحمل",
+      qualification: "استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/7.jpg",
       profileLink: "ar/dr-wajdi-alomari",
       location: "الرياض",
+    },
+        {
+      id: 15,
+      name: "الدكتور أحمد النويصر",
+      qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
+      imageUrl: "images/doctors/16.jpg",
+      profileLink: "ar/dr-ahmedal-nowasser",
+       location: "الأحساء",
+    },
+      {
+      id: 11,
+      name: "الدكتورة مايا البزرة ",
+      qualification: "استشارية أمراض النساء والولادة والعقم وأطفال الأنابيب ",
+      imageUrl: "images/doctors/11.jpg",
+      profileLink: "ar/dr-maya-albezreh",
+      location: "جدة",
     },
     {
       id: 8,
@@ -88,7 +113,7 @@ const OurDoctors = () => {
     {
       id: 9,
       name: "الدكتور أحمد هارون",
-      qualification: " استشاري جراحة المسالك البولية وأمراض الذكورة والعقم",
+      qualification: "استشاري المسالك البولية وأمراض الذكورة والعقم",
       imageUrl: "images/doctors/9.jpg",
       profileLink: "ar/dr-ahmad-haroun",
       location: "جدة",
@@ -96,19 +121,12 @@ const OurDoctors = () => {
     {
       id: 10,
       name: "الدكتور موسى  النعمي",
-      qualification: " استشاري أمراض الذكورة  والعقم",
+      qualification: "استشاري المسالك البولية وأمراض الذكورة والعقم",
       imageUrl: "images/doctors/10.jpg",
       profileLink: "ar/dr-moussa-el-naiemy",
       location: "الرياض",
     },
-    {
-      id: 11,
-      name: "الدكتورة مايا البزرة ",
-      qualification: "استشارية أمراض النساء والولادة وتأخر الحمل",
-      imageUrl: "images/doctors/11.jpg",
-      profileLink: "ar/dr-maya-albezreh",
-      location: "جدة",
-    },
+  
     {
       id: 12,
       name: "الدكتورة رزان غيث",
@@ -116,6 +134,15 @@ const OurDoctors = () => {
       imageUrl: "images/doctors/12.jpg",
       profileLink: "ar/dr-razan-ghaith",
        location: "جدة",
+    },
+     
+     {
+      id: 16,
+      name: "الدكتور مدين الخلف",
+      qualification: "استشاري أمراض النساء والولادة",
+      imageUrl: "images/doctors/17.jpg",
+      profileLink: "ar/dr-median-alkhalaf",
+       location: "الأحساء",
     },
     {
       id: 13,
@@ -125,31 +152,8 @@ const OurDoctors = () => {
       profileLink: "ar/dr-maram-dadoua",
        location: "جدة",
     },
-    
-     {
-      id: 14,
-      name: "الدكتور بسام نصير ",
-      qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "images/doctors/15.jpg",
-      profileLink: "ar/dr-bassamnusair",
-       location: "الأحساء",
-    },
-     {
-      id: 15,
-      name: "الدكتور أحمد النويصر",
-      qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "images/doctors/16.jpg",
-      profileLink: "ar/dr-ahmedal-nowasser",
-       location: "الأحساء",
-    },
-     {
-      id: 16,
-      name: "الدكتور مدين الخلف",
-      qualification: "استشاري أمراض النساء والولادة",
-      imageUrl: "images/doctors/17.jpg",
-      profileLink: "ar/dr-median-alkhalaf",
-       location: "الأحساء",
-    },
+  
+
      {
       id: 17,
       name: "الدكتورة رانيا الشريفي",
