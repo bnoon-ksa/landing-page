@@ -62,7 +62,7 @@ const OurDoctors = () => {
        location: "الأحساء",
     },
     {
-      id: 4,
+      id: 5,
       name: "الدكتور عاصم الوهيبي",
       qualification: "استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/4.jpg",
@@ -87,7 +87,7 @@ const OurDoctors = () => {
       location: "الرياض",
     },
         {
-      id: 15,
+      id: 8,
       name: "الدكتور أحمد النويصر",
       qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
       imageUrl: "images/doctors/16.jpg",
@@ -95,7 +95,7 @@ const OurDoctors = () => {
        location: "الأحساء",
     },
       {
-      id: 11,
+      id: 9,
       name: "الدكتورة مايا البزرة ",
       qualification: "استشارية أمراض النساء والولادة والعقم وأطفال الأنابيب ",
       imageUrl: "images/doctors/11.jpg",
@@ -103,7 +103,7 @@ const OurDoctors = () => {
       location: "جدة",
     },
     {
-      id: 8,
+      id: 10,
       name: "الدكتورة داليا  نور",
       qualification: "استشارية أمراض النساء والولادة وتأخر الحمل",
       imageUrl: "images/doctors/8.jpg",
@@ -111,7 +111,7 @@ const OurDoctors = () => {
       location: "الرياض",
     },
     {
-      id: 9,
+      id: 11,
       name: "الدكتور أحمد هارون",
       qualification: "استشاري المسالك البولية وأمراض الذكورة والعقم",
       imageUrl: "images/doctors/9.jpg",
@@ -119,7 +119,7 @@ const OurDoctors = () => {
       location: "جدة",
     },
     {
-      id: 10,
+      id: 12,
       name: "الدكتور موسى  النعمي",
       qualification: "استشاري المسالك البولية وأمراض الذكورة والعقم",
       imageUrl: "images/doctors/10.jpg",
@@ -128,7 +128,7 @@ const OurDoctors = () => {
     },
   
     {
-      id: 12,
+      id: 13,
       name: "الدكتورة رزان غيث",
       qualification: "استشارية أمراض النساء والولادة وتأخر الحمل",
       imageUrl: "images/doctors/12.jpg",
@@ -137,7 +137,7 @@ const OurDoctors = () => {
     },
      
      {
-      id: 16,
+      id: 14,
       name: "الدكتور مدين الخلف",
       qualification: "استشاري أمراض النساء والولادة",
       imageUrl: "images/doctors/17.jpg",
@@ -145,7 +145,7 @@ const OurDoctors = () => {
        location: "الأحساء",
     },
     {
-      id: 13,
+      id: 15,
       name: "الدكتورة مرام دعدوع",
       qualification: "نائب أول، أمراض النساء والولادة",
       imageUrl: "images/doctors/13.jpg",
@@ -155,7 +155,7 @@ const OurDoctors = () => {
   
 
      {
-      id: 17,
+      id: 16,
       name: "الدكتورة رانيا الشريفي",
       qualification: "أخصائية أمراض النساء والولادة",
       imageUrl: "images/doctors/14.jpg",
