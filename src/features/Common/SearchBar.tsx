@@ -41,8 +41,8 @@ const SearchBar = () => {
       "الدكتور فواز  إدريس",
       "الدكتور مازن بشارة",
       "الدكتور أحمد الشيخ",
-      "الدكتور أحمد هارون",
       "الدكتورة مايا البزرة",
+      "الدكتور أحمد هارون",
       "الدكتورة رزان غيث",
       "الدكتورة مرام دعدوع",
     ],
@@ -61,32 +61,34 @@ const SearchBar = () => {
   ...doctorsByLocation.الأحساء
 ];
 
-const doctorsToShow =
-  location === "الرياض" || location === "جدة" || location === "الأحساء"
-    ? doctorsByLocation[location]
-    : allDoctors;
 
 
   // ✅ Doctor profile links (Arabic names mapped to URLs)
   const doctorProfileLinks: Record<string, string> = {
     "الدكتور عبد العزيز  الشهراني": "/ar/dr-abdalaziz-alshahrani",
-    "الدكتور عاصم الوهيبي": "/ar/dr-asim-alwohaibi",
-    "الدكتور وجدي  العمري": "/ar/dr-wajdi-alomari",
-    "الدكتورة داليا  نور": "/ar/dr-dalia-nour",
-    "الدكتور موسى  النعمي": "/ar/dr-moussa-el-naiemy",
     "الدكتور فواز  إدريس": "/ar/dr-fawaz-edris",
     "الدكتور مازن بشارة": "/ar/dr-mazin-bishara",
+      "الدكتور بسام نصير": "/ar/dr-bassamnusair",
+    "الدكتور عاصم الوهيبي": "/ar/dr-asim-alwohaibi",
     "الدكتور أحمد الشيخ": "/ar/dr-ahmed-alshaikh",
-    "الدكتور حسين صبّان": "/ar/dr-hussein-sabban",
-    "الدكتور أحمد هارون": "/ar/dr-ahmad-haroun",
+    "الدكتور وجدي  العمري": "/ar/dr-wajdi-alomari",
+       "الدكتور أحمد النويصر": "/ar/dr-ahmedal-nowasser",
     "الدكتورة مايا البزرة": "/ar/dr-maya-albezreh",
+    "الدكتورة داليا  نور": "/ar/dr-dalia-nour",
+    "الدكتور أحمد هارون": "/ar/dr-ahmad-haroun",
+    "الدكتور موسى  النعمي": "/ar/dr-moussa-el-naiemy",
     "الدكتورة رزان غيث": "/ar/dr-razan-ghaith",
+        "الدكتور مدين الخلف ": "/ar/dr-median-alkhalaf",
     "الدكتورة مرام دعدوع": "/ar/dr-maram-dadoua",
      "الدكتورة رانيا الشريفي": "/ar/dr-rania-elsherify",
-      "الدكتور بسام نصير": "/ar/dr-bassamnusair",
-       "الدكتور أحمد النويصر": "/ar/dr-ahmedal-nowasser",
-        "الدكتور مدين الخلف ": "/ar/dr-median-alkhalaf",
   };
+const orderedDoctors = Object.keys(doctorProfileLinks);
+const doctorsToShow =
+  location
+    ? orderedDoctors.filter((doc) =>
+        doctorsByLocation[location as Exclude<LocationType, "">].includes(doc)
+      )
+    : orderedDoctors;
 
   // ✅ Handle search
   const handleSearch = () => {
