@@ -117,7 +117,7 @@ const OurLocations = () => {
           <motion.div className="col-xl-6 col-md-12" variants={variantsRight}>
             <div className="service-overview-content location-text">
               <h2>
-                Bnoon – King Salman Road, Riyadh <span style={{ fontSize: "18px" }}>(Opening December 2025)</span>
+                Bnoon – King Salman Road, Riyadh <span style={{ fontSize: "18px" }}>(Opening Early 2026)</span>
               </h2>
               <p>
               To further expand access and redefine the standard of fertility care in the Kingdom, Bnoon is developing a state-of-the-art 3,800 sqm flagship facility on King Salman Road in North Riyadh, scheduled to open by the end of 2025. Designed as one of the most advanced fertility and women’s health centers in the region, this next-generation hub will bring together fertility care, reproductive genetics, and comprehensive women’s health services under one roof.  </p>
