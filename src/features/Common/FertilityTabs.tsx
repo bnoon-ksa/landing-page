@@ -2,6 +2,11 @@
 
 import React, { useState } from "react";
 import CustomList from "@/components/Common/CustomList";
+const tabToHash = (tab: string) =>
+  tab
+    .toLowerCase()
+    .replace(/[’']/g, "")   // apostrophe remove
+    .replace(/\s+/g, "-");  // spaces → dash
 
 interface TabContent {
   text: string;
@@ -495,10 +500,15 @@ const FertilityTabs: React.FC = () => {
         {/* Tabs buttons */}
         <div className="tabs-row-container mb-4 d-flex flex-wrap justify-content-center gap-2">
           {tabs.map((tab) => (
-            <button
+              <button
               key={tab}
               className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
+             onClick={() => {
+  setActiveTab(tab);
+  const hash = tabToHash(tab);
+  history.replaceState(null, "", `#${hash}`);
+}}
+
             >
               {tab}
             </button>
@@ -522,18 +532,22 @@ const FertilityTabs: React.FC = () => {
       width: 100%; /* full width */
       margin-bottom: 15px;
     }
-      .tabs-container {
-    border: 1px solid #0000003d;
-    padding: 10px 10px !important;
-    /* margin: 0px 0px; */
+         .tabs-container {
+   border: 1px solid #0000003d;
+        padding: 10px 10px !important;
+        margin: 0px 10px 0px 0px;
+        width: 355px;
 }
+         .visit-text{
+    font-size:12px;
+    }
   }
 `}</style>
         {/* Tabs Content */}
         <div className="row justify-content-center align-items-center g-4">
           <div className="col-lg-8 col-md-6">
             <div
-              className="left mx-lg-5"
+              className="left mx-lg-5 visit-text"
               dangerouslySetInnerHTML={{ __html: currentContent.text }}
             />
           </div>
@@ -549,7 +563,7 @@ const FertilityTabs: React.FC = () => {
 
         {/* Bottom text + lists */}
         <div className="row mt-3">
-          <div className="col-lg-11 mx-lg-5">
+          <div className="col-lg-11 mx-lg-5 visit-text">
             <div dangerouslySetInnerHTML={{ __html: currentContent.bottomText }} />
 
             <CustomList items={currentContent.bottomTextList} />
