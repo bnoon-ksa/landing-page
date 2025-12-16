@@ -119,7 +119,7 @@ const footerData: FooterData = {
         { text: "برنامج وعد بنون", url: "/ar/waad-bnoon-program" },
         { text: "زيارتك لنا", url: "/ar/your-visit" },
         { text: "دليل الخصوبة", url: "/ar/fertility-guide" },
-        { text: "حقوق وواجبات المرضى", url: "/en/patients-rights" },
+        { text: "حقوق وواجبات المرضى", url: "/ar/patients-rights" },
         { text: "تواصل معنا", url: "/ar/contact-us" },
         { text: "طلب موعد", url: "/ar/request-an-appoinment" },
         { text: "شاركونا تجربتكم", url: "/ar/submit-feedback" },
