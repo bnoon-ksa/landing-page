@@ -47,7 +47,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-xl" id="navbar">
+      <nav className="navbar navbar-expand-xl sticky" id="navbar">
         <div className="container d-flex justify-content-between align-items-center">
           {/* Left side: Logo + Mobile Language + Menu icon */}
           <div className="d-flex align-items-center">
@@ -332,7 +332,15 @@ function Navbar() {
   max-height: none !important;
   overflow: visible !important;
 }
-
+.sticky {
+          position: fixed !important;
+          top: 0;
+          width: 100%;
+          z-index: 9999;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          transition: all 0.3s ease;
+          background-color: #fff;
+        }
         .mobile-offcanvas {
           width: 100vw !important;
           height: 100vh !important;
