@@ -46,7 +46,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-xl" id="navbar" dir="rtl">
+      <nav className="navbar navbar-expand-xl sticky" id="navbar" dir="rtl">
         <div className="container d-flex justify-content-between align-items-center">
 
           {/* 🟢 LEFT SIDE (Logo + Mobile) */}
@@ -300,6 +300,15 @@ function Navbar() {
 .dropdown-item{
     direction: ltr;
 }
+.sticky {
+          position: fixed !important;
+          top: 0;
+          width: 100%;
+          z-index: 9999;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          transition: all 0.3s ease;
+          background-color: #fff;
+        }
     .navbar .navbar-nav .nav-item .nav-link{
     padding-right: 51px !important;
     padding-top:20px !important;
