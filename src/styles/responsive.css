@@ -1838,6 +1838,58 @@ html, body {
     padding: 45px;
   }
 }
+@media only screen and (min-width:768px) and (max-width: 1200px) {
+  a.navbar-brand {
+    width: 170px;
+}
+    .margin-dropdown {
+        margin: -50px 0px 2px 70px;
+        width: 650px;
+    }
+  button#extraDropdown
+ {
+    font-size: 14px;
+    font-weight: 400 !important;
+    font-family: HelveticaW01Bold !important;
+    width: 250px !important;
+    height: 42px;
+    padding: 0 0px 0px 12px;
+    border-radius: 10px;
+}
+.btn-appointment {
+    background-color: #39bced !important;
+    border: none !important;
+    font-weight: 600 !important;
+    width: 180px;
+    border-radius: 10px;
+    height: 42px;
+    padding: 10px;
+    font-size: 14px !important;
+    padding: 10px !important;
+}
+a.btn.btn-outline-secondary.btn-language {
+    font-family: Alexandria !important;
+    font-weight: 400 !important;
+    width: 80px;
+    border-radius: 10px;
+    height: 42px;
+    padding: 8px;
+     font-size: 14px;
+}
+}
+@media only screen and (min-width: 1200px) and (max-width: 1256px) {
+
+    .navbar .navbar-nav .nav-item {
+        margin-left: 0px;
+        font-size: 12px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+.margin-dropdown
+ {
+    margin: 16px 0px 2px 0px !important;
+}
+}
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   /* Home One Responsive */
@@ -1853,6 +1905,7 @@ html, body {
   .navbar .navbar-nav .nav-item {
             margin-left: 10px;
         font-size: 12px;
+                margin-right: 1px;
   }
   .navbar .others-option {
     margin-left: 20px;
