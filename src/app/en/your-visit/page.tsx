@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ClientYourVisitPage from "./page.client";
 
 export const metadata: Metadata = {
-  title: "Bnoon - Your Visit to Bnoon in Jeddah and Riyadh and Al Ahsa",
+  title: "Bnoon - Your Visit to Bnoon in Jeddah, Riyadh & Al Ahsa",
   description:
     "",
 };
