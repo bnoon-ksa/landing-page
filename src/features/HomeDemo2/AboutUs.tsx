@@ -115,7 +115,7 @@ function AboutUs() {
 
                               الرياض | جدة | الأحساء<br/>
 
-                              أبها – قيد الإنشاء
+                           <span className="under-construction">أبها – قيد الإنشاء</span>
                             </p>
                           </div>
                         </>
@@ -138,6 +138,9 @@ function AboutUs() {
 
       {/* ✅ Scoped CSS */}
       <style jsx>{`
+      .under-construction{
+          color: #6b6d70;
+      }
       .text-margin{
       margin-bottom:0px !important;
       }
