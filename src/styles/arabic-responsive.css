@@ -2262,3 +2262,46 @@ p {
         border-radius: 15px !important;
     }
  }
+
+@media only screen and (min-width:768px) and (max-width: 1200px) {
+  a.navbar-brand {
+    width: 170px;
+}
+    .dropdown-box {
+        margin: 20px 0px 2px -70px;
+        width: 650px;
+    }
+  button#extraDropdown
+ {
+    font-size: 14px;
+    font-weight: 400 !important;
+    font-family: HelveticaW01Bold !important;
+    width: 250px !important;
+    height: 42px;
+    padding: 0 0px 0px 12px;
+    border-radius: 10px;
+}
+.btn-appointment {
+    background-color: #39bced !important;
+    border: none !important;
+    font-weight: 600 !important;
+    width: 200px;
+    border-radius: 10px;
+    height: 42px;
+    padding: 10px;
+    font-size: 14px !important;
+    padding: 10px !important;
+}
+a.btn.btn-outline-secondary.btn-language {
+    font-family: Alexandria !important;
+    font-weight: 400 !important;
+    width: 80px;
+    border-radius: 10px;
+    height: 42px;
+    padding: 8px;
+     font-size: 14px;
+}
+    .container, .container-md, .container-sm {
+        max-width: 780px;
+    }
+}
