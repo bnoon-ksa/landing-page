@@ -1811,6 +1811,30 @@ height: 271px !important;
     padding: 45px;
   }
 }
+@media (min-width: 1300px) and (max-width: 1399.98px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    padding-right: 45px !important;
+    padding-top: 20px !important;
+    padding-bottom: 0px !important;
+  }
+      .navbar .navbar-nav .nav-item {
+        margin-right: 3px !important;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1299.98px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    padding-right: 45px !important;
+    padding-top: 20px !important;
+    padding-bottom: 0px !important;
+  }
+          .navbar .navbar-nav .nav-item
+ {
+    position: relative;
+    margin-left: 0px;
+    margin-right: 3px !important;
+}
+}
+
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   /* Home One Responsive */
