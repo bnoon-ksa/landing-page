@@ -101,9 +101,9 @@ function Navbar() {
           </div>
 
           {/* 🟢 RIGHT SIDE (Desktop view) */}
-          <div className="d-none d-md-flex flex-column align-items-start">
+          <div className="d-none d-md-flex flex-column align-items-start dropdown-nav">
       <div
-  className="mb-3 d-flex gap-4 align-items-center"
+  className="mb-3 d-flex gap-4 align-items-center dropdown-box"
   style={{ justifyContent: "flex-end", width: "100%",gap:"32px !important" }}
 >
 
