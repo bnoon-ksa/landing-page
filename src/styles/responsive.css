@@ -2362,3 +2362,21 @@ a.btn.btn-outline-secondary.btn-language {
     margin-right: 40px;
 }
 }
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+ .page-banner-area {
+    background-color: #F5F5F5;
+    margin: 0 0px;
+    overflow: hidden;
+    padding-top: 180px;
+    padding-bottom: 120px !important;
+}
+}
+@media screen and (min-width: 767px) and (max-width: 1400px) {
+ .page-banner-area {
+    background-color: #F5F5F5;
+    margin: 0 0px;
+    overflow: hidden;
+    padding-top: 180px;
+    padding-bottom: 0px;
+}
+}
