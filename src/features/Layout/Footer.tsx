@@ -147,7 +147,13 @@ const footerData: FooterData = {
     owner: "",
     ownerUrl: "https://www.dubaiwebcity.com/",
   },
-  complianceBadges: ["Website Design & Development by NetSoft"],
+ complianceBadges: [
+  `تصميم وتطوير الموقع بواسطة
+  <a href="https://www.dubaiwebcity.com/" target="_blank" rel="noopener noreferrer">
+    نيتسوفت لخدمات شبكات تقنية المعلومات
+  </a>`
+],
+
 };
 
 function Footer() {
@@ -252,19 +258,23 @@ function Footer() {
             <div className="row g-4">
               <div className="col-lg-6 col-md-12">
                 <p className="footer-text">
-                  © <span>{footerData.copyright.text}</span>2025 All Rights Reserved{" "}
+                  © <span>{footerData.copyright.text}</span> 2025 جميع الحقوق محفوظة{" "}
                   <a href={footerData.copyright.ownerUrl} target="_blank" rel="noopener noreferrer">
                     {footerData.copyright.owner}
                   </a>
                 </p>
               </div>
-              <div className="col-lg-6 col-md-12">
-                <ul className="lists footer-text">
-                  {footerData.complianceBadges.map((badge, index) => (
-                    <li key={index}>{badge}</li>
-                  ))}
-                </ul>
-              </div>
+             <div className="col-lg-6 col-md-12">
+  <ul className="lists footer-text">
+    {footerData.complianceBadges.map((badge, index) => (
+      <li
+        key={index}
+        dangerouslySetInnerHTML={{ __html: badge }}
+      ></li>
+    ))}
+  </ul>
+</div>
+
             </div>
           </div>
         </div>
@@ -276,6 +286,10 @@ function Footer() {
       </footer>
 
     <style jsx global>{`
+    .arabic h1, .arabic p {
+    text-align: right;
+    direction: ltr;
+}
  .link-itmes li a {
     font-size: 13px !important;
 }
@@ -304,6 +318,23 @@ function Footer() {
         .social-icons a:hover {
           transform: scale(1.1);
         }
+          .copyright-area .lists li a {
+    color: #ffffffff !important;
+}
+          @media only screen and (max-width: 767px) {
+    .footer-text {
+        color: #ffffff !important;
+        font-size: 11px !important;
+        text-align: right !important;
+    }
+    .copyright-area .lists li {
+        list-style-type: none;
+        font-size: 11px;
+        position: relative;
+        margin-right: 40px;
+        margin: -18px 0px 0px;
+    }
+}
       `}</style>
     </>
 
