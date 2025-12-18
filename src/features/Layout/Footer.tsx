@@ -257,7 +257,7 @@ function Footer() {
           <div className="copyright-area">
             <div className="row g-4">
               <div className="col-lg-6 col-md-12">
-                <p className="footer-text">
+                <p className="footer-text footer-align">
                   © <span>{footerData.copyright.text}</span> 2025 جميع الحقوق محفوظة{" "}
                   <a href={footerData.copyright.ownerUrl} target="_blank" rel="noopener noreferrer">
                     {footerData.copyright.owner}
@@ -286,9 +286,11 @@ function Footer() {
       </footer>
 
     <style jsx global>{`
+    p.footer-align{
+    direction:ltr;
+    }
     .arabic h1, .arabic p {
     text-align: right;
-    direction: ltr;
 }
  .link-itmes li a {
     font-size: 13px !important;
