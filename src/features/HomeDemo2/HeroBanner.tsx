@@ -15,7 +15,7 @@ function HeroBannerAr() {
       video: "images/ar-banner/2.mp4",
     title: '<span class="font-program">برنامج</span> وعد بنون',
 
-      desc: "الحمل أو استرداد الرسوم :<br>راحة بال. توتر أقل.",
+      desc: "الحمل أو استرداد الرسوم:<br>راحة بال. توتر أقل.",
       titleColor: "#004E78",
       descColor: "#004E78",
       extra: "تطبق الشروط والأحكام",
