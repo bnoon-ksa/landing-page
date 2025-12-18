@@ -12,7 +12,8 @@ const OurBlog = () => {
       slug: "https://maps.app.goo.gl/Uwu7B8FT8n7bYNid6", // Maps link
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.1839039641172!2d46.7350649!3d24.789155499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efddca951caad%3A0xff57eb5bc69f10ea!2zQm5vb24gLSBSaXlhZGgg2KjZhtmI2YYgLSDYp9mE2LHZitin2LY!5e0!3m2!1sen!2s!4v1762873112473!5m2!1sen!2s",
       buttonLink: "ar/bnoon-riyadh", // internal page
-    description: `على مدار أكثر من 12 عاماً، استطاع مركز "بنون" في الرياض أن يرسّخ مكانته كأحد أكثر المراكز موثوقية في طب الخصوبة وصحة المرأة والرجل في المملكة. من خلال نهج يضع المريض أولاً، يجمع المركز بين الرعاية الإنسانية والتكنولوجيا المتقدمة، ويضم فريقاً...`,
+    description:`
+على مدار أكثر من 12 عاماً، استطاع مركز "بنون" في الرياض أن يرسّخ مكانته كأحد أكثر المراكز موثوقية في طب الخصوبة وصحة المرأة والرجل في المملكة. من خلال نهج يضع المريض أولاً، يجمع المركز بين الرعاية الإنسانية والتكنولوجيا المتقدمة، ويضم فريقاً من أبرز الاستشاريين في طب الإخصاب...   `,
  },
     {
       id: 2,
@@ -23,7 +24,7 @@ const OurBlog = () => {
       buttonLink: "ar/bnoon-jeddah",
    description: `انضم إلى شبكة "بنون" في يونيو 2025 (وكان يُعرف سابقاً بمركز "هيلث بلس للإخصاب – جدة" منذ افتتاحه عام 2019)، ويواصل المركز تقديم خدمات رعاية خصوبة متقدمة، مع الحفاظ على السمعة الطبية المرموقة والثقة التي بناها في المجتمع.
 
-وبصفته مركزاً معتمداً...`,
+وبصفته مركزاً معتمداً من اللجنة الدولية...`,
    },
     {
       id: 3,
@@ -43,7 +44,7 @@ const OurBlog = () => {
       slug: "https://maps.app.goo.gl/N4qVpDH22TnbpVDV7",
       embedMap: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3603.0477616735334!2d49.572361099999995!3d25.4366667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDI2JzEyLjAiTiA0OcKwMzQnMjAuNSJF!5e0!3m2!1sen!2s!4v1765645696414!5m2!1sen!2s",
       buttonLink: "ar/bnoon-alahsa",
-      description: `يقدّم مركز بنون – الأحساء الواقع داخل مستشفى الموسى التخصصي خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية. وقد صُمّم المركز ليمنح المرضى تجربة علاجية متميّزة تجمع بين أحدث...`
+      description: `يقدّم مركز بنون – الأحساء الواقع داخل مستشفى الموسى التخصصي خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية. وقد صُمّم المركز ليمنح المرضى تجربة علاجية متميّزة تجمع بين أحدث التقنيات في الطب...`
 
        },
   ];
@@ -61,12 +62,14 @@ const OurBlog = () => {
           </div>
         </div>
 
-        <div className="row g-4 justify-content-center">
-          {blogData.map((post) => (
-            <div key={post.id} className="col-lg-4 col-md-6">
-              <div
-                className="blog-card"
-                onMouseEnter={() => setHoveredId(post.id)}
+        <div className="row justify-content-center">
+          {blogData.map((post, index) =>(
+            <div key={post.id} className="col-lg-5 col-md-6 pb-3">
+               <div
+                className={`blog-card mx-md-2 ${
+      index % 2 === 0 ? "blog-left-card" : "blog-right-card"
+    }`}
+     onMouseEnter={() => setHoveredId(post.id)}
                 onMouseLeave={() => setHoveredId(null)}
               >
 
@@ -118,8 +121,17 @@ const OurBlog = () => {
       </div>
       <style jsx global>{`
             .blog-card .content p {
-  font-size: 15px !important;      /* font size kam */
+  font-size: 14px !important;      /* font size kam */
   line-height: 1.5;    /* line height kam */
+}
+  .blog-card {
+width:450px;
+}
+.blog-right-card {
+   margin-right: 50px !important;
+}
+    .blog-left-card {
+    margin-right: 20px !important;
 }
        .small-text {
   font-size: 16px; /* smaller size for note */
@@ -178,6 +190,15 @@ const OurBlog = () => {
                    .blog-card .content p {
   font-size: 12px !important;      /* font size kam */
   line-height: 1.5;    /* line height kam */
+}
+    .blog-card {
+width:330px;
+}
+.blog-right-card {
+   margin-right: 0px !important;
+}
+    .blog-left-card {
+    margin-right: 0px !important;
 }
   }
 `}</style>
