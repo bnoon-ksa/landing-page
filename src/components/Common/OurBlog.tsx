@@ -14,7 +14,7 @@ const OurBlog = () => {
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.1839039641172!2d46.7350649!3d24.789155499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efddca951caad%3A0xff57eb5bc69f10ea!2zQm5vb24gLSBSaXlhZGgg2KjZhtmI2YYgLSDYp9mE2LHZitin2LY!5e0!3m2!1sen!2s!4v1762873112473!5m2!1sen!2s",
       buttonLink: "en/bnoon-riyadh",
       description:
-        "With a legacy of excellence in fertility and women’s health, Bnoon has been proudly serving families for over 12 years in Riyadh. Renowned for its patient-first philosophy, the center combines compassionate care with advanced technology and a ...",
+        "With a legacy of excellence in fertility and women’s health, Bnoon has been proudly serving families for over 12 years in Riyadh. Renowned for its patient-first philosophy, the center combines compassionate care with advanced technology and a team of highly...",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const OurBlog = () => {
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.6924446189687!2d39.1215956!3d21.558878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3dbc1b47a93e5%3A0x403eb3afa0ca3bd7!2zQm5vb24gLSBKZWRkYWgg2KjZhtmI2YYgLSDYrNiv2KkgKGZvcm1lcmx5IGtub3duIGFzIEhlYWx0aFBsdXMgRmVydGlsaXR5IEplZGRhaCk!5e0!3m2!1sen!2s!4v1762873494627!5m2!1sen!2s",
       buttonLink: "en/bnoon-jeddah",
       description:
-        "Acquired in June 2025, Bnoon Jeddah — formerly known as HealthPlus Fertility Center Jeddah — has long been recognized for its medical excellence and the trust it has built within the local community. Now as part of a leading network of ...",
+        "Acquired in June 2025, Bnoon Jeddah — formerly known as HealthPlus Fertility Center Jeddah — has long been recognized for its medical excellence and the trust it has built within the local community. Now as part of a leading network of fertility centers...",
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const OurBlog = () => {
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.3583391235643!2d46.59119140000001!3d24.8174163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee69d1c7fb897%3A0x46a86841c1f1d0e8!2zUlJRQTQxNTAsIDQxNTAgS2luZyBTYWxtYW4gQmluIEFiZHVsYXppeiBSZCwgNjkzMtiMINit2Yog2KfZhNmC2YrYsdmI2KfZhtiMIFJpeWFkaCAxMzUzMiwgU2F1ZGkgQXJhYmlh!5e0!3m2!1sen!2s!4v1762873544370!5m2!1sen!2s",
       buttonLink: "en/our-clinics",
       description:
-        "To further expand access and redefine the standard of fertility care in the Kingdom, Bnoon is developing a state-of-the-art 3,800 sqm flagship facility on King Salman Road in North Riyadh...",
+        "To further expand access and redefine the standard of fertility care in the Kingdom, Bnoon is developing a state-of-the-art 3,800 sqm flagship facility on King Salman Road in North Riyadh, scheduled to open...",
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ const OurBlog = () => {
       embedMap: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3603.0477616735334!2d49.572361099999995!3d25.4366667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDI2JzEyLjAiTiA0OcKwMzQnMjAuNSJF!5e0!3m2!1sen!2s!4v1765622876993!5m2!1sen!2s",
       buttonLink: "en//bnoon-alahsa",
       description:
-        "Situated within Almoosa Specialist Hospital,<strong> Bnoon – Al Ahsa </strong>brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to offer an exceptional patient experience..."
+        "Situated within Almoosa Specialist Hospital,<strong> Bnoon – Al Ahsa </strong>brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to offer an exceptional patient experience, combining..."
     },
   ];
 
@@ -61,11 +61,14 @@ const OurBlog = () => {
           </div>
         </div>
 
-        <div className="row g-4 justify-content-center">
-          {blogData.map((post) => (
-            <div key={post.id} className="col-lg-4 col-md-6">
+        <div className="row justify-content-center
+">
+           {blogData.map((post, index) =>(
+            <div key={post.id} className="col-lg-5 col-md-6 pb-3">
               <div
-                className="blog-card"
+                className={`blog-card mx-md-2 ${
+      index % 2 === 0 ? "blog-left-card" : "blog-right-card"
+    }`}
                 onMouseEnter={() => setHoveredId(post.id)}
                 onMouseLeave={() => setHoveredId(null)}
               >
@@ -113,17 +116,26 @@ const OurBlog = () => {
         </div>
       </div>
       {/* ✅ Responsive style only for mobile */}
-      <style jsx>{`
+      <style jsx global>{`
       .blog-card .content p {
   font-size: 16px !important;      /* font size kam */
   line-height: 1.5;    /* line height kam */
 }
-
+.blog-card {
+width:450px;
+}
+.blog-right-card {
+    margin-left: 40px !important;
+}
+    .blog-left-card {
+    margin-left: 40px !important;
+}
         .small-note {
   font-size: 16px; /* smaller size for note */
   color: #004E78;
   margin-left: 26px;
    display: block;
+   margin-top: 8px;
 }
 
         .blog-card .content h3, .blog-card .content .h3 {
@@ -138,7 +150,7 @@ const OurBlog = () => {
 }
   .blog-card .image {
     position: relative;
-    height: 220px;
+    height: 250px;
     overflow: hidden;
   }
 
@@ -171,11 +183,20 @@ const OurBlog = () => {
     color: #004E78;
     margin-top: 8px;
 }
+    .blog-card {
+width:330px;
+}
      .blog-card .image {
     position: relative;
     height: 200px;
     overflow: hidden;
   }
+    .blog-right-card {
+    margin-left: 0px !important;
+}
+    .blog-left-card {
+    margin-left: 0px !important;
+}
           .blog-card .content p {
   font-size: 14px !important;      /* font size kam */
   line-height: 1.5;    /* line height kam */
