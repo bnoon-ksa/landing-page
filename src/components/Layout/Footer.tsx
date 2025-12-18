@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -140,12 +142,14 @@ const footerData: FooterData = {
       alt: "app-store",
     },
   ],
-  copyright: {
+ copyright: {
     text: "",
     owner: "",
     ownerUrl: "https://www.dubaiwebcity.com/",
   },
-  complianceBadges: ["Website Design & Development by NetSoft"],
+  complianceBadges: [
+    `Website Design & Development by <a href="https://www.dubaiwebcity.com/" target="_blank" rel="noopener noreferrer">Dubai Web City</a>`
+  ],
 };
 
 function Footer() {
@@ -204,28 +208,37 @@ function Footer() {
         style={{ minWidth: "170px" }}
       >
         {section.title && <h3>{section.title}</h3>}
-        <ul className="links">
-          {section.links.map((link, linkIndex) => {
-            const withIcon =
-              link.text === "Bnoon - Riyadh" ||
-              link.text === "Bnoon - Jeddah" ||
-              link.text === "Bnoon - Al Ahsa";
+  <ul className="links">
+  {section.links.map((link, linkIndex) => {
+    const withIcon =
+      link.text === "Bnoon - Riyadh" ||
+      link.text === "Bnoon - Jeddah" ||
+      link.text === "Bnoon - Al Ahsa";
 
-            return (
-              <li key={linkIndex} className="d-flex align-items-start">
-                <Link href={link.url} className="d-flex align-items-center">
-                  {withIcon && (
-                    <i
-                      className="ri-map-pin-line"
-                      style={{ fontSize: "14px", marginRight: "6px" }}
-                    ></i>
-                  )}
-                  {link.text}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+    const isPatientsRights =
+      link.text === "Patients' Rights & Responsibilities";
+
+    return (
+      <li key={linkIndex} className="d-flex align-items-start">
+        <Link
+          href={link.url}
+          className={`d-flex align-items-center ${
+            isPatientsRights ? "patients-rights-link" : ""
+          }`}
+        >
+          {withIcon && (
+            <i
+              className="ri-map-pin-line"
+              style={{ fontSize: "14px", marginRight: "6px" }}
+            ></i>
+          )}
+          {link.text}
+        </Link>
+      </li>
+    );
+  })}
+</ul>
+
       </div>
     ))}
   </div>
@@ -248,11 +261,15 @@ function Footer() {
               </p>
             </div>
             <div className="col-lg-6 col-md-12">
-              <ul className="lists footer-text">
-                {footerData.complianceBadges.map((badge, index) => (
-                  <li key={index}>{badge}</li>
-                ))}
-              </ul>
+             <ul className="lists footer-text">
+  {footerData.complianceBadges.map((badge, index) => (
+    <li
+      key={index}
+      dangerouslySetInnerHTML={{ __html: badge }}
+    ></li>
+  ))}
+</ul>
+
             </div>
           </div>
         </div>
@@ -261,7 +278,20 @@ function Footer() {
         <div className="d-block d-md-none">
           <MobileTopTools />
         </div>
+         <style jsx global>{`
+         .copyright-area .lists li a {
+    color: #ffffffff !important;
+}
+        @media (max-width: 768px) {
+  .patients-rights-link {
+    line-height: 1.4 !important;
+    display: inline-block;
+  }
+}
+
+        `}</style>
     </footer>
+     
   );
 }
 
