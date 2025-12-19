@@ -184,7 +184,7 @@ const OurDoctors = () => {
   animate={isMobile ? { opacity: 1, x: 0 } : undefined}
   whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
   viewport={{ once: true, amount: 0.3 }}
-  transition={{ duration: 0.6 }}
+  transition={{ duration: 0.3 }}
 >
 
         <div className="row g-4">
