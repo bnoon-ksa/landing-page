@@ -139,7 +139,7 @@ const toggleAccordion = (index: number) => {
 margin: 0px 10px;
 }
   .faq-accordion .accordion .accordion-item .accordion-button{
-        font-size: 12px;
+        font-size: 14px;
     font-weight: 600;
     color: rgb(64, 64, 64) !important;
     }
