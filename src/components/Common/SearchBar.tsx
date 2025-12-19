@@ -10,6 +10,8 @@ const SearchBar = () => {
   const [location, setLocation] = useState<LocationType>("");
   const router = useRouter();
 
+const doctorDropdownRef = useRef<HTMLDivElement>(null);
+const locationDropdownRef = useRef<HTMLDivElement>(null);
   const doctorProfileLinks: Record<string, string> = {
     "Dr. Abdalaziz Al-Shahrani": "/en/dr-abdalaziz-alshahrani",
     "Dr. Fawaz Edris": "/en/dr-fawaz-edris",
@@ -67,6 +69,29 @@ const orderedDoctors = Object.keys(doctorProfileLinks);
     if (headerRef.current) observer.observe(headerRef.current);
     return () => observer.disconnect();
   }, []);
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      doctorDropdownRef.current &&
+      !doctorDropdownRef.current.contains(event.target as Node)
+    ) {
+      document.querySelector(".doctor-menu")?.classList.remove("open");
+    }
+
+    if (
+      locationDropdownRef.current &&
+      !locationDropdownRef.current.contains(event.target as Node)
+    ) {
+      document.querySelector(".location-menu")?.classList.remove("open");
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
   const doctorsByLocation: Record<Exclude<LocationType, "">, string[]> = {
     Riyadh: [
@@ -128,7 +153,8 @@ const doctorsToShow =
         {/* Search Bar */}
         <div className="search-bar doctor-bar">
 {/* Doctor Dropdown */}
-<div className="custom-dropdown">
+<div className="custom-dropdown" ref={doctorDropdownRef}>
+
   <button
     className="dropdown-btn doctor-select"
     onClick={() => {
@@ -163,7 +189,8 @@ const doctorsToShow =
 </div>
 
    {/* Location Dropdown */}
-<div className="custom-dropdown">
+<div className="custom-dropdown" ref={locationDropdownRef}>
+
   <button
     className="dropdown-btn location-select"
     onClick={() => {
