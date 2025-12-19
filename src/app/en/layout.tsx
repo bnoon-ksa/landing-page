@@ -16,6 +16,18 @@ export default function EnglishLayout({ children }: { children: React.ReactNode 
   return (
     <html lang="en" dir="ltr">
       <body className={`${plusJakartaSans.variable}`}>
+        {/* Google Analytics 4 snippet */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-6CDMTCELGG');
+            `,
+          }}
+        />
         {children}
         <Footer />
         <GoTop />
