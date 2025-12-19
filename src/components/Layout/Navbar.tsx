@@ -39,6 +39,8 @@ function Navbar() {
 }, []);
 
   const [show, setShow] = useState(false);
+  const [mobileActive, setMobileActive] = useState<string | null>(null);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -53,7 +55,7 @@ function Navbar() {
           <div className="d-flex align-items-center">
             <Link href="/en" className="navbar-brand d-flex align-items-center">
               <img
-                src="/images/bnoon-logo.png"
+                src="/images/bnoon-logo.svg"
                 alt="Doutor"
                 width={183}
                 height={75}
@@ -267,19 +269,24 @@ function Navbar() {
   // Normal menu items
   return (
     <li key={item.id} className="">
-   <Link
+<Link
   href={item.href || "#"}
-   className={`fs-5 text-decoration-none d-block ${isActiveBtn ? "active-btn" : ""}`}
+  className={`fs-5 text-decoration-none d-block ${
+    isActiveBtn || mobileActive === item.href ? "active-btn" : ""
+  }`}
   style={{ color: "#004E78", padding: "10px 0px 10px" }}
   onClick={() => {
+    setMobileActive(item.href);   // 👈 mobile click pe active
     handleClose();
+
     setTimeout(() => {
-      window.location.href = item.href; // ensures navigation even after offcanvas closes
+      window.location.href = item.href; // navigation
     }, 200);
   }}
 >
   {item.title}
 </Link>
+
 
       {index !== menus.length - 1 && (
         <hr
@@ -332,15 +339,7 @@ function Navbar() {
   max-height: none !important;
   overflow: visible !important;
 }
-.sticky {
-          position: fixed !important;
-          top: 0;
-          width: 100%;
-          z-index: 9999;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-          transition: all 0.3s ease;
-          background-color: #fff;
-        }
+
         .mobile-offcanvas {
           width: 100vw !important;
           height: 100vh !important;
@@ -398,7 +397,15 @@ ul.dropdown-menu.show {
   background:hsla(0, 0%, 100%, .2);      /* Har item ka apna background */
   backdrop-filter: blur(20px);
 }
-
+.sticky {
+          position: fixed !important;
+          top: 0;
+          width: 100%;
+          z-index: 9999;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          transition: all 0.3s ease;
+          background-color: #fff;
+        }
 /* Mobile: Show only on responsive */
 @media (max-width: 1199px) {
   .mobile-only {
