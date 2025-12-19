@@ -39,13 +39,16 @@ const OurBlog = () => {
     },
     {
       id: 4,
-      imageSrc: "images/blog/bnoon-alahsa.jpg",
+      imageSrc: "images/blog/bnoon-alahsa-img.jpg",
       title: "Bnoon – Al Ahsa ",
+      slug: "https://maps.app.goo.gl/56bbzJYjX8xsm5tJ6",
       embedMap: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3603.0477616735334!2d49.572361099999995!3d25.4366667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDI2JzEyLjAiTiA0OcKwMzQnMjAuNSJF!5e0!3m2!1sen!2s!4v1765622876993!5m2!1sen!2s",
       buttonLink: "en//bnoon-alahsa",
-      description:
-        "Situated within Almoosa Specialist Hospital,<strong> Bnoon – Al Ahsa </strong>brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to offer an exceptional patient experience, combining..."
-    },
+     description: `
+  Situated within <strong><a href="https://www.google.com/maps/place/Almoosa+Specialist+Hospital/data=!4m2!3m1!1s0x0:0xa8c655087d191645?sa=X&ved=1t:2428&ictx=111" target="_blank" rel="noopener noreferrer" class="hospital-link">
+  Almoosa Specialist Hospital</a></strong>, Bnoon – Al Ahsa brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to the heart of Saudi Arabia’s Eastern Province. The center is designed...
+`
+  },
   ];
 
   return (
@@ -117,6 +120,10 @@ const OurBlog = () => {
       </div>
       {/* ✅ Responsive style only for mobile */}
       <style jsx global>{`
+      .hospital-link {
+  color: #404040; /* apna desired color */
+}
+
       .blog-card .content p {
   font-size: 16px !important;      /* font size kam */
   line-height: 1.5;    /* line height kam */
