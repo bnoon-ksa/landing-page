@@ -33,7 +33,7 @@ const GoTop = () => {
           className="whatsapp-btn position-fixed border-0 p-0"
           style={{
             bottom: "50px",
-            right: "20px",
+            right: "10px",
             zIndex: 999,
             width: "55px",
             height: "55px",
