@@ -148,7 +148,8 @@ const footerData: FooterData = {
     ownerUrl: "https://www.dubaiwebcity.com/",
   },
   complianceBadges: [
-    `Website Design & Development by <a href="https://www.dubaiwebcity.com/" target="_blank" rel="noopener noreferrer">Dubai Web City</a>`
+    `Website Design & Development by <a href="https://www.dubaiwebcity.com/" target="_blank" rel="noopener noreferrer">NetSoft Information Technoloy Network Services
+</a>`
   ],
 };
 
@@ -287,6 +288,14 @@ function Footer() {
     line-height: 1.4 !important;
     display: inline-block;
   }
+}
+  @media (max-width: 767px) {
+    .copyright-area .lists li {
+        list-style-type: none;
+        font-size: 12px;
+        position: relative;
+        margin-right: 40px !important;
+    }
 }
 
         `}</style>
