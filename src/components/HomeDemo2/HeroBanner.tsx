@@ -26,7 +26,7 @@ function HeroBanner() {
     {
       video: "images/banner/banner-3.mp4",
       title: "THE FUTURE OF<br>FERTILITY IS HERE",
-      desc: "Now in Riyadh and Jeddah and Al Ahsa",
+      desc: "Now in Riyadh, Jeddah and Al Ahsa",
       buttonLink: "en/request-an-appoinment",
       buttonText: "Book Now",
     },
@@ -70,7 +70,7 @@ function HeroBanner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 10000);
+    }, 13000);
     return () => clearInterval(interval);
   }, [slides.length]);
 
