@@ -56,7 +56,7 @@ const aboutData: AboutData = {
       id: 5,
       icon: { src: "images/icons/icon-5.png", alt: "icon" },
       title: "+60%",
-      description: "Success Rates for 35 years of age",
+      description: "Success Rates",
       text: "On par with international success rates",
     },
   ],
