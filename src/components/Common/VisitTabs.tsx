@@ -213,6 +213,7 @@ const VisitTabs: React.FC = () => {
       overflow-x: auto;                  /* scroll allow kare */
       justify-content: flex-start !important; /* scroll start se */
       -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+      font-size: 14px;
     }
 
     .tabs-row-container .tabs-btn {
@@ -224,10 +225,14 @@ const VisitTabs: React.FC = () => {
       width: 100%; /* full width */
       margin-bottom: 15px;
     }
+          .treatment-text{
+    font-size: 14px !important;
+    }
       .tabs-container {
     border: 1px solid #0000003d;
     padding: 10px 10px !important;
     /* margin: 0px 0px; */
+    width: 350px;
 }
   }
 `}</style>
@@ -235,7 +240,7 @@ const VisitTabs: React.FC = () => {
         <div className="row justify-content-center align-items-center g-4">
           <div className="col-lg-8 col-md-6">
             <div
-              className="left mx-lg-5"
+              className="left mx-lg-5 treatment-text"
               dangerouslySetInnerHTML={{ __html: currentContent.text }}
             />
           </div>
@@ -251,14 +256,14 @@ const VisitTabs: React.FC = () => {
 
         {/* Bottom text + lists */}
         <div className="row mt-3">
-          <div className="col-lg-11 mx-lg-5">
+          <div className="col-lg-11 mx-lg-5 treatment-text">
             <div dangerouslySetInnerHTML={{ __html: currentContent.bottomText }} />
 
             <CustomList items={currentContent.bottomTextList} />
 
             {currentContent.extraText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.extraText }}
               />
             )}
@@ -267,7 +272,7 @@ const VisitTabs: React.FC = () => {
 
             {currentContent.secondText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.secondText }}
               />
             )}
@@ -275,49 +280,49 @@ const VisitTabs: React.FC = () => {
             <CustomList items={currentContent.extraList} />
               {currentContent.thirdText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.thirdText }}
               />
             )}
             <CustomList items={currentContent.thirdList} />
              {currentContent.fourText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.fourText }}
               />
             )}
             <CustomList items={currentContent.fourList} />
              {currentContent.fiveText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.fiveText }}
               />
             )}
             <CustomList items={currentContent.fiveList} />
              {currentContent.sixText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.sixText }}
               />
             )}
             <CustomList items={currentContent.sixList} />
              {currentContent.sevenText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.sevenText }}
               />
             )}
             <CustomList items={currentContent.sevenList} />
              {currentContent.eightText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.eightText }}
               />
             )}
             <CustomList items={currentContent.eightList} />
              {currentContent.nineText && (
               <div
-                className="mt-3"
+                className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.nineText }}
               />
             )}
