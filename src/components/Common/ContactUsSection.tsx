@@ -73,7 +73,7 @@ import Link from "next/link";
                 height={80} 
                 className="mb-3"
               />
-              <h5 className="mb-3">Request an Appointment</h5>
+              <h5 className="mb-3"><strong>Request an Appointment</strong></h5>
               <Link href="request-an-appoinment" className="btn btn-primary mb-3 contact-btn">
                 Click here
               </Link>
@@ -94,7 +94,7 @@ import Link from "next/link";
                 height={80} 
                 className="mb-3"
               />
-              <h5 className="mb-3">Prefer to speak with us directly?</h5>
+              <h5 className="mb-3"><strong>Prefer to speak with us directly?</strong></h5>
               <Link href="request-an-appoinment" className="btn btn-primary mb-3 contact-btn">
                 Call us
               </Link>
@@ -134,7 +134,7 @@ import Link from "next/link";
     </p>
 
     {/* Google Map Embed */}
-  <div className="map-responsive mt-0 mt-lg-3 text-center text-lg-start">
+  <div className="map-responsive mt-0 mt-lg-3">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.3932190536176!2d46.732875315003445!3d24.78915548405014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efddca951caad%3A0xff57eb5bc69f10ea!2sBnoon%20-%20Riyadh!5e0!3m2!1sen!2s!4v1695980800000!5m2!1sen!2s"
     width="90%"
@@ -145,7 +145,7 @@ import Link from "next/link";
     referrerPolicy="no-referrer-when-downgrade"
   ></iframe>
 </div>
-     <p className="text-center text-lg-start">
+     <p className="text-center text-lg-start text-left">
       Opening Hours:<br />
       Saturday – Thursday  9:00 am – 2:30 pm <br />
       Friday: Closed 
@@ -165,7 +165,7 @@ import Link from "next/link";
     </p>
 
     {/* Google Map Embed */}
-    <div className="map-responsive mt-3 text-center text-lg-start">
+    <div className="map-responsive mt-3 text-center ">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.1234567890123!2d39.123456!3d21.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x403eb3afa0ca3bd7!2sHealthPlus%20Fertility%20%26%20Women%27s%20Health%20Center%20-%20Jeddah!5e0!3m2!1sen!2s!4v1695974523456!5m2!1sen!2s"
         width="90%"
@@ -176,7 +176,7 @@ import Link from "next/link";
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
-   <p className="text-center text-lg-start">
+   <p className="text-center text-lg-start text-left">
       Opening Hours:<br />
       Saturday – Thursday: 9 am – 8:30 pm <br />
       Friday: Closed 
@@ -196,7 +196,7 @@ Dharan Road,<br /> Al Mubarraz 36342
     </p>
 
     {/* Google Map Embed */}
-    <div className="map-responsive mt-3 text-center text-lg-start">
+    <div className="map-responsive mt-3 text-center ">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3603.0477616735334!2d49.572361099999995!3d25.4366667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDI2JzEyLjAiTiA0OcKwMzQnMjAuNSJF!5e0!3m2!1sen!2s!4v1765622876993!5m2!1sen!2s"
         width="90%"
@@ -207,7 +207,7 @@ Dharan Road,<br /> Al Mubarraz 36342
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
-   <p className="text-center text-lg-start">
+   <p className="text-center text-lg-start text-left">
       Opening Hours:<br />
       Saturday – Thursday: 7 am – 8 pm  <br />
       Friday: Closed 
@@ -236,6 +236,16 @@ Dharan Road,<br /> Al Mubarraz 36342
 
         </div>
         
+<style jsx>{`
+.text-left{
+        margin-left: 30px;
+}
+  @media (max-width: 768px) {
+.text-left{
+        margin-left: 0px;
+}
+  }
+`}</style>
       </div>
     </div>
     
