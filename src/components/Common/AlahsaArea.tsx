@@ -82,9 +82,21 @@ const Riyadharea = () => {
               className={`service-overview-content animate-left ${contentVisibleRiyadh ? "show" : ""}`}
             >
               <h2>Bnoon – Al Ahsa</h2>
-             <p>
-               Situated within Almoosa Specialist Hospital,<strong> Bnoon – Al Ahsa</strong> brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to offer an exceptional patient experience, combining advanced reproductive technologies with a compassionate, holistic model of care. 
-              </p>
+          <p>
+  Situated within{" "}
+  <strong>
+    <a
+      href="https://www.google.com/maps/place/Almoosa+Specialist+Hospital/data=!4m2!3m1!1s0x0:0xa8c655087d191645?sa=X&ved=1t:2428&ictx=111"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-decoration-none link-color"
+    >
+      Almoosa Specialist Hospital,
+    </a>
+  </strong>{" "}
+  Bnoon – Al Ahsa brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to offer an exceptional patient experience, combining advanced reproductive technologies with a compassionate, holistic model of care.
+</p>
+
               <p>
                As part of Bnoon’s growing national network, the Al Ahsa center reinforces our commitment to ensuring families across the Kingdom have access to the highest standards of reproductive medicine, delivered by leading IVF consultants in a state-of-the-art clinical environment. 
               </p>
@@ -94,17 +106,44 @@ const Riyadharea = () => {
                <p>
                <strong>Bnoon – Al Ahsa</strong> marks a significant step forward in elevating fertility care across the Eastern Region, uniting innovation, clinical excellence, and unwavering support for every family’s journey to parenthood. 
               </p>
-              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span className="text-color">Bnoon – Al Ahsa</span>
-                </div>
-              
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">info@bnoon.sa</span>
-                </div>
-              </div>
+            <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
+  {/* Location */}
+  <div className="d-flex align-items-center">
+    <img
+      src="/images/icons/location.svg"
+      alt="Location"
+      width={24}
+      height={24}
+      className="me-2"
+    />
+    <a
+      href="https://maps.app.goo.gl/JvtSAza6ZwKchCBP8"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-color text-decoration-none"
+    >
+      Bnoon – Al Ahsa
+    </a>
+  </div>
+
+  {/* Email */}
+  <div className="d-flex align-items-center">
+    <img
+      src="/images/icons/mail.svg"
+      alt="Email"
+      width={24}
+      height={24}
+      className="me-2"
+    />
+    <a
+      href="mailto:info@bnoon.sa"
+      className="text-color text-decoration-none"
+    >
+      info@bnoon.sa
+    </a>
+  </div>
+</div>
+
             </div>
           </div>
 
@@ -126,6 +165,13 @@ const Riyadharea = () => {
       
       </div>
          <style jsx global>{`
+         .link-color{
+          color: #000000ff;
+         }
+           a.text-color.text-decoration-none {
+    color: #004E78;
+     font-size: 18px !important;
+}
   span.text-color {
     color: #004E78 !important;
     font-size: 18px !important;
@@ -141,6 +187,10 @@ const Riyadharea = () => {
   }
     .image-loc{
 text-align: right;
+}
+  a.text-color.text-decoration-none {
+    color: #004E78;
+     font-size: 14px !important;
 }
   }
   }
