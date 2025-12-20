@@ -437,6 +437,11 @@ const handleTabClick = (tab: string) => {
     .treatment-text{
     font-size: 14px;
     }
+      .tabs-btn.active {
+    background-color: #004E78 !important;
+    color: #fff !important;
+    font-size: 14px !important;
+}
       }
 
   `}</style>
