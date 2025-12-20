@@ -74,25 +74,70 @@ const Jeddaharea = () => {
                 Accredited by the Joint Commission International (JCI), the center offers a comprehensive range of services, including IVF, ICSI, egg and sperm freezing, genetic testing, hormonal assessments, and advanced male and female fertility diagnostics. Leveraging the latest in medical technology, including time-lapse embryo monitoring, AI-driven treatment planning, and digital patient tracking, Bnoon Jeddah provides personalized, evidence-based care designed to maximize success rates and patient comfort.
               </p>
 
-              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">Bnoon – Jeddah</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 12 680 0800</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">info.jeddah@bnoon.sa</span>
-                </div>
-              </div>
+            <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
+  {/* Location */}
+  <div className="d-flex align-items-center">
+    <img
+      src="/images/icons/location.svg"
+      alt="Location"
+      width={24}
+      height={24}
+      className="me-2"
+    />
+    <a
+      href="https://maps.app.goo.gl/NkDABg6WD5Up3XCk7"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-color text-decoration-none"
+    >
+      Bnoon – Jeddah
+    </a>
+  </div>
+
+  {/* Phone */}
+  <div className="d-flex align-items-center">
+    <img
+      src="/images/icons/phone.svg"
+      alt="Phone"
+      width={24}
+      height={24}
+      className="me-2"
+    />
+    <a
+      href="tel:+966126800800"
+      className="text-color text-decoration-none"
+    >
+      +966 12 680 0800
+    </a>
+  </div>
+
+  {/* Email */}
+  <div className="d-flex align-items-center">
+    <img
+      src="/images/icons/mail.svg"
+      alt="Email"
+      width={24}
+      height={24}
+      className="me-2"
+    />
+    <a
+      href="mailto:info.jeddah@bnoon.sa"
+      className="text-color text-decoration-none"
+    >
+      info.jeddah@bnoon.sa
+    </a>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
       </div>
    <style jsx global>{`
+       a.text-color.text-decoration-none {
+    color: #004E78;
+     font-size: 18px !important;
+}
   span.text-color {
     color: #004E78 !important;
     font-size: 18px !important;
@@ -108,6 +153,10 @@ text-align: left;
   }
     .image-loc{
 text-align: right;
+}
+    a.text-color.text-decoration-none {
+    color: #004E78;
+     font-size: 14px !important;
 }
   }
 `}</style>
