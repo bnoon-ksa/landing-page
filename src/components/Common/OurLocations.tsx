@@ -231,9 +231,20 @@ const OurLocations = () => {
           <motion.div className="col-xl-6 col-md-12" variants={variantsLeft}>
             <div className="service-overview-content location-text">
               <h2>Bnoon – Al Ahsa </h2>
-              <p>
-                Situated within Almoosa Specialist Hospital,<strong> Bnoon – Al Ahsa</strong> brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to offer an exceptional patient experience, combining advanced reproductive technologies with a compassionate, holistic model of care.
-              </p>
+            <p>
+  Situated within{" "}
+  <strong>
+    <a
+      href="https://www.google.com/maps/place/Almoosa+Specialist+Hospital/data=!4m2!3m1!1s0x0:0xa8c655087d191645?sa=X&ved=1t:2428&ictx=111"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-decoration-none link-color"
+    >
+      Almoosa Specialist Hospital,
+    </a>
+  </strong>{" "}
+  Bnoon – Al Ahsa brings world-class fertility and women’s health services to the heart of Saudi Arabia’s Eastern Province. The center is designed to offer an exceptional patient experience, combining advanced reproductive technologies with a compassionate, holistic model of care.
+</p>
               <p>
                 As part of Bnoon’s growing national network, the Al Ahsa center reinforces our commitment to ensuring families across the Kingdom have access to the highest standards of reproductive medicine, delivered by leading IVF consultants in a state-of-the-art clinical environment.
               </p>
@@ -255,6 +266,9 @@ const OurLocations = () => {
         </motion.div>
       </div>
       <style jsx global>{`
+       .link-color{
+          color: #000000ff;
+         }
         a.text-color.text-decoration-none {
     color: #004E78;
      font-size: 18px !important;
