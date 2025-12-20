@@ -94,19 +94,42 @@ const Riyadharea = () => {
               </p>
 
               <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span className="text-color">Bnoon - Riyadh</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 11 444 8080</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">info@bnoon.sa</span>
-                </div>
-              </div>
+  {/* Location */}
+  <div className="d-flex align-items-center">
+    <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
+    <a
+      href="https://maps.app.goo.gl/xmFYp2uixqYFAT4TA"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-color text-decoration-none"
+    >
+      Bnoon - Riyadh
+    </a>
+  </div>
+
+  {/* Phone */}
+  <div className="d-flex align-items-center">
+    <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
+    <a
+      href="tel:+966114448080"
+      className="text-color text-decoration-none"
+    >
+      +966 11 444 8080
+    </a>
+  </div>
+
+  {/* Email */}
+  <div className="d-flex align-items-center">
+    <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
+    <a
+      href="mailto:info@bnoon.sa"
+      className="text-color text-decoration-none"
+    >
+      info@bnoon.sa
+    </a>
+  </div>
+</div>
+
             </div>
           </div>
 
@@ -152,7 +175,7 @@ const Riyadharea = () => {
                 <span style={{ fontSize: "18px" }}>(Opening Early 2026)</span>
               </h2>
               <p>
-                To further expand access and redefine the standard of fertility care in the Kingdom, Bnoon is developing a state-of-the-art 3,800 sqm flagship facility on King Salman Road in North Riyadh, scheduled to open by the end of 2025. Designed as one of the most advanced fertility and women’s health centers in the region, this next-generation hub will bring together fertility care, reproductive genetics, and comprehensive women’s health services under one roof.
+                To further expand access and redefine the standard of fertility care in the Kingdom, Bnoon is developing a state-of-the-art 3,800 sqm flagship facility on King Salman Road in North Riyadh, scheduled to open by early 2026. Designed as one of the most advanced fertility and women’s health centers in the region, this next-generation hub will bring together fertility care, reproductive genetics, and comprehensive women’s health services under one roof.
               </p>
               <p>
                 The flagship center will house cutting-edge IVF and embryology laboratories, equipped with the latest time-lapse embryo incubation systems, AI-powered embryo selection, genetic screening, and precision hormonal profiling. Every aspect of the patient journey — from digital consultations and treatment planning to real-time cycle tracking — will be optimized through smart health technologies and integrated platforms, ensuring efficiency, accuracy, and personalization at every step.
@@ -161,25 +184,52 @@ const Riyadharea = () => {
                 With a focus on clinical excellence, innovation, and patient-centered care, Bnoon – King Salman Road is envisioned to become a regional reference for fertility and reproductive science, supporting the broader ambitions of Saudi Vision 2030 to position the Kingdom as a hub for medical innovation and advanced healthcare delivery.
               </p>
 
-              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span className="text-color">Bnoon – King Salman Road</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 11 444 8080</span>
-                </div>
-                <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color"> info@bnoon.sa</span>
-                </div>
-              </div>
+             <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
+  {/* Location */}
+  <div className="d-flex align-items-center">
+    <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
+    <a
+      href="https://maps.app.goo.gl/GLLJ6v64BxJJbFEn9"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-color text-decoration-none"
+    >
+      Bnoon – King Salman Road
+    </a>
+  </div>
+
+  {/* Phone */}
+  <div className="d-flex align-items-center">
+    <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
+    <a
+      href="tel:+966114448080"
+      className="text-color text-decoration-none"
+    >
+      +966 11 444 8080
+    </a>
+  </div>
+
+  {/* Email */}
+  <div className="d-flex align-items-center">
+    <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
+    <a
+      href="mailto:info@bnoon.sa"
+      className="text-color text-decoration-none"
+    >
+      info@bnoon.sa
+    </a>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
       </div>
        <style jsx global>{`
+          a.text-color.text-decoration-none {
+    color: #004E78;
+     font-size: 18px !important;
+}
   span.text-color {
     color: #004E78 !important;
     font-size: 18px !important;
@@ -196,6 +246,10 @@ text-align: left;
   }
 .image-loc{
 text-align: right;
+}
+   a.text-color.text-decoration-none {
+    color: #004E78;
+     font-size: 14px !important;
 }
   }
 `}</style>
