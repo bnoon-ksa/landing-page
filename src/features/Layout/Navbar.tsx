@@ -40,10 +40,10 @@ function Navbar() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+const [mobileActive, setMobileActive] = useState(pathname);
+const [clickedItem, setClickedItem] = useState<string | null>(null); // click highlight
   const isActive = (href: string) => pathname === href;
   const isArabic = pathname.startsWith("/ar");
-
   return (
     <>
       <nav className="navbar navbar-expand-xl sticky" id="navbar" dir="rtl">
@@ -218,32 +218,50 @@ function Navbar() {
         <Offcanvas.Body className="d-flex flex-column justify-content-center align-items-center text-center">
         <ul className="list-unstyled w-100 px-3">
   {menus.map((item, index) => (
-    <li key={item.id} className="my-3 itmes">
-      <Link
-        href={
-          item.id === "english"
-            ? pathname.replace(/^\/ar/, "/en") // 👈 agar English ho to page switch kare
-            : item.href || "#"
-        }
-        className=" text-decoration-none d-block"
-        style={{ color: "#004E78" }}
+    <li key={item.id} className=" itmes">
+<Link
+  href={
+    item.id === "english"
+      ? pathname.replace(/^\/ar/, "/en")
+      : item.href || "#"
+  }
+className={`text-decoration-none d-block ${
+  clickedItem === item.href
+    ? "click-active"
+    : mobileActive === item.href
+    ? "active-btn"
+    : ""
+}`}
+  style={{
+  padding: "14px",
+}}
 
-        onClick={() => {
-          handleClose();
-          if (item.id === "english") return; // 👈 page auto handle karega
-          setTimeout(() => {
-            window.location.href = item.href;
-          }, 200);
-        }}
-      >
-        {item.title}
-      </Link>
+onClick={(e) => {
+  e.preventDefault();               // ⛔ instant navigation roko
+
+  setClickedItem(item.href || "");  // 🎯 CLICK color turant
+  setMobileActive(item.href || ""); // 🟢 page active
+
+  handleClose();                    // offcanvas band
+
+  setTimeout(() => {
+    window.location.href = item.href || "#";
+  }, 200);
+}}
+
+
+>
+  {item.title}
+</Link>
+
       {index !== menus.length - 1 && (
         <hr
-          style={{
-            border: "1px solid #0000005e",
-            margin: "12px 0",
-          }}
+      style={{
+  border: "1px solid #0000005e",
+  margin: "0px",
+}}
+
+
         />
       )}
     </li>
@@ -273,7 +291,43 @@ function Navbar() {
       </Offcanvas>
 
       <style jsx global>{`
+      .click-active {
+  background: #115479ff;   /* click color (light) */
+  color: #ffffff !important;
+}
 
+.active-btn {
+  background: #004E78;   /* active page color (dark) */
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.dropdown-menu .dropdown-item {
+    background: hsla(0, 0%, 100%, .2);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    margin: 6px 0px 0px;
+    padding: 6px 45px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-transition: background .3s ease;
+    -moz-transition: background.3s ease;
+    -o-transition: background.3s ease;
+    transition: background .3s ease;
+}
+    ul.dropdown-menu.show {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px !important;
+    width: 100%;
+    padding: 0px;
+    background-color: hsla(0, 0%, 100%, 0) !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px) !important;
+    border: 1px !important;
+    margin: 0px;
+}
       .navbar .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
@@ -373,12 +427,12 @@ li.itmes{
 }
   .navbar .navbar-brand {
       padding-left: 0px;
-      width: 110px;
-      height: 39px;
+      width: 130px;
+      height: 54px;
      padding-top: 0;
     padding-bottom: 0;
     padding-right: 0;
-    margin-left: 70px;
+    margin-left: 60px;
     margin-right: 10px !important;
     margin-top: 0px !important;
     margin-bottom: 0;
@@ -386,6 +440,16 @@ li.itmes{
     .space-mobile{
     
     }
+}
+@media (max-width: 767px) {
+  .active-btn {
+    background: #004E78 !important;
+    color: #ffffff !important;
+    padding: 14px 14px !important;
+    display: inline-block;
+    border-radius: 0px;
+    font-weight: 600;
+  }
 }
 
       `}</style>
