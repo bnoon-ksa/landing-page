@@ -9,6 +9,7 @@ const AppointmentSection = () => {
 
     interest: "",
     branch: "",
+     visitType: "",
     doctor: "",
     name: "",
     isForYou: "",  // 👈 yahan "yes" ki jagah empty rakho
@@ -416,6 +417,8 @@ const AppointmentSection = () => {
   const [isNationalityOpen, setIsNationalityOpen] = useState(false);
   const [isCountryOpen, setIsCountryOpen] = useState(false);
   const [isCityOpen, setIsCityOpen] = useState(false);
+const [isVisitTypeOpen, setIsVisitTypeOpen] = useState(false);
+const messageRef = useRef<HTMLParagraphElement>(null);
 
   const [isInterestOpen, setIsInterestOpen] = useState(false);
   const [message, setMessage] = useState<React.ReactNode>(null);
@@ -426,6 +429,11 @@ const AppointmentSection = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const [headerVisible, setHeaderVisible] = useState(false);
   const [isTimeOpen, setIsTimeOpen] = useState(false);
+useEffect(() => {
+  if (message && messageRef.current) {
+    messageRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}, [message]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -490,6 +498,7 @@ const AppointmentSection = () => {
         setFormData({
           interest: "",
           branch: "",
+           visitType: "",
           doctor: "",
           name: "",
           isForYou: "",
@@ -693,6 +702,77 @@ const AppointmentSection = () => {
 
             </div>
 
+{/* Select Visit Type */}
+<div className="row g-3">
+  <div className="custom-dropdown mb-3" style={{ position: "relative", padding: "0px" }}>
+    <label className="appointmentform-label">
+ اختر نوع الزيارة (زيارة العيادة أو استشارة عن بُعد)
+{" "}
+      <span style={{ color: submitted && !formData.visitType ? "red" : "black" }}>*</span>
+    </label>
+
+    {/* Button */}
+    <button
+      type="button"
+      className={`form-control ${submitted && !formData.visitType ? "is-invalid" : ""}`}
+      onClick={() => setIsVisitTypeOpen((prev) => !prev)}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        color: formData.visitType ? "#000" : "#808080",
+        padding: "6px 12px",
+        cursor: "pointer",
+      }}
+    >
+      <span>{formData.visitType || "اختر نوع الزيارة"}</span>
+      <img
+        src="/images/arrow.png"
+        alt="arrow"
+        style={{ width: "16px", height: "16px" }}
+      />
+    </button>
+
+    {/* Dropdown List */}
+    {isVisitTypeOpen && (
+      <ul
+        style={{
+          position: "absolute",
+          top: "100%",
+          left: 0,
+          right: 0,
+          border: "1px solid #ccc",
+          background: "#fff",
+          zIndex: 20,
+          listStyle: "none",
+          margin: 0,
+          padding: 0,
+          borderRadius: "4px",
+          maxHeight: "200px",
+          overflowY: "auto",
+        }}
+      >
+        {["زيارة إلى العيادة", "استشارة عن بُعد (افتراضية)"].map((type) => (
+          <li
+            key={type}
+            onClick={() => {
+              setFormData((prev) => ({ ...prev, visitType: type }));
+              setIsVisitTypeOpen(false);
+            }}
+            style={{
+              padding: "8px",
+              cursor: "pointer",
+              background: formData.visitType === type ? "#004E78" : "#fff",
+              color: formData.visitType === type ? "#fff" : "#212529",
+            }}
+          >
+            {type}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</div>
 
             {/* Doctor */}
             <div className="row g-3">
@@ -923,6 +1003,11 @@ const AppointmentSection = () => {
                 )}
               </div>
             </div>
+ {message && (
+  <p ref={messageRef} className="mt-3 text-center">
+    {message}
+  </p>
+)}
 
             {/* Country of Residence */}
             <div className="row g-3">
