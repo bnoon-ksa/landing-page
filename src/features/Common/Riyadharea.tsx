@@ -95,18 +95,19 @@ const Riyadharea = () => {
 
                 العالمية — ما يعكس التزامه الثابت بتقديم أفضل النتائج الممكنة۔   </p>
 
-              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
+           
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span className="text-color">بنون – الرياض</span>
+                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <a href="https://maps.app.goo.gl/Vq76jVMZzSNhAg1A9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الرياض</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 11 444 8080</span>
+                  <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">info@bnoon.sa</span>
+                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                 <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
             </div>
@@ -128,7 +129,7 @@ const Riyadharea = () => {
         </div>
 
         {/* King Salman Road Section */}
-        <div className="row justify-content-center align-items-center g-4 flex-column-reverse flex-md-row mt-5">
+        <div id="king-salman-section" className="row justify-content-center align-items-center g-4 flex-column-reverse flex-md-row mt-5">
           <div className="col-xl-6 col-md-12  image-loc">
             <div
               ref={imageRefKing}
@@ -153,7 +154,7 @@ const Riyadharea = () => {
                 <span style={{ fontSize: "16px" }}>(الافتتاح: ديسمبر 2025) </span>
               </h2>
               <p>
-                ضمن خطتها لتوسيع الوصول إلى علاجات الإخصاب عالية المستوى في المملكة، تعمل "بنون" على تطوير منشأة طبية متكاملة بمساحة 3,800 متر مربع في شمال الرياض على طريق الملك سلمان، والمقرّر افتتاحها نهاية عام 2025۔
+                ضمن خطتها لتوسيع الوصول إلى علاجات الإخصاب عالية المستوى في المملكة، تعمل "بنون" على تطوير منشأة طبية متكاملة بمساحة 3,800 متر مربع في شمال الرياض على طريق الملك سلمان، والمقرّر مطلع عام 2026۔
 
                 هذا المركز الرائد صُمّم ليكون من بين أكثر مراكز الخصوبة تطوراً في المنطقة، حيث يجمع تحت سقف واحد بين رعاية الإخصاب، علم الوراثة الإنجابي، وخدمات شاملة لصحة المرأة والرجل۔
               </p>
@@ -165,18 +166,18 @@ const Riyadharea = () => {
               </p>
               <p>
                 "بنون – طريق الملك سلمان" لا يهدف فقط إلى تقديم خدمة طبية، بل يسعى ليكون مرجعاً إقليمياً في طب الإخصاب، ومنصة تواكب تطلعات رؤية السعودية 2030 في الريادة الصحية والابتكار الطبي۔</p>
-              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
-                  <span className="text-color">بنون – شمال الرياض (قريبًا) </span>
+                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                 <a href="https://maps.app.goo.gl/TPcaKT339w6bEBub6" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – طريق الملك سلمان</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 11 444 8080</span>
+                  <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                 <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">info@bnoon.sa</span>
+                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
             </div>
@@ -184,6 +185,15 @@ const Riyadharea = () => {
         </div>
       </div>
        <style jsx global>{`
+          .hospital-link {
+    color: #404040;
+}
+ a.text-color {
+    color: #004E78 !important;
+    margin-right:10px;
+        direction: ltr;
+
+  }
   span.text-color {
     color: #004E78 !important;
     font-size: 16px !important;
