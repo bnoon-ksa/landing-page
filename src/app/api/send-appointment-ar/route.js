@@ -28,9 +28,10 @@ if (data.branch === "Riyadh" || data.branch === "الرياض") {
       from: `"طلب موعد" <bnooninfo@gmail.com>`,
       to: recipient,
       subject: `طلب جديد لحجز موعد - ويبسايت ${data.branch}`,
-      html: `<h3>تفاصيل الموعد</h3>
+     html: `<h3>تفاصيل الموعد</h3>
              <p><b>الاهتمام:</b> ${data.interest}</p>
              <p><b>الفرع:</b> ${data.branch}</p>
+             <p><b>نوع الزيارة:</b> ${data.visitType}</p>
              <p><b>الطبيب:</b> ${data.doctor}</p>
              <p><b>الاسم:</b> ${data.name}</p>
              <p><b>هل الموعد لك شخصيًا؟:</b> ${data.isForYou === "yes" ? "نعم" : "لا"}</p>
@@ -44,6 +45,7 @@ if (data.branch === "Riyadh" || data.branch === "الرياض") {
              <p><b>الوقت المفضل:</b> ${data.preferredTime}</p>
              <p><b>كيف سمعت عنا:</b> ${data.howHeard}</p>`
     });
+
 
     return new Response(JSON.stringify({ success: true, message: "تم حفظ الطلب وإرسال البريد!" }), { status: 200 });
   } catch (error) {
