@@ -12,6 +12,40 @@ const SearchBar = () => {
 
   const headerRef = useRef<HTMLHeadingElement>(null);
   const [headerVisible, setHeaderVisible] = useState(false);
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as HTMLElement;
+
+    const doctorMenu = document.querySelector(".doctor-menu");
+    const locationMenu = document.querySelector(".location-menu");
+
+    // Close doctor menu if click is outside
+    if (
+      doctorMenu &&
+      !doctorMenu.contains(target) &&
+      !target.classList.contains("doctor-select") &&
+      doctorMenu.classList.contains("open")
+    ) {
+      doctorMenu.classList.remove("open");
+    }
+
+    // Close location menu if click is outside
+    if (
+      locationMenu &&
+      !locationMenu.contains(target) &&
+      !target.classList.contains("location-select") &&
+      locationMenu.classList.contains("open")
+    ) {
+      locationMenu.classList.remove("open");
+    }
+  };
+
+  document.addEventListener("click", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("click", handleClickOutside);
+  };
+}, []);
 
   // ✅ Intersection Observer for heading animation
   useEffect(() => {
@@ -125,8 +159,8 @@ const doctorsToShow =
           </h2>
           <p>
             من خلال الموقع الإلكتروني لدينا، نساعدك على التواصل مع نخبة من
-            أطبائنا الرائدين المختصين بعلاجات الإخصاب ومقدمي الرعاية الصحية
-            لدينا۔
+     أطبائنا الرائدين المختصين بعلاجات الإخصاب 
+          ۔
           </p>
         </div>
 
