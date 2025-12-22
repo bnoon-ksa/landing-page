@@ -7,6 +7,7 @@ const AppointmentSection = () => {
   const [formData, setFormData] = useState({
     interest: "",
     branch: "",
+    visitType: "",
     doctor: "",
     name: "",
     isForYou: "",
@@ -27,6 +28,8 @@ const [isNationalityOpen, setIsNationalityOpen] = useState(false);
 const [isCountryOpen, setIsCountryOpen] = useState(false);
 const [isHowHeardOpen, setIsHowHeardOpen] = useState(false);
 const [isTimeOpen, setIsTimeOpen] = useState(false);
+const [isVisitTypeOpen, setIsVisitTypeOpen] = useState(false);
+const messageRef = useRef<HTMLParagraphElement | null>(null);
 
 const [isOpen, setIsOpen] = useState(false);
 const [message, setMessage] = useState<React.ReactNode>(null);
@@ -80,9 +83,18 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   (key) => !(formData as Record<string, string>)[key]
 );
   if (hasEmpty) {
-    setMessage("❌ Please fill all required fields.");
-    return;
-  }
+  setMessage("❌ Please fill all required fields.");
+
+  setTimeout(() => {
+    messageRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }, 100);
+
+  return;
+}
+
 
   try {
     const response = await fetch("/api/send-appointment", {
@@ -104,10 +116,16 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
    <em>We look forward to connecting with you soon.</em>
   </>
 );
-
+setTimeout(() => {
+    messageRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }, 100);
       setFormData({
         interest: "",
         branch: "",
+        visitType: "",
         doctor: "",
         name: "",
         isForYou: "",
@@ -304,6 +322,76 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     </ul>
   )}
 </div>
+
+{/* Type of Visit */}
+<div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    Select Type of Visit{" "}
+    <span style={{ color: isFieldInvalid("visitType") ? "red" : "black" }}>
+      *
+    </span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    className={`form-control ${isFieldInvalid("visitType") ? "is-invalid" : ""}`}
+    onClick={() => setIsVisitTypeOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      color: formData.visitType ? "#000" : "#808080",
+      padding: "6px 12px",
+    }}
+  >
+    <span>{formData.visitType || "Select visit type"}</span>
+
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown List */}
+  {isVisitTypeOpen && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+      }}
+    >
+      {["Clinic Visit", "Teleconsultation"].map((type) => (
+        <li
+          key={type}
+          onClick={() => {
+            setFormData((prev) => ({ ...prev, visitType: type }));
+            setIsVisitTypeOpen(false);
+          }}
+          style={{
+            padding: "8px",
+            cursor: "pointer",
+            background: formData.visitType === type ? "#004E78" : "#fff",
+            color: formData.visitType === type ? "#fff" : "#212529",
+          }}
+        >
+          {type}
+        </li>
+      ))}
+    </ul>
+  )}
+</div>
+
 
           {/* Doctor */}
      <div className="mb-3" style={{ position: "relative" }}>
@@ -521,6 +609,14 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     </ul>
   )}
 </div>
+  {message && (
+  <p
+    ref={messageRef}
+    className="mt-3 text-center"
+  >
+    {message}
+  </p>
+)}
 
 
           {/* Country */}
@@ -846,7 +942,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
           </div>
 
-          {message && <p className="mt-3 text-center">{message}</p>}
+       
         </form>
         {/* FORM END */}
      
