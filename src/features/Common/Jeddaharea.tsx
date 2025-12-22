@@ -80,19 +80,18 @@ const Jeddaharea = () => {
               <p>
 
                 ويعتمد المركز على تقنيات حديثة تشمل أنظمة مراقبة الأجنّة بتقنية التايم لابس، تخطيط علاجي مدعوم بالذكاء الاصطناعي، ومنصات رقمية لمتابعة المريض، مما يوفّر تجربة علاجية شخصية ترتكز على الأدلة العلمية وتُعزّز من راحة المرضى بمعدلات نجاح تتماشى مع النسب العالمية۔</p>
-
-              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
+  <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">بنون – جدة</span>
+                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <a href="https://maps.app.goo.gl/8Qt27cRjD7noBcuU9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – جدة</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 12 680 0800</span>
+                  <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                   <a href="tel:+966114448080" className="text-color">+966 12 680 0800</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">info.jeddah@bnoon.sa</span>
+                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <a href="mailto:info@bnoon.sa" className="text-color">info.jeddah@bnoon.sa</a>
                 </div>
               </div>
             </div>
@@ -100,6 +99,15 @@ const Jeddaharea = () => {
         </div>
       </div>
   <style jsx global>{`
+    .hospital-link {
+    color: #404040;
+}
+ a.text-color {
+    color: #004E78 !important;
+    margin-right:10px;
+        direction: ltr;
+
+  }
   span.text-color {
     color: #004E78 !important;
     font-size: 16px !important;
