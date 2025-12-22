@@ -1,7 +1,10 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // <- use next/navigation in Next 14+
 
 const Riyadharea = () => {
+  const router = useRouter(); // correct for Next 14+
+
   const imageRiyadh = "/images/locations/bnoon-riyadh.avif";
   const imageKingSalman = "/images/locations/bnoon-north-riiyadh.avif";
 
@@ -15,6 +18,16 @@ const Riyadharea = () => {
   const [contentVisibleKing, setContentVisibleKing] = useState(false);
   const [imageVisibleKing, setImageVisibleKing] = useState(false);
 
+  // Scroll to King Salman section if URL has hash
+  useEffect(() => {
+    const path = window.location.hash; // use window.location.hash instead
+    if (path === "#king-salman-section") {
+      const element = document.getElementById("king-salman-section");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
  useEffect(() => {
   // Riyadh content
   const observerContentRiyadh = new IntersectionObserver(
@@ -149,7 +162,7 @@ const Riyadharea = () => {
         </div>
 
         {/* King Salman Road Section */}
-        <div className="row justify-content-center align-items-center g-4 mt-5 flex-column-reverse flex-md-row">
+        <div id="king-salman-section"  className="row justify-content-center align-items-center g-4 mt-5 flex-column-reverse flex-md-row">
           <div className="col-xl-6 col-md-12 image-loc" style={{
               }}>
             <div
