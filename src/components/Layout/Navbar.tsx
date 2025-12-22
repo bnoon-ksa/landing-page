@@ -249,7 +249,7 @@ function Navbar() {
         ) : (
           <Link
             href={pathname.replace(/^\/en/, "/ar")}
-            className="fs-5 text-decoration-none d-block lang-switch"
+            className="fs-5 text-decoration-none d-block mob-lang-switch"
             style={{ color: "#004E78" }}
             onClick={() => {
   handleClose();
@@ -420,8 +420,9 @@ ul.dropdown-menu.show {
     margin: 0;
 }
 
-.lang-switch{
+.mob-lang-switch{
 font-family: Alexandria !important;
+font-size:16px !important;
 }
 .active-btn {
     background: #004E78 !important;
