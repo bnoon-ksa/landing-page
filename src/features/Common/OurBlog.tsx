@@ -33,18 +33,18 @@ const OurBlog = () => {
 
       slug: "https://maps.app.goo.gl/F9Qu7tQQp74TTyNv9?g_st=iwb",
       embedMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.3583391235643!2d46.59119140000001!3d24.8174163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee69d1c7fb897%3A0x46a86841c1f1d0e8!2zUlJRQTQxNTAsIDQxNTAgS2luZyBTYWxtYW4gQmluIEFiZHVsYXppeiBSZCwgNjkzMtiMINit2Yog2KfZhNmC2YrYsdmI2KfZhtiMIFJpeWFkaCAxMzUzMiwgU2F1ZGkgQXJhYmlh!5e0!3m2!1sen!2s!4v1762873544370!5m2!1sen!2s",
-      buttonLink: "ar/our-clinics",
+      buttonLink: "ar/bnoon-riyadh#king-salman-section",
       description: `ضمن خطتها لتوسيع الوصول إلى علاجات الإخصاب عالية المستوى في المملكة، تعمل "بنون" على تطوير منشأة طبية متكاملة بمساحة 3,800 متر مربع في شمال الرياض على طريق الملك سلمان، والمقرّر افتتاحها نهاية...`,
   },
     {
       id: 4,
-      imageSrc: "images/blog/bnoon-alahsa.jpg",
+      imageSrc: "images/blog/bnoon-alahsa-img.jpg",
       title: ` بنون – الأحساء`,
 
       slug: "https://maps.app.goo.gl/N4qVpDH22TnbpVDV7",
       embedMap: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3603.0477616735334!2d49.572361099999995!3d25.4366667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDI2JzEyLjAiTiA0OcKwMzQnMjAuNSJF!5e0!3m2!1sen!2s!4v1765645696414!5m2!1sen!2s",
       buttonLink: "ar/bnoon-alahsa",
-      description: `يقدّم مركز بنون – الأحساء الواقع داخل مستشفى الموسى التخصصي خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية. وقد صُمّم المركز ليمنح المرضى تجربة علاجية متميّزة تجمع بين أحدث التقنيات في الطب...`
+  description: `يقدّم مركز بنون – الأحساء الواقع داخل <strong><a href="https://maps.app.goo.gl/4G2Wz3ieLqPfZdee6" target="_blank" rel="noopener noreferrer" class="hospital-link">مستشفى الموسى التخصصي</a></strong> خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية. وقد صُمّم المركز ليمنح المرضى تجربة علاجية متميّزة تجمع بين أحدث التقنيات في الطب...`
 
        },
   ];
@@ -106,7 +106,8 @@ const OurBlog = () => {
                     ></a>
                   </h3>
 
-                  <p>{post.description}</p>
+                 <p dangerouslySetInnerHTML={{ __html: post.description }}></p>
+
 
                   {/* Button links to internal page */}
                   <Link href={post.buttonLink} className="btn btn-success btn-blog">
@@ -120,6 +121,9 @@ const OurBlog = () => {
         </div>
       </div>
       <style jsx global>{`
+      .hospital-link {
+    color: #404040;
+}
             .blog-card .content p {
   font-size: 14px !important;      /* font size kam */
   line-height: 1.5;    /* line height kam */
@@ -148,12 +152,12 @@ width:450px;
     flex-direction: column;
     justify-content: space-between;
     height: 100%; /* important for same height in grid */
-    min-height: 200px; /* adjust according to design */
+    min-height: 250px; /* adjust according to design */
 }
 
 /* Make image area fixed height */
 .blog-card .image {
-    height: 300px; /* all images/iframes same height */
+    height: 250px; /* all images/iframes same height */
     overflow: hidden;
 }
 .blog-card .image img {
@@ -162,7 +166,7 @@ width:450px;
     display: block;
 }
 .blog-card .image {
-    height: 220px; /* desktop height */
+    height: 250px; /* desktop height */
     overflow: hidden;
 }
 .blog-card .image img,
