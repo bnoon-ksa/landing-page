@@ -11,11 +11,11 @@ export async function POST(req) {
 
   const recipient =
   data.branch === "Riyadh"
-    ? "appointments@bnoon.sa"
+    ? "websitedesignbahrain@gmail.com"
     : data.branch === "Jeddah"
-    ? "appointments.jeddah@bnoon.sa"
+    ? "amelliadawson@gmail.com"
     : data.branch === "Al Ahsa"
-    ? "callcenter.alahsa@bnoon.sa"
+    ? "zulaikhakhalid18@gmail.com"
     : "";
 
     const transporter = nodemailer.createTransport({
@@ -31,9 +31,10 @@ export async function POST(req) {
       to: recipient,
       subject: `New Appointment Request - Website (${data.branch})`,
       html: `
-        <h3>Appointment Details</h3>
+          <h3>Appointment Details</h3>
         <p><b>I am interested in:</b> ${data.interest}</p>
         <p><b>Branch:</b> ${data.branch}</p>
+        <p><b>Select Type of Visit:</b> ${data.visitType}</p>
         <p><b>Doctor:</b> ${data.doctor}</p>
         <p><b>Name:</b> ${data.name}</p>
         <p><b>Is this appointment for you?:</b> ${data.isForYou}</p>
@@ -61,3 +62,4 @@ export async function POST(req) {
     );
   }
 }
+
