@@ -70,9 +70,20 @@ const Alahsaharea = () => {
 
                 بنون – الأحساء
               </h2>
-              <p>
-              يقدّم مركز بنون – الأحساء الواقع داخل مستشفى الموسى التخصصي خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية. وقد صُمّم المركز ليمنح المرضى تجربة علاجية متميّزة تجمع بين أحدث التقنيات في الطب الإنجابي ورعاية متكاملة تُعنى بكل تفاصيل رحلة الزوجين.    </p>
-              <p>
+                  <p>
+  يقدّم مركز بنون – الأحساء الواقع داخل{' '}
+  <strong>
+    <a 
+      href="https://maps.app.goo.gl/cVqj4k52ByKk8pS2A" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="hospital-link"
+    >
+      مستشفى الموسى التخصصي
+    </a>
+  </strong>{' '}
+  خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية. وقد صُمّم المركز ليمنح المرضى تجربة علاجية متميّزة تجمع بين أحدث التقنيات في الطب الإنجابي ورعاية متكاملة تُعنى بكل تفاصيل رحلة الزوجين.
+</p>   <p>
             ويمثّل هذا المركز جزءاً من شبكة بنون المتنامية، والتي تهدف إلى توفير خدمات الخصوبة المتقدمة لكافة أنحاء المملكة، من خلال فريق من استشاريي أطفال الأنابيب ذوي الخبرة، وبيئة طبية متطورة تُطبق أفضل الممارسات العالمية.   </p>
               <p>
             يضم بنون – الأحساء مختبرات أجنة حديثة تعتمد تقنيات دقيقة في مراقبة الأجنة واختيارها، كما يقدّم مجموعة شاملة من الخدمات تشمل: التلقيح الصناعي والحقن المجهري والتلقيح داخل الرحم وحفظ وتجميد البويضات والحيوانات المنوية، والفحوصات الجينية قبل الزرع (PGT-AI) واضطرابات الغدد التناسلية وتشخيصات دقيقة لحالات العقم لدى النساء والرجال.   </p>
@@ -81,14 +92,13 @@ const Alahsaharea = () => {
 <p>يمثّل بنون – الأحساء نقلة نوعية في تطوير خدمات الخصوبة بالمنطقة الشرقية، إذ يجمع بين الابتكار الطبي، والتميّز الطبي، والالتزام بدعم كل أسرة في رحلتها نحو الأمومة والأبوة. </p>
                <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">بنون – الأحساء</span>
+                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                 <a href="https://maps.app.goo.gl/HJVWsJkXzVNvk4bn7" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الأحساء </a>
                 </div>
-               
+              
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
-                  <span className="text-color">
-info@bnoon.sa</span>
+                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                   <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
             </div>
@@ -97,6 +107,15 @@ info@bnoon.sa</span>
       </div>
 
  <style jsx global>{`
+   .hospital-link {
+    color: #404040;
+}
+ a.text-color {
+    color: #004E78 !important;
+    margin-right:10px;
+        direction: ltr;
+
+  }
   span.text-color {
     color: #004E78 !important;
     font-size: 16px !important;
@@ -121,5 +140,4 @@ text-align: left;
 };
 
 export default  Alahsaharea;
-
 
