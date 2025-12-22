@@ -46,15 +46,15 @@ const OurLocations = () => {
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
-                  <span className="text-color">بنون – الرياض</span>
+                  <a href="https://maps.app.goo.gl/Vq76jVMZzSNhAg1A9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الرياض</a>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 11 444 8080</span>
+                  <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
-                  <span className="text-color">info@bnoon.sa</span>
+                 <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
             </div>
@@ -102,15 +102,15 @@ const OurLocations = () => {
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
-                  <span className="text-color">بنون – جدة</span>
+                  <a href="https://maps.app.goo.gl/8Qt27cRjD7noBcuU9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – جدة</a>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 12 680 0800</span>
+                   <a href="tel:+966114448080" className="text-color">+966 12 680 0800</a>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
-                  <span className="text-color">info.jeddah@bnoon.sa</span>
+                  <a href="mailto:info@bnoon.sa" className="text-color">info.jeddah@bnoon.sa</a>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ const OurLocations = () => {
                 <span style={{ fontSize: "18px" }}>(الافتتاح: ديسمبر 2025)</span>
               </h2>
               <p>
-                ضمن خطتها لتوسيع الوصول إلى علاجات الإخصاب عالية المستوى في المملكة، تعمل "بنون" على تطوير منشأة طبية متكاملة بمساحة 3,800 متر مربع في شمال الرياض على طريق الملك سلمان، والمقرّر افتتاحها نهاية عام 2025.
+                ضمن خطتها لتوسيع الوصول إلى علاجات الإخصاب عالية المستوى في المملكة، تعمل "بنون" على تطوير منشأة طبية متكاملة بمساحة 3,800 متر مربع في شمال الرياض على طريق الملك سلمان، والمقرّر مطلع عام 2026.
               </p>
               <p>
                 هذا المركز الرائد صُمّم ليكون من بين أكثر مراكز الخصوبة تطوراً في المنطقة، حيث يجمع تحت سقف واحد بين رعاية الإخصاب، علم الوراثة الإنجابي، وخدمات شاملة لصحة المرأة والرجل.
@@ -145,15 +145,15 @@ const OurLocations = () => {
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
-                  <span className="text-color">بنون – طريق الملك سلمان</span>
+                 <a href="https://maps.app.goo.gl/TPcaKT339w6bEBub6" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – طريق الملك سلمان</a>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
-                  <span className="text-color">+966 11 444 8080</span>
+                 <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
-                  <span className="text-color">info@bnoon.sa</span>
+                  <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
             </div>
@@ -190,8 +190,21 @@ const OurLocations = () => {
 
                 بنون – الأحساء
               </h2>
-              <p>
-              يقدّم مركز بنون – الأحساء الواقع داخل مستشفى الموسى التخصصي خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية. وقد صُمّم المركز ليمنح المرضى تجربة علاجية متميّزة تجمع بين أحدث التقنيات في الطب الإنجابي ورعاية متكاملة تُعنى بكل تفاصيل رحلة الزوجين.    </p>
+             <p>
+  يقدّم مركز بنون – الأحساء الواقع داخل{' '}
+  <strong>
+    <a 
+      href="https://maps.app.goo.gl/cVqj4k52ByKk8pS2A" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="hospital-link"
+    >
+      مستشفى الموسى التخصصي
+    </a>
+  </strong>{' '}
+  خدمات رعاية الخصوبة وصحة المرأة بمعايير عالمية، ليكون الوجهة الأولى للعائلات في المنطقة الشرقية في السعودية. وقد صُمّم المركز ليمنح المرضى تجربة علاجية متميّزة تجمع بين أحدث التقنيات في الطب الإنجابي ورعاية متكاملة تُعنى بكل تفاصيل رحلة الزوجين.
+</p>
+
               <p>
             ويمثّل هذا المركز جزءاً من شبكة بنون المتنامية، والتي تهدف إلى توفير خدمات الخصوبة المتقدمة لكافة أنحاء المملكة، من خلال فريق من استشاريي أطفال الأنابيب ذوي الخبرة، وبيئة طبية متطورة تُطبق أفضل الممارسات العالمية.   </p>
               <p>
@@ -202,12 +215,12 @@ const OurLocations = () => {
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
-                  <span className="text-color">بنون – الأحساء </span>
+                 <a href="https://maps.app.goo.gl/HJVWsJkXzVNvk4bn7" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الأحساء </a>
                 </div>
               
                 <div className="d-flex align-items-center">
                   <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
-                  <span className="text-color">info@bnoon.sa</span>
+                   <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
             </div>
@@ -215,9 +228,14 @@ const OurLocations = () => {
         </motion.div>
       </div>
         <style jsx global>{`
-  span.text-color {
+        .hospital-link {
+    color: #404040;
+}
+ a.text-color {
     color: #004E78 !important;
     margin-right:10px;
+        direction: ltr;
+
   }
     .location-text h2{
     margin-bottom: 10px;
@@ -244,7 +262,7 @@ const OurLocations = () => {
         margin-right: auto;
         text-align:center;
     }
-         span.text-color {
+         a.text-color {
     color: #004E78 !important;
     font-size:14px;
     margin-right:10px;
