@@ -10,12 +10,12 @@ export async function POST(req) {
     const saved = await AppointmentEN.create(data);
 
   const recipient =
-  data.branch === "Riyadh"
-    ? "websitedesignbahrain@gmail.com"
+ data.branch === "Riyadh"
+    ? "appointments@bnoon.sa"
     : data.branch === "Jeddah"
-    ? "amelliadawson@gmail.com"
+    ? "appointments.jeddah@bnoon.sa"
     : data.branch === "Al Ahsa"
-    ? "zulaikhakhalid18@gmail.com"
+    ? "callcenter.alahsa@bnoon.sa"
     : "";
 
     const transporter = nodemailer.createTransport({
@@ -62,4 +62,5 @@ export async function POST(req) {
     );
   }
 }
+
 
