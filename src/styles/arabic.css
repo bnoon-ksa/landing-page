@@ -15906,6 +15906,7 @@ border-radius: 0 !important;
 }
 .media-banner{
 background-color: #d7f2fb !important;
+padding: 0px 0px 10px;
 }
 /*================================================
 How It Works Area CSS
@@ -19355,14 +19356,21 @@ ease;
     color: #404040;
     font-size: 16px;
         margin: 0px;
-
 }
 .telemedicine-title{
 font-size:30px !important;
-
+}
+.loc-text{
+  font-weight: 600 !important;
+}
+.map-text{
+  margin-right:30px;
 }
 /* ✅ Mobile responsive */
 @media (max-width: 768px) {
+   .map-text{
+  margin-right: 20px;
+}
     .appointment-form {
     border: 1px solid #00000036;
     border-radius: 10px;
@@ -19377,6 +19385,7 @@ font-size:30px !important;
   }
 }
   @media (max-width: 767px) {
+    
    .breadcrumb-item {
     font-weight: normal !important;
     font-size:12px;
