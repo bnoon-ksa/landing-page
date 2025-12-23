@@ -118,6 +118,7 @@ const footerData: FooterData = {
         { text: "Treatments", url: "/en/treatments" },
         { text: "Wa'ad Bnoon Program", url: "/en/waad-bnoon-program" },
         { text: "Your First Visit", url: "/en/your-visit" },
+        { text: "Telemedicine", url: "/en/telemedicine" },
          { text: "Fertility Guide", url: "/en/fertility-guide" },
         { text: "Patients' Rights & Responsibilities", url: "/en/patients-rights" },
          { text: "Contact Us", url: "/en/contact-us" },
