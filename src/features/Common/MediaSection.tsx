@@ -13,7 +13,7 @@ const AboutusSection = () => {
   ];
 
   return (
-    <div className=" media-banner ptb-140">
+    <div className=" media-banner">
       <div className="container">
         <div className="container-fluid section-title">
           <div className="row justify-content-center align-items-center g-4">
