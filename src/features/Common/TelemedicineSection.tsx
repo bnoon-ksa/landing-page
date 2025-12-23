@@ -137,13 +137,7 @@ const AboutusSection = () => {
             <div className="col-lg-12 col-md-12">
               <div className="left">
                 <h2 className="mb-2">كيف تعمل الخدمة؟ </h2>
-                <motion.p
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
-                  variants={slideInRight}
-                >
-                  يمكنك التواصل مع مركز الاتصال لدينا على الرقم 920010022 أو تعبئة نموذج طلب الموعد عبر الموقع الإلكتروني، وسيقوم فريقنا بالتواصل معك لتأكيد الموعد وشرح الخطوات التالية. </motion.p>
+             
                 <ul className="values-list mt-3">
                   {values2.map((value2, index) => (
                     <li key={index} className="d-flex align-items-center mb-2">
