@@ -19430,6 +19430,12 @@ label {
     display: inline-block;
     color: #000;
 }
+.telemedicine-overview-content{
+ font-size: 28px ;
+    font-weight: normal ;
+    color: #004E78 ;
+     padding: 10px 0px 0px;
+}
 @media (max-width: 768px) {
   .appointment-form {
     border: 1px solid #00000036;
@@ -19444,5 +19450,11 @@ label {
   .page-banner-area {
     
     background-position: 28% !important;
+}
+  .telemedicine-overview-content{
+ font-size: 14px ;
+    font-weight: normal ;
+    color: #004E78 ;
+     padding: 10px 0px 0px;
 }
 }
