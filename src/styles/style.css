@@ -19438,6 +19438,17 @@ label {
     color: #004E78 ;
      padding: 10px 0px 0px;
 }
+  ul.values-list.mt-3 {
+   padding: 0;
+    color: #404040;
+    font-size: 18px;
+        margin: 0px;
+
+}
+.telemedicine-title{
+font-size:36px !important;
+
+}
 @media (max-width: 768px) {
   .appointment-form {
     border: 1px solid #00000036;
@@ -19463,5 +19474,11 @@ label {
    padding: 0;
     color: #404040;
     font-size: 14px;
+        margin: 0px;
+
+}
+.telemedicine-title{
+font-size:20px !important;
+
 }
 }
