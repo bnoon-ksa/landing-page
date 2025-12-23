@@ -432,8 +432,8 @@ li.itmes{
      padding-top: 0;
     padding-bottom: 0;
     padding-right: 0;
-    margin-left: 60px;
-    margin-right: 10px !important;
+    margin-left: 56px;
+    margin-right: 5px !important;
     margin-top: 0px !important;
     margin-bottom: 0;
   }
