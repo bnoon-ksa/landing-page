@@ -78,7 +78,7 @@ const ContactUsSection = () => {
                 height={80}
                 className="mb-3"
               />
-              <h5 className="mb-3">احجزوا موعدكم </h5>
+              <h5 className="mb-3 loc-text">احجزوا موعدكم </h5>
               <Link href="request-an-appoinment" className="btn btn-primary mb-3 contact-btn">
                 انقر هنا
               </Link>
@@ -99,7 +99,7 @@ const ContactUsSection = () => {
                 height={80}
                 className="mb-3"
               />
-              <h5 className="mb-3">تفضلون التحدث معنا مباشرة؟ </h5>
+              <h5 className="mb-3 loc-text">تفضلون التحدث معنا مباشرة؟ </h5>
               <Link href="request-an-appoinment" className="btn btn-primary mb-3 contact-btn">
                 اتصلوا بنا
               </Link>
@@ -140,7 +140,7 @@ const ContactUsSection = () => {
               </p>
 
               {/* Google Map Embed */}
-              <div className="map-responsive mt-3 text-center text-lg-end">
+              <div className="map-responsive mt-3 text-center">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.3932190536176!2d46.732875315003445!3d24.78915548405014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efddca951caad%3A0xff57eb5bc69f10ea!2sBnoon%20-%20Riyadh!5e0!3m2!1sen!2s!4v1695980800000!5m2!1sen!2s"
                   width="90%"
@@ -151,7 +151,7 @@ const ContactUsSection = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              <p className="text-lg-end">
+              <p className="map-text">
                 أوقات العمل:<br />
                 من السبت إلى الخميس – 9:00 صباحاً حتى 2:30 ظهراً<br />
                 الجمعة: مغلق
@@ -171,7 +171,7 @@ const ContactUsSection = () => {
               </p>
 
               {/* Google Map Embed */}
-              <div className="map-responsive mt-3 text-center text-lg-end">
+              <div className="map-responsive mt-3 text-center">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.1234567890123!2d39.123456!3d21.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x403eb3afa0ca3bd7!2sHealthPlus%20Fertility%20%26%20Women%27s%20Health%20Center%20-%20Jeddah!5e0!3m2!1sen!2s!4v1695974523456!5m2!1sen!2s"
                   width="90%"
@@ -182,7 +182,7 @@ const ContactUsSection = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              <p className="text-lg-end">
+              <p className="map-text">
                 أوقات العمل:
 
                 <br />
@@ -203,7 +203,7 @@ const ContactUsSection = () => {
               </p>
 
               {/* Google Map Embed */}
-              <div className="map-responsive mt-3 text-center text-lg-end">
+              <div className="map-responsive mt-3 text-center">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3603.047541015566!2d49.569793675389626!3d25.43667407755768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDI2JzEyLjAiTiA0OcKwMzQnMjAuNSJF!5e0!3m2!1sen!2s!4v1765545965251!5m2!1sen!2s"
                   width="90%"
@@ -214,7 +214,7 @@ const ContactUsSection = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              <p className="text-lg-end">
+              <p className="map-text">
                 أوقات العمل:
 
                 <br />
