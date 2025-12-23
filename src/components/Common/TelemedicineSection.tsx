@@ -46,7 +46,7 @@ const AboutusSection = () => {
           <div className="row justify-content-center align-items-center g-4">
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2>Telemedicine at Bnoon </h2>
+                <h2 className=" telemedicine-title">Telemedicine at Bnoon </h2>
                 <h3 className="telemedicine-overview-content" >Advanced Fertility Care — Wherever You Are</h3>
                 <motion.p
                   initial="hidden"
@@ -78,7 +78,7 @@ const AboutusSection = () => {
 
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2>What You Can Do Through Telemedicine </h2>
+                <h2 className=" telemedicine-title">What You Can Do Through Telemedicine </h2>
                 <ul className="values-list mt-3">
                   {values.map((value, index) => (
                     <li key={index} className="d-flex align-items-start mb-2">
@@ -111,7 +111,7 @@ const AboutusSection = () => {
 
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2>Why Patients Choose Bnoon’s Telemedicine </h2>
+                <h2 className=" telemedicine-title">Why Patients Choose Bnoon’s Telemedicine </h2>
                 <ul className="values-list mt-3">
                   {values1.map((value1, index) => (
                     <li key={index} className="d-flex align-items-start mb-2">
@@ -137,7 +137,7 @@ const AboutusSection = () => {
             </div>
              <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2>How to Book</h2>
+                <h2 className=" telemedicine-title">How to Book</h2>
               <motion.p
                   initial="hidden"
                   whileInView="visible"
@@ -149,7 +149,7 @@ const AboutusSection = () => {
             </div>
              <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2>How it Works </h2>
+                <h2 className=" telemedicine-title">How it Works </h2>
               <motion.p
                   initial="hidden"
                   whileInView="visible"
@@ -174,7 +174,7 @@ const AboutusSection = () => {
             </div>
                  <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2>Consent, Privacy & Safety </h2>
+                <h2 className=" telemedicine-title">Consent, Privacy & Safety </h2>
                 <ul className="values-list mt-3">
                   {values2.map((value2, index) => (
                     <li key={index} className="d-flex align-items-start mb-2">
@@ -198,7 +198,7 @@ const AboutusSection = () => {
             </div>
                <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2>Payments & Cancellations  </h2>
+                <h2  className=" telemedicine-title">Payments & Cancellations  </h2>
                 <ul className="values-list mt-3">
                   {values3.map((value3, index) => (
                     <li key={index} className="d-flex align-items-start mb-2">
