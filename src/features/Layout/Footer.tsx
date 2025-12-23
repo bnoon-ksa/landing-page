@@ -118,6 +118,7 @@ const footerData: FooterData = {
         { text: "العلاجات", url: "/ar/treatments" },
         { text: "برنامج وعد بنون", url: "/ar/waad-bnoon-program" },
         { text: "زيارتك لنا", url: "/ar/your-visit" },
+          { text: "الاستشارات عن بُعد", url: "/ar/telemedicine" },
         { text: "دليل الخصوبة", url: "/ar/fertility-guide" },
         { text: "حقوق وواجبات المرضى", url: "/ar/patients-rights" },
         { text: "تواصل معنا", url: "/ar/contact-us" },
