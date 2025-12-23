@@ -19350,6 +19350,17 @@ ease;
 .icon {
   margin-left: 10px !important;
 }
+  ul.values-list.mt-3 {
+   padding: 0;
+    color: #404040;
+    font-size: 16px;
+        margin: 0px;
+
+}
+.telemedicine-title{
+font-size:30px !important;
+
+}
 /* ✅ Mobile responsive */
 @media (max-width: 768px) {
     .appointment-form {
@@ -19405,5 +19416,16 @@ ease;
 }
     .icon {
   margin-left: 10px !important;
+}
+      ul.values-list.mt-3 {
+   padding: 0;
+    color: #404040;
+    font-size: 14px;
+        margin: 0px;
+
+}
+.telemedicine-title{
+font-size:16px !important;
+
 }
   }
