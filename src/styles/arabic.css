@@ -19341,6 +19341,15 @@ ease;
 .feedback-lable{
   font-size: 12px;
 }
+.telemedicine-overview-content{
+ font-size: 26px ;
+    font-weight: normal ;
+    color: #004E78 ;
+     padding: 10px 0px 0px;
+}
+.icon {
+  margin-left: 10px !important;
+}
 /* ✅ Mobile responsive */
 @media (max-width: 768px) {
     .appointment-form {
@@ -19388,4 +19397,13 @@ ease;
         font-weight: 500;
         border: 1px solid #ccc;
     }
+    .telemedicine-overview-content{
+ font-size: 14px ;
+    font-weight: normal ;
+    color: #004E78 ;
+     padding: 10px 0px 0px;
+}
+    .icon {
+  margin-left: 10px !important;
+}
   }
