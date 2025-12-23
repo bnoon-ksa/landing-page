@@ -14802,7 +14802,9 @@ Doctors Area CSS
 Work Area CSS
 =================================================*/
 ul.values-list.mt-3 {
-    padding: 0px;
+   padding: 0;
+    color: #404040;
+    font-size: 18px;
 }
 .submit-btn{
     background-color: #39bced !important;
@@ -19456,5 +19458,10 @@ label {
     font-weight: normal ;
     color: #004E78 ;
      padding: 10px 0px 0px;
+}
+  ul.values-list.mt-3 {
+   padding: 0;
+    color: #404040;
+    font-size: 14px;
 }
 }
