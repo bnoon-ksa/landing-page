@@ -54,7 +54,7 @@ const AboutusSection = () => {
           <div className="row justify-content-center align-items-center g-4">
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2 className="mb-2">الاستشارات الطبية عن بُعد في بنون </h2>
+                <h2 className="mb-2 telemedicine-title">الاستشارات الطبية عن بُعد في بنون </h2>
                 <h3 className="telemedicine-overview-content" >رعاية تصل إليك… أينما كنت</h3>
                 <motion.p
                   initial="hidden"
@@ -76,7 +76,7 @@ const AboutusSection = () => {
 
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2 className="mb-2">ماذا تتضمن الاستشارات عن بُعد؟  </h2>
+                <h2 className="mb-2 telemedicine-title">ماذا تتضمن الاستشارات عن بُعد؟  </h2>
                 <ul className="values-list mt-3">
                   {values.map((value, index) => (
                     <li key={index} className="d-flex align-items-center mb-2">
@@ -103,7 +103,7 @@ const AboutusSection = () => {
 
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2 className="mb-2">لماذا يختار المرضى الاستشارات عن بُعد في بنون؟ </h2>
+                <h2 className="mb-2 telemedicine-title">لماذا يختار المرضى الاستشارات عن بُعد في بنون؟ </h2>
                 <ul className="values-list mt-3">
                   {values1.map((value1, index) => (
                     <li key={index} className="d-flex align-items-center mb-2">
@@ -123,7 +123,7 @@ const AboutusSection = () => {
             </div>
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2 className="mb-2">طريقة الحجز</h2>
+                <h2 className="mb-2 telemedicine-title">طريقة الحجز</h2>
                 <motion.p
                   initial="hidden"
                   whileInView="visible"
@@ -136,7 +136,7 @@ const AboutusSection = () => {
             </div>
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2 className="mb-2">كيف تعمل الخدمة؟ </h2>
+                <h2 className="mb-2 telemedicine-title">كيف تعمل الخدمة؟ </h2>
              
                 <ul className="values-list mt-3">
                   {values2.map((value2, index) => (
@@ -157,7 +157,7 @@ const AboutusSection = () => {
             </div>
                         <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2 className="mb-2">الدفع والإلغاء  </h2>
+                <h2 className="mb-2 telemedicine-title">الدفع والإلغاء  </h2>
               
                 <ul className="values-list mt-3">
                   {values3.map((value3, index) => (
@@ -178,7 +178,7 @@ const AboutusSection = () => {
             </div>
                        <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2 className="mb-2">الخصوصية والموافقة  </h2>
+                <h2 className="mb-2 telemedicine-title">الخصوصية والموافقة  </h2>
               
                 <ul className="values-list mt-3">
                   {values4.map((value4, index) => (
