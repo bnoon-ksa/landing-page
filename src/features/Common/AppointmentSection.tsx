@@ -9,7 +9,7 @@ const AppointmentSection = () => {
 
     interest: "",
     branch: "",
-     visitType: "",
+    visitType: "",
     doctor: "",
     name: "",
     isForYou: "",  // 👈 yahan "yes" ki jagah empty rakho
@@ -21,9 +21,9 @@ const AppointmentSection = () => {
     email: "",
     preferredDate: "",
     preferredTime: "",
-    howHeard: "", 
+    howHeard: "",
     story: "",
-  recaptcha: null as string | null,   // ⭐ FIXED
+    recaptcha: null as string | null,   // ⭐ FIXED
 
   });
   const nationalities = [
@@ -227,198 +227,198 @@ const AppointmentSection = () => {
     "آيسلندا",
     "أذربيجان",
     "أرمينيا",
-"أستراليا",
-"أفغانستان",
-"ألبانيا",
-"ألمانيا",
-"أنتيغوا وباربودا",
-"أندورا",
-"أنغولا",
-"أوروغواي",
-"أوزبكستان",
-"أوغندا",
-"أوكرانيا",
-"إثيوبيا",
-"إريتريا",
-"إسبانيا",
-"إستونيا",
-"إسرائيل",
-"إسواتيني",
-"إندونيسيا",
-"إيران",
-"إيرلندا",
-"إيطاليا",
-"الأرجنتين",
-"الأردن",
-"الإكوادور",
-"الإمارات العربية المتحدة",
-"البحرين",
-"البرازيل",
-"البرتغال",
-"البوسنة والهرسك",
-"التشيك",
-"الجبل الأسود",
-"الجزائر",
-"الدانمارك",
-"الرأس الأخضر",
-"السلفادور",
-"السنغال",
-"السودان",
-"السويد",
-"الصومال",
-"الصين",
-"العراق",
-"الغابون",
-"الفاتيكان",
-"الفلبين",
-"الكاميرون",
-"الكونغو",
-"الكونغو الديمقراطية",
-"المالديف",
-"المجر",
-"المغرب",
-"المكسيك",
-"المملكة المتحدة",
-"النمسا",
-"النيجر",
-"النرويج",
-"الهند",
-"الولايات المتحدة الأمريكية",
-"اليابان",
-"اليونان",
-"باراغواي",
-"باكستان",
-"بالاو",
-"بابوا غينيا الجديدة",
-"بلجيكا",
-"بنغلاديش",
-"بنما",
-"بنين",
-"بوتان",
-"بوتسوانا",
-"بولندا",
-"بوليفيا",
-"بوركينا فاسو",
-"بوروندي",
-"بربادوس",
-"بليز",
-"بروناي",
-"بلغاريا",
-"بيلاروسيا",
-"بيرو",
-"تايلاند",
-"تايوان",
-"تركمانستان",
-"تركيا",
-"تنزانيا",
-"تيمور الشرقية",
-"توغو",
-"تونغا",
-"تونس",
-"ترينيداد وتوباغو",
-"تشاد",
-"تشيلي",
-"جمهورية أفريقيا الوسطى",
-"جمهورية الدومينيكان",
-"جزر القمر",
-"جزر سليمان",
-"جزر مارشال",
-"جيبوتي",
-"جامايكا",
-"جورجيا",
-"جنوب أفريقيا",
-"جنوب السودان",
-"دومينيكا",
-"روسيا",
-"رومانيا",
-"رواندا",
-"زامبيا",
-"زيمبابوي",
-"سان مارينو",
-"سانت كيتس ونيفيس",
-"سانت لوسيا",
-"سانت فنسنت والغرينادين",
-"ساموا",
-"ساو تومي وبرينسيب",
-"سريلانكا",
-"سورينام",
-"سوريا",
-"سويسرا",
-"سيراليون",
-"سيشل",
-"سلوفاكيا",
-"سلوفينيا",
-"سنغافورة",
-"غانا",
-"غرينادا",
-"غواتيمالا",
-"غينيا",
-"غينيا الاستوائية",
-"غينيا بيساو",
-"غيانا",
-"فانواتو",
-"فلسطين",
-"فنلندا",
-"فيتنام",
-"فيجي",
-"فنزويلا",
-"قبرص",
-"قطر",
-"كازاخستان",
-"كرواتيا",
-"كندا",
-"كوبا",
-"كوريا الجنوبية",
-"كوريا الشمالية",
-"كوستاريكا",
-"كولومبيا",
-"الكويت",
-"كيريباتي",
-"كينيا",
-"قيرغيزستان",
-"لبنان",
-"لوكسمبورغ",
-"ليبيريا",
-"ليبيا",
-"ليتوانيا",
-"ليختنشتاين",
-"ليسوتو",
-"لاتفيا",
-"لاوس",
-"مدغشقر",
-"مالطا",
-"مالي",
-"ماليزيا",
-"مالاوي",
-"مقدونيا الشمالية",
-"موناكو",
-"مولدوفا",
-"ميكرونيزيا",
-"ميانمار",
-"موريشيوس",
-"موريتانيا",
-"موزمبيق",
-"منغوليا",
-"مصر",
-"ناميبيا",
-"ناورو",
-"نيبال",
-"نيجيريا",
-"نيكاراغوا",
-"نيوزيلندا",
+    "أستراليا",
+    "أفغانستان",
+    "ألبانيا",
+    "ألمانيا",
+    "أنتيغوا وباربودا",
+    "أندورا",
+    "أنغولا",
+    "أوروغواي",
+    "أوزبكستان",
+    "أوغندا",
+    "أوكرانيا",
+    "إثيوبيا",
+    "إريتريا",
+    "إسبانيا",
+    "إستونيا",
+    "إسرائيل",
+    "إسواتيني",
+    "إندونيسيا",
+    "إيران",
+    "إيرلندا",
+    "إيطاليا",
+    "الأرجنتين",
+    "الأردن",
+    "الإكوادور",
+    "الإمارات العربية المتحدة",
+    "البحرين",
+    "البرازيل",
+    "البرتغال",
+    "البوسنة والهرسك",
+    "التشيك",
+    "الجبل الأسود",
+    "الجزائر",
+    "الدانمارك",
+    "الرأس الأخضر",
+    "السلفادور",
+    "السنغال",
+    "السودان",
+    "السويد",
+    "الصومال",
+    "الصين",
+    "العراق",
+    "الغابون",
+    "الفاتيكان",
+    "الفلبين",
+    "الكاميرون",
+    "الكونغو",
+    "الكونغو الديمقراطية",
+    "المالديف",
+    "المجر",
+    "المغرب",
+    "المكسيك",
+    "المملكة المتحدة",
+    "النمسا",
+    "النيجر",
+    "النرويج",
+    "الهند",
+    "الولايات المتحدة الأمريكية",
+    "اليابان",
+    "اليونان",
+    "باراغواي",
+    "باكستان",
+    "بالاو",
+    "بابوا غينيا الجديدة",
+    "بلجيكا",
+    "بنغلاديش",
+    "بنما",
+    "بنين",
+    "بوتان",
+    "بوتسوانا",
+    "بولندا",
+    "بوليفيا",
+    "بوركينا فاسو",
+    "بوروندي",
+    "بربادوس",
+    "بليز",
+    "بروناي",
+    "بلغاريا",
+    "بيلاروسيا",
+    "بيرو",
+    "تايلاند",
+    "تايوان",
+    "تركمانستان",
+    "تركيا",
+    "تنزانيا",
+    "تيمور الشرقية",
+    "توغو",
+    "تونغا",
+    "تونس",
+    "ترينيداد وتوباغو",
+    "تشاد",
+    "تشيلي",
+    "جمهورية أفريقيا الوسطى",
+    "جمهورية الدومينيكان",
+    "جزر القمر",
+    "جزر سليمان",
+    "جزر مارشال",
+    "جيبوتي",
+    "جامايكا",
+    "جورجيا",
+    "جنوب أفريقيا",
+    "جنوب السودان",
+    "دومينيكا",
+    "روسيا",
+    "رومانيا",
+    "رواندا",
+    "زامبيا",
+    "زيمبابوي",
+    "سان مارينو",
+    "سانت كيتس ونيفيس",
+    "سانت لوسيا",
+    "سانت فنسنت والغرينادين",
+    "ساموا",
+    "ساو تومي وبرينسيب",
+    "سريلانكا",
+    "سورينام",
+    "سوريا",
+    "سويسرا",
+    "سيراليون",
+    "سيشل",
+    "سلوفاكيا",
+    "سلوفينيا",
+    "سنغافورة",
+    "غانا",
+    "غرينادا",
+    "غواتيمالا",
+    "غينيا",
+    "غينيا الاستوائية",
+    "غينيا بيساو",
+    "غيانا",
+    "فانواتو",
+    "فلسطين",
+    "فنلندا",
+    "فيتنام",
+    "فيجي",
+    "فنزويلا",
+    "قبرص",
+    "قطر",
+    "كازاخستان",
+    "كرواتيا",
+    "كندا",
+    "كوبا",
+    "كوريا الجنوبية",
+    "كوريا الشمالية",
+    "كوستاريكا",
+    "كولومبيا",
+    "الكويت",
+    "كيريباتي",
+    "كينيا",
+    "قيرغيزستان",
+    "لبنان",
+    "لوكسمبورغ",
+    "ليبيريا",
+    "ليبيا",
+    "ليتوانيا",
+    "ليختنشتاين",
+    "ليسوتو",
+    "لاتفيا",
+    "لاوس",
+    "مدغشقر",
+    "مالطا",
+    "مالي",
+    "ماليزيا",
+    "مالاوي",
+    "مقدونيا الشمالية",
+    "موناكو",
+    "مولدوفا",
+    "ميكرونيزيا",
+    "ميانمار",
+    "موريشيوس",
+    "موريتانيا",
+    "موزمبيق",
+    "منغوليا",
+    "مصر",
+    "ناميبيا",
+    "ناورو",
+    "نيبال",
+    "نيجيريا",
+    "نيكاراغوا",
+    "نيوزيلندا",
 
-"هولندا",
-"هندوراس",
-"هايتي",
-"اليمن",
+    "هولندا",
+    "هندوراس",
+    "هايتي",
+    "اليمن",
   ]
   const [isBranchOpen, setIsBranchOpen] = useState(false);
   const [isHowHeardOpen, setIsHowHeardOpen] = useState(false);
   const [isNationalityOpen, setIsNationalityOpen] = useState(false);
   const [isCountryOpen, setIsCountryOpen] = useState(false);
   const [isCityOpen, setIsCityOpen] = useState(false);
-const [isVisitTypeOpen, setIsVisitTypeOpen] = useState(false);
-const messageRef = useRef<HTMLParagraphElement>(null);
+  const [isVisitTypeOpen, setIsVisitTypeOpen] = useState(false);
+  const messageRef = useRef<HTMLParagraphElement>(null);
 
   const [isInterestOpen, setIsInterestOpen] = useState(false);
   const [message, setMessage] = useState<React.ReactNode>(null);
@@ -429,11 +429,11 @@ const messageRef = useRef<HTMLParagraphElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const [headerVisible, setHeaderVisible] = useState(false);
   const [isTimeOpen, setIsTimeOpen] = useState(false);
-useEffect(() => {
-  if (message && messageRef.current) {
-    messageRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-}, [message]);
+  useEffect(() => {
+    if (message && messageRef.current) {
+      messageRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [message]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -472,11 +472,11 @@ useEffect(() => {
       setMessage("❌ Please fill all required fields.");
       return;
     }
- // ✅ reCAPTCHA validation
-  if (!formData.recaptcha) {
-    setMessage("❌ Please verify reCAPTCHA before submitting");
-    return; // stop form submission
-  }
+    // ✅ reCAPTCHA validation
+    if (!formData.recaptcha) {
+      setMessage("❌ Please verify reCAPTCHA before submitting");
+      return; // stop form submission
+    }
     try {
       const response = await fetch("/api/send-appointment-ar", {
         method: "POST",
@@ -485,20 +485,20 @@ useEffect(() => {
       });
 
       if (response.ok) {
-       setMessage(
-  <>
-    شكراً لكم على إرسال طلب حجز موعد في بنون.
-    <br />
-    سيقوم فريقنا بالتواصل معكم خلال 48 ساعة لحجز الموعد واستكمال الخطوات اللازمة.
-    <br />
-    نتطلّع إلى التواصل معكم قريباً.
-  </>
-);
+        setMessage(
+          <>
+            شكراً لكم على إرسال طلب حجز موعد في بنون.
+            <br />
+            سيقوم فريقنا بالتواصل معكم خلال 48 ساعة لحجز الموعد واستكمال الخطوات اللازمة.
+            <br />
+            نتطلّع إلى التواصل معكم قريباً.
+          </>
+        );
 
         setFormData({
           interest: "",
           branch: "",
-           visitType: "",
+          visitType: "",
           doctor: "",
           name: "",
           isForYou: "",
@@ -511,8 +511,8 @@ useEffect(() => {
           preferredDate: "",
           preferredTime: "",
           howHeard: "",
-           story: "",
-  recaptcha: null as string | null,   // ⭐ FIXED
+          story: "",
+          recaptcha: null as string | null,   // ⭐ FIXED
 
         });
         setSubmitted(false);
@@ -683,7 +683,11 @@ useEffect(() => {
                       <li
                         key={branch}
                         onClick={() => {
-                          setFormData((prev) => ({ ...prev, branch }));
+                          setFormData((prev) => ({
+                            ...prev,
+                            branch,
+                            doctor: "", // reset doctor when branch changes
+                          }));
                           setIsBranchOpen(false);
                         }}
                         style={{
@@ -702,103 +706,30 @@ useEffect(() => {
 
             </div>
 
-{/* Select Visit Type */}
-<div className="row g-3">
-  <div className="custom-dropdown mb-3" style={{ position: "relative", padding: "0px" }}>
-    <label className="appointmentform-label">
- اختر نوع الزيارة (زيارة العيادة أو استشارة عن بُعد)
-{" "}
-      <span style={{ color: submitted && !formData.visitType ? "red" : "black" }}>*</span>
-    </label>
-
-    {/* Button */}
-    <button
-      type="button"
-      className={`form-control ${submitted && !formData.visitType ? "is-invalid" : ""}`}
-      onClick={() => setIsVisitTypeOpen((prev) => !prev)}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        color: formData.visitType ? "#000" : "#808080",
-        padding: "6px 12px",
-        cursor: "pointer",
-      }}
-    >
-      <span>{formData.visitType || "اختر نوع الزيارة"}</span>
-      <img
-        src="/images/arrow.png"
-        alt="arrow"
-        style={{ width: "16px", height: "16px" }}
-      />
-    </button>
-
-    {/* Dropdown List */}
-    {isVisitTypeOpen && (
-      <ul
-        style={{
-          position: "absolute",
-          top: "100%",
-          left: 0,
-          right: 0,
-          border: "1px solid #ccc",
-          background: "#fff",
-          zIndex: 20,
-          listStyle: "none",
-          margin: 0,
-          padding: 0,
-          borderRadius: "4px",
-          maxHeight: "200px",
-          overflowY: "auto",
-        }}
-      >
-        {["زيارة إلى العيادة", "استشارة عن بُعد (افتراضية)"].map((type) => (
-          <li
-            key={type}
-            onClick={() => {
-              setFormData((prev) => ({ ...prev, visitType: type }));
-              setIsVisitTypeOpen(false);
-            }}
-            style={{
-              padding: "8px",
-              cursor: "pointer",
-              background: formData.visitType === type ? "#004E78" : "#fff",
-              color: formData.visitType === type ? "#fff" : "#212529",
-            }}
-          >
-            {type}
-          </li>
-        ))}
-      </ul>
-    )}
-  </div>
-</div>
-
-            {/* Doctor */}
+            {/* Select Visit Type */}
             <div className="row g-3">
-
               <div className="custom-dropdown mb-3" style={{ position: "relative", padding: "0px" }}>
                 <label className="appointmentform-label">
-                  اختر الطبيب{" "}
-                  <span style={{ color: isFieldInvalid("doctor") ? "red" : "black" }}>*</span>
+                  اختر نوع الزيارة (زيارة العيادة أو استشارة عن بُعد)
+                  {" "}
+                  <span style={{ color: submitted && !formData.visitType ? "red" : "black" }}>*</span>
                 </label>
 
                 {/* Button */}
                 <button
                   type="button"
-                  className={`form-control ${isFieldInvalid("doctor") ? "is-invalid" : ""}`}
-                  onClick={() => setIsDoctorOpen((prev) => !prev)}
-                  disabled={!formData.branch} // jab tak branch select na ho, disable
+                  className={`form-control ${submitted && !formData.visitType ? "is-invalid" : ""}`}
+                  onClick={() => setIsVisitTypeOpen((prev) => !prev)}
                   style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    color: formData.doctor ? "#000" : "#808080",
+                    color: formData.visitType ? "#000" : "#808080",
                     padding: "6px 12px",
-                    cursor: formData.branch ? "pointer" : "not-allowed",
+                    cursor: "pointer",
                   }}
                 >
-                  <span>{formData.doctor || "اختر الطبيب"}</span>
+                  <span>{formData.visitType || "اختر نوع الزيارة"}</span>
                   <img
                     src="/images/arrow.png"
                     alt="arrow"
@@ -807,7 +738,7 @@ useEffect(() => {
                 </button>
 
                 {/* Dropdown List */}
-                {isDoctorOpen && formData.branch && (
+                {isVisitTypeOpen && (
                   <ul
                     style={{
                       position: "absolute",
@@ -825,57 +756,144 @@ useEffect(() => {
                       overflowY: "auto",
                     }}
                   >
-                    {(() => {
-                      let doctors: string[] = [];
-                      if (formData.branch === "الرياض") {
-                        doctors = [
-                          "الدكتور عبد العزيز الشهراني",
-                          "الدكتور عاصم الوهيبي",
-                          "الدكتور وجدي العمرى",
-                          "الدكتورة داليا نور",
-                          "الدكتور موسى النعمي",
-                        ];
-                      } else if (formData.branch === "جدة") {
-                        doctors = [
-                          "الدكتور فواز إدريس",
-                          "الدكتور مازن بشارة",
-                          "الدكتور أحمد الشيخ",
-                          "الدكتورة مايا البزرة",
-                          "الدكتور أحمد هارون",
-                          "الدكتورة رزان غيث",
-                          "الدكتورة مرام دعدوع",
-                        ];
-                      } else if (formData.branch === "الأحساء") {
-                        doctors = [
-                          "الدكتور بسام نصير ",
-                          "الدكتور أحمد النويصر",
-                         "الدكتور مدين الخلف ",
-                          "الدكتورة رانيا الشريفي",
-                        ];
-                      }
-                      return doctors.map((doc) => (
-                        <li
-                          key={doc}
-                          onClick={() => {
-                            setFormData((prev) => ({ ...prev, doctor: doc }));
-                            setIsDoctorOpen(false);
-                          }}
-                          style={{
-                            padding: "8px",
-                            cursor: "pointer",
-                            background: formData.doctor === doc ? "#004E78" : "#fff",
-                            color: formData.doctor === doc ? "#fff" : "#212529",
-                          }}
-                        >
-                          {doc}
-                        </li>
-                      ));
-                    })()}
+                    {["زيارة إلى العيادة", "استشارة عن بُعد (افتراضية)"].map((type) => (
+                      <li
+                        key={type}
+                        onClick={() => {
+                          setFormData((prev) => ({ ...prev, visitType: type }));
+                          setIsVisitTypeOpen(false);
+                        }}
+                        style={{
+                          padding: "8px",
+                          cursor: "pointer",
+                          background: formData.visitType === type ? "#004E78" : "#fff",
+                          color: formData.visitType === type ? "#fff" : "#212529",
+                        }}
+                      >
+                        {type}
+                      </li>
+                    ))}
                   </ul>
                 )}
-
               </div>
             </div>
+{/* Doctor */}
+<div className="mb-3" style={{ position: "relative" }}>
+  <label className="appointmentform-label">
+    اختر الطبيب{" "}
+    <span style={{ color: isFieldInvalid("doctor") ? "red" : "black" }}>*</span>
+  </label>
+
+  {/* Button */}
+  <button
+    type="button"
+    disabled={!formData.branch}
+    className={`form-control ${isFieldInvalid("doctor") ? "is-invalid" : ""}`}
+    onClick={() => !formData.branch || setIsDoctorOpen((prev) => !prev)}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      color: !formData.branch
+        ? "#999"
+        : formData.doctor
+        ? "#000"
+        : "#808080",
+      padding: "6px 12px",
+      background: !formData.branch ? "#f0f0f0" : "#fff",
+      cursor: !formData.branch ? "not-allowed" : "pointer",
+    }}
+  >
+    <span>
+      {!formData.branch
+        ? "اختر الطبيب"
+        : formData.doctor || "اختر الطبيب"}
+    </span>
+
+    <img
+      src="/images/arrow.png"
+      alt="arrow"
+      style={{ width: "16px", height: "16px" }}
+    />
+  </button>
+
+  {/* Dropdown */}
+  {isDoctorOpen && formData.branch && (
+    <ul
+      style={{
+        position: "absolute",
+        top: "100%",
+        left: 0,
+        right: 0,
+        border: "1px solid #ccc",
+        background: "#fff",
+        zIndex: 20,
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        borderRadius: "4px",
+        maxHeight: "200px",
+        overflowY: "auto",
+      }}
+    >
+  {(
+  formData.branch === "الرياض"
+    ? [
+        "الدكتور عبد العزيز الشهراني",
+        "الدكتور عاصم الوهيبي",
+        "الدكتور وجدي العمرى",
+        "الدكتورة داليا نور",
+        "الدكتور موسى النعمي",
+      ]
+    : formData.branch === "جدة"
+    ? [
+        "الدكتور فواز إدريس",
+        "الدكتور مازن بشارة",
+        "الدكتور أحمد الشيخ",
+        "الدكتورة مايا البزرة",
+        "الدكتور أحمد هارون",
+        "الدكتورة رزان غيث",
+        "الدكتورة مرام دعدوع",
+      ]
+    : formData.branch === "الأحساء"
+    ? [
+        "الدكتور بسام نصير",
+        "الدكتور أحمد النويصر",
+        "الدكتور مدين الخلف",
+        "الدكتورة رانيا الشريفي",
+      ]
+    : []
+)
+// 🔹 Hide الدكتور عبد العزيز الشهراني if visit type is Teleconsultation
+.filter(
+  (doc) =>
+    !(
+      formData.visitType.includes("استشارة") &&
+      doc === "الدكتور عبد العزيز الشهراني"
+    )
+)
+
+.map((doc) => (
+  <li
+    key={doc}
+    onClick={() => {
+      setFormData((prev) => ({ ...prev, doctor: doc }));
+      setIsDoctorOpen(false);
+    }}
+    style={{
+      padding: "8px",
+      cursor: "pointer",
+      background: formData.doctor === doc ? "#004E78" : "#fff",
+      color: formData.doctor === doc ? "#fff" : "#212529",
+    }}
+  >
+    {doc}
+  </li>
+))}
+
+    </ul>
+  )}
+</div>
 
 
             {/* Your Name */}
@@ -1003,11 +1021,7 @@ useEffect(() => {
                 )}
               </div>
             </div>
- {message && (
-  <p ref={messageRef} className="mt-3 text-center">
-    {message}
-  </p>
-)}
+
 
             {/* Country of Residence */}
             <div className="row g-3">
@@ -1431,29 +1445,33 @@ useEffect(() => {
             </div>
 
 
-<div className="my-3">
- <ReCAPTCHA
-  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-  hl="ar"
-  onChange={(value: string | null) =>
-    setFormData((prev) => ({
-      ...prev,
-      recaptcha: value,
-    }))
-  }
-/>
+            <div className="my-3">
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                hl="ar"
+                onChange={(value: string | null) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    recaptcha: value,
+                  }))
+                }
+              />
 
-</div>
+            </div>
 
 
             {/* Submit */}
-              <div className=" text-center">
-                <button type="submit" className="btn btn-primary btn-blog feedback-btn btn-large mt-3">
-                  إرسال
-                </button>
-              </div>
-           
-          
+            <div className=" text-center">
+              <button type="submit" className="btn btn-primary btn-blog feedback-btn btn-large mt-3">
+                إرسال
+              </button>
+            </div>
+
+            {message && (
+              <p ref={messageRef} className="form-message position-absolute">
+                {message}
+              </p>
+            )}
           </form>
 
         </div>
