@@ -1453,7 +1453,7 @@ useEffect(() => {
                 </button>
               </div>
            
-            {message && <p className="mt-3 text-center">{message}</p>}
+          
           </form>
 
         </div>
