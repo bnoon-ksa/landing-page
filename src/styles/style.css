@@ -19460,7 +19460,7 @@ font-size:36px !important;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
     width: 90%;
     max-width: 550px;
-    text-align: center;
+    text-align: center !important;
 
 }
 @media (max-width: 768px) {
@@ -19506,7 +19506,7 @@ font-size:20px !important;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
     width: 90%;
     max-width: 550px;
-    text-align: center;
+    text-align: center !important;
 
 }
 }
