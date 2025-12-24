@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { CgEnter } from "react-icons/cg";
 const AppointmentSection = () => {
   const [formData, setFormData] = useState({
     interest: "",
@@ -255,7 +256,8 @@ setTimeout(() => {
 
 
           {/* Branch */}
-        <div className="mb-3" style={{ position: "relative" }}>
+     {/* Branch */}
+<div className="mb-3" style={{ position: "relative" }}>
   <label className="appointmentform-label">
     Select Branch{" "}
     <span style={{ color: isFieldInvalid("branch") ? "red" : "black" }}>
@@ -277,7 +279,6 @@ setTimeout(() => {
     }}
   >
     <span>{formData.branch || "Select branch"}</span>
-
     <img
       src="/images/arrow.png"
       alt="arrow"
@@ -306,7 +307,11 @@ setTimeout(() => {
         <li
           key={branch}
           onClick={() => {
-            setFormData((prev) => ({ ...prev, branch }));
+            setFormData((prev) => ({
+              ...prev,
+              branch,
+              doctor: "", // ✅ reset doctor whenever branch changes
+            }));
             setIsOpen(false);
           }}
           style={{
@@ -436,53 +441,59 @@ setTimeout(() => {
   </button>
 
   {/* Dropdown */}
-  {isDoctorOpen && formData.branch && (
-    <ul
-      style={{
-        position: "absolute",
-        top: "100%",
-        left: 0,
-        right: 0,
-        border: "1px solid #ccc",
-        background: "#fff",
-        zIndex: 20,
-        listStyle: "none",
-        margin: 0,
-        padding: 0,
-        borderRadius: "4px",
-        maxHeight: "200px",
-        overflowY: "auto",
-      }}
-    >
-      {(
-        formData.branch === "Riyadh"
-          ? [
-               "Dr. Abdalaziz Al-Shahrani",
-              "Dr. Asim Al Wohaibi",
-              "Dr. Wajdi Al Omari",
-              "Dr. Dalia Nour",
-              "Dr. Mussa AlNumi ",
-            ]
-          : formData.branch === "Jeddah"
-          ? [
-              "Dr. Fawaz Edris",
-              "Dr. Mazin Bishara",
-              "Dr. Ahmed Alshaikh",
-              "Dr. Maya Albezreh",
-              "Dr. Ahmad Haroun",
-              "Dr. Razan Ghaith ",
-              "Dr. Maram Dadoua",
-            ]
-          : formData.branch === "Al Ahsa"
-          ? [
-              
-              "Dr. Bassam Nusair",
-              "Dr. Ahmed Al-Nowasser",
-              "Dr. Median Alkhalaf",
-              "Dr. Rania Elsherify",
-            ]
-          : []
-      ).map((doc) => (
+ {/* Doctor Dropdown */}
+{isDoctorOpen && formData.branch && (
+  <ul
+    style={{
+      position: "absolute",
+      top: "100%",
+      left: 0,
+      right: 0,
+      border: "1px solid #ccc",
+      background: "#fff",
+      zIndex: 20,
+      listStyle: "none",
+      margin: 0,
+      padding: 0,
+      borderRadius: "4px",
+      maxHeight: "200px",
+      overflowY: "auto",
+    }}
+  >
+    {(
+      formData.branch === "Riyadh"
+        ? [
+            "Dr. Abdalaziz Al-Shahrani",
+            "Dr. Asim Al Wohaibi",
+            "Dr. Wajdi Al Omari",
+            "Dr. Dalia Nour",
+            "Dr. Mussa AlNumi ",
+          ]
+        : formData.branch === "Jeddah"
+        ? [
+            "Dr. Fawaz Edris",
+            "Dr. Mazin Bishara",
+            "Dr. Ahmed Alshaikh",
+            "Dr. Maya Albezreh",
+            "Dr. Ahmad Haroun",
+            "Dr. Razan Ghaith ",
+            "Dr. Maram Dadoua",
+          ]
+        : formData.branch === "Al Ahsa"
+        ? [
+            "Dr. Bassam Nusair",
+            "Dr. Ahmed Al-Nowasser",
+            "Dr. Median Alkhalaf",
+            "Dr. Rania Elsherify",
+          ]
+        : []
+    )
+      // 🔹 Filter out doctor if visit type is Teleconsultation
+      .filter(
+        (doc) =>
+          !(formData.visitType === "Teleconsultation" && doc === "Dr. Abdalaziz Al-Shahrani")
+      )
+      .map((doc) => (
         <li
           key={doc}
           onClick={() => {
@@ -499,8 +510,9 @@ setTimeout(() => {
           {doc}
         </li>
       ))}
-    </ul>
-  )}
+  </ul>
+)}
+
 </div>
 
 
@@ -609,14 +621,7 @@ setTimeout(() => {
     </ul>
   )}
 </div>
-  {message && (
-  <p
-    ref={messageRef}
-    className="mt-3 text-center"
-  >
-    {message}
-  </p>
-)}
+
 
 
           {/* Country */}
@@ -941,7 +946,16 @@ setTimeout(() => {
 
 
           </div>
-
+ {/* Mid-form message */}
+  {message && (
+    <div
+      ref={messageRef}
+      className="form-message position-absolute"
+    
+    >
+      {message}
+    </div>
+  )}
        
         </form>
         {/* FORM END */}
