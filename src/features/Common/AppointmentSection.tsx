@@ -425,6 +425,7 @@ const AppointmentSection = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [isDoctorOpen, setIsDoctorOpen] = useState(false);
+const [showThankYou, setShowThankYou] = useState(false);
 
   const headerRef = useRef<HTMLDivElement>(null);
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -494,6 +495,14 @@ const AppointmentSection = () => {
             نتطلّع إلى التواصل معكم قريباً.
           </>
         );
+  setShowThankYou(true); // 👈 FORM HIDE, MESSAGE SHOW
+
+  setTimeout(() => {
+    messageRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }, 100);
 
         setFormData({
           interest: "",
@@ -547,7 +556,9 @@ const AppointmentSection = () => {
         </div>
 
         {/* FORM START */}
-        <div className="d-flex justify-content-center align-items-center mb-5 pbt-140" style={{ minHeight: "100vh" }}>
+        
+        <div className="d-flex justify-content-center align-items-center mb-5 pbt-140">
+          {!showThankYou && (
           <form onSubmit={handleSubmit} className="appointment-form text-end" style={{ maxWidth: "800px", width: "100%" }}>
             {/* I am interested in */}
             <div className="row g-3">
@@ -1467,13 +1478,16 @@ const AppointmentSection = () => {
               </button>
             </div>
 
-            {message && (
-              <p ref={messageRef} className="form-message position-absolute">
-                {message}
-              </p>
-            )}
+           
           </form>
+          )}
+        {showThankYou && message && (
+  <p ref={messageRef} className="form-message ">
+    {message}
+  </p>
+)}
 
+          
         </div>
         {/* FORM END */}
 
