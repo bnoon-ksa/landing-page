@@ -19450,7 +19450,7 @@ font-size:36px !important;
 
 }
 .form-message{
-
+    color: #000 !important;
     z-index: 50;
     background: rgb(255, 255, 255);
     padding: 20px;
