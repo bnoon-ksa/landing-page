@@ -31,6 +31,7 @@ const [isHowHeardOpen, setIsHowHeardOpen] = useState(false);
 const [isTimeOpen, setIsTimeOpen] = useState(false);
 const [isVisitTypeOpen, setIsVisitTypeOpen] = useState(false);
 const messageRef = useRef<HTMLParagraphElement | null>(null);
+const [showThankYou, setShowThankYou] = useState(false);
 
 const [isOpen, setIsOpen] = useState(false);
 const [message, setMessage] = useState<React.ReactNode>(null);
@@ -117,6 +118,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
    <em>We look forward to connecting with you soon.</em>
   </>
 );
+  setShowThankYou(true);
 setTimeout(() => {
     messageRef.current?.scrollIntoView({
       behavior: "smooth",
@@ -172,6 +174,7 @@ setTimeout(() => {
         </div>
 
         {/* FORM START */}
+        {!showThankYou && (
         <form onSubmit={handleSubmit} className="appointment-form text-start mx-auto" style={{ maxWidth: "800px" }}>
           {/* Interest */}
        <div className="mb-3" style={{ position: "relative" }}>
@@ -946,20 +949,21 @@ setTimeout(() => {
 
 
           </div>
- {/* Mid-form message */}
+
+       
+        </form>
+        )}
+        {/* FORM END */}
+      {/* Mid-form message */}
   {message && (
     <div
       ref={messageRef}
-      className="form-message position-absolute"
+      className="form-message"
     
     >
       {message}
     </div>
   )}
-       
-        </form>
-        {/* FORM END */}
-     
       </div>
          <div className="col-lg-12 col-md-12">
               <div className="left mt-3">
