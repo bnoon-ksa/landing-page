@@ -19367,9 +19367,6 @@ font-size:30px !important;
   margin-right:30px;
 }
 .form-message{
-
-  top: 155%;
-    left: 36%;
     z-index: 50;
     background: rgb(255, 255, 255);
     padding: 20px;
@@ -19378,14 +19375,11 @@ font-size:30px !important;
     width: 90%;
     max-width: 550px;
    text-align: center !important;
-
+  color: #000 !important;
 }
 /* ✅ Mobile responsive */
 @media (max-width: 768px) {
       .form-message{
-
-  top: 155%;
-    left: 5%;
     z-index: 50;
     background: rgb(255, 255, 255);
     padding: 20px;
@@ -19394,7 +19388,7 @@ font-size:30px !important;
     width: 90%;
     max-width: 550px;
     text-align: center !important;
-
+ margin-left: 15px;
 }
    .map-text{
   margin-right: 20px;
