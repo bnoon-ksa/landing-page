@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Bnoon",
     images: [
       {
-        url: "/images/bnoon-logo.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Bnoon - Fertility & Women Health Centers",

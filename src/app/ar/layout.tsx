@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "بنون",
     images: [
       {
-        url: "/images/bnoon-logo.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "بنون - مراكز الإخصاب وصحة المرأة",
