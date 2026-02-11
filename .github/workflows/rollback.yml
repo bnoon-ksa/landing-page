@@ -104,7 +104,7 @@ jobs:
           node-version-file: '.node-version'
 
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Build Next.js app
         run: npm run build
@@ -112,7 +112,7 @@ jobs:
           NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
 
       - name: Prune dev dependencies
-        run: npm prune --omit=dev --legacy-peer-deps
+        run: npm prune --omit=dev
 
       - name: Prepare release package
         run: |
@@ -124,6 +124,7 @@ jobs:
           cp server.js release/
           cp next.config.js release/ 2>/dev/null || true
           cp next.config.ts release/ 2>/dev/null || true
+          cp next.config.mjs release/ 2>/dev/null || true
 
       - name: Create deployment ZIP
         run: cd release && zip -r -q ../release.zip .
@@ -168,7 +169,7 @@ jobs:
           echo "Polling $HEALTH_URL (max ${MAX_ATTEMPTS} attempts, ${WAIT_SECONDS}s interval)"
 
           for i in $(seq 1 $MAX_ATTEMPTS); do
-            HTTP_CODE=$(curl -s -o /tmp/health_response.json -w "%{http_code}" "$HEALTH_URL" 2>/dev/null || echo "000")
+            HTTP_CODE=$(curl -sL -o /tmp/health_response.json -w "%{http_code}" --max-time 15 "$HEALTH_URL" 2>/dev/null || echo "000")
 
             if [ "$HTTP_CODE" = "200" ]; then
               STATUS=$(cat /tmp/health_response.json | python3 -c "import sys,json; print(json.load(sys.stdin).get('status',''))" 2>/dev/null || echo "")

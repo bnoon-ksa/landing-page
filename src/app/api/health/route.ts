@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import packageJson from "../../../../package.json";
 
+export const dynamic = "force-dynamic";
+
 interface HealthResponse {
   status: "healthy";
   version: string;
