@@ -9,6 +9,7 @@ on:
 env:
   AZURE_WEBAPP_NAME: bnoon
   SITE_URL: https://bnoon.sa
+  NEXT_TELEMETRY_DISABLED: 1
 
 permissions:
   contents: write
@@ -102,6 +103,15 @@ jobs:
           key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             node-modules-${{ runner.os }}-
+
+      - name: Restore Next.js build cache
+        uses: actions/cache@v4
+        with:
+          path: .next/cache
+          key: nextjs-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**/*') }}
+          restore-keys: |
+            nextjs-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
+            nextjs-cache-${{ runner.os }}-
 
       - name: Build Next.js app
         run: npm run build
