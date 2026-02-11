@@ -41,7 +41,6 @@ jobs:
           cp server.js release/
           cp next.config.js release/ 2>/dev/null || true
           cp next.config.ts release/ 2>/dev/null || true
-          cp web.config release/ 2>/dev/null || true
 
       - name: Create deployment ZIP
         run: cd release && zip -r -q ../release.zip .
