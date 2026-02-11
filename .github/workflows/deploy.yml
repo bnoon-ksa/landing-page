@@ -317,3 +317,54 @@ jobs:
           echo "### Deployment Verification FAILED" >> $GITHUB_STEP_SUMMARY
           echo "Health check did not pass within $(( MAX_ATTEMPTS * WAIT_SECONDS / 60 )) minutes" >> $GITHUB_STEP_SUMMARY
           exit 1
+
+  # ──────────────────────────────────────────────
+  # Job 7: Regression Tests (Playwright against production)
+  # ──────────────────────────────────────────────
+  regression-tests:
+    runs-on: ubuntu-latest
+    needs: verify
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+
+      - name: Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run E2E regression tests
+        run: npx playwright test
+        env:
+          CI: true
+          E2E_BASE_URL: ${{ env.SITE_URL }}
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
+      - name: Regression summary
+        if: always()
+        run: |
+          if [ ${{ job.status }} = "success" ]; then
+            echo "### Regression Tests Passed" >> $GITHUB_STEP_SUMMARY
+            echo "All E2E tests passed against ${{ env.SITE_URL }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### Regression Tests FAILED" >> $GITHUB_STEP_SUMMARY
+            echo "Some E2E tests failed against ${{ env.SITE_URL }}. Check the playwright-report artifact." >> $GITHUB_STEP_SUMMARY
+          fi
