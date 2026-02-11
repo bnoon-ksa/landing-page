@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
 import { menus } from "@/components/ar/Layout/Menus";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Navbar() {
