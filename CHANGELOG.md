@@ -1,3 +1,9 @@
+## [1.0.5](https://github.com/bnoon-ksa/landing-page/compare/v1.0.4...v1.0.5) (2026-02-11)
+
+### Bug Fixes
+
+* pipeline concurrency control, remove legacy-peer-deps, fix health check ([134619d](https://github.com/bnoon-ksa/landing-page/commit/134619dfdb3869e282293f797050c02c177e6428))
+
 ## [1.0.4](https://github.com/bnoon-ksa/landing-page/compare/v1.0.3...v1.0.4) (2026-02-11)
 
 ### Bug Fixes
