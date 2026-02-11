@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/bnoon-ksa/landing-page/compare/v1.0.6...v1.1.0) (2026-02-11)
+
+### Features
+
+* **ci:** add PR validation pipeline ([#3](https://github.com/bnoon-ksa/landing-page/issues/3)) ([064d838](https://github.com/bnoon-ksa/landing-page/commit/064d8382d2f3f76d322f94652668125313ecf1b4)), closes [#336AEA](https://github.com/bnoon-ksa/landing-page/issues/336AEA) [#2A3547](https://github.com/bnoon-ksa/landing-page/issues/2A3547) [#5A6A85](https://github.com/bnoon-ksa/landing-page/issues/5A6A85)
+
 ## [1.0.6](https://github.com/bnoon-ksa/landing-page/compare/v1.0.5...v1.0.6) (2026-02-11)
 
 ### ⚠ BREAKING CHANGES
