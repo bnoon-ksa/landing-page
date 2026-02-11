@@ -174,6 +174,13 @@ jobs:
         env:
           NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-build
+          path: .next
+          retention-days: 1
+
   # ──────────────────────────────────────────────
   # Job 4: E2E Tests (against local build)
   # ──────────────────────────────────────────────
@@ -197,19 +204,11 @@ jobs:
           restore-keys: |
             node-modules-${{ runner.os }}-
 
-      - name: Restore Next.js build cache
-        uses: actions/cache@v4
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
         with:
-          path: .next/cache
-          key: nextjs-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**/*') }}
-          restore-keys: |
-            nextjs-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
-            nextjs-cache-${{ runner.os }}-
-
-      - name: Build Next.js app
-        run: npm run build
-        env:
-          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+          name: nextjs-build
+          path: .next
 
       - name: Get Playwright version
         id: pw-version
