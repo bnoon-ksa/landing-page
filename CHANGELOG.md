@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/bnoon-ksa/landing-page/compare/v1.1.0...v1.1.1) (2026-02-11)
+
+### Bug Fixes
+
+* **images:** restore local images and add branch-specific booking URLs ([#5](https://github.com/bnoon-ksa/landing-page/issues/5)) ([154d320](https://github.com/bnoon-ksa/landing-page/commit/154d32010467a7316ae83b6902e0e631191b1ce4))
+
 ## [1.1.0](https://github.com/bnoon-ksa/landing-page/compare/v1.0.6...v1.1.0) (2026-02-11)
 
 ### Features
