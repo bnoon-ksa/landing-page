@@ -16,7 +16,7 @@ export default function OurExpertsPage() {
       <Navbar />
 
       <PageBanner
-        bgImage="https://bnoon.blob.core.windows.net/website/images/experts-banner-ar.jpg"
+        bgImage="/images/experts-banner-ar.jpg"
       />
 
       <OurExperts />

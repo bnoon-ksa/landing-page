@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const NationalDayOffer = () => {
   // Alag images for each section
-  const imageRiyadh = "https://bnoon.blob.core.windows.net/website/images/national-day/infertility-treatments.avif";
-  const imageJeddah = "https://bnoon.blob.core.windows.net/website/images/national-day/icsi-cycles.avif";
+  const imageRiyadh = "/images/national-day/infertility-treatments.avif";
+  const imageJeddah = "/images/national-day/icsi-cycles.avif";
 
   const includesList = [
     "Ovulation monitoring via ultrasound",
@@ -69,7 +69,7 @@ const NationalDayOffer = () => {
                       className="d-flex align-items-start mb-2"
                     >
                       <Image
-                        src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
+                        src="/images/icons/bnoon-symbol.avif"
                         alt="check"
                         width={20}
                         height={20}
@@ -91,7 +91,7 @@ const NationalDayOffer = () => {
                       className="d-flex align-items-start mb-2"
                     >
                       <Image
-                        src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
+                        src="/images/icons/bnoon-symbol.avif"
                         alt="check"
                         width={20}
                         height={20}
@@ -122,7 +122,7 @@ const NationalDayOffer = () => {
               <div className="d-flex flex-column mt-3 gap-2">
                 <div className="d-flex align-items-center">
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg"
+                    src="/images/icons/phone.svg"
                     alt="Phone"
                     width={14}
                     height={14}
@@ -132,7 +132,7 @@ const NationalDayOffer = () => {
                 </div>
                 <div className="d-flex align-items-center">
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg"
+                    src="/images/icons/phone.svg"
                     alt="Phone"
                     width={14}
                     height={14}
@@ -185,7 +185,7 @@ const NationalDayOffer = () => {
               <div className="d-flex flex-column mt-3 gap-2">
                 <div className="d-flex align-items-center">
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg"
+                    src="/images/icons/phone.svg"
                     alt="Phone"
                     width={14}
                     height={14}

@@ -15,7 +15,7 @@ export default function ContactUsPage() {
       <Navbar />
 
       <PageBanner
-        bgImage="https://bnoon.blob.core.windows.net/website/images/contact-us-banner.jpg"
+        bgImage="/images/contact-us-banner.jpg"
       />
        <ContactUsSection />
        <MediaSection />

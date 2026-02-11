@@ -26,7 +26,7 @@ const plusJakartaSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://bnoon.sa"),
   icons: {
-    icon: "https://bnoon.blob.core.windows.net/website/images/fav.png",
+    icon: "/images/fav.png",
   },
   openGraph: {
     type: "website",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Bnoon",
     images: [
       {
-        url: "https://bnoon.blob.core.windows.net/website/images/bnoon-logo.png",
+        url: "/images/bnoon-logo.png",
         width: 1200,
         height: 630,
         alt: "Bnoon - Fertility & Women Health Centers",

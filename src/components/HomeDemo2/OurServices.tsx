@@ -8,28 +8,28 @@ function OurServices() {
   const servicesData = [
     {
       id: 1,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/Website-Icons_1.png",
+      icon: "/images/icons/Website-Icons_1.png",
       title: "Expert-Led, Patient-First",
       description:
         "Our board-certified fertility specialists, embryologists, and specialized nurses bring together medical excellence and real empathy. We don’t just treat conditions—we care for people.",
     },
     {
       id: 2,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/Website-Icons_2.png",
+      icon: "/images/icons/Website-Icons_2.png",
       title: "All-In-One Care",
       description:
         "From diagnostics and IVF to egg freezing, fertility preservation, and support through pregnancy—we offer everything under one roof. No referrals, no delays.",
     },
     {
       id: 3,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/Website-Icons_3.png",
+      icon: "/images/icons/Website-Icons_3.png",
       title: "State-of-the-art Clinics Designed Around You",
       description:
         "Clean lines, soft spaces, and a calming atmosphere. We’ve intentionally designed every inch of Bnoon to put you at ease, because the space around you affects how you feel inside.",
     },
     {
       id: 4,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/Website-Icons_4.png",
+      icon: "/images/icons/Website-Icons_4.png",
       title: "Personalized, Every Time",
       description:
         "Your treatment plan is built around your health, your timeline, and your goals—designed to fit your life, not disrupt it.",

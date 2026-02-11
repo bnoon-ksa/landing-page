@@ -55,7 +55,7 @@ function Navbar() {
           <div className="d-flex align-items-center">
             <Link href="/en" className="navbar-brand d-flex align-items-center">
               <Image
-                src="https://bnoon.blob.core.windows.net/website/images/bnoon-logo.svg"
+                src="/images/bnoon-logo.svg"
                 alt="Doutor"
                 width={183}
                 height={75}
@@ -127,7 +127,7 @@ function Navbar() {
 
     {/* 👉 YOUR CUSTOM ICON HERE */}
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/droparrow.svg"
+      src="/images/droparrow.svg"
       alt="arrow"
       width={22}
       height={22}
@@ -220,7 +220,7 @@ function Navbar() {
         >
           <Offcanvas.Title>
             <Image
-              src="https://bnoon.blob.core.windows.net/website/images/logo-mob.avif"
+              src="/images/logo-mob.avif"
               alt="Doutor"
               width={150}
               height={55}

@@ -14,7 +14,7 @@ export default function YourVisitPage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/visit-banner-ar.jpg" />
+      <PageBanner bgImage="/images/visit-banner-ar.jpg" />
      <VisitTabs />
 
      

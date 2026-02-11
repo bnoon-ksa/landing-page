@@ -5,10 +5,10 @@ import { motion, Variants, easeOut } from "framer-motion";
 import Image from "next/image";
 
 const OurLocations = () => {
-  const imageRiyadh = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-riyadh.avif";
-  const imageJeddah = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-jeddah.avif";
-  const imageKingSalman = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-north-riiyadh.avif";
- const imageAlahsa = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-alahsa.jpg";
+  const imageRiyadh = "/images/locations/bnoon-riyadh.avif";
+  const imageJeddah = "/images/locations/bnoon-jeddah.avif";
+  const imageKingSalman = "/images/locations/bnoon-north-riiyadh.avif";
+ const imageAlahsa = "/images/locations/bnoon-alahsa.jpg";
   // Motion variants
   const variantsLeft: Variants = {
     hidden: { x: -100, opacity: 0 },
@@ -46,15 +46,15 @@ const OurLocations = () => {
 
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <a href="https://maps.app.goo.gl/Vq76jVMZzSNhAg1A9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الرياض</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                   <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                  <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
@@ -102,15 +102,15 @@ const OurLocations = () => {
 
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <a href="https://maps.app.goo.gl/8Qt27cRjD7noBcuU9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – جدة</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                    <a href="tel:+966114448080" className="text-color">+966 12 680 0800</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                   <a href="mailto:info@bnoon.sa" className="text-color">info.jeddah@bnoon.sa</a>
                 </div>
               </div>
@@ -147,15 +147,15 @@ const OurLocations = () => {
               </p>
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                  <a href="https://maps.app.goo.gl/TPcaKT339w6bEBub6" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – طريق الملك سلمان</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                  <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                   <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
@@ -217,12 +217,12 @@ const OurLocations = () => {
 <p>يمثّل بنون – الأحساء نقلة نوعية في تطوير خدمات الخصوبة بالمنطقة الشرقية، إذ يجمع بين الابتكار الطبي، والتميّز الطبي، والالتزام بدعم كل أسرة في رحلتها نحو الأمومة والأبوة. </p>
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                  <a href="https://maps.app.goo.gl/HJVWsJkXzVNvk4bn7" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الأحساء </a>
                 </div>
               
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                    <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>

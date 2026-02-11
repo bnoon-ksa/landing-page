@@ -53,7 +53,7 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
           <div className="d-flex align-items-center  space-mobile">
             <Link href="/ar" className="navbar-brand d-flex align-items-center">
               <Image
-                src="https://bnoon.blob.core.windows.net/website/images/bnoon-logo.avif"
+                src="/images/bnoon-logo.avif"
                 alt="Bnoon"
                 width={183}
                 height={75}
@@ -120,7 +120,7 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
      <span style={{ margin: "0px 10px 0px 0px" }}>         +966 11 444 8080 :الرياض</span>
            {/* ⭐ Custom Dropdown Arrow Icon */}
   <Image
-  src="https://bnoon.blob.core.windows.net/website/images/droparrow.svg"
+  src="/images/droparrow.svg"
   alt="arrow"
   width={22}
   height={22}
@@ -210,7 +210,7 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
         <Offcanvas.Header closeButton className="border-0">
           <Offcanvas.Title>
             <Image
-              src="https://bnoon.blob.core.windows.net/website/images/logo-mob.avif"
+              src="/images/logo-mob.avif"
               alt="Bnoon"
               width={150}
               height={55}

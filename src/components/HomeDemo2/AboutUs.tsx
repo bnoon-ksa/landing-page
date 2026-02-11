@@ -29,32 +29,32 @@ const aboutData: AboutData = {
   items: [
     {
       id: 1,
-      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-1.png", alt: "icon" },
+      icon: { src: "/images/icons/icon-1.png", alt: "icon" },
       title: "+5000",
       description: "No. of IVF Cycles Annually",
     },
     {
       id: 2,
-      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-2.png", alt: "icon" },
+      icon: { src: "/images/icons/icon-2.png", alt: "icon" },
       title: "+80",
       description: "No. of Clinicians",
     },
     {
       id: 3,
-      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-3.png", alt: "icon" },
+      icon: { src: "/images/icons/icon-3.png", alt: "icon" },
       title: "+150",
       description: "No. of Staff",
     },
     {
       id: 4,
-      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-4.png", alt: "icon" },
+      icon: { src: "/images/icons/icon-4.png", alt: "icon" },
       title: "+5", // dummy title (rendering time par overwrite karenge)
     description:
     'Riyadh | Jeddah | Al Ahsa |<br><span class="under-construction">Abha - under construction</span>',
 },
     {
       id: 5,
-      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-5.png", alt: "icon" },
+      icon: { src: "/images/icons/icon-5.png", alt: "icon" },
       title: "+60%",
       description: "Success Rates",
       text: "On par with international success rates",

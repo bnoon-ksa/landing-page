@@ -117,7 +117,7 @@ const fadeInLeft = {
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               style={{
-                backgroundImage: "url(https://bnoon.blob.core.windows.net/website/images/faqs.jpg)",
+                backgroundImage: "url(/images/faqs.jpg)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 minHeight: "450px",

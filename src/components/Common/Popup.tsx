@@ -68,7 +68,7 @@ const Popup = () => {
           <div
             className="popup-content"
             style={{
-              backgroundImage: "url('https://bnoon.blob.core.windows.net/website/images/popup-image.avif')",
+              backgroundImage: "url('/images/popup-image.avif')",
               borderRadius: "0%",
               backgroundSize: "cover",
               backgroundPosition: "center",

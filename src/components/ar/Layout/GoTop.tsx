@@ -45,7 +45,7 @@ const GoTop = () => {
           }}
         >
           <Image
-            src="https://bnoon.blob.core.windows.net/website/images/WhatsApp.svg"
+            src="/images/WhatsApp.svg"
             alt="WhatsApp"
             fill
             style={{ objectFit: "cover" }}

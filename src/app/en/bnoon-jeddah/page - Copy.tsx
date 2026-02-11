@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/clinics-banner.jpg" />
+      <PageBanner bgImage="/images/clinics-banner.jpg" />
        <Jeddaharea />
 
     </>
