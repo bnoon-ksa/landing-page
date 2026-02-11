@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientBnoonRiyadhPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Riyadharea from "@/components/ar/Common/Riyadharea";
 
 export const metadata: Metadata = {
   title: "بنون - مراكز الإخصاب وصحة المرأة في الرياض",
@@ -7,5 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function BnoonRiyadhPage() {
-  return <ClientBnoonRiyadhPage />;
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="/images/clinics-banner-ar.jpg" />
+       <Riyadharea />
+
+    </>
+  );
 }

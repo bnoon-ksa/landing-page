@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrMazinBisharaPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrMazinBishara from "@/components/Common/DrMazinBishara";
 
 export const metadata: Metadata = {
   title: "Dr. Mazin Bishara – Best IVF Doctor in Jeddah | Bnoon ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrMazinBisharaPage() {
-  return <ClientDrMazinBisharaPage />;
+  return (
+    <>
+      <Navbar />
+       <DrMazinBishara  />
+
+    </>
+  );
 }

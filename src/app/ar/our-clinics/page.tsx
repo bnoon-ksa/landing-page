@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientOurClinicsPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import OurLocations from "@/components/ar/Common/OurLocations";
 
 export const metadata: Metadata = {
   title: "بنون - مراكز الإخصاب وصحة المرأة في الرياض وجدة والأحساء ",
@@ -7,5 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function OurClinicsPage() {
-  return <ClientOurClinicsPage />;
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="/images/clinics-banner-ar.jpg" />
+      <OurLocations />
+    </>
+  );
 }

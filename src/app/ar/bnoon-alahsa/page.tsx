@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientBnoonAlahsaPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import AlahsaArea from "@/components/ar/Common/AlahsaArea";
 
 export const metadata: Metadata = {
   title: "بنون - مركز الإخصاب وصحة المرأة في الأحساء",
@@ -7,6 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function BnoonAlahsaPage() {
-  return <ClientBnoonAlahsaPage />;
-}
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="/images/clinics-banner-ar.jpg" />
+       <AlahsaArea />
 
+    </>
+  );
+}

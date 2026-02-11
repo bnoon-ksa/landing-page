@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientYourVisitPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import VisitTabs from "@/components/Common/VisitTabs";
 
 export const metadata: Metadata = {
   title: "Bnoon - Your Visit to Bnoon in Jeddah, Riyadh & Al Ahsa",
@@ -7,5 +9,15 @@ export const metadata: Metadata = {
 };
 
 export default function YourVisitPage() {
-  return <ClientYourVisitPage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="/images/visit-banner.jpg" />
+     <VisitTabs />
+
+     
+    </>
+  );
 }

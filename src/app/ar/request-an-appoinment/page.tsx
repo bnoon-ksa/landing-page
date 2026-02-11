@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientRequestAppointmentPage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import AppointmentSection from "@/components/ar/Common/AppointmentSection";
 
 export const metadata: Metadata = {
   title: "طلب موعد مع طبيب – بنون في الرياض وجدة ",
@@ -7,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function RequestAppointmentPage() {
-  return <ClientRequestAppointmentPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="/images/request-an-appointment-ar.jpg" />
+
+      <AppointmentSection />
+    </>
+  );
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientWaadPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import WaadSection from "@/components/Common/WaadSection";
 
 export const metadata: Metadata = {
   title: "Wa'ad Bnoon Program - Get Pregnant or Your Money Back ",
@@ -7,5 +9,14 @@ export const metadata: Metadata = {
 };
 
 export default function WaadPage() {
-  return <ClientWaadPage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="/images/waad-bnoon-banner.png" />
+      <WaadSection />
+     
+    </>
+  );
 }

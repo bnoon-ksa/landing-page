@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrAhmadHarounPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrAhmadHaroun from "@/components/ar/Common/DrAhmadHaroun";
 
 export const metadata: Metadata = {
   title: "د. أحمد هارون – أفضل طبيب أمراض الذكورة والعقم في جدة| بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrAhmadHarounPage() {
-  return <ClientDrAhmadHarounPage />;
+  return (
+    <>
+      <Navbar />
+       <DrAhmadHaroun  />
+
+    </>
+  );
 }

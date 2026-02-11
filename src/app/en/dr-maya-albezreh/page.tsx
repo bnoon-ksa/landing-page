@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrMayaAlbezrehPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrMayaAlbezreh from "@/components/Common/DrMayaAlbezreh";
 
 export const metadata: Metadata = {
   title: "Dr. Maya Albezreh - Best OBGYN & IVF Doctor in Jeddah| Bnoon ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrMayaAlbezrehPage() {
-  return <ClientDrMayaAlbezrehPage />;
+  return (
+    <>
+      <Navbar />
+       <DrMayaAlbezreh   />
+
+    </>
+  );
 }

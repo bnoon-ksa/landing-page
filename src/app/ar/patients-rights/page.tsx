@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientPatientsRightsPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PaitentRights from "@/components/Common/PaitentRights";
 
 export const metadata: Metadata = {
   title: "حقوق المرضى – بنون",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerPatientsRightsPage() {
-  return <ClientPatientsRightsPage />;
+  return (
+   
+    <div className="patient-rights-page no-footer">
+       <Navbar />
+      <PaitentRights />
+    </div>
+  );
 }

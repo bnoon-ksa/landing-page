@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrMoussaElNaiemyPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrMoussaElNaiemy from "@/components/ar/Common/DrMoussaElNaiemy";
 
 export const metadata: Metadata = {
   title: "د. موسى  النعمي–أفضل طبيب أمراض الذكورة والعقم في الرياض|بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrMoussaElNaiemyPage() {
-  return <ClientDrMoussaElNaiemyPage />;
+  return (
+    <>
+      <Navbar />
+       <DrMoussaElNaiemy  />
+
+    </>
+  );
 }

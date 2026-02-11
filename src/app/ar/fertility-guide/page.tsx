@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import ClientFertilityGuidePage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import FertilityTabs from "@/components/ar/Common/FertilityTabs";
+import CustomList from "@/components/ar/Common/CustomList";
 
 export const metadata: Metadata = {
   title:"بنون – معلومات شاملة عن الخصوبة وعلاجات الإخصاب والحمل ",
@@ -7,5 +10,15 @@ export const metadata: Metadata = {
 };
 
 export default function FertilityGuidePage() {
-  return <ClientFertilityGuidePage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="/images/fertility-guid-banner-ar.jpg" />
+     <FertilityTabs />
+
+     
+    </>
+  );
 }

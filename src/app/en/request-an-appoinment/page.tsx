@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientRequestAppointmentPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import AppointmentSection from "@/components/Common/AppointmentSection";
 
 export const metadata: Metadata = {
   title: "Book an Appointment – Bnoon | Riyadh & Jeddah",
@@ -7,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function RequestAppointmentServer() {
-  return <ClientRequestAppointmentPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="/images/request-an-appointment.jpg" />
+
+      <AppointmentSection />
+    </>
+  );
 }

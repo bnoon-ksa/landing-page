@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientJoinOurTeamPage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import TeamsSection from "@/components/ar/Common/TeamsSection";
 
 export const metadata: Metadata = {
   title: "انضموا إلى فريق بنون – الابتكار، التعليم الطبي، الأبحاث ",
@@ -7,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function JoinOurTeamPage() {
-  return <ClientJoinOurTeamPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="/images/join-our-team-ar.jpg" />
+
+      <TeamsSection />
+    </>
+  );
 }

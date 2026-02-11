@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrHusseinSabbanPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrHusseinSabban from "@/components/ar/Common/DrHusseinSabban";
 
 export const metadata: Metadata = {
   title: "د. حسين صبّان- أفضل طبيب أطفال الأنابيب والعقم في جدة| بنو",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrHusseinSabbanPage() {
-  return <ClientDrHusseinSabbanPage />;
+  return (
+    <>
+      <Navbar />
+       <DrHusseinSabban  />
+
+    </>
+  );
 }

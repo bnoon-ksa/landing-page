@@ -1,5 +1,3 @@
-"use client"; // 👈 form handling ke liye client component banana zaroori hai
-
 import React from "react";
 import Image from "next/image";
 

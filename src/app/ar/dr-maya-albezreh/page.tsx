@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrMayaAlbezrehPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrMayaAlbezreh from "@/components/ar/Common/DrMayaAlbezreh";
 
 export const metadata: Metadata = {
   title: "د. مايا البزرة – طبيبة النساء والولادة والإخصاب في جدة| بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrMayaAlbezrehPage() {
-  return <ClientDrMayaAlbezrehPage />;
+  return (
+    <>
+      <Navbar />
+       <DrMayaAlbezreh   />
+
+    </>
+  );
 }

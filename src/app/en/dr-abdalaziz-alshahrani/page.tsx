@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrAbdalazizPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrAbdulAzizAlShahrani from "@/components/Common/DrAbdulAzizAlShahrani";
 
 export const metadata: Metadata = {
   title: "Dr. AbdulAziz AlShahrani - Best IVF Doctor in Riyadh | Bnoon",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrAbdalazizPage() {
-  return <ClientDrAbdalazizPage />;
+  return (
+    <>
+      <Navbar />
+       <DrAbdulAzizAlShahrani  />
+
+    </>
+  );
 }

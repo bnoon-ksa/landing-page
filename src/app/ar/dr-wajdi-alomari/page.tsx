@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrWajdiAlOmariPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrWajdiAlOmari from "@/components/ar/Common/DrWajdiAlOmari";
 
 export const metadata: Metadata = {
   title: "د. وجدي العمري - أفضل طبيب أطفال الأنابيب في الرياض | بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrWajdiAlOmariPage() {
-  return <ClientDrWajdiAlOmariPage />;
+  return (
+    <>
+      <Navbar />
+       <DrWajdiAlOmari  />
+
+    </>
+  );
 }

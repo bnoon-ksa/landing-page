@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrAhmadHarounPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrAhmadHaroun from "@/components/Common/DrAhmadHaroun";
 
 export const metadata: Metadata = {
   title: "Dr. Ahmad Haroun – Urologist/Andrologist in Jeddah | Bnoon ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrAhmadHarounPage() {
-  return <ClientDrAhmadHarounPage />;
+  return (
+    <>
+      <Navbar />
+       <DrAhmadHaroun  />
+
+    </>
+  );
 }

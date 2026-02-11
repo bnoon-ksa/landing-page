@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientSubmitFeedbackPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import FeedbackSection from "@/components/Common/FeedbackSection";
 
 export const metadata: Metadata = {
   title: "Bnoon – We’d Love to Hear From You ",
@@ -7,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function SubmitFeedbackServer() {
-  return <ClientSubmitFeedbackPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="/images/feedback-banner.jpg" />
+
+      <FeedbackSection />
+    </>
+  );
 }

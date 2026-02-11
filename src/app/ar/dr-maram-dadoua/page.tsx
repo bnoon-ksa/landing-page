@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrMaramDadouaPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrMaramDadoua from "@/components/ar/Common/DrMaramDadoua";
 
 export const metadata: Metadata = {
   title:"د. مرام دعدوع - طبيبة أمراض النساء والولادة في جدة | بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrMaramDadouaPage() {
-  return <ClientDrMaramDadouaPage />;
+  return (
+    <>
+      <Navbar />
+       <DrMaramDadoua   />
+
+    </>
+  );
 }

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import ClientAboutUsPage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import AboutusSection from "@/components/ar/Common/AboutusSection";
+import WhoAreWe from "@/components/ar/Common/WhoAreWe";
 
 export const metadata: Metadata = {
   title: "نبذة عنّا – بنون",
@@ -7,5 +10,12 @@ export const metadata: Metadata = {
 };
 
 export default function AboutUsPage() {
-  return <ClientAboutUsPage />;
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="/images/aboutus-ar-banner.jpg" />
+      <AboutusSection />
+      <WhoAreWe />
+    </>
+  );
 }

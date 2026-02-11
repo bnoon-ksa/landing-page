@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrAhmedAlNowasserPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrAhmedAlNowasser from "@/components/Common/DrAhmedAlNowasser";
 
 export const metadata: Metadata = {
   title: "Dr. Ahmed Al-Nowasser – Best Fertility Doctor in Al Ahsa | Bnoon ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrAhmedAlNowasserPage() {
-  return <ClientDrAhmedAlNowasserPage />;
+  return (
+    <>
+      <Navbar />
+       <DrAhmedAlNowasser  />
+
+    </>
+  );
 }

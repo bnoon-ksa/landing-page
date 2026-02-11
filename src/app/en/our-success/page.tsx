@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientOurSuccessPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import SuccessSection from "@/components/Common/SuccessSection";
 
 export const metadata: Metadata = {
   title: "Bnoon - Leading Pregnancy Rates (IVF/ICSI) ",
@@ -7,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function OurSuccessPage() {
-  return <ClientOurSuccessPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="/images/success-banner.jpg" />
+
+      <SuccessSection />
+    </>
+  );
 }

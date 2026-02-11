@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientOurSuccessPage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import SuccessSection from "@/components/ar/Common/SuccessSection";
 
 export const metadata: Metadata = {
   title:"بنون – نسب نجاح الحمل، عمليات أطفال الأنابيب والحقن المجهري ",
@@ -7,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function OurSuccessPage() {
-  return <ClientOurSuccessPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="/images/success-banner-ar.jpg" />
+
+      <SuccessSection />
+    </>
+  );
 }

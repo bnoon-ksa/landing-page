@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientTelemedicinePage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import TelemedicineSection from "@/components/ar/Common/TelemedicineSection";
 
 export const metadata: Metadata = {
   title: " الاستشارات عن بُعد – بنون",
@@ -7,5 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function TelemedicinePage() {
-  return <ClientTelemedicinePage />;
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="/images/telemidicine-ar.jpg" />
+      <TelemedicineSection />
+    </>
+  );
 }

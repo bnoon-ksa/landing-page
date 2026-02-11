@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import ClientAboutUsPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import AboutusSection from "@/components/Common/AboutusSection";
+import WhoAreWe from "@/components/Common/WhoAreWe";
 
 export const metadata: Metadata = {
   title: "About Us – Bnoon",
@@ -7,5 +10,15 @@ export const metadata: Metadata = {
 };
 
 export default function AboutUsPage() {
-  return <ClientAboutUsPage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="/images/aboutus.jpg" />
+      <AboutusSection />
+       <WhoAreWe />
+     
+    </>
+  );
 }

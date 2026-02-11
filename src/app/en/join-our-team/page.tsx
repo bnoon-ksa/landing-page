@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientJoinOurTeamPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import TeamsSection from "@/components/Common/TeamsSection";
 
 export const metadata: Metadata = {
   title: "Join Bnoon – Innovation, Education & Research ",
@@ -7,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function JoinOurTeamPage() {
-  return <ClientJoinOurTeamPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="/images/join-our-team.jpg" />
+
+      <TeamsSection />
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrDaliaNourPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrDaliaNour from "@/components/Common/DrDaliaNour";
 
 export const metadata: Metadata = {
   title: "Dr. Dalia Adel – Best OBGYN & IVF Doctor in Riyadh | Bnoon",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrDaliaNourPage() {
-  return <ClientDrDaliaNourPage />;
+  return (
+    <>
+      <Navbar />
+       <DrDaliaNour />
+
+    </>
+  );
 }

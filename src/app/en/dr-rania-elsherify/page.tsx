@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrRaniaElsherifyPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrRaniaElsherify from "@/components/Common/DrRaniaElsherify";
 
 export const metadata: Metadata = {
   title: "Dr. Rania Elsherify - OBGYN Doctor in Bnoon | Al Ahsa",
@@ -7,7 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrRaniaElsherifyPage() {
-  return <ClientDrRaniaElsherifyPage />;
+  return (
+    <>
+      <Navbar />
+       <DrRaniaElsherify  />
+
+    </>
+  );
 }
-
-

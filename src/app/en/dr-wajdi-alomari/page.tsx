@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrWajdiAlomariPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrWajdiAlOmari from "@/components/Common/DrWajdiAlOmari";
 
 export const metadata: Metadata = {
   title: "Dr. Wajdi Al Omari – Best Fertility Doctor in Riyadh | Bnoon ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrWajdiAlomariPage() {
-  return <ClientDrWajdiAlomariPage />;
+  return (
+    <>
+      <Navbar />
+       <DrWajdiAlOmari  />
+
+    </>
+  );
 }

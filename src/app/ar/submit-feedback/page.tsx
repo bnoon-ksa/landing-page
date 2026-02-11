@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientSubmitFeedbackPage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import FeedbackSection from "@/components/ar/Common/FeedbackSection";
 
 export const metadata: Metadata = {
   title: "بنون – شاركونا تجربتكم ",
@@ -7,5 +9,13 @@ export const metadata: Metadata = {
 };
 
 export default function SubmitFeedbackPage() {
-  return <ClientSubmitFeedbackPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="/images/feedback-banner-ar.jpg" />
+
+      <FeedbackSection />
+    </>
+  );
 }

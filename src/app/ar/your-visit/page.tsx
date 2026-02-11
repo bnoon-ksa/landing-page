@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientYourVisitPage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import VisitTabs from "@/components/ar/Common/VisitTabs";
 
 export const metadata: Metadata = {
   title:  "بنون – زيارتكم لمراكزنا في الرياض وجدة والأحساء ",
@@ -7,5 +9,15 @@ export const metadata: Metadata = {
 };
 
 export default function YourVisitPage() {
-  return <ClientYourVisitPage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="/images/visit-banner-ar.jpg" />
+     <VisitTabs />
+
+     
+    </>
+  );
 }

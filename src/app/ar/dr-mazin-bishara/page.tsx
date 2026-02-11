@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrMazinBisharaPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrMazinBishara from "@/components/ar/Common/DrMazinBishara";
 
 export const metadata: Metadata = {
   title:"د. مازن بشارة – أفضل طبيب أطفال الأنابيب والعقم في جدة| بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrMazinBisharaPage() {
-  return <ClientDrMazinBisharaPage />;
+  return (
+    <>
+      <Navbar />
+       <DrMazinBishara  />
+
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrMedianAlkhalafPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrMedianAlkhalaf  from "@/components/Common/DrMedianAlkhalaf";
 
 export const metadata: Metadata = {
   title: "Dr. Median Alkhalaf - OBGYN Consultant in Bnoon | Al Ahsa",
@@ -7,6 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrMedianAlkhalafPage() {
-  return <ClientDrMedianAlkhalafPage />;
-}
+  return (
+    <>
+      <Navbar />
+       <DrMedianAlkhalaf  />
 
+    </>
+  );
+}

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import ClientOurExpertsPage from "./page.client";
+import Image from "next/image";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import FertilityDoctor from "@/components/ar/Common/FertilityDoctor";
+import OurExperts from "@/components/ar/Common/OurExperts";
 
 export const metadata: Metadata = {
   title: "أطباء أطفال الأنابيب وأمراض النساء وأمراض الذكورة – بنون ",
@@ -8,9 +11,17 @@ export const metadata: Metadata = {
 };
 
 export default function OurExpertsPage() {
-  return(
-    <Suspense fallback={null}>
-      <ClientOurExpertsPage />;
-      </Suspense>
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner
+        bgImage="/images/experts-banner-ar.jpg"
+      />
+
+      <OurExperts />
+      
+      <FertilityDoctor />
+    </>
   );
 }

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientBnoonRiyadhPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import PageBanner from "@/components/Layout/PageBanner";
+import Riyadharea from "@/components/Common/Riyadharea";
 
 export const metadata: Metadata = {
   title: "Bnoon - Riyadh | The Fertility & Women Health Centers",
@@ -7,5 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function BnoonRiyadhPage() {
-  return <ClientBnoonRiyadhPage />;
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="/images/clinics-banner.jpg" />
+       <Riyadharea />
+
+    </>
+  );
 }

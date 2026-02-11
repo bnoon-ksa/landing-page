@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrAhmedAlShaikhPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrAhmedAlshaikh from "@/components/ar/Common/DrAhmedAlshaikh";
 
 export const metadata: Metadata = {
   title: "د. أحمد الشيخ – أفضل طبيب أطفال الأنابيب والعقم في جدة| بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrAhmedAlShaikhPage() {
-  return <ClientDrAhmedAlShaikhPage />;
+  return (
+    <>
+      <Navbar />
+       <DrAhmedAlshaikh  />
+
+    </>
+  );
 }

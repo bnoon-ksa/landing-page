@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrFawazEdrisPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrFawazEdris from "@/components/Common/DrFawazEdris";
 
 export const metadata: Metadata = {
   title: "Dr. Fawaz Edris – Best IVF Doctor in Jeddah | Bnoon ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrFawazEdrisPage() {
-  return <ClientDrFawazEdrisPage />;
+  return (
+    <>
+      <Navbar />
+       <DrFawazEdris  />
+
+    </>
+  );
 }

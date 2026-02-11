@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import ClientTreatmentsPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import TreatmentsSection from "@/components/Common/TreatmentsSection";
+import TreatmentsTabs from "@/components/Common/TreatmentsTabs";
 
 export const metadata: Metadata = {
   title: "Bnoon- IVF, ICSI, Male Infertility, PGT, Gyne Laproscopy|KSA ",
@@ -7,5 +10,14 @@ export const metadata: Metadata = {
 };
 
 export default function TreatmentsPage() {
-  return <ClientTreatmentsPage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="/images/treatments-banner.jpg" />
+      <TreatmentsSection />
+     <TreatmentsTabs />
+    </>
+  );
 }

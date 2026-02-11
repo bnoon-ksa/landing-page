@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrAsimAlwohaibiPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrAsimAlWohaibi from "@/components/ar/Common/DrAsimAlWohaibi";
 
 export const metadata: Metadata = {
   title:"د. عاصم الوهيبي - أفضل طبيب إخصاب في الرياض | بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrAsimAlwohaibiPage() {
-  return <ClientDrAsimAlwohaibiPage />;
+  return (
+    <>
+      <Navbar />
+       <DrAsimAlWohaibi  />
+
+    </>
+  );
 }

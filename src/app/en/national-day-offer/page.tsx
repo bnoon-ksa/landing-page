@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientNationalDayOfferPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import PageBanner from "@/components/Layout/PageBanner";
+import NationalDayOffer from "@/components/Common/NationalDayOffer";
 
 export const metadata: Metadata = {
   title: "National Day Offer at Bnoon",
@@ -7,5 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function NationalDayOfferPage() {
-  return <ClientNationalDayOfferPage />;
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="/images/national-day-banner.jpg" />
+       <NationalDayOffer />
+
+    </>
+  );
 }

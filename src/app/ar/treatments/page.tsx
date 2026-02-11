@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import ClientTreatmentsPage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import TreatmentsSection from "@/components/ar/Common/TreatmentsSection";
+import TreatmentsTabs from "@/components/ar/Common/TreatmentsTabs";
 
 export const metadata: Metadata = {
   title: "بنون - أطفال الأنابيب والحقن المجهري والعقم وفحوصات الجينات ",
@@ -7,5 +10,14 @@ export const metadata: Metadata = {
 };
 
 export default function TreatmentsPage() {
-  return <ClientTreatmentsPage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="/images/treatments-banner-ar.jpg" />
+      <TreatmentsSection />
+     <TreatmentsTabs />
+    </>
+  );
 }

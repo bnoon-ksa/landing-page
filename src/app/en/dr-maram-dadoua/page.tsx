@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrMaramDadouaPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrMaramDadoua from "@/components/Common/DrMaramDadoua";
 
 export const metadata: Metadata = {
   title: "Dr. Maram Dadoua - Best OBGYN Doctor in Jeddah| Bnoon ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrMaramDadouaPage() {
-  return <ClientDrMaramDadouaPage />;
+  return (
+    <>
+      <Navbar />
+       <DrMaramDadoua   />
+
+    </>
+  );
 }

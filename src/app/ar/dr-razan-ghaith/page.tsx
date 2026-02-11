@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrRazanGhaithPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrRazanGhaith from "@/components/ar/Common/DrRazanGhaith";
 
 export const metadata: Metadata = {
   title: "د. رزان غيث – طبيبة النساء والولادة والإخصاب في جدة | بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrRazanGhaithPage() {
-  return <ClientDrRazanGhaithPage />;
+  return (
+    <>
+      <Navbar />
+       <DrRazanGhaith  />
+
+    </>
+  );
 }

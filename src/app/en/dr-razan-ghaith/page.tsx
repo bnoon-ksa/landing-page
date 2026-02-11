@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrRazanGhaithPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrRazanGhaith from "@/components/Common/DrRazanGhaith";
 
 export const metadata: Metadata = {
   title: "Dr. Razan Ghaith - Best OBGYN & IVF Doctor in Jeddah| Bnoon ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function ServerDrRazanGhaithPage() {
-  return <ClientDrRazanGhaithPage />;
+  return (
+    <>
+      <Navbar />
+       <DrRazanGhaith  />
+
+    </>
+  );
 }

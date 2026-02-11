@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ClientBnoonBassamPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import DrBassam from "@/components/ar/Common/DrBassam";
 
 export const metadata: Metadata = {
   title: "الدكتور بسام نصير – أفضل استشاري إخصاب وعقم في الأحساء | بنون",
@@ -7,6 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default function BnoonBassamPage() {
-  return <ClientBnoonBassamPage />;
-}
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="/images/clinics-banner-ar.jpg" />
+       <DrBassam />
 
+    </>
+  );
+}

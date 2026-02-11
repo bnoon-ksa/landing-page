@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrDaliaNourPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrDaliaNour from "@/components/ar/Common/DrDaliaNour";
 
 export const metadata: Metadata = {
   title: "د. داليا عادل - طبيبة النسائية وتأخر الحمل في الرياض | بنون ",
@@ -7,5 +8,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrDaliaNourPage() {
-  return <ClientDrDaliaNourPage />;
+  return (
+    <>
+      <Navbar />
+       <DrDaliaNour />
+
+    </>
+  );
 }
