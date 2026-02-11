@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/bnoon-ksa/landing-page/compare/v1.0.1...v1.0.2) (2026-02-11)
+
+### Bug Fixes
+
+* replace CSS start/end values with flex-start/flex-end for autoprefixer compatibility ([5902b51](https://github.com/bnoon-ksa/landing-page/commit/5902b51e5269998d4b7dd9096a37464291b23903))
+* resolve all ESLint lint warnings ([1eaa1b0](https://github.com/bnoon-ksa/landing-page/commit/1eaa1b0a47de0223f3d39ff7e7da26c2b369b156))
+
 ## [1.0.1](https://github.com/bnoon-ksa/landing-page/compare/v1.0.0...v1.0.1) (2026-02-11)
 
 ### Bug Fixes
