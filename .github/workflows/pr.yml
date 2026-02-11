@@ -174,8 +174,18 @@ jobs:
         env:
           NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
 
+      - name: Package build output
+        run: tar -czf nextjs-build.tar.gz .next
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-build
+          path: nextjs-build.tar.gz
+          retention-days: 1
+
   # ──────────────────────────────────────────────
-  # Job 4: E2E Tests (builds and runs locally)
+  # Job 4: E2E Tests (uses build artifact)
   # ──────────────────────────────────────────────
   e2e-tests:
     runs-on: ubuntu-latest
@@ -197,10 +207,13 @@ jobs:
           restore-keys: |
             node-modules-${{ runner.os }}-
 
-      - name: Build Next.js app
-        run: npm run build
-        env:
-          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: nextjs-build
+
+      - name: Extract build output
+        run: tar -xzf nextjs-build.tar.gz
 
       - name: Get Playwright version
         id: pw-version
