@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { redirect } from "next/navigation";
 
 async function handleSubscribe(formData: FormData) {
@@ -81,7 +82,7 @@ const SubscribeForm = () => {
         </div>
 
         <div className="subscribe-shape">
-          <img src="/images/shape.png" alt="image" width={260} height={202} />
+          <Image src="/images/shape.png" alt="image" width={260} height={202} />
         </div>
       </div>
     </>

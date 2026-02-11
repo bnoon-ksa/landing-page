@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
 const Riyadharea = () => {
   const imageAlahsa = "/images/locations/bnoon-alahsa.jpg";
@@ -109,7 +110,7 @@ const Riyadharea = () => {
             <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
   {/* Location */}
   <div className="d-flex align-items-center">
-    <img
+    <Image
       src="/images/icons/location.svg"
       alt="Location"
       width={24}
@@ -128,7 +129,7 @@ const Riyadharea = () => {
 
   {/* Email */}
   <div className="d-flex align-items-center">
-    <img
+    <Image
       src="/images/icons/mail.svg"
       alt="Email"
       width={24}
@@ -157,7 +158,7 @@ const Riyadharea = () => {
                 display: "inline-block",
               }}
             >
-              <img src={imageAlahsa} alt="Bnoon Riyadh" width={580} height={450} />
+              <Image src={imageAlahsa} alt="Bnoon Riyadh" width={580} height={450} />
             </div>
           </div>
         </div>

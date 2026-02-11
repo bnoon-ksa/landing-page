@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
 import { CgEnter } from "react-icons/cg";
 const AppointmentSection = () => {
@@ -200,10 +201,11 @@ setTimeout(() => {
   >
     <span>{formData.interest || "Choose one"}</span>
 
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
@@ -282,10 +284,11 @@ setTimeout(() => {
     }}
   >
     <span>{formData.branch || "Select branch"}</span>
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
@@ -355,10 +358,11 @@ setTimeout(() => {
   >
     <span>{formData.visitType || "Select visit type"}</span>
 
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
@@ -436,10 +440,11 @@ setTimeout(() => {
         : formData.doctor || "Select Doctor"}
     </span>
 
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
@@ -578,10 +583,11 @@ setTimeout(() => {
   >
     <span>{formData.nationality || ""}</span>
 
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
@@ -651,10 +657,11 @@ setTimeout(() => {
   >
     <span>{formData.countryOfResidence || ""}</span>
 
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
@@ -805,10 +812,11 @@ setTimeout(() => {
     }}
   >
     <span>{formData.preferredTime || ""}</span>
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
@@ -886,10 +894,11 @@ setTimeout(() => {
     }}
   >
     <span>{formData.howHeard || ""}</span>
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 

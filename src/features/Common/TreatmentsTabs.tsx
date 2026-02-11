@@ -396,10 +396,14 @@ const tabToHash = (tab: string) =>
             />
           </div>
           <div className="col-lg-4 col-md-6 image-col">
-            <img
+            <Image
               src={currentContent.image}
               alt={activeTab}
               className="img-fluid"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         </div>

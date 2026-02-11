@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { usePathname } from "next/navigation";
 import { FaPhone } from "react-icons/fa";
@@ -52,7 +53,7 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
           {/* 🟢 LEFT SIDE (Logo + Mobile) */}
           <div className="d-flex align-items-center  space-mobile">
             <Link href="/ar" className="navbar-brand d-flex align-items-center">
-              <img
+              <Image
                 src="/images/bnoon-logo.avif"
                 alt="Bnoon"
                 width={183}
@@ -119,10 +120,11 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
       <FaPhone style={{ color: "white", transform:"scaleX(-1)", marginRight:"auto"}} />
      <span style={{ margin: "0px 10px 0px 0px" }}>         +966 11 444 8080 :الرياض</span>
            {/* ⭐ Custom Dropdown Arrow Icon */}
-  <img
+  <Image
   src="/images/droparrow.svg"
   alt="arrow"
-  style={{ width: "22px" }}
+  width={22}
+  height={22}
 />
     </button>
     <ul
@@ -208,7 +210,7 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
       >
         <Offcanvas.Header closeButton className="border-0">
           <Offcanvas.Title>
-            <img
+            <Image
               src="/images/logo-mob.avif"
               alt="Bnoon"
               width={150}

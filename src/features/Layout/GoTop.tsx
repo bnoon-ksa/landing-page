@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 const GoTop = () => {
   const [showButton, setShowButton] = useState(false);
@@ -43,14 +44,11 @@ const GoTop = () => {
             boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
           }}
         >
-          <img
+          <Image
             src="/images/WhatsApp.svg"
             alt="WhatsApp"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
+            fill
+            style={{ objectFit: "cover" }}
           />
         </a>
       )}

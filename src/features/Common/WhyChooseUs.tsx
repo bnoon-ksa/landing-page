@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const WhyChooseUs = () => {
@@ -41,7 +42,7 @@ const WhyChooseUs = () => {
                     {reasons.map((reason) => (
                       <div key={reason.id} className="item">
                         <div className="icon">
-                          <img
+                          <Image
                             src="/images/icons/check2.svg"
                             alt="check"
                             width={30}
@@ -94,9 +95,12 @@ const WhyChooseUs = () => {
 
               <div className="col-xl-5 col-md-12">
                 <div className="third-choose-image">
-                  <img
+                  <Image
                     src="/images/choose.jpg"
                     alt="choose"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
                     style={{ width: "100%", height: "auto" }}
                   />
                 </div>

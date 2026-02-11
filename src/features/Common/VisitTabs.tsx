@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import CustomList from "@/components/Common/CustomList";
 const tabToHash = (tab: string) =>
   tab
@@ -277,10 +278,14 @@ const VisitTabs: React.FC = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 image-col">
-            <img
+            <Image
               src={currentContent.image}
               alt={activeTab}
               className="img-fluid fertilitytabs-image"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         </div>

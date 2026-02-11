@@ -4,6 +4,7 @@ import "../../styles/responsive.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Footer from "@/components/Layout/Footer";
 import GoTop from "@/components/Layout/GoTop";
+import Script from "next/script";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ variable: "--font-plus-jakarta-sans", subsets: ["latin"] });
 export const metadata = {
@@ -17,8 +18,10 @@ export default function EnglishLayout({ children }: { children: React.ReactNode 
     <html lang="en" dir="ltr">
       <body className={`${plusJakartaSans.variable}`}>
         {/* Google Analytics 4 snippet */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG"></script>
-        <script
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG" strategy="afterInteractive" />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

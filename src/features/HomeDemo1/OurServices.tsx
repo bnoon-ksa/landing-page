@@ -113,7 +113,7 @@ function OurServices() {
                 <div className="service-card">
                   <div className="top">
                     <div className="icon">
-                      <img
+                      <Image
                         src={service.icon}
                         alt="icon"
                         width={60}
@@ -181,7 +181,7 @@ function OurServices() {
               >
                 <div className="wrap-content">
                   <div className="image">
-                    <img
+                    <Image
                       src={largeImageData.layerImage}
                       alt="layer"
                       width={60}
@@ -205,7 +205,7 @@ function OurServices() {
                     </svg>
                   </Link>
                   <div className="shape">
-                    <img
+                    <Image
                       src={largeImageData.shapeImage}
                       alt="shape"
                       width={159}

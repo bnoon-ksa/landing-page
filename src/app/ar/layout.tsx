@@ -4,6 +4,7 @@ import "../../styles/arabic-responsive.css";
 import { Cairo } from "next/font/google";
 import Footer from "@/features/Layout/Footer";
 import GoTop from "@/features/Layout/GoTop";
+import Script from "next/script";
 import "@fontsource/alexandria/400.css"; // Regular
 import "@fontsource/alexandria/700.css"; // Bold (optional)
 const cairo = Cairo({ variable: "--font-cairo", subsets: ["arabic"], weight: ["400","700"] });
@@ -19,8 +20,10 @@ export default function ArabicLayout({ children }: { children: React.ReactNode }
 
       <body className={`${cairo.variable} arabic`}>
    {/* Google Analytics 4 snippet */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG"></script>
-        <script
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG" strategy="afterInteractive" />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

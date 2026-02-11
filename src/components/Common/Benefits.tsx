@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 const Benefits = () => {
   const benefitsData = [
@@ -48,7 +49,7 @@ const Benefits = () => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   // Scroll-triggered animation
   useEffect(() => {
@@ -123,10 +124,11 @@ const Benefits = () => {
 
               <div className="image-wrapper">
     {images.map((img, index) => (
-      <img
+      <Image
         key={index}
         src={img}
         alt="benefit"
+        fill
         className={`slide-image ${index === currentIndex ? "active" : ""}  responsive-image`}
       />
     ))}
