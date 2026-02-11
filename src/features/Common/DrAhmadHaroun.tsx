@@ -140,7 +140,7 @@ const DrAhmadHaroun = () => {
             />
             <div className="mt-3">
               <Link
-                href="request-an-appoinment"
+                href="https://book.bnoon.sa/ar"
                 className="btn btn-success doctor-profile-btn"
               >
                طلب موعد

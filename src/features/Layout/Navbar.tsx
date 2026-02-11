@@ -166,12 +166,14 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
   )}
 
   {/* Appointment */}
-  <Link
-    href="/ar/request-an-appoinment"
+  <a
+    href="https://book.bnoon.sa/ar"
+    target="_blank"
+    rel="noopener noreferrer"
     className="btn btn-success btn-appointment"
   >
     طلب موعد
-  </Link>
+  </a>
 </div>
 
             {/* Navigation Menu */}

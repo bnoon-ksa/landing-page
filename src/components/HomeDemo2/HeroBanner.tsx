@@ -27,7 +27,7 @@ function HeroBanner() {
       video: "images/banner/banner-3.mp4",
       title: "THE FUTURE OF<br>FERTILITY IS HERE",
       desc: "Now in Riyadh, Jeddah and Al Ahsa",
-      buttonLink: "en/request-an-appoinment",
+      buttonLink: "https://book.bnoon.sa",
       buttonText: "Book Now",
     },
     {
@@ -36,7 +36,7 @@ function HeroBanner() {
       desc: "Hope begins with Bnoon",
       titleColor: "#004E78",
       descColor: "#004E78",
-      buttonLink: "en/request-an-appoinment",
+      buttonLink: "https://book.bnoon.sa",
       buttonText: "Book Now",
     },
     {
@@ -45,14 +45,14 @@ function HeroBanner() {
       desc: "Compassionate care to achieve <br>their dream of parenthood ",
       titleColor: "#004E78",
       descColor: "#004E78",
-      buttonLink: "en/request-an-appoinment",
+      buttonLink: "https://book.bnoon.sa",
       buttonText: "Book Now",
     },
     {
       video: "images/banner/banner-6.mp4",
       title: "THE NEXT-GENERATION <br>OF FERTILITY CARE",
       desc: "Now in Saudi Arabia",
-      buttonLink: "en/request-an-appoinment",
+      buttonLink: "https://book.bnoon.sa",
       buttonText: "Book Now",
     },
     {
@@ -61,7 +61,7 @@ function HeroBanner() {
       desc: "Book your appointment today",
       titleColor: "#004E78",
       descColor: "#004E78",
-      buttonLink: "en/request-an-appoinment",
+      buttonLink: "https://book.bnoon.sa",
       buttonText: "Book Now",
     },
   ];
@@ -150,12 +150,14 @@ function HeroBanner() {
 
 
           <div className="banner-btn">
-            <Link
+            <a
               href={slides[currentSlide].buttonLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-success btn-appointment btn-banner"
             >
               {slides[currentSlide].buttonText}
-            </Link>
+            </a>
           </div>
 
           <p

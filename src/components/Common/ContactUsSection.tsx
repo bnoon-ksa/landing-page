@@ -74,7 +74,7 @@ import Link from "next/link";
                 className="mb-3"
               />
               <h5 className="mb-3"><strong>Request an Appointment</strong></h5>
-              <Link href="request-an-appoinment" className="btn btn-primary mb-3 contact-btn">
+              <Link href="https://book.bnoon.sa" className="btn btn-primary mb-3 contact-btn">
                 Click here
               </Link>
               <p>
@@ -95,7 +95,7 @@ import Link from "next/link";
                 className="mb-3"
               />
               <h5 className="mb-3"><strong>Prefer to speak with us directly?</strong></h5>
-              <Link href="request-an-appoinment" className="btn btn-primary mb-3 contact-btn">
+              <Link href="https://book.bnoon.sa" className="btn btn-primary mb-3 contact-btn">
                 Call us
               </Link>
               <p>

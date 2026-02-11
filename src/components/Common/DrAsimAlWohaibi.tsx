@@ -134,12 +134,12 @@ const DrAsimAlWohaibi = () => {
               height={625}
             />
             <div className="mt-3">
-              <Link
-                href="request-an-appoinment"
+              <a
+                href="https://book.bnoon.sa"
                 className="btn btn-success doctor-profile-btn"
               >
                 Request an Appointment
-              </Link>
+              </a>
             </div>
           </div>
 

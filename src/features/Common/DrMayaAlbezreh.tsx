@@ -137,12 +137,12 @@ const DrMayaAlbezreh = () => {
               />
             </div>
             <div className="text-center mt-3">
-              <Link
-                href="request-an-appoinment"
+              <a
+                href="https://book.bnoon.sa/ar"
                 className="btn btn-success doctor-profile-btn"
               >
                 طلب موعد
-              </Link>
+              </a>
             </div>
           </div>
 

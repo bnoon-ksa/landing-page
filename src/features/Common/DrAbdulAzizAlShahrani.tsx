@@ -148,12 +148,12 @@ const DrAbdulAzizAlShahrani = () => {
               />
             </div>
             <div className="text-center mt-3">
-              <Link
-                href="request-an-appoinment"
+              <a
+                href="https://book.bnoon.sa/ar"
                 className="btn btn-success doctor-profile-btn"
               >
                طلب موعد
-              </Link>
+              </a>
             </div>
           </div>
           <div className="col-xl-12 col-md-12">

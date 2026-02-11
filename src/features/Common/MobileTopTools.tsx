@@ -34,7 +34,7 @@ const MobileTopTools: React.FC = () => {
       </a>
 
       {/* Book Appointment */}
-      <a href="request-an-appoinment" className="tool-btn">
+      <a href="https://book.bnoon.sa/ar" className="tool-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="29.5 29.5 141 141"
