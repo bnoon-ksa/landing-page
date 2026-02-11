@@ -1,32 +1,40 @@
 "use client";
 
-import PageBanner from "@/components/Layout/PageBanner";
 import Link from "next/link";
-import Image from "next/image";
-import Navbar from "@/components/Layout/Navbar";
+import Navbar from "@/features/Layout/Navbar";
 
-export default function NotFound() {
+export default function ArabicNotFound() {
   return (
     <>
       <Navbar />
 
-      <PageBanner
-        bgImage="/images/page-banner.png"
-      />
-
       <div className="not-found-area ptb-140">
         <div className="container">
           <div className="not-found-content text-center">
-            <Image
-              src="/images/error.png"
-              alt="error"
-              width={500}
-              height={200}
-            />
+            <div
+              style={{
+                fontSize: "6rem",
+                fontWeight: 700,
+                color: "#336AEA",
+                lineHeight: 1,
+                marginBottom: "1.5rem",
+              }}
+            >
+              404
+            </div>
 
-            <h3>Oops! That Page Can&apos;t Be Found</h3>
+            <h3>الصفحة غير موجودة</h3>
+            <p
+              style={{
+                color: "#5A6A85",
+                marginBottom: "2rem",
+                fontSize: "1rem",
+              }}
+            >
+              عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
+            </p>
 
-            <Link href="/" className="default-btn">
+            <Link href="/ar" className="default-btn">
               <span className="left">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +49,7 @@ export default function NotFound() {
                   />
                 </svg>
               </span>
-              Back To Home
+              العودة للرئيسية
               <span className="right">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
