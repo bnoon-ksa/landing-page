@@ -3,8 +3,7 @@ import ClientDrRazanGhaithPage from "./page.client";
 
 export const metadata: Metadata = {
   title: "د. رزان غيث – طبيبة النساء والولادة والإخصاب في جدة | بنون ",
-  description:
-    "",
+  description: "الدكتورة رزان غيث، استشارية أمراض النساء والولادة والإخصاب في مركز بنون بجدة. خبرة واسعة في أطفال الأنابيب وصحة المرأة.",
 };
 
 export default function DrRazanGhaithPage() {

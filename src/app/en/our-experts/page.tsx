@@ -4,7 +4,7 @@ import ClientOurExpertsPage from "./page.client";
 
 export const metadata: Metadata = {
   title: "Find the Best IVF, Gynecology & Andrology Doctors – Bnoon",
-  description: "",
+  description: "Meet Bnoon's expert team of IVF, gynecology, and andrology doctors. Experienced fertility specialists across Riyadh, Jeddah, and Al Ahsa.",
 };
 
 export default function OurExpertsPage() {

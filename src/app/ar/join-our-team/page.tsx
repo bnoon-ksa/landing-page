@@ -3,8 +3,7 @@ import ClientJoinOurTeamPage from "./page.client";
 
 export const metadata: Metadata = {
   title: "انضموا إلى فريق بنون – الابتكار، التعليم الطبي، الأبحاث ",
-  description:
-    "",
+  description: "انضموا إلى فريق بنون الطبي. فرص عمل في مجالات الإخصاب والابتكار الطبي والتعليم والأبحاث في الرياض وجدة والأحساء.",
 };
 
 export default function JoinOurTeamPage() {

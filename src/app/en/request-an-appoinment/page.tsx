@@ -3,8 +3,7 @@ import ClientRequestAppointmentPage from "./page.client";
 
 export const metadata: Metadata = {
   title: "Book an Appointment – Bnoon | Riyadh & Jeddah",
-  description:
-    "",
+  description: "Book your appointment with Bnoon's fertility specialists in Riyadh, Jeddah, or Al Ahsa. Quick and easy booking for reproductive health consultations.",
 };
 
 export default function RequestAppointmentServer() {
