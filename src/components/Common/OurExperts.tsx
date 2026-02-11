@@ -265,7 +265,7 @@ const OurExperts = () => {
           )}
       <div>
         <Link
-          href="request-an-appoinment"
+          href="https://book.bnoon.sa"
           className="btn btn-success doctor-btn"
         >
           Request an Appointment

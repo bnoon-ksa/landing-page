@@ -139,12 +139,12 @@ Bnoon – Al Ahsa (located inside Almoosa Specialist Hospital) with an extensive
               />
             </div>
             <div className="text-center mt-3">
-              <Link
-                href="request-an-appoinment"
+              <a
+                href="https://book.bnoon.sa"
                 className="btn btn-success doctor-profile-btn"
               >
                 Request an Appointment
-              </Link>
+              </a>
             </div>
           </div>
           <div className="col-xl-12 col-md-12">

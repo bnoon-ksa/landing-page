@@ -122,7 +122,7 @@ const footerData: FooterData = {
         { text: "دليل الخصوبة", url: "/ar/fertility-guide" },
         { text: "حقوق وواجبات المرضى", url: "/ar/patients-rights" },
         { text: "تواصل معنا", url: "/ar/contact-us" },
-        { text: "طلب موعد", url: "/ar/request-an-appoinment" },
+        { text: "طلب موعد", url: "https://book.bnoon.sa/ar", isExternal: true },
         { text: "شاركونا تجربتكم", url: "/ar/submit-feedback" },
       ],
     },

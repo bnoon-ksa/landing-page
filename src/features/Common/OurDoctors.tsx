@@ -210,7 +210,7 @@ const OurDoctors = () => {
     </div>
   )}
                   <div className="doctors-button">
-                    <Link href="ar/request-an-appoinment" className="btn btn-success doctor-btn doctors-button">طلب موعد</Link>
+                    <Link href="https://book.bnoon.sa/ar" className="btn btn-success doctor-btn doctors-button">طلب موعد</Link>
                   </div>
                 </div>
               </div>

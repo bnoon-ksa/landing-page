@@ -112,7 +112,7 @@ const NationalDayOffer = () => {
               <p className="national-p">*Terms & conditions apply.</p>
 
               <Link
-                href="request-an-appoinment"
+                href="https://book.bnoon.sa"
                 className="btn btn-primary contact-btn"
               >
                 BOOK NOW
@@ -175,7 +175,7 @@ const NationalDayOffer = () => {
               <p className="national-p">*Terms & conditions apply.</p>
 
               <Link
-                href="request-an-appoinment"
+                href="https://book.bnoon.sa"
                 className="btn btn-primary contact-btn"
               >
                 BOOK NOW

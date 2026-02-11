@@ -122,7 +122,7 @@ const footerData: FooterData = {
          { text: "Fertility Guide", url: "/en/fertility-guide" },
         { text: "Patients' Rights & Responsibilities", url: "/en/patients-rights" },
          { text: "Contact Us", url: "/en/contact-us" },
-        { text: "Book an Appointment", url: "/en/request-an-appoinment" },
+        { text: "Book an Appointment", url: "https://book.bnoon.sa", isExternal: true },
          { text: "Submit Your Feedback", url: "/en/submit-feedback" },
       ],
     },

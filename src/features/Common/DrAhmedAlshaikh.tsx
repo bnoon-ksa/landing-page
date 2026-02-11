@@ -143,12 +143,12 @@ const DrAhmedAlshaikh = () => {
               height={625}
             />
             <div className="mt-3">
-              <Link
-                href="request-an-appoinment"
+              <a
+                href="https://book.bnoon.sa/ar"
                 className="btn btn-success doctor-profile-btn"
               >
                 طلب موعد
-              </Link>
+              </a>
             </div>
           </div>
 

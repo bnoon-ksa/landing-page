@@ -173,12 +173,14 @@ function Navbar() {
                 </Link>
               )}
 
-              <Link
-                href="/en/request-an-appoinment"
+              <a
+                href="https://book.bnoon.sa"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-success btn-appointment"
               >
                 Book an Appointment
-              </Link>
+              </a>
             </div>
 
             <div className="collapse navbar-collapse justify-content-end">
