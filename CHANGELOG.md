@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/bnoon-ksa/landing-page/compare/v1.0.3...v1.0.4) (2026-02-11)
+
+### Bug Fixes
+
+* use local Plus Jakarta Sans fonts instead of Google Fonts ([4d571a4](https://github.com/bnoon-ksa/landing-page/commit/4d571a4794edb01fdde56fff9c917d46eab1ee2b))
+
 ## [1.0.3](https://github.com/bnoon-ksa/landing-page/compare/v1.0.2...v1.0.3) (2026-02-11)
 
 ### Bug Fixes
