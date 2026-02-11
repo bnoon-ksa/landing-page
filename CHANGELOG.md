@@ -1,3 +1,13 @@
+## [1.0.6](https://github.com/bnoon-ksa/landing-page/compare/v1.0.5...v1.0.6) (2026-02-11)
+
+### ⚠ BREAKING CHANGES
+
+* codebase enhancements: security, performance, SEO, error handling, component consolidation (#2)
+
+### Bug Fixes
+
+* codebase enhancements: security, performance, SEO, error handling, component consolidation ([#2](https://github.com/bnoon-ksa/landing-page/issues/2)) ([af17642](https://github.com/bnoon-ksa/landing-page/commit/af17642475fe20f2745fe0d9a0296fab3999eb92)), closes [#336AEA](https://github.com/bnoon-ksa/landing-page/issues/336AEA) [#2A3547](https://github.com/bnoon-ksa/landing-page/issues/2A3547) [#5A6A85](https://github.com/bnoon-ksa/landing-page/issues/5A6A85)
+
 ## [1.0.5](https://github.com/bnoon-ksa/landing-page/compare/v1.0.4...v1.0.5) (2026-02-11)
 
 ### Bug Fixes
