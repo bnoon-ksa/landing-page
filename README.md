@@ -35,7 +35,7 @@ Bilingual (Arabic/English) marketing and appointment-booking website for **Bnoon
   - [Pipeline Diagram](#pipeline-diagram)
 - [Caching Strategy](#caching-strategy)
 - [Semantic Versioning](#semantic-versioning)
-- [Azure Deployment](#azure-deployment)
+- [Azure Infrastructure](#azure-infrastructure)
 - [Environment Variables & Secrets](#environment-variables--secrets)
 - [Code Quality & Lint](#code-quality--lint)
 - [Troubleshooting](#troubleshooting)
@@ -747,18 +747,69 @@ It follows [Semantic Versioning](https://semver.org/) (SemVer): `MAJOR.MINOR.PAT
 
 ---
 
-## Azure Deployment
+## Azure Infrastructure
 
-### Infrastructure
+This project spans **two Azure subscriptions**. Understanding the layout helps when debugging, scaling, or managing costs.
+
+### Landing Page — "Azure subscription 1"
+
+| Resource | Type | Resource Group | Location | SKU |
+|:---------|:-----|:---------------|:---------|:----|
+| `bnoon` | Web App | `test` | Canada Central | - |
+| `ASP-test-be47` | App Service Plan | `test` | Canada Central | S1 Standard |
+| `appointments` | App Service Plan (**empty, 0 apps**) | `appointment` | - | S1 Standard |
+| `bnoon` | Storage Account | `Bnoon.sa` | East US | Standard_GRS |
+
+> **Cost note:** The `appointments` App Service Plan has **0 web apps** attached but is still billed as S1 Standard. It can be deleted to save cost:
+> ```bash
+> az account set --subscription "Azure subscription 1"
+> az appservice plan delete --name appointments --resource-group appointment
+> ```
+
+**Web App configuration:**
 
 | Setting | Value |
 |:--------|:------|
 | App Service | `bnoon` |
+| App Service Plan | `ASP-test-be47` (S1 Standard, 1 site) |
 | Platform | Azure App Service (Linux) |
-| Runtime | Node.js 20 |
-| URL | [https://bnoon.sa](https://bnoon.sa) |
+| Runtime | `NODE\|20-lts` |
+| Always On | Yes |
+| HTTPS Only | Yes |
+| Custom Domains | `bnoon.sa`, `www.bnoon.sa` |
 | Entry point | `server.js` (custom Node.js HTTP server) |
 | Deploy method | ZIP deploy via `azure/webapps-deploy@v3` |
+
+**Blob Storage (`bnoon` storage account):**
+
+| Container | Public Access | Purpose |
+|:----------|:-------------|:--------|
+| `website` | Public (container-level) | Videos at `website/videos/`, uploaded assets |
+| `deployments` | Private | Deployment history |
+| `$web` | - | Static website hosting (unused) |
+
+> **Important:** Images are served locally from `public/images/`, NOT from blob storage. Only **videos** are served from `https://bnoon.blob.core.windows.net/website/videos/`. The storage account is in **East US** while the web app is in **Canada Central** -- cross-region latency is acceptable for videos but was too slow for images (which is why an earlier image migration to blob was reverted).
+
+### Telehealth Apps — "Microsoft Azure Sponsorship"
+
+The booking app, API, and admin console run on a separate subscription and shared App Service Plan:
+
+| App | Custom Domain | Runtime | Always On | Plan |
+|:----|:-------------|:--------|:----------|:-----|
+| `bnoon-telehealth` | `book.bnoon.sa` | `DOCKER\|bnoon.azurecr.io/telehealth:1.5.2` | No | `bnoon-telehealth-plan` |
+| `bnoon-api` | `api.bnoon.sa` | `DOCKER\|bnoon.azurecr.io/api:1.6.0` | Yes | `bnoon-telehealth-plan` |
+| `bnoon-console` | `console.bnoon.sa` | `DOCKER\|bnoon.azurecr.io/console:1.5.3` | Yes | `bnoon-telehealth-plan` |
+
+| Resource | Details |
+|:---------|:--------|
+| Plan | `bnoon-telehealth-plan` (S1 Standard, 3 sites) |
+| Resource Group | `bnoon-telehealth-rg` |
+| Location | **UAE North** |
+| Container Registry | `bnoon.azurecr.io` |
+
+The landing page links to `book.bnoon.sa` for appointment booking via the [booking URL utility](#booking-url-routing).
+
+> **Note:** These apps use Docker container deployments (from Azure Container Registry), unlike the landing page which uses ZIP deploy. They are managed through Azure DevOps pipelines, not GitHub Actions.
 
 ### Deployment mechanism
 
