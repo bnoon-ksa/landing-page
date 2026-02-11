@@ -51,7 +51,7 @@ const featuresData: FeatureCard[] = [
     id: 1,
     type: "patients",
     icon: {
-      src: "/images/icons/help1.svg",
+      src: "https://bnoon.blob.core.windows.net/website/images/icons/help1.svg",
       alt: "icon",
       width: 35,
       height: 35,
@@ -65,19 +65,19 @@ const featuresData: FeatureCard[] = [
     title: "Patients Served",
     userImages: [
       {
-        src: "/images/users/user1.png",
+        src: "https://bnoon.blob.core.windows.net/website/images/users/user1.png",
         alt: "user1",
         width: 40,
         height: 40,
       },
       {
-        src: "/images/users/user2.png",
+        src: "https://bnoon.blob.core.windows.net/website/images/users/user2.png",
         alt: "user2",
         width: 40,
         height: 40,
       },
       {
-        src: "/images/users/user3.png",
+        src: "https://bnoon.blob.core.windows.net/website/images/users/user3.png",
         alt: "user3",
         width: 40,
         height: 40,
@@ -88,7 +88,7 @@ const featuresData: FeatureCard[] = [
     id: 2,
     type: "doctors",
     icon: {
-      src: "/images/icons/help2.svg",
+      src: "https://bnoon.blob.core.windows.net/website/images/icons/help2.svg",
       alt: "icon",
       width: 35,
       height: 35,
@@ -96,7 +96,7 @@ const featuresData: FeatureCard[] = [
     counters: [{ value: "500" }, { value: "+", isSub: true }],
     title: "Licensed Doctors",
     doctorImage: {
-      src: "/images/help/doctors.jpg",
+      src: "https://bnoon.blob.core.windows.net/website/images/help/doctors.jpg",
       alt: "image",
       width: 270,
       height: 338,
@@ -107,10 +107,10 @@ const featuresData: FeatureCard[] = [
     type: "urgent",
     counters: [{ value: "24" }, { value: "/", isSub: true }, { value: "7" }],
     title: "Virtual Access",
-    backgroundImage: "/images/help/info.jpg",
+    backgroundImage: "https://bnoon.blob.core.windows.net/website/images/help/info.jpg",
     contactInfo: {
       icon: {
-        src: "/images/icons/help3.svg",
+        src: "https://bnoon.blob.core.windows.net/website/images/icons/help3.svg",
         alt: "icon",
         width: 46,
         height: 46,

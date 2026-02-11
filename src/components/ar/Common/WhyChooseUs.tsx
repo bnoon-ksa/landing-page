@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
                       <div key={reason.id} className="item">
                         <div className="icon">
                           <Image
-                            src="/images/icons/check2.svg"
+                            src="https://bnoon.blob.core.windows.net/website/images/icons/check2.svg"
                             alt="check"
                             width={30}
                             height={30}
@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
               <div className="col-xl-5 col-md-12">
                 <div className="third-choose-image">
                   <Image
-                    src="/images/choose.jpg"
+                    src="https://bnoon.blob.core.windows.net/website/images/choose.jpg"
                     alt="choose"
                     width={0}
                     height={0}

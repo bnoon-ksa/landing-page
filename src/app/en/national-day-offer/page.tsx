@@ -12,7 +12,7 @@ export default function NationalDayOfferPage() {
   return (
     <>
       <Navbar />
-      <PageBanner bgImage="/images/national-day-banner.jpg" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/national-day-banner.jpg" />
        <NationalDayOffer />
 
     </>

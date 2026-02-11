@@ -12,7 +12,7 @@ export default function BnoonJeddahPage() {
   return (
     <>
       <Navbar />
-      <PageBanner bgImage="/images/clinics-banner.jpg" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/clinics-banner.jpg" />
        <Jeddaharea />
 
     </>

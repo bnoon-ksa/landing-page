@@ -125,11 +125,11 @@ const [isOpen, setIsOpen] = useState(false); // inside FeedbackSection
             <div className="left">
               <p> في بنون، نحرص على تقديم رعاية استثنائية تتمحور حولكم. آراؤكم مهمة جداً بالنسبة لنا — فهي تساعدنا على التطور، وتجاوز التوقعات، وتعزيز جودة التجربة التي نطمح لتقديمها لكل مريض۔</p>
               <div className="d-flex align-items-center mb-2">
-                <Image src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
+                <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
                 <p className="mb-0"> يمكنكم تقييم تجربتكم عبر النموذج أدناه </p>
               </div>
               <div className="d-flex align-items-center">
-                <Image src="/images/icons/location.svg" alt="LinkedIn" width={24} height={24} className="me-2" />
+                <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="LinkedIn" width={24} height={24} className="me-2" />
                 <p > أو مراسلتنا على{" "} feedback@bnoon.sa </p>
               </div>
               <p className="mt-3">هل ترغبون بمشاركة قصتكم ورحلتكم العلاجية؟ قصتكم قد تكون مصدر أمل وإلهام لأزواج آخرين يمرون برحلة مشابهة. نرحّب بمشاركتكم، ومع موافقتكم، قد ننشرها على منصاتنا لتصل لمن يحتاجها۔</p>
@@ -164,7 +164,7 @@ const [isOpen, setIsOpen] = useState(false); // inside FeedbackSection
     <span>{formData.branch || "اختر الفرع"}</span>
     {/* Arrow icon on right */}
     <Image
-      src="/images/arrow.png" // your arrow icon path
+      src="https://bnoon.blob.core.windows.net/website/images/arrow.png" // your arrow icon path
       alt="arrow"
       style={{ width: "16px", height: "16px" }}
     />

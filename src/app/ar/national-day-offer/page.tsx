@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <PageBanner bgImage="/images/national-day-banner-ar.jpg" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/national-day-banner-ar.jpg" />
        <NationalDayOffer />
 
     </>

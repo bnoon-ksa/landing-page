@@ -8,7 +8,7 @@ const IconList: React.FC<{ items: string[] }> = ({ items }) => (
     {items.map((item, idx) => (
       <li key={idx} className="d-flex align-items-center mb-2">
         <Image
-          src="/images/icons/bnoon-symbol.avif"
+          src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
           alt="icon"
           width={20}
           height={20}
@@ -55,7 +55,7 @@ const TreatmentsSection: React.FC = () => {
 هذه العقاقير القابلة للحقن هي عبارة عن هرمونات تفرزها الغدة النخامية بشكل طبيعي. وعلى الرغم من ان الهرمون المنشط للحوصلة (FSH) هو الهرمون المسؤول بشكل أساسي عن تطور الجريبات ، إلا أن كل من الهرمون المنشط للحوصلة و الملوتن (LH) يلعبان دورًا هاما في التطور الطبيعي والإباضة لبصيلات المبيض. يكون الملوتن مسئول بشكل كبير عن تحفيز الإباضة عند وجود جريب ناضج.<br /><br />
 وتعمل الادوية التالية بشكل مباشر على المبايض وليس لها أنشطة في أي مكان آخر في الجسم
       `,
-      image: "/images/treatments/ovulation-induction.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/ovulation-induction.jpg",
       bottomText: `
         <strong>Gonal F Pen:</strong><br />ويؤخذ هذا النوع من العلاج تحت الجلد عن طريق قلم ذو جرعات متعددة (300 – 450 – 900 – 1200 وحدة).<br /><br />
         <strong>مينوبور ( MENOPUR ):</strong><br />ويؤخذ هذا النوع من العلاج تحت الجلد ويكون في شكل أمبول (75 – 600 – 1200 وحدة دولية).<br /><br />
@@ -99,7 +99,7 @@ const TreatmentsSection: React.FC = () => {
        أثناء حقن الحيوانات المنوية يقوم أخصائي علم الأجنة باختيار الحيوانات المنوية الأكثر نشاطاً وصحة ثم يُحقن حيوان منوي واحد مباشرة في سيتوبلازم البويضة. تستخدم هذه التقنية عندما تكون الحيوانات المنوية منخفضة الجودة أو قليلة من حيث الكمية أو حين يتم سحب الحيوانات المنوية جراحياً أو عند حدوث فشل سابق في الإخصاب أو انخفاض الإخصاب عند التلقيح الاصطناعي. وبالتالي، يسمح حقن الحيوانات المنوية داخل السيتوبلازم باستخدام الحيوانات المنوية التي قد لا تكون قادرة على تخصيب البويضة بأي طريقة أخرى. <br /><br />
         يتم فحص البويضة بحثًا عن علامات الإخصاب بعد 17 إلى 20 ساعة من حقن الحيوانات المنوية داخل السيتوبلازم. بمرور الوقت، اتضح أنه سيتم تخصيب حوالي 80% من البويضات، باستثناء الأزواج الذين يعانون من عوامل العقم الشديدة. وتجدر الإشارة إلى أن 2% من كل الحيوانات المنوية والبويضات “الطبيعية” لا يتم تخصيبها حتى عند استخدام طريقة حقن الحيوانات المنوية داخل السيتوبلازم.
       `,
-      image: "/images/treatments/intrauterine-insemination.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/intrauterine-insemination.jpg",
       bottomText: `
        عادة ما تكون الأجنة في مراحل ودرجات مختلفة بعد إخصابها. يتم تقييم جودة الجنين من قبل أخصائي علم الأجنة، والذي سيوفر لك بعد ذلك المعلومات اللازمة. يجري نقل الأجنة المتكونة على هذا النحو إلى الرحم إما بعد اليوم الثاني أو اليوم الثالث أو اليوم الخامس أو يتم تجميدها لاستخدامها في المستقبل. <br /><br />
        من المهم التنبّه إلى خصوصية حالة كل زوجين، لذا من الضروري إجراء الاختبارات المناسبة ومناقشة التاريخ الطبي مع الأخصائي قبل اختيار آلية معينة.  <br /><br />
@@ -116,7 +116,7 @@ const TreatmentsSection: React.FC = () => {
 تتمثل طريقة سباحة النطاف لاختيار جنس المولود في فصل X و Y باستخدام تقنية قياسية يتم فيها استخدام الحيوانات المنوية Y داخل الرحم باستخدام تقنية التلقيح الاصطناعي. يزيد هذا من فرص وجود المزيد من الحيوانات المنوية من الذكور أو الإناث في العينة المستخدمة لتخصيب البويضات. تبلغ نسبة احتمال الحمل لدى الذكر 70٪ تقريبًا، كما ان هناك فرصة تصل الى 30 % في ان يصبح هذا المولود انثى. في الواقع، لا توجد طريقة فرز مجموعات الذكور والاناث بطريقة دقيقة بنسبة 100٪.<br /><br />
       الطريقة المتبعة<
       `,
-      image: "/images/treatments/swim-up.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/swim-up.jpg",
       bottomText: `
       `,
       bottomTextList: [
@@ -138,7 +138,7 @@ const TreatmentsSection: React.FC = () => {
       text: `
      التلقيح الاصطناعي هو العلاج الأكثر استخدامًا والتكنولوجيا المساعدة على الإنجاب الأكثر فعالية لكل من الرجال والنساء الذين يعانون من مجموعة من حالات العقم.
       `,
-      image: "/images/treatments/ivf.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/ivf.jpg",
       bottomText: `
       `,
     },
@@ -148,7 +148,7 @@ const TreatmentsSection: React.FC = () => {
     استخراج الحيوانات المنوية جراحيا <br /><br />
    نحن في مركز بنون نفخر بنتائج الحمل التي تم تحقيقها باستخدام الأجنة المجمدة والمذابة لنقلها. نحن نستخدم أحدث طريقة للتجميد تسمى "التزجيج".
       `,
-      image: "/images/treatments/ivm.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/ivm.jpg",
       bottomText: `
       `,
     },
@@ -160,7 +160,7 @@ const TreatmentsSection: React.FC = () => {
 للإجابة عن هذا السؤال يجب أن نعي جيداً إن الذهاب إلى الطبيب المناسب يمكنك من الحصول على رؤية واضحة عن الوضع الصحي لك. ليس ذلك فحسب بل قد يجنبك المضي في مسارات غير صحيحة تحمل معها تداعيات صحية ومالية وأيضا نفسية سلبية.<br /><br />
 لذا من المهم جداً ان نعرف من هو الطبيب المناسب وماهي مؤهلاته المناسبة والتي تتضمن التالي:
       `,
-      image: "/images/treatments/sperm-freezing.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/sperm-freezing.jpg",
       bottomText: ` `,
       bottomTextList: [
         " درجة الاستشارية في تخصص جراحة المسالك (شهادة البورد/الزمالة).",
@@ -188,7 +188,7 @@ const TreatmentsSection: React.FC = () => {
     يسر مركز بنون الطبي ان يكون المركز الاول والوحيد للطب الانجابي الذي يعتمد هذه التقنيات التكنولوجية عالية المستوى في المملكة العربية السعودية. <br /><br />
    تعتبر عملية إنضاج البويضات في المختبر مثالية للمرضي:
     `,
-      image: "/images/treatments/egg-freezing.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/egg-freezing.jpg",
       bottomTextList: [
         "المرضى اللائي يعانين من تكيسات المبايض ويرغبون في تجنب الاصابة بمتلازمة فرض المبيض",
         "المرضي اللائي اصبن بمتلازمة فَرْط تحفيز المِبيَض",
@@ -210,7 +210,7 @@ const TreatmentsSection: React.FC = () => {
 التلقيح الاصطناعي ​​
 
     `,
-      image: "/images/treatments/pgs.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/pgs.jpg",
 
       bottomText: ``,
       secondText: `يتضمن الحقن المحهري مجموعة من العمليات التي يتم من خلالها التعامل مع البويضات أو الحيوانات المنوية أو كلاهما خارج الجسم. هناك العديد من طرق التلقيح بالمساعدة التي يتم استخدامها الآن بشكل شائع. وهي تشمل التلقيح الاصطناعي والإمناء داخل الرحم.  <br /><br />
@@ -237,7 +237,7 @@ const TreatmentsSection: React.FC = () => {
 <br />
 من خلال الاختبارات الجينية، يمكن الحصول على قدر كبير من المعلومات حول الجنين قبل نقله إلى الرحم. بعد تكوين الجنين عبر دورة التلقيح الاصطناعي التي تحدث بعد جمع البويضات والحقن المجهري، يخضع الجنين لاختبار بأخذ بضع خلايا منه. لا يُنقل الجنين إلى الرحم حتى تظهر النتائج. 
     `,
-      image: "/images/treatments/pgs.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/pgs.jpg",
       bottomTextList: [
         "الفحص الشامل للكروموسومات: هنا، يتم فحص جميع الكروموسومات الـ 24 لتحديد الجنس وكذلك لمعرفة ما إذا كان هناك أي كروموسومات مفقودة أو إضافية. تعتبر التشوهات في الكروموسومات هي أحد الأسباب الرئيسية للإجهاض.  ",
         "اختيار جنس المولود: وهو فحص الأجنة بحيث يمكن تحديد الجنس وكذلك التشوهات الكروموسومية. ",
@@ -288,7 +288,7 @@ const TreatmentsSection: React.FC = () => {
 
 ​
     `,
-      image: "/images/treatments/recurrent-miscarriage.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/recurrent-miscarriage.jpg",
 
       bottomText: ``,
     },
@@ -297,7 +297,7 @@ const TreatmentsSection: React.FC = () => {
       text: `
       يمكنك تحديد موعد لجلسة استشارية لمناقشة حالتك الصحية ومخاوفك مع احد خبرائنا المتخصصين وذلك في ظل بيئة مريحة تحترم خصوصيتك وتفهم احتياجاتك.
     `,
-      image: "/images/treatments/fertility-counselling.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/fertility-counselling.jpg",
       bottomText: `
       `,
     },
@@ -305,7 +305,7 @@ const TreatmentsSection: React.FC = () => {
       text: `
      يسر مركز بنون الطبي متابعة الحمل خلال فترة ال 9 أشهر كاملة وتقديم الدعم والرعاية اللازمة والتصوير لجميع الحوامل.
     `,
-      image: "/images/treatments/antenatal-care-deliveries.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/antenatal-care-deliveries.jpg",
       bottomText: `
       `,
     },
@@ -420,7 +420,7 @@ const tabToHash = (tab: string) =>
                 {currentContent.bottomTextList.map((item, index) => (
                   <li key={index} className="d-flex align-items-center mb-2">
                     <Image
-                      src="/images/icons/bnoon-symbol.avif"
+                      src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
                       alt="icon"
                       width={20}
                       height={20}
@@ -451,7 +451,7 @@ const tabToHash = (tab: string) =>
                 {currentContent.secondlist.map((item, index) => (
                   <li key={index} className="d-flex align-items-center mb-2">
                     <Image
-                      src="/images/icons/bnoon-symbol.avif"
+                      src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
                       alt="icon"
                       width={20}
                       height={20}

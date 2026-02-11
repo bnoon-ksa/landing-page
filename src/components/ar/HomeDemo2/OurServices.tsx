@@ -9,7 +9,7 @@ function OurServices() {
   const servicesData = [
     {
       id: 1,
-      icon: "/images/icons/Website-Icons_1.png",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/Website-Icons_1.png",
       title: "رعاية يقودها خبراء وتتمحور حول الزوجين",
       description:
         "فريقنا من الاستشاريين المعتمدين، وأخصائيي الأجنة، والممرضين المتخصصين يجمع بين التميّز الطبي والتعاطف الإنساني. نحن لا نقدّم العلاج فقط؛ بل الرعاية والاهتمام۔",
@@ -17,7 +17,7 @@ function OurServices() {
     },
     {
       id: 2,
-      icon: "/images/icons/Website-Icons_2.png",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/Website-Icons_2.png",
       title: "مرافق حديثة مصمّمة بعناية",
       description:
         "​تصميم هادئ ومساحات مريحة تساعد في تخفيف التوتر وتعزيز الراحة النفسية للأزواج. كل تفصيل مدروس ليعكس بيئة داعمة ومُطمئِنة۔",
@@ -25,7 +25,7 @@ function OurServices() {
     },
     {
       id: 3,
-      icon: "/images/icons/Website-Icons_3.png",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/Website-Icons_3.png",
       title: "رعاية متكاملة تحت سقف واحد",
       description:
         "من التشخيص إلى العلاجات المتقدمة مثل عمليات أطفال الأنابيب، وتجميد البويضات، وحفظ الخصوبة، إلى متابعة الحمل—كل ذلك ضمن مركز واحد دون تأخير أو إحالات إلى تخصصات أخرى۔",
@@ -33,7 +33,7 @@ function OurServices() {
     },
     {
       id: 4,
-      icon: "/images/icons/Website-Icons_4.png",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/Website-Icons_4.png",
       title: "خطط علاجية مخصصة",
       description:
         "كل خطة علاجية مصمّمة وفقاً لاحتياجاتكم كزوجين، وظروفكم الصحية، وتطلعاتكم—بما يتماشى مع نمط حياتكم۔",

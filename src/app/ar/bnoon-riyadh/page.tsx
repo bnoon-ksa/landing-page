@@ -12,7 +12,7 @@ export default function BnoonRiyadhPage() {
   return (
     <>
       <Navbar />
-      <PageBanner bgImage="/images/clinics-banner-ar.jpg" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/clinics-banner-ar.jpg" />
        <Riyadharea />
 
     </>

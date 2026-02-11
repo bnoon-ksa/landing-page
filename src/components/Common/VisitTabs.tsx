@@ -53,7 +53,7 @@ const VisitTabs: React.FC = () => {
        A list of questions to ask your fertility physician (do not be afraid to speak up and advocate for yourself!). Please pay attention to your time during the visit and don’t lose time by remembering and suffering the past. Make use of your present time where we all care for you.
 
 ​ `,
-      image: "/images/visit/First-Clinic-Visit.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/visit/First-Clinic-Visit.avif",
       bottomText: `
         <strong>Documents including your medical history</strong><br />Documents including your medical history, hospital discharge summaries, laboratory test results, results of medical imaging examinations (e.g. ultrasound), medical reports with attached test results confirming the diagnosis and treatment, information about previous surgeries and interventions (including inseminations, IVF programs) and other documents providing the basis for the verification of your medical situation by the previous physicians.<br /><br />
         This would be helpful to save your time and commence your treatment as early as possible.<br />
@@ -86,7 +86,7 @@ const VisitTabs: React.FC = () => {
         We take care to ensure that each of our patients feels well cared for and supported during their journey to growing their family. Infertility treatment coupled with travel and distance can be tiring, so it is particularly important that we do everything we can to ease the journey for our long-distance patients.<br /><br />
         Many delicious foods are high in antioxidants and should be incorporated into your regular diet. Here are some other popular foods that have naturally high antioxidant content:
       `,
-      image: "/images/visit/Out-of-Town-Patients.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/visit/Out-of-Town-Patients.avif",
       bottomText: `Our center is located in an excellent area of the City of Riyadh and walking distance from ‘Granada Center’, one of the largest shopping malls in the city, and Hilton Riyadh hotel where the Metro station is located. Our location is close to the airport making the access from and to the airport via Metro or car is easy and away from heavy traffic. Even for travellers by the car from outside Riyadh, the famous junction between North ring, East ring and Dammam highway makes it easy and accessible to get to Bnoon by avoiding the downtown congestion.<br /><br />
       Do some checks<br /><br />
       Couples residing outside Riyadh are of special consideration in terms of fertility testing and follow-up visits. Some tests can be done in your local area of residence as necessary. However, commencing fertility treatment requires close monitoring and planned dates for visits will be addressed to you. You are not required to stay in Riyadh during the journey of your treatment unless you are instructed by your physician.<br />
@@ -101,7 +101,7 @@ const VisitTabs: React.FC = () => {
         On the first day of your period (normal flow) you have to call Bnoon Medical Center (011-444-8080) to schedule an appointment on day 2-3 of your period to have ultrasound scan done and necessary blood work. On the same day of ultrasound, your physician will review your case and, depending on the results, you will start ovarian stimulation using daily Gonadotropins injection starting from day 2-3 and may last for 8-12 days depending on ovarian response.<br /><br />
         The daily dose of medications will be decided by your physician tailored to your case. You need to be monitored, during this period, for 3-4 times as required. Example of medications:
       `,
-      image: "/images/visit/Causes-of-Male-Infertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/visit/Causes-of-Male-Infertility.avif",
       bottomText: ``,
       secondlist: [
         "Gonal F Pen: is given subcutaneously. Gonal F comes in multi-dose Pen (300 – 450 – 900 – 1200 IU).",
@@ -126,7 +126,7 @@ const VisitTabs: React.FC = () => {
       Please ask your physician if you are unsure what medications you should continue to take.<br />
       You will be required to refrain from eating and drinking from midnight the night before the day of egg collection.
       `,
-      image: "/images/visit/Uterine-Fibroids-Infertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/visit/Uterine-Fibroids-Infertility.avif",
       bottomText: `<strong>Day of egg collection:</strong><br /><br />
       You will be asked to arrive at 07:30 AM prior to your procedure to meet with a pre-op nurse and your anesthesia physician. It is very important that you come at the correct time in order to ensure that your case is not delayed. You should contact our center immediately if you are running late.<br />
       Please DON’T FORGET to bring your original, valid identifications with you and present them to our staff upon arrival.<br />
@@ -151,7 +151,7 @@ const VisitTabs: React.FC = () => {
       <strong>Before performing the procedure</strong><br /><br />
       You will be asked to have full bladder before performing the procedure to facilitate introduction of the soft catheter into the uterus. You DON’T need to be fasting.
       `,
-      image: "/images/visit/Helpful-Tips-for-Fertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/visit/Helpful-Tips-for-Fertility.avif",
       bottomText: `<strong>MOINTORING</strong><br /><br />
       After embryo transfer you will remain for 30 minutes in the recovery room, however, you can go to the toilet any time if you need to. You can go home that day and you are NOT prohibited from your normal activity but avoid exertion like; heavy exercise, lifting or pushing heavy objects.<br />
       You can avoid sexual intercourse 2-3 days from this day BUT it is not harmful after that period.<br /><br />

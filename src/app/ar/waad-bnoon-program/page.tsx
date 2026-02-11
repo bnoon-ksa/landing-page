@@ -14,7 +14,7 @@ export default function WaadBnoonProgramPage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="/images/waad-bnoon-banner-ar.png" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/waad-bnoon-banner-ar.png" />
       <WaadSection />
      
     </>

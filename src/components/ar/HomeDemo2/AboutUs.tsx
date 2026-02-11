@@ -31,31 +31,31 @@ const aboutData: AboutData = {
   items: [
     {
       id: 1,
-      icon: { src: "images/icons/icon-1.png", alt: "icon" },
+      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-1.png", alt: "icon" },
       title: "+5000",
       description: "دورة علاجية لأطفال الأنابيب سنوياً",
     },
     {
       id: 2,
-      icon: { src: "images/icons/icon-2.png", alt: "icon" },
+      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-2.png", alt: "icon" },
       title: "+80",
       description: "طبيباً واختصاصياً",
     },
     {
       id: 3,
-      icon: { src: "images/icons/icon-3.png", alt: "icon" },
+      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-3.png", alt: "icon" },
       title: "+150",
       description: "الكوادر الطبية والإدارية",
     },
     {
       id: 4,
-      icon: { src: "images/icons/icon-4.png", alt: "icon" },
+      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-4.png", alt: "icon" },
       title: "Special",
       description: "",
     },
     {
       id: 5,
-      icon: { src: "images/icons/icon-5.png", alt: "icon" },
+      icon: { src: "https://bnoon.blob.core.windows.net/website/images/icons/icon-5.png", alt: "icon" },
       title: "+60%",
       description: "نسبة النجاح تماشياً ",
       text: "مع معدلات النجاح عالمياً ",

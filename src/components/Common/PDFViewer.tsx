@@ -13,7 +13,7 @@ const PDFViewer: React.FC = () => {
     <div style={{ width: "100%", textAlign: "center" }}>
       <Document
         // ✅ Use relative path, not full Azure URL
-        file="/images/pdf/bnoon-patients-rights.pdf"
+        file="https://bnoon.blob.core.windows.net/website/images/pdf/bnoon-patients-rights.pdf"
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
         onLoadError={(error) => console.error("❌ PDF load error:", error)}
         loading={<p>Loading PDF...</p>}

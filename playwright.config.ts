@@ -1,6 +1,6 @@
 import { defineConfig } from "@playwright/test";
 
-const baseURL = process.env.E2E_BASE_URL ?? "https://bnoon.sa";
+const baseURL = process.env.E2E_BASE_URL ?? "http://localhost:3099";
 const isLocal = baseURL.includes("localhost");
 
 export default defineConfig({

@@ -45,13 +45,10 @@ const GoTop = () => {
           }}
         >
           <Image
-            src="/images/WhatsApp.svg"
+            src="https://bnoon.blob.core.windows.net/website/images/WhatsApp.svg"
             alt="WhatsApp"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
+            fill
+            style={{ objectFit: "cover" }}
           />
         </a>
       )}

@@ -5,22 +5,22 @@ const HowItWorksSlider = () => {
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const steps = [
-    { id: 1, imageSrc: "/images/fertility-counselling.jpg", title: "Fertility Consultation & Hormone Testing" },
-    { id: 2, imageSrc: "/images/intrauterine-insemination.jpg", title: "Intrauterine Insemination" },
-    { id: 3, imageSrc: "/images/ivf.jpg", title: "In Vitro Fertilization (IVF)" },
-    { id: 4, imageSrc: "/images/ivm.jpg", title: "In Vitro Maturation (IVM)" },
-    { id: 5, imageSrc: "/images/icsi.jpg", title: "Intracytoplasmic Sperm Injection (ICSI)" },
-    { id: 6, imageSrc: "/images/ovulation-induction.jpg", title: "Ovulation Induction" },
-    { id: 7, imageSrc: "/images/pgs.jpg", title: "Preimplantation Genetic Screening" },
-    { id: 8, imageSrc: "/images/pgd.jpg", title: "Preimplantation Genetic Diagnostic" },
-    { id: 9, imageSrc: "/images/egg-freezing.jpg", title: "Egg Freezing" },
-    { id: 10, imageSrc: "/images/sperm-freezing.jpg", title: "Sperm Freezing" },
-    { id: 11, imageSrc: "/images/embryo-freezing.jpg", title: "Embryo Freezing" },
-    { id: 12, imageSrc: "/images/male-fertility.jpg", title: "Male Fertility Evaluation & Treatment" },
-    { id: 13, imageSrc: "/images/ivf.jpg", title: "Surgical Sperm Retrieval" },
-    { id: 14, imageSrc: "/images/fbgs.jpg", title: "Family Balance - Gender Selection" },
-    { id: 15, imageSrc: "/images/recurrent-miscarriage.jpg", title: "Recurrent Miscarriage" },
-    { id: 16, imageSrc: "/images/antenatal-care-deliveries.jpg", title: "Antenatal Care" },
+    { id: 1, imageSrc: "https://bnoon.blob.core.windows.net/website/images/fertility-counselling.jpg", title: "Fertility Consultation & Hormone Testing" },
+    { id: 2, imageSrc: "https://bnoon.blob.core.windows.net/website/images/intrauterine-insemination.jpg", title: "Intrauterine Insemination" },
+    { id: 3, imageSrc: "https://bnoon.blob.core.windows.net/website/images/ivf.jpg", title: "In Vitro Fertilization (IVF)" },
+    { id: 4, imageSrc: "https://bnoon.blob.core.windows.net/website/images/ivm.jpg", title: "In Vitro Maturation (IVM)" },
+    { id: 5, imageSrc: "https://bnoon.blob.core.windows.net/website/images/icsi.jpg", title: "Intracytoplasmic Sperm Injection (ICSI)" },
+    { id: 6, imageSrc: "https://bnoon.blob.core.windows.net/website/images/ovulation-induction.jpg", title: "Ovulation Induction" },
+    { id: 7, imageSrc: "https://bnoon.blob.core.windows.net/website/images/pgs.jpg", title: "Preimplantation Genetic Screening" },
+    { id: 8, imageSrc: "https://bnoon.blob.core.windows.net/website/images/pgd.jpg", title: "Preimplantation Genetic Diagnostic" },
+    { id: 9, imageSrc: "https://bnoon.blob.core.windows.net/website/images/egg-freezing.jpg", title: "Egg Freezing" },
+    { id: 10, imageSrc: "https://bnoon.blob.core.windows.net/website/images/sperm-freezing.jpg", title: "Sperm Freezing" },
+    { id: 11, imageSrc: "https://bnoon.blob.core.windows.net/website/images/embryo-freezing.jpg", title: "Embryo Freezing" },
+    { id: 12, imageSrc: "https://bnoon.blob.core.windows.net/website/images/male-fertility.jpg", title: "Male Fertility Evaluation & Treatment" },
+    { id: 13, imageSrc: "https://bnoon.blob.core.windows.net/website/images/ivf.jpg", title: "Surgical Sperm Retrieval" },
+    { id: 14, imageSrc: "https://bnoon.blob.core.windows.net/website/images/fbgs.jpg", title: "Family Balance - Gender Selection" },
+    { id: 15, imageSrc: "https://bnoon.blob.core.windows.net/website/images/recurrent-miscarriage.jpg", title: "Recurrent Miscarriage" },
+    { id: 16, imageSrc: "https://bnoon.blob.core.windows.net/website/images/antenatal-care-deliveries.jpg", title: "Antenatal Care" },
   ];
 
   // Detect mobile screen

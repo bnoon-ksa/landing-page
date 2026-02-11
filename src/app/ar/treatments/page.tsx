@@ -15,7 +15,7 @@ export default function TreatmentsPage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="/images/treatments-banner-ar.jpg" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/treatments-banner-ar.jpg" />
       <TreatmentsSection />
      <TreatmentsTabs />
     </>

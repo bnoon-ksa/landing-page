@@ -13,7 +13,7 @@ export default function SubmitFeedbackServer() {
     <>
       <Navbar />
 
-      <PageBanner bgImage="/images/feedback-banner.jpg" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/feedback-banner.jpg" />
 
       <FeedbackSection />
     </>

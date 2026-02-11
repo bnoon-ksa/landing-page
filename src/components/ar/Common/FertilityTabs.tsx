@@ -55,7 +55,7 @@ const FertilityTabs: React.FC = () => {
        لا ينبغي أن يكون مفاجئًا أن نمط الحياة الذي تعيشينه يؤثر بشكل مباشر على خصوبتك. بدءًا من اتخاذ خيارات نمط حياة صحي إلى استكمال تناولك للعناصر الغذائية المهمة، هناك العديد من الأشياء التي يمكنك القيام بها خارج العيادة لتحسين فرصك في الحمل والحفاظ عليها. سواء كنت في المراحل الأولى من تنظيم الأسرة أو تبحثين حاليًا عن مساعدة من عيادة الخصوبة، فإن التعديلات البسيطة على نمط الحياة والمكملات الغذائية اليومية الإضافية يمكن أن تعزز الخصوبة. هناك العديد من التغييرات المهمة التي يمكنك أنت وشريكك إجراؤها قبل وأثناء علاجات الخصوبة لزيادة فرصة نجاح الحمل.<br /><br />
       نوصي بإجراء هذه التعديلات على نمط الحياة إذا كنت تفكرين في الحمل.​
       `,
-      image: "/images/fertility-guide/Helpful-Tips-for-Fertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Helpful-Tips-for-Fertility.avif",
       bottomText: `
         <strong>الكحول</strong><br /تجنب استخدام الكحول. ثبت أن الكحول يسبب تشوهات خلقية لدى الأجنة. بالإضافة إلى ذلك، فإن المرضى الذين يشربون الكحول لديهم انخفاض في معدلات الخصوبة، خاصة مع التلقيح الاصطناعي ومعدلات الإجهاض، وقد تبين أن معدلات الخصوبة تتضاعف مقارنة بأولئك الذين لا يشربون الكحول. وهذا أيضاً له تأثير مماثل على زوجك.<br /><br />
         <strong>التدخين</strong><br />التوقف عن التدخين والابتعاد عن أي شخص يدخن. التدخين متورط في العقم وانقطاع الطمث المبكر. يقلل التدخين من نجاح التلقيح الاصطناعي بنسبة 50% تقريبًا، كما أن للتدخين السلبي تأثيرات مماثلة. وهذا أيضاً له تأثير مماثل على زوجك.<br /><br />
@@ -79,7 +79,7 @@ const FertilityTabs: React.FC = () => {
        ننصح بالتقليل من تناول اللحوم الحمراء، والتخلص من الدهون المتحولة (مثل الكعك والمعجنات وجميع الأطعمة المقلية)، والتأكد من أن 50% على الأقل من كل وجبة تتكون من الفواكه والخضروات. استخدمي زيت الزيتون في الخبز والتتبيلة والطبخ. فهو يحتوي على نسبة عالية من الدهون الأحادية غير المشبعة، والتي قد تكون مفيدة للنساء اللاتي يخضعن لعلاج التلقيح الاصطناعي، كما أنها مفيدة للصحة العامة. إن تقليل تناول السكر هو دائمًا فكرة جيدة. وينبغي تجنب الأطعمة المفرطة في الطهي.​<br />​<br />
        تحتوي العديد من الأطعمة اللذيذة على نسبة عالية من مضادات الأكسدة ويجب دمجها في نظامك الغذائي المعتاد. فيما يلي بعض الأطعمة الشائعة الأخرى التي تحتوي على نسبة عالية من مضادات الأكسدة بشكل طبيعي:
       `,
-      image: "/images/fertility-guide/Foods-that-Boost-Fertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Foods-that-Boost-Fertility.avif",
       bottomText: ``,
       secondlist: [
         "شجر العليق - أجهزة البلاك بيري",
@@ -115,7 +115,7 @@ const FertilityTabs: React.FC = () => {
 
 
       `,
-      image: "/images/fertility-guide/Causes-of-Male-Infertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Causes-of-Male-Infertility.avif",
       bottomText: ``,
       secondlist: [
         "اضطرابات تحت المهاد/الغدة النخامية (1-5%)",
@@ -225,7 +225,7 @@ const FertilityTabs: React.FC = () => {
 
 ​
       `,
-      image: "/images/fertility-guide/Causes-of-Female-Infertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Causes-of-Female-Infertility.avif",
       bottomText: ``,
       secondlist: [
         "لديك احتياطي جيد من البيض الصحي",
@@ -280,7 +280,7 @@ const FertilityTabs: React.FC = () => {
 
 تنخفض الخصوبة بشكل حاد عند سن 35 عامًا - أي أكثر من 10 سنوات قبل الوصول إلى سن اليأس. كنساء، تبدأ
       `,
-      image: "/images/fertility-guide/Womans-Biologic-Clock.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Womans-Biologic-Clock.avif",
       bottomText: ``,
      
       secondText: `
@@ -302,7 +302,7 @@ const FertilityTabs: React.FC = () => {
 
 ​عادة، تعاني النساء المصابات بخلل في التبويض من فترات غير منتظمة. وفي أسوأ الحالات، قد لا يحصلن على دوراتهن على الإطلاق. إذا كانت دورتك الشهرية أقل من 21 يومًا، أو أطول من 36 يومًا، فقد يكون لديك خلل في التبويض. إذا كانت دورتك الشهرية تقع ضمن النطاق الطبيعي من 21 إلى 36 يومًا، ولكن طول تدفق الدم في دورتك يختلف بشكل كبير من شهر لآخر، فقد يكون ذلك أيضًا علامة على خلل في التبويض.
       `,
-      image: "/images/fertility-guide/Ovulatory-Dysfunction.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Ovulatory-Dysfunction.avif",
       bottomText: ``,
   
     },
@@ -311,7 +311,7 @@ const FertilityTabs: React.FC = () => {
      يحدث التهاب بطانة الرحم عندما يتم العثور على أنسجة بطانة الرحم، التي تبطن الرحم عادة، في مكان آخر من الجسم. تشمل المواقع الأكثر شيوعًا لمرض بطانة الرحم المبيضين وقناتي فالوب وتجويف الحوض. يبدأ هذا النسيج في العمل تمامًا مثل أنسجة الرحم الطبيعية. أثناء الحيض، تبدأ الأنسجة بالنزيف. وعندما يحدث هذا، يبدأ النسيج الندبي بالتشكل، عادة في منطقة الحوض. يمكن أن يؤدي النسيج الندبي وبطانة الرحم إلى مشاكل محتملة ويسبب العقم.<br /><br />بطانة الرحم​<br /><br />
      بطانة الرحم هي حالة شائعة وترتبط بزيادة فرصة حدوث مشكلة في الحمل. قد تشمل العلامات والأعراض الشائعة لمرض بطانة الرحم الهاجرة ما يلي:
       `,
-      image: "/images/fertility-guide/Endometriosis.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Endometriosis.avif",
       bottomText: ``,
         secondlist: [
         "فترات مؤلمة. قد تبدأ آلام وتشنجات الحوض قبل الدورة الشهرية وتمتد لعدة أيام خلال الدورة الشهرية. قد تشعر أيضًا بألم في أسفل الظهر والبطن.",
@@ -346,7 +346,7 @@ const FertilityTabs: React.FC = () => {
     كيس المبيض هو كيس مملوء بالسوائل يتطور على مبيض المرأة. إنها شائعة جدًا ولا تسبب عادةً أي أعراض. قد تؤثر أكياس المبيض على كلا المبيضين في نفس الوقت، أو قد تؤثر على واحد فقط. تحدث معظم أكياس المبيض بشكل طبيعي وتختفي خلال بضعة أشهر دون الحاجة إلى أي علاج. تتطور معظم أكياس المبيض نتيجة لدورتك الشهرية (الكيسات الوظيفية) وتعتبر ظاهرة طبيعية. الأنواع الأخرى من الخراجات أقل شيوعًا.<br /><br />
     عادةً ما تكون الأكياس الوظيفية غير ضارة، ونادرًا ما تسبب الألم، وغالبًا ما تختفي من تلقاء نفسها خلال دورتين أو ثلاث دورات شهرية. هناك نوعان من الأكياس الوظيفية:​
       `,
-      image: "/images/fertility-guide/Ovarian-Cysts.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Ovarian-Cysts.avif",
       bottomText: ``,
         secondlist: [
         "الكيس الجريبي الذي يبدأ عندما لا يتمزق الجريب ويطلق البويضة.",
@@ -389,7 +389,7 @@ const FertilityTabs: React.FC = () => {
      تبدأ معظم الأورام الليفية كآفات صغيرة جدًا ويمكن أن تنمو إلى حجم كبير.<br />
      أعراض
       `,
-      image: "/images/fertility-guide/Uterine-Fibroids-Infertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Uterine-Fibroids-Infertility.avif",
       bottomText: ``,
 
       secondText: `
@@ -412,7 +412,7 @@ const FertilityTabs: React.FC = () => {
 غالبًا ما يترك الإجهاض المتكرر المرضى يشعرون بالإحباط والإحباط بشأن مواقفهم وأكثر إرهاقًا إذا اقترن بالعقم. قد يكون لكل من العقم والإجهاض المتكرر عوامل مسببة متداخلة.<br /><br />
      قد تشمل أسباب حالات الإجهاض المتكررة ما يلي:
       `,
-      image: "/images/fertility-guide/Recurrent-Miscarriage.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Recurrent-Miscarriage.avif",
       bottomText: ``,
         secondlist: [
         "عمر الأم المتقدم",
@@ -442,7 +442,7 @@ const FertilityTabs: React.FC = () => {
     هناك عدة أسباب قد تفسر فشل عملية الزرع. يمكن أن يكون بسبب الجنين أو بطانة الرحم أو كليهما. قد تكون هناك عوامل مشتركة أخرى. ومع ذلك، في كثير من الحالات لا نستطيع تفسير سبب فشل التلقيح الاصطناعي المتكرر.<br /><br />
    الأسباب الأكثر شهرة لفشل التلقيح الاصطناعي هي:
       `,
-      image: "/images/fertility-guide/Recurrent-IVF-Failure.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Recurrent-IVF-Failure.avif",
       bottomText: ``,
         secondlist: [
         "عمر الأم المتقدم",

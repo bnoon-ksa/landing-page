@@ -19367,7 +19367,7 @@ ease;
   -moz-appearance: none;
 
   /* add your arrow image */
-  background-image: url("/images/arrow.png");
+  background-image: url("https://bnoon.blob.core.windows.net/website/images/arrow.png");
   background-repeat: no-repeat;
   background-position: right 12px center; /* 👈 distance from right edge */
   background-size: 14px; /* 👈 adjust arrow size as you like */

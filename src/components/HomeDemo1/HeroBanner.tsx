@@ -60,19 +60,19 @@ function HeroBanner() {
                   <div className="info">
                     <div className="image d-flex align-items-center">
                       <Image
-                        src="/images/users/user1.png"
+                        src="https://bnoon.blob.core.windows.net/website/images/users/user1.png"
                         alt="user1"
                         width={41}
                         height={41}
                       />
                       <Image
-                        src="/images/users/user2.png"
+                        src="https://bnoon.blob.core.windows.net/website/images/users/user2.png"
                         alt="user2"
                         width={41}
                         height={41}
                       />
                       <Image
-                        src="/images/users/user3.png"
+                        src="https://bnoon.blob.core.windows.net/website/images/users/user3.png"
                         alt="user3"
                         width={41}
                         height={41}
@@ -89,7 +89,7 @@ function HeroBanner() {
                   <div className="wrap">
                     <Link href="/services">
                       <Image
-                        src="/images/banner/circle.svg"
+                        src="https://bnoon.blob.core.windows.net/website/images/banner/circle.svg"
                         alt="circle"
                         width={122}
                         height={122}
@@ -105,7 +105,7 @@ function HeroBanner() {
               <div className="main-banner-image">
                 <div className="image">
                   <Image
-                    src="/images/banner/banner.jpg"
+                    src="https://bnoon.blob.core.windows.net/website/images/banner/banner.jpg"
                     alt="banner"
                     width={1200}
                     height={1320}
@@ -132,7 +132,7 @@ function HeroBanner() {
                   {/* Shape Image */}
                   <div className="shape1">
                     <Image
-                      src="/images/banner/shape1.png"
+                      src="https://bnoon.blob.core.windows.net/website/images/banner/shape1.png"
                       alt="shape1"
                       width={139}
                       height={86}
@@ -140,7 +140,7 @@ function HeroBanner() {
                   </div>
                   <div className="shape2">
                     <Image
-                      src="/images/banner/shape2.png"
+                      src="https://bnoon.blob.core.windows.net/website/images/banner/shape2.png"
                       alt="shape2"
                       width={163}
                       height={164}

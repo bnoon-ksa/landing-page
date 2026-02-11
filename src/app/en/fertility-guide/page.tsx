@@ -15,7 +15,7 @@ export default function FertilityGuidePage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="/images/fertility-guid-banner.jpg" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/fertility-guid-banner.jpg" />
      <FertilityTabs />
 
      

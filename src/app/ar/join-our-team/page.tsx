@@ -13,7 +13,7 @@ export default function JoinOurTeamPage() {
     <>
       <Navbar />
 
-      <PageBanner bgImage="/images/join-our-team-ar.jpg" />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/join-our-team-ar.jpg" />
 
       <TeamsSection />
     </>

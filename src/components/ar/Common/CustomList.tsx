@@ -12,7 +12,7 @@ const CustomList: React.FC<CustomListProps> = ({ items }) => {
       {items.map((item, index) => (
         <li key={index} className="d-flex align-items-center mb-2">
           <Image
-            src="/images/icons/bnoon-symbol.avif"
+            src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
             alt="icon"
             width={20}
             height={20}

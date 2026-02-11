@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
+  output: process.env.STANDALONE === "true" ? "standalone" : undefined,
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -10,6 +10,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'ovasavedev8fe4a1851a.blob.core.windows.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'bnoon.blob.core.windows.net',
       },
     ],
   },
