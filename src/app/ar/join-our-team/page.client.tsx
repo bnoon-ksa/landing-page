@@ -1,8 +1,8 @@
 "use client";
 
-import PageBanner from "@/features/Layout/PageBanner";
-import Navbar from "@/features/Layout/Navbar";
-import TeamsSection from "@/features/Common/TeamsSection";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import TeamsSection from "@/components/ar/Common/TeamsSection";
 
 export default function ClientJoinOurTeamPage() {
   return (

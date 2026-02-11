@@ -1,5 +1,5 @@
-import Navbar from "@/features/Layout/Navbar";
-import DrMaramDadoua from "@/features/Common/DrMaramDadoua";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrMaramDadoua from "@/components/ar/Common/DrMaramDadoua";
 export default function ClientDrMaramDadouaPage() {
   return (
     <>

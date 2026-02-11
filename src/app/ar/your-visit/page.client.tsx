@@ -1,9 +1,9 @@
 "use client";
 
 
-import PageBanner from "@/features/Layout/PageBanner";
-import Navbar from "@/features/Layout/Navbar";
-import VisitTabs from "@/features/Common/VisitTabs";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import VisitTabs from "@/components/ar/Common/VisitTabs";
 export default function ClientYourVisitPage() {
   return (
     <>

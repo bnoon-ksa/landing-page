@@ -1,8 +1,8 @@
 "use client";
 
-import PageBanner from "@/features/Layout/PageBanner";
-import Navbar from "@/features/Layout/Navbar";
-import FeedbackSection from "@/features/Common/FeedbackSection";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import FeedbackSection from "@/components/ar/Common/FeedbackSection";
 
 export default function ClientSubmitFeedbackPage() {
   return (

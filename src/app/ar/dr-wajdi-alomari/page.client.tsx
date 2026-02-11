@@ -1,5 +1,5 @@
-import Navbar from "@/features/Layout/Navbar";
-import DrWajdiAlOmari from "@/features/Common/DrWajdiAlOmari";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrWajdiAlOmari from "@/components/ar/Common/DrWajdiAlOmari";
 export default function ClientDrWajdiAlOmariPage() {
   return (
     <>

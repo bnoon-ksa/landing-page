@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import { menus } from "../../components/Layout/Menus";
+import { menus } from "@/components/Layout/Menus";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 

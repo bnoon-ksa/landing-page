@@ -1,6 +1,6 @@
-import Navbar from "@/features/Layout/Navbar";
-import PageBanner from "@/features/Layout/PageBanner";
-import NationalDayOffer from "@/features/Common/NationalDayOffer";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import NationalDayOffer from "@/components/ar/Common/NationalDayOffer";
 export default function AboutPage() {
   return (
     <>

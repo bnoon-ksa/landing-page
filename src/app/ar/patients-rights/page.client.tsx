@@ -1,5 +1,5 @@
 "use client";
-import Navbar from "@/features/Layout/Navbar";
+import Navbar from "@/components/ar/Layout/Navbar";
 import PaitentRights from "@/components/Common/PaitentRights";
 
 export default function PatientsRightsPage() {

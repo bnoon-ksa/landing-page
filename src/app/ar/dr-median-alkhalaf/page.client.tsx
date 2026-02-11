@@ -1,6 +1,6 @@
-import Navbar from "@/features/Layout/Navbar";
-import PageBanner from "@/features/Layout/PageBanner";
-import DrMedianAlkhalaf from "@/features/Common/DrMedianAlkhalaf";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import DrMedianAlkhalaf from "@/components/ar/Common/DrMedianAlkhalaf";
 export default function ClientDrAhmedNowasserPage() {
   return (
     <>

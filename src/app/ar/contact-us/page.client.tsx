@@ -1,10 +1,10 @@
 "use client";
 
 
-import Navbar from "@/features/Layout/Navbar";
-import PageBanner from "@/features/Layout/PageBanner";
-import ContactUsSection from "@/features/Common/ContactUsSection";
-import MediaSection from "@/features/Common/MediaSection";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import ContactUsSection from "@/components/ar/Common/ContactUsSection";
+import MediaSection from "@/components/ar/Common/MediaSection";
 export default function ClientContactUsPage() {
   return (
     <>

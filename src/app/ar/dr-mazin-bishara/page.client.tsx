@@ -1,5 +1,5 @@
-import Navbar from "@/features/Layout/Navbar";
-import DrMazinBishara from "@/features/Common/DrMazinBishara";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrMazinBishara from "@/components/ar/Common/DrMazinBishara";
 export default function ClientDrMazinBisharaPage() {
   return (
     <>

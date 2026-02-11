@@ -1,10 +1,10 @@
 "use client";
 
 
-import PageBanner from "@/features/Layout/PageBanner";
-import Navbar from "@/features/Layout/Navbar";
-import FertilityTabs from "@/features/Common/FertilityTabs";
-import CustomList from "@/features/Common/CustomList";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import FertilityTabs from "@/components/ar/Common/FertilityTabs";
+import CustomList from "@/components/ar/Common/CustomList";
 export default function ClientFertilityGuidePage() {
   return (
     <>

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import MobileTopTools from "@/features/Common/MobileTopTools"; // ye aapka custom component hoga
+import MobileTopTools from "@/components/ar/Common/MobileTopTools"; // ye aapka custom component hoga
 
 import "remixicon/fonts/remixicon.css";
 // Define interfaces for our data structure

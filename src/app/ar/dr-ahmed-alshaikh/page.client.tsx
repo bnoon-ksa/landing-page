@@ -1,5 +1,5 @@
-import Navbar from "@/features/Layout/Navbar";
-import DrAhmedAlshaikh from "@/features/Common/DrAhmedAlshaikh";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrAhmedAlshaikh from "@/components/ar/Common/DrAhmedAlshaikh";
 export default function ClientDrAhmedAlShaikhPage() {
   return (
     <>

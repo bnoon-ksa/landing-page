@@ -1,8 +1,8 @@
 "use client";
 
-import PageBanner from "@/features/Layout/PageBanner";
-import Navbar from "@/features/Layout/Navbar";
-import AppointmentSection from "@/features/Common/AppointmentSection";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import AppointmentSection from "@/components/ar/Common/AppointmentSection";
 
 export default function ClientRequestAppointmentPage() {
   return (

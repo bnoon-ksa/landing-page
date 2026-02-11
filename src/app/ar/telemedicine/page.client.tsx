@@ -1,7 +1,7 @@
 "use client";
-import PageBanner from "@/features/Layout/PageBanner";
-import Navbar from "@/features/Layout/Navbar";
-import TelemedicineSection from "@/features/Common/TelemedicineSection";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import TelemedicineSection from "@/components/ar/Common/TelemedicineSection";
 export default function ClientTelemedicinePage() {
   return (
     <>

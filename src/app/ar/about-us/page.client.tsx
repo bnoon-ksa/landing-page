@@ -1,9 +1,9 @@
 "use client";
 
-import PageBanner from "@/features/Layout/PageBanner";
-import Navbar from "@/features/Layout/Navbar";
-import AboutusSection from "@/features/Common/AboutusSection";
-import WhoAreWe from "@/features/Common/WhoAreWe";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import AboutusSection from "@/components/ar/Common/AboutusSection";
+import WhoAreWe from "@/components/ar/Common/WhoAreWe";
 
 export default function ClientAboutUsPage() {
   return (

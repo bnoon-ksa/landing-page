@@ -1,8 +1,8 @@
 "use client";
 
-import PageBanner from "@/features/Layout/PageBanner";
-import Navbar from "@/features/Layout/Navbar";
-import SuccessSection from "@/features/Common/SuccessSection";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import SuccessSection from "@/components/ar/Common/SuccessSection";
 
 export default function ClientOurSuccessPage() {
   return (

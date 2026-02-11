@@ -1,10 +1,10 @@
 
 "use client";
 
-import Navbar from "@/features/Layout/Navbar";
-import PageBanner from "@/features/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
 
-import OurLocations from "@/features/Common/OurLocations";
+import OurLocations from "@/components/ar/Common/OurLocations";
 export default function ClientOurClinicsPage() {
   return (
     <>

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Navbar from "@/features/Layout/Navbar";
+import Navbar from "@/components/ar/Layout/Navbar";
 
 export default function ArabicNotFound() {
   return (

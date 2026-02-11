@@ -1,6 +1,6 @@
-import Navbar from "@/features/Layout/Navbar";
-import PageBanner from "@/features/Layout/PageBanner";
-import DrBassam from "@/features/Common/DrBassam";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import DrBassam from "@/components/ar/Common/DrBassam";
 export default function ClientDrBassamPage() {
   return (
     <>

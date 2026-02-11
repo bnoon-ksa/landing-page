@@ -1,6 +1,6 @@
-import Navbar from "@/features/Layout/Navbar";
-import PageBanner from "@/features/Layout/PageBanner";
-import Jeddaharea from "@/features/Common/Jeddaharea";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Jeddaharea from "@/components/ar/Common/Jeddaharea";
 export default function ClientBnoonJeddahPage() {
   return (
     <>
