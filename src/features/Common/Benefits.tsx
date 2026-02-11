@@ -49,7 +49,7 @@ const Benefits = () => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   // Scroll-triggered animation
   useEffect(() => {

@@ -45,7 +45,7 @@ const WaadSection = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [values.length]);
 
   return (
     <div className="fertility-area mt-5">
