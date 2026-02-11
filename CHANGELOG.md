@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/bnoon-ksa/landing-page/compare/v1.0.2...v1.0.3) (2026-02-11)
+
+### Bug Fixes
+
+* remove .env.local from git tracking ([2ec42ce](https://github.com/bnoon-ksa/landing-page/commit/2ec42ce513fe90974274cc06a8cea14987f027be))
+* replace all <img> with next/image <Image> component across 71 files ([b2be554](https://github.com/bnoon-ksa/landing-page/commit/b2be55446fd1a632afbab98dab99e8ee783b2c49))
+* resolve react-hooks/exhaustive-deps warnings in WaadSection and Benefits ([3650db4](https://github.com/bnoon-ksa/landing-page/commit/3650db41afebea689e0dc8d88d87d3598aae23f4))
+
 ## [1.0.2](https://github.com/bnoon-ksa/landing-page/compare/v1.0.1...v1.0.2) (2026-02-11)
 
 ### Bug Fixes
