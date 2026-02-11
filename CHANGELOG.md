@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/bnoon-ksa/landing-page/compare/v1.0.0...v1.0.1) (2026-02-11)
+
+### Bug Fixes
+
+* resolve CI warnings and eslint config error ([7735526](https://github.com/bnoon-ksa/landing-page/commit/77355260edaa26866173ecbf224d46e3c613dc1b))
+
 ## 1.0.0 (2026-02-11)
 
 ### Features
