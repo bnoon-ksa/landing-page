@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 import 'remixicon/fonts/remixicon.css';
+import { getBookingUrl } from "@/utils/booking";
 // ✅ Doctor data structure
 interface OurExperts {
   id: number;
@@ -262,7 +263,7 @@ const OurExperts = () => {
   )}
                     <div>
                       <Link
-                        href="https://book.bnoon.sa/ar"
+                        href={getBookingUrl(doctor.location, "ar")}
                         className="btn btn-success doctor-btn"
                       >
                         طلب موعد
