@@ -10,7 +10,6 @@ async function handleLogin(formData: FormData) {
   const password = String(formData.get("password") || "").trim();
 
   // TODO: Integrate real authentication here
-  console.log("[Login]", { email, hasPassword: password.length > 0 });
 
   // For progressive enhancement, redirect after POST
   redirect("/thank-you");

@@ -7,7 +7,6 @@ async function handleForgot(formData: FormData) {
   
   const email = String(formData.get("email") || "").trim();
   // TODO: Implement sending reset email
-  console.log("[ForgotPassword]", { email });
   redirect("/thank-you");
 }
 

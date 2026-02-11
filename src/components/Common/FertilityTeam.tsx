@@ -41,21 +41,6 @@ const HowItWorks = () => {
     },
   ];
 
-  // ✅ Form submit handler
-  const handleContact = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const email = formData.get("email");
-    console.log("Submitted Email:", email);
-
-    // Yahan API call kar sakte ho (backend ko bhejne k liye)
-    // await fetch("/api/subscribe", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ email }),
-    // });
-  };
-
   return (
     <div className="fertility-area mt-5">
       <div className="container">

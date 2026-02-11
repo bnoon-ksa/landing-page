@@ -15,7 +15,6 @@ async function handleRegister(formData: FormData) {
   const agree = formData.get("agree") === "on";
 
   // TODO: Replace with real registration logic + validation
-  console.log("[Register]", { name, email, phone, userType, agree, passwordMatches: password === confirmPassword });
 
   redirect("/thank-you");
 }

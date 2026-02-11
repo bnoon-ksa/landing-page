@@ -6,7 +6,6 @@ async function handleSubscribe(formData: FormData) {
   "use client";
   const email = String(formData.get("email") || "").trim();
   // TODO: Wire up to email marketing service
-  console.log("[Subscribe]", { email });
   redirect("/thank-you");
 }
 
