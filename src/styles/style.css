@@ -16021,7 +16021,7 @@ Choose Us Area CSS
 .choose-us-content .items .item {
   display: flex;
   gap: 25px;
-  align-items: start;
+  align-items: flex-start;
   padding: 30px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
@@ -16065,7 +16065,7 @@ Features Area CSS
 }
 .features-inner .features-slider .swiper-pagination {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: absolute;
   right: 27px;
   left: auto;
@@ -16362,7 +16362,7 @@ Third Choose Area CSS
 .third-choose-content .items .item {
   display: flex;
   gap: 25px;
-  align-items: start;
+  align-items: flex-start;
   margin-bottom: 30px;
 }
 .third-choose-content .items .item .icon {
@@ -16501,7 +16501,7 @@ Drives Area CSS
 .drive-card {
   display: flex;
   gap: 25px;
-  align-items: start;
+  align-items: flex-start;
   border-left: 1px solid #336AEA;
   padding-left: 30px;
 }
@@ -17708,7 +17708,7 @@ Blog Details Area CSS
   display: flex;
   gap: 10px;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;
@@ -18918,7 +18918,7 @@ Footer Area Area CSS
 .footer-top-content .right-social {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;
@@ -19017,7 +19017,7 @@ Footer Area Area CSS
 }
 .copyright-area .lists {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;
