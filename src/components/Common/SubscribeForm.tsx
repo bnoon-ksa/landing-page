@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 const SubscribeForm = () => {
   const [email, setEmail] = useState("");
@@ -106,7 +107,7 @@ const SubscribeForm = () => {
         </div>
 
         <div className="subscribe-shape">
-          <img src="/images/shape.png" alt="image" width={260} height={202} />
+          <Image src="/images/shape.png" alt="image" width={260} height={202} />
         </div>
       </div>
     </>

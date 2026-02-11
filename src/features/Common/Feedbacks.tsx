@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Feedbacks = () => {
   const feedbackSlides = [
@@ -70,7 +71,7 @@ const Feedbacks = () => {
               </div>
               <div className="col-xl-6 col-md-12">
                 <div className="service-image">
-                  <img
+                  <Image
                     src={slide.img}
                     alt="Service overview"
                     width={580}

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Doctor data structure
 interface Doctor {
@@ -108,7 +109,7 @@ const OurDoctorsStyle2 = () => {
               <div className="doctor-card">
                 <div className="image">
                   <Link href={doctor.profileLink}>
-                    <img
+                    <Image
                       src={doctor.imageUrl}
                       alt={doctor.name}
                       width={340}

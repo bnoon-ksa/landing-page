@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const DownloadOurApp = () => {
   return (
@@ -24,7 +25,7 @@ const DownloadOurApp = () => {
                       href="https://play.google.com/store/apps"
                       target="_blank"
                     >
-                      <img
+                      <Image
                         src="/images/app/google-play.svg"
                         alt="google-play"
                         width={193}
@@ -37,7 +38,7 @@ const DownloadOurApp = () => {
                       href="https://www.apple.com/app-store/"
                       target="_blank"
                     >
-                      <img
+                      <Image
                         src="/images/app/app-store.svg"
                         alt="app-store"
                         width={193}
@@ -51,7 +52,7 @@ const DownloadOurApp = () => {
 
             <div className="col-lg-5 col-md-12">
               <div className="app-image">
-                <img
+                <Image
                   src="/images/app/app.png"
                   alt="app"
                   width={1053}
@@ -63,7 +64,7 @@ const DownloadOurApp = () => {
         </div>
 
         <div className="app-shape">
-          <img
+          <Image
             src="/images/app/shape.png"
             alt="shape"
             width={174}

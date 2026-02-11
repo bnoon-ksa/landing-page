@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Step data structure
 interface WorkStep {
@@ -76,7 +77,7 @@ const HowItWorks = () => {
             <div key={step.id} className="col-lg-4 col-md-6">
               <div className="work-item text-center">
                 <div className="icon mb-3">
-                  <img
+                  <Image
                     src={step.icon}
                     alt={`${step.title} icon`}
                     width={44}

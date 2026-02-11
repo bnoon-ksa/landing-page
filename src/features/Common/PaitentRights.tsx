@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const PaitentRights: React.FC = () => {
   const pages = [
@@ -12,12 +13,12 @@ const PaitentRights: React.FC = () => {
   return (
     <div className="pdf-pages-wrapper">
       {pages.map((src, index) => (
-        <img
+        <Image
           key={index}
           src={src}
           alt={`Patient Rights Page ${index + 1}`}
           className="pdf-page"
-        />
+         width={1000} height={1400} />
       ))}
 
       <style jsx>{`

@@ -137,7 +137,7 @@ function Features() {
                         {feature.type === "patients" && (
                           <>
                             <div className="icon">
-                              <img
+                              <Image
                                 src={feature.icon!.src}
                                 alt={feature.icon!.alt}
                                 width={feature.icon!.width}
@@ -166,7 +166,7 @@ function Features() {
                                   style={{ paddingRight: "10px" }}
                                 >
                                   {feature.userImages?.map((user, index) => (
-                                    <img
+                                    <Image
                                       key={index}
                                       src={user.src}
                                       alt={user.alt}
@@ -185,7 +185,7 @@ function Features() {
                           <div className="inner">
                             <div className="content">
                               <div className="icon">
-                                <img
+                                <Image
                                   src={feature.icon!.src}
                                   alt={feature.icon!.alt}
                                   width={feature.icon!.width}
@@ -209,7 +209,7 @@ function Features() {
                               </div>
                             </div>
                             <div className="image">
-                              <img
+                              <Image
                                 src={feature.doctorImage!.src}
                                 alt={feature.doctorImage!.alt}
                                 width={feature.doctorImage!.width}
@@ -249,7 +249,7 @@ function Features() {
                     </div>
                     <div className="info">
                       <div className="image">
-                        <img
+                        <Image
                           src={feature.contactInfo!.icon.src}
                           alt={feature.contactInfo!.icon.alt}
                           width={feature.contactInfo!.icon.width}

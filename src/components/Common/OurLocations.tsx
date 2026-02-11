@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const OurLocations = () => {
   const imageRiyadh = "/images/locations/bnoon-riyadh.avif";
@@ -27,7 +28,7 @@ const OurLocations = () => {
 
       {/* Location with Google Maps link */}
       <div className="d-flex align-items-center">
-        <img
+        <Image
           src="/images/icons/location.svg"
           alt="Location"
           width={24}
@@ -47,7 +48,7 @@ const OurLocations = () => {
       {/* Phone */}
       {phone && (
         <div className="d-flex align-items-center">
-          <img
+          <Image
             src="/images/icons/phone.svg"
             alt="Phone"
             width={24}
@@ -66,7 +67,7 @@ const OurLocations = () => {
       {/* Email */}
       {email && (
         <div className="d-flex align-items-center">
-          <img
+          <Image
             src="/images/icons/mail.svg"
             alt="Email"
             width={24}
@@ -124,7 +125,7 @@ const OurLocations = () => {
               className="location-overview-image"
               style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
             >
-              <img src={imageRiyadh} alt="Service overview" width={580} height={450} />
+              <Image src={imageRiyadh} alt="Service overview" width={580} height={450} />
             </div>
           </motion.div>
         </motion.div>
@@ -144,7 +145,7 @@ const OurLocations = () => {
                 overflow: "hidden",
               }}
             >
-              <img src={imageJeddah} alt="Service overview" width={580} height={450} />
+              <Image src={imageJeddah} alt="Service overview" width={580} height={450} />
             </div>
           </motion.div>
 
@@ -203,7 +204,7 @@ const OurLocations = () => {
               className="location-overview-image"
               style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
             >
-              <img src={imageKingSalman} alt="Service overview" width={580} height={450} />
+              <Image src={imageKingSalman} alt="Service overview" width={580} height={450} />
             </div>
           </motion.div>
         </motion.div>
@@ -224,7 +225,7 @@ const OurLocations = () => {
 
               }}
             >
-              <img src={imageAlahsa} alt="Service overview" width={580} height={450} />
+              <Image src={imageAlahsa} alt="Service overview" width={580} height={450} />
             </div>
           </motion.div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const Jeddaharea = () => {
   const imageJeddah = "/images/locations/bnoon-jeddah.avif";
@@ -57,7 +58,7 @@ const Jeddaharea = () => {
                 display: "inline-block",
               }}
             >
-              <img src={imageJeddah} alt="Service overview" width={580} height={450} />
+              <Image src={imageJeddah} alt="Service overview" width={580} height={450} />
             </div>
           </div>
 
@@ -77,7 +78,7 @@ const Jeddaharea = () => {
             <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
   {/* Location */}
   <div className="d-flex align-items-center">
-    <img
+    <Image
       src="/images/icons/location.svg"
       alt="Location"
       width={24}
@@ -96,7 +97,7 @@ const Jeddaharea = () => {
 
   {/* Phone */}
   <div className="d-flex align-items-center">
-    <img
+    <Image
       src="/images/icons/phone.svg"
       alt="Phone"
       width={24}
@@ -113,7 +114,7 @@ const Jeddaharea = () => {
 
   {/* Email */}
   <div className="d-flex align-items-center">
-    <img
+    <Image
       src="/images/icons/mail.svg"
       alt="Email"
       width={24}

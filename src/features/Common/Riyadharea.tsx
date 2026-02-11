@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
 const Riyadharea = () => {
   const imageRiyadh = "/images/locations/bnoon-riyadh.avif";
@@ -98,15 +99,15 @@ const Riyadharea = () => {
            
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <a href="https://maps.app.goo.gl/Vq76jVMZzSNhAg1A9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الرياض</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                   <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                  <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
@@ -123,7 +124,7 @@ const Riyadharea = () => {
                 display: "inline-block",
               }}
             >
-              <img src={imageRiyadh} alt="Bnoon Riyadh" width={580} height={450} />
+              <Image src={imageRiyadh} alt="Bnoon Riyadh" width={580} height={450} />
             </div>
           </div>
         </div>
@@ -140,7 +141,7 @@ const Riyadharea = () => {
                 display: "inline-block",
               }}
             >
-              <img src={imageKingSalman} alt="King Salman Road Facility" width={580} height={450} />
+              <Image src={imageKingSalman} alt="King Salman Road Facility" width={580} height={450} />
             </div>
           </div>
 
@@ -168,15 +169,15 @@ const Riyadharea = () => {
                 "بنون – طريق الملك سلمان" لا يهدف فقط إلى تقديم خدمة طبية، بل يسعى ليكون مرجعاً إقليمياً في طب الإخصاب، ومنصة تواكب تطلعات رؤية السعودية 2030 في الريادة الصحية والابتكار الطبي۔</p>
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                  <a href="https://maps.app.goo.gl/TPcaKT339w6bEBub6" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – طريق الملك سلمان</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                  <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                   <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>

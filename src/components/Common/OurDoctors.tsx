@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import 'remixicon/fonts/remixicon.css';
 
@@ -195,7 +196,7 @@ const OurDoctors = () => {
             >
               <div className="doctor-card">
                 <div className="image-wrapper">
-                  <img
+                  <Image
                     src={doctor.imageUrl}
                     alt={doctor.name}
                     style={{ width: "100%", height: "auto", borderRadius: 10 }}

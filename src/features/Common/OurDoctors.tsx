@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import 'remixicon/fonts/remixicon.css';
 
@@ -190,7 +191,7 @@ const OurDoctors = () => {
             <div key={doctor.id} className="col-xl-3 col-md-6">
               <div className="doctor-card">
                 <div className="doctors-wrapper">
-                  <img src={doctor.imageUrl} alt={doctor.name} style={{ borderRadius: 10, width: "100%", height: "auto" }} />
+                  <Image src={doctor.imageUrl} alt={doctor.name} width={340} height={340} style={{ borderRadius: 10, width: "100%", height: "auto" }} />
                   <div className="image-overlay">
                     <div className="overlay-content">
                       <Link href={doctor.profileLink} className="btn btn-success doctor-btn doctor-hover-btn">عرض الملف الشخصي</Link>

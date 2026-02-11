@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import { motion, Variants, easeOut } from "framer-motion";
+import Image from "next/image";
 
 const OurLocations = () => {
   const imageRiyadh = "/images/locations/bnoon-riyadh.avif";
@@ -45,15 +46,15 @@ const OurLocations = () => {
 
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <a href="https://maps.app.goo.gl/Vq76jVMZzSNhAg1A9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الرياض</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                   <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                  <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
@@ -65,7 +66,7 @@ const OurLocations = () => {
               className="service-overview-image"
               style={{ boxShadow: "-50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
             >
-              <img src={imageRiyadh} alt="بنون الرياض" width={580} height={450} />
+              <Image src={imageRiyadh} alt="بنون الرياض" width={580} height={450} />
             </div>
           </motion.div>
         </motion.div>
@@ -82,7 +83,7 @@ const OurLocations = () => {
               className="service-overview-image"
               style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
             >
-              <img src={imageJeddah} alt="بنون جدة" width={580} height={450} />
+              <Image src={imageJeddah} alt="بنون جدة" width={580} height={450} />
             </div>
           </motion.div>
 
@@ -101,15 +102,15 @@ const OurLocations = () => {
 
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <a href="https://maps.app.goo.gl/8Qt27cRjD7noBcuU9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – جدة</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                    <a href="tel:+966114448080" className="text-color">+966 12 680 0800</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                   <a href="mailto:info@bnoon.sa" className="text-color">info.jeddah@bnoon.sa</a>
                 </div>
               </div>
@@ -146,15 +147,15 @@ const OurLocations = () => {
               </p>
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                  <a href="https://maps.app.goo.gl/TPcaKT339w6bEBub6" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – طريق الملك سلمان</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                  <a href="tel:+966114448080" className="text-color">+966 11 444 8080</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                   <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>
@@ -166,7 +167,7 @@ const OurLocations = () => {
               className="service-overview-image"
               style={{ boxShadow: "-50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
             >
-              <img src={imageKingSalman} alt="بنون طريق الملك سلمان" width={580} height={450} />
+              <Image src={imageKingSalman} alt="بنون طريق الملك سلمان" width={580} height={450} />
             </div>
           </motion.div>
         </motion.div>
@@ -182,7 +183,7 @@ const OurLocations = () => {
               className="location-overview-image"
               style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block" }}
             >
-              <img src={imageAlahsa} alt="بنون جدة" width={580} height={450} />
+              <Image src={imageAlahsa} alt="بنون جدة" width={580} height={450} />
             </div>
           </motion.div>
 
@@ -216,12 +217,12 @@ const OurLocations = () => {
 <p>يمثّل بنون – الأحساء نقلة نوعية في تطوير خدمات الخصوبة بالمنطقة الشرقية، إذ يجمع بين الابتكار الطبي، والتميّز الطبي، والالتزام بدعم كل أسرة في رحلتها نحو الأمومة والأبوة. </p>
               <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                  <a href="https://maps.app.goo.gl/HJVWsJkXzVNvk4bn7" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الأحساء </a>
                 </div>
               
                 <div className="d-flex align-items-center">
-                  <img src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                    <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>

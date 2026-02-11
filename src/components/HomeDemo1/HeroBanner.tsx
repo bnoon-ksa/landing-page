@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function HeroBanner() {
   return (
@@ -58,19 +59,19 @@ function HeroBanner() {
                 <div className="banner-bottom">
                   <div className="info">
                     <div className="image d-flex align-items-center">
-                      <img
+                      <Image
                         src="/images/users/user1.png"
                         alt="user1"
                         width={41}
                         height={41}
                       />
-                      <img
+                      <Image
                         src="/images/users/user2.png"
                         alt="user2"
                         width={41}
                         height={41}
                       />
-                      <img
+                      <Image
                         src="/images/users/user3.png"
                         alt="user3"
                         width={41}
@@ -87,7 +88,7 @@ function HeroBanner() {
                   </div>
                   <div className="wrap">
                     <Link href="/services">
-                      <img
+                      <Image
                         src="/images/banner/circle.svg"
                         alt="circle"
                         width={122}
@@ -103,7 +104,7 @@ function HeroBanner() {
             <div className="col-xxl-4 col-md-12">
               <div className="main-banner-image">
                 <div className="image">
-                  <img
+                  <Image
                     src="/images/banner/banner.jpg"
                     alt="banner"
                     width={1200}
@@ -130,7 +131,7 @@ function HeroBanner() {
 
                   {/* Shape Image */}
                   <div className="shape1">
-                    <img
+                    <Image
                       src="/images/banner/shape1.png"
                       alt="shape1"
                       width={139}
@@ -138,7 +139,7 @@ function HeroBanner() {
                     />
                   </div>
                   <div className="shape2">
-                    <img
+                    <Image
                       src="/images/banner/shape2.png"
                       alt="shape2"
                       width={163}

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 import CustomList from "@/components/Common/CustomList";
+import Image from "next/image";
 const tabToHash = (tab: string) =>
   tab
     .toLowerCase()
@@ -246,11 +247,11 @@ const VisitTabs: React.FC = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 image-col">
-            <img
+            <Image
               src={currentContent.image}
               alt={activeTab}
               className="img-fluid fertilitytabs-image"
-            />
+             width={466} height={250} />
           </div>
         </div>
 

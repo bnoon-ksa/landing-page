@@ -5,6 +5,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { usePathname } from "next/navigation";
 import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 import { menus } from "../../components/Layout/Menus";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -54,7 +55,7 @@ function Navbar() {
           {/* Left side: Logo + Mobile Language + Menu icon */}
           <div className="d-flex align-items-center">
             <Link href="/en" className="navbar-brand d-flex align-items-center">
-              <img
+              <Image
                 src="/images/bnoon-logo.svg"
                 alt="Doutor"
                 width={183}
@@ -126,7 +127,7 @@ function Navbar() {
     </div>
 
     {/* 👉 YOUR CUSTOM ICON HERE */}
-    <img
+    <Image
       src="/images/droparrow.svg"
       alt="arrow"
       style={{ width: "22px", height: "22px", margin: "0px 25px 0px 0px", }}
@@ -217,7 +218,7 @@ function Navbar() {
           className="border-0 "
         >
           <Offcanvas.Title>
-            <img
+            <Image
               src="/images/logo-mob.avif"
               alt="Doutor"
               width={150}

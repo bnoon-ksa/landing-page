@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import ReCAPTCHA from "react-google-recaptcha";
 import { Placeholder } from "react-bootstrap";
+import Image from "next/image";
 const AppointmentSection = () => {
   const [formData, setFormData] = useState({
 
@@ -582,7 +583,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                   }}
                 >
                   <span>{formData.interest || "ما الخدمة التي تبحث عنها؟"}</span>
-                  <img
+                  <Image
                     src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
@@ -664,7 +665,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                   }}
                 >
                   <span>{formData.branch || " الفرع"}</span>
-                  <img
+                  <Image
                     src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
@@ -741,7 +742,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                   }}
                 >
                   <span>{formData.visitType || "اختر نوع الزيارة"}</span>
-                  <img
+                  <Image
                     src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
@@ -821,7 +822,7 @@ const [showThankYou, setShowThankYou] = useState(false);
         : formData.doctor || "اختر الطبيب"}
     </span>
 
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
       style={{ width: "16px", height: "16px" }}
@@ -985,7 +986,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                   }}
                 >
                   <span>{formData.nationality || "الجنسية"}</span>
-                  <img
+                  <Image
                     src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
@@ -1056,7 +1057,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                   }}
                 >
                   <span>{formData.countryOfResidence || "بلد الإقامة"}</span>
-                  <img
+                  <Image
                     src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
@@ -1128,7 +1129,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                     }}
                   >
                     <span>{formData.cityIfInSA || "اختر المدينة"}</span>
-                    <img
+                    <Image
                       src="/images/arrow.png"
                       alt="arrow"
                       style={{ width: "16px", height: "16px" }}
@@ -1311,7 +1312,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 }}
               >
                 <span>{formData.preferredTime || "9AM to 8PM"}</span>
-                <img src="/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
+                <Image src="/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
               </button>
 
               {/* Dropdown List */}
@@ -1397,7 +1398,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 }}
               >
                 <span>{formData.howHeard || "كيف سمعت عنا؟"}</span>
-                <img src="/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
+                <Image src="/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
               </button>
 
               {/* Dropdown List */}

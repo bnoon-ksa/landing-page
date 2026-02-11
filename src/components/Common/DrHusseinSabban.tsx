@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const DrHusseinSabban = () => {
   const imageRiyadh = "/images/doctors/dr-hussein.avif";
@@ -127,7 +128,7 @@ const DrHusseinSabban = () => {
 
 
           <div className="col-xl-5 col-md-12 d-flex flex-column justify-content-center text-center">
-            <img
+            <Image
               className="doctors-overview-image"
               src={imageRiyadh}
               alt="Bnoon Riyadh"

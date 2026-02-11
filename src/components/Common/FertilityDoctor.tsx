@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const FertilityDoctor = () => {
   // ✅ Points array component ke andar
@@ -36,11 +37,11 @@ Preparing oneself for a pregnancy is quite challenging. So, if you are ready to 
               <ul className="custom-list">
                 {points.map((point, index) => (
                   <li key={index}>
-                    <img
+                    <Image
                       src="/images/icons/bnoon-symbol.avif" // apni icon image ka path
                       alt="icon"
                       className="list-icon"
-                    />
+                     width={24} height={22} />
                     {point}
                   </li>
                 ))}
@@ -58,7 +59,7 @@ Preparing oneself for a pregnancy is quite challenging. So, if you are ready to 
                
               }}
             >
-              <img
+              <Image
                 src={staticImage}
                 alt="Service overview"
                 width={517}

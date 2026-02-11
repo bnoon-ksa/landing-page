@@ -366,11 +366,11 @@ const handleTabClick = (tab: string) => {
             />
           </div>
           <div className="col-lg-4 col-md-6 image-col">
-            <img
+            <Image
               src={currentContent.image}
               alt={activeTab}
               className="img-fluid"
-            />
+             width={388} height={212} />
           </div>
         </div>
 

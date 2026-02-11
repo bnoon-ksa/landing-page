@@ -99,7 +99,7 @@ function PatientsFeedbacks({
                   <span>Patient Satisfaction</span>
                 </div>
                 <div className="image">
-                  <img
+                  <Image
                     src="/images/feedback/rating.png"
                     alt="rating"
                     width={185}
@@ -109,7 +109,7 @@ function PatientsFeedbacks({
                 <div className="review">
                   <div className="left">
                     <span>Review on</span>
-                    <img
+                    <Image
                       src={stats.platformImage}
                       alt={stats.platform}
                       width={73}
@@ -122,7 +122,7 @@ function PatientsFeedbacks({
                   </div>
                 </div>
                 <div className="wrap-shape">
-                  <img
+                  <Image
                     src="/images/feedback/shape.png"
                     alt="shape"
                     width={170}
@@ -152,7 +152,7 @@ function PatientsFeedbacks({
                       </p>
                       <div className="info">
                         <div className="image">
-                          <img
+                          <Image
                             src={feedback.image}
                             alt={feedback.patientName}
                             width={57}

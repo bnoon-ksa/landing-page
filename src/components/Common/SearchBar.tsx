@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 type LocationType = "Riyadh" | "Jeddah" | "Al Ahsa" | "";
 
@@ -170,7 +171,7 @@ const doctorsToShow =
   {doctor || "Select Doctor"}
 </span>
 
-    <img src="/images/arrow.png" className="arrow-icon" />
+    <Image src="/images/arrow.png" className="arrow-icon" alt="" width={12} height={12} />
   </button>
   <div className="dropdown-menu doctor-menu">
     {doctorsToShow.map((doc, i) => (
@@ -206,7 +207,7 @@ const doctorsToShow =
   {location || "By Location"}
 </span>
 
-    <img src="/images/arrow.png" className="arrow-icon" />
+    <Image src="/images/arrow.png" className="arrow-icon" alt="" width={12} height={12} />
   </button>
   <div className="dropdown-menu location-menu">
     {["Riyadh", "Jeddah", "Al Ahsa"].map((loc, i) => (

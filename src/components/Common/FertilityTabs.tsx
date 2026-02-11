@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import CustomList from "@/components/Common/CustomList";
+import Image from "next/image";
 
 interface TabContent {
   text: string;
@@ -533,11 +534,11 @@ const FertilityTabs: React.FC = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 image-col ">
-            <img
+            <Image
               src={currentContent.image}
               alt={activeTab}
               className="img-fluid fertilitytabs-image"
-            />
+             width={420} height={200} />
           </div>
         </div>
 

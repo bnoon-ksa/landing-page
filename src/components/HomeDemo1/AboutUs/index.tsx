@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const AboutUs = () => {
   // Dynamic data
@@ -76,7 +77,7 @@ const AboutUs = () => {
           <div className="row justify-content-center align-items-center g-5">
             <div className="col-lg-6 col-md-12">
               <div className="about-image">
-                <img
+                <Image
                   src={aboutData.content.image.src}
                   alt={aboutData.content.image.alt}
                   width={1270}

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import 'remixicon/fonts/remixicon.css';
 // ✅ Doctor data structure
 interface OurExperts {
@@ -228,7 +229,7 @@ const OurExperts = () => {
             <div key={doctor.id} className="col-xl-3 col-md-6">
   <div className="doctor-card">
     <div className="image-wrapper" style={{ position: "relative" }}>
-      <img
+      <Image
         src={doctor.imageUrl}
         alt={doctor.name}
         width={275}

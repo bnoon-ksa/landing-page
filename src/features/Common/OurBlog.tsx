@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import 'remixicon/fonts/remixicon.css';
 const OurBlog = () => {
@@ -87,7 +88,7 @@ const OurBlog = () => {
                     ></iframe>
                   ) : (
                     <a href={post.slug} target="_blank" rel="noopener noreferrer">
-                      <img src={post.imageSrc} alt={post.title} />
+                      <Image src={post.imageSrc} alt={post.title}  width={378} height={205} />
                     </a>
                   )}
 

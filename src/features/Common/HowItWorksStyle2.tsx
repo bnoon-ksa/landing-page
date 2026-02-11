@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 const HowItWorksSlider = () => {
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -54,12 +55,11 @@ const HowItWorksSlider = () => {
             <div key={step.id} className="col-lg-3 col-md-4 col-sm-6">
               <div className="how-it-work-card">
                 <div className="image">
-                  <img
+                  <Image
                     src={step.imageSrc}
                     alt={step.title}
                     width={350}
                     height={300}
-                   
                   />
                 </div>
                 <h6 className="blog-text">{step.title}</h6>

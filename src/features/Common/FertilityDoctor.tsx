@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const FertilityDoctor = () => {
   // ✅ Points array component ke andar
@@ -34,11 +35,11 @@ const FertilityDoctor = () => {
               <ul className="custom-list">
                 {points.map((point, index) => (
                   <li key={index}>
-                    <img
+                    <Image
                       src="/images/icons/bnoon-symbol.avif" // apni icon image ka path
                       alt="icon"
                       className="list-icon"
-                    />
+                     width={24} height={22} />
                     {point}
                   </li>
                 ))}
@@ -57,7 +58,7 @@ const FertilityDoctor = () => {
                 display: "inline-block",
               }}
             >
-              <img
+              <Image
                 src={staticImage}
                 alt="Service overview"
                 width={580}

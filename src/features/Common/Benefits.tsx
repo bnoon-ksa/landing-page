@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 const Benefits = () => {
   const benefitsData = [
@@ -128,12 +129,12 @@ const Benefits = () => {
             >
              <div className="image-wrapper">
     {images.map((img, index) => (
-      <img
+      <Image
         key={index}
         src={img}
         alt="benefit"
         className={`slide-image ${index === currentIndex ? "active" : ""}  responsive-image`}
-      />
+       width={544} height={436} />
     ))}
   </div>
               {/* ✅ Responsive style only for mobile */}

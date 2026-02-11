@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import Image from "next/image";
 const FeedbackSection = () => {
   const [formData, setFormData] = useState({
     branch: "",
@@ -120,7 +121,7 @@ if (
                 enhance the patient-centered experience we aim to provide.
               </p>
               <div className="d-flex align-items-center mb-2">
-                <img
+                <Image
                   src="/images/icons/mail.svg"
                   alt="Email"
                   width={24}
@@ -132,7 +133,7 @@ if (
                 </p>
               </div>
               <div className="d-flex align-items-center">
-                <img
+                <Image
                   src="/images/icons/location.svg"
                   alt="LinkedIn"
                   width={24}
@@ -187,7 +188,7 @@ if (
   >
     <span>{formData.branch || "Select branch"}</span>
 
-    <img
+    <Image
       src="/images/arrow.png"
       alt="arrow"
       style={{ width: "16px", height: "16px" }}

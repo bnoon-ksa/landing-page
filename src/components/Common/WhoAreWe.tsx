@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, Easing, easeOut } from "framer-motion";
+import Image from "next/image";
 
 const WhoAreWe = () => {
   const staticImage = "/images/about/who-we-are.avif";
@@ -48,7 +49,7 @@ const WhoAreWe = () => {
                 display: "inline-block",
               }}
             >
-              <img
+              <Image
                 src={staticImage}
                 alt="Service overview"
                 width={580}

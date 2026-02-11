@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const NationalDayOffer = () => {
   // Alag images for each section
@@ -49,7 +50,7 @@ const NationalDayOffer = () => {
                       key={index}
                       className="d-flex align-items-start mb-2"
                     >
-                      <img
+                      <Image
                         src="/images/icons/bnoon-symbol.avif"
                         alt="check"
                         width={20}
@@ -71,7 +72,7 @@ const NationalDayOffer = () => {
                       key={index}
                       className="d-flex align-items-start mb-2"
                     >
-                      <img
+                      <Image
                         src="/images/icons/bnoon-symbol.avif"
                         alt="check"
                         width={20}
@@ -102,7 +103,7 @@ const NationalDayOffer = () => {
 
               <div className="d-flex flex-column mt-3 gap-2">
                 <div className="d-flex align-items-center">
-                  <img
+                  <Image
                     src="/images/icons/phone.svg"
                     alt="Phone"
                     width={14}
@@ -112,7 +113,7 @@ const NationalDayOffer = () => {
                   <span>بنون - الرياض:0114448080</span>
                 </div>
                 <div className="d-flex align-items-center">
-                  <img
+                  <Image
                     src="/images/icons/phone.svg"
                     alt="Phone"
                     width={14}
@@ -135,7 +136,7 @@ const NationalDayOffer = () => {
                 margin: "0 0px 0 50",
               }}
             >
-              <img
+              <Image
                 src={imageJeddah}
                 alt="Service overview"
                 width={580}
@@ -170,7 +171,7 @@ const NationalDayOffer = () => {
                 display: "inline-block",
               }}
             >
-              <img
+              <Image
                 src={imageRiyadh}
                 alt="Service overview"
                 width={580}
@@ -201,7 +202,7 @@ const NationalDayOffer = () => {
 
               <div className="d-flex flex-column mt-3 gap-2">
                 <div className="d-flex align-items-center">
-                  <img
+                  <Image
                     src="/images/icons/phone.svg"
                     alt="Phone"
                     width={14}

@@ -41,7 +41,7 @@ function WhyChooseUs() {
               {reasons.map((reason) => (
                 <div key={reason.id} className="item">
                   <div className="icon">
-                    <img
+                    <Image
                       src={reason.iconSrc}
                       alt={reason.iconAlt}
                       width={43}

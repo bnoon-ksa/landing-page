@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 function OurServices() {
   // Dynamic data
@@ -112,7 +113,7 @@ function OurServices() {
                       >
                         <h3 className="mb-0">{service.title}</h3>
 
-                        <img
+                        <Image
                           src={service.icon}
                           alt="icon"
                           width={70}

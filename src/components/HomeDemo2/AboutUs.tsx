@@ -100,7 +100,7 @@ function AboutUs() {
                   >
                     <div className="item">
                       <div className="icon mb-3">
-                        <img
+                        <Image
                           src={item.icon.src}
                           alt={item.icon.alt}
                           width={120}

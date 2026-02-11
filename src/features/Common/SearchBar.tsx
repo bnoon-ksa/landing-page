@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 type LocationType = "الرياض" | "جدة" | "الأحساء" | "";
 
 
@@ -177,7 +178,7 @@ const doctorsToShow =
     }}
   >
     <span>{doctor || "حسب اسم الطبيب"}</span>
-    <img src="/images/arrow.png" className="arrow-icon" alt="" />
+    <Image src="/images/arrow.png" className="arrow-icon" alt=""   width={30} height={30} />
   </button>
 
   <ul className="dropdown-menu doctor-menu">
@@ -209,7 +210,7 @@ const doctorsToShow =
     }}
   >
     <span>{location || "حسب الموقع"}</span>
-    <img src="/images/arrow.png" className="arrow-icon" alt="" />
+    <Image src="/images/arrow.png" className="arrow-icon" alt=""   width={30} height={30} />
   </button>
 
  <ul className="dropdown-menu location-menu">

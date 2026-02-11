@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation"; // <- use next/navigation in Next 14+
 
 const Riyadharea = () => {
@@ -109,7 +110,7 @@ const Riyadharea = () => {
               <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
   {/* Location */}
   <div className="d-flex align-items-center">
-    <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
+    <Image src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
     <a
       href="https://maps.app.goo.gl/xmFYp2uixqYFAT4TA"
       target="_blank"
@@ -122,7 +123,7 @@ const Riyadharea = () => {
 
   {/* Phone */}
   <div className="d-flex align-items-center">
-    <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
+    <Image src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
     <a
       href="tel:+966114448080"
       className="text-color text-decoration-none"
@@ -133,7 +134,7 @@ const Riyadharea = () => {
 
   {/* Email */}
   <div className="d-flex align-items-center">
-    <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
+    <Image src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
     <a
       href="mailto:info@bnoon.sa"
       className="text-color text-decoration-none"
@@ -156,7 +157,7 @@ const Riyadharea = () => {
                 display: "inline-block",
               }}
             >
-              <img src={imageRiyadh} alt="Bnoon Riyadh" width={580} height={450} />
+              <Image src={imageRiyadh} alt="Bnoon Riyadh" width={580} height={450} />
             </div>
           </div>
         </div>
@@ -174,7 +175,7 @@ const Riyadharea = () => {
                 display: "inline-block",
               }}
             >
-              <img src={imageKingSalman} alt="King Salman Road Facility" width={580} height={450} />
+              <Image src={imageKingSalman} alt="King Salman Road Facility" width={580} height={450} />
             </div>
           </div>
 
@@ -200,7 +201,7 @@ const Riyadharea = () => {
              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
   {/* Location */}
   <div className="d-flex align-items-center">
-    <img src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
+    <Image src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
     <a
       href="https://maps.app.goo.gl/GLLJ6v64BxJJbFEn9"
       target="_blank"
@@ -213,7 +214,7 @@ const Riyadharea = () => {
 
   {/* Phone */}
   <div className="d-flex align-items-center">
-    <img src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
+    <Image src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
     <a
       href="tel:+966114448080"
       className="text-color text-decoration-none"
@@ -224,7 +225,7 @@ const Riyadharea = () => {
 
   {/* Email */}
   <div className="d-flex align-items-center">
-    <img src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
+    <Image src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
     <a
       href="mailto:info@bnoon.sa"
       className="text-color text-decoration-none"
