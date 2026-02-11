@@ -1,4 +1,4 @@
-name: Build and Deploy to Azure
+name: CI/CD Pipeline
 
 on:
   push:
@@ -8,10 +8,49 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: bnoon
+  SITE_URL: https://bnoon.sa
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
-  build:
+  # ──────────────────────────────────────────────
+  # Job 1: Setup — install deps and cache
+  # ──────────────────────────────────────────────
+  setup:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+
+      - name: Cache node_modules
+        id: cache-node-modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
+
+      - name: Install dependencies
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: npm ci --legacy-peer-deps
+
+  # ──────────────────────────────────────────────
+  # Job 2: Quality Gates (parallel with build)
+  # ──────────────────────────────────────────────
+  quality-gates:
+    runs-on: ubuntu-latest
+    needs: setup
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,15 +59,57 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: '.node-version'
-          cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci --legacy-peer-deps
+      - name: Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
+
+      - name: Lint
+        continue-on-error: true
+        run: npm run lint
+
+      - name: Typecheck
+        continue-on-error: true
+        run: npm run typecheck
+
+      - name: Security audit
+        continue-on-error: true
+        run: npm audit --audit-level=critical
+
+  # ──────────────────────────────────────────────
+  # Job 3: Build (parallel with quality-gates)
+  # ──────────────────────────────────────────────
+  build:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+
+      - name: Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
 
       - name: Build Next.js app
         run: npm run build
         env:
           NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+
+      - name: Prune dev dependencies
+        run: npm prune --production --legacy-peer-deps
 
       - name: Prepare release package
         run: |
@@ -51,11 +132,100 @@ jobs:
           path: release.zip
           retention-days: 3
 
+  # ──────────────────────────────────────────────
+  # Job 4: Semantic Release
+  # ──────────────────────────────────────────────
+  semantic-release:
+    runs-on: ubuntu-latest
+    needs: [build, quality-gates]
+    outputs:
+      new_release_published: ${{ steps.release.outputs.new_release_published }}
+      new_release_version: ${{ steps.release.outputs.new_release_version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Node.js 22 (semantic-release requirement)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install semantic-release
+        run: |
+          npm install -g \
+            semantic-release@24.2.0 \
+            @semantic-release/commit-analyzer@13.0.0 \
+            @semantic-release/release-notes-generator@14.0.1 \
+            @semantic-release/changelog@6.0.3 \
+            @semantic-release/npm@12.0.1 \
+            @semantic-release/git@10.0.1 \
+            @semantic-release/github \
+            conventional-changelog-conventionalcommits@8.0.0
+
+      - name: Create release config
+        run: |
+          if [ ! -f .releaserc.json ]; then
+            cat > .releaserc.json << 'EOF'
+          {
+            "branches": ["main"],
+            "plugins": [
+              ["@semantic-release/commit-analyzer", {
+                "preset": "conventionalcommits",
+                "releaseRules": [
+                  { "type": "feat", "release": "minor" },
+                  { "type": "fix", "release": "patch" },
+                  { "type": "perf", "release": "patch" },
+                  { "type": "refactor", "release": "patch" },
+                  { "type": "chore", "release": false },
+                  { "type": "style", "release": false },
+                  { "type": "test", "release": false },
+                  { "type": "docs", "release": false },
+                  { "type": "ci", "release": false }
+                ]
+              }],
+              ["@semantic-release/release-notes-generator", {
+                "preset": "conventionalcommits"
+              }],
+              ["@semantic-release/changelog", {
+                "changelogFile": "CHANGELOG.md"
+              }],
+              ["@semantic-release/npm", {
+                "npmPublish": false
+              }],
+              ["@semantic-release/git", {
+                "assets": ["CHANGELOG.md", "package.json", "package-lock.json"],
+                "message": "chore(release): ${nextRelease.version} [skip ci]"
+              }],
+              "@semantic-release/github"
+            ]
+          }
+          EOF
+          fi
+
+      - name: Run semantic-release
+        id: release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release summary
+        run: |
+          if [ "${{ steps.release.outputs.new_release_published }}" = "true" ]; then
+            echo "### New Release: v${{ steps.release.outputs.new_release_version }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### No new release (no qualifying commits)" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  # ──────────────────────────────────────────────
+  # Job 5: Deploy to Production (manual approval)
+  # ──────────────────────────────────────────────
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: [build, semantic-release]
     environment: production
-
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -68,3 +238,67 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
           package: release.zip
+
+      - name: Deployment summary
+        run: |
+          echo "### Deployed to ${{ env.AZURE_WEBAPP_NAME }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **App**: ${{ env.SITE_URL }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Version**: ${{ needs.semantic-release.outputs.new_release_version || 'unchanged' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+
+  # ──────────────────────────────────────────────
+  # Job 6: Verify Deployment
+  # ──────────────────────────────────────────────
+  verify:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Wait for app startup
+        run: sleep 30
+
+      - name: Health check
+        run: |
+          HEALTH_URL="${{ env.SITE_URL }}/api/health"
+          MAX_ATTEMPTS=30
+          WAIT_SECONDS=10
+          SUCCESS_COUNT=0
+          REQUIRED_SUCCESSES=3
+
+          echo "Polling $HEALTH_URL (max ${MAX_ATTEMPTS} attempts, ${WAIT_SECONDS}s interval)"
+
+          for i in $(seq 1 $MAX_ATTEMPTS); do
+            HTTP_CODE=$(curl -s -o /tmp/health_response.json -w "%{http_code}" "$HEALTH_URL" 2>/dev/null || echo "000")
+
+            if [ "$HTTP_CODE" = "200" ]; then
+              STATUS=$(cat /tmp/health_response.json | python3 -c "import sys,json; print(json.load(sys.stdin).get('status',''))" 2>/dev/null || echo "")
+              VERSION=$(cat /tmp/health_response.json | python3 -c "import sys,json; print(json.load(sys.stdin).get('version',''))" 2>/dev/null || echo "")
+
+              if [ "$STATUS" = "healthy" ]; then
+                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
+                echo "Attempt $i: healthy (v${VERSION}) [$SUCCESS_COUNT/$REQUIRED_SUCCESSES]"
+
+                if [ "$SUCCESS_COUNT" -ge "$REQUIRED_SUCCESSES" ]; then
+                  echo ""
+                  echo "Deployment verified successfully!"
+                  echo "### Deployment Verified" >> $GITHUB_STEP_SUMMARY
+                  echo "- **Health**: healthy" >> $GITHUB_STEP_SUMMARY
+                  echo "- **Version**: ${VERSION}" >> $GITHUB_STEP_SUMMARY
+                  echo "- **Checks**: ${REQUIRED_SUCCESSES}/${REQUIRED_SUCCESSES} passed" >> $GITHUB_STEP_SUMMARY
+                  exit 0
+                fi
+              else
+                SUCCESS_COUNT=0
+                echo "Attempt $i: HTTP 200 but status='${STATUS}' (expected 'healthy')"
+              fi
+            else
+              SUCCESS_COUNT=0
+              echo "Attempt $i: HTTP $HTTP_CODE (waiting...)"
+            fi
+
+            sleep $WAIT_SECONDS
+          done
+
+          echo "Health check failed after $MAX_ATTEMPTS attempts"
+          echo "### Deployment Verification FAILED" >> $GITHUB_STEP_SUMMARY
+          echo "Health check did not pass within $(( MAX_ATTEMPTS * WAIT_SECONDS / 60 )) minutes" >> $GITHUB_STEP_SUMMARY
+          exit 1
