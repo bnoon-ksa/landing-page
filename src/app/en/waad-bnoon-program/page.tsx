@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import ClientWaadPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import WaadSection from "@/components/Common/WaadSection";
 
 export const metadata: Metadata = {
   title: "Wa'ad Bnoon Program - Get Pregnant or Your Money Back ",
-  description:
-    "",
+  description: "The Wa'ad Bnoon Program guarantees pregnancy or your money back. Learn about program details and eligibility for IVF success guarantee.",
 };
 
 export default function WaadPage() {
-  return <ClientWaadPage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/waad-bnoon-banner.png" />
+      <WaadSection />
+     
+    </>
+  );
 }

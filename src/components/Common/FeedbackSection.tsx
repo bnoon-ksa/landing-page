@@ -122,7 +122,7 @@ if (
               </p>
               <div className="d-flex align-items-center mb-2">
                 <Image
-                  src="/images/icons/mail.svg"
+                  src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg"
                   alt="Email"
                   width={24}
                   height={24}
@@ -134,7 +134,7 @@ if (
               </div>
               <div className="d-flex align-items-center">
                 <Image
-                  src="/images/icons/location.svg"
+                  src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg"
                   alt="LinkedIn"
                   width={24}
                   height={24}
@@ -189,7 +189,7 @@ if (
     <span>{formData.branch || "Select branch"}</span>
 
     <Image
-      src="/images/arrow.png"
+      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
       alt="arrow"
       style={{ width: "16px", height: "16px" }}
     />

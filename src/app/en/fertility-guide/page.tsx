@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
-import ClientFertilityGuidePage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import FertilityTabs from "@/components/Common/FertilityTabs";
+import CustomList from "@/components/Common/CustomList";
 
 export const metadata: Metadata = {
   title: "Bnoon - All Your Need to Know About Your Fertility ",
-  description:
-    "",
+  description: "A comprehensive fertility guide from Bnoon. Reliable medical information on causes of infertility, available treatments, and tips to improve conception.",
 };
 
 export default function FertilityGuidePage() {
-  return <ClientFertilityGuidePage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/fertility-guid-banner.jpg" />
+     <FertilityTabs />
+
+     
+    </>
+  );
 }

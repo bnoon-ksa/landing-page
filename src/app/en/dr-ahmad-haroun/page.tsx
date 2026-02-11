@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import ClientDrAhmadHarounPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import DrAhmadHaroun from "@/components/Common/DrAhmadHaroun";
 
 export const metadata: Metadata = {
   title: "Dr. Ahmad Haroun – Urologist/Andrologist in Jeddah | Bnoon ",
-  description:
-    "",
+  description: "Dr. Ahmad Haroun, urologist and andrologist at Bnoon Jeddah. Specialized in diagnosing and treating male infertility.",
 };
 
 export default function ServerDrAhmadHarounPage() {
-  return <ClientDrAhmadHarounPage />;
+  return (
+    <>
+      <Navbar />
+       <DrAhmadHaroun  />
+
+    </>
+  );
 }

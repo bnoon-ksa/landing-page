@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,29 +19,29 @@ const HowItWorks = () => {
   const workSteps: WorkStep[] = [
     {
       id: 1,
-      icon: "/images/icons/location.png",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/location.png",
       title: "Address",
       description: "Riyadh <br>Jeddah",
       buttonText: "Address",      // ✅ unique button
       buttonLink: "",
-      vectorImage: "/images/vector1.png",
+      vectorImage: "https://bnoon.blob.core.windows.net/website/images/vector1.png",
       vectorWidth: 42,
       vectorHeight: 88,
     },
     {
       id: 2,
-      icon: "/images/icons/contact.png",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/contact.png",
       title: "Contact",
       description: "+966 11 4448080 <br>+966 12 680 0800",
       buttonText: "Contact",           // ✅ unique button
       buttonLink: "tel:+966114448080",
-      vectorImage: "/images/vector2.png",
+      vectorImage: "https://bnoon.blob.core.windows.net/website/images/vector2.png",
       vectorWidth: 30,
       vectorHeight: 91,
     },
     {
       id: 3,
-      icon: "/images/icons/mail.png",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/mail.png",
       title: "E-mail",
       description: "info@bnoon.sa <br>info.jeddah@bnoon.sa",
       buttonText: "E-mail",         // ✅ unique button

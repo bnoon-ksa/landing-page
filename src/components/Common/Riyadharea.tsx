@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation"; // <- use next/navigation in Next 1
 const Riyadharea = () => {
   const router = useRouter(); // correct for Next 14+
 
-  const imageRiyadh = "/images/locations/bnoon-riyadh.avif";
-  const imageKingSalman = "/images/locations/bnoon-north-riiyadh.avif";
+  const imageRiyadh = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-riyadh.avif";
+  const imageKingSalman = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-north-riiyadh.avif";
 
   const contentRefRiyadh = useRef<HTMLDivElement>(null);
   const imageRefRiyadh = useRef<HTMLDivElement>(null);
@@ -110,7 +110,7 @@ const Riyadharea = () => {
               <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
   {/* Location */}
   <div className="d-flex align-items-center">
-    <Image src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
+    <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
     <a
       href="https://maps.app.goo.gl/xmFYp2uixqYFAT4TA"
       target="_blank"
@@ -123,7 +123,7 @@ const Riyadharea = () => {
 
   {/* Phone */}
   <div className="d-flex align-items-center">
-    <Image src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
+    <Image src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
     <a
       href="tel:+966114448080"
       className="text-color text-decoration-none"
@@ -134,7 +134,7 @@ const Riyadharea = () => {
 
   {/* Email */}
   <div className="d-flex align-items-center">
-    <Image src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
+    <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
     <a
       href="mailto:info@bnoon.sa"
       className="text-color text-decoration-none"
@@ -201,7 +201,7 @@ const Riyadharea = () => {
              <div className="d-flex mt-3 gap-4 flex-column flex-md-row">
   {/* Location */}
   <div className="d-flex align-items-center">
-    <Image src="/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
+    <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="Location" width={24} height={24} className="me-2" />
     <a
       href="https://maps.app.goo.gl/GLLJ6v64BxJJbFEn9"
       target="_blank"
@@ -214,7 +214,7 @@ const Riyadharea = () => {
 
   {/* Phone */}
   <div className="d-flex align-items-center">
-    <Image src="/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
+    <Image src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg" alt="Phone" width={24} height={24} className="me-2" />
     <a
       href="tel:+966114448080"
       className="text-color text-decoration-none"
@@ -225,7 +225,7 @@ const Riyadharea = () => {
 
   {/* Email */}
   <div className="d-flex align-items-center">
-    <Image src="/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
+    <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="Email" width={24} height={24} className="me-2" />
     <a
       href="mailto:info@bnoon.sa"
       className="text-color text-decoration-none"

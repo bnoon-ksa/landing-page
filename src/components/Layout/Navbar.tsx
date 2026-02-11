@@ -6,8 +6,7 @@ import { usePathname } from "next/navigation";
 import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-import { menus } from "../../components/Layout/Menus";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { menus } from "@/components/Layout/Menus";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Navbar() {
@@ -56,7 +55,7 @@ function Navbar() {
           <div className="d-flex align-items-center">
             <Link href="/en" className="navbar-brand d-flex align-items-center">
               <Image
-                src="/images/bnoon-logo.svg"
+                src="https://bnoon.blob.core.windows.net/website/images/bnoon-logo.svg"
                 alt="Doutor"
                 width={183}
                 height={75}
@@ -128,9 +127,11 @@ function Navbar() {
 
     {/* 👉 YOUR CUSTOM ICON HERE */}
     <Image
-      src="/images/droparrow.svg"
+      src="https://bnoon.blob.core.windows.net/website/images/droparrow.svg"
       alt="arrow"
-      style={{ width: "22px", height: "22px", margin: "0px 25px 0px 0px", }}
+      width={22}
+      height={22}
+      style={{ margin: "0px 25px 0px 0px" }}
     />
     {/* Or paste SVG directly */}
     {/* <svg width="16" height="16" ...>...</svg> */}
@@ -219,7 +220,7 @@ function Navbar() {
         >
           <Offcanvas.Title>
             <Image
-              src="/images/logo-mob.avif"
+              src="https://bnoon.blob.core.windows.net/website/images/logo-mob.avif"
               alt="Doutor"
               width={150}
               height={55}

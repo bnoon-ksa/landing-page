@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import ClientDrAbdalazizAlshahraniPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import DrAbdulAzizAlShahrani from "@/components/ar/Common/DrAbdulAzizAlShahrani";
 
 export const metadata: Metadata = {
   title:"د. عبدالعزيز الشهراني  – أفضل طبيب إخصاب في الرياض | بنون ",
@@ -8,5 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function DrAbdalazizAlshahraniPage() {
-  return <ClientDrAbdalazizAlshahraniPage />;
+  return (
+    <>
+      <Navbar />
+       <DrAbdulAzizAlShahrani  />
+
+    </>
+  );
 }

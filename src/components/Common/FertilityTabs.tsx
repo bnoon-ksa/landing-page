@@ -56,7 +56,7 @@ const FertilityTabs: React.FC = () => {
         Whether you are in the beginning stages of family planning or are currently seeking assistance from a fertility clinic, simple lifestyle adjustments and extra daily supplements can promote fertility.
         There are several important changes you and your partner can make before and during fertility treatments to increase the chance of successful conception. We recommend making these lifestyle modifications if you are considering becoming pregnant.
       `,
-      image: "/images/fertility-guide/Helpful-Tips-for-Fertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Helpful-Tips-for-Fertility.avif",
       bottomText: `
         <strong>​ALCOHOL</strong><br />Avoid alcohol use. Alcohol has been shown to cause birth defects in fetuses. In addition, patients who drink have a decrease in fertility rates, particularly with IVF and miscarriage rates have been shown to double compared to those who don’t drink alcohol. This has also similar effect on your husband.<br /><br />
         <strong>SMOKING</strong><br />Stop smoking and stay away from anyone who is smoking. Smoking has been implicated in infertility and earlier menopause. Smoking reduces success with IVF by about 50% and passive smoking has similar effects. This has also similar effect on your husband.<br /><br />
@@ -79,7 +79,7 @@ const FertilityTabs: React.FC = () => {
         Overcooking foods should be avoided.<br />
         Many delicious foods are high in antioxidants and should be incorporated into your regular diet. Here are some other popular foods that have naturally high antioxidant content:
       `,
-      image: "/images/fertility-guide/Foods-that-Boost-Fertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Foods-that-Boost-Fertility.avif",
       bottomText: ``,
       secondlist: [
         "Blackberries",
@@ -114,7 +114,7 @@ const FertilityTabs: React.FC = () => {
         Similar to female’s contribution to infertility, male infertility factors contribute to approximately 40% of all infertility cases. 
         There are four main causes of infertility in males:<br />
       `,
-      image: "/images/fertility-guide/Causes-of-Male-Infertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Causes-of-Male-Infertility.avif",
       bottomText: ``,
       secondlist: [
         "Hypothalamic/Pituitary disorders (1-5%)",
@@ -216,7 +216,7 @@ const FertilityTabs: React.FC = () => {
        A variety of factors can impact fertility in women and men. Generally speaking, it is recommended that a woman under 35 who has been trying to get pregnant for a year, or a woman over 35 who has been trying for six months, consult with a fertility specialist to determine the best course of action. Women who have had more than three recurrent miscarriages should also seek the care of a specialist. Many women who have had miscarriages go on to have healthy pregnancies, but it could signal a fertility problem. Keep in mind that infertility issues are common, one in eight couples have trouble conceiving.<br />
        Female infertility is quite common, which is not surprising given the complex set of the normal events that must occur in order to give birth. Female infertility factors contribute to approximately 40% of all infertility cases. Normally, a woman’s body must:
       `,
-      image: "/images/fertility-guide/Causes-of-Female-Infertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Causes-of-Female-Infertility.avif",
       bottomText: ``,
       secondlist: [
         "Have a good reserve of healthy eggs",
@@ -267,7 +267,7 @@ const FertilityTabs: React.FC = () => {
       Not every egg leads to a baby, no matter how young you are. It’s a common misconception that we have a 100% chance of pregnancy each time we ovulate (i.e., each month). Because a certain percentage of our eggs are abnormal at any age, and because fertilization has to happen within a narrow window after ovulation occurs, even a young, healthy woman trying to get pregnant has only about a 20% chance each month.<br /><br />
       Fertility goes into a sharper decline around age of 35 – over 10 years before reaching menopause.
       `,
-      image: "/images/fertility-guide/Womans-Biologic-Clock.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Womans-Biologic-Clock.avif",
       bottomText: ``,
      
       secondText: `
@@ -286,7 +286,7 @@ const FertilityTabs: React.FC = () => {
       Ovulation is the release of an egg from the ovary. This must happen in order to achieve pregnancy naturally. If ovulation is irregular, but not completely absent, this is called oligoovulation. Complete absence of ovulation is called anovulation. Ovulatory dysfunction is a common cause of female infertility, occurring in up to 40 percent of infertile women.<br /><br />
        Usually, women with ovulatory dysfunction will have irregular periods. In the worst case, they may not get their cycles at all. If your cycle occurs shorter than 21 days, or longer than 36 days, you may have ovulatory dysfunction. If your cycles fall within the normal range of 21 to 36 days, but the length of your cycles blood flow varies widely from month to month, that may also be a sign of ovulatory dysfunction.
       `,
-      image: "/images/fertility-guide/Ovulatory-Dysfunction.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Ovulatory-Dysfunction.avif",
       bottomText: ``,
   
     },
@@ -296,7 +296,7 @@ const FertilityTabs: React.FC = () => {
      Endometriosis<br /><br />
      Endometriosis is a common condition and associated with increased chance of having trouble with conceiving. Common signs and symptoms of endometriosis may include:
       `,
-      image: "/images/fertility-guide/Endometriosis.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Endometriosis.avif",
       bottomText: ``,
         secondlist: [
         "Painful periods. Pelvic pain and cramping may begin before your period and extend several days during your period. You may also have low back and abdominal pain.",
@@ -332,7 +332,7 @@ const FertilityTabs: React.FC = () => {
      An ovarian cyst is a fluid-filled sac that develops on a woman’s ovary. They’re very common and don’t usually cause any symptoms. Ovarian cysts may affect both ovaries at the same time, or they may only affect one. Most ovarian cysts occur naturally and disappear in a few months without needing any treatment. Most ovarian cysts develop as a result of your menstrual cycle (functional cysts) and considered to be a normal phenomenon. Other types of cysts are much less common.<br /><br />
      Functional cysts are usually harmless, rarely cause pain, and often disappear on their own within two or three menstrual cycles. There are two types of functional cysts:
       `,
-      image: "/images/fertility-guide/Ovarian-Cysts.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Ovarian-Cysts.avif",
       bottomText: ``,
         secondlist: [
         "Follicular cyst which begins when the follicle doesn’t rupture and release the egg.",
@@ -370,7 +370,7 @@ const FertilityTabs: React.FC = () => {
      Most fibroids start as very small lesions and they can grow to large size.<br />
      Symptoms
       `,
-      image: "/images/fertility-guide/Uterine-Fibroids-Infertility.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Uterine-Fibroids-Infertility.avif",
       bottomText: ``,
 
       secondText: `
@@ -389,7 +389,7 @@ const FertilityTabs: React.FC = () => {
      Recurrent miscarriage often leaves patients feeling disheartened and frustrated about their situations and more stressful if it is combined with infertility. Both infertility and recurrent miscarriage may have overlapping causative factors.<br /><br />
      Causes of recurrent miscarriages may include:
       `,
-      image: "/images/fertility-guide/Recurrent-Miscarriage.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Recurrent-Miscarriage.avif",
       bottomText: ``,
         secondlist: [
         "Advanced maternal age",
@@ -417,7 +417,7 @@ const FertilityTabs: React.FC = () => {
      Several reasons may explain failed implantation. It could be due to the embryo or endometrium or both. Other co-factors may be involved. However, in many cases we cannot explain the reason for recurrent IVF failure.<br /><br />
      The most known causes of IVF failure are:
       `,
-      image: "/images/fertility-guide/Recurrent-IVF-Failure.avif",
+      image: "https://bnoon.blob.core.windows.net/website/images/fertility-guide/Recurrent-IVF-Failure.avif",
       bottomText: ``,
         secondlist: [
         "Advanced maternal age",

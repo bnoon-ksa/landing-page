@@ -13,7 +13,7 @@ const AboutUs = () => {
     },
     content: {
       image: {
-        src: "/images/about/about.png",
+        src: "https://bnoon.blob.core.windows.net/website/images/about/about.png",
         alt: "image",
       },
       paragraphs: [

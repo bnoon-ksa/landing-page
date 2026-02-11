@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
-import ClientAboutUsPage from "./page.client";
+import PageBanner from "@/components/Layout/PageBanner";
+import Navbar from "@/components/Layout/Navbar";
+import AboutusSection from "@/components/Common/AboutusSection";
+import WhoAreWe from "@/components/Common/WhoAreWe";
 
 export const metadata: Metadata = {
   title: "About Us – Bnoon",
-  description:
-    "",
+  description: "Learn about Bnoon, Saudi Arabia's leading fertility and women's health network. Advanced IVF and reproductive medicine across Riyadh, Jeddah, and Al Ahsa.",
 };
 
 export default function AboutUsPage() {
-  return <ClientAboutUsPage />;
+  return (
+    <>
+      <Navbar />
+
+      {/* PageBanner with static content */}
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/aboutus.jpg" />
+      <AboutusSection />
+       <WhoAreWe />
+     
+    </>
+  );
 }

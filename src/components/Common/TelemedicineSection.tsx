@@ -84,7 +84,7 @@ const AboutusSection = () => {
                     <li key={index} className="d-flex align-items-start mb-2">
                       {/* Icon */}
                       <Image
-                        src="/images/icons/bnoon-symbol.avif"
+                        src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
                         alt="icon"
                         width={20}
                         height={20}
@@ -117,7 +117,7 @@ const AboutusSection = () => {
                     <li key={index} className="d-flex align-items-start mb-2">
                       {/* Icon */}
                       <Image
-                        src="/images/icons/bnoon-symbol.avif"
+                        src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
                         alt="icon"
                         width={20}
                         height={20}
@@ -180,7 +180,7 @@ const AboutusSection = () => {
                     <li key={index} className="d-flex align-items-start mb-2">
                       {/* Icon */}
                       <Image
-                        src="/images/icons/bnoon-symbol.avif"
+                        src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
                         alt="icon"
                         width={20}
                         height={20}
@@ -204,7 +204,7 @@ const AboutusSection = () => {
                     <li key={index} className="d-flex align-items-start mb-2">
                       {/* Icon */}
                       <Image
-                        src="/images/icons/bnoon-symbol.avif"
+                        src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
                         alt="icon"
                         width={20}
                         height={20}

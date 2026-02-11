@@ -4,7 +4,9 @@ import "../../styles/responsive.css";
 import localFont from "next/font/local";
 import Footer from "@/components/Layout/Footer";
 import GoTop from "@/components/Layout/GoTop";
+import SetLocaleAttrs from "@/components/SetLocaleAttrs";
 import Script from "next/script";
+import type { Metadata } from "next";
 
 const plusJakartaSans = localFont({
   src: [
@@ -20,34 +22,51 @@ const plusJakartaSans = localFont({
   variable: "--font-plus-jakarta-sans",
   display: "swap",
 });
-export const metadata = {
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://bnoon.sa"),
   icons: {
-    icon: "/images/fav.png",
+    icon: "https://bnoon.blob.core.windows.net/website/images/fav.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://bnoon.sa/en",
+    siteName: "Bnoon",
+    images: [
+      {
+        url: "https://bnoon.blob.core.windows.net/website/images/bnoon-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Bnoon - Fertility & Women Health Centers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
+
 export default function EnglishLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" dir="ltr">
-      <body className={`${plusJakartaSans.variable}`}>
-        {/* Google Analytics 4 snippet */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG" strategy="afterInteractive" />
-        <Script
-          id="ga-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+    <div className={`${plusJakartaSans.variable}`}>
+      <SetLocaleAttrs lang="en" dir="ltr" />
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG" strategy="afterInteractive" />
+      <Script
+        id="ga-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-6CDMTCELGG');
             `,
-          }}
-        />
-        {children}
-        <Footer />
-        <GoTop />
-      </body>
-    </html>
+        }}
+      />
+      {children}
+      <Footer />
+      <GoTop />
+    </div>
   );
 }

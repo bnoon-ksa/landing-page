@@ -87,7 +87,7 @@ function FrequentlyAskedQuestions() {
           <div className="col-xl-6 col-md-12">
             <div className="faq-wrap-image">
               <Image
-                src="/images/faq2.jpg"
+                src="https://bnoon.blob.core.windows.net/website/images/faq2.jpg"
                 alt="faq"
                 width={525}
                 height={700}

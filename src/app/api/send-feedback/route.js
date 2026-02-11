@@ -22,13 +22,13 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "bnooninfo@gmail.com",
-        pass: "vydxquzqzibdmjle", // app password
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"Bnoon Feedback" <bnooninfo@gmail.com>`,
+      from: `"Bnoon Feedback" <${process.env.SMTP_USER}>`,
       to: recipient,
       subject: `New Feedback from ${data.name} (${data.branch})`,
       html: `

@@ -26,7 +26,7 @@ const DownloadOurApp = () => {
                       target="_blank"
                     >
                       <Image
-                        src="/images/app/google-play.svg"
+                        src="https://bnoon.blob.core.windows.net/website/images/app/google-play.svg"
                         alt="google-play"
                         width={193}
                         height={56}
@@ -39,7 +39,7 @@ const DownloadOurApp = () => {
                       target="_blank"
                     >
                       <Image
-                        src="/images/app/app-store.svg"
+                        src="https://bnoon.blob.core.windows.net/website/images/app/app-store.svg"
                         alt="app-store"
                         width={193}
                         height={56}
@@ -53,7 +53,7 @@ const DownloadOurApp = () => {
             <div className="col-lg-5 col-md-12">
               <div className="app-image">
                 <Image
-                  src="/images/app/app.png"
+                  src="https://bnoon.blob.core.windows.net/website/images/app/app.png"
                   alt="app"
                   width={1053}
                   height={1013}
@@ -65,7 +65,7 @@ const DownloadOurApp = () => {
 
         <div className="app-shape">
           <Image
-            src="/images/app/shape.png"
+            src="https://bnoon.blob.core.windows.net/website/images/app/shape.png"
             alt="shape"
             width={174}
             height={136}

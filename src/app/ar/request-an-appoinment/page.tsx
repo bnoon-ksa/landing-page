@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
-import ClientRequestAppointmentPage from "./page.client";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import Navbar from "@/components/ar/Layout/Navbar";
+import AppointmentSection from "@/components/ar/Common/AppointmentSection";
 
 export const metadata: Metadata = {
   title: "طلب موعد مع طبيب – بنون في الرياض وجدة ",
-  description:
-  "",
+  description: "احجزوا موعدكم مع أطباء بنون في الرياض أو جدة أو الأحساء. حجز سهل وسريع لاستشارات الإخصاب وصحة المرأة.",
 };
 
 export default function RequestAppointmentPage() {
-  return <ClientRequestAppointmentPage />;
+  return (
+    <>
+      <Navbar />
+
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/request-an-appointment-ar.jpg" />
+
+      <AppointmentSection />
+    </>
+  );
 }

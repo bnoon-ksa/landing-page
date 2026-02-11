@@ -53,7 +53,7 @@ interface FooterData {
 // Dynamic data object
 const footerData: FooterData = {
   logo: {
-    src: "images/bnoon-logo.avif",
+    src: "https://bnoon.blob.core.windows.net/website/images/bnoon-logo.avif",
     alt: "logo",
     width: 134,
     height: 35,
@@ -64,22 +64,22 @@ const footerData: FooterData = {
     {
       platform: "facebook",
       url: "https://www.facebook.com/",
-      icon: "/images/icons/fb-icon.avif",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/fb-icon.avif",
     },
     {
       platform: "linkedin",
       url: "https://www.linkedin.com/company/bnoon",
-      icon: "/images/icons/linkdin-icon.avif",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/linkdin-icon.avif",
     },
     {
       platform: "instagram",
       url: "https://www.instagram.com/bnoonivf/",
-      icon: "/images/icons/instagram-icon.avif",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/instagram-icon.avif",
     },
     {
       platform: "x",
       url: "https://x.com/bnoonivf",
-      icon: "/images/icons/x-icon.avif",
+      icon: "https://bnoon.blob.core.windows.net/website/images/icons/x-icon.avif",
     },
   ],
   sections: [
@@ -133,13 +133,13 @@ const footerData: FooterData = {
     {
       name: "Google Play",
       url: "https://play.google.com/store/apps",
-      image: "images/app/google-play.svg",
+      image: "https://bnoon.blob.core.windows.net/website/images/app/google-play.svg",
       alt: "google-play",
     },
     {
       name: "App Store",
       url: "https://www.apple.com/app-store/",
-      image: "images/app/app-store.svg",
+      image: "https://bnoon.blob.core.windows.net/website/images/app/app-store.svg",
       alt: "app-store",
     },
   ],

@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import ClientOurClinicsPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import OurLocations from "@/components/ar/Common/OurLocations";
 
 export const metadata: Metadata = {
   title: "بنون - مراكز الإخصاب وصحة المرأة في الرياض وجدة والأحساء ",
-  description:
-     "Bnoon Medical Center specializes in fertility, we provide the necessary examinations and treatments for the couple. We realize that every man and woman is unique, according their individual health problems. Depending on the individual circumstances of each case, we develop a specialized treatment plan as well as the emotional, physical and financial needs.",
+  description: "اكتشفوا مراكز بنون للإخصاب وصحة المرأة في الرياض وجدة والأحساء. مواقع متعددة لتقديم أفضل خدمات علاج العقم وأطفال الأنابيب.",
 };
 
 export default function OurClinicsPage() {
-  return <ClientOurClinicsPage />;
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/clinics-banner-ar.jpg" />
+      <OurLocations />
+    </>
+  );
 }

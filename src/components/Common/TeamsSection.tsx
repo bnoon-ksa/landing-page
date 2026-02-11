@@ -61,7 +61,7 @@ const TeamSection = () => {
               <div className="mt-3">
                 <div className="d-flex align-items-center mb-2">
                   <Image
-                    src="/images/icons/mail.svg"
+                    src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg"
                     alt="Email"
                     width={24}
                     height={24}
@@ -74,7 +74,7 @@ const TeamSection = () => {
 
                 <div className="d-flex align-items-center">
                   <Image
-                    src="/images/icons/location.svg"
+                    src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg"
                     alt="LinkedIn"
                     width={24}
                     height={24}
@@ -100,7 +100,7 @@ const TeamSection = () => {
               }}
             >
               <Image
-                src="/images/commitment-saudization.avif"
+                src="https://bnoon.blob.core.windows.net/website/images/commitment-saudization.avif"
                 alt="Commitment to Saudization"
                 width={580}
                 height={450}

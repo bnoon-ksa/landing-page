@@ -107,7 +107,7 @@ const SubscribeForm = () => {
         </div>
 
         <div className="subscribe-shape">
-          <Image src="/images/shape.png" alt="image" width={260} height={202} />
+          <Image src="https://bnoon.blob.core.windows.net/website/images/shape.png" alt="image" width={260} height={202} />
         </div>
       </div>
     </>

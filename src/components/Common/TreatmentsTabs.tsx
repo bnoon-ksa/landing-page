@@ -8,7 +8,7 @@ const IconList: React.FC<{ items: string[] }> = ({ items }) => (
     {items.map((item, idx) => (
       <li key={idx} className="d-flex align-items-center mb-2">
         <Image
-          src="/images/icons/bnoon-symbol.avif"
+          src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
           alt="icon"
           width={20}
           height={20}
@@ -57,7 +57,7 @@ const TreatmentsSection: React.FC = () => {
         both FSH and LH play a role in the normal development and ovulation of ovarian follicles. LH is normally responsible for triggering ovulation when a mature follicle is present.<br />
         Each of these drugs acts directly on the ovaries and do not have activities elsewhere in the body. Example:
       `,
-      image: "/images/treatments/ovulation-induction.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/ovulation-induction.jpg",
       bottomText: `
         <strong>Gonal</strong> F Pen is given subcutaneously. Gonal  F comes in multi-dose Pen (300 – 450 – 900 – 1200 IU).<br /><br />
         <strong> Menopur</strong>  is given subcutaneously. Menopur comes in ampule (75 – 600 – 1200 IU).<br /><br />
@@ -103,7 +103,7 @@ const TreatmentsSection: React.FC = () => {
         Intrauterine Insemination (IUI) is a procedure used to assist patients in achieving a pregnancy. This procedure involves ovulation induction using tablets and injectable drugs until mature follicles develop then HCG injection is given to trigger final egg maturation and ovulation. Then, within 12-36 hours after HCG injection, the husband will be asked to produce a semen sample.<br /><br />
         The sample will be processed by our lab through a “sperm wash” technique that separates mobile sperm from non-mobile sperm and other cellular debris present in the ejaculate. Most of the fluid will also be washed off, resulting in a highly concentrated specimen of sperm. Within an hour or two of semen preparation your doctor will use a small catheter to place the washed sperms into the uterus. This process
       `,
-      image: "/images/treatments/intrauterine-insemination.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/intrauterine-insemination.jpg",
       bottomText: `
         does not cause any discomfort, does not need any sedation or anesthesia. At least one fallopian tube must be open because after being placed into the uterus the sperm must swim the length of the fallopian tube and fertilize the egg at the distal end of the fallopian tube. The goal of the IUI procedure is to present a high concentration of motile sperm into the uterus to facilitate the union of an egg with a sperm in the fallopian tubes..<br /><br />
         The IUI procedure can be used in a number of different situations. Some examples are:
@@ -132,7 +132,7 @@ const TreatmentsSection: React.FC = () => {
       The Process:<br />
       Informed Consent for the treatment is essential and has to be completed by both husband and wife.
       `,
-      image: "/images/treatments/swim-up.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/swim-up.jpg",
       bottomText: `
       `,
       bottomTextList: [
@@ -148,7 +148,7 @@ const TreatmentsSection: React.FC = () => {
       text: `
       IVF is the most widely used treatment and the most effective assisted reproductive technology for both men and women with a range of infertility conditions.
       `,
-      image: "/images/treatments/ivf.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/ivf.jpg",
       bottomText: `
       `,
     },
@@ -158,7 +158,7 @@ const TreatmentsSection: React.FC = () => {
      Surgical sperm retrieval <br />
      At Bnoon Center, we are proud of the pregnancy results achieved using frozen-thawed embryos for transfer. We use the latest freezing method called ‘Vitrification’.
       `,
-      image: "/images/treatments/ivm.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/ivm.jpg",
       bottomText: `
       `,
     },
@@ -166,7 +166,7 @@ const TreatmentsSection: React.FC = () => {
       text: `
     Sperm freezing is the process where sperms are collected through ejaculate or surgical retrieval and then stored by freezing for subsequent use. It is ideal for cases when the husband’s sperms would be difficult to obtain at the time of egg collection from his wife. Other conditions, sperm freezing can be offered is men with cancer where chemotherapy or radiotherapy is planned and they have a good chance of survival. Cancer treatment can damage the sperm production in the testes and sometimes this damage is permanent. Sperms are known to stands freezing for longer period of time compared to embryos. Thus, cancer survivors can use their sperms for several attempts for fertility treatment.
       `,
-      image: "/images/treatments/sperm-freezing.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/sperm-freezing.jpg",
       bottomText: `
       `,
     },
@@ -176,7 +176,7 @@ const TreatmentsSection: React.FC = () => {
     Egg freezing is, relatively, a new challenging technique in which ovarian stimulation is required similar to the standard IVF. Then the collected eggs will not be injected with the sperms but rather will be stored using the ‘Vitrification Method’ without fertilization. In a future plan for pregnancy, the frozen eggs will be warmed again then will be injected using husband’s sperms to produce embryos and the process will be similar to standard IVF and embryo transfer.<br />
     ​Egg freezing can be offered to:
     `,
-      image: "/images/treatments/egg-freezing.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/egg-freezing.jpg",
        bottomTextList: [
         "Women diagnosed with cancer. Egg freezing offers a chance to preserve eggs prior to chemotherapy, surgery or radiation. Most of these treatments  destroy the eggs and lead to infertility. In some cases, viable eggs may be present after cancer treatment. Fertility preserving options vary depending on age, type of cancer, and cancer-treatment plan.",
         "Women undergoing standard IVF but some emerging technical issues regarding the husband’s sperms, rescue egg freezing would save the eggs,    temporary, for later date when the husband’s sperms are ready for use."
@@ -188,7 +188,7 @@ const TreatmentsSection: React.FC = () => {
       text: `
     A Through Bnoon Medical Center, numerous Preimplantation Genetic Screening (PGS) is now possible. This technology performs a comprehensive chromosomal screening through which Bnoon Medical Center helps couples to achieve their goal of having a healthy baby. While some IVF patients can benefit from PGS, it is offered to the following patient groups:
     `,
-      image: "/images/treatments/pgs.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/pgs.jpg",
        bottomTextList: [
         "Recurrent Miscarriage.  ",
         "Advanced Maternal Age",
@@ -214,7 +214,7 @@ const TreatmentsSection: React.FC = () => {
       <strong>Genetic </strong><br /><br />
       There are hundreds of genetic disorders that can be diagnosed and PGD being offered. The following list shows example of genetic disorders in Saudi Arabia (but not limited to):
     `,
-      image: "/images/treatments/pgs.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/pgs.jpg",
        bottomTextList: [
         "Sickel-cell anemia ",
         "Thalassemia",
@@ -250,7 +250,7 @@ const TreatmentsSection: React.FC = () => {
     After three consecutive miscarriages, it is recognized that there may be an increased chance that there could be a specific or recurring underlying cause for this.<br /><br />
     The clinic aims to identify the cause of the repeated pregnancy losses by performing certain investigations and commence treatment appropriately.
     `,
-      image: "/images/treatments/recurrent-miscarriage.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/recurrent-miscarriage.jpg",
       
       bottomText: ``,
     },
@@ -261,7 +261,7 @@ const TreatmentsSection: React.FC = () => {
       <strong>Genetic Counselling</strong><br /><br />
       When planning to conceive, many couples will consider their own health, and that of their family, in terms of genetic conditions that they may pass on to their children. Bnoon Medical Center runs a dedicated Genetics Clinic for patients who wish to discuss the possibility of genetic testing, either
     `,
-      image: "/images/treatments/fertility-counselling.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/fertility-counselling.jpg",
       bottomText: `for a specific condition or for chromosomal abnormalities, to minimize their chance of passing on a genetic condition to a child. Your initial contact will be with one of our dedicated clinic coordinators. They will ensure your enquiry is passed on to our Genetics team who will then contact you as soon as possible to discuss your individual circumstances. It is very useful if you are able to gather any specific information about your condition, your family history and/or previous diagnostic test results as you will be asked about this. Through our dedicated medical genetics experts, you can schedule a counselling session to address your problem and discuss your specific concerns in a relax environment respecting your privacy and understanding your needs.<br /><br />
       <strong>Prenatal Counselling</strong><br /><br />
       Through our dedicated maternal fetal medicine experts, you can schedule a counselling session to address your problem and discuss your specific concerns in a relax environment respecting your privacy and understanding your needs.
@@ -275,7 +275,7 @@ const TreatmentsSection: React.FC = () => {
      Bnoon Center is pleased to be the first and only reproductive medicine center that adopts these high-tech technological technologies in the Kingdom of Saudi Arabia.<br /><br />
      We are pleased to offer you the opportunity to enjoy good health
     `,
-      image: "/images/treatments/antenatal-care-deliveries.jpg",
+      image: "https://bnoon.blob.core.windows.net/website/images/treatments/antenatal-care-deliveries.jpg",
       bottomText: `
       `,
     },
@@ -386,7 +386,7 @@ const handleTabClick = (tab: string) => {
                 {currentContent.bottomTextList.map((item, index) => (
                   <li key={index} className="d-flex align-items-center mb-2">
                     <Image
-                      src="/images/icons/bnoon-symbol.avif"
+                      src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
                       alt="icon"
                       width={20}
                       height={20}

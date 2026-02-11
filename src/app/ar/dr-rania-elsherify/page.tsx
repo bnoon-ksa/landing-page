@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import ClientBnoonAlahsaPage from "./page.client";
+import Navbar from "@/components/ar/Layout/Navbar";
+import PageBanner from "@/components/ar/Layout/PageBanner";
+import DrRaniaAlsherify from "@/components/ar/Common/DrRaniaAlsherify";
 
 export const metadata: Metadata = {
   title: "الدكتورة رانيا الشريفي - طبيبة أمراض النساء والولادة في بنون بالأحساء",
-  description:
-   "",
+  description: "الدكتورة رانيا الشريفي، استشارية أمراض النساء والولادة في مركز بنون بالأحساء. خبرة واسعة في صحة المرأة والولادة.",
 };
 
 export default function BnoonAlahsaPage() {
-  return <ClientBnoonAlahsaPage />;
-}
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/clinics-banner-ar.jpg" />
+       <DrRaniaAlsherify />
 
+    </>
+  );
+}

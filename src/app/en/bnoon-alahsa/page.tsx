@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
-import ClientBnoonAlahsaPage from "./page.client";
+import Navbar from "@/components/Layout/Navbar";
+import PageBanner from "@/components/Layout/PageBanner";
+import AlahsaArea from "@/components/Common/AlahsaArea";
 
 export const metadata: Metadata = {
   title: "Bnoon - Al Ahsa | The Fertility & Women Health Center",
-  description:
-    "",
+  description: "Bnoon fertility and women's health center in Al Ahsa. IVF, ICSI, and infertility treatment services with an expert medical team.",
 };
 
 export default function BnoonAlahsaPage() {
-  return <ClientBnoonAlahsaPage />;
+  return (
+    <>
+      <Navbar />
+      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/clinics-banner.jpg" />
+       <AlahsaArea />
+
+    </>
+  );
 }
-
-

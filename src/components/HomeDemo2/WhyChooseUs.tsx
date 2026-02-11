@@ -6,7 +6,7 @@ function WhyChooseUs() {
   const reasons = [
     {
       id: 1,
-      iconSrc: "/images/icons/check.svg",
+      iconSrc: "https://bnoon.blob.core.windows.net/website/images/icons/check.svg",
       iconAlt: "check",
       title: "500+ Licensed Doctors",
       description:
@@ -14,7 +14,7 @@ function WhyChooseUs() {
     },
     {
       id: 2,
-      iconSrc: "/images/icons/check.svg",
+      iconSrc: "https://bnoon.blob.core.windows.net/website/images/icons/check.svg",
       iconAlt: "check",
       title: "8.2 M+ Virtual Consultations Completed",
       description:
@@ -27,7 +27,7 @@ function WhyChooseUs() {
       <div
         className="choose-us-area"
         style={{
-          backgroundImage: `url(/images/choose-bg.jpg)`,
+          backgroundImage: `url(https://bnoon.blob.core.windows.net/website/images/choose-bg.jpg)`,
           backgroundAttachment: "fixed",
         }}
       >

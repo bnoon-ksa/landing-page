@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 import { motion, Easing, easeOut } from "framer-motion";
 import Image from "next/image";
 
 const WhoAreWe = () => {
-  const staticImage = "/images/about/who-we-are.avif";
+  const staticImage = "https://bnoon.blob.core.windows.net/website/images/about/who-we-are.avif";
 // ⭐ Animation variant
   const slideInRight = {
     hidden: { opacity: 0, x: 80 },
