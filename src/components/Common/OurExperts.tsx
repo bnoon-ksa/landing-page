@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import 'remixicon/fonts/remixicon.css';
+import { getBookingUrl } from "@/utils/booking";
 // ✅ Doctor data structure
 interface OurExperts {
   id: number;
@@ -40,7 +41,7 @@ const OurExperts = () => {
       name: "Dr. Abdalaziz Al-Shahrani",
       qualification:
          "Group Medical Director Consultant, Obstetrics, Gynecology, Reproductive Endorinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/1.jpg",
+      imageUrl: "/images/doctors/1.jpg",
       profileLink: "dr-abdalaziz-alshahrani",
       location: "Riyadh",
     },
@@ -49,7 +50,7 @@ const OurExperts = () => {
       name: "Dr. Fawaz Edris",
       qualification:
         "Executive Director, Bnoon - Jeddah Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF), Minimally Invasive Surgery & Maternal Fetal Medicine",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/2.jpg",
+      imageUrl: "/images/doctors/2.jpg",
       profileLink: "dr-fawaz-edris",
       location: "Jeddah",
     },
@@ -58,7 +59,7 @@ const OurExperts = () => {
       name: "Dr. Mazin Bishara",
       qualification:
         "Medical Director, Bnoon - Jeddah Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/3.jpg",
+      imageUrl: "/images/doctors/3.jpg",
       profileLink: "dr-mazin-bishara",
       location: "Jeddah",
     },
@@ -67,7 +68,7 @@ const OurExperts = () => {
       id: 4,
       name: "Dr. Bassam Nusair ",
       qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/15.jpg",
+      imageUrl: "/images/doctors/15.jpg",
       profileLink: "dr-bassamnusair",
        location: "Al Ahsa",
     },
@@ -75,7 +76,7 @@ const OurExperts = () => {
       id: 5,
       name: "Dr. Asim Al Wohaibi",
       qualification: "Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/4.jpg",
+      imageUrl: "/images/doctors/4.jpg",
       profileLink: "dr-asim-alwohaibi",
       location: "Riyadh",
     },
@@ -85,7 +86,7 @@ const OurExperts = () => {
       name: "Dr. Ahmed Alshaikh",
       qualification:
         "Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/6.jpg",
+      imageUrl: "/images/doctors/6.jpg",
       profileLink: "dr-ahmed-alshaikh",
       location: "Jeddah",
     },
@@ -93,7 +94,7 @@ const OurExperts = () => {
       id: 7,
       name: "Dr. Wajdi Al Omari",
       qualification: "Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF), Minimally Invasive Surgery",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/7.jpg",
+      imageUrl: "/images/doctors/7.jpg",
       profileLink: "dr-wajdi-alomari",
       location: "Riyadh",
     },
@@ -102,7 +103,7 @@ const OurExperts = () => {
       id: 8,
       name: "Dr. Ahmed Al-Nowasser",
       qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery  ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/16.jpg",
+      imageUrl: "/images/doctors/16.jpg",
       profileLink: "dr-ahmedal-nowasser",
        location: "Al Ahsa",
     },
@@ -110,7 +111,7 @@ const OurExperts = () => {
       id: 9,
       name: "Dr. Maya Albezreh",
       qualification: "Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF)",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/11.jpg",
+      imageUrl: "/images/doctors/11.jpg",
       profileLink: "dr-maya-albezreh",
       location: "Jeddah",
     },
@@ -118,7 +119,7 @@ const OurExperts = () => {
       id: 10,
       name: "Dr. Dalia Nour",
       qualification: "Consultant, Obstetrics, Gynecology & Infertility",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/8.jpg",
+      imageUrl: "/images/doctors/8.jpg",
       profileLink: "dr-dalia-nour",
       location: "Riyadh",
     },
@@ -126,7 +127,7 @@ const OurExperts = () => {
       id: 11,
       name: "Dr. Ahmad Haroun",
       qualification: "Consultant, Urology, Andrology & Male Infertility",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/9.jpg",
+      imageUrl: "/images/doctors/9.jpg",
       profileLink: "dr-ahmad-haroun",
       location: "Jeddah",
     },
@@ -134,7 +135,7 @@ const OurExperts = () => {
       id: 12,
       name: "Dr. Mussa AlNumi",
       qualification: "Consultant, Urology, Andrology & Male Infertility",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/10.jpg",
+      imageUrl: "/images/doctors/10.jpg",
       profileLink: "dr-moussa-el-naiemy",
       location: "Riyadh",
     },
@@ -143,7 +144,7 @@ const OurExperts = () => {
       id: 13,
       name: "Dr. Razan Ghaith",
       qualification: "Consultant, Obstetrics, Gynecology & Delayed Pregnancy",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/12.jpg",
+      imageUrl: "/images/doctors/12.jpg",
       profileLink: "dr-razan-ghaith",
        location: "Jeddah",
     },
@@ -152,7 +153,7 @@ const OurExperts = () => {
       id: 14,
       name: "Dr. Median Alkhalaf ",
       qualification: "Consultant, Obstetrics & Gynecology ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/17.jpg",
+      imageUrl: "/images/doctors/17.jpg",
       profileLink: "dr-median-alkhalaf",
        location: "Al Ahsa",
     },
@@ -160,7 +161,7 @@ const OurExperts = () => {
       id: 15,
       name: "Dr. Maram Dadoua",
       qualification: "Senior Registrar, Obstetrics & Gynecology ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/13.jpg",
+      imageUrl: "/images/doctors/13.jpg",
       profileLink: "dr-maram-dadoua",
        location: "Jeddah",
     },
@@ -169,7 +170,7 @@ const OurExperts = () => {
       id: 16,
       name: "Dr. Rania Elsherify ",
       qualification: "Obstetrics & Gynecology Registrar ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/14.jpg",
+      imageUrl: "/images/doctors/14.jpg",
       profileLink: "dr-rania-elsherify",
        location: "Al Ahsa",
     },
@@ -266,7 +267,7 @@ const OurExperts = () => {
           )}
       <div>
         <Link
-          href="https://book.bnoon.sa"
+          href={getBookingUrl(doctor.location, "en")}
           className="btn btn-success doctor-btn"
         >
           Request an Appointment

@@ -25,7 +25,7 @@ const OurDoctorsStyle2 = () => {
       experience: "12+ Years of Experience",
       rating: 4.9,
       reviews: 3560,
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/doctor1.png",
+      imageUrl: "/images/doctors/doctor1.png",
       profileLink: "/doctors/profile",
     },
     {
@@ -36,7 +36,7 @@ const OurDoctorsStyle2 = () => {
       experience: "8+ Years of Experience",
       rating: 4.8,
       reviews: 2350,
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/doctor2.png",
+      imageUrl: "/images/doctors/doctor2.png",
       profileLink: "/doctors/profile",
     },
     // ... baki doctorsData same

@@ -14,7 +14,7 @@ const cairo = Cairo({ variable: "--font-cairo", subsets: ["arabic"], weight: ["4
 export const metadata: Metadata = {
   metadataBase: new URL("https://bnoon.sa"),
   icons: {
-    icon: "https://bnoon.blob.core.windows.net/website/images/fav.png",
+    icon: "/images/fav.png",
   },
   openGraph: {
     type: "website",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "بنون",
     images: [
       {
-        url: "https://bnoon.blob.core.windows.net/website/images/bnoon-logo.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "بنون - مراكز الإخصاب وصحة المرأة",

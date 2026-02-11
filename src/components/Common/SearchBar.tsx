@@ -171,7 +171,7 @@ const doctorsToShow =
   {doctor || "Select Doctor"}
 </span>
 
-    <Image src="https://bnoon.blob.core.windows.net/website/images/arrow.png" className="arrow-icon" alt="" width={12} height={12} />
+    <Image src="/images/arrow.png" className="arrow-icon" alt="" width={12} height={12} />
   </button>
   <div className="dropdown-menu doctor-menu">
     {doctorsToShow.map((doc, i) => (
@@ -207,7 +207,7 @@ const doctorsToShow =
   {location || "By Location"}
 </span>
 
-    <Image src="https://bnoon.blob.core.windows.net/website/images/arrow.png" className="arrow-icon" alt="" width={12} height={12} />
+    <Image src="/images/arrow.png" className="arrow-icon" alt="" width={12} height={12} />
   </button>
   <div className="dropdown-menu location-menu">
     {["Riyadh", "Jeddah", "Al Ahsa"].map((loc, i) => (

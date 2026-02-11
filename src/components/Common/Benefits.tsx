@@ -7,34 +7,34 @@ const Benefits = () => {
   const benefitsData = [
     {
       id: 1,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/benefit1.jpg",
+      icon: "/images/icons/benefit1.jpg",
       title: "Convenient & Fast",
       description: "See a doctor within minutes—no waiting rooms.",
     },
     {
       id: 2,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/benefit2.jpg",
+      icon: "/images/icons/benefit2.jpg",
       title: "Certified Doctors",
       description: "Licensed professionals in multiple specialties.",
     },
     {
       id: 3,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/benefit3.jpg",
+      icon: "/images/icons/benefit3.jpg",
       title: "Private & Secure",
       description: "End-to-end encrypted, HIPAA-compliant platform.",
     },
     {
       id: 4,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/benefit4.svg",
+      icon: "/images/icons/benefit4.svg",
       title: "Affordable Pricing",
       description: "Transparent pricing, with or without insurance.",
     },
   ];
 
   const images = [
-    "https://bnoon.blob.core.windows.net/website/images/benefit1.jpg",
-    "https://bnoon.blob.core.windows.net/website/images/benefit2.jpg",
-    "https://bnoon.blob.core.windows.net/website/images/benefit3.jpg",
+    "/images/benefit1.jpg",
+    "/images/benefit2.jpg",
+    "/images/benefit3.jpg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

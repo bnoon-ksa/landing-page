@@ -178,7 +178,7 @@ const doctorsToShow =
     }}
   >
     <span>{doctor || "حسب اسم الطبيب"}</span>
-    <Image src="https://bnoon.blob.core.windows.net/website/images/arrow.png" className="arrow-icon" alt=""   width={30} height={30} />
+    <Image src="/images/arrow.png" className="arrow-icon" alt=""   width={30} height={30} />
   </button>
 
   <ul className="dropdown-menu doctor-menu">
@@ -210,7 +210,7 @@ const doctorsToShow =
     }}
   >
     <span>{location || "حسب الموقع"}</span>
-    <Image src="https://bnoon.blob.core.windows.net/website/images/arrow.png" className="arrow-icon" alt=""   width={30} height={30} />
+    <Image src="/images/arrow.png" className="arrow-icon" alt=""   width={30} height={30} />
   </button>
 
  <ul className="dropdown-menu location-menu">

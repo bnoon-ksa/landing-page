@@ -202,7 +202,7 @@ setTimeout(() => {
     <span>{formData.interest || "Choose one"}</span>
 
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       width={16}
       height={16}
@@ -285,7 +285,7 @@ setTimeout(() => {
   >
     <span>{formData.branch || "Select branch"}</span>
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       width={16}
       height={16}
@@ -359,7 +359,7 @@ setTimeout(() => {
     <span>{formData.visitType || "Select visit type"}</span>
 
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       width={16}
       height={16}
@@ -441,7 +441,7 @@ setTimeout(() => {
     </span>
 
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       width={16}
       height={16}
@@ -584,7 +584,7 @@ setTimeout(() => {
     <span>{formData.nationality || ""}</span>
 
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       width={16}
       height={16}
@@ -658,7 +658,7 @@ setTimeout(() => {
     <span>{formData.countryOfResidence || ""}</span>
 
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       width={16}
       height={16}
@@ -813,7 +813,7 @@ setTimeout(() => {
   >
     <span>{formData.preferredTime || ""}</span>
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       width={16}
       height={16}
@@ -895,7 +895,7 @@ setTimeout(() => {
   >
     <span>{formData.howHeard || ""}</span>
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       width={16}
       height={16}

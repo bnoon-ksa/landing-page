@@ -9,19 +9,19 @@ const Feedbacks = () => {
       title: "ما يقوله المرضى عن بنون",
       desc: "السلام عليكم ،<br>لا شيء مستحيل بفضل الله، أنصح من يعاني من مشاكل في الخصوبة زيارة بنون – إنهم حقاً محترفون وأود أن أشكر جميع الموظفين لديهم۔",
       author: ".م.خ.",
-      img: "https://bnoon.blob.core.windows.net/website/images/hear-patient.jpg",
+      img: "/images/hear-patient.jpg",
     },
     {
       title: "ما يقوله المرضى عن بنون",
       desc: "الأطباء في بنون من أفضل الأطباء المختصين بالإخصاب في الشرق الأوسط. أنصحكم بزيارتهم إذا كنتم تعانون من تأخر الحمل۔",
       author: ".س. أ ",
-      img: "https://bnoon.blob.core.windows.net/website/images/hear-patient.jpg",
+      img: "/images/hear-patient.jpg",
     },
     {
       title: "ما يقوله المرضى عن بنون",
       desc: "عيادات مجهزة بالكامل لعلاج حالات العقم والحمل عالي الخطورة وطب الأجنة وأمراض الذكورة. معظم الطاقم الطبي مدرب في أمريكا وكندا۔",
       author: ".ج.ج",
-      img: "https://bnoon.blob.core.windows.net/website/images/hear-patient.jpg",
+      img: "/images/hear-patient.jpg",
     },
   ];
 

@@ -15615,7 +15615,7 @@ ul.dropdown-menu.show li:hover a {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("https://bnoon.blob.core.windows.net/website/images/arrow.png");
+  background-image: url("/images/arrow.png");
   background-repeat: no-repeat;
   background-position: left 12px center; 
   background-size: 14px; 

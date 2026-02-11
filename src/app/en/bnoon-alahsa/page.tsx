@@ -12,7 +12,7 @@ export default function BnoonAlahsaPage() {
   return (
     <>
       <Navbar />
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/clinics-banner.jpg" />
+      <PageBanner bgImage="/images/clinics-banner.jpg" />
        <AlahsaArea />
 
     </>

@@ -51,20 +51,18 @@ jobs:
         run: npm ci
 
   # ──────────────────────────────────────────────
-  # Job 2: Quality Gates (parallel with build)
+  # Job 2a: Lint (parallel)
   # ──────────────────────────────────────────────
-  quality-gates:
+  lint:
     runs-on: ubuntu-latest
     needs: setup
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: '.node-version'
-
       - name: Restore node_modules cache
         uses: actions/cache@v4
         with:
@@ -72,18 +70,75 @@ jobs:
           key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             node-modules-${{ runner.os }}-
-
       - name: Lint
-        continue-on-error: true
         run: npm run lint
 
+  # ──────────────────────────────────────────────
+  # Job 2b: Typecheck (parallel)
+  # ──────────────────────────────────────────────
+  typecheck:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+      - name: Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
       - name: Typecheck
-        continue-on-error: true
         run: npm run typecheck
 
+  # ──────────────────────────────────────────────
+  # Job 2c: Unit Tests (parallel)
+  # ──────────────────────────────────────────────
+  unit-tests:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+      - name: Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
       - name: Unit tests
         run: npm test
 
+  # ──────────────────────────────────────────────
+  # Job 2d: Security Audit (parallel)
+  # ──────────────────────────────────────────────
+  security-audit:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+      - name: Restore node_modules cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            node-modules-${{ runner.os }}-
       - name: Security audit
         continue-on-error: true
         run: npm audit --audit-level=critical
@@ -155,7 +210,7 @@ jobs:
   # ──────────────────────────────────────────────
   semantic-release:
     runs-on: ubuntu-latest
-    needs: [build, quality-gates]
+    needs: [build, lint, typecheck, unit-tests, security-audit]
     outputs:
       new_release_published: ${{ steps.release.outputs.new_release_published }}
       new_release_version: ${{ steps.release.outputs.new_release_version }}
@@ -344,8 +399,24 @@ jobs:
           restore-keys: |
             node-modules-${{ runner.os }}-
 
+      - name: Get Playwright version
+        id: pw-version
+        run: echo "version=$(npx playwright --version | awk '{print $2}')" >> $GITHUB_OUTPUT
+
+      - name: Cache Playwright browsers
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw-version.outputs.version }}
+
       - name: Install Playwright browsers
+        if: steps.pw-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (cache hit)
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
 
       - name: Run E2E regression tests
         run: npx playwright test

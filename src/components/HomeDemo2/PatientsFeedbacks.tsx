@@ -100,7 +100,7 @@ function PatientsFeedbacks({
                 </div>
                 <div className="image">
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/feedback/rating.png"
+                    src="/images/feedback/rating.png"
                     alt="rating"
                     width={185}
                     height={183}
@@ -123,7 +123,7 @@ function PatientsFeedbacks({
                 </div>
                 <div className="wrap-shape">
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/feedback/shape.png"
+                    src="/images/feedback/shape.png"
                     alt="shape"
                     width={170}
                     height={156}
@@ -185,7 +185,7 @@ const defaultFeedbacks: FeedbackItem[] = [
       "I honestly didn't expect virtual healthcare to feel this personal. The doctor took the time to listen to every concern I had and explained things in a way I could understand. It felt just like sitting in a clinic—except I never had to leave my flat. Doutor is the future of healthcare.",
     patientName: "Emily Robinson",
     location: "London, UK",
-    image: "https://bnoon.blob.core.windows.net/website/images/users/user1.png",
+    image: "/images/users/user1.png",
   },
   {
     id: 2,
@@ -194,7 +194,7 @@ const defaultFeedbacks: FeedbackItem[] = [
       "I honestly didn't expect virtual healthcare to feel this personal. The doctor took the time to listen to every concern I had and explained things in a way I could understand. It felt just like sitting in a clinic—except I never had to leave my flat. Doutor is the future of healthcare.",
     patientName: "Carlos Martínez",
     location: "Madrid, Spain",
-    image: "https://bnoon.blob.core.windows.net/website/images/users/user2.png",
+    image: "/images/users/user2.png",
   },
   // Add more default feedback items as needed
 ];
@@ -203,7 +203,7 @@ const defaultStats: FeedbackStats = {
   satisfactionRate: 99,
   reviewCount: "1500+",
   platform: "Clutch",
-  platformImage: "https://bnoon.blob.core.windows.net/website/images/feedback/clutch.png",
+  platformImage: "/images/feedback/clutch.png",
 };
 
 export default PatientsFeedbacks;

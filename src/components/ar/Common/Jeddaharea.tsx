@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const Jeddaharea = () => {
-  const imageJeddah = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-jeddah.avif";
+  const imageJeddah = "/images/locations/bnoon-jeddah.avif";
 
   const imgRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
@@ -83,15 +83,15 @@ const Jeddaharea = () => {
                 ويعتمد المركز على تقنيات حديثة تشمل أنظمة مراقبة الأجنّة بتقنية التايم لابس، تخطيط علاجي مدعوم بالذكاء الاصطناعي، ومنصات رقمية لمتابعة المريض، مما يوفّر تجربة علاجية شخصية ترتكز على الأدلة العلمية وتُعزّز من راحة المرضى بمعدلات نجاح تتماشى مع النسب العالمية۔</p>
   <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                   <a href="https://maps.app.goo.gl/8Qt27cRjD7noBcuU9" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – جدة</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/phone.svg" alt="phone" width={24} height={24} className="me-2" />
                    <a href="tel:+966114448080" className="text-color">+966 12 680 0800</a>
                 </div>
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                   <a href="mailto:info@bnoon.sa" className="text-color">info.jeddah@bnoon.sa</a>
                 </div>
               </div>

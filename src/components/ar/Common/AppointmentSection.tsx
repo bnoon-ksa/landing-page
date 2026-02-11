@@ -584,7 +584,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 >
                   <span>{formData.interest || "ما الخدمة التي تبحث عنها؟"}</span>
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+                    src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
                   />
@@ -666,7 +666,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 >
                   <span>{formData.branch || " الفرع"}</span>
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+                    src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
                   />
@@ -743,7 +743,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 >
                   <span>{formData.visitType || "اختر نوع الزيارة"}</span>
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+                    src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
                   />
@@ -823,7 +823,7 @@ const [showThankYou, setShowThankYou] = useState(false);
     </span>
 
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+      src="/images/arrow.png"
       alt="arrow"
       style={{ width: "16px", height: "16px" }}
     />
@@ -987,7 +987,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 >
                   <span>{formData.nationality || "الجنسية"}</span>
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+                    src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
                   />
@@ -1058,7 +1058,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 >
                   <span>{formData.countryOfResidence || "بلد الإقامة"}</span>
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+                    src="/images/arrow.png"
                     alt="arrow"
                     style={{ width: "16px", height: "16px" }}
                   />
@@ -1130,7 +1130,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                   >
                     <span>{formData.cityIfInSA || "اختر المدينة"}</span>
                     <Image
-                      src="https://bnoon.blob.core.windows.net/website/images/arrow.png"
+                      src="/images/arrow.png"
                       alt="arrow"
                       style={{ width: "16px", height: "16px" }}
                     />
@@ -1312,7 +1312,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 }}
               >
                 <span>{formData.preferredTime || "9AM to 8PM"}</span>
-                <Image src="https://bnoon.blob.core.windows.net/website/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
+                <Image src="/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
               </button>
 
               {/* Dropdown List */}
@@ -1398,7 +1398,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 }}
               >
                 <span>{formData.howHeard || "كيف سمعت عنا؟"}</span>
-                <Image src="https://bnoon.blob.core.windows.net/website/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
+                <Image src="/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
               </button>
 
               {/* Dropdown List */}

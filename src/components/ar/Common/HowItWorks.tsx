@@ -19,29 +19,29 @@ const HowItWorks = () => {
   const workSteps: WorkStep[] = [
     {
       id: 1,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/location.png",
+      icon: "/images/icons/location.png",
       title: "Address",
       description: "الرياض <br>جدة",
       buttonText: "المواقع",      // ✅ unique button
       buttonLink: "",
-      vectorImage: "https://bnoon.blob.core.windows.net/website/images/vector1.png",
+      vectorImage: "/images/vector1.png",
       vectorWidth: 42,
       vectorHeight: 88,
     },
     {
       id: 2,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/contact.png",
+      icon: "/images/icons/contact.png",
       title: "Contact",
       description: "+966 11 4448080 <br>+966 12 680 0800",
       buttonText: "أرقام الاتصال",           // ✅ unique button
       buttonLink: "tel:+966114448080",
-      vectorImage: "https://bnoon.blob.core.windows.net/website/images/vector2.png",
+      vectorImage: "/images/vector2.png",
       vectorWidth: 30,
       vectorHeight: 91,
     },
     {
       id: 3,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/mail.png",
+      icon: "/images/icons/mail.png",
       title: "E-mail",
       description: "info@bnoon.sa <br>info.jeddah@bnoon.sa",
       buttonText: "العناوين الإلكترونية",         // ✅ unique button

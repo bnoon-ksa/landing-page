@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import 'remixicon/fonts/remixicon.css';
+import { getBookingUrl } from "@/utils/booking";
 
 interface Doctor {
   id: number;
@@ -33,7 +34,7 @@ const OurDoctors = () => {
       name: "الدكتور عبد العزيز  الشهراني",
       qualification:
         "المدير الطبي للمجموعة استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/1.jpg",
+      imageUrl: "/images/doctors/1.jpg",
       profileLink: "ar/dr-abdalaziz-alshahrani",
       location: "الرياض",
     },
@@ -42,7 +43,7 @@ const OurDoctors = () => {
       name: "الدكتور فواز  إدريس ",
       qualification:
         "المدير التنفيذي، بنون - جدة استشاري أمراض النساء والولادة والحمل الحرج وطب الأجنة والأمومة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/2.jpg",
+      imageUrl: "/images/doctors/2.jpg",
       profileLink: "ar/dr-fawaz-edris",
       location: "جدة",
     },
@@ -51,7 +52,7 @@ const OurDoctors = () => {
       name: "الدكتور مازن بشارة",
       qualification:
        "المدير الطبي، بنون - جدة استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/3.jpg",
+      imageUrl: "/images/doctors/3.jpg",
       profileLink: "ar/dr-mazin-bishara",
       location: "جدة",
     },
@@ -60,7 +61,7 @@ const OurDoctors = () => {
       id: 4,
       name: "الدكتور بسام نصير ",
       qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/15.jpg",
+      imageUrl: "/images/doctors/15.jpg",
       profileLink: "ar/dr-bassamnusair",
        location: "الأحساء",
     },
@@ -68,7 +69,7 @@ const OurDoctors = () => {
       id: 5,
       name: "الدكتور عاصم الوهيبي",
       qualification: "استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/4.jpg",
+      imageUrl: "/images/doctors/4.jpg",
       profileLink: "ar/dr-asim-alwohaibi",
       location: "الرياض",
     },
@@ -77,7 +78,7 @@ const OurDoctors = () => {
       name: "الدكتور أحمد الشيخ",
       qualification:
         "استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/6.jpg",
+      imageUrl: "/images/doctors/6.jpg",
       profileLink: "ar/dr-ahmed-alshaikh",
       location: "جدة",
     },
@@ -85,7 +86,7 @@ const OurDoctors = () => {
       id: 7,
       name: "الدكتور وجدي  العمرى",
       qualification: "استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/7.jpg",
+      imageUrl: "/images/doctors/7.jpg",
       profileLink: "ar/dr-wajdi-alomari",
       location: "الرياض",
     },
@@ -93,7 +94,7 @@ const OurDoctors = () => {
       id: 8,
       name: "الدكتور أحمد النويصر",
       qualification: " استشاري أمراض النساء والولادة والعقم وأطفال الأنابيب والمناظير ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/16.jpg",
+      imageUrl: "/images/doctors/16.jpg",
       profileLink: "ar/dr-ahmedal-nowasser",
        location: "الأحساء",
     },
@@ -101,7 +102,7 @@ const OurDoctors = () => {
       id: 9,
       name: "الدكتورة مايا البزرة ",
       qualification: "استشارية أمراض النساء والولادة والعقم وأطفال الأنابيب ",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/11.jpg",
+      imageUrl: "/images/doctors/11.jpg",
       profileLink: "ar/dr-maya-albezreh",
       location: "جدة",
     },
@@ -109,7 +110,7 @@ const OurDoctors = () => {
       id: 10,
       name: "الدكتورة داليا  نور",
       qualification: "استشارية أمراض النساء والولادة وتأخر الحمل",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/8.jpg",
+      imageUrl: "/images/doctors/8.jpg",
       profileLink: "ar/dr-dalia-nour",
       location: "الرياض",
     },
@@ -117,7 +118,7 @@ const OurDoctors = () => {
       id: 11,
       name: "الدكتور أحمد هارون",
       qualification: "استشاري المسالك البولية وأمراض الذكورة والعقم",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/9.jpg",
+      imageUrl: "/images/doctors/9.jpg",
       profileLink: "ar/dr-ahmad-haroun",
       location: "جدة",
     },
@@ -125,7 +126,7 @@ const OurDoctors = () => {
       id: 12,
       name: "الدكتور موسى  النعمي",
       qualification: "استشاري المسالك البولية وأمراض الذكورة والعقم",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/10.jpg",
+      imageUrl: "/images/doctors/10.jpg",
       profileLink: "ar/dr-moussa-el-naiemy",
       location: "الرياض",
     },
@@ -134,7 +135,7 @@ const OurDoctors = () => {
       id: 13,
       name: "الدكتورة رزان غيث",
       qualification: "استشارية أمراض النساء والولادة وتأخر الحمل",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/12.jpg",
+      imageUrl: "/images/doctors/12.jpg",
       profileLink: "ar/dr-razan-ghaith",
        location: "جدة",
     },
@@ -143,7 +144,7 @@ const OurDoctors = () => {
       id: 14,
       name: "الدكتور مدين الخلف",
       qualification: "استشاري أمراض النساء والولادة",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/17.jpg",
+      imageUrl: "/images/doctors/17.jpg",
       profileLink: "ar/dr-median-alkhalaf",
        location: "الأحساء",
     },
@@ -151,7 +152,7 @@ const OurDoctors = () => {
       id: 15,
       name: "الدكتورة مرام دعدوع",
       qualification: "نائب أول، أمراض النساء والولادة",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/13.jpg",
+      imageUrl: "/images/doctors/13.jpg",
       profileLink: "ar/dr-maram-dadoua",
        location: "جدة",
     },
@@ -161,7 +162,7 @@ const OurDoctors = () => {
       id: 16,
       name: "الدكتورة رانيا الشريفي",
       qualification: "أخصائية أمراض النساء والولادة",
-      imageUrl: "https://bnoon.blob.core.windows.net/website/images/doctors/14.jpg",
+      imageUrl: "/images/doctors/14.jpg",
       profileLink: "ar/dr-rania-elsherify",
        location: "الأحساء",
     },
@@ -213,7 +214,7 @@ const OurDoctors = () => {
     </div>
   )}
                   <div className="doctors-button">
-                    <Link href="https://book.bnoon.sa/ar" className="btn btn-success doctor-btn doctors-button">طلب موعد</Link>
+                    <Link href={getBookingUrl(doctor.location, "ar")} className="btn btn-success doctor-btn doctors-button">طلب موعد</Link>
                   </div>
                 </div>
               </div>

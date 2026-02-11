@@ -111,7 +111,7 @@ const toggleAccordion = (index: number) => {
       </div>
       <style jsx global>{`
   .faq-image {
-    background-image: url("https://bnoon.blob.core.windows.net/website/images/faqs.jpg");
+    background-image: url("/images/faqs.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

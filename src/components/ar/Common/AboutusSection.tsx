@@ -69,7 +69,7 @@ const AboutusSection = () => {
                     <li key={index} className="d-flex align-items-center mb-2">
                       {/* Icon */}
                       <Image
-                        src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif" // aapka custom icon
+                        src="/images/icons/bnoon-symbol.avif" // aapka custom icon
                         alt="icon"
                         width={20}
                         height={20}

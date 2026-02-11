@@ -15,7 +15,7 @@ const FertilityDoctor = () => {
     "قد يكون من الضروري مراجعة أخصائي الإخصاب إذا كانت والدتك قد تعرضت لانقطاع الطمث المبكر۔"
   ];
 
-  const staticImage = "https://bnoon.blob.core.windows.net/website/images/fertility-doc.avif";
+  const staticImage = "/images/fertility-doc.avif";
 
   return (
     <div className="fertility-overview-area ptb-140">
@@ -36,7 +36,7 @@ const FertilityDoctor = () => {
                 {points.map((point, index) => (
                   <li key={index}>
                     <Image
-                      src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif" // apni icon image ka path
+                      src="/images/icons/bnoon-symbol.avif" // apni icon image ka path
                       alt="icon"
                       className="list-icon"
                      width={24} height={22} />

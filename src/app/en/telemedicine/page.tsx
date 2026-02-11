@@ -13,7 +13,7 @@ export default function TelemedicinePage() {
     <>
       <Navbar />
       {/* PageBanner with static content */}
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/telemidicine-en.jpg" />
+      <PageBanner bgImage="/images/telemidicine-en.jpg" />
       <TelemedicineSection />
     </>
   );

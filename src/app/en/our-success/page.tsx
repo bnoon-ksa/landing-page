@@ -13,7 +13,7 @@ export default function OurSuccessPage() {
     <>
       <Navbar />
 
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/success-banner.jpg" />
+      <PageBanner bgImage="/images/success-banner.jpg" />
 
       <SuccessSection />
     </>

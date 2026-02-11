@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 
 const Riyadharea = () => {
-  const imageAlahsa = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-alahsa.jpg";
+  const imageAlahsa = "/images/locations/bnoon-alahsa.jpg";
 
   const contentRefRiyadh = useRef<HTMLDivElement>(null);
   const imageRefRiyadh = useRef<HTMLDivElement>(null);
@@ -111,7 +111,7 @@ const Riyadharea = () => {
   {/* Location */}
   <div className="d-flex align-items-center">
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg"
+      src="/images/icons/location.svg"
       alt="Location"
       width={24}
       height={24}
@@ -130,7 +130,7 @@ const Riyadharea = () => {
   {/* Email */}
   <div className="d-flex align-items-center">
     <Image
-      src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg"
+      src="/images/icons/mail.svg"
       alt="Email"
       width={24}
       height={24}

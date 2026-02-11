@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion, Easing, easeOut } from "framer-motion";
 const WhoAreWe = () => {
-  const staticImage = "https://bnoon.blob.core.windows.net/website/images/about/who-we-are.avif";
+  const staticImage = "/images/about/who-we-are.avif";
 // ⭐ Animation variant
   const slideInRight = {
     hidden: { opacity: 0, x: -80 },

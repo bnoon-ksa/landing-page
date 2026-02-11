@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const DrFawazEdris  = () => {
-  const imageRiyadh = "https://bnoon.blob.core.windows.net/website/images/doctors/dr-median.jpg";
+  const imageRiyadh = "/images/doctors/dr-median.jpg";
 
   const contentRefRiyadh = useRef<HTMLDivElement>(null);
   const imageRefRiyadh = useRef<HTMLDivElement>(null);
