@@ -9,19 +9,19 @@ const Feedbacks = () => {
       title: "Hear From Our Patients",
       desc: "In Bnoon, the doctors are the most professional in the Middle East in infertility treatments and IVF. I truly recommend Bnoon as your partner if you have pregnancy and childbirth problems.",
       author: "A.B.",
-      img: "https://bnoon.blob.core.windows.net/website/images/hear-patient.jpg",
+      img: "/images/hear-patient.jpg",
     },
     {
       title: "Hear From Our Patients",
       desc: "Highly specialized and well-equipped clinics for infertility, high risk pregnancy, fetal medicine, maternal medicine and Andrology. All medical staff have a sub specialized training from US and Canada.",
       author: "W.A.",
-      img: "https://bnoon.blob.core.windows.net/website/images/hear-patient.jpg",
+      img: "/images/hear-patient.jpg",
     },
     {
       title: "Hear From Our Patients",
       desc: "In Bnoon, the doctors are the most professional in the Middle East in infertility treatments and IVF. I truly recommend Bnoon as your partner if you have pregnancy and childbirth problems.",
       author: "B.B.",
-      img: "https://bnoon.blob.core.windows.net/website/images/hear-patient.jpg",
+      img: "/images/hear-patient.jpg",
     },
   ];
 

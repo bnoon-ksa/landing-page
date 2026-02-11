@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const Alahsaharea = () => {
- const imageAlahsa = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-alahsa.jpg";
+ const imageAlahsa = "/images/locations/bnoon-alahsa.jpg";
 
   const imgRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
@@ -93,12 +93,12 @@ const Alahsaharea = () => {
 <p>يمثّل بنون – الأحساء نقلة نوعية في تطوير خدمات الخصوبة بالمنطقة الشرقية، إذ يجمع بين الابتكار الطبي، والتميّز الطبي، والالتزام بدعم كل أسرة في رحلتها نحو الأمومة والأبوة. </p>
                <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center mt-3 gap-3 gap-md-4">
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/location.svg" alt="location" width={24} height={24} className="me-2" />
                  <a href="https://maps.app.goo.gl/HJVWsJkXzVNvk4bn7" target="_blank" rel="noopener noreferrer" className="text-color text-decoration-none">بنون – الأحساء </a>
                 </div>
               
                 <div className="d-flex align-items-center">
-                  <Image src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
+                  <Image src="/images/icons/mail.svg" alt="mail" width={24} height={24} className="me-2" />
                    <a href="mailto:info@bnoon.sa" className="text-color">info@bnoon.sa</a>
                 </div>
               </div>

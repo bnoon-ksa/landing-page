@@ -15,7 +15,7 @@ const FertilityDoctor = () => {
     "It may be necessary to see a fertility specialist if your mother had an early menopause."
   ];
 
-  const staticImage = "https://bnoon.blob.core.windows.net/website/images/fertility-doc.avif";
+  const staticImage = "/images/fertility-doc.avif";
 
   return (
     <div className="fertility-overview-area ptb-140 pb-5 pt-5">
@@ -38,7 +38,7 @@ Preparing oneself for a pregnancy is quite challenging. So, if you are ready to 
                 {points.map((point, index) => (
                   <li key={index}>
                     <Image
-                      src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif" // apni icon image ka path
+                      src="/images/icons/bnoon-symbol.avif" // apni icon image ka path
                       alt="icon"
                       className="list-icon"
                      width={24} height={22} />

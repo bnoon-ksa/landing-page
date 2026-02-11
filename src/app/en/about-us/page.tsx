@@ -15,7 +15,7 @@ export default function AboutUsPage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/aboutus.jpg" />
+      <PageBanner bgImage="/images/aboutus.jpg" />
       <AboutusSection />
        <WhoAreWe />
      

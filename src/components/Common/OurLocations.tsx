@@ -4,10 +4,10 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
 const OurLocations = () => {
-  const imageRiyadh = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-riyadh.avif";
-  const imageJeddah = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-jeddah.avif";
-  const imageKingSalman = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-north-riiyadh.avif";
-  const imageAlahsa = "https://bnoon.blob.core.windows.net/website/images/locations/bnoon-alahsa.jpg";
+  const imageRiyadh = "/images/locations/bnoon-riyadh.avif";
+  const imageJeddah = "/images/locations/bnoon-jeddah.avif";
+  const imageKingSalman = "/images/locations/bnoon-north-riiyadh.avif";
+  const imageAlahsa = "/images/locations/bnoon-alahsa.jpg";
   // Type-safe animation variants
   const variantsLeft: Variants = {
     hidden: { x: 100, opacity: 0 },
@@ -29,7 +29,7 @@ const OurLocations = () => {
       {/* Location with Google Maps link */}
       <div className="d-flex align-items-center">
         <Image
-          src="https://bnoon.blob.core.windows.net/website/images/icons/location.svg"
+          src="/images/icons/location.svg"
           alt="Location"
           width={24}
           height={24}
@@ -49,7 +49,7 @@ const OurLocations = () => {
       {phone && (
         <div className="d-flex align-items-center">
           <Image
-            src="https://bnoon.blob.core.windows.net/website/images/icons/phone.svg"
+            src="/images/icons/phone.svg"
             alt="Phone"
             width={24}
             height={24}
@@ -68,7 +68,7 @@ const OurLocations = () => {
       {email && (
         <div className="d-flex align-items-center">
           <Image
-            src="https://bnoon.blob.core.windows.net/website/images/icons/mail.svg"
+            src="/images/icons/mail.svg"
             alt="Email"
             width={24}
             height={24}

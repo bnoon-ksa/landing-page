@@ -12,7 +12,7 @@ export default function DrMedianAlkhalafPage() {
   return (
     <>
       <Navbar />
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/clinics-banner-ar.jpg" />
+      <PageBanner bgImage="/images/clinics-banner-ar.jpg" />
        <DrMedianAlkhalaf />
 
     </>

@@ -86,7 +86,7 @@ const WaadSection = () => {
                   {values.map((value, index) => (
                     <li key={index} className="d-flex align-items-start mb-2">
                       <Image
-                        src="https://bnoon.blob.core.windows.net/website/images/icons/bnoon-symbol.avif"
+                        src="/images/icons/bnoon-symbol.avif"
                         alt="icon"
                         width={20}
                         height={20}

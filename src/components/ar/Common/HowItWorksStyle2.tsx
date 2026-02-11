@@ -5,22 +5,22 @@ const HowItWorksSlider = () => {
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const steps = [
-    { id: 1, imageSrc: "https://bnoon.blob.core.windows.net/website/images/fertility-counselling.jpg", title: "استشارات الخصوبة وتحاليل الهرمونات " },
-    { id: 2, imageSrc: "https://bnoon.blob.core.windows.net/website/images/intrauterine-insemination.jpg", title: " (IUI) التلقيح داخل الرحم" },
-    { id: 3, imageSrc: "https://bnoon.blob.core.windows.net/website/images/ivf.jpg", title: " (IVF) أطفال الأنابيب" },
-    { id: 4, imageSrc: "https://bnoon.blob.core.windows.net/website/images/ivm.jpg", title: "(IVM) نضوج البويضات خارج الجسم" },
-    { id: 5, imageSrc: "https://bnoon.blob.core.windows.net/website/images/icsi.jpg", title: "  (ICSI) الحقن المجهري" },
-    { id: 6, imageSrc: "https://bnoon.blob.core.windows.net/website/images/ovulation-induction.jpg", title: "تحفيز الإباضة " },
-    { id: 7, imageSrc: "https://bnoon.blob.core.windows.net/website/images/pgs.jpg", title: "  (PGS) الفحص الوراثي للأجنة" },
-    { id: 8, imageSrc: "https://bnoon.blob.core.windows.net/website/images/pgd.jpg", title: " (PGD) الفحص الوراثي للأجنة" },
-    { id: 9, imageSrc: "https://bnoon.blob.core.windows.net/website/images/egg-freezing.jpg", title: "تجميد البويضات" },
-    { id: 10, imageSrc: "https://bnoon.blob.core.windows.net/website/images/sperm-freezing.jpg", title: "تجميدُ النطف " },
-    { id: 11, imageSrc: "https://bnoon.blob.core.windows.net/website/images/embryo-freezing.jpg", title: "تجميد الأجنة " },
-    { id: 12, imageSrc: "https://bnoon.blob.core.windows.net/website/images/male-fertility.jpg", title: "تقييم وعلاج خصوبة الرجال (أمراض الذكورة والمسالك) " },
-    { id: 13, imageSrc: "https://bnoon.blob.core.windows.net/website/images/ivf.jpg", title: "سحب الحيوانات المنوية جراحياً " },
-    { id: 14, imageSrc: "https://bnoon.blob.core.windows.net/website/images/fbgs.jpg", title: "التوازن الأسري - جنس المولود " },
-    { id: 15, imageSrc: "https://bnoon.blob.core.windows.net/website/images/recurrent-miscarriage.jpg", title: "​حالات الإجهاض المتكرر " },
-    { id: 16, imageSrc: "https://bnoon.blob.core.windows.net/website/images/antenatal-care-deliveries.jpg", title: "متابعة الحمل ورعاية ما قبل الولادة " },
+    { id: 1, imageSrc: "/images/fertility-counselling.jpg", title: "استشارات الخصوبة وتحاليل الهرمونات " },
+    { id: 2, imageSrc: "/images/intrauterine-insemination.jpg", title: " (IUI) التلقيح داخل الرحم" },
+    { id: 3, imageSrc: "/images/ivf.jpg", title: " (IVF) أطفال الأنابيب" },
+    { id: 4, imageSrc: "/images/ivm.jpg", title: "(IVM) نضوج البويضات خارج الجسم" },
+    { id: 5, imageSrc: "/images/icsi.jpg", title: "  (ICSI) الحقن المجهري" },
+    { id: 6, imageSrc: "/images/ovulation-induction.jpg", title: "تحفيز الإباضة " },
+    { id: 7, imageSrc: "/images/pgs.jpg", title: "  (PGS) الفحص الوراثي للأجنة" },
+    { id: 8, imageSrc: "/images/pgd.jpg", title: " (PGD) الفحص الوراثي للأجنة" },
+    { id: 9, imageSrc: "/images/egg-freezing.jpg", title: "تجميد البويضات" },
+    { id: 10, imageSrc: "/images/sperm-freezing.jpg", title: "تجميدُ النطف " },
+    { id: 11, imageSrc: "/images/embryo-freezing.jpg", title: "تجميد الأجنة " },
+    { id: 12, imageSrc: "/images/male-fertility.jpg", title: "تقييم وعلاج خصوبة الرجال (أمراض الذكورة والمسالك) " },
+    { id: 13, imageSrc: "/images/ivf.jpg", title: "سحب الحيوانات المنوية جراحياً " },
+    { id: 14, imageSrc: "/images/fbgs.jpg", title: "التوازن الأسري - جنس المولود " },
+    { id: 15, imageSrc: "/images/recurrent-miscarriage.jpg", title: "​حالات الإجهاض المتكرر " },
+    { id: 16, imageSrc: "/images/antenatal-care-deliveries.jpg", title: "متابعة الحمل ورعاية ما قبل الولادة " },
   ];
 // Detect mobile screen
   useEffect(() => {

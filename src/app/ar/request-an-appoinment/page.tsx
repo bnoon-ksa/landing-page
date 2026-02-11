@@ -13,7 +13,7 @@ export default function RequestAppointmentPage() {
     <>
       <Navbar />
 
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/request-an-appointment-ar.jpg" />
+      <PageBanner bgImage="/images/request-an-appointment-ar.jpg" />
 
       <AppointmentSection />
     </>

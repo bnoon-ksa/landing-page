@@ -13,7 +13,7 @@ export default function AboutUsPage() {
   return (
     <>
       <Navbar />
-      <PageBanner bgImage="https://bnoon.blob.core.windows.net/website/images/aboutus-ar-banner.jpg" />
+      <PageBanner bgImage="/images/aboutus-ar-banner.jpg" />
       <AboutusSection />
       <WhoAreWe />
     </>

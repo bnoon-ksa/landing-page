@@ -7,7 +7,7 @@ function OurServices() {
   const servicesData = [
     {
       id: 1,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/service1.svg",
+      icon: "/images/icons/service1.svg",
       title: "General Care",
       description:
         "Consult with doctors for non-emergency medical conditions—fast and stress-free.",
@@ -16,7 +16,7 @@ function OurServices() {
     },
     {
       id: 2,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/service2.svg",
+      icon: "/images/icons/service2.svg",
       title: "Mental Health",
       description:
         "Your emotional well-being matters—get the support you need privately and securely.",
@@ -30,7 +30,7 @@ function OurServices() {
     },
     {
       id: 3,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/service3.svg",
+      icon: "/images/icons/service3.svg",
       title: "Skin Health",
       description:
         "Receive expert advice and prescriptions without waiting weeks for an in-person visit.",
@@ -39,7 +39,7 @@ function OurServices() {
     },
     {
       id: 4,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/service4.svg",
+      icon: "/images/icons/service4.svg",
       title: "Child Care",
       description:
         "We care for your little ones with trusted doctors and family-friendly support.",
@@ -48,7 +48,7 @@ function OurServices() {
     },
     {
       id: 5,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/service5.svg",
+      icon: "/images/icons/service5.svg",
       title: "Rx Refills",
       description:
         "Stay consistent with treatment—no need to revisit the clinic every time.",
@@ -62,7 +62,7 @@ function OurServices() {
     },
     {
       id: 6,
-      icon: "https://bnoon.blob.core.windows.net/website/images/icons/service6.svg",
+      icon: "/images/icons/service6.svg",
       title: "Chronic Care",
       description:
         "Manage long-term conditions with routine virtual check-ins and follow-ups.",
@@ -73,14 +73,14 @@ function OurServices() {
 
   // Dynamic data for the large image section
   const largeImageData = {
-    backgroundImage: "https://bnoon.blob.core.windows.net/website/images/services/service.jpg",
-    layerImage: "https://bnoon.blob.core.windows.net/website/images/services/layer.svg",
+    backgroundImage: "/images/services/service.jpg",
+    layerImage: "/images/services/layer.svg",
     description: "Explore even more ways we can support your health",
     link: {
       href: "/services",
       text: "View More Services",
     },
-    shapeImage: "https://bnoon.blob.core.windows.net/website/images/services/shape.png",
+    shapeImage: "/images/services/shape.png",
   };
 
   return (

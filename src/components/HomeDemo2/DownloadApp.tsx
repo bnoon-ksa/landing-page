@@ -27,7 +27,7 @@ function DownloadApp() {
                         target="_blank"
                       >
                         <Image
-                          src="https://bnoon.blob.core.windows.net/website/images/app/google-play.svg"
+                          src="/images/app/google-play.svg"
                           alt="google-play"
                           width={193}
                           height={56}
@@ -40,7 +40,7 @@ function DownloadApp() {
                         target="_blank"
                       >
                         <Image
-                          src="https://bnoon.blob.core.windows.net/website/images/app/app-store.svg"
+                          src="/images/app/app-store.svg"
                           alt="app-store"
                           width={193}
                           height={56}
@@ -54,7 +54,7 @@ function DownloadApp() {
               <div className="col-lg-5 col-md-12">
                 <div className="app-image">
                   <Image
-                    src="https://bnoon.blob.core.windows.net/website/images/app/app.png"
+                    src="/images/app/app.png"
                     alt="app"
                     width={1053}
                     height={1013}
@@ -66,7 +66,7 @@ function DownloadApp() {
 
           <div className="app-shape">
             <Image
-              src="https://bnoon.blob.core.windows.net/website/images/app/shape.png"
+              src="/images/app/shape.png"
               alt="shape"
               width={174}
               height={136}

@@ -72,7 +72,7 @@ const ContactUsSection = () => {
           <div className={`col-lg-6 col-md-8 animate-left ${leftVisible ? "show" : ""}`} ref={leftRef}>
             <div className="p-4 contact-border h-100">
               <Image
-                src="https://bnoon.blob.core.windows.net/website/images/icons/c3.png"
+                src="/images/icons/c3.png"
                 alt="Icon 1"
                 width={80}
                 height={80}
@@ -93,7 +93,7 @@ const ContactUsSection = () => {
 
             <div className="p-4 contact-border h-100">
               <Image
-                src="https://bnoon.blob.core.windows.net/website/images/icons/recruiting-icons.png"
+                src="/images/icons/recruiting-icons.png"
                 alt="Icon 2"
                 width={80}
                 height={80}
