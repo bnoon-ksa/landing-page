@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import 'remixicon/fonts/remixicon.css';
+import { getBookingUrl } from "@/utils/booking";
 
 interface Doctor {
   id: number;
@@ -213,7 +214,7 @@ const OurDoctors = () => {
     </div>
   )}
                   <div className="doctors-button">
-                    <Link href="https://book.bnoon.sa/ar" className="btn btn-success doctor-btn doctors-button">طلب موعد</Link>
+                    <Link href={getBookingUrl(doctor.location, "ar")} className="btn btn-success doctor-btn doctors-button">طلب موعد</Link>
                   </div>
                 </div>
               </div>
