@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/bnoon-ksa/landing-page/compare/v1.1.1...v1.1.2) (2026-02-12)
+
+### Bug Fixes
+
+* self-host Arabic fonts and remove test artifacts ([#7](https://github.com/bnoon-ksa/landing-page/issues/7)) ([93a665c](https://github.com/bnoon-ksa/landing-page/commit/93a665c61a64c43e765e633ae09c3642fe9ab9e4))
+
 ## [1.1.1](https://github.com/bnoon-ksa/landing-page/compare/v1.1.0...v1.1.1) (2026-02-11)
 
 ### Bug Fixes
