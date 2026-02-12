@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/bnoon-ksa/landing-page/compare/v1.1.2...v1.2.0) (2026-02-12)
+
+### Features
+
+* add refer a patient page ([#65](https://github.com/bnoon-ksa/landing-page/issues/65)) ([e7b4af2](https://github.com/bnoon-ksa/landing-page/commit/e7b4af2240a8840cdfd11f2a17f63b2ff332dc92))
+
 ## [1.1.2](https://github.com/bnoon-ksa/landing-page/compare/v1.1.1...v1.1.2) (2026-02-12)
 
 ### Bug Fixes
