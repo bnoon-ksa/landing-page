@@ -14,7 +14,6 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "@fontsource/alexandria": "^5.2.8",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "framer-motion": "^12.23.24",
