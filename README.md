@@ -1,5 +1,7 @@
 # Bnoon Landing Page
 
+> **Code Audit Available:** See [AUDIT.md](./AUDIT.md) for the full code review, best practices audit, and prioritized TODO checklist.
+
 Bilingual (Arabic/English) marketing and appointment-booking website for **Bnoon** -- Fertility & Women's Health Centers in Saudi Arabia.
 
 **Production URL:** [https://bnoon.sa](https://bnoon.sa)
