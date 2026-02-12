@@ -13235,12 +13235,7 @@ button#extraDropdown {
         padding: 0 0px 0px 12px;
       border-radius: 10px;
 }
-@font-face {
-  font-family: "Alexandria";
-  src: url("/fonts/Alexandria-Regular-BF6690948fea175.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 .btn-language{
     background-color:  #6c757d00 !important;
     border: 1px solid #fff !important;

@@ -1,15 +1,21 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styles/arabic.css";
 import "../../styles/arabic-responsive.css";
-import { Cairo } from "next/font/google";
+import localFont from "next/font/local";
 import Footer from "@/components/ar/Layout/Footer";
 import GoTop from "@/components/ar/Layout/GoTop";
 import Script from "next/script";
 import type { Metadata } from "next";
-import "@fontsource/alexandria/400.css";
-import "@fontsource/alexandria/700.css";
+import "../../fonts/alexandria.css";
 
-const cairo = Cairo({ variable: "--font-cairo", subsets: ["arabic"], weight: ["400","700"] });
+const cairo = localFont({
+  src: [
+    { path: "../../fonts/cairo-arabic.woff2", style: "normal" },
+    { path: "../../fonts/cairo-latin.woff2", style: "normal" },
+  ],
+  variable: "--font-cairo",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bnoon.sa"),

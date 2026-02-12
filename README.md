@@ -427,14 +427,29 @@ Applied via CSS variable `--font-plus-jakarta-sans` with `display: swap`.
 
 ### Arabic (`/ar`)
 
-- **Cairo** -- loaded via `next/font/google` (Google Fonts), Arabic subset, weights 400/700
-- **Alexandria** -- loaded via `@fontsource/alexandria` (npm package), weights 400/700
+**Cairo** -- loaded via `next/font/local` from `src/fonts/`:
 
-Applied via CSS variable `--font-cairo` with RTL direction.
+| File | Size | Unicode Range |
+|:-----|:-----|:--------------|
+| `cairo-arabic.woff2` | 30 KB | Arabic |
+| `cairo-latin.woff2` | 33 KB | Latin |
 
-### Why self-hosted (English)?
+Applied via CSS variable `--font-cairo` with `display: swap`.
 
-Google Fonts CDN calls were failing during CI builds, causing build failures. Downloading the font files and using `next/font/local` eliminated this external dependency and improved build reliability.
+**Alexandria** -- loaded via self-hosted `@font-face` in `src/fonts/alexandria.css`:
+
+| File | Size | Unicode Range |
+|:-----|:-----|:--------------|
+| `alexandria-arabic-400.woff2` | 12.5 KB | Arabic (weight 400) |
+| `alexandria-arabic-700.woff2` | 13.2 KB | Arabic (weight 700) |
+| `alexandria-latin-400.woff2` | 12.8 KB | Latin (weight 400) |
+| `alexandria-latin-700.woff2` | 13.2 KB | Latin (weight 700) |
+
+Applied via `font-family: "Alexandria"` in CSS with `display: swap`.
+
+### Why self-hosted?
+
+Google Fonts CDN calls were failing during CI builds, causing build failures. Self-hosting all font files eliminates external network dependencies and improves build reliability.
 
 ---
 
