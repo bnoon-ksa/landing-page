@@ -13,9 +13,7 @@ export default function ReferaPatientPage() {
     <>
       <Navbar />
 
-       <PageBanner
-        bgImage={`${CDN_URL}/images/banner/en/refer-a-paitent.jpg`}
-      />
+        <PageBanner bgImage="/images/refer-a-paitent.jpg" />
       <ReferaPatient />
      
     </>
