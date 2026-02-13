@@ -1,48 +1,51 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const NationalDayOffer = () => {
   // Alag images for each section
-  const imageRiyadh = "/images/national-day/infertility-treatments.avif";
-  const imageJeddah = "/images/national-day/icsi-cycles.avif";
+  const imageRiyadh = "/images/national-day/men-infertility.jpg";
+  const imageJeddah = "/images/national-day/ivf-cycles.jpg";
 
   const includesList = [
-    "Ovulation monitoring via ultrasound",
-    "Hormonal tests during treatment cycle",
+    "Ovulation monitoring via ultrasound ",
+    "Hormonal tests during treatment cycle ",
   ];
 
   const excludesList = ["Medications", "Genetic Testing"];
 
   return (
-    <div className="service-overview-area mb-5 mt-5">
+    <div className="service-overview-area mb-5 mt-3">
       <div className="container">
         {/* Riyadh Section */}
         <div className="row justify-content-center align-items-center g-4 mb-3">
           <div className="col-xl-6 col-md-12">
             <div className="service-overview-content text-center">
-              <h2>National Day Special Offer</h2>
+              <h2>Saudi Founding Day Special Offer</h2>
             </div>
             <div className="service-overview-content text-center national-box">
-              <h2 className="national-text">Discount on IVF/ICSI Cycles</h2>
+              <h2 className="national-text national-text-3">Discount on IVF/ICSI Cycles </h2>
             </div>
             <div className="service-overview-content text-center national-box-2 mt-3">
-              <h5 className="national-text-2">Bnoon – Riyadh & Jeddah</h5>
+              <h5 className="national-text-2">BNOON Riyadh | Jeddah | Al Ahsa </h5>
             </div>
           </div>
         </div>
 
         <div className="row justify-content-center align-items-center g-4">
-          <div className="col-xl-5 col-md-12">
+          <div className="col-xl-5 col-md-12  order-2 order-xl-1">
             <div
-              className="service-overview-image"
-              style={{
-                boxShadow: "-50px 50px 0px #d7f2fb",
-                overflow: "hidden",
-                display: "inline-block",
-                margin: "0 0px 0 50",
-              }}
-            >
+  className="national-overview-image"
+  style={{
+    boxShadow: "-50px 50px 0px #d7f2fb",
+    overflow: "hidden",
+    display: "inline-block",
+    margin: "0 0px 0 50px",
+  }}
+>
+
               <Image
                 src={imageJeddah}
                 alt="Service overview"
@@ -52,11 +55,10 @@ const NationalDayOffer = () => {
             </div>
           </div>
 
-          <div className="col-xl-5 col-md-12">
-            <div className="service-overview-content national-list">
+          <div className="col-xl-5 col-md-12 order-1 order-xl-2">
+            <div className="national-overview-content national-list">
               <p className="national-p">
-                On the occasion of Saudi Arabia’s 95th National Day, we’re
-                pleased to offer 15% discount on IVF/ICSI Cycles at Bnoon*.
+                On the occasion of Saudi Founding Day, we’re pleased to offer <strong>15% OFF*</strong> on IVF/ICSI Cycles at Bnoon. 
               </p>
 
               {/* ✅ Includes */}
@@ -105,12 +107,12 @@ const NationalDayOffer = () => {
 
               <p className="national-p">
                 The offer is valid from{" "}
-                <strong>September 15 to October 15, 2025.</strong>
+                <strong>February 11 to March 4, 2026</strong>
                 <br />
                 Last day to start treatment is{" "}
-                <strong>November 15, 2025.</strong>
+                <strong>April 2, 2026.</strong>
               </p>
-              <p className="national-p">*Terms & conditions apply.</p>
+              <p className="national-p">*Terms & conditions apply. This offer is not valid with other offers. </p>
 
               <Link
                 href="https://book.bnoon.sa"
@@ -138,7 +140,17 @@ const NationalDayOffer = () => {
                     height={14}
                     className="me-2"
                   />
-                  <span>Bnoon - Jeddah: 012 680 0800</span>
+                  <span>Bnoon - Jeddah: 012 680 0800 </span>
+                </div>
+                 <div className="d-flex align-items-center">
+                  <Image
+                    src="/images/icons/phone.svg"
+                    alt="Phone"
+                    width={14}
+                    height={14}
+                    className="me-2"
+                  />
+                  <span>Bnoon – Al Ahsa: 0552701553 </span>
                 </div>
               </div>
             </div>
@@ -149,31 +161,27 @@ const NationalDayOffer = () => {
         <div className="row justify-content-center align-items-center g-4 mt-5 mb-3">
           <div className="col-xl-6 col-md-12">
             <div className="service-overview-content text-center national-box">
-              <h2 className="national-text">
-                Discount on Andrology & Men’s Infertility Treatments
-              </h2>
+              <h2 className="national-text national-text-3">Discount on Andrology & Men’s Infertility Treatments </h2>
             </div>
-            <div className="service-overview-content text-center national-box-2 mt-3">
-              <h5 className="national-text-2">Bnoon – Jeddah</h5>
+             <div className="service-overview-content text-center national-box-2 mt-3">
+              <h5 className="national-text-2">Bnoon – Jeddah | Riyadh</h5>
             </div>
           </div>
         </div>
 
         <div className="row justify-content-center align-items-center g-4">
           <div className="col-xl-5 col-md-12">
-            <div className="service-overview-content national-list">
+            <div className="national-overview-content national-list">
               <p className="national-p">
-                Celebrating Saudi Arabia’s 95th National Day, we’re pleased to
-                offer 20% OFF* on Andrology & Men’s Infertility Treatments at
-                Bnoon – Jeddah.
+               Celebrating Saudi Founding Day, we’re pleased to offer <strong>20% OFF*</strong> on Andrology & Men’s Infertility Treatments at Bnoon in Jeddah and Riyadh,
               </p>
               <p className="national-p">
                 The offer is valid from{" "}
-                <strong>September 15 to October 15, 2025.</strong>
+                <strong>February 11 to March 2, 2026.</strong>
                 <br />
-                The offer is not applicable on consultations.
+               The offer is not applicable on consultations.  
               </p>
-              <p className="national-p">*Terms & conditions apply.</p>
+              <p className="national-p">*Terms & conditions apply. This offer is not valid with other offers. </p>
 
               <Link
                 href="https://book.bnoon.sa"
@@ -191,21 +199,32 @@ const NationalDayOffer = () => {
                     height={14}
                     className="me-2"
                   />
-                  <span>Bnoon - Jeddah: 012 680 0800</span>
+                  <span>Bnoon – Jeddah: 012 680 0800 </span>
+                </div>
+                  <div className="d-flex align-items-center">
+                  <Image
+                    src="/images/icons/phone.svg"
+                    alt="Phone"
+                    width={14}
+                    height={14}
+                    className="me-2"
+                  />
+                  <span>Bnoon – Riyadh: 0114448080 </span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="col-xl-5 col-md-12">
-            <div
-              className="service-overview-image mb-3"
-              style={{
-                boxShadow: "50px 50px 0px #d7f2fb",
-                overflow: "hidden",
-                display: "inline-block",
-              }}
-            >
+             <div
+  className="national-overview-image"
+  style={{
+    boxShadow: "-50px 50px 0px #d7f2fb",
+    overflow: "hidden",
+    display: "inline-block",
+    margin: "0 0px 0 50px",
+  }}
+>
               <Image
                 src={imageRiyadh}
                 alt="Service overview"
@@ -215,7 +234,28 @@ const NationalDayOffer = () => {
             </div>
           </div>
         </div>
+          
       </div>
+    <style jsx>{`
+ 
+
+  /* Mobile tweaks */
+  @media (max-width: 768px) {
+    .national-text-3 {
+      font-size: 18px;
+      color:#fff;
+    }
+          .btn-appointment {
+        width: 120px;
+    }
+      .national-text-2 {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0px;
+}
+  }
+`}</style>
+
     </div>
   );
 };
