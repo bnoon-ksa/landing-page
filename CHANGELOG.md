@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/bnoon-ksa/landing-page/compare/v1.2.0...v1.3.0) (2026-02-14)
+
+### Features
+
+* replace hardcoded book.bnoon.sa with runtime feature flag ([#67](https://github.com/bnoon-ksa/landing-page/issues/67)) ([8ff9a6a](https://github.com/bnoon-ksa/landing-page/commit/8ff9a6a1409671e51f0e9251a3daa1df44b69eca))
+
 ## [1.2.0](https://github.com/bnoon-ksa/landing-page/compare/v1.1.2...v1.2.0) (2026-02-12)
 
 ### Features
