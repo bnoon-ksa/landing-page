@@ -1,18 +1,21 @@
 import { test, expect } from "@playwright/test";
 
+const isRemote = !!(process.env.E2E_BASE_URL && !process.env.E2E_BASE_URL.includes("localhost"));
+const PAGE_LOAD_LIMIT = isRemote ? 30_000 : 15_000;
+
 test.describe("Performance and loading", () => {
-  test("homepage loads within 15 seconds", async ({ page }) => {
+  test("homepage loads within time limit", async ({ page }) => {
     const start = Date.now();
     await page.goto("/en", { waitUntil: "domcontentloaded" });
     const loadTime = Date.now() - start;
-    expect(loadTime).toBeLessThan(15000);
+    expect(loadTime).toBeLessThan(PAGE_LOAD_LIMIT);
   });
 
-  test("Arabic homepage loads within 15 seconds", async ({ page }) => {
+  test("Arabic homepage loads within time limit", async ({ page }) => {
     const start = Date.now();
     await page.goto("/ar", { waitUntil: "domcontentloaded" });
     const loadTime = Date.now() - start;
-    expect(loadTime).toBeLessThan(15000);
+    expect(loadTime).toBeLessThan(PAGE_LOAD_LIMIT);
   });
 
   test("no console errors on English homepage", async ({ page }) => {

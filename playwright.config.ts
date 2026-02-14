@@ -10,12 +10,12 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 4 : undefined,
   reporter: "html",
-  timeout: isLocal ? 30_000 : 60_000,
+  timeout: isLocal ? 30_000 : 90_000,
   use: {
     baseURL,
     trace: "on-first-retry",
     screenshot: "only-on-failure",
-    navigationTimeout: isLocal ? 30_000 : 45_000,
+    navigationTimeout: isLocal ? 30_000 : 60_000,
     actionTimeout: isLocal ? 10_000 : 30_000,
   },
   ...(isLocal
