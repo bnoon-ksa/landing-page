@@ -198,12 +198,11 @@ jobs:
       - name: Create deployment ZIP
         run: cd release && zip -r -q ../release.zip .
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Cache release package
+        uses: actions/cache/save@v4
         with:
-          name: release
           path: release.zip
-          retention-days: 3
+          key: release-${{ github.sha }}
 
   # ──────────────────────────────────────────────
   # Job 4: Semantic Release
@@ -300,10 +299,12 @@ jobs:
     needs: [build, semantic-release]
     environment: production
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
+      - name: Restore release package
+        uses: actions/cache/restore@v4
         with:
-          name: release
+          path: release.zip
+          key: release-${{ github.sha }}
+          fail-on-cache-miss: true
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
@@ -424,13 +425,12 @@ jobs:
           CI: true
           E2E_BASE_URL: ${{ env.SITE_URL }}
 
-      - name: Upload test results
+      - name: Cache test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/cache/save@v4
         with:
-          name: playwright-report
           path: playwright-report/
-          retention-days: 7
+          key: playwright-report-${{ github.sha }}-${{ github.run_attempt }}
 
       - name: Regression summary
         if: always()
