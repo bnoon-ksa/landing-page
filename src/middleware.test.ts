@@ -1,16 +1,23 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
+/** Shape returned by our mocked NextResponse methods. */
+interface MockResponse {
+  _type: "redirect" | "next";
+  _url?: string;
+  _status?: number;
+}
+
 /**
  * Mock next/server — return plain objects so we can inspect decisions.
  */
 vi.mock("next/server", () => ({
   NextResponse: {
-    redirect: (url: string, status: number) => ({
-      _type: "redirect" as const,
+    redirect: (url: string, status: number): MockResponse => ({
+      _type: "redirect",
       _url: typeof url === "string" ? url : String(url),
       _status: status,
     }),
-    next: () => ({ _type: "next" as const }),
+    next: (): MockResponse => ({ _type: "next" }),
   },
 }));
 
@@ -49,20 +56,20 @@ describe("booking redirect middleware", () => {
   describe("flag OFF (default)", () => {
     it("passes through when flag is not set", () => {
       const result = middleware(createRequest("/en/request-an-appoinment"));
-      expect((result as Record<string, unknown>)._type).toBe("next");
+      expect((result as unknown as MockResponse)._type).toBe("next");
     });
 
     it('passes through when flag is "false"', () => {
       vi.stubEnv("USE_NEW_BOOKING_APP", "false");
       const result = middleware(createRequest("/en/request-an-appoinment"));
-      expect((result as Record<string, unknown>)._type).toBe("next");
+      expect((result as unknown as MockResponse)._type).toBe("next");
     });
 
     it("passes through even with location param", () => {
       const result = middleware(
         createRequest("/en/request-an-appoinment", { location: "Riyadh" })
       );
-      expect((result as Record<string, unknown>)._type).toBe("next");
+      expect((result as unknown as MockResponse)._type).toBe("next");
     });
   });
 
@@ -78,7 +85,7 @@ describe("booking redirect middleware", () => {
     it("redirects EN to book.bnoon.sa", () => {
       const result = middleware(
         createRequest("/en/request-an-appoinment")
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toBe("https://book.bnoon.sa");
       expect(result._status).toBe(307);
@@ -87,14 +94,14 @@ describe("booking redirect middleware", () => {
     it("redirects AR to book.bnoon.sa/ar", () => {
       const result = middleware(
         createRequest("/ar/request-an-appoinment")
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toBe("https://book.bnoon.sa/ar");
     });
 
     it("passes through unmatched paths", () => {
       const result = middleware(createRequest("/en/about"));
-      expect((result as Record<string, unknown>)._type).toBe("next");
+      expect((result as unknown as MockResponse)._type).toBe("next");
     });
   });
 
@@ -110,7 +117,7 @@ describe("booking redirect middleware", () => {
     it("redirects Riyadh EN to location-specific URL", () => {
       const result = middleware(
         createRequest("/en/request-an-appoinment", { location: "Riyadh" })
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toContain("book.bnoon.sa/en/doctors");
       expect(result._url).toContain("riyadh-granada");
@@ -119,7 +126,7 @@ describe("booking redirect middleware", () => {
     it("redirects Jeddah EN to location-specific URL", () => {
       const result = middleware(
         createRequest("/en/request-an-appoinment", { location: "Jeddah" })
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toContain("jeddah");
     });
@@ -127,7 +134,7 @@ describe("booking redirect middleware", () => {
     it("redirects Al Ahsa EN to location-specific URL", () => {
       const result = middleware(
         createRequest("/en/request-an-appoinment", { location: "Al Ahsa" })
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toContain("al-ahsa");
     });
@@ -135,7 +142,7 @@ describe("booking redirect middleware", () => {
     it("redirects الرياض AR to location-specific URL", () => {
       const result = middleware(
         createRequest("/ar/request-an-appoinment", { location: "الرياض" })
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toContain("book.bnoon.sa/ar/doctors");
       expect(result._url).toContain("riyadh-granada");
@@ -144,7 +151,7 @@ describe("booking redirect middleware", () => {
     it("redirects جدة AR to location-specific URL", () => {
       const result = middleware(
         createRequest("/ar/request-an-appoinment", { location: "جدة" })
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toContain("jeddah");
     });
@@ -152,7 +159,7 @@ describe("booking redirect middleware", () => {
     it("redirects الأحساء AR to location-specific URL", () => {
       const result = middleware(
         createRequest("/ar/request-an-appoinment", { location: "الأحساء" })
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toContain("al-ahsa");
     });
@@ -162,7 +169,7 @@ describe("booking redirect middleware", () => {
         createRequest("/en/request-an-appoinment", {
           location: "Unknown City",
         })
-      ) as Record<string, unknown>;
+      ) as unknown as MockResponse;
       expect(result._type).toBe("redirect");
       expect(result._url).toBe("https://book.bnoon.sa");
     });
