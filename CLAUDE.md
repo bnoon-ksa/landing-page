@@ -220,20 +220,18 @@ A full code audit is documented in `AUDIT.md`. Below is a summary of the most im
 - **Direct DOM manipulation** — `document.querySelector` / `classList` used instead of React state/refs.
 - **Duplicate MongoDB connection logic** — `subscribe/route.ts` has its own inline `connectDB`, duplicating `lib/mongodb.ts`.
 
-### Resolved Issues (for reference)
+### Open Issues
 
-These were previously open and have been closed:
-
-| PR/Issue | Description | Version |
-|----------|-------------|---------|
-| [#67](https://github.com/bnoon-ksa/landing-page/issues/67) | Runtime feature flag for booking redirect | v1.3.0 |
-| [#65](https://github.com/bnoon-ksa/landing-page/issues/65) | Add refer-a-patient page | v1.2.0 |
-| [#26](https://github.com/bnoon-ksa/landing-page/issues/26) | Comprehensive code audit report | v1.1.2 |
-| [#7](https://github.com/bnoon-ksa/landing-page/issues/7) | Self-host Arabic fonts, remove test artifacts | v1.1.2 |
-| [#6](https://github.com/bnoon-ksa/landing-page/issues/6) | Azure infrastructure details in README | v1.1.1 |
-| [#5](https://github.com/bnoon-ksa/landing-page/issues/5) | Restore local images, branch-specific booking URLs | v1.1.1 |
-| [#3](https://github.com/bnoon-ksa/landing-page/issues/3) | PR validation CI pipeline | v1.1.0 |
-| [#2](https://github.com/bnoon-ksa/landing-page/issues/2) | Security, performance, SEO, error handling overhaul | v1.0.6 |
-| [#1](https://github.com/bnoon-ksa/landing-page/issues/1) | Book appointment redirect | v1.0.0 |
+| Issue | Description |
+|-------|-------------|
+| [#67](https://github.com/bnoon-ksa/landing-page/issues/67) | Runtime feature flag for booking redirect |
+| [#65](https://github.com/bnoon-ksa/landing-page/issues/65) | Add refer-a-patient page |
+| [#26](https://github.com/bnoon-ksa/landing-page/issues/26) | Comprehensive code audit report |
+| [#7](https://github.com/bnoon-ksa/landing-page/issues/7) | Self-host Arabic fonts, remove test artifacts |
+| [#6](https://github.com/bnoon-ksa/landing-page/issues/6) | Azure infrastructure details in README |
+| [#5](https://github.com/bnoon-ksa/landing-page/issues/5) | Restore local images, branch-specific booking URLs |
+| [#3](https://github.com/bnoon-ksa/landing-page/issues/3) | PR validation CI pipeline |
+| [#2](https://github.com/bnoon-ksa/landing-page/issues/2) | Security, performance, SEO, error handling overhaul |
+| [#1](https://github.com/bnoon-ksa/landing-page/issues/1) | Book appointment redirect |
 
 For the full prioritized TODO checklist with file-level references, see `AUDIT.md`.
