@@ -54,7 +54,7 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
           <div className="d-flex align-items-center  space-mobile">
             <Link href="/ar" className="navbar-brand d-flex align-items-center">
               <Image
-                src="/images/bnoon-logo.avif"
+                src="/images/bnoon-logo.svg"
                 alt="Bnoon"
                 width={183}
                 height={75}

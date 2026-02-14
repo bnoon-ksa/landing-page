@@ -57,7 +57,7 @@ function Navbar() {
             <Link href="/en" className="navbar-brand d-flex align-items-center">
               <Image
                 src="/images/bnoon-logo.svg"
-                alt="Doutor"
+                alt="Bnoon"
                 width={183}
                 height={75}
               />
