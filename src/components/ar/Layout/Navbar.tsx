@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
 import { menus } from "@/components/ar/Layout/Menus";
-import { getBookNowUrl, isExternalBooking } from "@/utils/booking";
+import { getBookNowUrl } from "@/utils/booking";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Navbar() {
@@ -170,7 +170,6 @@ const [clickedItem, setClickedItem] = useState<string | null>(null); // click hi
   {/* Appointment */}
   <a
     href={getBookNowUrl("ar")}
-    {...(isExternalBooking() ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     className="btn btn-success btn-appointment"
   >
     طلب موعد

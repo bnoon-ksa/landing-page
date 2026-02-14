@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { getBookNowUrl, isExternalBooking } from "@/utils/booking";
+import { getBookNowUrl } from "@/utils/booking";
 
 
 

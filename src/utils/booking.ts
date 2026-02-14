@@ -1,13 +1,5 @@
 /**
- * Whether booking links point to the external book.bnoon.sa app.
- * Always false — runtime redirect is handled by middleware.ts instead.
- */
-export function isExternalBooking(): boolean {
-  return false;
-}
-
-/**
- * Returns the "Book Now" URL for the given locale.
+ * Returns the generic "Book Now" URL for the given locale.
  * Always returns the internal appointment form path.
  * Runtime redirect to book.bnoon.sa is handled by middleware.ts.
  */
@@ -18,15 +10,23 @@ export function getBookNowUrl(locale: "en" | "ar" = "en"): string {
 }
 
 /**
- * Returns the booking URL for a doctor page.
- * Always returns the internal appointment form path.
- * Runtime redirect to book.bnoon.sa is handled by middleware.ts.
+ * Returns the booking URL for a doctor page based on location and locale.
+ * Always returns the internal appointment form path. When a known location
+ * is provided, it's added as a `?location=` query param so the middleware
+ * can redirect to the location-specific book.bnoon.sa URL at runtime.
  */
 export function getBookingUrl(
-  _location: string | undefined,
+  location: string | undefined,
   locale: "en" | "ar" = "en"
 ): string {
-  return locale === "ar"
-    ? "/ar/request-an-appoinment"
-    : "/en/request-an-appoinment";
+  const base =
+    locale === "ar"
+      ? "/ar/request-an-appoinment"
+      : "/en/request-an-appoinment";
+
+  const trimmed = location?.trim();
+  if (trimmed) {
+    return `${base}?location=${encodeURIComponent(trimmed)}`;
+  }
+  return base;
 }

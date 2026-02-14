@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getBookNowUrl, isExternalBooking } from "@/utils/booking";
+import { getBookNowUrl } from "@/utils/booking";
 
 const NationalDayOffer = () => {
   // Alag images for each section

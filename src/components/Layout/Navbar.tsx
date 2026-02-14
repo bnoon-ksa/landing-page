@@ -7,7 +7,7 @@ import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { menus } from "@/components/Layout/Menus";
-import { getBookNowUrl, isExternalBooking } from "@/utils/booking";
+import { getBookNowUrl } from "@/utils/booking";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Navbar() {
@@ -178,7 +178,6 @@ function Navbar() {
 
               <a
                 href={getBookNowUrl("en")}
-                {...(isExternalBooking() ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="btn btn-success btn-appointment"
               >
                 Book an Appointment

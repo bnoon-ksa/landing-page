@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { getBookNowUrl, isExternalBooking } from "@/utils/booking";
+import { getBookNowUrl } from "@/utils/booking";
 
 const MobileTopTools: React.FC = () => {
   return (
