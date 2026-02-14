@@ -176,7 +176,7 @@ function Navbar() {
               )}
 
               <a
-                href="https://book.bnoon.sa"
+                href="https://www.bnoon.sa/en/request-an-appoinment"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-success btn-appointment"
