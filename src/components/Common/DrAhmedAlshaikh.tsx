@@ -2,6 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getBookNowUrl, isExternalBooking } from "@/utils/booking";
 
 const DrAhmedAlshaikh = () => {
   const imageRiyadh = "/images/doctors/dr-ahmed-bekar.avif";
@@ -131,8 +132,9 @@ const DrAhmedAlshaikh = () => {
             />
             <div className="mt-3">
               <a
-                href="https://book.bnoon.sa"
+                href={getBookNowUrl("en")}
                 className="btn btn-success doctor-profile-btn"
+                {...(isExternalBooking() ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 Request an Appointment
               </a>

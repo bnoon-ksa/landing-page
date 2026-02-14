@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getBookNowUrl, isExternalBooking } from "@/utils/booking";
 
 const NationalDayOffer = () => {
   // Alag images for each section
@@ -113,7 +114,7 @@ const NationalDayOffer = () => {
               <p className="national-p">*Terms & conditions apply.</p>
 
               <Link
-                href="https://book.bnoon.sa"
+                href={getBookNowUrl("en")}
                 className="btn btn-primary contact-btn"
               >
                 BOOK NOW
@@ -176,7 +177,7 @@ const NationalDayOffer = () => {
               <p className="national-p">*Terms & conditions apply.</p>
 
               <Link
-                href="https://book.bnoon.sa"
+                href={getBookNowUrl("en")}
                 className="btn btn-primary contact-btn"
               >
                 BOOK NOW

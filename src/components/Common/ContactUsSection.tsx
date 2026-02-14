@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getBookNowUrl, isExternalBooking } from "@/utils/booking";
 
 
 
@@ -74,7 +75,7 @@ import Link from "next/link";
                 className="mb-3"
               />
               <h5 className="mb-3"><strong>Request an Appointment</strong></h5>
-              <Link href="https://book.bnoon.sa" className="btn btn-primary mb-3 contact-btn">
+              <Link href={getBookNowUrl("en")} className="btn btn-primary mb-3 contact-btn">
                 Click here
               </Link>
               <p>
@@ -95,7 +96,7 @@ import Link from "next/link";
                 className="mb-3"
               />
               <h5 className="mb-3"><strong>Prefer to speak with us directly?</strong></h5>
-              <Link href="https://book.bnoon.sa" className="btn btn-primary mb-3 contact-btn">
+              <Link href={getBookNowUrl("en")} className="btn btn-primary mb-3 contact-btn">
                 Call us
               </Link>
               <p>
