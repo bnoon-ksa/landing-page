@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/bnoon-ksa/landing-page/compare/v1.3.0...v1.3.1) (2026-02-14)
+
+### Bug Fixes
+
+* navbar logo colors — blue icon + white text ([7e66ef4](https://github.com/bnoon-ksa/landing-page/commit/7e66ef4716110fb2723209496d2a5efa44cde9c0)), closes [#39bced](https://github.com/bnoon-ksa/landing-page/issues/39bced) [#ffffff](https://github.com/bnoon-ksa/landing-page/issues/ffffff)
+
 ## [1.3.0](https://github.com/bnoon-ksa/landing-page/compare/v1.2.0...v1.3.0) (2026-02-14)
 
 ### Features
