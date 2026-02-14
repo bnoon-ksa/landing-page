@@ -1,3 +1,9 @@
+## [1.3.2](https://github.com/bnoon-ksa/landing-page/compare/v1.3.1...v1.3.2) (2026-02-14)
+
+### Bug Fixes
+
+* inline SVG logo and enable image caching ([e140602](https://github.com/bnoon-ksa/landing-page/commit/e140602d40c474af1af454d71c9b3ff21863c4a7))
+
 ## [1.3.1](https://github.com/bnoon-ksa/landing-page/compare/v1.3.0...v1.3.1) (2026-02-14)
 
 ### Bug Fixes
