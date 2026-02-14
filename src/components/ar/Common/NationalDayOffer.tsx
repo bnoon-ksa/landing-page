@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { getBookNowUrl } from "@/utils/booking";
 import Image from "next/image";
 
 const NationalDayOffer = () => {
@@ -95,7 +96,7 @@ const NationalDayOffer = () => {
               <p className="national-p">تطبق الشروط والأحكام۔*</p>
 
               <Link
-                href="https://book.bnoon.sa/ar"
+                href={getBookNowUrl("ar")}
                 className="btn btn-primary contact-btn"
               >
               احجز موعدك اليوم
@@ -194,7 +195,7 @@ const NationalDayOffer = () => {
               <p className="national-p">تطبق الشروط والأحكام۔*</p>
 
               <Link
-                href="https://book.bnoon.sa/ar"
+                href={getBookNowUrl("ar")}
                 className="btn btn-primary contact-btn"
               >
                احجز موعدك اليوم

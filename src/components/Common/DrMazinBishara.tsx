@@ -2,6 +2,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getBookNowUrl } from "@/utils/booking";
 
 const DrMazinBishara  = () => {
   const imageRiyadh = "/images/doctors/dr-mazin-bishra.avif";
@@ -135,7 +136,7 @@ Dr. Mazin Bishara
   />
   <div className="mt-3">
     <a
-      href="https://book.bnoon.sa"
+      href={getBookNowUrl("en")}
       className="btn btn-success doctor-profile-btn"
     >
       Request an Appointment

@@ -7,6 +7,7 @@ import { FaPhone } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { menus } from "@/components/Layout/Menus";
+import { getBookNowUrl } from "@/utils/booking";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Navbar() {
@@ -176,9 +177,7 @@ function Navbar() {
               )}
 
               <a
-                href="https://www.bnoon.sa/en/request-an-appoinment"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={getBookNowUrl("en")}
                 className="btn btn-success btn-appointment"
               >
                 Book an Appointment

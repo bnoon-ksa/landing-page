@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { getBookNowUrl } from "@/utils/booking";
 
 const MobileTopTools: React.FC = () => {
   return (
@@ -34,7 +35,7 @@ const MobileTopTools: React.FC = () => {
       </a>
 
       {/* Book Appointment */}
-      <a href="https://book.bnoon.sa" className="tool-btn">
+      <a href={getBookNowUrl("en")} className="tool-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="29.5 29.5 141 141"

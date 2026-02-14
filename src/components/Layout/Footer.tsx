@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MobileTopTools from "@/components/Common/MobileTopTools"; // ye aapka custom component hoga
+import { getBookNowUrl } from "@/utils/booking";
 import "remixicon/fonts/remixicon.css";
 
 // Define interfaces for our data structure
@@ -122,7 +123,7 @@ const footerData: FooterData = {
          { text: "Fertility Guide", url: "/en/fertility-guide" },
         { text: "Patients' Rights & Responsibilities", url: "/en/patients-rights" },
          { text: "Contact Us", url: "/en/contact-us" },
-        { text: "Book an Appointment", url: "https://book.bnoon.sa", isExternal: true },
+        { text: "Book an Appointment", url: getBookNowUrl("en") },
          { text: "Submit Your Feedback", url: "/en/submit-feedback" },
       ],
     },

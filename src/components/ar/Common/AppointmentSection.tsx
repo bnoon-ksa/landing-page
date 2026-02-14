@@ -586,7 +586,8 @@ const [showThankYou, setShowThankYou] = useState(false);
                   <Image
                     src="/images/arrow.png"
                     alt="arrow"
-                    style={{ width: "16px", height: "16px" }}
+                    width={16}
+                    height={16}
                   />
                 </button>
 
@@ -668,7 +669,8 @@ const [showThankYou, setShowThankYou] = useState(false);
                   <Image
                     src="/images/arrow.png"
                     alt="arrow"
-                    style={{ width: "16px", height: "16px" }}
+                    width={16}
+                    height={16}
                   />
                 </button>
 
@@ -745,7 +747,8 @@ const [showThankYou, setShowThankYou] = useState(false);
                   <Image
                     src="/images/arrow.png"
                     alt="arrow"
-                    style={{ width: "16px", height: "16px" }}
+                    width={16}
+                    height={16}
                   />
                 </button>
 
@@ -825,7 +828,8 @@ const [showThankYou, setShowThankYou] = useState(false);
     <Image
       src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
@@ -989,7 +993,8 @@ const [showThankYou, setShowThankYou] = useState(false);
                   <Image
                     src="/images/arrow.png"
                     alt="arrow"
-                    style={{ width: "16px", height: "16px" }}
+                    width={16}
+                    height={16}
                   />
                 </button>
 
@@ -1060,7 +1065,8 @@ const [showThankYou, setShowThankYou] = useState(false);
                   <Image
                     src="/images/arrow.png"
                     alt="arrow"
-                    style={{ width: "16px", height: "16px" }}
+                    width={16}
+                    height={16}
                   />
                 </button>
 
@@ -1312,7 +1318,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 }}
               >
                 <span>{formData.preferredTime || "9AM to 8PM"}</span>
-                <Image src="/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
+                <Image src="/images/arrow.png" alt="arrow" width={16} height={16} />
               </button>
 
               {/* Dropdown List */}
@@ -1398,7 +1404,7 @@ const [showThankYou, setShowThankYou] = useState(false);
                 }}
               >
                 <span>{formData.howHeard || "كيف سمعت عنا؟"}</span>
-                <Image src="/images/arrow.png" alt="arrow" style={{ width: "16px", height: "16px" }} />
+                <Image src="/images/arrow.png" alt="arrow" width={16} height={16} />
               </button>
 
               {/* Dropdown List */}

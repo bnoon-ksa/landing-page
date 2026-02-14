@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getBookNowUrl } from "@/utils/booking";
 
 
 
@@ -79,7 +80,7 @@ const ContactUsSection = () => {
                 className="mb-3"
               />
               <h5 className="mb-3 loc-text">احجزوا موعدكم </h5>
-              <Link href="https://book.bnoon.sa/ar" className="btn btn-primary mb-3 contact-btn">
+              <Link href={getBookNowUrl("ar")} className="btn btn-primary mb-3 contact-btn">
                 انقر هنا
               </Link>
               <p className="text-center">
@@ -100,7 +101,7 @@ const ContactUsSection = () => {
                 className="mb-3"
               />
               <h5 className="mb-3 loc-text">تفضلون التحدث معنا مباشرة؟ </h5>
-              <Link href="https://book.bnoon.sa/ar" className="btn btn-primary mb-3 contact-btn">
+              <Link href={getBookNowUrl("ar")} className="btn btn-primary mb-3 contact-btn">
                 اتصلوا بنا
               </Link>
               <p className="text-center" style={{ direction: "ltr", textAlign: "left" }}>

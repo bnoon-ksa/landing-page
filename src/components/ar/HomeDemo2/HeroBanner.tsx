@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { getBookNowUrl } from "@/utils/booking";
 
 function HeroBannerAr() {
   const [bgPosition, setBgPosition] = useState(0);
@@ -26,7 +27,7 @@ function HeroBannerAr() {
       video: "https://bnoon.blob.core.windows.net/website/videos/ar-banner/3.mp4",
       title: "المستقبل الواعد في <br>مجال علاجات الإخصاب",
       desc: "الآن في الرياض وجدة والأحساء  ",
-      buttonLink: "https://book.bnoon.sa/ar",
+      buttonLink: getBookNowUrl("ar"),
       buttonText: "احجز الآن",
     },
     {
@@ -35,7 +36,7 @@ function HeroBannerAr() {
       desc: "الأمل يبدأ مع بنون",
       titleColor: "#004E78",
       descColor: "#004E78",
-      buttonLink: "https://book.bnoon.sa/ar",
+      buttonLink: getBookNowUrl("ar"),
       buttonText: "احجز الآن",
     },
     {
@@ -44,14 +45,14 @@ function HeroBannerAr() {
       desc: "لتحقيق حلمهم في الأمومة والأبوة",
       titleColor: "#004E78",
       descColor: "#004E78",
-      buttonLink: "https://book.bnoon.sa/ar",
+      buttonLink: getBookNowUrl("ar"),
       buttonText: "احجز الآن",
     },
     {
       video: "https://bnoon.blob.core.windows.net/website/videos/ar-banner/6.mp4",
       title: "الجيل القادم من <br>علاجات الإخصاب",
       desc: "الآن في السعودية",
-      buttonLink: "https://book.bnoon.sa/ar",
+      buttonLink: getBookNowUrl("ar"),
       buttonText: "احجز الآن",
     },
     {
@@ -60,7 +61,7 @@ function HeroBannerAr() {
       desc: "احجزوا موعدكم معنا اليوم",
       titleColor: "#004E78",
       descColor: "#004E78",
-      buttonLink: "https://book.bnoon.sa/ar",
+      buttonLink: getBookNowUrl("ar"),
       buttonText: "احجز الآن",
     },
   ];
@@ -154,8 +155,7 @@ function HeroBannerAr() {
           <div className="banner-btn">
             <a
               href={slides[currentSlide].buttonLink}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(slides[currentSlide].buttonLink.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="btn btn-success btn-appointment btn-banner"
             >
               {slides[currentSlide].buttonText}

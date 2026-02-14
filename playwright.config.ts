@@ -15,7 +15,7 @@ export default defineConfig({
     baseURL,
     trace: "on-first-retry",
     screenshot: "only-on-failure",
-    navigationTimeout: isLocal ? 15_000 : 45_000,
+    navigationTimeout: isLocal ? 30_000 : 45_000,
     actionTimeout: isLocal ? 10_000 : 30_000,
   },
   ...(isLocal
@@ -24,7 +24,7 @@ export default defineConfig({
           command: "npx next start -p 3099",
           port: 3099,
           reuseExistingServer: !process.env.CI,
-          timeout: 30000,
+          timeout: 60_000,
         },
       }
     : {}),

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileTopTools from "@/components/ar/Common/MobileTopTools"; // ye aapka custom component hoga
 
+import { getBookNowUrl } from "@/utils/booking";
 import "remixicon/fonts/remixicon.css";
 // Define interfaces for our data structure
 interface SocialLink {
@@ -122,7 +123,7 @@ const footerData: FooterData = {
         { text: "دليل الخصوبة", url: "/ar/fertility-guide" },
         { text: "حقوق وواجبات المرضى", url: "/ar/patients-rights" },
         { text: "تواصل معنا", url: "/ar/contact-us" },
-        { text: "طلب موعد", url: "https://book.bnoon.sa/ar", isExternal: true },
+        { text: "طلب موعد", url: getBookNowUrl("ar") },
         { text: "شاركونا تجربتكم", url: "/ar/submit-feedback" },
       ],
     },

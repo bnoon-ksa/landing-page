@@ -1,31 +1,32 @@
-const BOOKING_URLS_EN: Record<string, string> = {
-  Riyadh:
-    "https://book.bnoon.sa/en/doctors?selectedClinicLocation=riyadh-granada&selectedService=2245&selectedServiceCode=API002",
-  Jeddah:
-    "https://book.bnoon.sa/en/doctors?selectedClinicLocation=jeddah&selectedService=1439&selectedServiceCode=API002",
-  "Al Ahsa":
-    "https://book.bnoon.sa/en/doctors?selectedClinicLocation=al-ahsa&selectedService=2406&selectedServiceCode=API002",
-};
-
-const BOOKING_URLS_AR: Record<string, string> = {
-  "الرياض":
-    "https://book.bnoon.sa/ar/doctors?selectedClinicLocation=riyadh-granada&selectedService=2245&selectedServiceCode=API002",
-  "جدة":
-    "https://book.bnoon.sa/ar/doctors?selectedClinicLocation=jeddah&selectedService=1439&selectedServiceCode=API002",
-  "الأحساء":
-    "https://book.bnoon.sa/ar/doctors?selectedClinicLocation=al-ahsa&selectedService=2406&selectedServiceCode=API002",
-};
+/**
+ * Returns the generic "Book Now" URL for the given locale.
+ * Always returns the internal appointment form path.
+ * Runtime redirect to book.bnoon.sa is handled by middleware.ts.
+ */
+export function getBookNowUrl(locale: "en" | "ar" = "en"): string {
+  return locale === "ar"
+    ? "/ar/request-an-appoinment"
+    : "/en/request-an-appoinment";
+}
 
 /**
- * Returns the book.bnoon.sa URL for General Fertility Consultation
- * based on doctor location and language.
+ * Returns the booking URL for a doctor page based on location and locale.
+ * Always returns the internal appointment form path. When a known location
+ * is provided, it's added as a `?location=` query param so the middleware
+ * can redirect to the location-specific book.bnoon.sa URL at runtime.
  */
 export function getBookingUrl(
   location: string | undefined,
   locale: "en" | "ar" = "en"
 ): string {
-  const trimmed = location?.trim() ?? "";
-  const urls = locale === "ar" ? BOOKING_URLS_AR : BOOKING_URLS_EN;
-  const fallback = locale === "ar" ? "https://book.bnoon.sa/ar" : "https://book.bnoon.sa";
-  return urls[trimmed] ?? fallback;
+  const base =
+    locale === "ar"
+      ? "/ar/request-an-appoinment"
+      : "/en/request-an-appoinment";
+
+  const trimmed = location?.trim();
+  if (trimmed) {
+    return `${base}?location=${encodeURIComponent(trimmed)}`;
+  }
+  return base;
 }

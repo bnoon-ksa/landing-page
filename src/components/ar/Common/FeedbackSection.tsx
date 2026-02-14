@@ -164,9 +164,10 @@ const [isOpen, setIsOpen] = useState(false); // inside FeedbackSection
     <span>{formData.branch || "اختر الفرع"}</span>
     {/* Arrow icon on right */}
     <Image
-      src="/images/arrow.png" // your arrow icon path
+      src="/images/arrow.png"
       alt="arrow"
-      style={{ width: "16px", height: "16px" }}
+      width={16}
+      height={16}
     />
   </button>
 
