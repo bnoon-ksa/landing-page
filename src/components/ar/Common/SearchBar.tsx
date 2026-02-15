@@ -258,7 +258,12 @@ const doctorsToShow =
       </div>
 
       {/* ✅ Animation CSS */}
-      <style jsx>{`
+        <style jsx global>{`
+      img.arrow-icon {
+    width: 12px !important;
+    height: auto;
+    margin-right: auto;
+}
       .doctor-select,
 .location-select {
   appearance: none;
