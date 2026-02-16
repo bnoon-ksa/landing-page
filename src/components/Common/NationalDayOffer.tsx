@@ -1,8 +1,8 @@
 "use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { getBookNowUrl } from "@/utils/booking";
 
 const NationalDayOffer = () => {
   // Alag images for each section
@@ -115,7 +115,7 @@ const NationalDayOffer = () => {
               <p className="national-p">*Terms & conditions apply. This offer is not valid with other offers. </p>
 
               <Link
-                href={getBookNowUrl("en")}
+                href="https://book.bnoon.sa"
                 className="btn btn-primary contact-btn"
               >
                 BOOK NOW
@@ -184,7 +184,7 @@ const NationalDayOffer = () => {
               <p className="national-p">*Terms & conditions apply. This offer is not valid with other offers. </p>
 
               <Link
-                href={getBookNowUrl("en")}
+                href="https://book.bnoon.sa"
                 className="btn btn-primary contact-btn"
               >
                 BOOK NOW
@@ -261,4 +261,3 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
-
