@@ -115,7 +115,7 @@ const NationalDayOffer = () => {
               <p className="national-p">*Terms & conditions apply. This offer is not valid with other offers. </p>
 
               <Link
-                href="en/request-an-appoinment"
+                href="/en/request-an-appoinment"
                 className="btn btn-primary contact-btn"
               >
                 BOOK NOW
@@ -204,3 +204,4 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
