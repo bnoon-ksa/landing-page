@@ -34,7 +34,7 @@ const NationalDayOffer = () => {
           </div>
         </div>
 
-        <div className="row justify-content-center align-items-center g-4">
+        <div className="row justify-content-center align-items-center g-4 pb-3">
           <div className="col-xl-5 col-md-12  order-2 order-xl-1">
             <div
   className="national-overview-image"
@@ -115,7 +115,7 @@ const NationalDayOffer = () => {
               <p className="national-p">*Terms & conditions apply. This offer is not valid with other offers. </p>
 
               <Link
-                href="https://book.bnoon.sa"
+                href="en/request-an-appoinment"
                 className="btn btn-primary contact-btn"
               >
                 BOOK NOW
@@ -158,86 +158,15 @@ const NationalDayOffer = () => {
         </div>
 
         {/* Jeddah Section */}
-        <div className="row justify-content-center align-items-center g-4 mt-5 mb-3">
-          <div className="col-xl-6 col-md-12">
-            <div className="service-overview-content text-center national-box">
-              <h2 className="national-text national-text-3">Discount on Andrology & Men’s Infertility Treatments </h2>
-            </div>
-             <div className="service-overview-content text-center national-box-2 mt-3">
-              <h5 className="national-text-2">Bnoon – Jeddah | Riyadh</h5>
-            </div>
-          </div>
-        </div>
+     
 
-        <div className="row justify-content-center align-items-center g-4">
-          <div className="col-xl-5 col-md-12">
-            <div className="national-overview-content national-list">
-              <p className="national-p">
-               Celebrating Saudi Founding Day, we’re pleased to offer <strong>20% OFF*</strong> on Andrology & Men’s Infertility Treatments at Bnoon in Jeddah and Riyadh,
-              </p>
-              <p className="national-p">
-                The offer is valid from{" "}
-                <strong>February 11 to March 2, 2026.</strong>
-                <br />
-               The offer is not applicable on consultations.  
-              </p>
-              <p className="national-p">*Terms & conditions apply. This offer is not valid with other offers. </p>
 
-              <Link
-                href="https://book.bnoon.sa"
-                className="btn btn-primary contact-btn"
-              >
-                BOOK NOW
-              </Link>
-
-              <div className="d-flex flex-column mt-3 gap-2">
-                <div className="d-flex align-items-center">
-                  <Image
-                    src="/images/icons/phone.svg"
-                    alt="Phone"
-                    width={14}
-                    height={14}
-                    className="me-2"
-                  />
-                  <span>Bnoon – Jeddah: 012 680 0800 </span>
-                </div>
-                  <div className="d-flex align-items-center">
-                  <Image
-                    src="/images/icons/phone.svg"
-                    alt="Phone"
-                    width={14}
-                    height={14}
-                    className="me-2"
-                  />
-                  <span>Bnoon – Riyadh: 0114448080 </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-xl-5 col-md-12">
-             <div
-  className="national-overview-image"
-  style={{
-    boxShadow: "-50px 50px 0px #d7f2fb",
-    overflow: "hidden",
-    display: "inline-block",
-    margin: "0 0px 0 50px",
-  }}
->
-              <Image
-                src={imageRiyadh}
-                alt="Service overview"
-                width={580}
-                height={450}
-              />
-            </div>
-          </div>
-        </div>
           
       </div>
     <style jsx>{`
- 
+ .national-p{
+ color:#000;
+ }
 
   /* Mobile tweaks */
   @media (max-width: 768px) {
