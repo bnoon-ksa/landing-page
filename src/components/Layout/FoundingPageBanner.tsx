@@ -13,13 +13,13 @@ function HeroBanner() {
   const slides = [
     {
   video: "/images/banner-video/banner-2.mp4",
-  title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
-  desc: "<strong>Benefit from our Founding Day Special IVF Offer* </strong>",
+  title: "<span class='rowdies-font'>Saudi Founding Day <br>Special Offer</span>",
+  desc: "",
   titleColor: "#004E78",
   descColor: "#fff",
   extra: "",
-  buttonLink: "en",
-  buttonText: "Explore Our Offer ",
+  buttonLink: "",
+  buttonText: " ",
 
   descClass: "special-desc",   // 👈 ADD THIS
 },
@@ -110,16 +110,7 @@ function HeroBanner() {
 />
 
 
-          <div className="banner-btn">
-            <a
-              href={slides[currentSlide].buttonLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-success btn-appointment explore-btn btn-banner"
-            >
-              {slides[currentSlide].buttonText}
-            </a>
-          </div>
+        
 
           <p
             className="terms-text"
