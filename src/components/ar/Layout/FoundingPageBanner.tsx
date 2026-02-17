@@ -13,8 +13,8 @@ function HeroBanner() {
   const slides = [
     {
   video: "/images/banner-video/banner4.mp4",
-  title: "<span class='rowdies-font'>حلمكم ما هو بعيد </span>",
-  desc: "استفيدوا من عرض يوم التأسيس <br>الخاص بالحقن المجهري* في بنون ",
+  title: "<span class='heading'>العرض الخاص بيوم <br>التأسيس السعودي</span>",
+  desc: "",
   titleColor: "#004E78",
   descColor: "#fff",
   extra: "",
@@ -102,23 +102,10 @@ function HeroBanner() {
             dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
           />
 
-        <p
-  className={slides[currentSlide].descClass || ""}
-  dangerouslySetInnerHTML={{ __html: slides[currentSlide].desc }}
-  style={{ color: slides[currentSlide].descColor || "#fff" }}
-/>
+       
 
 
-          <div className="banner-btn">
-            <a
-              href={slides[currentSlide].buttonLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-success btn-appointment btn-banner"
-            >
-              {slides[currentSlide].buttonText}
-            </a>
-          </div>
+      
 
           <p
             className="terms-text"
@@ -163,6 +150,9 @@ function HeroBanner() {
 
       {/* 🔹 Reveal Animation CSS */}
       <style jsx>{`
+  .reveal-text {
+    margin-top: 50px;
+}
         .hidden-text {
           opacity: 0;
           transform: translateX(-80px);
@@ -177,6 +167,13 @@ function HeroBanner() {
     margin-top: 18px;
     line-height: 1.7;
   }
+     @media (max-width: 768px) {
+     .reveal-text {
+    margin-top: 40px;
+}
+ 
+      }
+
       `}</style>
     </div>
   );
