@@ -5,10 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NationalDayOffer = () => {
-  // ✅ Replace these paths with your exact assets (same as screenshot)
-  const heroBg = "/images/national-day/hero-banner.jpg"; // top banner background image
-  const leftCardImg = "/images/national-day/ivf-cycles.jpg"; // left card image
-  
+  const leftCardImg = "/images/national-day/ivf-cycles.jpg";
 
   const includesList = [
     "Ovulation monitoring via ultrasound",
@@ -19,59 +16,46 @@ const NationalDayOffer = () => {
 
   return (
     <div className="founding-offer-page">
-      {/* ✅ HERO BANNER (like screenshot) */}
-    
-
-      {/* ✅ MAIN CONTENT CARD */}
       <section className="offer-section">
         <div className="container">
-          <div className="">
+          {/* ✅ CARD */}
+          <div className="offer-card">
             <div className="row g-0 align-items-stretch">
-              {/* LEFT IMAGE CARD */}
-              <div className="col-lg-6 col-md-6 image-align order-2 order-lg-1 ivf-image">
-
-                <div className="ivf-image-height"
-              style={{
-                boxShadow: "-50px 50px 0px #d7f2fb",
-                overflow: "hidden",
-                display: "inline-block",
-              }} >
-                  {/* Optional stamp overlay (top-left) */}
-                
-                  <Image
-                    src={leftCardImg}
-                    alt="IVF/ICSI Offer"
-                    width={900}
-                    height={700}
-                    className="left-img"
-                  />
+              {/* ✅ IMAGE (Desktop left, Mobile bottom) */}
+              <div className="col-lg-6 col-md-6 order-2 order-lg-1">
+                <div className="left-img-wrap">
+                  <div className="img-shadow-box">
+                    <Image
+                      src={leftCardImg}
+                      alt="IVF/ICSI Offer"
+                      width={900}
+                      height={700}
+                      className="left-img"
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* RIGHT CONTENT */}
+              {/* ✅ CONTENT (Desktop right, Mobile top) */}
               <div className="col-lg-6 col-md-6 order-1 order-lg-2">
-
                 <div className="right-content">
-                <div className="offer-heading-block">
-  <h2 className="offer-title">
-    <span className="offer-strong">
-      Discount on IVF/ICSI Cycles
-    </span>
-  </h2>
+                  <div className="offer-heading-block">
+                    <h2 className="offer-title">
+                      <span className="offer-strong">Discount on IVF/ICSI Cycles</span>
+                    </h2>
 
-  <div className="offer-subtitle">
-    <div className="brand-name">BNOON Riyadh | Jeddah | Al Ahsa</div>
-   
-  </div>
-</div>
-
+                    <div className="offer-subtitle">
+                      <div className="brand-name">BNOON</div>
+                      <div className="locations">Riyadh | Jeddah | Al Ahsa</div>
+                    </div>
+                  </div>
 
                   <p className="offer-desc">
                     On the occasion of Saudi Founding Day, we’re pleased to offer{" "}
                     <strong>15% OFF*</strong> on IVF/ICSI Cycles at Bnoon.
                   </p>
 
-                  {/* Includes box (like screenshot) */}
+                  {/* ✅ Includes box */}
                   <div className="info-box">
                     <div className="info-head">Includes:</div>
                     <ul className="list-unstyled m-0">
@@ -84,7 +68,7 @@ const NationalDayOffer = () => {
                     </ul>
                   </div>
 
-                  {/* Excludes row (like screenshot) */}
+                  {/* ✅ Excludes row */}
                   <div className="excludes">
                     <div className="info-head mb-2">Excludes:</div>
                     <div className="ex-row">
@@ -104,7 +88,10 @@ const NationalDayOffer = () => {
                   </p>
 
                   <div className="cta-row">
-                    <Link href="/en/request-an-appoinment" className="btn book-btnbtn btn-primary contact-btn">
+                    <Link
+                      href="/en/request-an-appoinment"
+                      className="btn book-btn btn-primary contact-btn"
+                    >
                       BOOK NOW
                     </Link>
                     <span className="terms">
@@ -112,56 +99,52 @@ const NationalDayOffer = () => {
                     </span>
                   </div>
 
-                <div className="phones">
-  <div className="phone-col">
-    <div className="phone-item">
-      <Image
-        src="/images/icons/phone.svg"
-        alt="Phone"
-        width={14}
-        height={14}
-        className="phone-icon"
-      />
-      <span>
-        <span className="phone-label">Bnoon - Riyadh:</span> 011 444 8080
-      </span>
-    </div>
+                  {/* ✅ Phones */}
+                  <div className="phones">
+                    <div className="phone-col">
+                      <div className="phone-item">
+                        <Image
+                          src="/images/icons/phone.svg"
+                          alt="Phone"
+                          width={14}
+                          height={14}
+                          className="phone-icon"
+                        />
+                        <span>
+                          <span className="phone-label">Bnoon - Riyadh:</span> 011 444 8080
+                        </span>
+                      </div>
 
-    <div className="phone-item">
-      <Image
-        src="/images/icons/phone.svg"
-        alt="Phone"
-        width={14}
-        height={14}
-        className="phone-icon"
-      />
-      <span>
-        <span className="phone-label">Bnoon - Al Ahsa:</span> 0552701553
-      </span>
-    </div>
-  </div>
+                      <div className="phone-item">
+                        <Image
+                          src="/images/icons/phone.svg"
+                          alt="Phone"
+                          width={14}
+                          height={14}
+                          className="phone-icon"
+                        />
+                        <span>
+                          <span className="phone-label">Bnoon - Al Ahsa:</span> 0552701553
+                        </span>
+                      </div>
+                    </div>
 
-  <div className="phone-col">
-    <div className="phone-item">
-      <Image
-        src="/images/icons/phone.svg"
-        alt="Phone"
-        width={14}
-        height={14}
-        className="phone-icon"
-      />
-      <span>
-        <span className="phone-label">Bnoon - Jeddah:</span> 012 680 0800
-      </span>
-    </div>
+                    <div className="phone-col">
+                      <div className="phone-item">
+                        <Image
+                          src="/images/icons/phone.svg"
+                          alt="Phone"
+                          width={14}
+                          height={14}
+                          className="phone-icon"
+                        />
+                        <span>
+                          <span className="phone-label">Bnoon - Jeddah:</span> 012 680 0800
+                        </span>
+                      </div>
+                    </div>
+                  </div>
 
-    {/* If you don’t want duplicate Al Ahsa, remove this line */}
-  
-  </div>
-</div>
-
-
-                  {/* Optional small note line like screenshot spacing */}
                   <div className="spacer" />
                 </div>
               </div>
@@ -171,72 +154,10 @@ const NationalDayOffer = () => {
       </section>
 
       <style jsx>{`
-     .phone-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
- .national-overview-image{
- boxShadow: "-50px 50px 0px #d7f2fb",
-    overflow: "hidden",
-    display: "inline-block",
-    margin: "0 0px 0 0px",
-    }
-.phone-icon {
-  margin-top: 1px;
-  flex: 0 0 auto;
-}
-
-.image-align {
-    justify-content: center;
-    text-align: center;
-    padding-top: 40px;
-}
-
-        /* HERO */
-        .hero {
-          position: relative;
-          min-height: 280px;
-          display: flex;
-          align-items: center;
-          overflow: hidden;
-          background: #f2f2f2;
-        }
-        .hero-bg {
-          position: absolute;
-          inset: 0;
-        }
-        .hero-img {
-          object-fit: cover;
-          object-position: center;
-          filter: saturate(0.95);
-        }
-        .hero:after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background: rgba(255, 255, 255, 0.55); /* soft overlay like screenshot */
-        }
-        .hero-content {
-          position: relative;
-          z-index: 2;
-        }
-        .hero-title {
-          margin: 0;
-          font-size: 34px;
-          font-weight: 800;
-          color: #004e78; /* teal-ish like screenshot heading */
-          letter-spacing: 0.2px;
-        }
-.brand-name {
-    color: #000;
-    font-weight: 700;
-    padding-bottom: 10px;
-}
-        /* MAIN */
         .offer-section {
           padding: 26px 0 40px;
         }
+
         .offer-card {
           background: #fff;
           border-radius: 10px;
@@ -244,49 +165,69 @@ const NationalDayOffer = () => {
           overflow: hidden;
         }
 
-        /* LEFT */
+        /* ✅ IMAGE WRAP (same as Arabic design) */
         .left-img-wrap {
-          position: relative;
           height: 100%;
-          min-height: 420px;
-          background: #fff;
-        }
-        .left-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
-        .stamp {
-          position: absolute;
-          top: 18px;
-          left: 18px;
-          z-index: 2;
-          background: rgba(255, 255, 255, 0.65);
-          padding: 10px 12px;
-          border-radius: 8px;
-          backdrop-filter: blur(2px);
+          padding: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
-        /* RIGHT */
+        .img-shadow-box {
+          box-shadow: -50px 50px 0px #d7f2fb; /* English side shadow */
+          overflow: hidden;
+          display: inline-block;
+          border-radius: 6px;
+          max-width: 520px;
+          width: 100%;
+          background: #fff;
+        }
+
+        .left-img {
+          width: 100%;
+          height: auto;
+          display: block;
+          object-fit: cover;
+        }
+
+        /* ✅ CONTENT */
         .right-content {
           padding: 28px 28px 22px;
           height: 100%;
         }
+
         .offer-title {
-          font-size: 28px;
-          font-weight: 700;
+          font-size: 26px;
+          font-weight: 800;
           margin: 0 0 10px;
           color: #173a4a;
+          line-height: 1.25;
         }
+
         .offer-strong {
           color: #004e78;
           font-weight: 900;
         }
+
+        .brand-name {
+          color: #000;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+
+        .locations {
+          margin-top: 4px;
+          color: #000;
+          font-size: 15px;
+          font-weight: 500;
+          padding-bottom: 10px;
+        }
+
         .offer-desc {
           margin: 0 0 16px;
           color: #2f3a40;
-          line-height: 1.55;
+          line-height: 1.7;
           font-size: 15.5px;
         }
 
@@ -294,14 +235,16 @@ const NationalDayOffer = () => {
           border: 1px solid #e6eef2;
           background: #f7fbfd;
           border-radius: 10px;
-          padding: 14px 14px;
+          padding: 14px;
           margin: 10px 0 14px;
         }
+
         .info-head {
           font-weight: 800;
           color: #004e78;
           margin-bottom: 8px;
         }
+
         .info-item {
           display: flex;
           gap: 10px;
@@ -317,12 +260,14 @@ const NationalDayOffer = () => {
         .excludes {
           margin: 8px 0 12px;
         }
+
         .ex-row {
           display: flex;
-          gap: 22px;
+          gap: 16px;
           flex-wrap: wrap;
           align-items: center;
         }
+
         .ex-item {
           display: flex;
           gap: 10px;
@@ -343,11 +288,13 @@ const NationalDayOffer = () => {
           font-size: 14px;
           flex: 0 0 22px;
         }
+
         .icon.ok {
           background: #e6f6fb;
           color: #004e78;
           border: 1px solid #bfe7f3;
         }
+
         .icon.no {
           background: #ffecec;
           color: #b3261e;
@@ -358,30 +305,32 @@ const NationalDayOffer = () => {
           margin: 12px 0 14px;
           color: #2f3a40;
           font-size: 15px;
-          line-height: 1.55;
+          line-height: 1.7;
         }
 
         .cta-row {
           display: flex;
           align-items: center;
-          gap: 18px;
+          gap: 14px;
           flex-wrap: wrap;
           margin: 8px 0 12px;
         }
+
         .book-btn {
           background: #0b4f69;
           color: #fff;
           padding: 10px 18px;
           border-radius: 6px;
           font-weight: 800;
-          letter-spacing: 0.3px;
           border: 0;
           text-decoration: none;
           display: inline-block;
         }
+
         .book-btn:hover {
           opacity: 0.92;
         }
+
         .terms {
           color: #5a6870;
           font-size: 12.5px;
@@ -398,14 +347,22 @@ const NationalDayOffer = () => {
           color: #2f3a40;
           font-size: 14.5px;
         }
+
         .phone-item {
+          display: flex;
+          align-items: center;
+          gap: 8px;
           margin-bottom: 6px;
         }
-        .phone-item:last-child {
-          margin-bottom: 0;
+
+        .phone-icon {
+          flex: 0 0 auto;
+          margin-top: 1px;
         }
-     
-        
+
+        .phone-label {
+          font-weight: 700;
+        }
 
         .spacer {
           height: 4px;
@@ -413,56 +370,44 @@ const NationalDayOffer = () => {
 
         /* ✅ Mobile */
         @media (max-width: 767px) {
-          .hero {
-            min-height: 210px;
+          .left-img-wrap {
+            padding: 18px 16px 50px 40px
           }
-          .hero-title {
-            font-size: 20px;
+
+          .img-shadow-box {
+            box-shadow: -30px 30px 0px #d7f2fb;
+            max-width: 100%;
           }
+
           .right-content {
             padding: 18px 16px 16px;
           }
+
           .offer-title {
-            font-size: 20px;
+            font-size: 18px;
           }
-          .left-img-wrap {
-            min-height: 260px;
+
+          .brand-name {
+            font-size: 16px;
           }
+
+          .locations {
+            font-size: 14px;
+          }
+
           .phones {
             grid-template-columns: 1fr;
           }
-              .ivf-image-height {
-        width: 85%;
-        margin-bottom: 20px;
-        margin-left: 40px;
-    }
         }
-     .ivf-image-height {
-        width: 85%;
-        margin-bottom: 20px;
-        
-    }
-        /* ✅ iPad Mini / iPad (keep look like desktop) */
+
+        /* ✅ iPad Mini / iPad */
         @media (min-width: 768px) and (max-width: 1024px) {
-          .hero-title {
-            font-size: 26px;
-          }
-                .ivf-image-height {
-        width: 85%;
-        margin-bottom: 20px;
-        margin-left: 40px;
-    }
-.ivf-image {
-    padding-left: 50px;
-}
-          .left-img-wrap {
-            min-height: 360px;
-          }
-          .right-content {
-            padding: 22px 20px 18px;
-          }
           .offer-title {
-            font-size: 24px;
+            font-size: 22px;
+          }
+
+          .left-img-wrap {
+            padding: 22px 20px;
           }
         }
       `}</style>
