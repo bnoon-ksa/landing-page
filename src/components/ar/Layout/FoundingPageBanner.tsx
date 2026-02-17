@@ -12,25 +12,18 @@ function HeroBanner() {
   // ✅ Slides (video + text + buttonLink)
   const slides = [
     {
-  video: "/images/banner-video/banner3.mp4",
-  title: "<span class='rowdies-font'>حلمكم ما هو بعيد </span>",
-  desc: "استفيدوا من عرض يوم التأسيس <br>الخاص بالحقن المجهري* في بنون ",
+  video: "/images/banner-video/banner-2.mp4",
+  title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
+  desc: "<strong>Benefit from our Founding Day Special IVF Offer* </strong>",
   titleColor: "#004E78",
   descColor: "#fff",
   extra: "",
-  buttonLink: "en/waad-bnoon-program",
-  buttonText: "استكشفوا المزيد  ",
+  buttonLink: "en",
+  buttonText: "Explore Our Offer ",
 
   descClass: "special-desc",   // 👈 ADD THIS
 },
-    {
-      video: "/images/banner-video/banner4.mp4",
-      title: "<span class='rowdies-font'>عرض يوم التأسيس* </span> ",
-      desc: " خدمات وإجراءات أمراض الذكورة والعقم لدى الرجال ",
-      titleColor: "#004E78",
-      buttonLink: "https://book.bnoon.sa",
-      buttonText: "استكشفوا المزيد ",
-    },
+  
   
   ];
 
@@ -122,7 +115,7 @@ function HeroBanner() {
               href={slides[currentSlide].buttonLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-success btn-appointment btn-banner"
+              className="btn btn-success btn-appointment explore-btn btn-banner"
             >
               {slides[currentSlide].buttonText}
             </a>
@@ -156,6 +149,7 @@ function HeroBanner() {
             key={index}
             onClick={() => setCurrentSlide(index)}
             style={{
+              display: "none",
               width: "12px",
               height: "12px",
               borderRadius: "50%",
@@ -184,6 +178,11 @@ function HeroBanner() {
     margin-top: 18px;
     line-height: 1.7;
   }
+      @media (max-width: 768px) {
+    .explore-btn{
+    width: 100px !important;
+    }
+      }
       `}</style>
     </div>
   );
