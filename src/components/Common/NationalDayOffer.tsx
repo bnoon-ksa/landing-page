@@ -22,9 +22,7 @@ const NationalDayOffer = () => {
         {/* Riyadh Section */}
         <div className="row justify-content-center align-items-center g-4 mb-3">
           <div className="col-xl-6 col-md-12">
-            <div className="service-overview-content text-center">
-              <h2>Saudi Founding Day Special Offer</h2>
-            </div>
+            
             <div className="service-overview-content text-center national-box">
               <h2 className="national-text national-text-3">Discount on IVF/ICSI Cycles </h2>
             </div>
@@ -204,4 +202,3 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
-
