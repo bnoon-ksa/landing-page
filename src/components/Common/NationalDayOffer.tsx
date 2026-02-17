@@ -42,7 +42,7 @@ const NationalDayOffer = () => {
     boxShadow: "-50px 50px 0px #d7f2fb",
     overflow: "hidden",
     display: "inline-block",
-    margin: "0 0px 0 50px",
+    margin: "0 0px 0 0px",
   }}
 >
 
@@ -166,8 +166,14 @@ const NationalDayOffer = () => {
     <style jsx>{`
  .national-p{
  color:#000;
+ font-size: 16px !important;
  }
-
+ .national-overview-image{
+ boxShadow: "-50px 50px 0px #d7f2fb",
+    overflow: "hidden",
+    display: "inline-block",
+    margin: "0 0px 0 0px",
+    }
   /* Mobile tweaks */
   @media (max-width: 768px) {
     .national-text-3 {
@@ -177,11 +183,19 @@ const NationalDayOffer = () => {
           .btn-appointment {
         width: 120px;
     }
+         .national-p{
+ color:#000;
+ font-size: 14px !important;
+ }
       .national-text-2 {
     font-size: 16px;
     text-align: center;
     margin: 10px 0px;
 }
+    .national-overview-image{
+        margin: 0 0px 0 50px !important;
+
+    }
   }
 `}</style>
 
