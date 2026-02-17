@@ -25,11 +25,12 @@ const NationalDayOffer = () => {
       {/* ✅ MAIN CONTENT CARD */}
       <section className="offer-section">
         <div className="container">
-          <div className="offer-card">
+          <div className="">
             <div className="row g-0 align-items-stretch">
               {/* LEFT IMAGE CARD */}
-              <div className="col-lg-6 col-md-6">
-                <div className="service-overview-image"
+              <div className="col-lg-6 col-md-6 image-align order-2 order-lg-1 ivf-image">
+
+                <div className="ivf-image-height"
               style={{
                 boxShadow: "-50px 50px 0px #d7f2fb",
                 overflow: "hidden",
@@ -48,11 +49,22 @@ const NationalDayOffer = () => {
               </div>
 
               {/* RIGHT CONTENT */}
-              <div className="col-lg-6 col-md-6">
+              <div className="col-lg-6 col-md-6 order-1 order-lg-2">
+
                 <div className="right-content">
-                  <h2 className="offer-title">
-                    <span className="offer-strong">15% OFF*</span> on IVF/ICSI Cycles
-                  </h2>
+                <div className="offer-heading-block">
+  <h2 className="offer-title">
+    <span className="offer-strong">
+      Discount on IVF/ICSI Cycles
+    </span>
+  </h2>
+
+  <div className="offer-subtitle">
+    <div className="brand-name">BNOON Riyadh | Jeddah | Al Ahsa</div>
+   
+  </div>
+</div>
+
 
                   <p className="offer-desc">
                     On the occasion of Saudi Founding Day, we’re pleased to offer{" "}
@@ -175,7 +187,11 @@ const NationalDayOffer = () => {
   flex: 0 0 auto;
 }
 
-
+.image-align {
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+}
 
         /* HERO */
         .hero {
@@ -212,7 +228,11 @@ const NationalDayOffer = () => {
           color: #004e78; /* teal-ish like screenshot heading */
           letter-spacing: 0.2px;
         }
-
+.brand-name {
+    color: #000;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
         /* MAIN */
         .offer-section {
           padding: 26px 0 40px;
@@ -411,13 +431,30 @@ const NationalDayOffer = () => {
           .phones {
             grid-template-columns: 1fr;
           }
+              .ivf-image-height {
+        width: 85%;
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
         }
-
+     .ivf-image-height {
+        width: 85%;
+        margin-bottom: 20px;
+        
+    }
         /* ✅ iPad Mini / iPad (keep look like desktop) */
         @media (min-width: 768px) and (max-width: 1024px) {
           .hero-title {
             font-size: 26px;
           }
+                .ivf-image-height {
+        width: 85%;
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+.ivf-image {
+    padding-left: 50px;
+}
           .left-img-wrap {
             min-height: 360px;
           }
