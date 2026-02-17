@@ -27,7 +27,7 @@ const NationalDayOffer = () => {
               <h2 className="national-text national-text-3">Discount on IVF/ICSI Cycles </h2>
             </div>
             <div className="service-overview-content text-center national-box-2 mt-3">
-              <h5 className="national-text-2">BNOON Riyadh | Jeddah | Al Ahsa </h5>
+              <h5 className="national-text-2">BNOON<br /> Riyadh | Jeddah | Al Ahsa </h5>
             </div>
           </div>
         </div>
@@ -202,3 +202,4 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
