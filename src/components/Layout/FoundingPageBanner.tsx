@@ -13,7 +13,7 @@ function HeroBanner() {
   const slides = [
     {
   video: "/images/banner-video/banner-2.mp4",
-  title: "<span class='rowdies-font'>Saudi Founding Day <br>Special Offer</span>",
+  title: "<span class='rowdies-font'>Saudi Founding Day Special Offer</span>",
   desc: "",
   titleColor: "#004E78",
   descColor: "#fff",
