@@ -45,7 +45,7 @@ const NationalDayOffer = () => {
                     </h2>
 
                     <div className="offer-subtitle">
-                      <div className="brand-name">Bnoon – Jeddah | Riyadh </div>
+                      <div className="brand-name">BNOON – JEDDAH | RIYADH </div>
                     </div>
                   </div>
 
@@ -179,6 +179,8 @@ const NationalDayOffer = () => {
           color: #000;
           font-weight: 700;
           letter-spacing: 1px;
+          padding: 0px 0px 5px;
+    font-size: 16px;
         }
 
         .locations {
@@ -193,7 +195,7 @@ const NationalDayOffer = () => {
           margin: 0 0 16px;
           color: #2f3a40;
           line-height: 1.7;
-          font-size: 16px;
+          font-size: 16px !important;
         }
 
         .info-box {
