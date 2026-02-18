@@ -59,7 +59,7 @@ const NationalDayOffer = () => {
                   {/* ✅ Includes box */}
                   <div className="info-box">
                     <div className="info-head">يشمل:</div>
-                    <ul className="list-unstyled m-0">
+                    <ul className=" m-0">
                       {includesList.map((item, index) => (
                         <li key={index} className="info-item">
                           <span className="icon ok">✓</span>
@@ -89,7 +89,7 @@ const NationalDayOffer = () => {
                   </p>
 
                   <div className="cta-row">
-                    <Link href="/ar/request-an-appoinment" className="btn book-btn btn-primary contact-btn">
+                    <Link href="/ar/request-an-appoinment" className="btn book-btn btn-primary contact-btn contact-text">
                       احجز موعدك اليوم
                     </Link>
                     <span className="terms">
@@ -152,7 +152,7 @@ const NationalDayOffer = () => {
         </div>
       </section>
 
-      <style jsx>{`
+      <style jsx global>{`
     
         .offer-section {
           padding: 26px 0 40px;
@@ -340,8 +340,8 @@ const NationalDayOffer = () => {
         }
 
         .terms {
-          color: #5a6870;
-          font-size: 12.5px;
+          color: #000000;
+          font-size: 11px;
           line-height: 1.4;
         }
 
@@ -351,7 +351,7 @@ const NationalDayOffer = () => {
           border-top: 1px solid #e7eef2;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 10px 18px;
+          
           color: #2f3a40;
           font-size: 14.5px;
         }
@@ -384,7 +384,11 @@ const NationalDayOffer = () => {
           .sub-title {
             font-size: 14px;
           }
-
+   .offer-strong {
+          color: #004e78;
+          font-weight: 900;
+              font-size: 16px;
+        }
           .left-img-wrap {
             padding: 18px 16px 50px 40px
           }
@@ -401,7 +405,12 @@ const NationalDayOffer = () => {
           .offer-title {
             font-size: 18px;
           }
-
+            .contact-text {
+               font-size: 10px;
+            }
+                .phone-label{
+                font-size: 12px;
+                }
           .phones {
             grid-template-columns: 1fr;
           }
