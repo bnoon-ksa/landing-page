@@ -283,13 +283,49 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Release summary
+      - name: Verify release was created
+        if: steps.release.outputs.new_release_published == 'true'
         run: |
-          if [ "${{ steps.release.outputs.new_release_published }}" = "true" ]; then
-            echo "### New Release: v${{ steps.release.outputs.new_release_version }}" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "### No new release (no qualifying commits)" >> $GITHUB_STEP_SUMMARY
-          fi
+          echo "### ✅ New Release: v${{ steps.release.outputs.new_release_version }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Fail — no release triggered
+        if: steps.release.outputs.new_release_published != 'true'
+        run: |
+          cat >> $GITHUB_STEP_SUMMARY << 'EOF'
+          ### ❌ No release was created
+
+          Your commit message did not follow the **Conventional Commits** format, so semantic-release could not determine a version bump.
+
+          #### How to fix
+
+          Use one of these commit prefixes to trigger a release:
+
+          | Prefix | Example | Release type |
+          |--------|---------|-------------|
+          | `feat:` | `feat: add contact form` | **minor** (1.x.0) |
+          | `fix:` | `fix: correct Arabic RTL layout` | **patch** (1.0.x) |
+          | `perf:` | `perf: lazy-load hero images` | **patch** (1.0.x) |
+          | `refactor:` | `refactor: extract shared utils` | **patch** (1.0.x) |
+
+          Commits with these prefixes do **not** trigger a release: `chore:`, `docs:`, `style:`, `test:`, `ci:`
+
+          #### Learn more
+
+          👉 **https://www.conventionalcommits.org**
+
+          EOF
+          echo ""
+          echo "=========================================================="
+          echo "  PIPELINE FAILED: No release was triggered."
+          echo ""
+          echo "  Your commit message must follow Conventional Commits."
+          echo "  Examples:"
+          echo "    feat: add new booking flow"
+          echo "    fix: resolve mobile layout issue"
+          echo ""
+          echo "  Learn more: https://www.conventionalcommits.org"
+          echo "=========================================================="
+          exit 1
 
   # ──────────────────────────────────────────────
   # Job 5: Deploy to Production (manual approval)
