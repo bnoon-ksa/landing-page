@@ -22,7 +22,7 @@ export default function NationalDayOfferPage() {
           style={{
             position: "absolute",
             top: "50%",
-            left: "16%",
+            left: "9%",
             transform: "translateY(-50%)",
             zIndex: 10,
           }}
