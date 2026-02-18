@@ -1,3 +1,9 @@
+## [1.3.3](https://github.com/bnoon-ksa/landing-page/compare/v1.3.2...v1.3.3) (2026-02-18)
+
+### Bug Fixes
+
+* **ci:** fail pipeline when semantic-release does not create a release ([5b1cffc](https://github.com/bnoon-ksa/landing-page/commit/5b1cffc866d528305643d52eeba03b8dde982606))
+
 ## [1.3.2](https://github.com/bnoon-ksa/landing-page/compare/v1.3.1...v1.3.2) (2026-02-14)
 
 ### Bug Fixes
