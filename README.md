@@ -772,28 +772,22 @@ This project spans **two Azure subscriptions**. Understanding the layout helps w
 
 | Resource | Type | Resource Group | Location | SKU |
 |:---------|:-----|:---------------|:---------|:----|
-| `bnoon` | Web App | `test` | Canada Central | - |
-| `ASP-test-be47` | App Service Plan | `test` | Canada Central | S1 Standard |
-| `appointments` | App Service Plan (**empty, 0 apps**) | `appointment` | - | S1 Standard |
+| `bnoon-sa` | Web App | `rg-bnoon-prod-uaen` | UAE North | - |
+| `asp-bnoon-prod-uaen` | App Service Plan | `rg-bnoon-prod-uaen` | UAE North | S1 Standard |
 | `bnoon` | Storage Account | `Bnoon.sa` | East US | Standard_GRS |
-
-> **Cost note:** The `appointments` App Service Plan has **0 web apps** attached but is still billed as S1 Standard. It can be deleted to save cost:
-> ```bash
-> az account set --subscription "Azure subscription 1"
-> az appservice plan delete --name appointments --resource-group appointment
-> ```
 
 **Web App configuration:**
 
 | Setting | Value |
 |:--------|:------|
-| App Service | `bnoon` |
-| App Service Plan | `ASP-test-be47` (S1 Standard, 1 site) |
+| App Service | `bnoon-sa` |
+| App Service Plan | `asp-bnoon-prod-uaen` (S1 Standard, 1 site) |
 | Platform | Azure App Service (Linux) |
 | Runtime | `NODE\|20-lts` |
 | Always On | Yes |
 | HTTPS Only | Yes |
 | Custom Domains | `bnoon.sa`, `www.bnoon.sa` |
+| SSL | Azure Managed Certificates (auto-renew) |
 | Entry point | `server.js` (custom Node.js HTTP server) |
 | Deploy method | ZIP deploy via `azure/webapps-deploy@v3` |
 
@@ -805,7 +799,7 @@ This project spans **two Azure subscriptions**. Understanding the layout helps w
 | `deployments` | Private | Deployment history |
 | `$web` | - | Static website hosting (unused) |
 
-> **Important:** Images are served locally from `public/images/`, NOT from blob storage. Only **videos** are served from `https://bnoon.blob.core.windows.net/website/videos/`. The storage account is in **East US** while the web app is in **Canada Central** -- cross-region latency is acceptable for videos but was too slow for images (which is why an earlier image migration to blob was reverted).
+> **Important:** Images are served locally from `public/images/`, NOT from blob storage. Only **videos** are served from `https://bnoon.blob.core.windows.net/website/videos/`. The storage account is in **East US** -- cross-region latency is acceptable for videos but was too slow for images (which is why an earlier image migration to blob was reverted).
 
 ### Telehealth Apps — "Microsoft Azure Sponsorship"
 
@@ -866,7 +860,7 @@ Configure at: **GitHub repo > Settings > Environments > production**
 | Variable | Value | Purpose |
 |:---------|:------|:--------|
 | `NEXT_TELEMETRY_DISABLED` | `1` | Disable Next.js anonymous telemetry in CI |
-| `AZURE_WEBAPP_NAME` | `bnoon` | Azure App Service name |
+| `AZURE_WEBAPP_NAME` | `bnoon-sa` | Azure App Service name |
 | `SITE_URL` | `https://bnoon.sa` | Production URL for health checks and regression tests |
 
 ---
