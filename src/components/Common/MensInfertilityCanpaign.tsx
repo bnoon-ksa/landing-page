@@ -193,7 +193,7 @@ const NationalDayOffer = () => {
           margin: 0 0 16px;
           color: #2f3a40;
           line-height: 1.7;
-          font-size: 16px !important;
+          font-size: 16px;
         }
 
         .info-box {
@@ -359,7 +359,7 @@ font-size: 16px;
           .brand-name {
             font-size: 14px;
           }
-..offer-desc{
+.offer-desc{
 font-size: 14px !important;
 }
 .dates{
@@ -395,5 +395,6 @@ font-size: 14px;
 };
 
 export default NationalDayOffer;
+
 
 
