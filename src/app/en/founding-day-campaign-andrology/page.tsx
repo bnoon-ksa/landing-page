@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Layout/Navbar";
 import PageBanner from "@/components/Layout/PageBanner";
-import NationalDayOffer from "@/components/Common/NationalDayOffer";
+import MensInfertilityCanpaign from "@/components/Common/MensInfertilityCanpaign";
 import FoundingPageBanner from "@/components/Layout/FoundingPageBanner";
 
 export const metadata: Metadata = {
@@ -28,8 +28,9 @@ export default function NationalDayOfferPage() {
             zIndex: 10,
           }}
         >
-          <h1 style={{ color: "#004E78" }}>
-            <span className="rowdies-font text-size">
+         <h1 style={{ color: "#004E78" }}>
+
+            <span  className="rowdies-font text-size">
              
 FOUNDING DAY OFFER IN ANDROLOGY & <br />MALE INFERTILITY SERVICES
             </span>
@@ -37,7 +38,7 @@ FOUNDING DAY OFFER IN ANDROLOGY & <br />MALE INFERTILITY SERVICES
         </div>
       </div></div>
 
-      <NationalDayOffer />
+      <MensInfertilityCanpaign />
 
       {/* ✅ Only this page mobile banner shift (plain style tag) */}
    
