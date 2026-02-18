@@ -284,7 +284,8 @@ jobs:
       - name: Run semantic-release
         id: release
         run: |
-          npx semantic-release
+          # Capture output to detect failure reason
+          npx semantic-release 2>&1 | tee /tmp/semrel.log
 
           # npx semantic-release does NOT write to $GITHUB_OUTPUT,
           # so we detect a new release by comparing git tags.
@@ -294,6 +295,12 @@ jobs:
             echo "new_release_version=${NEW_TAG#v}" >> $GITHUB_OUTPUT
           else
             echo "new_release_published=false" >> $GITHUB_OUTPUT
+            # Detect if branch-behind was the reason
+            if grep -q "local branch .* is behind the remote" /tmp/semrel.log; then
+              echo "reason=branch_behind" >> $GITHUB_OUTPUT
+            else
+              echo "reason=no_qualifying_commits" >> $GITHUB_OUTPUT
+            fi
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -303,8 +310,30 @@ jobs:
         run: |
           echo "### ✅ New Release: v${{ steps.release.outputs.new_release_version }}" >> $GITHUB_STEP_SUMMARY
 
+      - name: Fail — branch is behind remote
+        if: steps.release.outputs.new_release_published != 'true' && steps.release.outputs.reason == 'branch_behind'
+        run: |
+          cat >> $GITHUB_STEP_SUMMARY << 'EOF'
+          ### ⚠️ Release skipped — branch is behind remote
+
+          A newer commit was pushed to `main` while this pipeline was running.
+          Semantic-release cannot publish when the local branch is behind the remote.
+
+          **This is expected** when multiple commits are pushed in quick succession.
+          The pipeline for the latest commit will handle the release.
+
+          No action needed — check the latest pipeline run.
+          EOF
+          echo ""
+          echo "=========================================================="
+          echo "  SKIPPED: Branch is behind remote."
+          echo "  A newer commit was pushed while this run was in progress."
+          echo "  Check the latest pipeline run for the release."
+          echo "=========================================================="
+          exit 1
+
       - name: Fail — no release triggered
-        if: steps.release.outputs.new_release_published != 'true'
+        if: steps.release.outputs.new_release_published != 'true' && steps.release.outputs.reason != 'branch_behind'
         run: |
           cat >> $GITHUB_STEP_SUMMARY << 'EOF'
           ### ❌ No release was created
