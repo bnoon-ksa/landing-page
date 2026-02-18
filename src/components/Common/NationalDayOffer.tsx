@@ -207,12 +207,14 @@ const NationalDayOffer = () => {
         .offer-strong {
           color: #004e78;
           font-weight: 900;
+              font-size: 20px;
         }
 
         .brand-name {
           color: #000;
           font-weight: 700;
           letter-spacing: 1px;
+          font-size: 16px;
         }
 
         .locations {
@@ -227,7 +229,7 @@ const NationalDayOffer = () => {
           margin: 0 0 16px;
           color: #2f3a40;
           line-height: 1.7;
-          font-size: 15.5px;
+          font-size: 16px !important;
         }
 
         .info-box {
@@ -250,7 +252,7 @@ const NationalDayOffer = () => {
           align-items: flex-start;
           margin-bottom: 8px;
           color: #2c3a42;
-          font-size: 15px;
+          font-size: 16px;
         }
         .info-item:last-child {
           margin-bottom: 0;
@@ -272,7 +274,7 @@ const NationalDayOffer = () => {
           gap: 10px;
           align-items: center;
           color: #2c3a42;
-          font-size: 15px;
+          font-size: 16px;
         }
 
         .icon {
@@ -303,7 +305,7 @@ const NationalDayOffer = () => {
         .dates {
           margin: 12px 0 14px;
           color: #2f3a40;
-          font-size: 15px;
+          font-size: 16px !important;
           line-height: 1.7;
         }
 
@@ -332,7 +334,7 @@ const NationalDayOffer = () => {
 
         .terms {
           color: #5a6870;
-          font-size: 12.5px;
+          font-size: 16px;
           line-height: 1.4;
         }
 
@@ -352,6 +354,7 @@ const NationalDayOffer = () => {
           align-items: center;
           gap: 8px;
           margin-bottom: 6px;
+          font-size: 16px;
         }
 
         .phone-icon {
@@ -372,17 +375,39 @@ const NationalDayOffer = () => {
           .left-img-wrap {
             padding: 0px 16px 50px 40px
           }
+                .ex-item {
+        
+          font-size: 14px;
+        }
+
 .offer-strong {
           color: #004e78;
           font-weight: 900;
           font-size: 16px;
+        }
+            .dates {
+        
+          font-size: 14px !important;
+        
+        }
+           .offer-desc {
+          font-size: 14px !important;
+        }
+           .info-item {
+         
+          font-size: 14px;
         }
           .img-shadow-box {
             box-shadow: -30px 30px 0px #d7f2fb;
             max-width: 100%;
                 margin: 0px 0px 0px 0px;
           }
-
+.terms{
+ font-size: 14px;
+}
+ .phone-item{
+ font-size: 14px !important;
+ }
           .right-content {
             padding: 18px 16px 16px;
           }
@@ -392,7 +417,7 @@ const NationalDayOffer = () => {
           }
 
           .brand-name {
-            font-size: 16px;
+            font-size: 14px;
           }
 
           .locations {
@@ -405,9 +430,7 @@ const NationalDayOffer = () => {
             .contact-text{
                 font-size: 12px;
             }
-                .phone-label{
-                font-size: 12px;
-                }
+               
         }
 
         /* ✅ iPad Mini / iPad */
