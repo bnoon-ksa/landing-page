@@ -107,29 +107,35 @@ function HeroBannerAr() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* 🔹 Video Background Slider */}
-      {slides.map((slide, index) => (
-        <video
-          key={index}
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            zIndex: -1,
-            opacity: currentSlide === index ? 1 : 0,
-            transition: "opacity 1s ease-in-out",
-          }}
-        >
-          <source src={slide.video} type="video/mp4" />
-        </video>
-      ))}
+      {/* 🔹 Video Background Slider (lazy: only current + next) */}
+      {slides.map((slide, index) => {
+        const isActive = currentSlide === index;
+        const isNext = (currentSlide + 1) % slides.length === index;
+        if (!isActive && !isNext) return null;
+        return (
+          <video
+            key={index}
+            autoPlay={isActive}
+            loop
+            muted
+            playsInline
+            preload={isActive ? "auto" : "metadata"}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              zIndex: -1,
+              opacity: isActive ? 1 : 0,
+              transition: "opacity 1s ease-in-out",
+            }}
+          >
+            <source src={slide.video} type="video/mp4" />
+          </video>
+        );
+      })}
 
       {/* 🔹 Text Content */}
       <div className="container">
