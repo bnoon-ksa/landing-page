@@ -276,15 +276,15 @@ const NationalDayOffer = () => {
         }
 
         .icon {
-          width: 22px;
-          height: 22px;
+          width: 12px;
+          height: 18px;
           border-radius: 50%;
           display: inline-flex;
           align-items: center;
           justify-content: center;
           font-weight: 900;
           line-height: 1;
-          font-size: 14px;
+          font-size: 10px;
           flex: 0 0 22px;
         }
 
@@ -342,7 +342,7 @@ const NationalDayOffer = () => {
           border-top: 1px solid #e7eef2;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 10px 18px;
+          
           color: #2f3a40;
           font-size: 14.5px;
         }
@@ -370,7 +370,7 @@ const NationalDayOffer = () => {
         /* ✅ Mobile */
         @media (max-width: 767px) {
           .left-img-wrap {
-            padding: 18px 16px 50px 40px
+            padding: 0px 16px 50px 40px
           }
 
           .img-shadow-box {
@@ -415,3 +415,4 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
