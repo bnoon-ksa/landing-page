@@ -306,8 +306,16 @@ jobs:
           key: release-${{ github.sha }}
           fail-on-cache-miss: true
 
+      - name: Validate publish profile
+        run: |
+          echo "$PUBLISH_PROFILE" | head -c 20
+          echo ""
+          echo "Profile length: ${#PUBLISH_PROFILE}"
+        env:
+          PUBLISH_PROFILE: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v3
+        uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
