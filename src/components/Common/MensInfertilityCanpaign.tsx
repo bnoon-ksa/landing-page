@@ -131,8 +131,7 @@ const NationalDayOffer = () => {
 
         /* ✅ IMAGE WRAP (same as Arabic design) */
         .left-img-wrap {
-          height: 100%;
-          padding: 28px 28px 58px;
+         
           display: flex;
           align-items: center;
           justify-content: center;
@@ -146,6 +145,7 @@ const NationalDayOffer = () => {
           max-width: 520px;
           width: 100%;
           background: #fff;
+          margin:20px 0px 60px 60px;
         }
 
         .left-img {
@@ -172,6 +172,7 @@ const NationalDayOffer = () => {
         .offer-strong {
           color: #004e78;
           font-weight: 900;
+          font-size: 20px;
         }
 
         .brand-name {
@@ -192,7 +193,7 @@ const NationalDayOffer = () => {
           margin: 0 0 16px;
           color: #2f3a40;
           line-height: 1.7;
-          font-size: 15.5px;
+          font-size: 16px !important;
         }
 
         .info-box {
@@ -268,7 +269,7 @@ const NationalDayOffer = () => {
         .dates {
           margin: 12px 0 14px;
           color: #2f3a40;
-          font-size: 15px;
+          font-size: 16px !important;
           line-height: 1.7;
         }
 
@@ -297,7 +298,7 @@ const NationalDayOffer = () => {
 
         .terms {
           color: #5a6870;
-          font-size: 12.5px;
+          font-size: 16px;
           line-height: 1.4;
         }
 
@@ -317,6 +318,7 @@ const NationalDayOffer = () => {
           align-items: center;
           gap: 8px;
           margin-bottom: 6px;
+          font-size:16px;
         }
 
         .phone-icon {
@@ -341,8 +343,11 @@ const NationalDayOffer = () => {
           .img-shadow-box {
             box-shadow: -30px 30px 0px #d7f2fb;
             max-width: 100%;
+            margin: 0px 0px 6px 0px;
           }
-
+.offer-strong{
+font-size: 16px;
+}
           .right-content {
             padding: 18px 16px 16px;
           }
@@ -352,13 +357,23 @@ const NationalDayOffer = () => {
           }
 
           .brand-name {
-            font-size: 16px;
+            font-size: 14px;
           }
-
+..offer-desc{
+font-size: 14px !important;
+}
+.dates{
+font-size: 14px !important;
+}
+.terms{
+font-size: 14px;
+}
           .locations {
             font-size: 14px;
           }
-
+.phone-item{
+font-size: 14px;
+}
           .phones {
             grid-template-columns: 1fr;
           }
@@ -380,3 +395,4 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
