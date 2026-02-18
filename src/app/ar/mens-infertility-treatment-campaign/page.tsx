@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description:
     "",
 };
-
 export default function FoundingDayDiscountPage() {
   return (
     <>
