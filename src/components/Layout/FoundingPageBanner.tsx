@@ -3,6 +3,7 @@ import React from "react";
 type Props = {
   bgImage: string;
 };
+
 export default function FoundingDayBanner({ bgImage }: Props) {
   return (
     <>
@@ -23,11 +24,22 @@ export default function FoundingDayBanner({ bgImage }: Props) {
           background-position: center;
           background-repeat: no-repeat;
         }
+          .text-size{
+              font-size: 44px !important;
+             
+          }
         @media (max-width: 768px) {
           .founding-banner-area {
             height: 100px;
             background-position: 100% center;
           }
+             .text-size{
+              font-size: 18px !important;
+              
+          }
+              .text-banner{
+               left: 6% !important;
+              }
         }
       `}</style>
     </>
