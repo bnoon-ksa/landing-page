@@ -380,10 +380,10 @@ Videos are hosted on Azure Blob Storage because they are too large to bundle:
 
 | Setting | Value |
 |:--------|:------|
-| Storage account | `bnoon` |
+| Storage account | `bnoonsa` |
 | Container | `website` |
 | Path | `videos/` |
-| Base URL | `https://bnoon.blob.core.windows.net/website/videos/` |
+| Base URL | `https://bnoonsa.blob.core.windows.net/website/videos/` |
 
 Videos are referenced directly via their blob URLs in components.
 
@@ -398,7 +398,7 @@ images: {
   imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   remotePatterns: [
     { protocol: 'https', hostname: 'ovasavedev8fe4a1851a.blob.core.windows.net' },
-    { protocol: 'https', hostname: 'bnoon.blob.core.windows.net' },
+    { protocol: 'https', hostname: 'bnoonsa.blob.core.windows.net' },
   ],
 }
 ```
@@ -774,7 +774,7 @@ This project spans **two Azure subscriptions**. Understanding the layout helps w
 |:---------|:-----|:---------------|:---------|:----|
 | `bnoon-sa` | Web App | `rg-bnoon-prod-uaen` | UAE North | - |
 | `asp-bnoon-prod-uaen` | App Service Plan | `rg-bnoon-prod-uaen` | UAE North | S1 Standard |
-| `bnoon` | Storage Account | `Bnoon.sa` | East US | Standard_GRS |
+| `bnoonsa` | Storage Account | `rg-bnoon-prod-uaen` | UAE North | Standard_LRS |
 
 **Web App configuration:**
 
@@ -791,15 +791,13 @@ This project spans **two Azure subscriptions**. Understanding the layout helps w
 | Entry point | `server.js` (custom Node.js HTTP server) |
 | Deploy method | ZIP deploy via `azure/webapps-deploy@v3` |
 
-**Blob Storage (`bnoon` storage account):**
+**Blob Storage (`bnoonsa` storage account):**
 
 | Container | Public Access | Purpose |
 |:----------|:-------------|:--------|
 | `website` | Public (container-level) | Videos at `website/videos/`, uploaded assets |
-| `deployments` | Private | Deployment history |
-| `$web` | - | Static website hosting (unused) |
 
-> **Important:** Images are served locally from `public/images/`, NOT from blob storage. Only **videos** are served from `https://bnoon.blob.core.windows.net/website/videos/`. The storage account is in **East US** -- cross-region latency is acceptable for videos but was too slow for images (which is why an earlier image migration to blob was reverted).
+> **Important:** Images are served locally from `public/images/`, NOT from blob storage. Only **videos** are served from `https://bnoonsa.blob.core.windows.net/website/videos/`. Both the web app and storage account are in **UAE North** for low-latency access.
 
 ### Telehealth Apps — "Microsoft Azure Sponsorship"
 

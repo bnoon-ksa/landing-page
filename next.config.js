@@ -14,7 +14,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'bnoon.blob.core.windows.net',
+        hostname: 'bnoonsa.blob.core.windows.net',
       },
     ],
   },
