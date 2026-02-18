@@ -24,11 +24,22 @@ export default function FoundingDayBanner({ bgImage }: Props) {
           background-position: center;
           background-repeat: no-repeat;
         }
+           .text-size{
+              font-size: 44px !important;
+             
+          }
         @media (max-width: 768px) {
           .founding-banner-area {
             height: 100px;
             background-position: 0% center;
           }
+             .text-size{
+              font-size: 18px !important;
+              
+          }
+                .text-banner{
+              
+              }
         }
       `}</style>
     </>
