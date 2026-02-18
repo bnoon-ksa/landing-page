@@ -178,6 +178,8 @@ const NationalDayOffer = () => {
     color: #000;
     font-weight: 700;
     padding-bottom: 10px;
+    font-family: 'Alexandria';
+    padding-top: 8px;
 }
         .offer-card {
           background: #fff;
@@ -342,8 +344,8 @@ const NationalDayOffer = () => {
         }
 
         .terms {
-          color: #000000;
-          font-size: 16px;
+          color: #5a6870;
+          font-size: 15px;
           line-height: 1.4;
         }
 
@@ -393,6 +395,7 @@ const NationalDayOffer = () => {
         }
             .brand-name {
    font-size: 14px;
+   padding-top: 5px;
 }
    .terms {
     
