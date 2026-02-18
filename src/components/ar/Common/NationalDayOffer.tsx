@@ -59,11 +59,11 @@ const NationalDayOffer = () => {
                   {/* ✅ Includes box */}
                   <div className="info-box">
                     <div className="info-head">يشمل:</div>
-                    <ul className=" m-0">
+                    <ul className="ul-listed  m-0">
                       {includesList.map((item, index) => (
                         <li key={index} className="info-item">
                           <span className="icon ok">✓</span>
-                          <span>{item}</span>
+                          <span className="list-text">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -76,7 +76,7 @@ const NationalDayOffer = () => {
                       {excludesList.map((item, index) => (
                         <div key={index} className="ex-item">
                           <span className="icon no">✕</span>
-                          <span>{item}</span>
+                          <span className="list-text">{item}</span>
                         </div>
                       ))}
                     </div>
@@ -92,11 +92,11 @@ const NationalDayOffer = () => {
                     <Link href="/ar/request-an-appoinment" className="btn book-btn btn-primary contact-btn contact-text">
                       احجز موعدك اليوم
                     </Link>
-                    <span className="terms">
+                    
+                  </div>
+<span className="terms">
                       *تطبق الشروط والأحكام. لا يسري هذا العرض مع أي عروض أخرى قائمة.
                     </span>
-                  </div>
-
                   {/* ✅ Phones */}
                   <div className="phones">
                     <div className="phone-col">
@@ -187,8 +187,6 @@ const NationalDayOffer = () => {
         }
 
         .left-img-wrap {
-          height: 100%;
-          padding: 28px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -203,6 +201,7 @@ const NationalDayOffer = () => {
           max-width: 520px;
           width: 100%;
           background: #fff;
+              margin: 70px 60px 0px 0px;
         }
 
         .left-img {
@@ -229,8 +228,11 @@ const NationalDayOffer = () => {
         .offer-strong {
           color: #004e78;
           font-weight: 900;
+              font-size: 20px;
         }
-
+.ul-listed {
+    padding: 0px;
+}
         .offer-desc {
           margin: 0 0 16px;
           color: #2f3a40;
@@ -396,6 +398,7 @@ const NationalDayOffer = () => {
           .img-shadow-box {
             box-shadow: -30px 30px 0px #d7f2fb;
             max-width: 100%;
+            margin: 0px 0px 0px 0px;
           }
 
           .right-content {
@@ -414,6 +417,9 @@ const NationalDayOffer = () => {
           .phones {
             grid-template-columns: 1fr;
           }
+            .list-text{
+            font-size: 12px;
+            }
         }
 
         /* ✅ iPad */
