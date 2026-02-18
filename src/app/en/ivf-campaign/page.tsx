@@ -4,7 +4,7 @@ import PageBanner from "@/components/Layout/PageBanner";
 import NationalDayOffer from "@/components/Common/NationalDayOffer";
 
 export const metadata: Metadata = {
-  title: "Founding Day Offer for Andrology | Bnoon - Riyadh & Jeddah",
+  title: "Founding Day Offer - IVF | Bnoon - Riyadh, Jeddah & Al Ahsa",
   description: "",
 };
 
