@@ -50,7 +50,7 @@ const NationalDayOffer = () => {
                   </div>
 
                   <p className="offer-desc">
-                   Celebrating Saudi Founding Day, we’re pleased to offer<strong>0% OFF*</strong> on Andrology & Men’s Infertility Treatments at Bnoon in Jeddah and Riyadh, {" "}
+                   Celebrating Saudi Founding Day, we’re pleased to offer <strong>20% OFF*</strong> on Andrology & Men’s Infertility Treatments at Bnoon in Jeddah and Riyadh, {" "}
                   
                   </p>
 
@@ -395,4 +395,5 @@ font-size: 14px;
 };
 
 export default NationalDayOffer;
+
 
