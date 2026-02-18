@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  AZURE_WEBAPP_NAME: bnoon
+  AZURE_WEBAPP_NAME: bnoon-sa
   SITE_URL: https://bnoon.sa
   NEXT_TELEMETRY_DISABLED: 1
 
