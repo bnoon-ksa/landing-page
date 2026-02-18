@@ -215,6 +215,8 @@ const NationalDayOffer = () => {
           font-weight: 700;
           letter-spacing: 1px;
           font-size: 16px;
+          padding-bottom: 5px;
+
         }
 
         .locations {
@@ -334,7 +336,7 @@ const NationalDayOffer = () => {
 
         .terms {
           color: #5a6870;
-          font-size: 16px;
+          font-size: 15px;
           line-height: 1.4;
         }
 
@@ -449,5 +451,6 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
 
 
