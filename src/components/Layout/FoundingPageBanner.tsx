@@ -3,7 +3,6 @@ import React from "react";
 type Props = {
   bgImage: string;
 };
-
 export default function FoundingDayBanner({ bgImage }: Props) {
   return (
     <>
