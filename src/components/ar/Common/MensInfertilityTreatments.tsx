@@ -305,7 +305,7 @@ const NationalDayOffer = () => {
 
         .terms {
           color: #5a6870;
-          font-size: 12.5px;
+          font-size: 11px;
           line-height: 1.4;
         }
 
@@ -389,3 +389,4 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
