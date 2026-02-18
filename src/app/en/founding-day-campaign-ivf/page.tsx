@@ -16,13 +16,14 @@ export default function NationalDayOfferPage() {
 
       <div style={{ position: "relative" }}>
        <FoundingPageBanner bgImage="/images/static-banner-en.jpeg" />
-
+ <div
+          className="container">
         <div
           className="second-banner-content reveal-text text-banner"
           style={{
             position: "absolute",
             top: "50%",
-            left: "9%",
+           
             transform: "translateY(-50%)",
             zIndex: 10,
           }}
@@ -33,7 +34,7 @@ export default function NationalDayOfferPage() {
             </span>
           </h1>
         </div>
-      </div>
+      </div></div>
 
       <NationalDayOffer />
 
