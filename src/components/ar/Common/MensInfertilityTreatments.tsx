@@ -142,6 +142,8 @@ const NationalDayOffer = () => {
     color: #000;
     font-weight: 700;
     padding-bottom: 10px;
+    font-family: 'Alexandria';
+    padding-top: 8px;
 }
         .offer-card {
           background: #fff;
@@ -193,6 +195,7 @@ const NationalDayOffer = () => {
         .offer-strong {
           color: #004e78;
           font-weight: 900;
+          font-size:20px;
         }
 
         .offer-desc {
@@ -305,7 +308,7 @@ const NationalDayOffer = () => {
 
         .terms {
           color: #5a6870;
-          font-size: 11px;
+          font-size: 15px;
           line-height: 1.4;
         }
 
@@ -325,6 +328,7 @@ const NationalDayOffer = () => {
           align-items: center;
           gap: 8px;
           margin-bottom: 6px;
+          font-size: 16px;
         }
 
         .phone-icon {
@@ -348,7 +352,20 @@ const NationalDayOffer = () => {
           .sub-title {
             font-size: 14px;
           }
-
+  .offer-strong {
+          color: #004e78;
+          font-weight: 900;
+          font-size:16px;
+        }
+.brand-name{
+font-size:14px;
+}
+.terms{
+font-size:11px;
+}
+.phone-item{
+font-size:12px;
+}
           .left-img-wrap {
             padding: 18px 16px 50px 40px
           }
@@ -389,4 +406,5 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
 
