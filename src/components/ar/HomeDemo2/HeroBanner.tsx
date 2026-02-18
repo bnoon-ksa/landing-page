@@ -13,7 +13,7 @@ function HeroBannerAr() {
   // ✅ Slides (video + text + buttonLink)
   const slides = [
     {
-      video: "https://bnoonsa.blob.core.windows.net/website/videos/ar-banner/2.mp4",
+      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/2.mp4",
     title: '<span class="font-program">برنامج</span> وعد بنون',
 
       desc: "الحمل أو استرداد الرسوم:<br>راحة بال. توتر أقل.",
@@ -24,14 +24,14 @@ function HeroBannerAr() {
       buttonText: "استكشفوا المزيد",
     },
     {
-      video: "https://bnoonsa.blob.core.windows.net/website/videos/ar-banner/3.mp4",
+      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/3.mp4",
       title: "المستقبل الواعد في <br>مجال علاجات الإخصاب",
       desc: "الآن في الرياض وجدة والأحساء  ",
       buttonLink: getBookNowUrl("ar"),
       buttonText: "احجز الآن",
     },
     {
-      video: "https://bnoonsa.blob.core.windows.net/website/videos/ar-banner/4.mp4",
+      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/4.mp4",
       title: "من الحلم إلى <br>البدايات الجديدة",
       desc: "الأمل يبدأ مع بنون",
       titleColor: "#004E78",
@@ -40,7 +40,7 @@ function HeroBannerAr() {
       buttonText: "احجز الآن",
     },
     {
-      video: "https://bnoonsa.blob.core.windows.net/website/videos/ar-banner/5.mp4",
+      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/5.mp4",
       title: 'تقديم الرعاية لأكثر من <br><span class="highlight-number">5000</span> من الأزواج سنويًا',
       desc: "لتحقيق حلمهم في الأمومة والأبوة",
       titleColor: "#004E78",
@@ -49,14 +49,14 @@ function HeroBannerAr() {
       buttonText: "احجز الآن",
     },
     {
-      video: "https://bnoonsa.blob.core.windows.net/website/videos/ar-banner/6.mp4",
+      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/6.mp4",
       title: "الجيل القادم من <br>علاجات الإخصاب",
       desc: "الآن في السعودية",
       buttonLink: getBookNowUrl("ar"),
       buttonText: "احجز الآن",
     },
     {
-      video: "https://bnoonsa.blob.core.windows.net/website/videos/ar-banner/7.mp4",
+      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/7.mp4",
       title: "ابدأوا رحلتكم نحو الأمومة <br>والأبوة مع بنون",
       desc: "احجزوا موعدكم معنا اليوم",
       titleColor: "#004E78",

@@ -16,6 +16,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'bnoonsa.blob.core.windows.net',
       },
+      {
+        protocol: 'https',
+        hostname: 'bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net',
+      },
     ],
   },
 
