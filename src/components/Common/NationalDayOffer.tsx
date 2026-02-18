@@ -89,15 +89,15 @@ const NationalDayOffer = () => {
                   <div className="cta-row">
                     <Link
                       href="/en/request-an-appoinment"
-                      className="btn book-btn btn-primary contact-btn"
+                      className="btn book-btn btn-primary contact-btn contact-text"
                     >
                       BOOK NOW
                     </Link>
-                    <span className="terms">
+                   
+                  </div>
+                   <span className="terms">
                       *Terms &amp; conditions apply. This offer is not valid with other offers
                     </span>
-                  </div>
-
                   {/* ✅ Phones */}
                   <div className="phones">
                     <div className="phone-col">
@@ -166,8 +166,7 @@ const NationalDayOffer = () => {
 
         /* ✅ IMAGE WRAP (same as Arabic design) */
         .left-img-wrap {
-          height: 100%;
-          padding: 28px;
+          padding: 38px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -181,6 +180,7 @@ const NationalDayOffer = () => {
           max-width: 520px;
           width: 100%;
           background: #fff;
+              margin: 30px 0px 0px 60px;
         }
 
         .left-img {
@@ -277,7 +277,7 @@ const NationalDayOffer = () => {
 
         .icon {
           width: 12px;
-          height: 18px;
+          height: 22px;
           border-radius: 50%;
           display: inline-flex;
           align-items: center;
@@ -372,10 +372,15 @@ const NationalDayOffer = () => {
           .left-img-wrap {
             padding: 0px 16px 50px 40px
           }
-
+.offer-strong {
+          color: #004e78;
+          font-weight: 900;
+          font-size: 16px;
+        }
           .img-shadow-box {
             box-shadow: -30px 30px 0px #d7f2fb;
             max-width: 100%;
+                margin: 0px 0px 0px 0px;
           }
 
           .right-content {
@@ -397,6 +402,12 @@ const NationalDayOffer = () => {
           .phones {
             grid-template-columns: 1fr;
           }
+            .contact-text{
+                font-size: 12px;
+            }
+                .phone-label{
+                font-size: 12px;
+                }
         }
 
         /* ✅ iPad Mini / iPad */
@@ -415,4 +426,5 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
 
