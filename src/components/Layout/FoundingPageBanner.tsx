@@ -34,7 +34,7 @@ export default function FoundingDayBanner({ bgImage }: Props) {
             background-position: 100% center;
           }
              .text-size{
-              font-size: 18px !important;
+              font-size: 15px !important;
               
           }
               .text-banner{
