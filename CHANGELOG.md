@@ -1,3 +1,13 @@
+## [1.3.5](https://github.com/bnoon-ksa/landing-page/compare/v1.3.4...v1.3.5) (2026-02-19)
+
+### Bug Fixes
+
+* adjust mobile spacing in ReferaPatient component ([#73](https://github.com/bnoon-ksa/landing-page/issues/73)) ([a9e461d](https://github.com/bnoon-ksa/landing-page/commit/a9e461dac259ea1913eee9d0cbd0551518582c06))
+
+### Performance Improvements
+
+* CDN caching, gzip compression, fix carousel video re-fetching ([#72](https://github.com/bnoon-ksa/landing-page/issues/72)) ([a301432](https://github.com/bnoon-ksa/landing-page/commit/a3014324e24c3160688b2f7f440a99bc2b09ac14))
+
 ## [1.3.4](https://github.com/bnoon-ksa/landing-page/compare/v1.3.3...v1.3.4) (2026-02-19)
 
 ### Bug Fixes
