@@ -146,7 +146,7 @@ async function processImage(entry: CatalogEntry): Promise<ProcessedEntry> {
 
       await sharp(srcPath)
         .resize(w, undefined, { withoutEnlargement: true })
-        .webp({ quality: 80 })
+        .webp({ quality: 100 })
         .toFile(outFile);
 
       totalOutputBytes += fs.statSync(outFile).size;
