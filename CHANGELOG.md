@@ -1,3 +1,9 @@
+## [1.3.8](https://github.com/bnoon-ksa/landing-page/compare/v1.3.7...v1.3.8) (2026-02-19)
+
+### Performance Improvements
+
+* add image optimization pipeline with LQIP blur placeholders ([#77](https://github.com/bnoon-ksa/landing-page/issues/77)) ([c67f681](https://github.com/bnoon-ksa/landing-page/commit/c67f681916ec57fe811ea65385627419b48ddfc8))
+
 ## [1.3.7](https://github.com/bnoon-ksa/landing-page/compare/v1.3.6...v1.3.7) (2026-02-19)
 
 ### Bug Fixes
