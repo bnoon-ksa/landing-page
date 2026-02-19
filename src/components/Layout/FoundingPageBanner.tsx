@@ -26,8 +26,10 @@ export default function FoundingDayBanner({ bgImage }: Props) {
         }
           .text-size{
               font-size: 44px !important;
+             
           }
                    .text-banner{
+              
                    max-width: 50% !important;
               }
         @media (max-width: 768px) {
