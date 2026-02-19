@@ -222,7 +222,7 @@ const SAUDI_CITIES = useMemo(
   };
 
   return (
-    <div className="fertility-area mt-5 text-center mb-5">
+    <div className="fertility-area mt-3 text-center mb-5">
       <div className="container">
         <div className="section-title">
           <div className="row justify-content-center align-items-center g-4">
@@ -232,7 +232,7 @@ const SAUDI_CITIES = useMemo(
               </div>
             </div>
 
-            <div className="left">
+            <div className="text-space">
               <p className="text-center">
                 Thank you for placing your trust in Bnoon and for referring your patient for fertility care. Please
                 note that this form is intended to be completed exclusively by licensed medical practitioners.
@@ -251,29 +251,30 @@ const SAUDI_CITIES = useMemo(
         <form onSubmit={handleSubmit} className="appointment-form text-start mx-auto" style={{ maxWidth: "1000px" }}>
           {/* Refer to */}
           <div className="card p-3 mb-3">
-            <div className="d-flex align-items-center flex-wrap gap-5">
-              <h6 className="mb-0 form-label">Refer to:</h6>
+          <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
+  <h6 className="mb-0 form-label">Refer to:</h6>
 
-              <div className="d-flex align-items-center gap-5 flex-wrap">
-                {(["Bnoon – Jeddah", "Bnoon – Riyadh", "Bnoon – Al Ahsa"] as const).map((branch) => (
-                  <label key={branch} className="form-check-label mb-0 d-flex align-items-center">
-                    <input
-                      type="radio"
-                      name="referTo"
-                      className="form-check-input me-2"
-                      value={branch}
-                      checked={formData.referTo === branch}
-                      onChange={(e) => setField("referTo", e.target.value as ReferralFormData["referTo"])}
-                    />
-                    {branch}
-                  </label>
-                ))}
-              </div>
-            </div>
+  <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
+    {(["Bnoon – Jeddah", "Bnoon – Riyadh", "Bnoon – Al Ahsa"] as const).map((branch) => (
+      <label key={branch} className="form-check-label mb-0 d-flex align-items-center">
+        <input
+          type="radio"
+          name="referTo"
+          className="form-check-input me-2"
+          value={branch}
+          checked={formData.referTo === branch}
+          onChange={(e) => setField("referTo", e.target.value as ReferralFormData["referTo"])}
+        />
+        {branch}
+      </label>
+    ))}
+  </div>
+</div>
+
           </div>
 
           {/* Referring Physician Information */}
-          <h5 className="mb-3">Referring Physician Information</h5>
+          <h5 className="mb-3 text-size">Referring Physician Information</h5>
           <div className="card p-3 mb-3">
             <div className="mb-3">
               <label className="form-label">Physician Name *</label>
@@ -318,7 +319,7 @@ const SAUDI_CITIES = useMemo(
             <div className="mb-3">
               <label className="form-label">Organization City</label>
             <select
-  className="form-select"
+  className="form-select form-control"
   value={formData.organizationCity}
   onChange={(e) => setField("organizationCity", e.target.value)}
 >
@@ -335,7 +336,7 @@ const SAUDI_CITIES = useMemo(
           </div>
 
           {/* Referred Patient Information */}
-          <h5 className="mb-3">Referred Patient Information</h5>
+          <h5 className="mb-3 text-size">Referred Patient Information</h5>
           <div className="card p-3 mb-3">
             <div className="mb-3">
               <label className="form-label">Patient Name *</label>
@@ -386,7 +387,7 @@ const SAUDI_CITIES = useMemo(
           </div>
 
           {/* Reason for Referring */}
-          <h5 className="mb-3">Reason for Referring *</h5>
+          <h5 className="mb-3 text-size">Reason for Referring *</h5>
           <div className="card p-3 mb-3">
             <div className="row">
               {REASONS.map((r) => (
@@ -446,6 +447,24 @@ const SAUDI_CITIES = useMemo(
         </form>
         {/* FORM END */}
       </div>
+        <style jsx>{`
+.text-space {
+    margin: 10px;
+}
+    .text-size{
+font-size: 20px;
+color:#000;
+        }
+ @media (max-width: 767px) {
+.text-size{
+font-size: 16px;
+color:#000;
+        }
+.form-control{
+    padding: 0.2rem 0.75rem !important;
+}
+        }
+         `}</style>
     </div>
   );
 };
