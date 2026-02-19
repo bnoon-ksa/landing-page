@@ -57,7 +57,7 @@ const HowItWorksSlider = () => {
             <div key={step.id} className="col-lg-3 col-md-4 col-sm-6">
             <div className="how-it-work-card">
   <div className="image">
-    <Image src={step.imageSrc} alt={step.title} width={350} height={300} loading="lazy" />
+    <Image src={step.imageSrc} alt={step.title} width={350} height={300} loading="eager" />
   </div>
   <div className="text-container">
     <h6 className="blog-text">{step.title}</h6>

@@ -76,7 +76,7 @@ const Feedbacks = () => {
                     alt="Service overview"
                     width={580}
                     height={450}
-                    loading="lazy"
+                    loading="eager"
                     style={{
                       transition: "opacity 1s ease-in-out",
                       borderRadius: "10px",

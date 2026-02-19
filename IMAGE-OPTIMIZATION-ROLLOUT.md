@@ -10,10 +10,12 @@
 
 | Component | Images Migrated | Status |
 |-----------|----------------|--------|
-| `Benefits.tsx` | benefit-1, benefit-2, benefit-3 | Done |
-| `OurBlog.tsx` | blog-riyadh, blog-jeddah, blog-king-salman, blog-alahsa | Done |
+| `Benefits.tsx` (EN) | benefit-1, benefit-2, benefit-3 | Done |
+| `OurBlog.tsx` (EN) | blog-riyadh, blog-jeddah, blog-king-salman, blog-alahsa | Done |
+| `ar/Common/Benefits.tsx` (AR) | benefit-1, benefit-2, benefit-3 | Done |
+| `ar/Common/OurBlog.tsx` (AR) | blog-riyadh, blog-jeddah, blog-king-salman, blog-alahsa | Done |
 
-**Total: 7 images, 2 components.** Manifest has blur placeholders for 33 images total.
+**Total: 7 unique images, 4 components (EN + AR).** Manifest has blur placeholders for 33 images total.
 
 ---
 
@@ -89,13 +91,13 @@ Small treatment card images. All 286x210.
 
 ---
 
-## Phase 6: AR Component Mirrors — "I bent my Wookiee"
+## Phase 6: AR Component Mirrors — "I bent my Wookiee" ✅ DONE
 
 The `components/ar/` directory has near-identical duplicates of EN components. Apply the same `<OptimizedImage>` swaps:
 
-- `ar/Common/Benefits.tsx` — same 3 benefit images
-- `ar/Common/OurBlog.tsx` — same 4 clinic images
-- Any AR-specific about/section components
+- ~~`ar/Common/Benefits.tsx` — same 3 benefit images~~ ✅ Done
+- ~~`ar/Common/OurBlog.tsx` — same 4 clinic images~~ ✅ Done
+- Any AR-specific about/section components (remaining — do alongside Phase 4)
 
 *"My knob tastes funny."* — The manifest entries are shared between EN and AR since they use the same source files.
 
