@@ -1,3 +1,9 @@
+## [1.3.10](https://github.com/bnoon-ksa/landing-page/compare/v1.3.9...v1.3.10) (2026-02-19)
+
+### Bug Fixes
+
+* restore lazy loading for all home page images ([#79](https://github.com/bnoon-ksa/landing-page/issues/79)) ([6265178](https://github.com/bnoon-ksa/landing-page/commit/626517826cfdca9493f9c3a2ba82203c3ce937fc))
+
 ## [1.3.9](https://github.com/bnoon-ksa/landing-page/compare/v1.3.8...v1.3.9) (2026-02-19)
 
 ### Performance Improvements
