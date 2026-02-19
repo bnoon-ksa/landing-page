@@ -219,6 +219,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
+          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node.js 22 (semantic-release requirement)
         uses: actions/setup-node@v4
@@ -295,9 +296,11 @@ jobs:
             echo "new_release_version=${NEW_TAG#v}" >> $GITHUB_OUTPUT
           else
             echo "new_release_published=false" >> $GITHUB_OUTPUT
-            # Detect if branch-behind was the reason
+            # Detect the failure reason
             if grep -q "local branch .* is behind the remote" /tmp/semrel.log; then
               echo "reason=branch_behind" >> $GITHUB_OUTPUT
+            elif grep -q "push declined due to repository rule violations\|remote rejected.*push declined\|failed to push some refs" /tmp/semrel.log; then
+              echo "reason=push_blocked" >> $GITHUB_OUTPUT
             else
               echo "reason=no_qualifying_commits" >> $GITHUB_OUTPUT
             fi
@@ -332,8 +335,29 @@ jobs:
           echo "=========================================================="
           exit 1
 
+      - name: Fail — git push blocked by branch rules
+        if: steps.release.outputs.new_release_published != 'true' && steps.release.outputs.reason == 'push_blocked'
+        run: |
+          cat >> $GITHUB_STEP_SUMMARY << 'EOF'
+          ### ❌ Release failed — git push blocked by branch protection
+
+          Semantic-release detected a new version but could not push the release commit
+          (CHANGELOG.md, package.json) back to `main` because branch rules blocked the push.
+
+          **This is a CI configuration issue, not a commit message problem.**
+
+          The `GH_PAT` secret may be missing, expired, or lack admin permissions.
+          Check: **Settings → Secrets → Actions → `GH_PAT`**
+          EOF
+          echo ""
+          echo "=========================================================="
+          echo "  PIPELINE FAILED: git push to main was blocked."
+          echo "  Check the GH_PAT secret has admin repo permissions."
+          echo "=========================================================="
+          exit 1
+
       - name: Fail — no release triggered
-        if: steps.release.outputs.new_release_published != 'true' && steps.release.outputs.reason != 'branch_behind'
+        if: steps.release.outputs.new_release_published != 'true' && steps.release.outputs.reason == 'no_qualifying_commits'
         run: |
           cat >> $GITHUB_STEP_SUMMARY << 'EOF'
           ### ❌ No release was created
