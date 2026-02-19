@@ -1,3 +1,20 @@
+## [1.3.4](https://github.com/bnoon-ksa/landing-page/compare/v1.3.3...v1.3.4) (2026-02-19)
+
+### Bug Fixes
+
+* **ci:** detect new release by comparing git tags before/after ([6160824](https://github.com/bnoon-ksa/landing-page/commit/6160824c28eb4786db4d24b2d424c9af0c0d4006))
+* **ci:** show correct error when branch is behind remote ([f24c292](https://github.com/bnoon-ksa/landing-page/commit/f24c292457a2a65d68995921b0cdbe93a9ea8e31))
+* **ci:** use GH_PAT for checkout in semantic-release + fix error detection [skip ci] ([bf4a28a](https://github.com/bnoon-ksa/landing-page/commit/bf4a28ab2dbb008d9b027e2b680b90f41bab2abe))
+* trigger release to verify CI pipeline ([396c30a](https://github.com/bnoon-ksa/landing-page/commit/396c30afbfc627a68d3b881fb9aa2c140aa7bf47))
+* update founding day andrology campaign banner text ([0994bd8](https://github.com/bnoon-ksa/landing-page/commit/0994bd83d9e6b47cd4a5b5deba5521b7ec8a4a29))
+
+### Performance Improvements
+
+* CDN, cache headers, lazy-load videos, sem-rel refactor rule ([#69](https://github.com/bnoon-ksa/landing-page/issues/69)) ([9b840aa](https://github.com/bnoon-ksa/landing-page/commit/9b840aa53c3714a0d693f6694784d30cc029db84))
+* CDN, cache headers, lazy-load videos, sem-rel refactor rule ([#69](https://github.com/bnoon-ksa/landing-page/issues/69)) ([5546376](https://github.com/bnoon-ksa/landing-page/commit/55463762d74e47fd671b26c124847a3616997c92))
+* optimize CI pipeline and branch protection setup ([5c0e555](https://github.com/bnoon-ksa/landing-page/commit/5c0e5557f8e1506972129545ae84241d7837f37e))
+* optimize CI pipeline with admin PAT for releases ([b24e8ff](https://github.com/bnoon-ksa/landing-page/commit/b24e8ffd4cfa82c31ad127be2cc885b8ed7acd01))
+
 ## [1.3.3](https://github.com/bnoon-ksa/landing-page/compare/v1.3.2...v1.3.3) (2026-02-18)
 
 ### Bug Fixes
