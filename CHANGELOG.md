@@ -1,3 +1,9 @@
+## [1.3.9](https://github.com/bnoon-ksa/landing-page/compare/v1.3.8...v1.3.9) (2026-02-19)
+
+### Performance Improvements
+
+* eager-load all home page images (EN + AR) ([#78](https://github.com/bnoon-ksa/landing-page/issues/78)) ([656db69](https://github.com/bnoon-ksa/landing-page/commit/656db69c9ce18a9373263515032bfcc7d7e13384))
+
 ## [1.3.8](https://github.com/bnoon-ksa/landing-page/compare/v1.3.7...v1.3.8) (2026-02-19)
 
 ### Performance Improvements
