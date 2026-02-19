@@ -194,7 +194,7 @@ const OurDoctors = () => {
             <div key={doctor.id} className="col-xl-3 col-md-6">
               <div className="doctor-card">
                 <div className="doctors-wrapper">
-                  <Image src={doctor.imageUrl} alt={doctor.name} width={340} height={340} loading="eager" style={{ borderRadius: 10, width: "100%", height: "auto" }} />
+                  <Image src={doctor.imageUrl} alt={doctor.name} width={340} height={340} loading="lazy" style={{ borderRadius: 10, width: "100%", height: "auto" }} />
                   <div className="image-overlay">
                     <div className="overlay-content">
                       <Link href={doctor.profileLink} className="btn btn-success doctor-btn doctor-hover-btn">عرض الملف الشخصي</Link>
