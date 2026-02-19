@@ -128,14 +128,21 @@ const Benefits = () => {
               }}
             >
              <div className="image-wrapper">
-    {images.map((img, index) => (
-      <Image
-        key={index}
-        src={img}
-        alt="benefit"
-        className={`slide-image ${index === currentIndex ? "active" : ""}  responsive-image`}
-       width={544} height={436} />
-    ))}
+    {images.map((img, index) => {
+      const isActive = index === currentIndex;
+      const isNext = index === (currentIndex + 1) % images.length;
+      if (!isActive && !isNext) return null;
+      return (
+        <Image
+          key={index}
+          src={img}
+          alt="benefit"
+          className={`slide-image ${isActive ? "active" : ""}  responsive-image`}
+          width={544} height={436}
+          loading="lazy"
+        />
+      );
+    })}
   </div>
               {/* ✅ Responsive style only for mobile */}
    <style jsx global>{`

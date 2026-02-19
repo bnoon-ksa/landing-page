@@ -60,6 +60,7 @@ const HowItWorksSlider = () => {
                     alt={step.title}
                     width={350}
                     height={300}
+                    loading="lazy"
                   />
                 </div>
                 <h6 className="blog-text">{step.title}</h6>

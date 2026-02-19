@@ -90,7 +90,7 @@ const OurBlog = () => {
                     ></iframe>
                   ) : (
                     <a href={post.slug} target="_blank" rel="noopener noreferrer">
-                      <Image src={post.imageSrc} alt={post.title}  width={378} height={205} />
+                      <Image src={post.imageSrc} alt={post.title} width={378} height={205} loading="lazy" />
                     </a>
                   )}
 

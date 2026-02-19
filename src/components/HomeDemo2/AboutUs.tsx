@@ -105,6 +105,7 @@ function AboutUs() {
                           alt={item.icon.alt}
                           width={120}
                           height={120}
+                          loading="lazy"
                         />
                       </div>
 
