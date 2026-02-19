@@ -123,21 +123,18 @@ const Benefits = () => {
             <div className="service-overview-image mb-md-0 mb-5" style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block", }}>
 
               <div className="image-wrapper">
-    {images.map((img, index) => {
-      const isActive = index === currentIndex;
-      const isNext = index === (currentIndex + 1) % images.length;
-      if (!isActive && !isNext) return null;
-      return (
+    {images.map((img, index) => (
         <Image
           key={index}
           src={img}
           alt="benefit"
-          fill
-          className={`slide-image ${isActive ? "active" : ""}  responsive-image`}
-          loading="lazy"
+          width={544}
+          height={436}
+          sizes="(max-width: 768px) 85vw, 544px"
+          className={`slide-image ${index === currentIndex ? "active" : ""} responsive-image`}
+          loading={index === 0 ? "eager" : "lazy"}
         />
-      );
-    })}
+    ))}
   </div>
             </div>
 
