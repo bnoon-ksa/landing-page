@@ -1,3 +1,9 @@
+## [1.3.7](https://github.com/bnoon-ksa/landing-page/compare/v1.3.6...v1.3.7) (2026-02-19)
+
+### Bug Fixes
+
+* prevent clinic card image re-fetching on hover (AR) ([#75](https://github.com/bnoon-ksa/landing-page/issues/75)) ([01f8188](https://github.com/bnoon-ksa/landing-page/commit/01f81882bfe6b358bec13c0f84dace88c952f68f))
+
 ## [1.3.6](https://github.com/bnoon-ksa/landing-page/compare/v1.3.5...v1.3.6) (2026-02-19)
 
 ### Performance Improvements
