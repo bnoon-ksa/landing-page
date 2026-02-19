@@ -16,6 +16,7 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
+    "compression": "^1.8.1",
     "framer-motion": "^12.23.24",
     "mongodb": "^6.20.0",
     "mongoose": "^8.19.1",

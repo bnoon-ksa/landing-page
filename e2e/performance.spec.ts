@@ -44,4 +44,24 @@ test.describe("Performance and loading", () => {
     const count = await nextImages.count();
     expect(count).toBeGreaterThan(0);
   });
+
+  test("/_next/image endpoint returns optimized images", async ({ request }) => {
+    // Test that the image optimization endpoint works (not 500)
+    const response = await request.get(
+      "/_next/image?url=%2Fimages%2Fbenefit1.jpg&w=640&q=75"
+    );
+    expect(response.status()).toBe(200);
+    const contentType = response.headers()["content-type"];
+    expect(contentType).toMatch(/image\/(webp|avif|jpeg|png)/);
+  });
+
+  test("server returns compressed responses", async ({ request }) => {
+    const response = await request.get("/en", {
+      headers: { "Accept-Encoding": "gzip, deflate, br" },
+    });
+    expect(response.status()).toBe(200);
+    const encoding = response.headers()["content-encoding"];
+    expect(encoding).toBeTruthy();
+    expect(["gzip", "br", "deflate"]).toContain(encoding);
+  });
 });
