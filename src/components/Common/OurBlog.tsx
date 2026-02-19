@@ -83,7 +83,8 @@ const OurBlog = () => {
                     src={post.imageSrc}
                     alt={post.title}
                     className={hoveredId === post.id ? "fade-out" : "fade-in"}
-                   width={378} height={205} />
+                    width={378} height={205}
+                    loading="lazy" />
                   <iframe
                     src={post.embedMap}
                     width="100%"

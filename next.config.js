@@ -16,7 +16,34 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'bnoonsa.blob.core.windows.net',
       },
+      {
+        protocol: 'https',
+        hostname: 'bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net',
+      },
     ],
+  },
+
+  async headers() {
+    return [
+      {
+        source: '/images/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=2592000, immutable' },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/api/health',
+        headers: [
+          { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
+        ],
+      },
+    ];
   },
 
   async redirects() {

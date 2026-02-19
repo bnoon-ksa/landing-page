@@ -383,9 +383,10 @@ Videos are hosted on Azure Blob Storage because they are too large to bundle:
 | Storage account | `bnoonsa` |
 | Container | `website` |
 | Path | `videos/` |
-| Base URL | `https://bnoonsa.blob.core.windows.net/website/videos/` |
+| CDN URL | `https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/` |
+| Direct URL | `https://bnoonsa.blob.core.windows.net/website/videos/` |
 
-Videos are referenced directly via their blob URLs in components.
+Videos are served via Azure Front Door Standard (CDN) for edge caching and lower latency. Components reference the CDN URL.
 
 ### Next.js Image Optimization
 
@@ -399,6 +400,7 @@ images: {
   remotePatterns: [
     { protocol: 'https', hostname: 'ovasavedev8fe4a1851a.blob.core.windows.net' },
     { protocol: 'https', hostname: 'bnoonsa.blob.core.windows.net' },
+    { protocol: 'https', hostname: 'bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net' },
   ],
 }
 ```
@@ -775,6 +777,7 @@ This project spans **two Azure subscriptions**. Understanding the layout helps w
 | `bnoon-sa` | Web App | `rg-bnoon-prod-uaen` | UAE North | - |
 | `asp-bnoon-prod-uaen` | App Service Plan | `rg-bnoon-prod-uaen` | UAE North | S1 Standard |
 | `bnoonsa` | Storage Account | `rg-bnoon-prod-uaen` | UAE North | Standard_LRS |
+| `bnoonsa-cdn` | Front Door (CDN) | `rg-bnoon-prod-uaen` | Global | Standard |
 
 **Web App configuration:**
 
@@ -797,7 +800,7 @@ This project spans **two Azure subscriptions**. Understanding the layout helps w
 |:----------|:-------------|:--------|
 | `website` | Public (container-level) | Videos at `website/videos/`, uploaded assets |
 
-> **Important:** Images are served locally from `public/images/`, NOT from blob storage. Only **videos** are served from `https://bnoonsa.blob.core.windows.net/website/videos/`. Both the web app and storage account are in **UAE North** for low-latency access.
+> **Important:** Images are served locally from `public/images/`, NOT from blob storage. Only **videos** are served via the CDN at `https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/`. The CDN (Azure Front Door Standard) caches content at edge PoPs globally. The origin storage account is in **UAE North**, same region as the web app.
 
 ### Telehealth Apps — "Microsoft Azure Sponsorship"
 

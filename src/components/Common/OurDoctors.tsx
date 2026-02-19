@@ -204,6 +204,7 @@ const OurDoctors = () => {
                     alt={doctor.name}
                     width={340}
                     height={340}
+                    loading="lazy"
                     style={{ width: "100%", height: "auto", borderRadius: 10 }}
                   />
                   <div className="image-overlay">
