@@ -129,7 +129,7 @@ const Benefits = () => {
           key={name}
           imageName={name}
           className={`slide-image ${index === currentIndex ? "active" : ""} responsive-image`}
-          loading={index === 0 ? "eager" : "lazy"}
+          loading="eager"
         />
     ))}
   </div>

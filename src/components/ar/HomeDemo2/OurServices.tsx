@@ -122,7 +122,7 @@ function OurServices() {
               alt="icon"
               width={90}
               height={90}
-              loading="lazy"
+              loading="eager"
             />
           </div>
 
