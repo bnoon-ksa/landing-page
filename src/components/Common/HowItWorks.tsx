@@ -81,7 +81,7 @@ const HowItWorks = () => {
                     alt={`${step.title} icon`}
                     width={44}
                     height={44}
-                    loading="eager"
+                    loading="lazy"
                   />
                 </div>
                 <div className="content">
