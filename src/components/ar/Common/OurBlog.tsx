@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 import 'remixicon/fonts/remixicon.css';
 const OurBlog = () => {
@@ -10,6 +10,7 @@ const OurBlog = () => {
   const blogData = [
     {
       id: 1,
+      imageName: "blog-riyadh" as const,
       imageSrc: "/images/blog/bnoon-riyadh.avif",
       title: "بنون – الرياض",
       slug: "https://maps.app.goo.gl/Uwu7B8FT8n7bYNid6", // Maps link
@@ -20,6 +21,7 @@ const OurBlog = () => {
  },
     {
       id: 2,
+      imageName: "blog-jeddah" as const,
       imageSrc: "/images/blog/bnoon-jeddah.avif",
       title: "بنون – جدة",
       slug: "https://www.google.com/maps/place/HealthPlus+Fertility+%26+Women's+Health+Center+-+Jeddah/data=!4m2!3m1!1s0x0:0x403eb3afa0ca3bd7?sa=X&ved=1t:2428&ictx=111",
@@ -31,6 +33,7 @@ const OurBlog = () => {
    },
     {
       id: 3,
+      imageName: "blog-king-salman" as const,
       imageSrc: "/images/blog/king-salman.avif",
        title: `بنون – طريق الملك سلمان، الرياض <br /><span style="margin-right:22px !important; font-size:14px; font-weight:400; color:#004E78;">(الافتتاح: مطلع عام 2026)</span>`,
 
@@ -41,6 +44,7 @@ const OurBlog = () => {
   },
     {
       id: 4,
+      imageName: "blog-alahsa" as const,
       imageSrc: "/images/blog/bnoon-alahsa-img.jpg",
       title: ` بنون – الأحساء`,
 
@@ -78,12 +82,11 @@ const OurBlog = () => {
 
                 {/* Image + Map overlay — both stay in DOM to prevent re-fetching */}
                 <div className="image">
-                  <Image
-                    src={post.imageSrc}
+                  <OptimizedImage
+                    imageName={post.imageName}
                     alt={post.title}
                     className={hoveredId === post.id ? "fade-out" : "fade-in"}
-                    width={378}
-                    height={205}
+                    width={378} height={205}
                     loading="lazy"
                   />
                   <iframe
