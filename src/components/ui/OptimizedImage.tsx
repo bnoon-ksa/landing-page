@@ -22,6 +22,7 @@ interface OptimizedImageProps extends Omit<ImageProps, "src" | "alt" | "placehol
 
 /**
  * Drop-in `next/image` wrapper that automatically applies:
+ *   - CDN `srcSet` delivery when the manifest has `cdnSrcSet` (bypasses `/_next/image`)
  *   - `placeholder="blur"` with a pre-generated LQIP data URI
  *   - Responsive `sizes` attribute from the manifest
  *
@@ -36,6 +37,9 @@ export default function OptimizedImage({
   alt: altProp,
   width: widthProp,
   height: heightProp,
+  className,
+  loading,
+  priority,
   ...rest
 }: OptimizedImageProps) {
   const entry = IMAGE_MANIFEST[imageName];
@@ -58,12 +62,50 @@ export default function OptimizedImage({
         width={widthProp}
         height={heightProp}
         sizes={sizesProp}
+        className={className}
+        loading={loading}
+        priority={priority}
         {...rest}
       />
     );
   }
 
-  // ── Manifest hit — apply blur + sizes ─────────────────────────────
+  const resolvedAlt = altProp ?? entry.alt;
+  const resolvedWidth = widthProp ?? entry.width;
+  const resolvedHeight = heightProp ?? entry.height;
+  const resolvedSizes = sizesProp ?? entry.sizes;
+
+  // ── CDN path: native <img> with srcSet ────────────────────────────
+  if (entry.cdnSrcSet) {
+    const blurStyle: React.CSSProperties = entry.blurDataURL
+      ? {
+          backgroundImage: `url(${entry.blurDataURL})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }
+      : {};
+
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        srcSet={entry.cdnSrcSet}
+        sizes={resolvedSizes}
+        src={entry.cdnSrcSet.split(", ").pop()?.split(" ")[0]}
+        alt={resolvedAlt}
+        width={typeof resolvedWidth === "number" ? resolvedWidth : undefined}
+        height={typeof resolvedHeight === "number" ? resolvedHeight : undefined}
+        loading={priority ? undefined : (loading ?? "lazy")}
+        decoding="async"
+        className={className as string}
+        style={blurStyle}
+        data-testid="cdn-img"
+        {...rest}
+      />
+    );
+  }
+
+  // ── Standard next/image path ──────────────────────────────────────
   const blurProps: Pick<ImageProps, "placeholder" | "blurDataURL"> =
     entry.blurDataURL
       ? { placeholder: "blur", blurDataURL: entry.blurDataURL }
@@ -72,10 +114,13 @@ export default function OptimizedImage({
   return (
     <Image
       src={entry.src}
-      alt={altProp ?? entry.alt}
-      width={widthProp ?? entry.width}
-      height={heightProp ?? entry.height}
-      sizes={sizesProp ?? entry.sizes}
+      alt={resolvedAlt}
+      width={resolvedWidth}
+      height={resolvedHeight}
+      sizes={resolvedSizes}
+      className={className}
+      loading={loading}
+      priority={priority}
       {...blurProps}
       {...rest}
     />

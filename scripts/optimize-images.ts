@@ -5,6 +5,10 @@
  * aligned widths, creates LQIP blur placeholders, and writes the manifest
  * that `<OptimizedImage>` consumes at runtime.
  *
+ * When `NEXT_PUBLIC_CDN_URL` is set, the manifest includes a `cdnSrcSet`
+ * field with pre-built CDN URLs so images are served from Azure Front Door
+ * instead of `/_next/image`.
+ *
  * Usage:
  *   npx tsx scripts/optimize-images.ts          # skip unchanged images
  *   npx tsx scripts/optimize-images.ts --force   # regenerate everything
@@ -53,6 +57,9 @@ const MANIFEST_PATH = path.join(ROOT, "src", "lib", "image-manifest.ts");
 
 const FORCE = process.argv.includes("--force");
 
+/** CDN base URL — when set, the manifest includes cdnSrcSet for each image. */
+const CDN_BASE_URL = process.env.NEXT_PUBLIC_CDN_URL ?? "";
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -86,9 +93,33 @@ function formatBytes(bytes: number): string {
   return `${(kb / 1024).toFixed(2)} MB`;
 }
 
+/**
+ * Format a file size as a compact slug for CDN filenames.
+ * Examples: 32kb, 150kb, 1.5mb
+ */
+function formatSizeSlug(bytes: number): string {
+  const kb = bytes / 1024;
+  if (kb < 1024) {
+    const rounded = Math.round(kb);
+    return `${rounded}kb`;
+  }
+  const mb = kb / 1024;
+  // Use one decimal place for MB
+  const formatted = mb < 10 ? mb.toFixed(1) : Math.round(mb).toString();
+  return `${formatted}mb`;
+}
+
 // ---------------------------------------------------------------------------
 // Core processing
 // ---------------------------------------------------------------------------
+
+/** Metadata for a single generated variant (used for CDN srcSet). */
+interface VariantInfo {
+  width: number;
+  height: number;
+  bytes: number;
+  filename: string;
+}
 
 interface ProcessedEntry {
   name: string;
@@ -99,6 +130,7 @@ interface ProcessedEntry {
   alt: string;
   category: string;
   blurDataURL: string;
+  cdnSrcSet: string;
   originalBytes: number;
   totalOutputBytes: number;
   variantsGenerated: number;
@@ -115,6 +147,7 @@ async function processImage(entry: CatalogEntry): Promise<ProcessedEntry> {
   const safeName = entry.name;
   let totalOutputBytes = 0;
   let variantsGenerated = 0;
+  const variants: VariantInfo[] = [];
 
   // Determine which responsive widths to generate (cap at source width)
   const isSvg = entry.src.endsWith(".svg");
@@ -134,23 +167,50 @@ async function processImage(entry: CatalogEntry): Promise<ProcessedEntry> {
 
     // Generate responsive WebP variants
     for (const w of widthsToGenerate) {
+      // First pass: generate with old filename convention for the actual file
       const outFile = path.join(OUTPUT_DIR, `${safeName}-${w}.webp`);
+
+      let outputHeight: number;
+      let outputBytes: number;
 
       if (!FORCE && !fileIsStale(srcPath, outFile)) {
         if (fs.existsSync(outFile)) {
-          totalOutputBytes += fs.statSync(outFile).size;
+          const metadata = await sharp(outFile).metadata();
+          outputHeight = metadata.height ?? Math.round((w / entry.width) * entry.height);
+          outputBytes = fs.statSync(outFile).size;
+          totalOutputBytes += outputBytes;
           variantsGenerated++;
+
+          // Rename to new convention with dimensions + size
+          const sizeSlug = formatSizeSlug(outputBytes);
+          const newFilename = `${safeName}-${w}x${outputHeight}-${sizeSlug}.webp`;
+          const newOutFile = path.join(OUTPUT_DIR, newFilename);
+          if (!fs.existsSync(newOutFile)) {
+            fs.copyFileSync(outFile, newOutFile);
+          }
+
+          variants.push({ width: w, height: outputHeight, bytes: outputBytes, filename: newFilename });
         }
         continue;
       }
 
-      await sharp(srcPath)
+      const result = await sharp(srcPath)
         .resize(w, undefined, { withoutEnlargement: true })
         .webp({ quality: 100 })
         .toFile(outFile);
 
-      totalOutputBytes += fs.statSync(outFile).size;
+      outputHeight = result.height;
+      outputBytes = fs.statSync(outFile).size;
+      totalOutputBytes += outputBytes;
       variantsGenerated++;
+
+      // Also write the new-convention filename
+      const sizeSlug = formatSizeSlug(outputBytes);
+      const newFilename = `${safeName}-${w}x${outputHeight}-${sizeSlug}.webp`;
+      const newOutFile = path.join(OUTPUT_DIR, newFilename);
+      fs.copyFileSync(outFile, newOutFile);
+
+      variants.push({ width: w, height: outputHeight, bytes: outputBytes, filename: newFilename });
     }
   }
 
@@ -170,6 +230,16 @@ async function processImage(entry: CatalogEntry): Promise<ProcessedEntry> {
     blurDataURL = `data:image/webp;base64,${lqipBuffer.toString("base64")}`;
   }
 
+  // Build CDN srcSet if CDN is configured
+  let cdnSrcSet = "";
+  if (CDN_BASE_URL && variants.length > 0) {
+    const baseUrl = CDN_BASE_URL.replace(/\/$/, "");
+    cdnSrcSet = variants
+      .sort((a, b) => a.width - b.width)
+      .map((v) => `${baseUrl}/optimized/${v.filename} ${v.width}w`)
+      .join(", ");
+  }
+
   return {
     name: entry.name,
     src: entry.src,
@@ -179,6 +249,7 @@ async function processImage(entry: CatalogEntry): Promise<ProcessedEntry> {
     alt: entry.alt,
     category: entry.category,
     blurDataURL,
+    cdnSrcSet,
     originalBytes,
     totalOutputBytes,
     variantsGenerated,
@@ -212,6 +283,7 @@ function generateManifest(entries: ProcessedEntry[]): string {
     lines.push(`    alt: ${JSON.stringify(entry.alt)},`);
     lines.push(`    blurDataURL: "${entry.blurDataURL}",`);
     lines.push(`    category: "${entry.category}",`);
+    lines.push(`    cdnSrcSet: ${JSON.stringify(entry.cdnSrcSet)},`);
     lines.push("  },");
   }
 
@@ -228,6 +300,7 @@ function generateManifest(entries: ProcessedEntry[]): string {
 async function main(): Promise<void> {
   console.log("\n=== Image Optimization Pipeline ===\n");
   console.log(`Mode: ${FORCE ? "FORCE (regenerate all)" : "incremental"}`);
+  console.log(`CDN:  ${CDN_BASE_URL || "(not configured — cdnSrcSet will be empty)"}`);
 
   // Dynamically import the catalog (uses ts paths so we read it as a file)
   const catalogPath = path.join(ROOT, "src", "config", "image.config.ts");
@@ -270,7 +343,8 @@ async function main(): Promise<void> {
 
       console.log(
         `  [OK] ${result.name} — ${result.variantsGenerated} variants, ` +
-          `LQIP ${result.blurDataURL.length > 0 ? `${result.blurDataURL.length} chars` : "skipped (SVG)"}`
+          `LQIP ${result.blurDataURL.length > 0 ? `${result.blurDataURL.length} chars` : "skipped (SVG)"}` +
+          `${result.cdnSrcSet ? " [CDN]" : ""}`
       );
     }
   }
@@ -289,6 +363,7 @@ async function main(): Promise<void> {
       alt: svgEntry.alt,
       category: svgEntry.category,
       blurDataURL: "",
+      cdnSrcSet: "",
       originalBytes: 0,
       totalOutputBytes: 0,
       variantsGenerated: 0,
@@ -313,6 +388,10 @@ async function main(): Promise<void> {
       100
     ).toFixed(1);
     console.log(`  Size change: ${savings}% reduction`);
+  }
+
+  if (CDN_BASE_URL) {
+    console.log(`  CDN srcSet: enabled (${CDN_BASE_URL})`);
   }
 
   console.log("\nDone!\n");

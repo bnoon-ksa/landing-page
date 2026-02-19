@@ -15,6 +15,7 @@ vi.mock("@/lib/image-manifest", () => ({
       alt: "Benefit one alt text",
       blurDataURL: "data:image/webp;base64,AAAA",
       category: "benefit" as const,
+      cdnSrcSet: "",
     },
     "no-blur": {
       src: "/images/no-blur.jpg",
@@ -24,6 +25,31 @@ vi.mock("@/lib/image-manifest", () => ({
       alt: "No blur image",
       blurDataURL: "",
       category: "misc" as const,
+      cdnSrcSet: "",
+    },
+    "cdn-image": {
+      src: "/images/cdn-test.jpg",
+      width: 1200,
+      height: 800,
+      sizes: "(max-width: 768px) 100vw, 1200px",
+      alt: "CDN served image",
+      blurDataURL: "data:image/webp;base64,BBBB",
+      category: "banner" as const,
+      cdnSrcSet:
+        "https://cdn.example.com/optimized/cdn-test-576x384-32kb.webp 576w, " +
+        "https://cdn.example.com/optimized/cdn-test-1200x800-85kb.webp 1200w",
+    },
+    "cdn-no-blur": {
+      src: "/images/cdn-no-blur.jpg",
+      width: 800,
+      height: 600,
+      sizes: "800px",
+      alt: "CDN no blur",
+      blurDataURL: "",
+      category: "misc" as const,
+      cdnSrcSet:
+        "https://cdn.example.com/optimized/cdn-no-blur-576x432-20kb.webp 576w, " +
+        "https://cdn.example.com/optimized/cdn-no-blur-800x600-50kb.webp 800w",
     },
   },
 }));
@@ -69,6 +95,8 @@ describe("OptimizedImage", () => {
   beforeEach(() => {
     vi.restoreAllMocks();
   });
+
+  // ── Standard next/image path ────────────────────────────────────────
 
   it("renders with blur placeholder when manifest entry has blurDataURL", () => {
     render(<OptimizedImage imageName="benefit-1" />);
@@ -155,5 +183,79 @@ describe("OptimizedImage", () => {
     );
 
     expect(container.innerHTML).toBe("");
+  });
+
+  // ── CDN srcSet path ─────────────────────────────────────────────────
+
+  it("renders native <img> with srcSet when cdnSrcSet is present", () => {
+    render(<OptimizedImage imageName="cdn-image" />);
+    const img = screen.getByTestId("cdn-img");
+
+    expect(img).toHaveAttribute(
+      "srcset",
+      "https://cdn.example.com/optimized/cdn-test-576x384-32kb.webp 576w, " +
+        "https://cdn.example.com/optimized/cdn-test-1200x800-85kb.webp 1200w"
+    );
+    expect(img).toHaveAttribute("sizes", "(max-width: 768px) 100vw, 1200px");
+    expect(img).toHaveAttribute("alt", "CDN served image");
+    expect(img).toHaveAttribute("width", "1200");
+    expect(img).toHaveAttribute("height", "800");
+    expect(img).toHaveAttribute("loading", "lazy");
+    expect(img).toHaveAttribute("decoding", "async");
+  });
+
+  it("uses the last srcSet URL as the <img> src fallback", () => {
+    render(<OptimizedImage imageName="cdn-image" />);
+    const img = screen.getByTestId("cdn-img");
+
+    expect(img).toHaveAttribute(
+      "src",
+      "https://cdn.example.com/optimized/cdn-test-1200x800-85kb.webp"
+    );
+  });
+
+  it("applies blur background-image style on CDN images when blurDataURL exists", () => {
+    render(<OptimizedImage imageName="cdn-image" />);
+    const img = screen.getByTestId("cdn-img");
+
+    expect(img.style.backgroundImage).toContain("data:image/webp;base64,BBBB");
+    expect(img.style.backgroundSize).toBe("cover");
+  });
+
+  it("does not apply blur style on CDN images when blurDataURL is empty", () => {
+    render(<OptimizedImage imageName="cdn-no-blur" />);
+    const img = screen.getByTestId("cdn-img");
+
+    expect(img.style.backgroundImage).toBe("");
+  });
+
+  it("allows overriding alt and sizes on CDN images", () => {
+    render(
+      <OptimizedImage
+        imageName="cdn-image"
+        alt="Override alt"
+        sizes="50vw"
+      />
+    );
+    const img = screen.getByTestId("cdn-img");
+
+    expect(img).toHaveAttribute("alt", "Override alt");
+    expect(img).toHaveAttribute("sizes", "50vw");
+  });
+
+  it("passes className to CDN img", () => {
+    render(
+      <OptimizedImage imageName="cdn-image" className="cdn-class" />
+    );
+    const img = screen.getByTestId("cdn-img");
+
+    expect(img).toHaveAttribute("class", "cdn-class");
+  });
+
+  it("does not render next/image for CDN entries", () => {
+    render(<OptimizedImage imageName="cdn-image" />);
+
+    expect(screen.queryByTestId("optimized-img")).toBeNull();
+    expect(screen.getByTestId("cdn-img")).toBeTruthy();
   });
 });

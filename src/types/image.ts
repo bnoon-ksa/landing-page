@@ -67,6 +67,17 @@ export interface ImageManifestEntry {
 
   /** Category from the catalog. */
   readonly category: ImageCatalogEntry["category"];
+
+  /**
+   * Pre-built CDN `srcSet` string for native `<img>` delivery.
+   * When present, `<OptimizedImage>` renders a native `<img srcSet>` instead
+   * of `next/image`, bypassing server-side image processing.
+   *
+   * Empty string means CDN is not configured — falls back to `next/image`.
+   *
+   * @example "https://cdn.../optimized/benefit-1-576x461-32kb.webp 576w, ...1200x960-85kb.webp 1200w"
+   */
+  readonly cdnSrcSet: string;
 }
 
 /** The full manifest keyed by image name. */
