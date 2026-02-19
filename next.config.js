@@ -38,6 +38,12 @@ const nextConfig = {
         ],
       },
       {
+        source: '/_next/image',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' },
+        ],
+      },
+      {
         source: '/api/health',
         headers: [
           { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },

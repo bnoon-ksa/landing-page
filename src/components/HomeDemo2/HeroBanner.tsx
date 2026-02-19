@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { getBookNowUrl } from "@/utils/booking";
 
 function HeroBanner() {
@@ -9,6 +8,7 @@ function HeroBanner() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animate, setAnimate] = useState(false);
   const bannerRef = useRef<HTMLDivElement>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   // ✅ Slides (video + text + buttonLink)
   const slides = [
@@ -75,15 +75,40 @@ function HeroBanner() {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  // ✅ Parallax scroll
+  // ✅ Control video playback — play active, pause others
   useEffect(() => {
+    videoRefs.current.forEach((video, index) => {
+      if (!video) return;
+      if (index === currentSlide) {
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+
+    // Preload next slide's video
+    const nextIndex = (currentSlide + 1) % slides.length;
+    const nextVideo = videoRefs.current[nextIndex];
+    if (nextVideo && nextVideo.preload === "none") {
+      nextVideo.preload = "metadata";
+    }
+  }, [currentSlide, slides.length]);
+
+  // ✅ Throttled parallax scroll
+  useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      if (!bannerRef.current) return;
-      const speed = 0.5;
-      const offset = -(window.scrollY * speed);
-      setBgPosition(offset);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        if (!bannerRef.current) { ticking = false; return; }
+        const speed = 0.5;
+        setBgPosition(-(window.scrollY * speed));
+        ticking = false;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -107,19 +132,20 @@ function HeroBanner() {
         backgroundAttachment: "fixed",
       }}
     >
-      {/* 🔹 Video Background Slider (lazy: only current + next) */}
+      {/* 🔹 Video Background Slider — all slides stay in DOM to prevent re-fetch */}
       {slides.map((slide, index) => {
         const isActive = currentSlide === index;
-        const isNext = (currentSlide + 1) % slides.length === index;
-        if (!isActive && !isNext) return null;
+        const isAdjacent =
+          (currentSlide + 1) % slides.length === index ||
+          (currentSlide - 1 + slides.length) % slides.length === index;
         return (
           <video
             key={index}
-            autoPlay={isActive}
+            ref={(el) => { videoRefs.current[index] = el; }}
             loop
             muted
             playsInline
-            preload={isActive ? "auto" : "metadata"}
+            preload={isActive ? "auto" : isAdjacent ? "metadata" : "none"}
             style={{
               position: "absolute",
               top: 0,
@@ -130,6 +156,7 @@ function HeroBanner() {
               zIndex: -1,
               opacity: isActive ? 1 : 0,
               transition: "opacity 1s ease-in-out",
+              visibility: isActive || isAdjacent ? "visible" : "hidden",
             }}
           >
             <source src={slide.video} type="video/mp4" />
