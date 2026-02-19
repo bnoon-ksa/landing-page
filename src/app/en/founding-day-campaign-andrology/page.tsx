@@ -32,7 +32,7 @@ export default function NationalDayOfferPage() {
 
             <span  className="rowdies-font text-size">
              
-FOUNDING DAY OFFER IN ANDROLOGY & <br />MALE INFERTILITY SERVICES
+FOUNDING DAY OFFER IN ANDROLOGY & MALE INFERTILITY SERVICES
             </span>
           </h1>
         </div>
