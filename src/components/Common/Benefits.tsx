@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 const Benefits = () => {
   const benefitsData = [
@@ -31,11 +31,7 @@ const Benefits = () => {
     },
   ];
 
-  const images = [
-    "/images/benefit1.jpg",
-    "/images/benefit2.jpg",
-    "/images/benefit3.jpg",
-  ];
+  const imageNames = ["benefit-1", "benefit-2", "benefit-3"] as const;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -46,10 +42,10 @@ const Benefits = () => {
   // Slider effect
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
+      setCurrentIndex((prev) => (prev + 1) % imageNames.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [imageNames.length]);
 
   // Scroll-triggered animation
   useEffect(() => {
@@ -123,14 +119,10 @@ const Benefits = () => {
             <div className="service-overview-image mb-md-0 mb-5" style={{ boxShadow: "50px 50px 0px #d7f2fb", overflow: "hidden", display: "inline-block", }}>
 
               <div className="image-wrapper">
-    {images.map((img, index) => (
-        <Image
-          key={index}
-          src={img}
-          alt="benefit"
-          width={544}
-          height={436}
-          sizes="(max-width: 768px) 85vw, 544px"
+    {imageNames.map((name, index) => (
+        <OptimizedImage
+          key={name}
+          imageName={name}
           className={`slide-image ${index === currentIndex ? "active" : ""} responsive-image`}
           loading={index === 0 ? "eager" : "lazy"}
         />

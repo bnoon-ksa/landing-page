@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 import 'remixicon/fonts/remixicon.css';
 
 const OurBlog = () => {
@@ -11,6 +11,7 @@ const OurBlog = () => {
   const blogData = [
     {
       id: 1,
+      imageName: "blog-riyadh" as const,
       imageSrc: "/images/blog/bnoon-riyadh.avif",
       title: "Bnoon - Riyadh",
       slug: "https://maps.app.goo.gl/Uwu7B8FT8n7bYNid6",
@@ -21,6 +22,7 @@ const OurBlog = () => {
     },
     {
       id: 2,
+      imageName: "blog-jeddah" as const,
       imageSrc: "/images/blog/bnoon-jeddah.avif",
       title: "Bnoon – Jeddah",
       slug: "https://www.google.com/maps/place/HealthPlus+Fertility+%26+Women's+Health+Center+-+Jeddah/data=!4m2!3m1!1s0x0:0x403eb3afa0ca3bd7?sa=X&amp;ved=1t:2428&amp;ictx=111",
@@ -31,6 +33,7 @@ const OurBlog = () => {
     },
     {
       id: 3,
+      imageName: "blog-king-salman" as const,
       imageSrc: "/images/blog/king-salman.avif",
       title: "Bnoon – King Salman Road, Riyadh ",
       note: "(Opening Early 2026)",
@@ -42,6 +45,7 @@ const OurBlog = () => {
     },
     {
       id: 4,
+      imageName: "blog-alahsa" as const,
       imageSrc: "/images/blog/bnoon-alahsa-img.jpg",
       title: "Bnoon – Al Ahsa ",
       slug: "https://maps.app.goo.gl/56bbzJYjX8xsm5tJ6",
@@ -79,8 +83,8 @@ const OurBlog = () => {
                 onMouseLeave={() => setHoveredId(null)}
               >
                 <div className="image">
-                  <Image
-                    src={post.imageSrc}
+                  <OptimizedImage
+                    imageName={post.imageName}
                     alt={post.title}
                     className={hoveredId === post.id ? "fade-out" : "fade-in"}
                     width={378} height={205}

@@ -48,7 +48,7 @@ test.describe("Performance and loading", () => {
   test("/_next/image endpoint returns optimized images", async ({ request }) => {
     // Test that the image optimization endpoint works (not 500)
     const response = await request.get(
-      "/_next/image?url=%2Fimages%2Fbenefit1.jpg&w=640&q=75"
+      "/_next/image?url=%2Fimages%2Fbenefit1.jpg&w=768&q=75"
     );
     expect(response.status()).toBe(200);
     const contentType = response.headers()["content-type"];
