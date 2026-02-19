@@ -76,24 +76,26 @@ const OurBlog = () => {
                 onMouseLeave={() => setHoveredId(null)}
               >
 
-                {/* Image links to Google Maps */}
+                {/* Image + Map overlay — both stay in DOM to prevent re-fetching */}
                 <div className="image">
-                  {hoveredId === post.id ? (
-                    <iframe
-                      src={post.embedMap} // <-- yahi har card ka map show karega
-                      width="100%"
-                      height="200"
-                      style={{ border: "0" }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                  ) : (
-                    <a href={post.slug} target="_blank" rel="noopener noreferrer">
-                      <Image src={post.imageSrc} alt={post.title} width={378} height={205} loading="lazy" />
-                    </a>
-                  )}
-
+                  <Image
+                    src={post.imageSrc}
+                    alt={post.title}
+                    className={hoveredId === post.id ? "fade-out" : "fade-in"}
+                    width={378}
+                    height={205}
+                    loading="lazy"
+                  />
+                  <iframe
+                    src={post.embedMap}
+                    width="100%"
+                    height="250"
+                    style={{ border: "0" }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className={hoveredId === post.id ? "fade-in" : "fade-out"}
+                  ></iframe>
                 </div>
 
 
@@ -158,25 +160,29 @@ width:450px;
     min-height: 250px; /* adjust according to design */
 }
 
-/* Make image area fixed height */
+/* Image area — relative container with absolute-positioned children for crossfade */
 .blog-card .image {
-    height: 250px; /* all images/iframes same height */
-    overflow: hidden;
-}
-.blog-card .image img {
-    width: 100%;
-    height: auto; /* natural ratio maintain */
-    display: block;
-}
-.blog-card .image {
-    height: 250px; /* desktop height */
+    position: relative;
+    height: 250px;
     overflow: hidden;
 }
 .blog-card .image img,
 .blog-card .image iframe {
     width: 100%;
-    height: 100%; /* fills .image container */
-    display: block;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.fade-in {
+    opacity: 1;
+    z-index: 2;
+}
+.fade-out {
+    opacity: 0;
+    z-index: 1;
 }
 /* Content area fills remaining space */
 .blog-card .content {
@@ -187,12 +193,10 @@ width:450px;
      .blog-card .content h3 {
         font-size: 14px;
     }
-        .blog-card .image {
-    height: 200px; /* all images/iframes same height */
-    overflow: hidden;
-}
      .blog-card .image {
-        height: 200px; /* mobile height */
+        position: relative;
+        height: 200px;
+        overflow: hidden;
     }
                    .blog-card .content p {
   font-size: 12px !important;      /* font size kam */
