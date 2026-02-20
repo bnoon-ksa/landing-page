@@ -12,6 +12,30 @@ function HeroBanner() {
 
   // ✅ Slides (video + text + buttonLink)
   const slides = [
+      {
+  video: "/images/banner-video/banner-2.mp4",
+  title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
+  desc: "<strong>*Benefit from our Founding Day Special IVF Offer </em>",
+  titleColor: "#004E78",
+  descColor: "#004E78",
+  extra: "",
+  buttonLink: "en/founding-day-campaign-ivf",
+  buttonText: "Explore Our Offer ",
+
+  descClass: "special-desc",   // 👈 ADD THIS
+},
+    {
+  video: "/images/banner-video/banner-1.mp4",
+  title: "<span class='rowdies-font'>*SAUDI FOUNDING DAY OFFER </span>",
+  desc: "<strong>Andrology & Men’s Infertility Treatments</em>",
+  titleColor: "#004E78",
+  descColor: "#004E78",
+  extra: "",
+  buttonLink: "en/founding-day-campaign-andrology",
+  buttonText: "Explore Our Offer",
+
+  descClass: "special-desc",   // 👈 ADD THIS
+},
     {
   video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4",
   title: "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
@@ -187,7 +211,7 @@ function HeroBanner() {
             <a
               href={slides[currentSlide].buttonLink}
               {...(slides[currentSlide].buttonLink.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="btn btn-success btn-appointment btn-banner"
+              className="btn btn-success btn-appointment explore-appointment btn-banner"
             >
               {slides[currentSlide].buttonText}
             </a>
@@ -249,6 +273,13 @@ function HeroBanner() {
     margin-top: 18px;
     line-height: 1.7;
   }
+    @media (max-width: 767px) {
+    .explore-appointment {
+       
+        width: 100px;
+        
+    }
+}
       `}</style>
     </div>
   );
