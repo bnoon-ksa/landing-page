@@ -107,7 +107,7 @@ const NationalDayOffer = () => {
                           style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
-                          <span className="phone-label">Bnoon - Riyadh:</span> 011 444 8080
+                          <span className="phone-label">Bnoon - Riyadh:</span> 0114448080
                         </span>
                       </div>
 
@@ -133,7 +133,7 @@ const NationalDayOffer = () => {
                           style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
-                          <span className="phone-label">Bnoon - Jeddah:</span> 012 680 0800
+                          <span className="phone-label">Bnoon - Jeddah:</span> 0126800800
                         </span>
                       </div>
                     </div>
