@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/Layout/PageBanner";
-import Navbar from "@/components/Layout/Navbar";
-import VisitTabs from "@/components/Common/VisitTabs";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/Layout/Navbar';
+import VisitTabs from '@/components/Common/VisitTabs';
 
 export const metadata: Metadata = {
-  title: "Bnoon - Your Visit to Bnoon in Jeddah, Riyadh & Al Ahsa",
-  description: "Everything you need to know about visiting Bnoon in Jeddah, Riyadh, and Al Ahsa. Appointments, preparation, and available services.",
+  title: 'Bnoon - Your Visit to Bnoon in Jeddah, Riyadh & Al Ahsa',
+  description:
+    'Everything you need to know about visiting Bnoon in Jeddah, Riyadh, and Al Ahsa. Appointments, preparation, and available services.',
 };
 
 export default function YourVisitPage() {
@@ -14,10 +15,8 @@ export default function YourVisitPage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="/images/visit-banner.jpg" />
-     <VisitTabs />
-
-     
+      <OptimizedPageBanner imageName="visit-banner" />
+      <VisitTabs />
     </>
   );
 }

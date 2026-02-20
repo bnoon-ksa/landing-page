@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Navbar from "@/components/ar/Layout/Navbar";
+import Link from 'next/link';
+import Navbar from '@/components/ar/Layout/Navbar';
 
 export default function ArabicNotFound() {
   return (
@@ -13,11 +13,11 @@ export default function ArabicNotFound() {
           <div className="not-found-content text-center">
             <div
               style={{
-                fontSize: "6rem",
+                fontSize: '6rem',
                 fontWeight: 700,
-                color: "#336AEA",
+                color: '#336AEA',
                 lineHeight: 1,
-                marginBottom: "1.5rem",
+                marginBottom: '1.5rem',
               }}
             >
               404
@@ -26,9 +26,9 @@ export default function ArabicNotFound() {
             <h3>الصفحة غير موجودة</h3>
             <p
               style={{
-                color: "#5A6A85",
-                marginBottom: "2rem",
-                fontSize: "1rem",
+                color: '#5A6A85',
+                marginBottom: '2rem',
+                fontSize: '1rem',
               }}
             >
               عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.

@@ -1,35 +1,34 @@
-"use client"; // Client-side component for form handling
+'use client'; // Client-side component for form handling
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const HowItWorks = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-const handleContact = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+  const handleContact = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  try {
-    const res = await fetch("/api/subscribe-ar", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
+    try {
+      const res = await fetch('/api/subscribe-ar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (data.success) {
-      setMessage("✅ تم الاشتراك بنجاح! شكراً لكم.");
-      setEmail("");
-    } else {
-      setMessage("❌ " + (data.error || "حدث خطأ، حاول مرة أخرى."));
+      if (data.success) {
+        setMessage('✅ تم الاشتراك بنجاح! شكراً لكم.');
+        setEmail('');
+      } else {
+        setMessage('❌ ' + (data.error || 'حدث خطأ، حاول مرة أخرى.'));
+      }
+    } catch (err) {
+      console.error(err);
+      setMessage('⚠️ خطأ في الخادم. الرجاء المحاولة لاحقاً.');
     }
-  } catch (err) {
-    console.error(err);
-    setMessage("⚠️ خطأ في الخادم. الرجاء المحاولة لاحقاً.");
-  }
-};
-
+  };
 
   return (
     <div className="stay-area ptb-140">
@@ -45,7 +44,8 @@ const handleContact = async (e: React.FormEvent<HTMLFormElement>) => {
             <div className="col-lg-12">
               <div className="right">
                 <p>
-                 هل ترغبون في معرفة كل جديد لدينا؟ من انضمام أطباء جدد، إلى تحديثات الخدمات، ومعلومات صحية موثوقة تهمكم؟ 
+                  هل ترغبون في معرفة كل جديد لدينا؟ من انضمام أطباء جدد، إلى تحديثات الخدمات،
+                  ومعلومات صحية موثوقة تهمكم؟ 
                 </p>
               </div>
             </div>
@@ -53,7 +53,8 @@ const handleContact = async (e: React.FormEvent<HTMLFormElement>) => {
             {/* ✅ P + Form in Same Column */}
             <div className="col-lg-7 col-md-12">
               <p className="mb-3">
-               فقط أضيفوا بريدكم الإلكتروني وسنشارككم بكل ما يهمكم. نعدكم أن تكون رسائلنا مفيدة وذات صلة۔
+                فقط أضيفوا بريدكم الإلكتروني وسنشارككم بكل ما يهمكم. نعدكم أن تكون رسائلنا مفيدة
+                وذات صلة۔
               </p>
 
               {/* Form directly under the paragraph */}
@@ -71,11 +72,8 @@ const handleContact = async (e: React.FormEvent<HTMLFormElement>) => {
                   />
 
                   {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="btn btn-primary px-5 py-2 rounded-lg submit-btn"
-                  >
-                   إرسال
+                  <button type="submit" className="btn btn-primary px-5 py-2 rounded-lg submit-btn">
+                    إرسال
                   </button>
                 </div>
                 {message && <p className="text-success mt-2">{message}</p>}
@@ -83,12 +81,11 @@ const handleContact = async (e: React.FormEvent<HTMLFormElement>) => {
             </div>
 
             {/* ✅ P Below Form */}
-              <p className="mt-3">
-               يمكنكم إلغاء الاشتراك في أي وقت عبر التواصل معنا على:
-<br />
-                communications@bnoon.sa.
-              </p>
-            
+            <p className="mt-3">
+              يمكنكم إلغاء الاشتراك في أي وقت عبر التواصل معنا على:
+              <br />
+              communications@bnoon.sa.
+            </p>
           </div>
         </div>
       </div>

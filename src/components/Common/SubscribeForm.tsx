@@ -1,33 +1,33 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React, { useState } from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 const SubscribeForm = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
 
       const data = await res.json();
 
       if (data.success) {
-        setMessage("✅ Thank you for subscribing!");
-        setEmail("");
+        setMessage('✅ Thank you for subscribing!');
+        setEmail('');
       } else {
-        setMessage("❌ " + (data.error || "Something went wrong"));
+        setMessage('❌ ' + (data.error || 'Something went wrong'));
       }
     } catch (err) {
       console.error(err);
-      setMessage("⚠️ Server error. Please try again later.");
+      setMessage('⚠️ Server error. Please try again later.');
     }
   };
 
@@ -38,9 +38,8 @@ const SubscribeForm = () => {
           <div className="subscribe-content">
             <h2>Subscribe to Our Newsletter</h2>
             <p>
-              Get expert health tips, product updates, and exclusive
-              telemedicine insights delivered straight to your inbox—no spam,
-              ever.
+              Get expert health tips, product updates, and exclusive telemedicine insights delivered
+              straight to your inbox—no spam, ever.
             </p>
           </div>
 
@@ -107,7 +106,13 @@ const SubscribeForm = () => {
         </div>
 
         <div className="subscribe-shape">
-          <Image src="/images/shape.png" alt="image" width={260} height={202} />
+          <OptimizedImage
+            imageName="subscribe-shape"
+            fallbackSrc="/images/shape.png"
+            alt="Decorative shape"
+            width={260}
+            height={202}
+          />
         </div>
       </div>
     </>

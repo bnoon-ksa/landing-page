@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/Layout/PageBanner";
-import Navbar from "@/components/Layout/Navbar";
-import SuccessSection from "@/components/Common/SuccessSection";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/Layout/Navbar';
+import SuccessSection from '@/components/Common/SuccessSection';
 
 export const metadata: Metadata = {
-  title: "Bnoon - Leading Pregnancy Rates (IVF/ICSI) ",
-  description: "Discover Bnoon's leading IVF and ICSI pregnancy success rates. Advanced reproductive technology and an expert medical team delivering results.",
+  title: 'Bnoon - Leading Pregnancy Rates (IVF/ICSI) ',
+  description:
+    "Discover Bnoon's leading IVF and ICSI pregnancy success rates. Advanced reproductive technology and an expert medical team delivering results.",
 };
 
 export default function OurSuccessPage() {
@@ -13,7 +14,7 @@ export default function OurSuccessPage() {
     <>
       <Navbar />
 
-      <PageBanner bgImage="/images/success-banner.jpg" />
+      <OptimizedPageBanner imageName="success-banner" />
 
       <SuccessSection />
     </>

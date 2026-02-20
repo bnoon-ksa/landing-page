@@ -1,5 +1,5 @@
-import Image, { type ImageProps } from "next/image";
-import { IMAGE_MANIFEST } from "@/lib/image-manifest";
+import Image, { type ImageProps } from 'next/image';
+import { IMAGE_MANIFEST } from '@/lib/image-manifest';
 
 interface OptimizedPageBannerProps {
   /**
@@ -20,19 +20,15 @@ interface OptimizedPageBannerProps {
   readonly children?: React.ReactNode;
 
   /** Extra Image props forwarded to `next/image`. */
-  readonly imageProps?: Partial<Omit<ImageProps, "src" | "alt" | "fill">>;
+  readonly imageProps?: Partial<Omit<ImageProps, 'src' | 'alt' | 'fill'>>;
 }
 
 /**
  * Replacement for CSS `background-image` page banners.
  *
- * Uses `<Image fill>` with `object-fit: cover` to replicate the same visual
- * effect while benefiting from Next.js image optimization, responsive srcsets,
- * and LQIP blur placeholders.
- *
- * **Note:** This component is created but NOT deployed to pages in the
- * initial PR. It will be used in a follow-up PR that migrates all 43
- * PageBanner usages after visual QA.
+ * When the manifest entry has `cdnSrcSet`, renders a native `<img>` with
+ * responsive srcSet, bypassing `/_next/image`.  Otherwise falls back to
+ * `<Image fill>` with blur placeholder.
  */
 export default function OptimizedPageBanner({
   imageName,
@@ -45,37 +41,74 @@ export default function OptimizedPageBanner({
   const entry = IMAGE_MANIFEST[imageName];
 
   if (!entry) {
-    if (process.env.NODE_ENV === "development") {
-      console.warn(
-        `[OptimizedPageBanner] "${imageName}" not found in manifest.`
-      );
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`[OptimizedPageBanner] "${imageName}" not found in manifest.`);
     }
     return null;
   }
 
-  const blurProps: Pick<ImageProps, "placeholder" | "blurDataURL"> =
-    entry.blurDataURL
-      ? { placeholder: "blur", blurDataURL: entry.blurDataURL }
+  const resolvedAlt = altProp ?? entry.alt;
+
+  // ── CDN path: native <img> with srcSet ────────────────────────────
+  if (entry.cdnSrcSet) {
+    const blurBg: React.CSSProperties = entry.blurDataURL
+      ? {
+          backgroundImage: `url(${entry.blurDataURL})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }
       : {};
+
+    return (
+      <div
+        className={className ?? 'page-banner-area container-fluid'}
+        style={{ position: 'relative', overflow: 'hidden', ...style }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          srcSet={entry.cdnSrcSet}
+          sizes={entry.sizes}
+          src={entry.cdnSrcSet.split(', ').pop()?.split(' ')[0]}
+          alt={resolvedAlt}
+          decoding="async"
+          loading="eager"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            ...blurBg,
+          }}
+          data-testid="cdn-banner-img"
+        />
+        {children && <div style={{ position: 'relative', zIndex: 1 }}>{children}</div>}
+      </div>
+    );
+  }
+
+  // ── Standard next/image path ──────────────────────────────────────
+  const blurProps: Pick<ImageProps, 'placeholder' | 'blurDataURL'> = entry.blurDataURL
+    ? { placeholder: 'blur', blurDataURL: entry.blurDataURL }
+    : {};
 
   return (
     <div
-      className={className}
-      style={{ position: "relative", overflow: "hidden", ...style }}
+      className={className ?? 'page-banner-area container-fluid'}
+      style={{ position: 'relative', overflow: 'hidden', ...style }}
     >
       <Image
         src={entry.src}
-        alt={altProp ?? entry.alt}
+        alt={resolvedAlt}
         fill
         sizes={entry.sizes}
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: 'cover' }}
         priority
         {...blurProps}
         {...imageProps}
       />
-      {children && (
-        <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
-      )}
+      {children && <div style={{ position: 'relative', zIndex: 1 }}>{children}</div>}
     </div>
   );
 }

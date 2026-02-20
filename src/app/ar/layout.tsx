@@ -1,50 +1,54 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styles/arabic.css";
-import "../../styles/arabic-responsive.css";
-import localFont from "next/font/local";
-import Footer from "@/components/ar/Layout/Footer";
-import GoTop from "@/components/ar/Layout/GoTop";
-import Script from "next/script";
-import type { Metadata } from "next";
-import "../../fonts/alexandria.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../styles/arabic.css';
+import '../../styles/arabic-responsive.css';
+import localFont from 'next/font/local';
+import Footer from '@/components/ar/Layout/Footer';
+import GoTop from '@/components/ar/Layout/GoTop';
+import Script from 'next/script';
+import type { Metadata } from 'next';
+import '../../fonts/alexandria.css';
 
 const cairo = localFont({
   src: [
-    { path: "../../fonts/cairo-arabic.woff2", style: "normal" },
-    { path: "../../fonts/cairo-latin.woff2", style: "normal" },
+    { path: '../../fonts/cairo-arabic.woff2', style: 'normal' },
+    { path: '../../fonts/cairo-latin.woff2', style: 'normal' },
   ],
-  variable: "--font-cairo",
-  display: "swap",
+  variable: '--font-cairo',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bnoon.sa"),
+  metadataBase: new URL('https://bnoon.sa'),
   icons: {
-    icon: "/images/fav.png",
+    icon: '/images/fav.png',
   },
   openGraph: {
-    type: "website",
-    locale: "ar_SA",
-    url: "https://bnoon.sa/ar",
-    siteName: "بنون",
+    type: 'website',
+    locale: 'ar_SA',
+    url: 'https://bnoon.sa/ar',
+    siteName: 'بنون',
     images: [
       {
-        url: "/images/og-image.png",
+        url: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/og-image-1200x630-23kb.webp',
         width: 1200,
         height: 630,
-        alt: "بنون - مراكز الإخصاب وصحة المرأة",
+        alt: 'بنون - مراكز الإخصاب وصحة المرأة',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
   },
 };
 
 export default function ArabicLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`${cairo.variable} arabic`}>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG" strategy="afterInteractive" />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG"
+        strategy="afterInteractive"
+      />
       <Script
         id="ga-init"
         strategy="afterInteractive"

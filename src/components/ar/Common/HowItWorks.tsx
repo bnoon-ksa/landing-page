@@ -1,51 +1,42 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 // Step data structure
 interface WorkStep {
   id: number;
-  icon: string;
+  iconName: string;
   title: string;
   description: string;
-  buttonText: string;   // ✅ har step ka apna button text
-  buttonLink: string;   // ✅ har step ka apna link
-  vectorImage?: string;
-  vectorWidth?: number;
-  vectorHeight?: number;
+  buttonText: string; // ✅ har step ka apna button text
+  buttonLink: string; // ✅ har step ka apna link
 }
 
 const HowItWorks = () => {
   const workSteps: WorkStep[] = [
     {
       id: 1,
-      icon: "/images/icons/location.png",
-      title: "Address",
-      description: "الرياض <br>جدة",
-      buttonText: "المواقع",      // ✅ unique button
-      buttonLink: "",
-      vectorImage: "/images/vector1.png",
-      vectorWidth: 42,
-      vectorHeight: 88,
+      iconName: 'icon-location-png',
+      title: 'Address',
+      description: 'الرياض <br>جدة',
+      buttonText: 'المواقع', // ✅ unique button
+      buttonLink: '',
     },
     {
       id: 2,
-      icon: "/images/icons/contact.png",
-      title: "Contact",
-      description: "+966 11 4448080 <br>+966 12 680 0800",
-      buttonText: "أرقام الاتصال",           // ✅ unique button
-      buttonLink: "tel:+966114448080",
-      vectorImage: "/images/vector2.png",
-      vectorWidth: 30,
-      vectorHeight: 91,
+      iconName: 'icon-contact',
+      title: 'Contact',
+      description: '+966 11 4448080 <br>+966 12 680 0800',
+      buttonText: 'أرقام الاتصال', // ✅ unique button
+      buttonLink: 'tel:+966114448080',
     },
     {
       id: 3,
-      icon: "/images/icons/mail.png",
-      title: "E-mail",
-      description: "info@bnoon.sa <br>info.jeddah@bnoon.sa",
-      buttonText: "العناوين الإلكترونية",         // ✅ unique button
-      buttonLink: "mailto:info@bnoon.sa",
+      iconName: 'icon-mail-png',
+      title: 'E-mail',
+      description: 'info@bnoon.sa <br>info.jeddah@bnoon.sa',
+      buttonText: 'العناوين الإلكترونية', // ✅ unique button
+      buttonLink: 'mailto:info@bnoon.sa',
     },
   ];
 
@@ -62,7 +53,8 @@ const HowItWorks = () => {
             <div className="col-lg-12">
               <div className="right">
                 <p>
-                .احجزوا استشارتكم الأولى... بدون أي ضغط، ستحصلون فقط على إجابات ورعاية، وستخطون الخطوة الأولى نحو تحقيق حلم العائلة
+                  .احجزوا استشارتكم الأولى... بدون أي ضغط، ستحصلون فقط على إجابات ورعاية، وستخطون
+                  الخطوة الأولى نحو تحقيق حلم العائلة
                 </p>
               </div>
             </div>
@@ -75,8 +67,8 @@ const HowItWorks = () => {
             <div key={step.id} className="col-lg-4 col-md-6">
               <div className="work-item text-center">
                 <div className="icon mb-3">
-                  <Image
-                    src={step.icon}
+                  <OptimizedImage
+                    imageName={step.iconName}
                     alt={`${step.title} icon`}
                     width={44}
                     height={44}
@@ -87,10 +79,7 @@ const HowItWorks = () => {
                   <p dangerouslySetInnerHTML={{ __html: step.description }} />
 
                   {/* 🔹 Har step ka apna unique button */}
-                  <Link
-                    href={step.buttonLink}
-                    className="btn btn-success step-btn"
-                  >
+                  <Link href={step.buttonLink} className="btn btn-success step-btn">
                     {step.buttonText}
                   </Link>
                 </div>

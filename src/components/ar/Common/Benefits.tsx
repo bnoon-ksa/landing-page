@@ -1,37 +1,33 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect, useRef } from "react";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import React, { useState, useEffect, useRef } from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 const Benefits = () => {
   const benefitsData = [
     {
       id: 1,
-      icon: "/images/icons/benefit1.svg",
-      title: "Convenient & Fast",
-      description: "See a doctor within minutes—no waiting rooms.",
+      title: 'Convenient & Fast',
+      description: 'See a doctor within minutes—no waiting rooms.',
     },
     {
       id: 2,
-      icon: "/images/icons/benefit2.svg",
-      title: "Certified Doctors",
-      description: "Licensed professionals in multiple specialties.",
+      title: 'Certified Doctors',
+      description: 'Licensed professionals in multiple specialties.',
     },
     {
       id: 3,
-      icon: "/images/icons/benefit3.svg",
-      title: "Private & Secure",
-      description: "End-to-end encrypted, HIPAA-compliant platform.",
+      title: 'Private & Secure',
+      description: 'End-to-end encrypted, HIPAA-compliant platform.',
     },
     {
       id: 4,
-      icon: "/images/icons/benefit4.svg",
-      title: "Affordable Pricing",
-      description: "Transparent pricing, with or without insurance.",
+      title: 'Affordable Pricing',
+      description: 'Transparent pricing, with or without insurance.',
     },
   ];
 
-  const imageNames = ["benefit-1", "benefit-2", "benefit-3"] as const;
+  const imageNames = ['benefit-1', 'benefit-2', 'benefit-3'] as const;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const leftRef = useRef<HTMLDivElement>(null);
@@ -58,7 +54,7 @@ const Benefits = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (leftRef.current) observer.observe(leftRef.current);
@@ -72,69 +68,66 @@ const Benefits = () => {
       <div className="container">
         <div className="row justify-content-center g-4">
           <div
-            className={`col-xl-6 col-md-12 animate-left ${
-              leftVisible ? "active" : ""
-            }`}
+            className={`col-xl-6 col-md-12 animate-left ${leftVisible ? 'active' : ''}`}
             ref={leftRef}
             style={{
               opacity: leftVisible ? 1 : 0,
-              transform: leftVisible ? "translateX(0)" : "translateX(50px)",
-              transition: "all 0.5s ease-out",
+              transform: leftVisible ? 'translateX(0)' : 'translateX(50px)',
+              transition: 'all 0.5s ease-out',
             }}
           >
             <div className="service-overview-content">
               <h2>بنون – الشبكة الرائدة لمراكز الإخصاب وصحة المرأة</h2>
               <h4>هنا من أجلكم... لنحوّل آمالكم إلى بدايات جديدة</h4>
               <p>
-               بنون" هي جزء من شبكة جلوبال فيرتيليتي ، شركة سعودية-إماراتية تعد إحدى أكبر شبكات"
-
-الإخصاب وصحةالمرأة وأسرعها نمواً في الشرق الأوسط۔
-
-
+                بنون" هي جزء من شبكة جلوبال فيرتيليتي ، شركة سعودية-إماراتية تعد إحدى أكبر شبكات"
+                الإخصاب وصحةالمرأة وأسرعها نمواً في الشرق الأوسط۔
               </p>
               <p>
-               
-   في "بنون"، نؤمن أن رعاية الخصوبة يجب أن تكون إنسانية بقدر ما هي طبية. ولهذا صممنا تجربة تتمحور حولكم — تقدم لكم الرعاية الطبية والدعم والتفهم، والراحة في كل خطوة۔
+                   في "بنون"، نؤمن أن رعاية الخصوبة يجب أن تكون إنسانية بقدر ما هي طبية. ولهذا صممنا
+                تجربة تتمحور حولكم — تقدم لكم الرعاية الطبية والدعم والتفهم، والراحة في كل خطوة۔
               </p>
               <p>
-               ​
-
-<strong>سواء كنتم لا تزالون تحاولون فهم سبب تأخر الحمل، أو تدركون أنكم بحاجة إلى علاج يساعدكم على تحقيق حلم الأبوة والأمومة —</strong> نحن إلى جانبك بخيارات تشخيصية وعلاجية متقدمة، واستشاريين تثقون بهم، وبيئة دافئة تُشعركم وكأنكم بين أسرتكم۔
+                ​
+                <strong>
+                  سواء كنتم لا تزالون تحاولون فهم سبب تأخر الحمل، أو تدركون أنكم بحاجة إلى علاج
+                  يساعدكم على تحقيق حلم الأبوة والأمومة —
+                </strong>{' '}
+                نحن إلى جانبك بخيارات تشخيصية وعلاجية متقدمة، واستشاريين تثقون بهم، وبيئة دافئة
+                تُشعركم وكأنكم بين أسرتكم۔
               </p>
             </div>
           </div>
 
           <div
-            className={`col-xl-6 col-md-12 animate-right ${
-              rightVisible ? "active" : ""
-            }`}
+            className={`col-xl-6 col-md-12 animate-right ${rightVisible ? 'active' : ''}`}
             ref={rightRef}
             style={{
               opacity: rightVisible ? 1 : 0,
-              transform: rightVisible ? "translateX(0)" : "translateX(-50px)",
-              transition: "all 0.5s ease-out",
+              transform: rightVisible ? 'translateX(0)' : 'translateX(-50px)',
+              transition: 'all 0.5s ease-out',
             }}
           >
             <div
               className="service-overview-image mb-5"
               style={{
-                boxShadow: "-50px 50px 0px #d7f2fb",
-                overflow: "hidden",
-                display: "inline-block",
+                boxShadow: '-50px 50px 0px #d7f2fb',
+                overflow: 'hidden',
+                display: 'inline-block',
               }}
             >
-             <div className="image-wrapper">
-    {imageNames.map((name, index) => (
-        <OptimizedImage
-          key={name}
-          imageName={name}
-          className={`slide-image ${index === currentIndex ? "active" : ""} responsive-image`}
-          loading={index === 0 ? "eager" : "lazy"}
-        />
-    ))}
-  </div>
+              <div className="image-wrapper">
+                {imageNames.map((name, index) => (
+                  <OptimizedImage
+                    key={name}
+                    imageName={name}
+                    className={`slide-image ${index === currentIndex ? 'active' : ''} responsive-image`}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                  />
+                ))}
+              </div>
               {/* ✅ Responsive style only for mobile */}
-   <style jsx global>{`
+              <style jsx global>{`
     .image-wrapper {
   position: relative;
   width: 100%;
@@ -243,7 +236,6 @@ const Benefits = () => {
     }
   }
 `}</style>
-
             </div>
           </div>
         </div>

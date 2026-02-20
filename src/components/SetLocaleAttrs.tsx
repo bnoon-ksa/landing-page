@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 export default function SetLocaleAttrs({ lang, dir }: { lang: string; dir: string }) {
   useEffect(() => {

@@ -1,33 +1,33 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function RootNotFound() {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        padding: "2rem",
-        textAlign: "center",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        padding: '2rem',
+        textAlign: 'center',
         fontFamily: "Cairo, 'Plus Jakarta Sans', Arial, sans-serif",
-        backgroundColor: "#f8f9fa",
+        backgroundColor: '#f8f9fa',
       }}
     >
       <div
         style={{
-          maxWidth: "480px",
-          width: "100%",
+          maxWidth: '480px',
+          width: '100%',
         }}
       >
         <div
           style={{
-            fontSize: "6rem",
+            fontSize: '6rem',
             fontWeight: 700,
-            color: "#336AEA",
+            color: '#336AEA',
             lineHeight: 1,
-            marginBottom: "1rem",
+            marginBottom: '1rem',
           }}
         >
           404
@@ -35,18 +35,18 @@ export default function RootNotFound() {
 
         <h1
           style={{
-            fontSize: "1.75rem",
-            color: "#2A3547",
-            marginBottom: "0.5rem",
+            fontSize: '1.75rem',
+            color: '#2A3547',
+            marginBottom: '0.5rem',
           }}
         >
           الصفحة غير موجودة
         </h1>
         <p
           style={{
-            fontSize: "1rem",
-            color: "#5A6A85",
-            marginBottom: "2rem",
+            fontSize: '1rem',
+            color: '#5A6A85',
+            marginBottom: '2rem',
           }}
         >
           Page not found
@@ -54,25 +54,25 @@ export default function RootNotFound() {
 
         <div
           style={{
-            display: "flex",
-            gap: "1rem",
-            justifyContent: "center",
-            flexWrap: "wrap",
+            display: 'flex',
+            gap: '1rem',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
           }}
         >
           <Link
             href="/ar"
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "14px 32px",
-              backgroundColor: "#336AEA",
-              color: "#ffffff",
-              borderRadius: "100px",
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '14px 32px',
+              backgroundColor: '#336AEA',
+              color: '#ffffff',
+              borderRadius: '100px',
               fontWeight: 500,
-              textDecoration: "none",
-              fontSize: "1rem",
+              textDecoration: 'none',
+              fontSize: '1rem',
             }}
           >
             الرئيسية (العربية)
@@ -80,17 +80,17 @@ export default function RootNotFound() {
           <Link
             href="/en"
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "14px 32px",
-              backgroundColor: "transparent",
-              color: "#336AEA",
-              borderRadius: "100px",
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '14px 32px',
+              backgroundColor: 'transparent',
+              color: '#336AEA',
+              borderRadius: '100px',
               fontWeight: 500,
-              border: "2px solid #336AEA",
-              textDecoration: "none",
-              fontSize: "1rem",
+              border: '2px solid #336AEA',
+              textDecoration: 'none',
+              fontSize: '1rem',
             }}
           >
             Home (English)

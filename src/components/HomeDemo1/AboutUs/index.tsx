@@ -1,55 +1,55 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 const AboutUs = () => {
   // Dynamic data
   const aboutData = {
     title: {
-      subtitle: "About Us",
-      title: "Transforming Healthcare Through Technology and Compassion",
+      subtitle: 'About Us',
+      title: 'Transforming Healthcare Through Technology and Compassion',
       description:
         "At Doutor, we're redefining how people access medical care—by making it faster, more affordable, and truly patient-first.",
     },
     content: {
       image: {
-        src: "/images/about/about.png",
-        alt: "image",
+        src: '',
+        alt: 'image',
       },
       paragraphs: [
         "Doutor was founded with a simple mission: to remove the barriers between patients and the quality care they deserve. In a world where time is limited and access to healthcare isn't always easy, we believe in a smarter, more human way to care for people—digitally.",
-        "We connect users to board-certified, highly experienced doctors who are available 24/7 via secure video, audio, and messaging consultations.",
+        'We connect users to board-certified, highly experienced doctors who are available 24/7 via secure video, audio, and messaging consultations.',
         "With cutting-edge technology, strong data security practices, and a passionate care team, we've helped hundreds of thousands of patients receive treatment quickly, safely, and comfortably.",
       ],
       link: {
-        text: "Learn More",
-        href: "/about-us",
+        text: 'Learn More',
+        href: '/about-us',
       },
     },
     statistics: [
       {
         id: 1,
-        numbers: ["4", ".", "2"],
-        suffix: "M+",
-        description: "Consultations Completed",
+        numbers: ['4', '.', '2'],
+        suffix: 'M+',
+        description: 'Consultations Completed',
       },
       {
         id: 2,
-        numbers: ["5"],
-        suffix: "Minutes",
-        description: "Avg. Wait Time",
+        numbers: ['5'],
+        suffix: 'Minutes',
+        description: 'Avg. Wait Time',
       },
       {
         id: 3,
-        numbers: ["10"],
-        suffix: "M+",
-        description: "App Downloads",
+        numbers: ['10'],
+        suffix: 'M+',
+        description: 'App Downloads',
       },
       {
         id: 4,
-        numbers: ["99"],
-        suffix: "%",
-        description: "Satisfaction Rate",
+        numbers: ['99'],
+        suffix: '%',
+        description: 'Satisfaction Rate',
       },
     ],
   };
@@ -77,9 +77,9 @@ const AboutUs = () => {
           <div className="row justify-content-center align-items-center g-5">
             <div className="col-lg-6 col-md-12">
               <div className="about-image">
-                <Image
-                  src={aboutData.content.image.src}
-                  alt={aboutData.content.image.alt}
+                <OptimizedImage
+                  imageName="about-image"
+                  alt="About Bnoon"
                   width={1270}
                   height={700}
                 />
@@ -88,7 +88,7 @@ const AboutUs = () => {
             <div className="col-lg-6 col-md-12">
               <div className="about-content">
                 {aboutData.content.paragraphs.map((paragraph, index) => (
-                  <p key={index} className={index === 1 ? "left" : ""}>
+                  <p key={index} className={index === 1 ? 'left' : ''}>
                     {paragraph}
                   </p>
                 ))}
@@ -112,17 +112,14 @@ const AboutUs = () => {
           </div>
 
           <div className="about-fun-inner">
-            <div
-              className="d-lg-flex d-md-flex justify-content-between"
-              style={{ gap: "20px" }}
-            >
+            <div className="d-lg-flex d-md-flex justify-content-between" style={{ gap: '20px' }}>
               {aboutData.statistics.map((stat, index) => (
                 <div key={index} className="custom-grid">
                   <div className="fun">
                     <div className="d-flex align-items-center">
                       {stat.numbers.map((num, numIndex) => (
                         <React.Fragment key={numIndex}>
-                          {numIndex === 0 && num === "." ? (
+                          {numIndex === 0 && num === '.' ? (
                             <h3 className="sub">.</h3>
                           ) : (
                             <h3 className="counter">{num}</h3>

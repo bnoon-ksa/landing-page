@@ -1,7 +1,10 @@
-import Image, { type ImageProps } from "next/image";
-import { IMAGE_MANIFEST } from "@/lib/image-manifest";
+import Image, { type ImageProps } from 'next/image';
+import { IMAGE_MANIFEST } from '@/lib/image-manifest';
 
-interface OptimizedImageProps extends Omit<ImageProps, "src" | "alt" | "placeholder" | "blurDataURL"> {
+interface OptimizedImageProps extends Omit<
+  ImageProps,
+  'src' | 'alt' | 'placeholder' | 'blurDataURL'
+> {
   /** Alt text override (defaults to manifest value). */
   readonly alt?: string;
 
@@ -40,6 +43,7 @@ export default function OptimizedImage({
   className,
   loading,
   priority,
+  style: styleProp,
   ...rest
 }: OptimizedImageProps) {
   const entry = IMAGE_MANIFEST[imageName];
@@ -47,9 +51,9 @@ export default function OptimizedImage({
   // ── Fallback: key not in manifest ─────────────────────────────────
   if (!entry) {
     if (!fallbackSrc) {
-      if (process.env.NODE_ENV === "development") {
+      if (process.env.NODE_ENV === 'development') {
         console.warn(
-          `[OptimizedImage] "${imageName}" not found in manifest and no fallbackSrc provided.`
+          `[OptimizedImage] "${imageName}" not found in manifest and no fallbackSrc provided.`,
         );
       }
       return null;
@@ -58,13 +62,14 @@ export default function OptimizedImage({
     return (
       <Image
         src={fallbackSrc}
-        alt={altProp ?? ""}
+        alt={altProp ?? ''}
         width={widthProp}
         height={heightProp}
         sizes={sizesProp}
         className={className}
         loading={loading}
         priority={priority}
+        style={styleProp}
         {...rest}
       />
     );
@@ -80,9 +85,9 @@ export default function OptimizedImage({
     const blurStyle: React.CSSProperties = entry.blurDataURL
       ? {
           backgroundImage: `url(${entry.blurDataURL})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
         }
       : {};
 
@@ -91,14 +96,14 @@ export default function OptimizedImage({
       <img
         srcSet={entry.cdnSrcSet}
         sizes={resolvedSizes}
-        src={entry.cdnSrcSet.split(", ").pop()?.split(" ")[0]}
+        src={entry.cdnSrcSet.split(', ').pop()?.split(' ')[0]}
         alt={resolvedAlt}
-        width={typeof resolvedWidth === "number" ? resolvedWidth : undefined}
-        height={typeof resolvedHeight === "number" ? resolvedHeight : undefined}
-        loading={priority ? undefined : (loading ?? "lazy")}
+        width={typeof resolvedWidth === 'number' ? resolvedWidth : undefined}
+        height={typeof resolvedHeight === 'number' ? resolvedHeight : undefined}
+        loading={priority ? undefined : (loading ?? 'lazy')}
         decoding="async"
         className={className as string}
-        style={blurStyle}
+        style={{ ...blurStyle, ...styleProp }}
         data-testid="cdn-img"
         {...rest}
       />
@@ -106,10 +111,9 @@ export default function OptimizedImage({
   }
 
   // ── Standard next/image path ──────────────────────────────────────
-  const blurProps: Pick<ImageProps, "placeholder" | "blurDataURL"> =
-    entry.blurDataURL
-      ? { placeholder: "blur", blurDataURL: entry.blurDataURL }
-      : {};
+  const blurProps: Pick<ImageProps, 'placeholder' | 'blurDataURL'> = entry.blurDataURL
+    ? { placeholder: 'blur', blurDataURL: entry.blurDataURL }
+    : {};
 
   return (
     <Image
@@ -121,6 +125,7 @@ export default function OptimizedImage({
       className={className}
       loading={loading}
       priority={priority}
+      style={styleProp}
       {...blurProps}
       {...rest}
     />

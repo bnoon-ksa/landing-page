@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import Navbar from "@/components/Layout/Navbar";
-import PageBanner from "@/components/Layout/PageBanner";
-import ContactUsSection from "@/components/Common/ContactUsSection";
-import MediaSection from "@/components/Common/MediaSection";
+import type { Metadata } from 'next';
+import Navbar from '@/components/Layout/Navbar';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import ContactUsSection from '@/components/Common/ContactUsSection';
+import MediaSection from '@/components/Common/MediaSection';
 
 export const metadata: Metadata = {
-  title: "Bnoon | Start Your Parenthood Journey – Contact Us ",
-  description: "Contact Bnoon fertility and women's health centers. Book your appointment in Riyadh, Jeddah, or Al Ahsa and start your parenthood journey.",
+  title: 'Bnoon | Start Your Parenthood Journey – Contact Us ',
+  description:
+    "Contact Bnoon fertility and women's health centers. Book your appointment in Riyadh, Jeddah, or Al Ahsa and start your parenthood journey.",
 };
 
 export default function ContactUsPage() {
@@ -14,11 +15,9 @@ export default function ContactUsPage() {
     <>
       <Navbar />
 
-      <PageBanner
-        bgImage="/images/contact-us-banner.jpg"
-      />
-       <ContactUsSection />
-       <MediaSection />
+      <OptimizedPageBanner imageName="contact-us-banner" />
+      <ContactUsSection />
+      <MediaSection />
     </>
   );
 }

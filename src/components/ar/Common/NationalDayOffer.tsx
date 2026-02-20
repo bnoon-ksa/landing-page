@@ -1,24 +1,20 @@
-"use client";
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { PhoneIcon } from '@/components/icons';
 
 const NationalDayOffer = () => {
-  const imageJeddah = "/images/national-day/ivf-cycles.jpg";
+  const includesList = ['متابعة التبويض بالسونار', 'التحاليل الهرمونية أثناء الدورة العلاجية'];
 
-  const includesList = [
-    "متابعة التبويض بالسونار",
-    "التحاليل الهرمونية أثناء الدورة العلاجية",
-  ];
-
-  const excludesList = ["الأدوية", "الفحوصات الجينية"];
+  const excludesList = ['الأدوية', 'الفحوصات الجينية'];
 
   return (
     <div className="founding-offer-page" dir="rtl">
       <section className="offer-section">
         <div className="container">
           {/* ✅ Top Heading (same spacing) */}
-        
+
           {/* ✅ CARD */}
           <div className="offer-card">
             <div className="row g-0 align-items-stretch">
@@ -26,8 +22,8 @@ const NationalDayOffer = () => {
               <div className="col-lg-6 col-md-6 order-2 order-lg-1">
                 <div className="left-img-wrap">
                   <div className="img-shadow-box">
-                    <Image
-                      src={imageJeddah}
+                    <OptimizedImage
+                      imageName="ivf-cycles"
                       alt="IVF/ICSI Offer"
                       width={900}
                       height={700}
@@ -41,19 +37,19 @@ const NationalDayOffer = () => {
               <div className="col-lg-6 col-md-6 order-1 order-lg-2">
                 <div className="right-content">
                   <div className="offer-heading-block">
-                  <h2 className="offer-title">
-                    <span className="offer-strong">خصم على الدورة العلاجية لأطفال الأنابيب والحقن المجهري </span>
-                  </h2>
+                    <h2 className="offer-title">
+                      <span className="offer-strong">
+                        خصم على الدورة العلاجية لأطفال الأنابيب والحقن المجهري{' '}
+                      </span>
+                    </h2>
 
-                   <div className="offer-subtitle">
-    <div className="brand-name">بنون - الرياض | جـدة | الأحساء</div>
-   
-  </div>
-</div>
+                    <div className="offer-subtitle">
+                      <div className="brand-name">بنون - الرياض | جـدة | الأحساء</div>
+                    </div>
+                  </div>
                   <p className="offer-desc">
-                    بمناسبة يوم التأسيس السعودي، يسعدنا في بنــــون أن نقدم{" "}
-                    <strong>خصم 15%</strong> على تكلفة الدورة العلاجية لأطفال الأنابيب
-                    والحقن المجهري*
+                    بمناسبة يوم التأسيس السعودي، يسعدنا في بنــــون أن نقدم <strong>خصم 15%</strong>{' '}
+                    على تكلفة الدورة العلاجية لأطفال الأنابيب والحقن المجهري*
                   </p>
 
                   {/* ✅ Includes box */}
@@ -89,24 +85,25 @@ const NationalDayOffer = () => {
                   </p>
 
                   <div className="cta-row">
-                    <Link href="/ar/request-an-appoinment" className="btn book-btn btn-primary contact-btn contact-text">
+                    <Link
+                      href="/ar/request-an-appoinment"
+                      className="btn book-btn btn-primary contact-btn contact-text"
+                    >
                       احجز موعدك اليوم
                     </Link>
-                    
                   </div>
-<span className="terms">
-                      *تطبق الشروط والأحكام. لا يسري هذا العرض مع أي عروض أخرى قائمة.
-                    </span>
+                  <span className="terms">
+                    *تطبق الشروط والأحكام. لا يسري هذا العرض مع أي عروض أخرى قائمة.
+                  </span>
                   {/* ✅ Phones */}
                   <div className="phones">
                     <div className="phone-col">
                       <div className="phone-item">
-                        <Image
-                          src="/images/icons/phone.svg"
-                          alt="Phone"
+                        <PhoneIcon
                           width={14}
                           height={14}
                           className="phone-icon"
+                          style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
                           <span className="phone-label">بنون - الرياض:</span> 0114448080
@@ -114,12 +111,11 @@ const NationalDayOffer = () => {
                       </div>
 
                       <div className="phone-item">
-                        <Image
-                          src="/images/icons/phone.svg"
-                          alt="Phone"
+                        <PhoneIcon
                           width={14}
                           height={14}
                           className="phone-icon"
+                          style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
                           <span className="phone-label">بنون – الأحساء:</span> 0552701553
@@ -129,12 +125,11 @@ const NationalDayOffer = () => {
 
                     <div className="phone-col">
                       <div className="phone-item">
-                        <Image
-                          src="/images/icons/phone.svg"
-                          alt="Phone"
+                        <PhoneIcon
                           width={14}
                           height={14}
                           className="phone-icon"
+                          style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
                           <span className="phone-label">بنون - جدة:</span> 012 680 0800
@@ -148,12 +143,10 @@ const NationalDayOffer = () => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
       <style jsx global>{`
-    
         .offer-section {
           padding: 26px 0 40px;
         }
@@ -174,13 +167,13 @@ const NationalDayOffer = () => {
           color: #000;
           font-size: 16px;
         }
-.brand-name {
-    color: #000;
-    font-weight: 700;
-    padding-bottom: 10px;
-    font-family: 'Alexandria';
-    padding-top: 8px;
-}
+        .brand-name {
+          color: #000;
+          font-weight: 700;
+          padding-bottom: 10px;
+          font-family: 'Alexandria';
+          padding-top: 8px;
+        }
         .offer-card {
           background: #fff;
           border-radius: 10px;
@@ -203,7 +196,7 @@ const NationalDayOffer = () => {
           max-width: 520px;
           width: 100%;
           background: #fff;
-              margin: 70px 60px 0px 0px;
+          margin: 70px 60px 0px 0px;
         }
 
         .left-img {
@@ -230,11 +223,11 @@ const NationalDayOffer = () => {
         .offer-strong {
           color: #004e78;
           font-weight: 900;
-              font-size: 20px;
+          font-size: 20px;
         }
-.ul-listed {
-    padding: 0px;
-}
+        .ul-listed {
+          padding: 0px;
+        }
         .offer-desc {
           margin: 0 0 16px;
           color: #2f3a40;
@@ -355,7 +348,7 @@ const NationalDayOffer = () => {
           border-top: 1px solid #e7eef2;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          
+
           color: #2f3a40;
           font-size: 14.5px;
         }
@@ -389,29 +382,26 @@ const NationalDayOffer = () => {
           .sub-title {
             font-size: 14px;
           }
-              .offer-desc {
-       
-          font-size: 12px !important;
-        }
-            .brand-name {
-   font-size: 14px;
-   padding-top: 5px;
-}
-   .terms {
-    
-    font-size: 12px;
-    
-}
-    .phone-item{
-    font-size: 12px;
-    }
-   .offer-strong {
-          color: #004e78;
-          font-weight: 900;
-              font-size: 16px;
-        }
+          .offer-desc {
+            font-size: 12px !important;
+          }
+          .brand-name {
+            font-size: 14px;
+            padding-top: 5px;
+          }
+          .terms {
+            font-size: 12px;
+          }
+          .phone-item {
+            font-size: 12px;
+          }
+          .offer-strong {
+            color: #004e78;
+            font-weight: 900;
+            font-size: 16px;
+          }
           .left-img-wrap {
-            padding: 18px 16px 50px 40px
+            padding: 18px 16px 50px 40px;
           }
 
           .img-shadow-box {
@@ -427,18 +417,18 @@ const NationalDayOffer = () => {
           .offer-title {
             font-size: 18px;
           }
-            .contact-text {
-               font-size: 10px;
-            }
-                .phone-label{
-                font-size: 12px;
-                }
+          .contact-text {
+            font-size: 10px;
+          }
+          .phone-label {
+            font-size: 12px;
+          }
           .phones {
             grid-template-columns: 1fr;
           }
-            .list-text{
+          .list-text {
             font-size: 12px;
-            }
+          }
         }
 
         /* ✅ iPad */
@@ -459,4 +449,3 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
-

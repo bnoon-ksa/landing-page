@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Image from "next/image";
-import CustomList from "@/components/Common/CustomList";
+import React, { useState } from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import CustomList from '@/components/Common/CustomList';
 const tabToHash = (tab: string) =>
   tab
     .toLowerCase()
-    .replace(/\//g, "")     // slash remove
-    .replace(/\s+/g, "-"); // spaces → dash
+    .replace(/\//g, '') // slash remove
+    .replace(/\s+/g, '-'); // spaces → dash
 
 interface TabContent {
   text: string;
-  image: string;
+  imageName: string;
   bottomText: string;
   bottomTextList?: string[];
   secondlist?: string[];
@@ -36,15 +36,15 @@ interface TabContent {
 
 const VisitTabs: React.FC = () => {
   const tabs = [
-    "الزيارة الأولى",
-    "أطعمة تزيد الخصوبة",
-    "مراقبة التلقيح الاصطناعي",
-    "جمع البيض",
-    "نقل/استبدال الأجنة"
+    'الزيارة الأولى',
+    'أطعمة تزيد الخصوبة',
+    'مراقبة التلقيح الاصطناعي',
+    'جمع البيض',
+    'نقل/استبدال الأجنة',
   ];
 
   const tabContents: Record<string, TabContent> = {
-    "الزيارة الأولى": {
+    'الزيارة الأولى': {
       text: `
        قد تشعرين بالعجز واليأس عندما لا يأتي الحمل بسهولة. قد تشعر بالوحدة، وكأن لا أحد يفهم ما تمر به. 15% من المتزوجين يعانون من تأخر الحمل. هذا يعني أنك لست وحدك وتأكد أن وضعك ليس ميؤوسًا منه.<br /><br />
        هل تتساءلين عما يجب أن تأخذيه معك في موعدك الأول مع عيادة الخصوبة؟ إليك الأشياء التي لا تريد أن تتركها خلفك:<br /><br />
@@ -54,7 +54,7 @@ const VisitTabs: React.FC = () => {
 ​
 
 ​ `,
-      image: "/images/visit/First-Clinic-Visit.avif",
+      imageName: 'visit-first-clinic',
       bottomText: `
         <strong>المستندات بما في ذلك تاريخك الطبي</strong><br />​
 
@@ -67,14 +67,14 @@ const VisitTabs: React.FC = () => {
 ​
       `,
       secondlist: [
-        " أنماط التبويض والدورة الشهرية",
-        " الأعراض الحالية والسابقة والأدوية والعمليات الجراحية والأمراض والإصابات",
-        "التعرض للسموم البيئية أو ضغوطات الحياة الرئيسية",
-        " أي تاريخ عائلي للعقم أو مشاكل الصحة الإنجابية",
-        "بعض الأمراض مثل الأمراض المنقولة جنسيًا (STDs)، ومرض التهاب الحوض (PID)، وغيرها",
-        " العيوب الخلقية والعمليات الجراحية السابقة",
-        "الأنسجة الندبية أو الأورام الليفية أو الأورام الحميدة في الرحم",
-        "العجز الجنسي عند الذكور"
+        ' أنماط التبويض والدورة الشهرية',
+        ' الأعراض الحالية والسابقة والأدوية والعمليات الجراحية والأمراض والإصابات',
+        'التعرض للسموم البيئية أو ضغوطات الحياة الرئيسية',
+        ' أي تاريخ عائلي للعقم أو مشاكل الصحة الإنجابية',
+        'بعض الأمراض مثل الأمراض المنقولة جنسيًا (STDs)، ومرض التهاب الحوض (PID)، وغيرها',
+        ' العيوب الخلقية والعمليات الجراحية السابقة',
+        'الأنسجة الندبية أو الأورام الليفية أو الأورام الحميدة في الرحم',
+        'العجز الجنسي عند الذكور',
       ],
       secondText: `​
 
@@ -87,12 +87,12 @@ const VisitTabs: React.FC = () => {
       `,
     },
 
-    "أطعمة تزيد الخصوبة": {
+    'أطعمة تزيد الخصوبة': {
       text: `
        يلجأ الأزواج من جميع أنحاء المملكة العربية السعودية ومنطقة الخليج إلى مركز بنون للحصول على علاج ورعاية متميزة ومخصصة للتخصيب في المختبر (IVF). إن معدلات نجاحنا الاستثنائية وفريقنا ذو الخبرة من الاستشاريين المتفانين يجعلنا أحد أفضل مراكز الخصوبة في منطقة الخليج.<br /><br />
        نحن نحرص على التأكد من أن كل مريض لدينا يشعر بالرعاية الجيدة والدعم خلال رحلتهم لتنمية أسرهم. يمكن أن يكون علاج العقم المقترن بالسفر والمسافة أمرًا متعبًا، لذلك من المهم بشكل خاص أن نبذل كل ما في وسعنا لتسهيل الرحلة على مرضانا الذين يسافرون لمسافات طويلة.
       `,
-      image: "/images/visit/Out-of-Town-Patients.avif",
+      imageName: 'visit-out-of-town',
       bottomText: `يقع مركزنا في منطقة ممتازة بمدينة الرياض وعلى مسافة قريبة سيرًا على الأقدام من "مركز غرناطة"، أحد أكبر مراكز التسوق في المدينة، وفندق هيلتون الرياض حيث تقع محطة المترو. موقعنا قريب من المطار مما يجعل الوصول من وإلى المطار عبر المترو أو السيارة سهلاً وبعيدًا عن حركة المرور الكثيفة. حتى بالنسبة للمسافرين بالسيارة من خارج الرياض، فإن التقاطع الشهير بين الدائري الشمالي والدائري الشرقي وطريق الدمام السريع يجعل من السهل الوصول إلى بنون عن طريق تجنب ازدحام وسط المدينة.<br /><br />
      حظى الأزواج المقيمون خارج الرياض باهتمام خاص فيما يتعلق باختبارات الخصوبة وزيارات المتابعة. يمكن إجراء بعض الاختبارات في منطقة إقامتك المحلية حسب الضرورة. ومع ذلك، فإن بدء علاج الخصوبة يتطلب مراقبة دقيقة وسيتم توجيه المواعيد المخططة للزيارات إليك. ليس مطلوبًا منك البقاء في الرياض أثناء رحلة علاجك إلا إذا طلب منك طبيبك ذلك.
 
@@ -102,21 +102,20 @@ const VisitTabs: React.FC = () => {
 
 ​إذا واجهت أي مشكلة أثناء المتابعة، بسبب فقدان الرحلة أو طول الطريق إلى الرياض، يرجى توجيهها إلى طبيبك أو منسق العلاج عبر الاتصال الهاتفي على الأرقام المعطاة لك لإرشادك إلى ما يجب عليك فعله بعد ذلك.
       `,
-
     },
 
-    "مراقبة التلقيح الاصطناعي": {
+    'مراقبة التلقيح الاصطناعي': {
       text: `
        في اليوم الأول من الدورة الشهرية (التدفق الطبيعي) عليك الاتصال بمركز بنون الطبي (4448080-011) لتحديد موعد في اليوم 2-3 من الدورة الشهرية لإجراء فحص الموجات فوق الصوتية وعمل الدم اللازم. في نفس يوم الفحص بالموجات فوق الصوتية، سيقوم طبيبك بمراجعة حالتك، وبناءً على النتائج، ستبدأين في تحفيز المبيض باستخدام حقن الغدد التناسلية يوميًا بدءًا من اليوم 2-3 وقد يستمر لمدة 8-12 يومًا اعتمادًا على استجابة المبيض.<br /><br />
        سيتم تحديد الجرعة اليومية من الأدوية من قبل طبيبك بما يتناسب مع حالتك. يجب أن تتم مراقبتك خلال هذه الفترة لمدة 3-4 مرات حسب الحاجة. مثال على الأدوية:
       `,
-      image: "/images/visit/Causes-of-Male-Infertility.avif",
+      imageName: 'visit-ivf-monitoring',
       bottomText: ``,
       secondlist: [
-        "قلم جونال إف: يعطى تحت الجلد. يأتي Gonal F في قلم متعدد الجرعات (300 – 450 – 900 – 1200 وحدة دولية).",
-        "مينوبور: يعطى تحت الجلد. Menopur يأتي في أمبولة (75 – 600 – 1200 وحدة دولية).",
-        "ميريونال: يعطى عضلياً أو تحت الجلد. Merional يأتي في أمبولة (75 - 150 وحدة دولية).",
-        "مينوغون: يعطى عضلياً أو تحت الجلد. Merional يأتي في أمبولة (75 وحدة دولية)."
+        'قلم جونال إف: يعطى تحت الجلد. يأتي Gonal F في قلم متعدد الجرعات (300 – 450 – 900 – 1200 وحدة دولية).',
+        'مينوبور: يعطى تحت الجلد. Menopur يأتي في أمبولة (75 – 600 – 1200 وحدة دولية).',
+        'ميريونال: يعطى عضلياً أو تحت الجلد. Merional يأتي في أمبولة (75 - 150 وحدة دولية).',
+        'مينوغون: يعطى عضلياً أو تحت الجلد. Merional يأتي في أمبولة (75 وحدة دولية).',
       ],
       secondText: `
        
@@ -132,7 +131,7 @@ const VisitTabs: React.FC = () => {
        ​يرجى العلم أن الهدف من المراقبة الدقيقة هو التحكم في دورة العلاج وإنتاج بويضات ناضجة. في حالة الاستجابة الزائدة أو المنخفضة، قد يقوم طبيبك بإلغاء الدورة وتعديل خطة العلاج للدورة المستقبلية.
       `,
     },
-    "جمع البيض": {
+    'جمع البيض': {
       text: `
       <strong>قبل جمع البيض:</strong><br /><br />
       سوف تحتاج إلى ملء نماذج مختلفة بما في ذلك علاج التلقيح الصناعي والموافقات الجراحية. يرجى التأكد من قيامكما، كزوجين، بقراءة جميع النماذج والتوقيع عليها قبل يوم جمع البويضات. قد تنتهي نماذج الموافقة غير المكتملة بإلغاء علاجك.<br />
@@ -140,7 +139,7 @@ const VisitTabs: React.FC = () => {
 
 سيُطلب منك الامتناع عن الأكل والشرب اعتبارًا من منتصف الليل في الليلة السابقة ليوم جمع البيض.​
       `,
-      image: "/images/visit/Uterine-Fibroids-Infertility.avif",
+      imageName: 'visit-egg-collection',
       bottomText: `<strong>يوم جمع البيض:</strong><br /><br />
       ​
 
@@ -170,7 +169,7 @@ const VisitTabs: React.FC = () => {
      ​في اليوم التالي بعد جمع البويضات، سيتم الاتصال بك من قبل منسق العلاج لدينا للاطمئنان عليك والتأكد من أن كل شيء على ما يرام وسيتم إبلاغك ببويضاتك ونتائج الإخصاب وكذلك اليوم المتوقع لنقل الأجنة. إذا ظهرت أي معلومات جديدة خلال هذه الفترة حتى يوم نقل الأجنة، فسيتم الاتصال بك وإبلاغك بذلك.
       `,
     },
-    "نقل/استبدال الأجنة": {
+    'نقل/استبدال الأجنة': {
       text: `
      سيتم نقل الأجنة بعد 3-5 أيام من جمع البويضات. وهو إجراء بسيط حيث يتم تحميل قسطرة ناعمة بالأجنة الأفضل تكوينًا ومن ثم إدخالها داخل تجويف الرحم لوضع الأجنة. سيتم إجراء عملية زرع الأجنة خلال الأيام القليلة القادمة وسيظهر اختبار الحمل بعد 14 يومًا من يوم نقل الأجنة.
 
@@ -180,7 +179,7 @@ const VisitTabs: React.FC = () => {
 قبل تنفيذ الإجراء</strong><br /><br />
     سيُطلب منك امتلاء المثانة قبل إجراء العملية لتسهيل إدخال القسطرة الناعمة إلى الرحم. لا تحتاج إلى أن تكون صائما.
       `,
-      image: "/images/visit/Helpful-Tips-for-Fertility.avif",
+      imageName: 'visit-embryo-transfer',
       bottomText: `بعد نقل الأجنة، ستبقى لمدة 30 دقيقة في غرفة الإنعاش، ومع ذلك، يمكنك الذهاب إلى المرحاض في أي وقت إذا كنت بحاجة لذلك. يمكنك العودة إلى المنزل في ذلك اليوم ولا يُحظر عليك ممارسة نشاطك الطبيعي ولكن تجنب المجهود مثل؛ ممارسة التمارين الرياضية الثقيلة، أو رفع أو دفع الأشياء الثقيلة.<br />
       يمكنك تجنب الجماع لمدة 2-3 أيام من هذا اليوم ولكن ليس هناك أي ضرر بعد تلك الفترة.<br /><br />
       يمكنك السفر بالسيارة أو الطائرة في اليوم التالي، إذا كنت بحاجة لذلك، حيث لا يوجد دليل على أن ذلك سيكون ضارًا. إذا كنت تعملين، يمكنك استئناف عملك من اليوم التالي بعد نقل الأجنة.<br /><br />
@@ -209,14 +208,21 @@ const VisitTabs: React.FC = () => {
             <div className="row justify-content-center align-items-center g-4">
               <div className="col-lg-12 col-md-12">
                 <div className="left mb-3">
-                   <h2>​ رحلتكم نحو الأبوة والأمومة مع "بنون"</h2>
-
+                  <h2>​ رحلتكم نحو الأبوة والأمومة مع "بنون"</h2>
                 </div>
               </div>
             </div>
-            <p> في "بنون"، نحرص على أن تكون تجربتكم معنا مريحة، مُطمئنة، ومليئة بالدعم في كل خطوة. سواء كانت هذه زيارتكم الأولى أو موعد متابعة، فإن فريقنا المتخصص موجود دائماً ليقدّم  لكم الإرشاد والمساندة — من لحظة فهم الخيارات العلاجية المتاحة وحتى ضمان تجربة سلسة داخل مراكزنا۔</p>
-            <p>هذه الصفحة صُمّمت لتزويدكم بكل ما تحتاجون معرفته قبل زيارتكم، لتشعروا بالثقة، والاطمئنان، والاستعداد الكامل لبدء أو مواصلة رحلتكم معنا. </p>
-
+            <p>
+              {' '}
+              في "بنون"، نحرص على أن تكون تجربتكم معنا مريحة، مُطمئنة، ومليئة بالدعم في كل خطوة.
+              سواء كانت هذه زيارتكم الأولى أو موعد متابعة، فإن فريقنا المتخصص موجود دائماً ليقدّم 
+              لكم الإرشاد والمساندة — من لحظة فهم الخيارات العلاجية المتاحة وحتى ضمان تجربة سلسة
+              داخل مراكزنا۔
+            </p>
+            <p>
+              هذه الصفحة صُمّمت لتزويدكم بكل ما تحتاجون معرفته قبل زيارتكم، لتشعروا بالثقة،
+              والاطمئنان، والاستعداد الكامل لبدء أو مواصلة رحلتكم معنا.{' '}
+            </p>
           </div>
         </div>
       </div>
@@ -226,48 +232,47 @@ const VisitTabs: React.FC = () => {
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
+              className={`tabs-btn ${activeTab === tab ? 'active' : ''}`}
               onClick={() => {
-  setActiveTab(tab);
-  const hash = tabToHash(tab);
-  history.replaceState(null, "", `#${hash}`);
-}}
-
+                setActiveTab(tab);
+                const hash = tabToHash(tab);
+                history.replaceState(null, '', `#${hash}`);
+              }}
             >
               {tab}
             </button>
           ))}
         </div>
-<style jsx>{`
-  @media (max-width: 768px) {
-    .tabs-row-container {
-      flex-wrap: nowrap !important;      /* ek line me rakhe */
-      overflow-x: auto;                  /* scroll allow kare */
-      justify-content: flex-start !important; /* scroll start se */
-      -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
-    }
+        <style jsx>{`
+          @media (max-width: 768px) {
+            .tabs-row-container {
+              flex-wrap: nowrap !important; /* ek line me rakhe */
+              overflow-x: auto; /* scroll allow kare */
+              justify-content: flex-start !important; /* scroll start se */
+              -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+            }
 
-    .tabs-row-container .tabs-btn {
-      flex: 0 0 auto;   /* button shrink na ho */
-      margin-right: 10px; /* buttons ke beech gap */
-      font-size:14px;
-    }
-        .image-col {
-      order: -1; /* image ko top pe le aao */
-      width: 100%; /* full width */
-      margin-bottom: 15px;
-    }
-      .tabs-container {
-   border: 1px solid #0000003d;
-        padding: 10px 10px !important;
-        margin: 0px 10px 0px 0px;
-        width: 355px;
-}
-    .visit-text{
-    font-size:12px;
-    }
-  }
-`}</style>
+            .tabs-row-container .tabs-btn {
+              flex: 0 0 auto; /* button shrink na ho */
+              margin-right: 10px; /* buttons ke beech gap */
+              font-size: 14px;
+            }
+            .image-col {
+              order: -1; /* image ko top pe le aao */
+              width: 100%; /* full width */
+              margin-bottom: 15px;
+            }
+            .tabs-container {
+              border: 1px solid #0000003d;
+              padding: 10px 10px !important;
+              margin: 0px 10px 0px 0px;
+              width: 355px;
+            }
+            .visit-text {
+              font-size: 12px;
+            }
+          }
+        `}</style>
         {/* Tabs Content */}
         <div className="row justify-content-center align-items-center g-4">
           <div className="col-lg-8 col-md-6">
@@ -278,12 +283,10 @@ const VisitTabs: React.FC = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 image-col">
-            <Image
-              src={currentContent.image}
+            <OptimizedImage
+              imageName={currentContent.imageName}
               alt={activeTab}
               className="img-fluid fertilitytabs-image"
-              width={0}
-              height={0}
               sizes="100vw"
               style={{ width: '100%', height: 'auto' }}
             />
@@ -322,24 +325,15 @@ const VisitTabs: React.FC = () => {
             )}
             <CustomList items={currentContent.thirdList} />
             {currentContent.fourText && (
-              <div
-                className="mt-3"
-                dangerouslySetInnerHTML={{ __html: currentContent.fourText }}
-              />
+              <div className="mt-3" dangerouslySetInnerHTML={{ __html: currentContent.fourText }} />
             )}
             <CustomList items={currentContent.fourList} />
             {currentContent.fiveText && (
-              <div
-                className="mt-3"
-                dangerouslySetInnerHTML={{ __html: currentContent.fiveText }}
-              />
+              <div className="mt-3" dangerouslySetInnerHTML={{ __html: currentContent.fiveText }} />
             )}
             <CustomList items={currentContent.fiveList} />
             {currentContent.sixText && (
-              <div
-                className="mt-3"
-                dangerouslySetInnerHTML={{ __html: currentContent.sixText }}
-              />
+              <div className="mt-3" dangerouslySetInnerHTML={{ __html: currentContent.sixText }} />
             )}
             <CustomList items={currentContent.sixList} />
             {currentContent.sevenText && (
@@ -357,10 +351,7 @@ const VisitTabs: React.FC = () => {
             )}
             <CustomList items={currentContent.eightList} />
             {currentContent.nineText && (
-              <div
-                className="mt-3"
-                dangerouslySetInnerHTML={{ __html: currentContent.nineText }}
-              />
+              <div className="mt-3" dangerouslySetInnerHTML={{ __html: currentContent.nineText }} />
             )}
             <CustomList items={currentContent.nineList} />
           </div>

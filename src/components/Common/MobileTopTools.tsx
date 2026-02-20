@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { getBookNowUrl } from "@/utils/booking";
+import React from 'react';
+import { getBookNowUrl } from '@/utils/booking';
 
 const MobileTopTools: React.FC = () => {
   return (
@@ -35,7 +35,7 @@ const MobileTopTools: React.FC = () => {
       </a>
 
       {/* Book Appointment */}
-      <a href={getBookNowUrl("en")} className="tool-btn">
+      <a href={getBookNowUrl('en')} className="tool-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="29.5 29.5 141 141"
@@ -48,58 +48,57 @@ const MobileTopTools: React.FC = () => {
         Book
       </a>
 
-     <style jsx>{`
-  .mobile-tools {
-    display: none;
-    justify-content: center;
-    gap: 0;
-    flex-wrap: wrap;
-    padding: 5px 0;
-  }
+      <style jsx>{`
+        .mobile-tools {
+          display: none;
+          justify-content: center;
+          gap: 0;
+          flex-wrap: wrap;
+          padding: 5px 0;
+        }
 
-  .tool-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-    text-align: center;
-    color: #000;
-    background: #fff;
-    font-size: 13px;
-    border-right: 1px solid #ccc;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    gap: 8px;
-  }
+        .tool-btn {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 0;
+          text-align: center;
+          color: #000;
+          background: #fff;
+          font-size: 13px;
+          border-right: 1px solid #ccc;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          gap: 8px;
+        }
 
-  .tool-btn:last-child {
-    border-right: none;
-  }
+        .tool-btn:last-child {
+          border-right: none;
+        }
 
-  svg {
-    color: #39bced;
-  }
+        svg {
+          color: #39bced;
+        }
 
-  .tool-btn:hover {
-    background-color: #f4f4f4;
-  }
+        .tool-btn:hover {
+          background-color: #f4f4f4;
+        }
 
-  @media (max-width: 768px) {
-    .mobile-tools {
-      display: flex;
-      justify-content: center;
-      background-color: #fff;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      border-top: 1px solid #ddd;
-    }
-  }
-`}</style>
-
+        @media (max-width: 768px) {
+          .mobile-tools {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            border-top: 1px solid #ddd;
+          }
+        }
+      `}</style>
     </div>
   );
 };

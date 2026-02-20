@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
-import mongoose from "mongoose";
+import { NextResponse } from 'next/server';
+import mongoose from 'mongoose';
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
 
@@ -11,7 +11,7 @@ const subscriberArSchema = new mongoose.Schema({
 
 const SubscriberAr =
   mongoose.models.SubscriberAr ||
-  mongoose.model("SubscriberAr", subscriberArSchema, "subscribe_ar");
+  mongoose.model('SubscriberAr', subscriberArSchema, 'subscribe_ar');
 
 // ✅ Connect DB
 async function connectDB() {
@@ -27,14 +27,14 @@ export async function POST(req: Request) {
     const { email } = await req.json();
 
     if (!email) {
-      return NextResponse.json({ success: false, error: "Email required" });
+      return NextResponse.json({ success: false, error: 'Email required' });
     }
 
     const existing = await SubscriberAr.findOne({ email });
     if (existing) {
       return NextResponse.json({
         success: false,
-        error: "لقد اشتركت بالفعل!",
+        error: 'لقد اشتركت بالفعل!',
       });
     }
 
@@ -43,10 +43,10 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true });
   } catch (err: any) {
-    console.error("Mongo error:", err);
+    console.error('Mongo error:', err);
     return NextResponse.json({
       success: false,
-      error: err.message || "Database error",
+      error: err.message || 'Database error',
     });
   }
 }

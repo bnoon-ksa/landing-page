@@ -1,185 +1,182 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import Image from "next/image";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 import 'remixicon/fonts/remixicon.css';
-import { getBookingUrl } from "@/utils/booking";
+import { getBookingUrl } from '@/utils/booking';
 // ✅ Doctor data structure
 interface OurExperts {
   id: number;
   name: string;
   qualification: string;
-  imageUrl: string;
+  imageName: string;
   profileLink: string;
-  location: "Riyadh" | "Jeddah" | "Al Ahsa";
-
+  location: 'Riyadh' | 'Jeddah' | 'Al Ahsa';
 }
 
 const OurExperts = () => {
-  const [filter, setFilter] = useState<"ALL" | "Riyadh" | "Jeddah" | "Al Ahsa">("ALL");
-// ✅ Add this here, after filter state
+  const [filter, setFilter] = useState<'ALL' | 'Riyadh' | 'Jeddah' | 'Al Ahsa'>('ALL');
+  // ✅ Add this here, after filter state
   const searchParams = useSearchParams();
-  const locationParam = searchParams.get("location") as "Riyadh" | "Jeddah" | "Al Ahsa" | null;
+  const locationParam = searchParams.get('location') as 'Riyadh' | 'Jeddah' | 'Al Ahsa' | null;
 
   useEffect(() => {
-  if (
-    locationParam === "Riyadh" ||
-    locationParam === "Jeddah" ||
-    locationParam === "Al Ahsa"
-  ) {
-    setFilter(locationParam);
-  }
-}, [locationParam]);
-
+    if (locationParam === 'Riyadh' || locationParam === 'Jeddah' || locationParam === 'Al Ahsa') {
+      setFilter(locationParam);
+    }
+  }, [locationParam]);
 
   // Your doctorsData array comes here
   const doctorsData: OurExperts[] = [
-      {
+    {
       id: 1,
-      name: "Dr. Abdalaziz Al-Shahrani",
+      name: 'Dr. Abdalaziz Al-Shahrani',
       qualification:
-         "Group Medical Director Consultant, Obstetrics, Gynecology, Reproductive Endorinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "/images/doctors/1.jpg",
-      profileLink: "dr-abdalaziz-alshahrani",
-      location: "Riyadh",
+        'Group Medical Director Consultant, Obstetrics, Gynecology, Reproductive Endorinology, Infertility (IVF) & Minimally Invasive Surgery',
+      imageName: 'doctor-grid-1',
+      profileLink: 'dr-abdalaziz-alshahrani',
+      location: 'Riyadh',
     },
     {
       id: 2,
-      name: "Dr. Fawaz Edris",
+      name: 'Dr. Fawaz Edris',
       qualification:
-        "Executive Director, Bnoon - Jeddah Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF), Minimally Invasive Surgery & Maternal Fetal Medicine",
-      imageUrl: "/images/doctors/2.jpg",
-      profileLink: "dr-fawaz-edris",
-      location: "Jeddah",
+        'Executive Director, Bnoon - Jeddah Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF), Minimally Invasive Surgery & Maternal Fetal Medicine',
+      imageName: 'doctor-grid-2',
+      profileLink: 'dr-fawaz-edris',
+      location: 'Jeddah',
     },
     {
       id: 3,
-      name: "Dr. Mazin Bishara",
+      name: 'Dr. Mazin Bishara',
       qualification:
-        "Medical Director, Bnoon - Jeddah Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "/images/doctors/3.jpg",
-      profileLink: "dr-mazin-bishara",
-      location: "Jeddah",
+        'Medical Director, Bnoon - Jeddah Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery',
+      imageName: 'doctor-grid-3',
+      profileLink: 'dr-mazin-bishara',
+      location: 'Jeddah',
     },
-    
-     {
+
+    {
       id: 4,
-      name: "Dr. Bassam Nusair ",
-      qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "/images/doctors/15.jpg",
-      profileLink: "dr-bassamnusair",
-       location: "Al Ahsa",
+      name: 'Dr. Bassam Nusair ',
+      qualification:
+        'Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery',
+      imageName: 'doctor-grid-15',
+      profileLink: 'dr-bassamnusair',
+      location: 'Al Ahsa',
     },
     {
       id: 5,
-      name: "Dr. Asim Al Wohaibi",
-      qualification: "Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "/images/doctors/4.jpg",
-      profileLink: "dr-asim-alwohaibi",
-      location: "Riyadh",
+      name: 'Dr. Asim Al Wohaibi',
+      qualification:
+        'Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery',
+      imageName: 'doctor-grid-4',
+      profileLink: 'dr-asim-alwohaibi',
+      location: 'Riyadh',
     },
-    
+
     {
       id: 6,
-      name: "Dr. Ahmed Alshaikh",
+      name: 'Dr. Ahmed Alshaikh',
       qualification:
-        "Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery",
-      imageUrl: "/images/doctors/6.jpg",
-      profileLink: "dr-ahmed-alshaikh",
-      location: "Jeddah",
+        'Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery',
+      imageName: 'doctor-grid-6',
+      profileLink: 'dr-ahmed-alshaikh',
+      location: 'Jeddah',
     },
     {
       id: 7,
-      name: "Dr. Wajdi Al Omari",
-      qualification: "Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF), Minimally Invasive Surgery",
-      imageUrl: "/images/doctors/7.jpg",
-      profileLink: "dr-wajdi-alomari",
-      location: "Riyadh",
+      name: 'Dr. Wajdi Al Omari',
+      qualification:
+        'Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF), Minimally Invasive Surgery',
+      imageName: 'doctor-grid-7',
+      profileLink: 'dr-wajdi-alomari',
+      location: 'Riyadh',
     },
-     
-     {
+
+    {
       id: 8,
-      name: "Dr. Ahmed Al-Nowasser",
-      qualification: "Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery  ",
-      imageUrl: "/images/doctors/16.jpg",
-      profileLink: "dr-ahmedal-nowasser",
-       location: "Al Ahsa",
+      name: 'Dr. Ahmed Al-Nowasser',
+      qualification:
+        'Consultant, Obstetrics, Gynecology, Reproductive Endocrinology, Infertility (IVF) & Minimally Invasive Surgery  ',
+      imageName: 'doctor-grid-16',
+      profileLink: 'dr-ahmedal-nowasser',
+      location: 'Al Ahsa',
     },
-      {
+    {
       id: 9,
-      name: "Dr. Maya Albezreh",
-      qualification: "Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF)",
-      imageUrl: "/images/doctors/11.jpg",
-      profileLink: "dr-maya-albezreh",
-      location: "Jeddah",
+      name: 'Dr. Maya Albezreh',
+      qualification:
+        'Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF)',
+      imageName: 'doctor-grid-11',
+      profileLink: 'dr-maya-albezreh',
+      location: 'Jeddah',
     },
     {
       id: 10,
-      name: "Dr. Dalia Nour",
-      qualification: "Consultant, Obstetrics, Gynecology & Infertility",
-      imageUrl: "/images/doctors/8.jpg",
-      profileLink: "dr-dalia-nour",
-      location: "Riyadh",
+      name: 'Dr. Dalia Nour',
+      qualification: 'Consultant, Obstetrics, Gynecology & Infertility',
+      imageName: 'doctor-grid-8',
+      profileLink: 'dr-dalia-nour',
+      location: 'Riyadh',
     },
     {
       id: 11,
-      name: "Dr. Ahmad Haroun",
-      qualification: "Consultant, Urology, Andrology & Male Infertility",
-      imageUrl: "/images/doctors/9.jpg",
-      profileLink: "dr-ahmad-haroun",
-      location: "Jeddah",
+      name: 'Dr. Ahmad Haroun',
+      qualification: 'Consultant, Urology, Andrology & Male Infertility',
+      imageName: 'doctor-grid-9',
+      profileLink: 'dr-ahmad-haroun',
+      location: 'Jeddah',
     },
     {
       id: 12,
-      name: "Dr. Mussa AlNumi",
-      qualification: "Consultant, Urology, Andrology & Male Infertility",
-      imageUrl: "/images/doctors/10.jpg",
-      profileLink: "dr-moussa-el-naiemy",
-      location: "Riyadh",
+      name: 'Dr. Mussa AlNumi',
+      qualification: 'Consultant, Urology, Andrology & Male Infertility',
+      imageName: 'doctor-grid-10',
+      profileLink: 'dr-moussa-el-naiemy',
+      location: 'Riyadh',
     },
-  
+
     {
       id: 13,
-      name: "Dr. Razan Ghaith",
-      qualification: "Consultant, Obstetrics, Gynecology & Delayed Pregnancy",
-      imageUrl: "/images/doctors/12.jpg",
-      profileLink: "dr-razan-ghaith",
-       location: "Jeddah",
+      name: 'Dr. Razan Ghaith',
+      qualification: 'Consultant, Obstetrics, Gynecology & Delayed Pregnancy',
+      imageName: 'doctor-grid-12',
+      profileLink: 'dr-razan-ghaith',
+      location: 'Jeddah',
     },
-    
-     {
+
+    {
       id: 14,
-      name: "Dr. Median Alkhalaf ",
-      qualification: "Consultant, Obstetrics & Gynecology ",
-      imageUrl: "/images/doctors/17.jpg",
-      profileLink: "dr-median-alkhalaf",
-       location: "Al Ahsa",
+      name: 'Dr. Median Alkhalaf ',
+      qualification: 'Consultant, Obstetrics & Gynecology ',
+      imageName: 'doctor-grid-17',
+      profileLink: 'dr-median-alkhalaf',
+      location: 'Al Ahsa',
     },
     {
       id: 15,
-      name: "Dr. Maram Dadoua",
-      qualification: "Senior Registrar, Obstetrics & Gynecology ",
-      imageUrl: "/images/doctors/13.jpg",
-      profileLink: "dr-maram-dadoua",
-       location: "Jeddah",
+      name: 'Dr. Maram Dadoua',
+      qualification: 'Senior Registrar, Obstetrics & Gynecology ',
+      imageName: 'doctor-grid-13',
+      profileLink: 'dr-maram-dadoua',
+      location: 'Jeddah',
     },
- 
-        {
+
+    {
       id: 16,
-      name: "Dr. Rania Elsherify ",
-      qualification: "Obstetrics & Gynecology Registrar ",
-      imageUrl: "/images/doctors/14.jpg",
-      profileLink: "dr-rania-elsherify",
-       location: "Al Ahsa",
+      name: 'Dr. Rania Elsherify ',
+      qualification: 'Obstetrics & Gynecology Registrar ',
+      imageName: 'doctor-grid-14',
+      profileLink: 'dr-rania-elsherify',
+      location: 'Al Ahsa',
     },
   ];
   // Filtered doctors
   const filteredDoctors =
-    filter === "ALL"
-      ? doctorsData
-      : doctorsData.filter((doc) => doc.location === filter);
+    filter === 'ALL' ? doctorsData : doctorsData.filter((doc) => doc.location === filter);
 
   return (
     <div>
@@ -196,195 +193,194 @@ const OurExperts = () => {
         </div>
 
         {/* Filter Buttons */}
-   <div className="mb-4 d-flex  gap-2 gap-lg-5">
-  <button
-    className={`physicians-btn btn ${filter === "ALL" ? "active" : ""}`}
-    onClick={() => setFilter("ALL")}
-  >
-    ALL
-  </button>
-  <button
-    className={`physicians-btn btn ${filter === "Riyadh" ? "active" : ""}`}
-    onClick={() => setFilter("Riyadh")}
-  >
-    RIYADH
-  </button>
-  <button
-    className={`physicians-btn btn ${filter === "Jeddah" ? "active" : ""}`}
-    onClick={() => setFilter("Jeddah")}
-  >
-    JEDDAH
-  </button>
-   <button
-    className={`physicians-btn btn ${filter === "Al Ahsa" ? "active" : ""}`}
-    onClick={() => setFilter("Al Ahsa")}
-  >
-    AL AHSA
-  </button>
-</div>
-
+        <div className="mb-4 d-flex  gap-2 gap-lg-5">
+          <button
+            className={`physicians-btn btn ${filter === 'ALL' ? 'active' : ''}`}
+            onClick={() => setFilter('ALL')}
+          >
+            ALL
+          </button>
+          <button
+            className={`physicians-btn btn ${filter === 'Riyadh' ? 'active' : ''}`}
+            onClick={() => setFilter('Riyadh')}
+          >
+            RIYADH
+          </button>
+          <button
+            className={`physicians-btn btn ${filter === 'Jeddah' ? 'active' : ''}`}
+            onClick={() => setFilter('Jeddah')}
+          >
+            JEDDAH
+          </button>
+          <button
+            className={`physicians-btn btn ${filter === 'Al Ahsa' ? 'active' : ''}`}
+            onClick={() => setFilter('Al Ahsa')}
+          >
+            AL AHSA
+          </button>
+        </div>
 
         <div className="doctors-scroll-container">
           <div className="row g-4">
             {filteredDoctors.map((doctor) => (
-            <div key={doctor.id} className="col-xl-3 col-md-6">
-  <div className="doctor-card">
-    <div className="image-wrapper" style={{ position: "relative" }}>
-      <Image
-        src={doctor.imageUrl}
-        alt={doctor.name}
-        width={275}
-        height={236}
-        style={{ borderRadius: "10px" }}
-      />
-      {/* Overlay */}
-      <div className="image-overlay">
-        <div className="overlay-content">
-          <Link
-            href={doctor.profileLink}
-            className="btn btn-success doctor-btn doctor-hover-btn"
-          >
-            View Profile
-          </Link>
-          {doctor.location && (
-            <div className="doctor-location docotr">
-              <i className="ri-map-pin-line"></i> {doctor.location}
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
+              <div key={doctor.id} className="col-xl-3 col-md-6">
+                <div className="doctor-card">
+                  <div className="image-wrapper" style={{ position: 'relative' }}>
+                    <OptimizedImage
+                      imageName={doctor.imageName}
+                      alt={doctor.name}
+                      style={{ borderRadius: '10px' }}
+                    />
+                    {/* Overlay */}
+                    <div className="image-overlay">
+                      <div className="overlay-content">
+                        <Link
+                          href={doctor.profileLink}
+                          className="btn btn-success doctor-btn doctor-hover-btn"
+                        >
+                          View Profile
+                        </Link>
+                        {doctor.location && (
+                          <div className="doctor-location docotr">
+                            <i className="ri-map-pin-line"></i> {doctor.location}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
 
-    <div className="content">
-      <h3>
-        <Link className=" doctor-link" href={doctor.profileLink}>{doctor.name}</Link>
-      </h3>
-      <span className="sub">{doctor.qualification}</span>
-       {doctor.location && (
-            <div className="location-color">
-              <i className="ri-map-pin-line"></i> {doctor.location}
-            </div>
-          )}
-      <div>
-        <Link
-          href={getBookingUrl(doctor.location, "en")}
-          className="btn btn-success doctor-btn"
-        >
-          Request an Appointment
-        </Link>
-      </div>
-    </div>
-  </div>
+                  <div className="content">
+                    <h3>
+                      <Link className=" doctor-link" href={doctor.profileLink}>
+                        {doctor.name}
+                      </Link>
+                    </h3>
+                    <span className="sub">{doctor.qualification}</span>
+                    {doctor.location && (
+                      <div className="location-color">
+                        <i className="ri-map-pin-line"></i> {doctor.location}
+                      </div>
+                    )}
+                    <div>
+                      <Link
+                        href={getBookingUrl(doctor.location, 'en')}
+                        className="btn btn-success doctor-btn"
+                      >
+                        Request an Appointment
+                      </Link>
+                    </div>
+                  </div>
+                </div>
 
-  {/* Same styles from OurDoctors */}
-  <style jsx global>{`
-    .doctor-card {
-      position: relative;
-      overflow: hidden;
-      border-radius:16px;
-    }
-       .doctor-link {
-    color: #000000 !important;
-    font-size:18px;
-    text-decoration: none !important;
-  }
-.physicians-btn {
-    width: 105px !important;
-    height: 40px !important;
-    border-radius: 0px !important;
-}
-    .doctor-card .content .sub {
-    font-size: 16px;
-    display: block;
-    margin-bottom: 20px;
-}
-    .service-overview-content h3, .service-overview-content .h3 {
-    font-size: 30px;
-    font-weight: normal;
-    color: #004E78;
-}
-    .doctor-location {
-    color: #fff;
-    font-size: 12px !important;
-}
-    .image-wrapper {
-      position: relative;
-    }
+                {/* Same styles from OurDoctors */}
+                <style jsx global>{`
+                  .doctor-card {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 16px;
+                  }
+                  .doctor-link {
+                    color: #000000 !important;
+                    font-size: 18px;
+                    text-decoration: none !important;
+                  }
+                  .physicians-btn {
+                    width: 105px !important;
+                    height: 40px !important;
+                    border-radius: 0px !important;
+                  }
+                  .doctor-card .content .sub {
+                    font-size: 16px;
+                    display: block;
+                    margin-bottom: 20px;
+                  }
+                  .service-overview-content h3,
+                  .service-overview-content .h3 {
+                    font-size: 30px;
+                    font-weight: normal;
+                    color: #004e78;
+                  }
+                  .doctor-location {
+                    color: #fff;
+                    font-size: 12px !important;
+                  }
+                  .image-wrapper {
+                    position: relative;
+                  }
 
-    .doctor-card:hover .image-overlay {
-      opacity: 1;
-    }
-.location-color{
-           color: #000;
-        text-align: center;
-        justify-content: center;
-        font-size: 14px;
-        font-weight: 600;
-        margin: -10px 0px 10px 10px;
-    }
-    .image-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      border-radius: 10px;
-      text-align: center;
-    }
+                  .doctor-card:hover .image-overlay {
+                    opacity: 1;
+                  }
+                  .location-color {
+                    color: #000;
+                    text-align: center;
+                    justify-content: center;
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin: -10px 0px 10px 10px;
+                  }
+                  .image-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    border-radius: 10px;
+                    text-align: center;
+                  }
 
-    .image-overlay .doctor-btn {
-      padding: 10px 20px;
-      color: #fff;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-.location-color {
-    display: none;
-}
+                  .image-overlay .doctor-btn {
+                    padding: 10px 20px;
+                    color: #fff;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                  }
+                  .location-color {
+                    display: none;
+                  }
 
-    .doctor-location {
-      color: #fff;
-      font-size: 14px;
-    }
-      @media only screen and (max-width: 767px) {
- .doctor-location {
-    display:none !important;
-  }
-      .service-overview-content h3, .service-overview-content .h3 {
-    font-size: 20px;
-    font-weight: normal;
-    color: #004E78;
-}
-        .doctor-card {
-        padding: 15px 10px !important;
-        margin: 0px 17px !important;
-    }
-.location-color {
-    display: block;
-}
-    .doctor-card {
-        padding: 25px;
-        margin: 0px 10px !important;
-    }
-        .physicians-btn {
-    width: 90px !important;
-    height: 40px !important;
-    -webkit-border-radius: 0px !important;
-    -moz-border-radius: 0px!important;
-    border-radius: 0px !important;
-    font-size:12px !important;
-}
-      }
-
-  `}</style>
-</div>
-
+                  .doctor-location {
+                    color: #fff;
+                    font-size: 14px;
+                  }
+                  @media only screen and (max-width: 767px) {
+                    .doctor-location {
+                      display: none !important;
+                    }
+                    .service-overview-content h3,
+                    .service-overview-content .h3 {
+                      font-size: 20px;
+                      font-weight: normal;
+                      color: #004e78;
+                    }
+                    .doctor-card {
+                      padding: 15px 10px !important;
+                      margin: 0px 17px !important;
+                    }
+                    .location-color {
+                      display: block;
+                    }
+                    .doctor-card {
+                      padding: 25px;
+                      margin: 0px 10px !important;
+                    }
+                    .physicians-btn {
+                      width: 90px !important;
+                      height: 40px !important;
+                      -webkit-border-radius: 0px !important;
+                      -moz-border-radius: 0px !important;
+                      border-radius: 0px !important;
+                      font-size: 12px !important;
+                    }
+                  }
+                `}</style>
+              </div>
             ))}
           </div>
         </div>

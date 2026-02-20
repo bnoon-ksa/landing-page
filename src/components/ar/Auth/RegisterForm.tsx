@@ -1,22 +1,21 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import React from 'react';
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 async function handleRegister(formData: FormData) {
-  
-  const name = String(formData.get("name") || "").trim();
-  const email = String(formData.get("email") || "").trim();
-  const phone = String(formData.get("phone") || "").trim();
-  const password = String(formData.get("password") || "").trim();
-  const confirmPassword = String(formData.get("confirmPassword") || "").trim();
-  const userType = String(formData.get("userType") || "");
-  const agree = formData.get("agree") === "on";
+  const name = String(formData.get('name') || '').trim();
+  const email = String(formData.get('email') || '').trim();
+  const phone = String(formData.get('phone') || '').trim();
+  const password = String(formData.get('password') || '').trim();
+  const confirmPassword = String(formData.get('confirmPassword') || '').trim();
+  const userType = String(formData.get('userType') || '');
+  const agree = formData.get('agree') === 'on';
 
   // TODO: Replace with real registration logic + validation
 
-  redirect("/thank-you");
+  redirect('/thank-you');
 }
 
 const RegisterForm = () => {
@@ -28,8 +27,8 @@ const RegisterForm = () => {
             <div className="content">
               <h3>Create Your Doutor Account</h3>
               <p>
-                Access your dashboard, manage appointments, and connect with
-                licensed doctors—securely and conveniently.
+                Access your dashboard, manage appointments, and connect with licensed
+                doctors—securely and conveniently.
               </p>
             </div>
 
@@ -106,7 +105,8 @@ const RegisterForm = () => {
 
               <div className="options">
                 <label>
-                  <input type="checkbox" name="agree" /> I confirm that I have read and agree to the Privacy Policy.
+                  <input type="checkbox" name="agree" /> I confirm that I have read and agree to the
+                  Privacy Policy.
                 </label>
               </div>
 
@@ -144,7 +144,7 @@ const RegisterForm = () => {
                 </button>
               </div>
             </form>
-            
+
             <div className="bottom-text">
               <span>
                 Already have an account? <Link href="/login">Login</Link>

@@ -1,18 +1,17 @@
-"use client";
+'use client';
 
-import React from "react"; 
-import Link from "next/link";
-import { redirect } from "next/navigation";
+import React from 'react';
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 async function handleLogin(formData: FormData) {
-  
-  const email = String(formData.get("email") || "").trim();
-  const password = String(formData.get("password") || "").trim();
+  const email = String(formData.get('email') || '').trim();
+  const password = String(formData.get('password') || '').trim();
 
   // TODO: Integrate real authentication here
 
   // For progressive enhancement, redirect after POST
-  redirect("/thank-you");
+  redirect('/thank-you');
 }
 
 const LoginForm = () => {
@@ -24,8 +23,8 @@ const LoginForm = () => {
             <div className="content">
               <h3>Login to Your Account</h3>
               <p>
-                Access your dashboard, manage appointments, and connect with
-                licensed doctors—securely and conveniently.
+                Access your dashboard, manage appointments, and connect with licensed
+                doctors—securely and conveniently.
               </p>
             </div>
 
@@ -99,7 +98,7 @@ const LoginForm = () => {
 
             <div className="bottom-text">
               <span>
-                Don&apos;t have an account?{" "}
+                Don&apos;t have an account?{' '}
                 <Link href="/register">Register Now - It&apos;s Free</Link>
               </span>
             </div>

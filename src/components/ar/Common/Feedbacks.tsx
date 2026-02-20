@@ -1,27 +1,27 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useState, useEffect } from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 const Feedbacks = () => {
   const feedbackSlides = [
     {
-      title: "ما يقوله المرضى عن بنون",
-      desc: "السلام عليكم ،<br>لا شيء مستحيل بفضل الله، أنصح من يعاني من مشاكل في الخصوبة زيارة بنون – إنهم حقاً محترفون وأود أن أشكر جميع الموظفين لديهم۔",
-      author: ".م.خ.",
-      img: "/images/hear-patient.jpg",
+      title: 'ما يقوله المرضى عن بنون',
+      desc: 'السلام عليكم ،<br>لا شيء مستحيل بفضل الله، أنصح من يعاني من مشاكل في الخصوبة زيارة بنون – إنهم حقاً محترفون وأود أن أشكر جميع الموظفين لديهم۔',
+      author: '.م.خ.',
+      imageName: 'hear-patient',
     },
     {
-      title: "ما يقوله المرضى عن بنون",
-      desc: "الأطباء في بنون من أفضل الأطباء المختصين بالإخصاب في الشرق الأوسط. أنصحكم بزيارتهم إذا كنتم تعانون من تأخر الحمل۔",
-      author: ".س. أ ",
-      img: "/images/hear-patient.jpg",
+      title: 'ما يقوله المرضى عن بنون',
+      desc: 'الأطباء في بنون من أفضل الأطباء المختصين بالإخصاب في الشرق الأوسط. أنصحكم بزيارتهم إذا كنتم تعانون من تأخر الحمل۔',
+      author: '.س. أ ',
+      imageName: 'hear-patient',
     },
     {
-      title: "ما يقوله المرضى عن بنون",
-      desc: "عيادات مجهزة بالكامل لعلاج حالات العقم والحمل عالي الخطورة وطب الأجنة وأمراض الذكورة. معظم الطاقم الطبي مدرب في أمريكا وكندا۔",
-      author: ".ج.ج",
-      img: "/images/hear-patient.jpg",
+      title: 'ما يقوله المرضى عن بنون',
+      desc: 'عيادات مجهزة بالكامل لعلاج حالات العقم والحمل عالي الخطورة وطب الأجنة وأمراض الذكورة. معظم الطاقم الطبي مدرب في أمريكا وكندا۔',
+      author: '.ج.ج',
+      imageName: 'hear-patient',
     },
   ];
 
@@ -36,22 +36,22 @@ const Feedbacks = () => {
   }, [feedbackSlides.length]);
 
   return (
-    <div className="service-overview-area ptb-140" style={{ position: "relative" }}>
+    <div className="service-overview-area ptb-140" style={{ position: 'relative' }}>
       <div className="container">
         {/* ✅ Wrapper with fixed minHeight so dots niche hi rahen */}
-        <div className="service-section" style={{ position: "relative", minHeight: "450px" }}>
+        <div className="service-section" style={{ position: 'relative', minHeight: '450px' }}>
           {feedbackSlides.map((slide, index) => (
             <div
               key={index}
               className="row justify-content-center align-items-center g-4"
               style={{
                 opacity: current === index ? 1 : 0,
-                visibility: current === index ? "visible" : "hidden",
-                transition: "opacity 1s ease-in-out, visibility 1s ease-in-out",
-                position: "absolute",
+                visibility: current === index ? 'visible' : 'hidden',
+                transition: 'opacity 1s ease-in-out, visibility 1s ease-in-out',
+                position: 'absolute',
                 top: 0,
                 left: 0,
-                width: "100%",
+                width: '100%',
                 zIndex: current === index ? 1 : 0,
               }}
             >
@@ -59,27 +59,27 @@ const Feedbacks = () => {
                 <div className="service-overview-content">
                   <h2>{slide.title}</h2>
                   <p
-  style={{ direction: "rtl", textAlign: "right" }}
-  dangerouslySetInnerHTML={{ __html: slide.desc }}
-></p>
+                    style={{ direction: 'rtl', textAlign: 'right' }}
+                    dangerouslySetInnerHTML={{ __html: slide.desc }}
+                  ></p>
 
                   {/* ✅ h3 added niche p ke */}
-                  <h3 style={{ marginTop: "15px", fontSize: "18px", color: "#004E78" }}>
+                  <h3 style={{ marginTop: '15px', fontSize: '18px', color: '#004E78' }}>
                     {slide.author}
                   </h3>
                 </div>
               </div>
               <div className="col-xl-6 col-md-12">
                 <div className="service-image">
-                  <Image
-                    src={slide.img}
+                  <OptimizedImage
+                    imageName={slide.imageName}
                     alt="Service overview"
                     width={580}
                     height={450}
                     loading="lazy"
                     style={{
-                      transition: "opacity 1s ease-in-out",
-                      borderRadius: "10px",
+                      transition: 'opacity 1s ease-in-out',
+                      borderRadius: '10px',
                     }}
                   />
                 </div>
@@ -91,9 +91,9 @@ const Feedbacks = () => {
         {/* 🔹 Slider Dots always niche */}
         <div
           style={{
-            textAlign: "center",
-            marginTop: "20px",
-            position: "relative",
+            textAlign: 'center',
+            marginTop: '20px',
+            position: 'relative',
             zIndex: 2,
           }}
         >
@@ -102,20 +102,20 @@ const Feedbacks = () => {
               key={index}
               onClick={() => setCurrent(index)}
               style={{
-                display: "inline-block",
-                width: "12px",
-                height: "12px",
-                margin: "0 6px",
-                borderRadius: "50%",
-                background: current === index ? "#004E78" : "rgba(0,0,0,0.3)",
-                cursor: "pointer",
-                transition: "background 0.3s",
+                display: 'inline-block',
+                width: '12px',
+                height: '12px',
+                margin: '0 6px',
+                borderRadius: '50%',
+                background: current === index ? '#004E78' : 'rgba(0,0,0,0.3)',
+                cursor: 'pointer',
+                transition: 'background 0.3s',
               }}
             />
           ))}
         </div>
       </div>
-        <style jsx>{`
+      <style jsx>{`
      
         /* ✅ Mobile view (≤768px): stack vertically */
         @media (max-width: 768px) {

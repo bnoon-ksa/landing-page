@@ -1,18 +1,17 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { PhoneIcon } from '@/components/icons';
 
 const NationalDayOffer = () => {
-  const leftCardImg = "/images/national-day/ivf-cycles.jpg";
-
   const includesList = [
-    "Ovulation monitoring via ultrasound",
-    "Hormonal tests during treatment cycle",
+    'Ovulation monitoring via ultrasound',
+    'Hormonal tests during treatment cycle',
   ];
 
-  const excludesList = ["Medications", "Genetic Testing"];
+  const excludesList = ['Medications', 'Genetic Testing'];
 
   return (
     <div className="founding-offer-page">
@@ -25,8 +24,8 @@ const NationalDayOffer = () => {
               <div className="col-lg-6 col-md-6 order-2 order-lg-1">
                 <div className="left-img-wrap">
                   <div className="img-shadow-box">
-                    <Image
-                      src={leftCardImg}
+                    <OptimizedImage
+                      imageName="ivf-cycles"
                       alt="IVF/ICSI Offer"
                       width={900}
                       height={700}
@@ -50,7 +49,7 @@ const NationalDayOffer = () => {
                   </div>
 
                   <p className="offer-desc">
-                    On the occasion of Saudi Founding Day, we’re pleased to offer{" "}
+                    On the occasion of Saudi Founding Day, we’re pleased to offer{' '}
                     <strong>15% OFF*</strong> on IVF/ICSI Cycles at Bnoon.
                   </p>
 
@@ -93,21 +92,19 @@ const NationalDayOffer = () => {
                     >
                       BOOK NOW
                     </Link>
-                   
                   </div>
-                   <span className="terms">
-                      *Terms &amp; conditions apply. This offer is not valid with other offers
-                    </span>
+                  <span className="terms">
+                    *Terms &amp; conditions apply. This offer is not valid with other offers
+                  </span>
                   {/* ✅ Phones */}
                   <div className="phones">
                     <div className="phone-col">
                       <div className="phone-item">
-                        <Image
-                          src="/images/icons/phone.svg"
-                          alt="Phone"
+                        <PhoneIcon
                           width={14}
                           height={14}
                           className="phone-icon"
+                          style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
                           <span className="phone-label">Bnoon - Riyadh:</span> 011 444 8080
@@ -115,12 +112,11 @@ const NationalDayOffer = () => {
                       </div>
 
                       <div className="phone-item">
-                        <Image
-                          src="/images/icons/phone.svg"
-                          alt="Phone"
+                        <PhoneIcon
                           width={14}
                           height={14}
                           className="phone-icon"
+                          style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
                           <span className="phone-label">Bnoon - Al Ahsa:</span> 0552701553
@@ -130,12 +126,11 @@ const NationalDayOffer = () => {
 
                     <div className="phone-col">
                       <div className="phone-item">
-                        <Image
-                          src="/images/icons/phone.svg"
-                          alt="Phone"
+                        <PhoneIcon
                           width={14}
                           height={14}
                           className="phone-icon"
+                          style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
                           <span className="phone-label">Bnoon - Jeddah:</span> 012 680 0800
@@ -180,7 +175,7 @@ const NationalDayOffer = () => {
           max-width: 520px;
           width: 100%;
           background: #fff;
-              margin: 30px 0px 0px 60px;
+          margin: 30px 0px 0px 60px;
         }
 
         .left-img {
@@ -207,7 +202,7 @@ const NationalDayOffer = () => {
         .offer-strong {
           color: #004e78;
           font-weight: 900;
-              font-size: 20px;
+          font-size: 20px;
         }
 
         .brand-name {
@@ -216,7 +211,6 @@ const NationalDayOffer = () => {
           letter-spacing: 1px;
           font-size: 16px;
           padding-bottom: 5px;
-
         }
 
         .locations {
@@ -346,7 +340,7 @@ const NationalDayOffer = () => {
           border-top: 1px solid #e7eef2;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          
+
           color: #2f3a40;
           font-size: 14.5px;
         }
@@ -375,41 +369,37 @@ const NationalDayOffer = () => {
         /* ✅ Mobile */
         @media (max-width: 767px) {
           .left-img-wrap {
-            padding: 0px 16px 50px 40px
+            padding: 0px 16px 50px 40px;
           }
-                .ex-item {
-        
-          font-size: 14px;
-        }
+          .ex-item {
+            font-size: 14px;
+          }
 
-.offer-strong {
-          color: #004e78;
-          font-weight: 900;
-          font-size: 16px;
-        }
-            .dates {
-        
-          font-size: 14px !important;
-        
-        }
-           .offer-desc {
-          font-size: 14px !important;
-        }
-           .info-item {
-         
-          font-size: 14px;
-        }
+          .offer-strong {
+            color: #004e78;
+            font-weight: 900;
+            font-size: 16px;
+          }
+          .dates {
+            font-size: 14px !important;
+          }
+          .offer-desc {
+            font-size: 14px !important;
+          }
+          .info-item {
+            font-size: 14px;
+          }
           .img-shadow-box {
             box-shadow: -30px 30px 0px #d7f2fb;
             max-width: 100%;
-                margin: 0px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
           }
-.terms{
- font-size: 14px;
-}
- .phone-item{
- font-size: 14px !important;
- }
+          .terms {
+            font-size: 14px;
+          }
+          .phone-item {
+            font-size: 14px !important;
+          }
           .right-content {
             padding: 18px 16px 16px;
           }
@@ -429,10 +419,9 @@ const NationalDayOffer = () => {
           .phones {
             grid-template-columns: 1fr;
           }
-            .contact-text{
-                font-size: 12px;
-            }
-               
+          .contact-text {
+            font-size: 12px;
+          }
         }
 
         /* ✅ iPad Mini / iPad */
@@ -451,6 +440,3 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
-
-
-

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
   bgImage: string;
@@ -11,7 +11,6 @@ export default function FoundingDayBanner({ bgImage }: Props) {
         className="founding-banner-area"
         style={{
           backgroundImage: `url(${bgImage})`,
-        
         }}
       />
 

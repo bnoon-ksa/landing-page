@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect, useRef } from "react";
-import { getBookNowUrl } from "@/utils/booking";
+import React, { useState, useEffect, useRef } from 'react';
+import { getBookNowUrl } from '@/utils/booking';
 
 function HeroBanner() {
   const [bgPosition, setBgPosition] = useState(0);
@@ -13,57 +13,58 @@ function HeroBanner() {
   // ✅ Slides (video + text + buttonLink)
   const slides = [
     {
-  video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4",
-  title: "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
-  desc: "<strong>Get Pregnant or Your Money Back:</strong><br><em>Peace of Mind. Less Stress</em>",
-  titleColor: "#004E78",
-  descColor: "#004E78",
-  extra: "*Terms & Conditions Apply",
-  buttonLink: "en/waad-bnoon-program",
-  buttonText: "Read More",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4',
+      title:
+        "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
+      desc: '<strong>Get Pregnant or Your Money Back:</strong><br><em>Peace of Mind. Less Stress</em>',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      extra: '*Terms & Conditions Apply',
+      buttonLink: 'en/waad-bnoon-program',
+      buttonText: 'Read More',
 
-  descClass: "special-desc",   // 👈 ADD THIS
-},
-    {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-3.mp4",
-      title: "THE FUTURE OF<br>FERTILITY IS HERE",
-      desc: "Now in Riyadh, Jeddah and Al Ahsa",
-      buttonLink: getBookNowUrl("en"),
-      buttonText: "Book Now",
+      descClass: 'special-desc', // 👈 ADD THIS
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-4.mp4",
-      title: "TURNING DREAMS INTO <br>NEW BEGINNINGS ",
-      desc: "Hope begins with Bnoon",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      buttonLink: getBookNowUrl("en"),
-      buttonText: "Book Now",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-3.mp4',
+      title: 'THE FUTURE OF<br>FERTILITY IS HERE',
+      desc: 'Now in Riyadh, Jeddah and Al Ahsa',
+      buttonLink: getBookNowUrl('en'),
+      buttonText: 'Book Now',
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-5.mp4",
-      title: "OVER 5,000 FAMILIES <br>HELPED ANNUALLY",
-      desc: "Compassionate care to achieve <br>their dream of parenthood ",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      buttonLink: getBookNowUrl("en"),
-      buttonText: "Book Now",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-4.mp4',
+      title: 'TURNING DREAMS INTO <br>NEW BEGINNINGS ',
+      desc: 'Hope begins with Bnoon',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      buttonLink: getBookNowUrl('en'),
+      buttonText: 'Book Now',
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-6.mp4",
-      title: "THE NEXT-GENERATION <br>OF FERTILITY CARE",
-      desc: "Now in Saudi Arabia",
-      buttonLink: getBookNowUrl("en"),
-      buttonText: "Book Now",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-5.mp4',
+      title: 'OVER 5,000 FAMILIES <br>HELPED ANNUALLY',
+      desc: 'Compassionate care to achieve <br>their dream of parenthood ',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      buttonLink: getBookNowUrl('en'),
+      buttonText: 'Book Now',
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-7.mp4",
-      title: "START YOUR PARENTHOOD <br>JOURNEY WITH BNOON",
-      desc: "Book your appointment today",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      buttonLink: getBookNowUrl("en"),
-      buttonText: "Book Now",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-6.mp4',
+      title: 'THE NEXT-GENERATION <br>OF FERTILITY CARE',
+      desc: 'Now in Saudi Arabia',
+      buttonLink: getBookNowUrl('en'),
+      buttonText: 'Book Now',
+    },
+    {
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-7.mp4',
+      title: 'START YOUR PARENTHOOD <br>JOURNEY WITH BNOON',
+      desc: 'Book your appointment today',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      buttonLink: getBookNowUrl('en'),
+      buttonText: 'Book Now',
     },
   ];
 
@@ -90,8 +91,8 @@ function HeroBanner() {
     // Preload next slide's video
     const nextIndex = (currentSlide + 1) % slides.length;
     const nextVideo = videoRefs.current[nextIndex];
-    if (nextVideo && nextVideo.preload === "none") {
-      nextVideo.preload = "metadata";
+    if (nextVideo && nextVideo.preload === 'none') {
+      nextVideo.preload = 'metadata';
     }
   }, [currentSlide, slides.length]);
 
@@ -102,14 +103,17 @@ function HeroBanner() {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        if (!bannerRef.current) { ticking = false; return; }
+        if (!bannerRef.current) {
+          ticking = false;
+          return;
+        }
         const speed = 0.5;
         setBgPosition(-(window.scrollY * speed));
         ticking = false;
       });
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // ✅ Trigger reveal animation on slide change
@@ -124,12 +128,12 @@ function HeroBanner() {
       ref={bannerRef}
       className="second-banner-area"
       style={{
-        position: "relative",
-        width: "100%",
-        height: "525px",
-        overflow: "hidden",
+        position: 'relative',
+        width: '100%',
+        height: '525px',
+        overflow: 'hidden',
         backgroundPosition: `center ${bgPosition}px`,
-        backgroundAttachment: "fixed",
+        backgroundAttachment: 'fixed',
       }}
     >
       {/* 🔹 Video Background Slider — all slides stay in DOM to prevent re-fetch */}
@@ -141,22 +145,24 @@ function HeroBanner() {
         return (
           <video
             key={index}
-            ref={(el) => { videoRefs.current[index] = el; }}
+            ref={(el) => {
+              videoRefs.current[index] = el;
+            }}
             loop
             muted
             playsInline
-            preload={isActive ? "auto" : isAdjacent ? "metadata" : "none"}
+            preload={isActive ? 'auto' : isAdjacent ? 'metadata' : 'none'}
             style={{
-              position: "absolute",
+              position: 'absolute',
               top: 0,
               left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
               zIndex: -1,
               opacity: isActive ? 1 : 0,
-              transition: "opacity 1s ease-in-out",
-              visibility: isActive || isAdjacent ? "visible" : "hidden",
+              transition: 'opacity 1s ease-in-out',
+              visibility: isActive || isAdjacent ? 'visible' : 'hidden',
             }}
           >
             <source src={slide.video} type="video/mp4" />
@@ -166,27 +172,24 @@ function HeroBanner() {
 
       {/* 🔹 Text Content */}
       <div className="container">
-        <div
-          className={`second-banner-content ${
-            animate ? "reveal-text" : "hidden-text"
-          }`}
-        >
+        <div className={`second-banner-content ${animate ? 'reveal-text' : 'hidden-text'}`}>
           <h1
-            style={{ color: slides[currentSlide].titleColor || "#fff" }}
+            style={{ color: slides[currentSlide].titleColor || '#fff' }}
             dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
           />
 
-        <p
-  className={slides[currentSlide].descClass || ""}
-  dangerouslySetInnerHTML={{ __html: slides[currentSlide].desc }}
-  style={{ color: slides[currentSlide].descColor || "#fff" }}
-/>
-
+          <p
+            className={slides[currentSlide].descClass || ''}
+            dangerouslySetInnerHTML={{ __html: slides[currentSlide].desc }}
+            style={{ color: slides[currentSlide].descColor || '#fff' }}
+          />
 
           <div className="banner-btn">
             <a
               href={slides[currentSlide].buttonLink}
-              {...(slides[currentSlide].buttonLink.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              {...(slides[currentSlide].buttonLink.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
               className="btn btn-success btn-appointment btn-banner"
             >
               {slides[currentSlide].buttonText}
@@ -196,10 +199,10 @@ function HeroBanner() {
           <p
             className="terms-text"
             dangerouslySetInnerHTML={{
-              __html: slides[currentSlide].extra || "",
+              __html: slides[currentSlide].extra || '',
             }}
             style={{
-              color: slides[currentSlide].descColor || "#fff",
+              color: slides[currentSlide].descColor || '#fff',
             }}
           />
         </div>
@@ -208,12 +211,12 @@ function HeroBanner() {
       {/* 🔹 Slider Dots */}
       <div
         style={{
-          position: "absolute",
-          bottom: "20px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          display: "flex",
-          gap: "8px",
+          position: 'absolute',
+          bottom: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          gap: '8px',
         }}
       >
         {slides.map((_, index) => (
@@ -221,13 +224,12 @@ function HeroBanner() {
             key={index}
             onClick={() => setCurrentSlide(index)}
             style={{
-              width: "12px",
-              height: "12px",
-              borderRadius: "50%",
-              background:
-                currentSlide === index ? "white" : "rgba(255,255,255,0.5)",
-              cursor: "pointer",
-              transition: "background 0.3s",
+              width: '12px',
+              height: '12px',
+              borderRadius: '50%',
+              background: currentSlide === index ? 'white' : 'rgba(255,255,255,0.5)',
+              cursor: 'pointer',
+              transition: 'background 0.3s',
             }}
           />
         ))}
@@ -244,11 +246,11 @@ function HeroBanner() {
           transform: translateX(0);
           transition: all 1.5s ease;
         }
-          /* 👉 Custom style ONLY for Slide 1 Desc */
-  .special-desc {
-    margin-top: 18px;
-    line-height: 1.7;
-  }
+        /* 👉 Custom style ONLY for Slide 1 Desc */
+        .special-desc {
+          margin-top: 18px;
+          line-height: 1.7;
+        }
       `}</style>
     </div>
   );

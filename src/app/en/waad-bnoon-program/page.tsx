@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/Layout/PageBanner";
-import Navbar from "@/components/Layout/Navbar";
-import WaadSection from "@/components/Common/WaadSection";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/Layout/Navbar';
+import WaadSection from '@/components/Common/WaadSection';
 
 export const metadata: Metadata = {
   title: "Wa'ad Bnoon Program - Get Pregnant or Your Money Back ",
-  description: "The Wa'ad Bnoon Program guarantees pregnancy or your money back. Learn about program details and eligibility for IVF success guarantee.",
+  description:
+    "The Wa'ad Bnoon Program guarantees pregnancy or your money back. Learn about program details and eligibility for IVF success guarantee.",
 };
 
 export default function WaadPage() {
@@ -14,9 +15,8 @@ export default function WaadPage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="/images/waad-bnoon-banner.png" />
+      <OptimizedPageBanner imageName="waad-bnoon-banner" />
       <WaadSection />
-     
     </>
   );
 }

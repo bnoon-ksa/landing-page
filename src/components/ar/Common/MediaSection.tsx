@@ -1,13 +1,12 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
 
 const AboutusSection = () => {
   const values = [
-    "Patient-Centered Care",
-    "Innovation & Research",
-    "Collaboration & Teamwork",
-    "Integrity & Transparency",
-    "Excellence in Service",
+    'Patient-Centered Care',
+    'Innovation & Research',
+    'Collaboration & Teamwork',
+    'Integrity & Transparency',
+    'Excellence in Service',
   ];
 
   return (
@@ -21,17 +20,15 @@ const AboutusSection = () => {
               </div>
               <div className="left text-center mt-2">
                 <p className="text-center">
-           للتواصل مع قسم الإعلام أو لفرص التعاون المؤسسي، يُرجى التواصل معنا عبر البريد الإلكتروني:<br />
-              <strong> communications@bnoon.sa </strong>
+                  للتواصل مع قسم الإعلام أو لفرص التعاون المؤسسي، يُرجى التواصل معنا عبر البريد
+                  الإلكتروني:
+                  <br />
+                  <strong> communications@bnoon.sa </strong>
                 </p>
               </div>
-             
             </div>
-            
           </div>
-          
-        </div> 
-         
+        </div>
       </div>
     </div>
   );

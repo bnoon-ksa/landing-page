@@ -1,27 +1,28 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { Check2Icon } from '@/components/icons';
 
 const WhyChooseUs = () => {
   // Define the reasons data
   const reasons = [
     {
       id: 1,
-      title: "Certified, Experienced Doctors",
+      title: 'Certified, Experienced Doctors',
       description:
-        "Connect only with licensed professionals who are thoroughly vetted, compassionate, and experts in their fields",
+        'Connect only with licensed professionals who are thoroughly vetted, compassionate, and experts in their fields',
     },
     {
       id: 2,
-      title: "Insurance or No Insurance",
+      title: 'Insurance or No Insurance',
       description:
-        "Use your existing insurance or pay a transparent flat fee. We believe healthcare should fit your financial situation—not complicate it.",
+        'Use your existing insurance or pay a transparent flat fee. We believe healthcare should fit your financial situation—not complicate it.',
     },
     {
       id: 3,
-      title: "100% Private & Secure",
+      title: '100% Private & Secure',
       description:
-        "Your health data stays safe with end-to-end encryption and full HIPAA compliance. We prioritize your privacy at every step.",
+        'Your health data stays safe with end-to-end encryption and full HIPAA compliance. We prioritize your privacy at every step.',
     },
   ];
 
@@ -42,12 +43,7 @@ const WhyChooseUs = () => {
                     {reasons.map((reason) => (
                       <div key={reason.id} className="item">
                         <div className="icon">
-                          <Image
-                            src="/images/icons/check2.svg"
-                            alt="check"
-                            width={30}
-                            height={30}
-                          />
+                          <Check2Icon width={30} height={30} style={{ color: '#336AEA' }} />
                         </div>
                         <div className="title">
                           <h3>{reason.title}</h3>
@@ -95,13 +91,14 @@ const WhyChooseUs = () => {
 
               <div className="col-xl-5 col-md-12">
                 <div className="third-choose-image">
-                  <Image
-                    src="/images/choose.jpg"
-                    alt="choose"
+                  <OptimizedImage
+                    imageName="choose-image"
+                    fallbackSrc="/images/choose.jpg"
+                    alt="Why choose Bnoon"
                     width={0}
                     height={0}
                     sizes="100vw"
-                    style={{ width: "100%", height: "auto" }}
+                    style={{ width: '100%', height: 'auto' }}
                   />
                 </div>
               </div>

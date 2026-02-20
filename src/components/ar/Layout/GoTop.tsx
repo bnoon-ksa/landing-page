@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React, { useEffect, useState } from 'react';
+import { WhatsAppIcon } from '@/components/icons';
 
 const GoTop = () => {
   const [showButton, setShowButton] = useState(false);
@@ -11,17 +11,17 @@ const GoTop = () => {
       setShowButton(window.pageYOffset > 150);
     };
 
-    window.addEventListener("scroll", checkScroll);
-    return () => window.removeEventListener("scroll", checkScroll);
+    window.addEventListener('scroll', checkScroll);
+    return () => window.removeEventListener('scroll', checkScroll);
   }, []);
 
   // Your WhatsApp number
-  const whatsappNumber = "966114448080"; 
-  const message = "Hello! I want to know more.";
+  const whatsappNumber = '966114448080';
+  const message = 'Hello! I want to know more.';
 
   // Correct WhatsApp URL
   const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
-    message
+    message,
   )}`;
 
   return (
@@ -33,23 +33,18 @@ const GoTop = () => {
           rel="noopener noreferrer"
           className="whatsapp-btn position-fixed border-0 p-0"
           style={{
-            bottom: "50px",
-            left: "0px",
+            bottom: '50px',
+            left: '0px',
             zIndex: 999,
-            width: "55px",
-            height: "55px",
-            borderRadius: "50%",
-            overflow: "hidden",
-            cursor: "pointer",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+            width: '55px',
+            height: '55px',
+            borderRadius: '50%',
+            overflow: 'hidden',
+            cursor: 'pointer',
+            boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
           }}
         >
-          <Image
-            src="/images/WhatsApp.svg"
-            alt="WhatsApp"
-            fill
-            style={{ objectFit: "cover" }}
-          />
+          <WhatsAppIcon width={55} height={55} />
         </a>
       )}
     </>

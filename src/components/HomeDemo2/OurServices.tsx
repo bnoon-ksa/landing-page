@@ -1,120 +1,113 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import React, { useState, useEffect, useRef } from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 function OurServices() {
   // Dynamic data
   const servicesData = [
     {
       id: 1,
-      icon: "/images/icons/Website-Icons_1.png",
-      title: "Expert-Led, Patient-First",
+      imageName: 'website-icon-1',
+      title: 'Expert-Led, Patient-First',
       description:
-        "Our board-certified fertility specialists, embryologists, and specialized nurses bring together medical excellence and real empathy. We don’t just treat conditions—we care for people.",
+        'Our board-certified fertility specialists, embryologists, and specialized nurses bring together medical excellence and real empathy. We don’t just treat conditions—we care for people.',
     },
     {
       id: 2,
-      icon: "/images/icons/Website-Icons_2.png",
-      title: "All-In-One Care",
+      imageName: 'website-icon-2',
+      title: 'All-In-One Care',
       description:
-        "From diagnostics and IVF to egg freezing, fertility preservation, and support through pregnancy—we offer everything under one roof. No referrals, no delays.",
+        'From diagnostics and IVF to egg freezing, fertility preservation, and support through pregnancy—we offer everything under one roof. No referrals, no delays.',
     },
     {
       id: 3,
-      icon: "/images/icons/Website-Icons_3.png",
-      title: "State-of-the-art Clinics Designed Around You",
+      imageName: 'website-icon-3',
+      title: 'State-of-the-art Clinics Designed Around You',
       description:
-        "Clean lines, soft spaces, and a calming atmosphere. We’ve intentionally designed every inch of Bnoon to put you at ease, because the space around you affects how you feel inside.",
+        'Clean lines, soft spaces, and a calming atmosphere. We’ve intentionally designed every inch of Bnoon to put you at ease, because the space around you affects how you feel inside.',
     },
     {
       id: 4,
-      icon: "/images/icons/Website-Icons_4.png",
-      title: "Personalized, Every Time",
+      imageName: 'website-icon-4',
+      title: 'Personalized, Every Time',
       description:
-        "Your treatment plan is built around your health, your timeline, and your goals—designed to fit your life, not disrupt it.",
+        'Your treatment plan is built around your health, your timeline, and your goals—designed to fit your life, not disrupt it.',
     },
   ];
 
   // Animation refs
-    const refs = useRef<(HTMLDivElement | null)[]>([]);
+  const refs = useRef<(HTMLDivElement | null)[]>([]);
   const [visible, setVisible] = useState<{ [key: number]: boolean }>({});
 
- useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const index = refs.current.indexOf(entry.target as HTMLDivElement);
-          if (index !== -1) {
-            setVisible((prev) => ({ ...prev, [index]: true }));
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = refs.current.indexOf(entry.target as HTMLDivElement);
+            if (index !== -1) {
+              setVisible((prev) => ({ ...prev, [index]: true }));
+            }
           }
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
+        });
+      },
+      { threshold: 0.2 },
+    );
 
-  refs.current.forEach((ref) => {
-    if (ref) observer.observe(ref); // ✅ ignore null
-  });
+    refs.current.forEach((ref) => {
+      if (ref) observer.observe(ref); // ✅ ignore null
+    });
 
-  return () => observer.disconnect();
-}, []);
-
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="services-area mt-5">
       <div className="inner ptb-140 pt-5 pb-5">
         <div className="container">
-
- <div className="section-title">
-              <div className="row justify-content-center align-items-center g-4">
-                <div className="col-lg-7 col-md-12">
-                  <div className="left">
-                    <h2 className=""> Why Choose Bnoon?
-                    </h2>
-                  </div>
-                </div>
-                <div className="col-lg-5 col-md-12">
-                
+          <div className="section-title">
+            <div className="row justify-content-center align-items-center g-4">
+              <div className="col-lg-7 col-md-12">
+                <div className="left">
+                  <h2 className=""> Why Choose Bnoon?</h2>
                 </div>
               </div>
+              <div className="col-lg-5 col-md-12"></div>
             </div>
-          
+          </div>
 
           <div className="container-fluid px-0">
             <div className="row justify-content-center g-4">
-
               {servicesData.map((service, index) => (
                 <div
                   key={index}
                   ref={(el) => {
-  refs.current[index] = el;
-}}
-
+                    refs.current[index] = el;
+                  }}
                   className={`col-md-6 d-flex service-boxs`}
                   style={{
-
                     opacity: visible[index] ? 1 : 0,
                     transform: visible[index]
-                      ? "translateX(0)"
+                      ? 'translateX(0)'
                       : index % 2 === 0
-                      ? "translateX(-50px)"
-                      : "translateX(50px)",
-                    transition: "all 0.6s ease-out",
+                        ? 'translateX(-50px)'
+                        : 'translateX(50px)',
+                    transition: 'all 0.6s ease-out',
                   }}
                 >
-                  <div className={`service-card wrap2 ${index === 1 || index === 3 ? "left-card" : ""}`}>
+                  <div
+                    className={`service-card wrap2 ${index === 1 || index === 3 ? 'left-card' : ''}`}
+                  >
                     <div className="top">
                       <div
                         className="d-flex align-items-center mb-2 space-content"
-                        style={{  gap: "20px" }}
+                        style={{ gap: '20px' }}
                       >
                         <h3 className="mb-0">{service.title}</h3>
 
-                        <Image
-                          src={service.icon}
+                        <OptimizedImage
+                          imageName={service.imageName}
                           alt="icon"
                           width={70}
                           height={70}
@@ -127,60 +120,56 @@ function OurServices() {
                   </div>
                 </div>
               ))}
-
             </div>
           </div>
-
         </div>
       </div>
       <style jsx>{`
-      
         .service-card .top p {
-    margin-bottom: 0;
-    margin-top: 0px !important; 
-    padding: 0px 20px 0px 0px !important;
-}
-    .service-card.wrap2 {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 600px;
-}
+          margin-bottom: 0;
+          margin-top: 0px !important;
+          padding: 0px 20px 0px 0px !important;
+        }
+        .service-card.wrap2 {
+          background-color: #ffffff;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          width: 600px;
+        }
         .left-card {
-  margin-left: auto; /* jitna margin chahe */
-}
-@media (max-width: 767px) {
-    .service-card.wrap2 {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 340px;
-}
+          margin-left: auto; /* jitna margin chahe */
+        }
+        @media (max-width: 767px) {
+          .service-card.wrap2 {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 340px;
+          }
           .service-card {
-        margin: 0 6px;
-    }
-}
-    .space-content{
-    justify-content: space-between;
-    }
-    @media (max-width: 767px) {
-
-  .top h3 {
-    order: 2; /* h3 after icon */
-    margin: 0;
-  }
-  .top img {
-    order: 1; /* icon first */
-  }
-     .space-content{
-    justify-content: normal;
-    }
-    .service-boxs{
-    justify-content: center;
-    }
-}
+            margin: 0 6px;
+          }
+        }
+        .space-content {
+          justify-content: space-between;
+        }
+        @media (max-width: 767px) {
+          .top h3 {
+            order: 2; /* h3 after icon */
+            margin: 0;
+          }
+          .top img {
+            order: 1; /* icon first */
+          }
+          .space-content {
+            justify-content: normal;
+          }
+          .service-boxs {
+            justify-content: center;
+          }
+        }
       `}</style>
     </div>
   );
