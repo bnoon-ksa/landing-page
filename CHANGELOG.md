@@ -1,3 +1,9 @@
+## [1.3.42](https://github.com/bnoon-ksa/landing-page/compare/v1.3.41...v1.3.42) (2026-02-20)
+
+### Reverts
+
+* Revert "fix: CDN image fixes — tab preloading, SVG icons, blur placeholder clipping ([#111](https://github.com/bnoon-ksa/landing-page/issues/111))" ([b36ae8f](https://github.com/bnoon-ksa/landing-page/commit/b36ae8f7245f420ae3cdae979463a82bbf306fc7))
+
 ## [1.3.41](https://github.com/bnoon-ksa/landing-page/compare/v1.3.40...v1.3.41) (2026-02-20)
 
 ### Bug Fixes
