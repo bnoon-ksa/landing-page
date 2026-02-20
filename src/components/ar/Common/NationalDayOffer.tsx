@@ -83,7 +83,7 @@ const NationalDayOffer = () => {
                   </div>
 
                   <p className="dates">
-                    العرض قائم من <strong>11 فبراير وحتى 4 مارس 2026</strong>
+                    العرض قائم من <strong>12 فبراير وحتى 4 مارس 2026</strong>
                     <br />
                     بدء الدورة العلاجية قبل نهاية يوم <strong>2 أبريل 2026</strong>
                   </p>
@@ -459,4 +459,5 @@ const NationalDayOffer = () => {
 };
 
 export default NationalDayOffer;
+
 
