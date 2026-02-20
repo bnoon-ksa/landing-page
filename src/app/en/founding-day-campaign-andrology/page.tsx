@@ -14,7 +14,10 @@ export default function NationalDayOfferPage() {
       <Navbar />
 
       <div style={{ position: 'relative' }}>
-        <OptimizedPageBanner imageName="ivf-banner-en" />
+           <OptimizedPageBanner
+  imageName="ivf-banner-en"
+  bannerPosition="100% 60%"
+/>
         <div className="container">
           <div
             className="second-banner-content reveal-text text-banner"
