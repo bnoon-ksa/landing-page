@@ -2219,15 +2219,28 @@ export const IMAGE_MANIFEST: ImageManifest = {
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/bnoon-patients-rights.pdf',
   },
-   "ivf-banner-en": {
+  "ivf-banner-en": {
   src: "https://bnoon-website.b-cdn.net/images/banner/en/ivf-banner-en.jpg",
-  width: 0,
-  height: 0,
-  sizes: '',
-  alt: "IVF Banner - Bnoon",
-  blurDataURL: '',
-  category: 'misc',
+   width: 2941,
+   height: 659,
+   sizes: '100vw',
+  alt: 'Bnoon founding day campaign banner',
+  blurDataURL:
+      'data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAgCdASoUAAQAPzmEuVOvKKWisAgB4CcJYwC7ADBsAAD+5LqoYs1ZVyr7HXUwTYy62eYAAAA=',
+  category: 'campaign',
   cdnSrcSet:
       'https://bnoon-website.b-cdn.net/images/banner/en/ivf-banner-en.jpg',
 },
+ 'ivf-banner-ar': {
+    src: 'https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg',
+    width: 2941,
+    height: 659,
+    sizes: '100vw',
+    alt: 'بنون — حملة يوم التأسيس',
+    blurDataURL:
+      'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAgCdASoUAAQAPzmGuVOvKSWisAgB4CcJZQAAeyAA/uSWNQ0Wu/CdnmsNjcU0svDxIAAA',
+    category: 'campaign',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 2941w',
+  },
 };
