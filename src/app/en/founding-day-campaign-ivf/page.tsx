@@ -14,7 +14,7 @@ export default function NationalDayOfferPage() {
       <Navbar />
 
       <div style={{ position: 'relative' }}>
-        <OptimizedPageBanner imageName="static-banner-en" style={{ height: 360 }} />
+        <OptimizedPageBanner imageName="static-banner-en" bannerPosition="100% 10%" />
         <div className="container">
           <div
             className="second-banner-content reveal-text text-banner"
