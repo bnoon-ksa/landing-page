@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, useEffect, useRef } from "react";
 import { getBookNowUrl } from "@/utils/booking";
 
@@ -21,7 +22,7 @@ function HeroBannerAr() {
       extra: "",
       buttonLink: "ar/founding-day-campaign-ivf",
       buttonText: "استكشفوا المزيد",
-      objectPosition: "100% center", // ✅ LEFT shift
+      objectPosition: "100% 20%",  // ✅ LEFT shift
     },
     {
       video: "/images/banner-video/ar-banner1.mp4",
@@ -31,7 +32,7 @@ function HeroBannerAr() {
       descColor: "#004E78",
       buttonLink: "ar/founding-day-campaign-andrology",
       buttonText: "استكشفوا المزيد ",
-      objectPosition: "100% center", // ✅ LEFT shift
+      objectPosition: "100% 20%", // ✅ LEFT shift
     },
     {
       video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/2.mp4",
@@ -174,6 +175,7 @@ function HeroBannerAr() {
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              objectPosition: slide.objectPosition || "50% center",
               zIndex: -1,
               opacity: isActive ? 1 : 0,
               transition: "opacity 1s ease-in-out",
@@ -210,7 +212,7 @@ function HeroBannerAr() {
             <a
               href={slides[currentSlide].buttonLink}
               {...(slides[currentSlide].buttonLink.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="btn btn-success btn-appointment btn-banner"
+              className="btn btn-success btn-appointment explore-btn btn-banner"
             >
               {slides[currentSlide].buttonText}
             </a>
@@ -276,6 +278,10 @@ function HeroBannerAr() {
     
     font-size: 13px !important;
       }
+    .explore-btn{
+    width: 100px;
+        border-radius: 6px !important;
+    }
       }
       `}</style>
     
