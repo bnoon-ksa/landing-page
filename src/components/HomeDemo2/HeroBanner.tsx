@@ -12,30 +12,30 @@ function HeroBanner() {
 
   // ✅ Slides (video + text + buttonLink)
   const slides = [
-      {
-  video: "/images/banner-video/banner-2.mp4",
-  title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
-  desc: "<strong>*Benefit from our Founding Day Special IVF Offer </em>",
-  titleColor: "#004E78",
-  descColor: "#004E78",
-  extra: "",
-  buttonLink: "en/founding-day-campaign-ivf",
-  buttonText: "Explore Our Offer ",
-
-  descClass: "special-desc",   // 👈 ADD THIS
-},
     {
-  video: "/images/banner-video/banner-1.mp4",
-  title: "<span class='rowdies-font'>*SAUDI FOUNDING DAY OFFER </span>",
-  desc: "<strong>Andrology & Men’s Infertility Treatments</em>",
-  titleColor: "#004E78",
-  descColor: "#004E78",
-  extra: "",
-  buttonLink: "en/founding-day-campaign-andrology",
-  buttonText: "Explore Our Offer",
-
-  descClass: "special-desc",   // 👈 ADD THIS
-},
+    video: "/images/banner-video/banner-2.mp4",
+    title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
+    desc: "<strong>*Benefit from our Founding Day Special IVF Offer </em>",
+    titleColor: "#004E78",
+    descColor: "#004E78",
+    extra: "",
+    buttonLink: "en/founding-day-campaign-ivf",
+    buttonText: "Explore Our Offer ",
+    descClass: "special-desc",
+    objectPosition: "100% center", // ✅ LEFT shift
+  },
+  {
+    video: "/images/banner-video/banner-1.mp4",
+    title: "<span class='rowdies-font'>*SAUDI FOUNDING DAY OFFER </span>",
+    desc: "<strong>Andrology & Men’s Infertility Treatments</em>",
+    titleColor: "#004E78",
+    descColor: "#004E78",
+    extra: "",
+    buttonLink: "en/founding-day-campaign-andrology",
+    buttonText: "Explore Our Offer",
+    descClass: "special-desc",
+    objectPosition: "100% center", // ✅ LEFT shift
+  },
     {
   video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4",
   title: "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
@@ -170,18 +170,20 @@ function HeroBanner() {
             muted
             playsInline
             preload={isActive ? "auto" : isAdjacent ? "metadata" : "none"}
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              zIndex: -1,
-              opacity: isActive ? 1 : 0,
-              transition: "opacity 1s ease-in-out",
-              visibility: isActive || isAdjacent ? "visible" : "hidden",
-            }}
+           style={{
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  objectPosition: slide.objectPosition || "50% center", // ✅ yahan
+  zIndex: -1,
+  opacity: isActive ? 1 : 0,
+  transition: "opacity 1s ease-in-out",
+  visibility: isActive || isAdjacent ? "visible" : "hidden",
+}}
+
           >
             <source src={slide.video} type="video/mp4" />
           </video>
