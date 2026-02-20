@@ -1,3 +1,9 @@
+## [1.3.34](https://github.com/bnoon-ksa/landing-page/compare/v1.3.33...v1.3.34) (2026-02-20)
+
+### Bug Fixes
+
+* image position ([#107](https://github.com/bnoon-ksa/landing-page/issues/107)) ([19bbd9f](https://github.com/bnoon-ksa/landing-page/commit/19bbd9f83e1131d0dfb0803b594f2723cc53a9a6))
+
 ## [1.3.33](https://github.com/bnoon-ksa/landing-page/compare/v1.3.32...v1.3.33) (2026-02-20)
 
 ### Bug Fixes
