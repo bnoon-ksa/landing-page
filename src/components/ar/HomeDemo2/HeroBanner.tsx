@@ -22,7 +22,7 @@ function HeroBannerAr() {
       extra: "",
       buttonLink: "ar/founding-day-campaign-ivf",
       buttonText: "استكشفوا المزيد",
-      objectPosition: "100% 20%",  // ✅ LEFT shift
+      objectPosition: "0% 20%",  // ✅ LEFT shift
     },
     {
       video: "/images/banner-video/ar-banner1.mp4",
@@ -32,7 +32,7 @@ function HeroBannerAr() {
       descColor: "#004E78",
       buttonLink: "ar/founding-day-campaign-andrology",
       buttonText: "استكشفوا المزيد ",
-      objectPosition: "100% 20%", // ✅ LEFT shift
+      objectPosition: "0% 20%", // ✅ LEFT shift
     },
     {
       video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/2.mp4",
