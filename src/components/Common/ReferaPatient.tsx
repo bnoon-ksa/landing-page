@@ -185,12 +185,18 @@ const SAUDI_CITIES = useMemo(
         return;
       }
 
-      setShowThankYou(true);
-      setMessage(
-        <div className="alert alert-success text-start" role="alert">
-          Referral submitted successfully. Our team will contact the patient shortly.
-        </div>
-      );
+    setMessage(
+  <>
+    <strong>Thank you! Your referral has been received.</strong>
+    <br />
+    Our team will contact the patient shortly to support and facilitate the next steps in their care.
+    <br />
+    <em>We look forward to connecting soon.</em>
+  </>
+);
+setShowThankYou(true);
+scrollToMessage();
+
 
       // ✅ reset only existing fields (district/dateOfBirth removed)
       setFormData({
@@ -248,6 +254,7 @@ const SAUDI_CITIES = useMemo(
         </div>
 
         {/* FORM START */}
+        {!showThankYou && (
         <form onSubmit={handleSubmit} className="appointment-form text-start mx-auto" style={{ maxWidth: "1000px" }}>
           {/* Refer to */}
           <div className="card p-3 mb-3">
@@ -432,19 +439,17 @@ const SAUDI_CITIES = useMemo(
             </button>
           </div>
 
-          {/* Mid-form message */}
-          {message && (
-            <div ref={messageRef} className="mt-3">
-              {message}
-            </div>
-          )}
+        
 
-          {showThankYou && (
-            <div className="alert alert-success mt-3 text-start" role="alert">
-              Thank you! Your referral has been received.
-            </div>
-          )}
+        
         </form>
+    )}
+        {message && (
+  <div ref={messageRef} className="form-message">
+    {message}
+  </div>
+)}
+
         {/* FORM END */}
       </div>
         <style jsx>{`
