@@ -12,6 +12,28 @@ function HeroBannerAr() {
 
   // ✅ Slides (video + text + buttonLink)
   const slides = [
+   {
+      video: "/images/banner-video/banner4.mp4",
+    title: 'حلمكم ما هو بعيد ',
+
+      desc: "استفيدوا من عرض يوم التأسيس الخاص <br>بالحقن المجهري* في بنون ",
+      titleColor: "#004E78",
+      descColor: "#004E78",
+      extra: "",
+      buttonLink: "ar/founding-day-campaign-ivf",
+      buttonText: "استكشفوا المزيد",
+      objectPosition: "100% center", // ✅ LEFT shift
+    },
+    {
+      video: "/images/banner-video/ar-banner1.mp4",
+      title: "عرض يوم التأسيس* ",
+      desc: " خدمات وإجراءات أمراض الذكورة والعقم لدى الرجال  ",
+       titleColor: "#004E78",
+      descColor: "#004E78",
+      buttonLink: "ar/founding-day-campaign-andrology",
+      buttonText: "استكشفوا المزيد ",
+      objectPosition: "100% center", // ✅ LEFT shift
+    },
     {
       video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/2.mp4",
     title: '<span class="font-program">برنامج</span> وعد بنون',
