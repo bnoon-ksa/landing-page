@@ -14,7 +14,7 @@ export default function NationalDayOfferPage() {
       <Navbar />
 
       <div style={{ position: 'relative' }}>
-        <OptimizedPageBanner imageName="static-banner-en" style={{ height: 360 }} />
+        <OptimizedPageBanner imageName="ivf-banner-en" />
         <div className="container">
           <div
             className="second-banner-content reveal-text text-banner"
@@ -28,7 +28,7 @@ export default function NationalDayOfferPage() {
           >
             <h1 style={{ color: '#004E78' }}>
               <span className="rowdies-font text-size">
-                FOUNDING DAY OFFER IN ANDROLOGY & MALE INFERTILITY SERVICES
+                FOUNDING DAY OFFER IN <br/>ANDROLOGY & MALE <br/>INFERTILITY SERVICES
               </span>
             </h1>
           </div>
