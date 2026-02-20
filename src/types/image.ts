@@ -1,10 +1,8 @@
 /**
  * Image optimization pipeline types.
  *
- * These interfaces are shared between:
- *   - src/config/image.config.ts  (catalog definition)
- *   - scripts/optimize-images.ts  (build script)
- *   - src/lib/image-manifest.ts   (auto-generated output)
+ * Used by:
+ *   - src/lib/image-manifest.ts   (static manifest)
  *   - src/components/ui/OptimizedImage.tsx (runtime consumer)
  */
 
