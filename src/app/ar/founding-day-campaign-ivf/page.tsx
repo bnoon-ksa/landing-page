@@ -12,7 +12,7 @@ export default function FoundingDayDiscountPage() {
     <>
       <Navbar />
       <div style={{ position: 'relative' }}>
-        <OptimizedPageBanner imageName="static-banner-ar" style={{ height: 360 }} />
+        <OptimizedPageBanner imageName="static-banner-ar" bannerPosition="0% 10%" />
         <div className="container">
           <div
             className="second-banner-content reveal-text text-banner"
