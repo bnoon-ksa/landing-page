@@ -15,26 +15,26 @@ function HeroBanner() {
     {
     video: "/images/banner-video/banner-2.mp4",
     title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
-    desc: "<strong>*Benefit from our Founding Day Special IVF Offer </em>",
+    desc: "*Benefit from our Founding Day Special IVF Offer ",
     titleColor: "#004E78",
     descColor: "#004E78",
     extra: "",
     buttonLink: "en/founding-day-campaign-ivf",
     buttonText: "Explore Our Offer ",
     descClass: "special-desc",
-    objectPosition: "100% center", // ✅ LEFT shift
+    objectPosition: "100% 20%", // ✅ LEFT shift
   },
   {
     video: "/images/banner-video/banner-1.mp4",
     title: "<span class='rowdies-font'>*SAUDI FOUNDING DAY OFFER </span>",
-    desc: "<strong>Andrology & Men’s Infertility Treatments</em>",
+    desc: "Andrology & Men’s Infertility Treatments",
     titleColor: "#004E78",
     descColor: "#004E78",
     extra: "",
     buttonLink: "en/founding-day-campaign-andrology",
     buttonText: "Explore Our Offer",
     descClass: "special-desc",
-    objectPosition: "100% center", // ✅ LEFT shift
+    objectPosition: "100% 20%", // ✅ LEFT shift
   },
     {
   video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4",
@@ -193,7 +193,7 @@ function HeroBanner() {
       {/* 🔹 Text Content */}
       <div className="container">
         <div
-          className={`second-banner-content ${
+          className={`second-banner-content campagin-banner ${
             animate ? "reveal-text" : "hidden-text"
           }`}
         >
@@ -277,10 +277,12 @@ function HeroBanner() {
   }
     @media (max-width: 767px) {
     .explore-appointment {
-       
         width: 100px;
-        
+        border-radius: 6px;
     }
+      .campagin-banner{
+        width: 60%;
+        }
 }
       `}</style>
     </div>
