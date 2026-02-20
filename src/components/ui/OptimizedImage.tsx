@@ -88,8 +88,16 @@ export default function OptimizedImage({
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
+          backgroundOrigin: 'content-box',
+          backgroundClip: 'content-box',
         }
       : {};
+
+    const responsiveStyle: React.CSSProperties = {
+      display: 'block',
+      width: '100%',
+      height: 'auto',
+    };
 
     return (
       // eslint-disable-next-line @next/next/no-img-element
@@ -103,7 +111,7 @@ export default function OptimizedImage({
         loading={priority ? undefined : (loading ?? 'lazy')}
         decoding="async"
         className={className as string}
-        style={{ ...blurStyle, ...styleProp }}
+        style={{ ...responsiveStyle, ...blurStyle, ...styleProp }}
         data-testid="cdn-img"
         {...rest}
       />
