@@ -13,7 +13,7 @@ function HeroBanner() {
   // ✅ Slides (video + text + buttonLink)
   const slides = [
     {
-      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4',
+      video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner1.mp4',
       title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
       desc: '*Benefit from our Founding Day Special IVF Offer ',
       titleColor: '#004E78',
@@ -25,7 +25,7 @@ function HeroBanner() {
       objectPosition: '100% 20%',
     },
     {
-      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-1.mp4',
+      video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner2.mp4',
       title: "<span class='rowdies-font'>*SAUDI FOUNDING DAY OFFER </span>",
       desc: "Andrology & Men's Infertility Treatments",
       titleColor: '#004E78',
@@ -37,27 +37,25 @@ function HeroBanner() {
       objectPosition: '100% 20%',
     },
     {
-      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4',
-      title:
-        "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
+      video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner3.mp4',
+      title: "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
       desc: '<strong>Get Pregnant or Your Money Back:</strong><br><em>Peace of Mind. Less Stress</em>',
       titleColor: '#004E78',
       descColor: '#004E78',
       extra: '*Terms & Conditions Apply',
       buttonLink: 'en/waad-bnoon-program',
       buttonText: 'Read More',
-
       descClass: 'special-desc',
     },
     {
-      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-3.mp4',
+      video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner4.mp4',
       title: 'THE FUTURE OF<br>FERTILITY IS HERE',
       desc: 'Now in Riyadh, Jeddah and Al Ahsa',
       buttonLink: getBookNowUrl('en'),
       buttonText: 'Book Now',
     },
     {
-      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-4.mp4',
+      video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner5.mp4',
       title: 'TURNING DREAMS INTO <br>NEW BEGINNINGS ',
       desc: 'Hope begins with Bnoon',
       titleColor: '#004E78',
@@ -66,7 +64,7 @@ function HeroBanner() {
       buttonText: 'Book Now',
     },
     {
-      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-5.mp4',
+      video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner6.mp4',
       title: 'OVER 5,000 FAMILIES <br>HELPED ANNUALLY',
       desc: 'Compassionate care to achieve <br>their dream of parenthood ',
       titleColor: '#004E78',
@@ -75,14 +73,14 @@ function HeroBanner() {
       buttonText: 'Book Now',
     },
     {
-      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-6.mp4',
+      video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner7.mp4',
       title: 'THE NEXT-GENERATION <br>OF FERTILITY CARE',
       desc: 'Now in Saudi Arabia',
       buttonLink: getBookNowUrl('en'),
       buttonText: 'Book Now',
     },
     {
-      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-7.mp4',
+      video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner8.mp4',
       title: 'START YOUR PARENTHOOD <br>JOURNEY WITH BNOON',
       desc: 'Book your appointment today',
       titleColor: '#004E78',

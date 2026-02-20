@@ -1,3 +1,15 @@
+## [1.3.27](https://github.com/bnoon-ksa/landing-page/compare/v1.3.26...v1.3.27) (2026-02-20)
+
+### Bug Fixes
+
+* update cdn images ([#99](https://github.com/bnoon-ksa/landing-page/issues/99)) ([4bec116](https://github.com/bnoon-ksa/landing-page/commit/4bec11613633408bb4a8d2037781a2eb647ff0ad))
+
+## [1.3.26](https://github.com/bnoon-ksa/landing-page/compare/v1.3.25...v1.3.26) (2026-02-20)
+
+### Bug Fixes
+
+* update page ([#97](https://github.com/bnoon-ksa/landing-page/issues/97)) ([7d62cec](https://github.com/bnoon-ksa/landing-page/commit/7d62cecf7e7823346da88b34641b97b83109dfbb))
+
 ## [1.3.25](https://github.com/bnoon-ksa/landing-page/compare/v1.3.24...v1.3.25) (2026-02-20)
 
 ### Bug Fixes
