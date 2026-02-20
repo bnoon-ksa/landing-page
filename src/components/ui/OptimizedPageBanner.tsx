@@ -2,6 +2,8 @@ import Image, { type ImageProps } from 'next/image';
 import { IMAGE_MANIFEST } from '@/lib/image-manifest';
 
 interface OptimizedPageBannerProps {
+
+  readonly bannerPosition?: string;
   /**
    * Key from the image manifest (e.g. "aboutus-banner", "clinics-banner").
    */
@@ -37,6 +39,7 @@ export default function OptimizedPageBanner({
   style,
   children,
   imageProps,
+  bannerPosition,
 }: OptimizedPageBannerProps) {
   const entry = IMAGE_MANIFEST[imageName];
 
@@ -53,11 +56,11 @@ export default function OptimizedPageBanner({
   if (entry.cdnSrcSet) {
     const blurBg: React.CSSProperties = entry.blurDataURL
       ? {
-          backgroundImage: `url(${entry.blurDataURL})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-        }
+        backgroundImage: `url(${entry.blurDataURL})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+      }
       : {};
 
     return (
@@ -79,6 +82,7 @@ export default function OptimizedPageBanner({
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            objectPosition: bannerPosition ?? 'center',
             ...blurBg,
           }}
           data-testid="cdn-banner-img"
@@ -103,7 +107,10 @@ export default function OptimizedPageBanner({
         alt={resolvedAlt}
         fill
         sizes={entry.sizes}
-        style={{ objectFit: 'cover' }}
+        style={{
+          objectFit: 'cover',
+          objectPosition: bannerPosition ?? 'center',
+        }}
         priority
         {...blurProps}
         {...imageProps}
