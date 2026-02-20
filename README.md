@@ -46,26 +46,26 @@ Bilingual (Arabic/English) marketing and appointment-booking website for **Bnoon
 
 ## Tech Stack
 
-| Layer | Technology | Version |
-|:------|:-----------|:--------|
-| Framework | Next.js (App Router) | 14.2.x |
-| Language | TypeScript (strict) | 5.9.x |
-| Runtime | Node.js | 20.x |
-| UI | React + Bootstrap 5 + react-bootstrap | 18.3.x |
-| Animation | Framer Motion | 12.x |
-| Carousel | Swiper | 11.x |
-| Icons | React Icons, Remixicon, Bootstrap Icons | - |
-| PDF Viewer | react-pdf + pdfjs-dist | 10.x / 5.x |
-| Image Processing | Sharp | 0.34.x |
-| Email | Nodemailer | 7.x |
-| Database | MongoDB via Mongoose | 8.x |
-| Spam Protection | reCAPTCHA v2 | - |
-| Unit Tests | Vitest + Testing Library | 4.x |
-| E2E Tests | Playwright | 1.58.x |
-| Linting | ESLint (next/core-web-vitals) | 8.x |
-| Hosting | Azure App Service (Linux) | - |
-| CI/CD | GitHub Actions | - |
-| Versioning | Semantic Release | 24.x |
+| Layer            | Technology                              | Version    |
+| :--------------- | :-------------------------------------- | :--------- |
+| Framework        | Next.js (App Router)                    | 14.2.x     |
+| Language         | TypeScript (strict)                     | 5.9.x      |
+| Runtime          | Node.js                                 | 20.x       |
+| UI               | React + Bootstrap 5 + react-bootstrap   | 18.3.x     |
+| Animation        | Framer Motion                           | 12.x       |
+| Carousel         | Swiper                                  | 11.x       |
+| Icons            | React Icons, Remixicon, Bootstrap Icons | -          |
+| PDF Viewer       | react-pdf + pdfjs-dist                  | 10.x / 5.x |
+| Image Processing | Sharp                                   | 0.34.x     |
+| Email            | Nodemailer                              | 7.x        |
+| Database         | MongoDB via Mongoose                    | 8.x        |
+| Spam Protection  | reCAPTCHA v2                            | -          |
+| Unit Tests       | Vitest + Testing Library                | 4.x        |
+| E2E Tests        | Playwright                              | 1.58.x     |
+| Linting          | ESLint (next/core-web-vitals)           | 8.x        |
+| Hosting          | Azure App Service (Linux)               | -          |
+| CI/CD            | GitHub Actions                          | -          |
+| Versioning       | Semantic Release                        | 24.x       |
 
 ---
 
@@ -178,17 +178,17 @@ The production server uses a custom `server.js` (Node.js HTTP server wrapping Ne
 
 ## Scripts
 
-| Script | Command | Description |
-|:-------|:--------|:------------|
-| `dev` | `next dev` | Start development server with hot reload |
-| `build` | `next build` | Create production build |
-| `start` | `node server.js` | Start production server |
-| `lint` | `next lint` | Run ESLint with `next/core-web-vitals` ruleset |
-| `typecheck` | `tsc --noEmit` | TypeScript type checking without output |
-| `test` | `vitest run` | Run unit tests once |
-| `test:watch` | `vitest` | Run unit tests in watch mode |
-| `test:coverage` | `vitest run --coverage` | Run unit tests with coverage report |
-| `test:e2e` | `playwright test` | Run Playwright E2E tests |
+| Script          | Command                 | Description                                    |
+| :-------------- | :---------------------- | :--------------------------------------------- |
+| `dev`           | `next dev`              | Start development server with hot reload       |
+| `build`         | `next build`            | Create production build                        |
+| `start`         | `node server.js`        | Start production server                        |
+| `lint`          | `next lint`             | Run ESLint with `next/core-web-vitals` ruleset |
+| `typecheck`     | `tsc --noEmit`          | TypeScript type checking without output        |
+| `test`          | `vitest run`            | Run unit tests once                            |
+| `test:watch`    | `vitest`                | Run unit tests in watch mode                   |
+| `test:coverage` | `vitest run --coverage` | Run unit tests with coverage report            |
+| `test:e2e`      | `playwright test`       | Run Playwright E2E tests                       |
 
 ---
 
@@ -208,17 +208,17 @@ We use [Conventional Commits](https://www.conventionalcommits.org/) -- a standar
 
 **Types and what they do:**
 
-| Type | When to Use | Triggers Release? | Example |
-|:-----|:------------|:------------------|:--------|
-| `feat` | Adding a new feature or page | Yes (minor: 1.**x**.0) | `feat: add clinic locations page` |
-| `fix` | Fixing a bug | Yes (patch: 1.0.**x**) | `fix: contact form validation error` |
-| `perf` | Performance improvement | Yes (patch) | `perf: optimize hero banner loading` |
-| `refactor` | Restructuring code without changing behavior | Yes (patch) | `refactor: consolidate header components` |
-| `docs` | Documentation only | No | `docs: update README with pipeline docs` |
-| `test` | Adding or updating tests | No | `test: add E2E tests for booking flow` |
-| `ci` | CI/CD pipeline changes | No | `ci: parallelize quality gate jobs` |
-| `chore` | Maintenance tasks | No | `chore: update dependencies` |
-| `style` | Code formatting (no logic change) | No | `style: fix indentation in header` |
+| Type       | When to Use                                  | Triggers Release?      | Example                                   |
+| :--------- | :------------------------------------------- | :--------------------- | :---------------------------------------- |
+| `feat`     | Adding a new feature or page                 | Yes (minor: 1.**x**.0) | `feat: add clinic locations page`         |
+| `fix`      | Fixing a bug                                 | Yes (patch: 1.0.**x**) | `fix: contact form validation error`      |
+| `perf`     | Performance improvement                      | Yes (patch)            | `perf: optimize hero banner loading`      |
+| `refactor` | Restructuring code without changing behavior | Yes (patch)            | `refactor: consolidate header components` |
+| `docs`     | Documentation only                           | No                     | `docs: update README with pipeline docs`  |
+| `test`     | Adding or updating tests                     | No                     | `test: add E2E tests for booking flow`    |
+| `ci`       | CI/CD pipeline changes                       | No                     | `ci: parallelize quality gate jobs`       |
+| `chore`    | Maintenance tasks                            | No                     | `chore: update dependencies`              |
+| `style`    | Code formatting (no logic change)            | No                     | `style: fix indentation in header`        |
 
 **Breaking changes** (major version bump) use `!` after the type:
 
@@ -267,11 +267,11 @@ Here is the step-by-step flow for making changes:
 
 When merging a PR, GitHub gives you three options. **Always choose "Squash and merge"**:
 
-| Merge Method | What It Does | Use? |
-|:-------------|:-------------|:-----|
-| **Squash and merge** | Combines all your branch commits into a single commit on `main` | **Yes -- always** |
-| Create a merge commit | Adds a merge commit + keeps all branch commits | No |
-| Rebase and merge | Replays each branch commit onto `main` | No |
+| Merge Method          | What It Does                                                    | Use?              |
+| :-------------------- | :-------------------------------------------------------------- | :---------------- |
+| **Squash and merge**  | Combines all your branch commits into a single commit on `main` | **Yes -- always** |
+| Create a merge commit | Adds a merge commit + keeps all branch commits                  | No                |
+| Rebase and merge      | Replays each branch commit onto `main`                          | No                |
 
 **Why squash?**
 
@@ -353,16 +353,17 @@ One build artifact flows through staging first, then to production with a manual
 
 All static images are stored in `public/images/` and served by Next.js directly.
 
-| Stat | Value |
-|:-----|:------|
-| Total files | 275 |
-| Total size | ~13 MB |
-| Formats | 118 JPG, 55 SVG, 51 PNG, 50 AVIF, 1 PDF |
-| Subdirectories | 17 |
+| Stat           | Value                                   |
+| :------------- | :-------------------------------------- |
+| Total files    | 275                                     |
+| Total size     | ~13 MB                                  |
+| Formats        | 118 JPG, 55 SVG, 51 PNG, 50 AVIF, 1 PDF |
+| Subdirectories | 17                                      |
 
 **Why local and not on a CDN?**
 
 Images were briefly migrated to Azure Blob Storage but reverted because:
+
 - The blob storage account is in a different Azure region than the app, introducing latency
 - The 13 MB total size is small enough to bundle with the app
 - Next.js `<Image>` component already optimizes and caches images on the server
@@ -370,6 +371,7 @@ Images were briefly migrated to Azure Blob Storage but reverted because:
 **Image component usage:**
 
 All images use the Next.js `<Image>` component (`next/image`) instead of raw HTML `<img>` tags. This was a project-wide refactoring that:
+
 - Converted 71 component files from `<img>` to `<Image>`
 - Added explicit `width` and `height` attributes to prevent layout shift (CLS)
 - Enabled automatic format negotiation (AVIF > WebP > JPEG/PNG)
@@ -378,13 +380,13 @@ All images use the Next.js `<Image>` component (`next/image`) instead of raw HTM
 
 Videos are hosted on Azure Blob Storage because they are too large to bundle:
 
-| Setting | Value |
-|:--------|:------|
-| Storage account | `bnoonsa` |
-| Container | `website` |
-| Path | `videos/` |
-| CDN URL | `https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/` |
-| Direct URL | `https://bnoonsa.blob.core.windows.net/website/videos/` |
+| Setting         | Value                                                              |
+| :-------------- | :----------------------------------------------------------------- |
+| Storage account | `bnoonsa`                                                          |
+| Container       | `website`                                                          |
+| Path            | `videos/`                                                          |
+| CDN URL         | `https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/` |
+| Direct URL      | `https://bnoonsa.blob.core.windows.net/website/videos/`            |
 
 Videos are served via Azure Front Door Standard (CDN) for edge caching and lower latency. Components reference the CDN URL.
 
@@ -420,12 +422,12 @@ Fonts are self-hosted to ensure reliable builds and eliminate external network d
 
 **Plus Jakarta Sans** -- loaded via `next/font/local` from `src/fonts/`:
 
-| File | Size | Unicode Range |
-|:-----|:-----|:--------------|
-| `plus-jakarta-sans-latin.woff2` | 27 KB | Basic Latin |
-| `plus-jakarta-sans-latin-1.woff2` | 22 KB | Latin-1 Supplement |
-| `plus-jakarta-sans-latin-ext.woff2` | 8 KB | Latin Extended |
-| `plus-jakarta-sans-vietnamese.woff2` | 2 KB | Vietnamese |
+| File                                 | Size  | Unicode Range      |
+| :----------------------------------- | :---- | :----------------- |
+| `plus-jakarta-sans-latin.woff2`      | 27 KB | Basic Latin        |
+| `plus-jakarta-sans-latin-1.woff2`    | 22 KB | Latin-1 Supplement |
+| `plus-jakarta-sans-latin-ext.woff2`  | 8 KB  | Latin Extended     |
+| `plus-jakarta-sans-vietnamese.woff2` | 2 KB  | Vietnamese         |
 
 Applied via CSS variable `--font-plus-jakarta-sans` with `display: swap`.
 
@@ -433,21 +435,21 @@ Applied via CSS variable `--font-plus-jakarta-sans` with `display: swap`.
 
 **Cairo** -- loaded via `next/font/local` from `src/fonts/`:
 
-| File | Size | Unicode Range |
-|:-----|:-----|:--------------|
-| `cairo-arabic.woff2` | 30 KB | Arabic |
-| `cairo-latin.woff2` | 33 KB | Latin |
+| File                 | Size  | Unicode Range |
+| :------------------- | :---- | :------------ |
+| `cairo-arabic.woff2` | 30 KB | Arabic        |
+| `cairo-latin.woff2`  | 33 KB | Latin         |
 
 Applied via CSS variable `--font-cairo` with `display: swap`.
 
 **Alexandria** -- loaded via self-hosted `@font-face` in `src/fonts/alexandria.css`:
 
-| File | Size | Unicode Range |
-|:-----|:-----|:--------------|
+| File                          | Size    | Unicode Range       |
+| :---------------------------- | :------ | :------------------ |
 | `alexandria-arabic-400.woff2` | 12.5 KB | Arabic (weight 400) |
 | `alexandria-arabic-700.woff2` | 13.2 KB | Arabic (weight 700) |
-| `alexandria-latin-400.woff2` | 12.8 KB | Latin (weight 400) |
-| `alexandria-latin-700.woff2` | 13.2 KB | Latin (weight 700) |
+| `alexandria-latin-400.woff2`  | 12.8 KB | Latin (weight 400)  |
+| `alexandria-latin-700.woff2`  | 13.2 KB | Latin (weight 700)  |
 
 Applied via `font-family: "Alexandria"` in CSS with `display: swap`.
 
@@ -463,13 +465,14 @@ Doctor "Book Appointment" buttons route to branch-specific pages on `book.bnoon.
 
 The routing logic lives in `src/utils/booking.ts`:
 
-| Doctor Location | Clinic Code | Service ID |
-|:----------------|:------------|:-----------|
-| Riyadh | `riyadh-granada` | `2245` |
-| Jeddah | `jeddah` | `1439` |
-| Al Ahsa | `al-ahsa` | `2406` |
+| Doctor Location | Clinic Code      | Service ID |
+| :-------------- | :--------------- | :--------- |
+| Riyadh          | `riyadh-granada` | `2245`     |
+| Jeddah          | `jeddah`         | `1439`     |
+| Al Ahsa         | `al-ahsa`        | `2406`     |
 
 Each location maps to a pre-filled URL on `book.bnoon.sa` that selects:
+
 - The correct clinic branch
 - The "General Fertility Consultation" service
 - The correct language (AR/EN)
@@ -477,6 +480,7 @@ Each location maps to a pre-filled URL on `book.bnoon.sa` that selects:
 If a doctor's location is unknown, the button links to the generic booking homepage (`https://book.bnoon.sa`).
 
 **Components using this utility:**
+
 - `src/components/Common/OurDoctors.tsx` (EN)
 - `src/components/Common/OurExperts.tsx` (EN)
 - `src/components/ar/Common/OurDoctors.tsx` (AR)
@@ -486,11 +490,11 @@ If a doctor's location is unknown, the button links to the generic booking homep
 
 ## API Routes
 
-| Endpoint | Method | Purpose |
-|:---------|:-------|:--------|
-| `/api/health` | GET | Health check for deployment verification |
-| `/api/subscribe` | POST | English newsletter subscription (reCAPTCHA protected) |
-| `/api/subscribe-ar` | POST | Arabic newsletter subscription (reCAPTCHA protected) |
+| Endpoint            | Method | Purpose                                               |
+| :------------------ | :----- | :---------------------------------------------------- |
+| `/api/health`       | GET    | Health check for deployment verification              |
+| `/api/subscribe`    | POST   | English newsletter subscription (reCAPTCHA protected) |
+| `/api/subscribe-ar` | POST   | Arabic newsletter subscription (reCAPTCHA protected)  |
 
 ### Health Check Response
 
@@ -527,29 +531,29 @@ npm run test:e2e        # Run E2E tests
 
 **Test suites (7 specs):**
 
-| Suite | File | What it tests |
-|:------|:-----|:--------------|
-| Health | `health.spec.ts` | `/api/health` endpoint response |
-| Navigation | `navigation.spec.ts` | Page routing, locale switching, redirects |
-| Footer/Navbar | `footer-navbar.spec.ts` | Header and footer rendering, links |
-| Forms | `forms.spec.ts` | Contact/subscription form submission |
-| SEO | `seo.spec.ts` | Meta tags, Open Graph, structured data |
-| Performance | `performance.spec.ts` | Core Web Vitals thresholds |
-| Error Handling | `error-handling.spec.ts` | 404 pages, error boundaries |
+| Suite          | File                     | What it tests                             |
+| :------------- | :----------------------- | :---------------------------------------- |
+| Health         | `health.spec.ts`         | `/api/health` endpoint response           |
+| Navigation     | `navigation.spec.ts`     | Page routing, locale switching, redirects |
+| Footer/Navbar  | `footer-navbar.spec.ts`  | Header and footer rendering, links        |
+| Forms          | `forms.spec.ts`          | Contact/subscription form submission      |
+| SEO            | `seo.spec.ts`            | Meta tags, Open Graph, structured data    |
+| Performance    | `performance.spec.ts`    | Core Web Vitals thresholds                |
+| Error Handling | `error-handling.spec.ts` | 404 pages, error boundaries               |
 
 **Playwright configuration (`playwright.config.ts`):**
 
-| Setting | Local | CI / Production |
-|:--------|:------|:----------------|
-| Base URL | `http://localhost:3099` | `E2E_BASE_URL` env var |
-| Workers | Auto (CPU cores) | 4 parallel |
-| Retries | 0 | 2 |
-| Test timeout | 30s | 60s |
-| Navigation timeout | 15s | 45s |
-| Action timeout | 10s | 30s |
-| Browser | Chromium | Chromium |
-| Trace | On first retry | On first retry |
-| Screenshots | On failure | On failure |
+| Setting            | Local                   | CI / Production        |
+| :----------------- | :---------------------- | :--------------------- |
+| Base URL           | `http://localhost:3099` | `E2E_BASE_URL` env var |
+| Workers            | Auto (CPU cores)        | 4 parallel             |
+| Retries            | 0                       | 2                      |
+| Test timeout       | 30s                     | 60s                    |
+| Navigation timeout | 15s                     | 45s                    |
+| Action timeout     | 10s                     | 30s                    |
+| Browser            | Chromium                | Chromium               |
+| Trace              | On first retry          | On first retry         |
+| Screenshots        | On failure              | On failure             |
 
 **Local vs CI behavior:**
 
@@ -602,15 +606,15 @@ tests  audit       |          tests  audit       |
 
 **Jobs:**
 
-| Job | Depends On | Runs | Purpose |
-|:----|:-----------|:-----|:--------|
-| `setup` | - | `npm ci` | Install dependencies, populate cache |
-| `lint` | setup | `npm run lint` | ESLint validation |
-| `typecheck` | setup | `npm run typecheck` | TypeScript type checking |
-| `unit-tests` | setup | `npm test` | Vitest unit tests |
-| `security-audit` | setup | `npm audit --audit-level=critical` | Dependency vulnerability scan (non-blocking) |
-| `build` | setup | `npm run build` | Next.js production build, packages and uploads `.next` artifact |
-| `e2e-tests` | all of the above | `npx playwright test` | Downloads build artifact, runs Playwright against local server |
+| Job              | Depends On       | Runs                               | Purpose                                                         |
+| :--------------- | :--------------- | :--------------------------------- | :-------------------------------------------------------------- |
+| `setup`          | -                | `npm ci`                           | Install dependencies, populate cache                            |
+| `lint`           | setup            | `npm run lint`                     | ESLint validation                                               |
+| `typecheck`      | setup            | `npm run typecheck`                | TypeScript type checking                                        |
+| `unit-tests`     | setup            | `npm test`                         | Vitest unit tests                                               |
+| `security-audit` | setup            | `npm audit --audit-level=critical` | Dependency vulnerability scan (non-blocking)                    |
+| `build`          | setup            | `npm run build`                    | Next.js production build, packages and uploads `.next` artifact |
+| `e2e-tests`      | all of the above | `npx playwright test`              | Downloads build artifact, runs Playwright against local server  |
 
 **Key features:**
 
@@ -630,18 +634,18 @@ tests  audit       |          tests  audit       |
 
 **Jobs:**
 
-| Job | Depends On | Purpose |
-|:----|:-----------|:--------|
-| `setup` | - | Install dependencies, populate cache |
-| `lint` | setup | ESLint validation |
-| `typecheck` | setup | TypeScript type checking |
-| `unit-tests` | setup | Vitest unit tests |
-| `security-audit` | setup | Dependency vulnerability scan (non-blocking) |
-| `build` | setup | Build, prune dev deps, create `release.zip` |
-| `semantic-release` | build + all quality gates | Version bump, changelog, git tag, GitHub release |
-| `deploy` | build + semantic-release | Deploy `release.zip` to Azure (requires `production` env approval) |
-| `verify` | deploy | Poll `/api/health` for 3 consecutive healthy responses |
-| `regression-tests` | verify | Full Playwright E2E suite against live production URL |
+| Job                | Depends On                | Purpose                                                            |
+| :----------------- | :------------------------ | :----------------------------------------------------------------- |
+| `setup`            | -                         | Install dependencies, populate cache                               |
+| `lint`             | setup                     | ESLint validation                                                  |
+| `typecheck`        | setup                     | TypeScript type checking                                           |
+| `unit-tests`       | setup                     | Vitest unit tests                                                  |
+| `security-audit`   | setup                     | Dependency vulnerability scan (non-blocking)                       |
+| `build`            | setup                     | Build, prune dev deps, create `release.zip`                        |
+| `semantic-release` | build + all quality gates | Version bump, changelog, git tag, GitHub release                   |
+| `deploy`           | build + semantic-release  | Deploy `release.zip` to Azure (requires `production` env approval) |
+| `verify`           | deploy                    | Poll `/api/health` for 3 consecutive healthy responses             |
+| `regression-tests` | verify                    | Full Playwright E2E suite against live production URL              |
 
 **Build & Package Process:**
 
@@ -664,6 +668,7 @@ zip -r release.zip             # Single deployable archive
 **Health Check Verification:**
 
 After deployment, the `verify` job polls `https://bnoon.sa/api/health`:
+
 - Maximum 30 attempts, 10 seconds apart (up to 5 minutes)
 - Requires 3 **consecutive** `{"status": "healthy"}` responses
 - Non-consecutive healthy responses reset the counter
@@ -680,10 +685,10 @@ After verification, Playwright runs the full E2E suite against the live producti
 
 **Inputs:**
 
-| Input | Required | Description |
-|:------|:---------|:------------|
-| `target_version` | No | Git tag to rollback to (e.g., `v1.2.3`). Defaults to previous version |
-| `rollback_reason` | Yes | Reason for rollback (audit trail) |
+| Input             | Required | Description                                                           |
+| :---------------- | :------- | :-------------------------------------------------------------------- |
+| `target_version`  | No       | Git tag to rollback to (e.g., `v1.2.3`). Defaults to previous version |
+| `rollback_reason` | Yes      | Reason for rollback (audit trail)                                     |
 
 **How it works:**
 
@@ -701,14 +706,15 @@ After verification, Playwright runs the full E2E suite against the live producti
 
 The pipelines use multiple caching layers to minimize build times:
 
-| Cache | Key Strategy | What's Cached | Typical Savings |
-|:------|:-------------|:--------------|:----------------|
-| **node_modules** | `node-modules-{OS}-{hash(package-lock.json)}` | All npm dependencies | ~30s install |
-| **Next.js build** | `nextjs-cache-{OS}-{hash(package-lock.json)}-{hash(src/**/*)}` | `.next/cache/` (webpack, ISR, image opt.) | ~20-40s build |
-| **Playwright browsers** | `playwright-{OS}-{playwright-version}` | `~/.cache/ms-playwright/` (~200 MB) | ~15-20s download |
-| **Build artifact** (PR) | Uploaded/downloaded between jobs | `.next/` directory (tarball) | ~60s (avoids rebuild) |
+| Cache                   | Key Strategy                                                   | What's Cached                             | Typical Savings       |
+| :---------------------- | :------------------------------------------------------------- | :---------------------------------------- | :-------------------- |
+| **node_modules**        | `node-modules-{OS}-{hash(package-lock.json)}`                  | All npm dependencies                      | ~30s install          |
+| **Next.js build**       | `nextjs-cache-{OS}-{hash(package-lock.json)}-{hash(src/**/*)}` | `.next/cache/` (webpack, ISR, image opt.) | ~20-40s build         |
+| **Playwright browsers** | `playwright-{OS}-{playwright-version}`                         | `~/.cache/ms-playwright/` (~200 MB)       | ~15-20s download      |
+| **Build artifact** (PR) | Uploaded/downloaded between jobs                               | `.next/` directory (tarball)              | ~60s (avoids rebuild) |
 
 **Cache invalidation:**
+
 - `node_modules` busts when `package-lock.json` changes
 - Next.js build cache busts when source files change, with cascading fallback keys
 - Playwright cache busts when the Playwright package version changes
@@ -731,13 +737,13 @@ It follows [Semantic Versioning](https://semver.org/) (SemVer): `MAJOR.MINOR.PAT
 
 ### How versions are determined
 
-| Commit Prefix | Release Type | Version Example |
-|:--------------|:-------------|:----------------|
-| `feat:` | Minor | 1.0.6 → 1.**1**.0 |
-| `fix:` | Patch | 1.0.6 → 1.0.**7** |
-| `perf:` | Patch | 1.0.6 → 1.0.**7** |
-| `refactor:` | Patch | 1.0.6 → 1.0.**7** |
-| `feat!:` or `BREAKING CHANGE:` | Major | 1.0.6 → **2**.0.0 |
+| Commit Prefix                               | Release Type   | Version Example   |
+| :------------------------------------------ | :------------- | :---------------- |
+| `feat:`                                     | Minor          | 1.0.6 → 1.**1**.0 |
+| `fix:`                                      | Patch          | 1.0.6 → 1.0.**7** |
+| `perf:`                                     | Patch          | 1.0.6 → 1.0.**7** |
+| `refactor:`                                 | Patch          | 1.0.6 → 1.0.**7** |
+| `feat!:` or `BREAKING CHANGE:`              | Major          | 1.0.6 → **2**.0.0 |
 | `chore:`, `style:`, `test:`, `docs:`, `ci:` | **No release** | Version unchanged |
 
 > **Important:** If all commits since the last release are `ci:`, `docs:`, `test:`, etc., **no new version is created and no deployment happens**. The pipeline completes but skips the deploy step.
@@ -772,32 +778,32 @@ This project spans **two Azure subscriptions**. Understanding the layout helps w
 
 ### Landing Page — "Azure subscription 1"
 
-| Resource | Type | Resource Group | Location | SKU |
-|:---------|:-----|:---------------|:---------|:----|
-| `bnoon-sa` | Web App | `rg-bnoon-prod-uaen` | UAE North | - |
-| `asp-bnoon-prod-uaen` | App Service Plan | `rg-bnoon-prod-uaen` | UAE North | S1 Standard |
-| `bnoonsa` | Storage Account | `rg-bnoon-prod-uaen` | UAE North | Standard_LRS |
-| `bnoonsa-cdn` | Front Door (CDN) | `rg-bnoon-prod-uaen` | Global | Standard |
+| Resource              | Type             | Resource Group       | Location  | SKU          |
+| :-------------------- | :--------------- | :------------------- | :-------- | :----------- |
+| `bnoon-sa`            | Web App          | `rg-bnoon-prod-uaen` | UAE North | -            |
+| `asp-bnoon-prod-uaen` | App Service Plan | `rg-bnoon-prod-uaen` | UAE North | S1 Standard  |
+| `bnoonsa`             | Storage Account  | `rg-bnoon-prod-uaen` | UAE North | Standard_LRS |
+| `bnoonsa-cdn`         | Front Door (CDN) | `rg-bnoon-prod-uaen` | Global    | Standard     |
 
 **Web App configuration:**
 
-| Setting | Value |
-|:--------|:------|
-| App Service | `bnoon-sa` |
+| Setting          | Value                                       |
+| :--------------- | :------------------------------------------ |
+| App Service      | `bnoon-sa`                                  |
 | App Service Plan | `asp-bnoon-prod-uaen` (S1 Standard, 1 site) |
-| Platform | Azure App Service (Linux) |
-| Runtime | `NODE\|20-lts` |
-| Always On | Yes |
-| HTTPS Only | Yes |
-| Custom Domains | `bnoon.sa`, `www.bnoon.sa` |
-| SSL | Azure Managed Certificates (auto-renew) |
-| Entry point | `server.js` (custom Node.js HTTP server) |
-| Deploy method | ZIP deploy via `azure/webapps-deploy@v3` |
+| Platform         | Azure App Service (Linux)                   |
+| Runtime          | `NODE\|20-lts`                              |
+| Always On        | Yes                                         |
+| HTTPS Only       | Yes                                         |
+| Custom Domains   | `bnoon.sa`, `www.bnoon.sa`                  |
+| SSL              | Azure Managed Certificates (auto-renew)     |
+| Entry point      | `server.js` (custom Node.js HTTP server)    |
+| Deploy method    | ZIP deploy via `azure/webapps-deploy@v3`    |
 
 **Blob Storage (`bnoonsa` storage account):**
 
-| Container | Public Access | Purpose |
-|:----------|:-------------|:--------|
+| Container | Public Access            | Purpose                                      |
+| :-------- | :----------------------- | :------------------------------------------- |
 | `website` | Public (container-level) | Videos at `website/videos/`, uploaded assets |
 
 > **Important:** Images are served locally from `public/images/`, NOT from blob storage. Only **videos** are served via the CDN at `https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/`. The CDN (Azure Front Door Standard) caches content at edge PoPs globally. The origin storage account is in **UAE North**, same region as the web app.
@@ -806,18 +812,18 @@ This project spans **two Azure subscriptions**. Understanding the layout helps w
 
 The booking app, API, and admin console run on a separate subscription and shared App Service Plan:
 
-| App | Custom Domain | Runtime | Always On | Plan |
-|:----|:-------------|:--------|:----------|:-----|
-| `bnoon-telehealth` | `book.bnoon.sa` | `DOCKER\|bnoon.azurecr.io/telehealth:1.5.2` | No | `bnoon-telehealth-plan` |
-| `bnoon-api` | `api.bnoon.sa` | `DOCKER\|bnoon.azurecr.io/api:1.6.0` | Yes | `bnoon-telehealth-plan` |
-| `bnoon-console` | `console.bnoon.sa` | `DOCKER\|bnoon.azurecr.io/console:1.5.3` | Yes | `bnoon-telehealth-plan` |
+| App                | Custom Domain      | Runtime                                     | Always On | Plan                    |
+| :----------------- | :----------------- | :------------------------------------------ | :-------- | :---------------------- |
+| `bnoon-telehealth` | `book.bnoon.sa`    | `DOCKER\|bnoon.azurecr.io/telehealth:1.5.2` | No        | `bnoon-telehealth-plan` |
+| `bnoon-api`        | `api.bnoon.sa`     | `DOCKER\|bnoon.azurecr.io/api:1.6.0`        | Yes       | `bnoon-telehealth-plan` |
+| `bnoon-console`    | `console.bnoon.sa` | `DOCKER\|bnoon.azurecr.io/console:1.5.3`    | Yes       | `bnoon-telehealth-plan` |
 
-| Resource | Details |
-|:---------|:--------|
-| Plan | `bnoon-telehealth-plan` (S1 Standard, 3 sites) |
-| Resource Group | `bnoon-telehealth-rg` |
-| Location | **UAE North** |
-| Container Registry | `bnoon.azurecr.io` |
+| Resource           | Details                                        |
+| :----------------- | :--------------------------------------------- |
+| Plan               | `bnoon-telehealth-plan` (S1 Standard, 3 sites) |
+| Resource Group     | `bnoon-telehealth-rg`                          |
+| Location           | **UAE North**                                  |
+| Container Registry | `bnoon.azurecr.io`                             |
 
 The landing page links to `book.bnoon.sa` for appointment booking via the [booking URL utility](#booking-url-routing).
 
@@ -830,6 +836,7 @@ The `release.zip` archive is deployed using Azure's ZIP deploy API via the `azur
 ### Environment approval
 
 Both `deploy` and `execute-rollback` jobs reference the `production` GitHub environment, which can be configured with:
+
 - **Required reviewers** -- manual approval before deploy
 - **Wait timer** -- delay before auto-approval
 - **Branch protection** -- restrict which branches can deploy
@@ -842,27 +849,27 @@ Configure at: **GitHub repo > Settings > Environments > production**
 
 ### GitHub Actions Secrets
 
-| Secret | Used In | Purpose |
-|:-------|:--------|:--------|
-| `AZURE_PUBLISH_PROFILE` | deploy, rollback | Azure App Service publish profile XML |
-| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | build | reCAPTCHA v2 site key (embedded in client bundle at build time) |
-| `GITHUB_TOKEN` | semantic-release | Auto-provided by GitHub for creating releases and tags |
+| Secret                           | Used In          | Purpose                                                         |
+| :------------------------------- | :--------------- | :-------------------------------------------------------------- |
+| `AZURE_PUBLISH_PROFILE`          | deploy, rollback | Azure App Service publish profile XML                           |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | build            | reCAPTCHA v2 site key (embedded in client bundle at build time) |
+| `GITHUB_TOKEN`                   | semantic-release | Auto-provided by GitHub for creating releases and tags          |
 
 ### Azure App Service Configuration
 
-| Variable | Purpose |
-|:---------|:--------|
-| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA site key for client-side form protection |
-| `RECAPTCHA_SECRET_KEY` | reCAPTCHA secret key for server-side token verification |
-| `PORT` | Automatically set by Azure App Service |
+| Variable                         | Purpose                                                 |
+| :------------------------------- | :------------------------------------------------------ |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA site key for client-side form protection      |
+| `RECAPTCHA_SECRET_KEY`           | reCAPTCHA secret key for server-side token verification |
+| `PORT`                           | Automatically set by Azure App Service                  |
 
 ### Global CI Environment Variables
 
-| Variable | Value | Purpose |
-|:---------|:------|:--------|
-| `NEXT_TELEMETRY_DISABLED` | `1` | Disable Next.js anonymous telemetry in CI |
-| `AZURE_WEBAPP_NAME` | `bnoon-sa` | Azure App Service name |
-| `SITE_URL` | `https://bnoon.sa` | Production URL for health checks and regression tests |
+| Variable                  | Value              | Purpose                                               |
+| :------------------------ | :----------------- | :---------------------------------------------------- |
+| `NEXT_TELEMETRY_DISABLED` | `1`                | Disable Next.js anonymous telemetry in CI             |
+| `AZURE_WEBAPP_NAME`       | `bnoon-sa`         | Azure App Service name                                |
+| `SITE_URL`                | `https://bnoon.sa` | Production URL for health checks and regression tests |
 
 ---
 
@@ -876,11 +883,11 @@ The project enforces code quality through:
 
 **Key refactoring completed:**
 
-| Area | What Changed | Impact |
-|:-----|:-------------|:-------|
-| `<img>` → `<Image>` | 71 component files converted to `next/image` | Better performance (AVIF/WebP, lazy loading, CLS prevention) |
-| Booking URLs | Hardcoded URLs replaced with `getBookingUrl()` utility | Centralized, branch-specific routing |
-| Font loading | English fonts self-hosted from Google Fonts CDN | Reliable CI builds, no network dependency |
+| Area                | What Changed                                           | Impact                                                       |
+| :------------------ | :----------------------------------------------------- | :----------------------------------------------------------- |
+| `<img>` → `<Image>` | 71 component files converted to `next/image`           | Better performance (AVIF/WebP, lazy loading, CLS prevention) |
+| Booking URLs        | Hardcoded URLs replaced with `getBookingUrl()` utility | Centralized, branch-specific routing                         |
+| Font loading        | English fonts self-hosted from Google Fonts CDN        | Reliable CI builds, no network dependency                    |
 
 ---
 
@@ -901,6 +908,7 @@ The `.next` directory contains thousands of small files. The pipeline compresses
 ### Deployment verification fails (health check)
 
 The verify job requires 3 **consecutive** healthy responses from `/api/health`. Common causes:
+
 - Azure App Service is still restarting (cold start can take 30-60s)
 - The `version` field in the health response doesn't match expectations
 - Container startup failed -- check Azure App Service logs
@@ -911,10 +919,10 @@ If your commits only use `ci:`, `docs:`, `test:`, `chore:`, or `style:` prefixes
 
 ### Git remotes
 
-| Remote | URL | Purpose |
-|:-------|:----|:--------|
-| `github` | `github.com/bnoon-ksa/landing-page` | Primary (CI/CD pipelines run here) |
-| `azure` | `dev.azure.com/ovasave-production/bnoon/_git/landing-page` | Azure DevOps mirror |
+| Remote   | URL                                                        | Purpose                            |
+| :------- | :--------------------------------------------------------- | :--------------------------------- |
+| `github` | `github.com/bnoon-ksa/landing-page`                        | Primary (CI/CD pipelines run here) |
+| `azure`  | `dev.azure.com/ovasave-production/bnoon/_git/landing-page` | Azure DevOps mirror                |
 
 ### Routing
 

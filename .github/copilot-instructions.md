@@ -214,7 +214,7 @@ Review every changed file against these dimensions in priority order. Spend prop
 
 Produce your review as a list of comments:
 
-```
+````
 ### [severity]: Brief title
 
 **File:** `path/to/file.tsx` (lines X-Y)
@@ -225,7 +225,8 @@ Produce your review as a list of comments:
 **Suggested fix:**
 ```tsx
 // concrete code suggestion
-```
+````
+
 ```
 
 ### Severity Levels
@@ -252,11 +253,15 @@ Produce your review as a list of comments:
 End with:
 
 ```
+
 ---
+
 ## Summary
+
 **Comments:** X total (N critical, N warning, N suggestion, N nit)
 **Verdict:** Approve / Request Changes / Approve with suggestions
 **Overall:** [1-2 sentence summary]
+
 ```
 
 ---
@@ -271,3 +276,4 @@ End with:
 - Style issues a linter/formatter catches (indentation, semicolons, trailing commas).
 - Suggestions to add comments to self-explanatory code.
 - Pre-existing code not touched by the PR.
+```

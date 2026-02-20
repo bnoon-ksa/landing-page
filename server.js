@@ -1,10 +1,10 @@
-const { createServer } = require("http");
-const { parse } = require("url");
-const next = require("next");
-const compression = require("compression");
+const { createServer } = require('http');
+const { parse } = require('url');
+const next = require('next');
+const compression = require('compression');
 
 const port = process.env.PORT || 3000;
-const path = require("path");
+const path = require('path');
 const app = next({
   dev: false,
   dir: path.join(__dirname),
@@ -21,6 +21,6 @@ app.prepare().then(() => {
     });
   }).listen(port, (err) => {
     if (err) throw err;
-    console.log("> Server running on port " + port);
+    console.log('> Server running on port ' + port);
   });
 });

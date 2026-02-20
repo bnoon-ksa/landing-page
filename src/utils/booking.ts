@@ -3,10 +3,8 @@
  * Always returns the internal appointment form path.
  * Runtime redirect to book.bnoon.sa is handled by middleware.ts.
  */
-export function getBookNowUrl(locale: "en" | "ar" = "en"): string {
-  return locale === "ar"
-    ? "/ar/request-an-appoinment"
-    : "/en/request-an-appoinment";
+export function getBookNowUrl(locale: 'en' | 'ar' = 'en'): string {
+  return locale === 'ar' ? '/ar/request-an-appoinment' : '/en/request-an-appoinment';
 }
 
 /**
@@ -15,14 +13,8 @@ export function getBookNowUrl(locale: "en" | "ar" = "en"): string {
  * is provided, it's added as a `?location=` query param so the middleware
  * can redirect to the location-specific book.bnoon.sa URL at runtime.
  */
-export function getBookingUrl(
-  location: string | undefined,
-  locale: "en" | "ar" = "en"
-): string {
-  const base =
-    locale === "ar"
-      ? "/ar/request-an-appoinment"
-      : "/en/request-an-appoinment";
+export function getBookingUrl(location: string | undefined, locale: 'en' | 'ar' = 'en'): string {
+  const base = locale === 'ar' ? '/ar/request-an-appoinment' : '/en/request-an-appoinment';
 
   const trimmed = location?.trim();
   if (trimmed) {

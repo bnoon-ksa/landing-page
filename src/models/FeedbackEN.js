@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const FeedbackENSchema = new mongoose.Schema(
   {
@@ -12,10 +12,9 @@ const FeedbackENSchema = new mongoose.Schema(
     feedbackDetails: { type: String, required: true },
     consent: { type: Boolean, required: true },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
-const FeedbackEN =
-  mongoose.models.FeedbackEN || mongoose.model("FeedbackEN", FeedbackENSchema);
+const FeedbackEN = mongoose.models.FeedbackEN || mongoose.model('FeedbackEN', FeedbackENSchema);
 
 export default FeedbackEN;

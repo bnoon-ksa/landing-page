@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const AppointmentENSchema = new mongoose.Schema(
   {
@@ -18,8 +18,9 @@ const AppointmentENSchema = new mongoose.Schema(
     preferredTime: String,
     howHeard: String,
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
-const AppointmentEN = mongoose.models.AppointmentEN || mongoose.model("AppointmentEN", AppointmentENSchema);
+const AppointmentEN =
+  mongoose.models.AppointmentEN || mongoose.model('AppointmentEN', AppointmentENSchema);
 export default AppointmentEN;

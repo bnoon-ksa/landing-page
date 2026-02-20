@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 /**
  * Location-specific booking URLs per locale.
@@ -8,32 +8,31 @@ import type { NextRequest } from "next/server";
  */
 const BOOKING_URLS_EN: Record<string, string> = {
   Riyadh:
-    "https://book.bnoon.sa/en/doctors?selectedClinicLocation=riyadh-granada&selectedService=2245&selectedServiceCode=API002",
+    'https://book.bnoon.sa/en/doctors?selectedClinicLocation=riyadh-granada&selectedService=2245&selectedServiceCode=API002',
   Jeddah:
-    "https://book.bnoon.sa/en/doctors?selectedClinicLocation=jeddah&selectedService=1439&selectedServiceCode=API002",
-  "Al Ahsa":
-    "https://book.bnoon.sa/en/doctors?selectedClinicLocation=al-ahsa&selectedService=2406&selectedServiceCode=API002",
+    'https://book.bnoon.sa/en/doctors?selectedClinicLocation=jeddah&selectedService=1439&selectedServiceCode=API002',
+  'Al Ahsa':
+    'https://book.bnoon.sa/en/doctors?selectedClinicLocation=al-ahsa&selectedService=2406&selectedServiceCode=API002',
 };
 
 const BOOKING_URLS_AR: Record<string, string> = {
-  "الرياض":
-    "https://book.bnoon.sa/ar/doctors?selectedClinicLocation=riyadh-granada&selectedService=2245&selectedServiceCode=API002",
-  "جدة":
-    "https://book.bnoon.sa/ar/doctors?selectedClinicLocation=jeddah&selectedService=1439&selectedServiceCode=API002",
-  "الأحساء":
-    "https://book.bnoon.sa/ar/doctors?selectedClinicLocation=al-ahsa&selectedService=2406&selectedServiceCode=API002",
+  الرياض:
+    'https://book.bnoon.sa/ar/doctors?selectedClinicLocation=riyadh-granada&selectedService=2245&selectedServiceCode=API002',
+  جدة: 'https://book.bnoon.sa/ar/doctors?selectedClinicLocation=jeddah&selectedService=1439&selectedServiceCode=API002',
+  الأحساء:
+    'https://book.bnoon.sa/ar/doctors?selectedClinicLocation=al-ahsa&selectedService=2406&selectedServiceCode=API002',
 };
 
 /** Generic fallback URLs per locale (no location match). */
 const GENERIC_REDIRECT: Record<string, string> = {
-  "/en/request-an-appoinment": "https://book.bnoon.sa",
-  "/ar/request-an-appoinment": "https://book.bnoon.sa/ar",
+  '/en/request-an-appoinment': 'https://book.bnoon.sa',
+  '/ar/request-an-appoinment': 'https://book.bnoon.sa/ar',
 };
 
 /** Maps pathname to the location-specific URL lookup table. */
 const LOCALE_URLS: Record<string, Record<string, string>> = {
-  "/en/request-an-appoinment": BOOKING_URLS_EN,
-  "/ar/request-an-appoinment": BOOKING_URLS_AR,
+  '/en/request-an-appoinment': BOOKING_URLS_EN,
+  '/ar/request-an-appoinment': BOOKING_URLS_AR,
 };
 
 /**
@@ -48,12 +47,12 @@ const LOCALE_URLS: Record<string, Record<string, string>> = {
  * Toggle from Azure App Settings without a rebuild — just restart.
  */
 export function middleware(request: NextRequest): NextResponse {
-  if (process.env.USE_NEW_BOOKING_APP !== "true") {
+  if (process.env.USE_NEW_BOOKING_APP !== 'true') {
     return NextResponse.next();
   }
 
   const { pathname, searchParams } = request.nextUrl;
-  const location = searchParams.get("location");
+  const location = searchParams.get('location');
 
   // Try location-specific URL first
   if (location) {
@@ -74,5 +73,5 @@ export function middleware(request: NextRequest): NextResponse {
 }
 
 export const config = {
-  matcher: ["/en/request-an-appoinment", "/ar/request-an-appoinment"],
+  matcher: ['/en/request-an-appoinment', '/ar/request-an-appoinment'],
 };

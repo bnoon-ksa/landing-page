@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const FeedbackARSchema = new mongoose.Schema(
   {
@@ -12,11 +12,10 @@ const FeedbackARSchema = new mongoose.Schema(
     تفاصيل_الملاحظة: String,
     الموافقة: Boolean,
   },
-  { 
+  {
     timestamps: true,
-    strict: true  // VERY IMPORTANT
-  }
+    strict: true, // VERY IMPORTANT
+  },
 );
 
-
-export default mongoose.models.FeedbackAR || mongoose.model("FeedbackAR", FeedbackARSchema);
+export default mongoose.models.FeedbackAR || mongoose.model('FeedbackAR', FeedbackARSchema);
