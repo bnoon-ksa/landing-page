@@ -88,6 +88,8 @@ export default function OptimizedImage({
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
+          backgroundOrigin: 'content-box',
+          backgroundClip: 'content-box',
         }
       : {};
 
