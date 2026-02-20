@@ -194,6 +194,9 @@ const OurDoctors = () => {
                   <OptimizedImage
                     imageName={doctor.imageName}
                     alt={doctor.name}
+                    width={340}
+                    height={340}
+                    loading="lazy"
                     style={{ borderRadius: 10, width: '100%', height: 'auto' }}
                   />
                   <div className="image-overlay">

@@ -17,10 +17,10 @@ const NationalDayOffer = () => {
     <div className="founding-offer-page">
       <section className="offer-section">
         <div className="container">
-          {/* ✅ CARD */}
+          {/* CARD */}
           <div className="offer-card">
             <div className="row g-0 align-items-stretch">
-              {/* ✅ IMAGE (Desktop left, Mobile bottom) */}
+              {/* IMAGE (Desktop left, Mobile bottom) */}
               <div className="col-lg-6 col-md-6 order-2 order-lg-1">
                 <div className="left-img-wrap">
                   <div className="img-shadow-box">
@@ -35,7 +35,7 @@ const NationalDayOffer = () => {
                 </div>
               </div>
 
-              {/* ✅ CONTENT (Desktop right, Mobile top) */}
+              {/* CONTENT (Desktop right, Mobile top) */}
               <div className="col-lg-6 col-md-6 order-1 order-lg-2">
                 <div className="right-content">
                   <div className="offer-heading-block">
@@ -49,30 +49,30 @@ const NationalDayOffer = () => {
                   </div>
 
                   <p className="offer-desc">
-                    On the occasion of Saudi Founding Day, we’re pleased to offer{' '}
+                    On the occasion of Saudi Founding Day, we&apos;re pleased to offer{' '}
                     <strong>15% OFF*</strong> on IVF/ICSI Cycles at Bnoon.
                   </p>
 
-                  {/* ✅ Includes box */}
+                  {/* Includes box */}
                   <div className="info-box">
                     <div className="info-head">Includes:</div>
                     <ul className="list-unstyled m-0">
                       {includesList.map((item, index) => (
                         <li key={index} className="info-item">
-                          <span className="icon ok">✓</span>
+                          <span className="icon ok">&#10003;</span>
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  {/* ✅ Excludes row */}
+                  {/* Excludes row */}
                   <div className="excludes">
                     <div className="info-head mb-2">Excludes:</div>
                     <div className="ex-row">
                       {excludesList.map((item, index) => (
                         <div key={index} className="ex-item">
-                          <span className="icon no">✕</span>
+                          <span className="icon no">&#10005;</span>
                           <span>{item}</span>
                         </div>
                       ))}
@@ -80,7 +80,7 @@ const NationalDayOffer = () => {
                   </div>
 
                   <p className="dates">
-                    The offer is valid from <strong>February 11 to March 4, 2026</strong>.
+                    The offer is valid from <strong>February 12 to March 4, 2026</strong>.
                     <br />
                     Last day to start treatment is <strong>April 2, 2026.</strong>
                   </p>
@@ -96,7 +96,7 @@ const NationalDayOffer = () => {
                   <span className="terms">
                     *Terms &amp; conditions apply. This offer is not valid with other offers
                   </span>
-                  {/* ✅ Phones */}
+                  {/* Phones */}
                   <div className="phones">
                     <div className="phone-col">
                       <div className="phone-item">
@@ -159,7 +159,7 @@ const NationalDayOffer = () => {
           overflow: hidden;
         }
 
-        /* ✅ IMAGE WRAP (same as Arabic design) */
+        /* IMAGE WRAP (same as Arabic design) */
         .left-img-wrap {
           padding: 38px;
           display: flex;
@@ -185,7 +185,7 @@ const NationalDayOffer = () => {
           object-fit: cover;
         }
 
-        /* ✅ CONTENT */
+        /* CONTENT */
         .right-content {
           padding: 28px 28px 22px;
           height: 100%;
@@ -366,7 +366,7 @@ const NationalDayOffer = () => {
           height: 4px;
         }
 
-        /* ✅ Mobile */
+        /* Mobile */
         @media (max-width: 767px) {
           .left-img-wrap {
             padding: 0px 16px 50px 40px;
@@ -424,7 +424,7 @@ const NationalDayOffer = () => {
           }
         }
 
-        /* ✅ iPad Mini / iPad */
+        /* iPad Mini / iPad */
         @media (min-width: 768px) and (max-width: 1024px) {
           .offer-title {
             font-size: 22px;

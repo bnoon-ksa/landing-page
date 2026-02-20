@@ -14,6 +14,30 @@ function HeroBanner() {
   const slides = [
     {
       video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4',
+      title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
+      desc: '*Benefit from our Founding Day Special IVF Offer ',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      extra: '',
+      buttonLink: 'en/founding-day-campaign-ivf',
+      buttonText: 'Explore Our Offer ',
+      descClass: 'special-desc',
+      objectPosition: '100% 20%',
+    },
+    {
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-1.mp4',
+      title: "<span class='rowdies-font'>*SAUDI FOUNDING DAY OFFER </span>",
+      desc: "Andrology & Men's Infertility Treatments",
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      extra: '',
+      buttonLink: 'en/founding-day-campaign-andrology',
+      buttonText: 'Explore Our Offer',
+      descClass: 'special-desc',
+      objectPosition: '100% 20%',
+    },
+    {
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-2.mp4',
       title:
         "<span class='rowdies-font'>WA'AD BNOON</span> <span class='oregano-font'>PROGRAM</span>",
       desc: '<strong>Get Pregnant or Your Money Back:</strong><br><em>Peace of Mind. Less Stress</em>',
@@ -23,7 +47,7 @@ function HeroBanner() {
       buttonLink: 'en/waad-bnoon-program',
       buttonText: 'Read More',
 
-      descClass: 'special-desc', // 👈 ADD THIS
+      descClass: 'special-desc',
     },
     {
       video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner-3.mp4',
@@ -159,6 +183,7 @@ function HeroBanner() {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
+              objectPosition: slide.objectPosition || '50% center',
               zIndex: -1,
               opacity: isActive ? 1 : 0,
               transition: 'opacity 1s ease-in-out',
@@ -172,7 +197,11 @@ function HeroBanner() {
 
       {/* 🔹 Text Content */}
       <div className="container">
-        <div className={`second-banner-content ${animate ? 'reveal-text' : 'hidden-text'}`}>
+        <div
+          className={`second-banner-content campagin-banner ${
+            animate ? 'reveal-text' : 'hidden-text'
+          }`}
+        >
           <h1
             style={{ color: slides[currentSlide].titleColor || '#fff' }}
             dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
@@ -190,7 +219,7 @@ function HeroBanner() {
               {...(slides[currentSlide].buttonLink.startsWith('http')
                 ? { target: '_blank', rel: 'noopener noreferrer' }
                 : {})}
-              className="btn btn-success btn-appointment btn-banner"
+              className="btn btn-success btn-appointment explore-appointment btn-banner"
             >
               {slides[currentSlide].buttonText}
             </a>
@@ -246,10 +275,19 @@ function HeroBanner() {
           transform: translateX(0);
           transition: all 1.5s ease;
         }
-        /* 👉 Custom style ONLY for Slide 1 Desc */
+        /* Custom style ONLY for Slide 1 Desc */
         .special-desc {
           margin-top: 18px;
           line-height: 1.7;
+        }
+        @media (max-width: 767px) {
+          .explore-appointment {
+            width: 100px;
+            border-radius: 6px;
+          }
+          .campagin-banner {
+            width: 60%;
+          }
         }
       `}</style>
     </div>

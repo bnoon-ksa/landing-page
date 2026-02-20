@@ -28,8 +28,8 @@ export default function NationalDayOfferPage() {
           >
             <h1 style={{ color: '#004E78' }}>
               <span className="rowdies-font text-size">
-                FOUNDING DAY OFFER ON
-                <br /> IVF/ICSI CYCLES
+                FOUNDING DAY OFFER <br />
+                ON IVF/ICSI CYCLES
               </span>
             </h1>
           </div>

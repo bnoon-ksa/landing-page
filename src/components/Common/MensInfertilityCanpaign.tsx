@@ -17,10 +17,10 @@ const NationalDayOffer = () => {
     <div className="founding-offer-page">
       <section className="offer-section">
         <div className="container">
-          {/* ✅ CARD */}
+          {/* CARD */}
           <div className="offer-card">
             <div className="row g-0 align-items-stretch">
-              {/* ✅ IMAGE (Desktop left, Mobile bottom) */}
+              {/* IMAGE (Desktop left, Mobile bottom) */}
               <div className="col-lg-6 col-md-6 order-2 order-lg-1 mb-3">
                 <div className="left-img-wrap">
                   <div className="img-shadow-box ">
@@ -35,13 +35,13 @@ const NationalDayOffer = () => {
                 </div>
               </div>
 
-              {/* ✅ CONTENT (Desktop right, Mobile top) */}
+              {/* CONTENT (Desktop right, Mobile top) */}
               <div className="col-lg-6 col-md-6 order-1 order-lg-2">
                 <div className="right-content">
                   <div className="offer-heading-block">
                     <h2 className="offer-title">
                       <span className="offer-strong">
-                        Discount on Andrology & Men’s Infertility Treatments{' '}
+                        Discount on Andrology & Men&apos;s Infertility Treatments{' '}
                       </span>
                     </h2>
 
@@ -51,12 +51,13 @@ const NationalDayOffer = () => {
                   </div>
 
                   <p className="offer-desc">
-                    Celebrating Saudi Founding Day, we’re pleased to offer <strong>20% OFF*</strong>{' '}
-                    on Andrology & Men’s Infertility Treatments at Bnoon in Jeddah and Riyadh,{' '}
+                    Celebrating Saudi Founding Day, we&apos;re pleased to offer{' '}
+                    <strong>20% OFF*</strong> on Andrology & Men&apos;s Infertility Treatments at
+                    Bnoon in Jeddah and Riyadh,{' '}
                   </p>
 
                   <p className="dates">
-                    The offer is valid from <strong> February 11 to March 2, 2026</strong>.
+                    The offer is valid from <strong> February 12 to March 2, 2026</strong>.
                     <br />
                     The offer is not applicable on consultations.
                   </p>
@@ -73,7 +74,7 @@ const NationalDayOffer = () => {
                     </span>
                   </div>
 
-                  {/* ✅ Phones */}
+                  {/* Phones */}
                   <div className="phones">
                     <div className="phone-col">
                       <div className="phone-item">
@@ -122,7 +123,7 @@ const NationalDayOffer = () => {
           overflow: hidden;
         }
 
-        /* ✅ IMAGE WRAP (same as Arabic design) */
+        /* IMAGE WRAP (same as Arabic design) */
         .left-img-wrap {
           display: flex;
           align-items: center;
@@ -147,7 +148,7 @@ const NationalDayOffer = () => {
           object-fit: cover;
         }
 
-        /* ✅ CONTENT */
+        /* CONTENT */
         .right-content {
           padding: 78px 28px 22px;
           height: 100%;
@@ -328,7 +329,7 @@ const NationalDayOffer = () => {
           height: 4px;
         }
 
-        /* ✅ Mobile */
+        /* Mobile */
         @media (max-width: 767px) {
           .left-img-wrap {
             padding: 18px 16px 50px 40px;
@@ -373,7 +374,7 @@ const NationalDayOffer = () => {
           }
         }
 
-        /* ✅ iPad Mini / iPad */
+        /* iPad Mini / iPad */
         @media (min-width: 768px) and (max-width: 1024px) {
           .offer-title {
             font-size: 22px;

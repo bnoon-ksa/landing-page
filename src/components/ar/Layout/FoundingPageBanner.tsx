@@ -25,7 +25,7 @@ export default function FoundingDayBanner({ bgImage }: Props) {
         }
            .text-size{
               font-size: 44px !important;
-             
+
           }
         @media (max-width: 768px) {
           .founding-banner-area {
@@ -33,11 +33,13 @@ export default function FoundingDayBanner({ bgImage }: Props) {
             background-position: 0% center;
           }
              .text-size{
-              font-size: 18px !important;
-              
+                font-size: 13px !important;
+        line-height: 16px;
+        font-weight: 700;
+
           }
                 .text-banner{
-              
+
               }
         }
       `}</style>

@@ -1,3 +1,100 @@
+## [1.3.25](https://github.com/bnoon-ksa/landing-page/compare/v1.3.24...v1.3.25) (2026-02-20)
+
+### Bug Fixes
+
+- update page ([#96](https://github.com/bnoon-ksa/landing-page/issues/96)) ([a7fc3f8](https://github.com/bnoon-ksa/landing-page/commit/a7fc3f857fe1bb6a23fa3ec8f333b80126582a8e))
+
+## [1.3.24](https://github.com/bnoon-ksa/landing-page/compare/v1.3.23...v1.3.24) (2026-02-20)
+
+### Bug Fixes
+
+- update banner text ([#94](https://github.com/bnoon-ksa/landing-page/issues/94)) ([e8485ed](https://github.com/bnoon-ksa/landing-page/commit/e8485ed77add22c6d7c2b7f5971dace3d0341f8e))
+
+## [1.3.23](https://github.com/bnoon-ksa/landing-page/compare/v1.3.22...v1.3.23) (2026-02-20)
+
+### Bug Fixes
+
+- update banner text ([#93](https://github.com/bnoon-ksa/landing-page/issues/93)) ([7f4be85](https://github.com/bnoon-ksa/landing-page/commit/7f4be8544b34a0ca3effc85de4891d185dd369ad))
+
+## [1.3.22](https://github.com/bnoon-ksa/landing-page/compare/v1.3.21...v1.3.22) (2026-02-20)
+
+### Bug Fixes
+
+- update banner text ([#92](https://github.com/bnoon-ksa/landing-page/issues/92)) ([ee2d02b](https://github.com/bnoon-ksa/landing-page/commit/ee2d02bbff40c953c6fb5937ce41564d7b47aa6d))
+
+## [1.3.21](https://github.com/bnoon-ksa/landing-page/compare/v1.3.20...v1.3.21) (2026-02-20)
+
+### Bug Fixes
+
+- update banner video ([#91](https://github.com/bnoon-ksa/landing-page/issues/91)) ([124eaf9](https://github.com/bnoon-ksa/landing-page/commit/124eaf98776d632e3dcb7eab635606f13001c004))
+
+## [1.3.20](https://github.com/bnoon-ksa/landing-page/compare/v1.3.19...v1.3.20) (2026-02-20)
+
+### Bug Fixes
+
+- update banner text ([#89](https://github.com/bnoon-ksa/landing-page/issues/89)) ([6e807bf](https://github.com/bnoon-ksa/landing-page/commit/6e807bf6c6e551f7664132f0da9e77312749c85f))
+- update banner video ([#90](https://github.com/bnoon-ksa/landing-page/issues/90)) ([c3de535](https://github.com/bnoon-ksa/landing-page/commit/c3de535293d8efc5ebcaf40273289de259345924))
+
+## [1.3.19](https://github.com/bnoon-ksa/landing-page/compare/v1.3.18...v1.3.19) (2026-02-20)
+
+### Bug Fixes
+
+- update text ([#88](https://github.com/bnoon-ksa/landing-page/issues/88)) ([bf58b97](https://github.com/bnoon-ksa/landing-page/commit/bf58b9773de9611e1dd8ef9f41fe40332bd1f719))
+
+## [1.3.18](https://github.com/bnoon-ksa/landing-page/compare/v1.3.17...v1.3.18) (2026-02-20)
+
+### Bug Fixes
+
+- update incorrect banner text ([#87](https://github.com/bnoon-ksa/landing-page/issues/87)) ([29d8d0a](https://github.com/bnoon-ksa/landing-page/commit/29d8d0a4db69d892e966c20999327c85ef1a25c3))
+
+## [1.3.17](https://github.com/bnoon-ksa/landing-page/compare/v1.3.16...v1.3.17) (2026-02-20)
+
+### Bug Fixes
+
+- update banner text ([#86](https://github.com/bnoon-ksa/landing-page/issues/86)) ([52887e6](https://github.com/bnoon-ksa/landing-page/commit/52887e6d0328bc971b0e31f7daef1e13b9f8c236))
+
+## [1.3.16](https://github.com/bnoon-ksa/landing-page/compare/v1.3.15...v1.3.16) (2026-02-20)
+
+### Bug Fixes
+
+- update incorrect text ([#85](https://github.com/bnoon-ksa/landing-page/issues/85)) ([0f0224c](https://github.com/bnoon-ksa/landing-page/commit/0f0224c637c070eb43afe00204d4ea74296e000e))
+
+## [1.3.15](https://github.com/bnoon-ksa/landing-page/compare/v1.3.14...v1.3.15) (2026-02-20)
+
+### Bug Fixes
+
+- update incorrect text ([#84](https://github.com/bnoon-ksa/landing-page/issues/84)) ([a027ffa](https://github.com/bnoon-ksa/landing-page/commit/a027ffaf5e22d8e27342d44896d6536308215410))
+
+## [1.3.14](https://github.com/bnoon-ksa/landing-page/compare/v1.3.13...v1.3.14) (2026-02-20)
+
+### Bug Fixes
+
+- update incorrect text ([#83](https://github.com/bnoon-ksa/landing-page/issues/83)) ([67ec9a5](https://github.com/bnoon-ksa/landing-page/commit/67ec9a56016b6e0f91424a17e54bd8723f1d77e8))
+
+## [1.3.13](https://github.com/bnoon-ksa/landing-page/compare/v1.3.12...v1.3.13) (2026-02-20)
+
+### Bug Fixes
+
+- update incorrect text ([#82](https://github.com/bnoon-ksa/landing-page/issues/82)) ([e1716a7](https://github.com/bnoon-ksa/landing-page/commit/e1716a7b445e2589f3fe5eed2f418d89e2a7db00))
+
+## [1.3.12](https://github.com/bnoon-ksa/landing-page/compare/v1.3.11...v1.3.12) (2026-02-20)
+
+### Bug Fixes
+
+- banner text ([#81](https://github.com/bnoon-ksa/landing-page/issues/81)) ([1c4732f](https://github.com/bnoon-ksa/landing-page/commit/1c4732f8eef6b0bc0872a015d1c84074ee3cd06d))
+
+## [1.3.11](https://github.com/bnoon-ksa/landing-page/compare/v1.3.10...v1.3.11) (2026-02-20)
+
+### Bug Fixes
+
+- banner text ([#80](https://github.com/bnoon-ksa/landing-page/issues/80)) ([dcbb09b](https://github.com/bnoon-ksa/landing-page/commit/dcbb09bcbeb645ed14cfe13e80fcfe55b837e0f8))
+
+## [1.3.10](https://github.com/bnoon-ksa/landing-page/compare/v1.3.9...v1.3.10) (2026-02-19)
+
+### Bug Fixes
+
+- restore lazy loading for all home page images ([#79](https://github.com/bnoon-ksa/landing-page/issues/79)) ([6265178](https://github.com/bnoon-ksa/landing-page/commit/626517826cfdca9493f9c3a2ba82203c3ce937fc))
+
 ## [1.3.9](https://github.com/bnoon-ksa/landing-page/compare/v1.3.8...v1.3.9) (2026-02-19)
 
 ### Performance Improvements

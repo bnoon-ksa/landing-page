@@ -13,12 +13,12 @@ const NationalDayOffer = () => {
     <div className="founding-offer-page" dir="rtl">
       <section className="offer-section">
         <div className="container">
-          {/* ✅ Top Heading (same spacing) */}
+          {/* Top Heading (same spacing) */}
 
-          {/* ✅ CARD */}
+          {/* CARD */}
           <div className="offer-card">
             <div className="row g-0 align-items-stretch">
-              {/* ✅ IMAGE (Desktop left, Mobile bottom) */}
+              {/* IMAGE (Desktop left, Mobile bottom) */}
               <div className="col-lg-6 col-md-6 order-2 order-lg-1">
                 <div className="left-img-wrap">
                   <div className="img-shadow-box">
@@ -33,7 +33,7 @@ const NationalDayOffer = () => {
                 </div>
               </div>
 
-              {/* ✅ CONTENT (Desktop right, Mobile top) */}
+              {/* CONTENT (Desktop right, Mobile top) */}
               <div className="col-lg-6 col-md-6 order-1 order-lg-2">
                 <div className="right-content">
                   <div className="offer-heading-block">
@@ -53,7 +53,7 @@ const NationalDayOffer = () => {
                   </p>
 
                   <p className="dates">
-                    العرض قائم من <strong>11 فبراير وحتى 4 مارس 2026. </strong>
+                    العرض قائم من <strong>12 فبراير وحتى 4 مارس 2026. </strong>
                     <br />
                     لا يشمل العرض الاستشارات الطبية.
                   </p>
@@ -70,7 +70,7 @@ const NationalDayOffer = () => {
                     </span>
                   </div>
 
-                  {/* ✅ Phones */}
+                  {/* Phones */}
                   <div className="phones">
                     <div className="phone-col">
                       <div className="phone-item">
@@ -152,7 +152,7 @@ const NationalDayOffer = () => {
           justify-content: center;
         }
 
-        /* ✅ similar shadow style as screenshot */
+        /* similar shadow style as screenshot */
         .img-shadow-box {
           box-shadow: 50px 50px 0px #d7f2fb;
           overflow: hidden;
@@ -336,7 +336,7 @@ const NationalDayOffer = () => {
           height: 4px;
         }
 
-        /* ✅ Mobile */
+        /* Mobile */
         @media (max-width: 767px) {
           .main-title {
             font-size: 16px;
@@ -380,7 +380,7 @@ const NationalDayOffer = () => {
           }
         }
 
-        /* ✅ iPad */
+        /* iPad */
         @media (min-width: 768px) and (max-width: 1024px) {
           .main-title {
             font-size: 20px;

@@ -13,6 +13,28 @@ function HeroBannerAr() {
   // ✅ Slides (video + text + buttonLink)
   const slides = [
     {
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner4.mp4',
+      title: 'حلمكم ما هو بعيد ',
+
+      desc: 'استفيدوا من عرض يوم التأسيس الخاص <br>بالحقن المجهري* في بنون ',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      extra: '',
+      buttonLink: 'ar/founding-day-campaign-ivf',
+      buttonText: 'استكشفوا المزيد',
+      objectPosition: '0% 20%', // ✅ LEFT shift
+    },
+    {
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/ar-banner1.mp4',
+      title: 'عرض يوم التأسيس* ',
+      desc: ' خدمات وإجراءات أمراض الذكورة والعقم لدى الرجال  ',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      buttonLink: 'ar/founding-day-campaign-andrology',
+      buttonText: 'استكشفوا المزيد ',
+      objectPosition: '0% 20%', // ✅ LEFT shift
+    },
+    {
       video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/2.mp4',
       title: '<span class="font-program">برنامج</span> وعد بنون',
 
@@ -159,6 +181,7 @@ function HeroBannerAr() {
               width: '100%',
               height: '100%',
               objectFit: 'cover',
+              objectPosition: slide.objectPosition || '50% center',
               zIndex: -1,
               opacity: isActive ? 1 : 0,
               transition: 'opacity 1s ease-in-out',
@@ -193,7 +216,7 @@ function HeroBannerAr() {
               {...(slides[currentSlide].buttonLink.startsWith('http')
                 ? { target: '_blank', rel: 'noopener noreferrer' }
                 : {})}
-              className="btn btn-success btn-appointment btn-banner"
+              className="btn btn-success btn-appointment explore-btn btn-banner"
             >
               {slides[currentSlide].buttonText}
             </a>
@@ -256,6 +279,10 @@ function HeroBannerAr() {
         @media (max-width: 768px) {
           .font-program {
             font-size: 13px !important;
+          }
+          .explore-btn {
+            width: 100px;
+            border-radius: 6px !important;
           }
         }
       `}</style>
