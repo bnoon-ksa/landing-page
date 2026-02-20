@@ -1,6 +1,11 @@
 {
+<<<<<<< feat/cdn-image-delivery
   "name": "bnoon-landing-page",
   "version": "1.3.27",
+=======
+  "name": "doutor",
+  "version": "1.3.28",
+>>>>>>> main
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -185,12 +185,18 @@ const AppointmentSection = () => {
         return;
       }
 
-      setShowThankYou(true);
       setMessage(
-        <div className="alert alert-success text-start" role="alert">
-          Referral submitted successfully. Our team will contact the patient shortly.
-        </div>,
+        <>
+          <strong>Thank you! Your referral has been received.</strong>
+          <br />
+          Our team will contact the patient shortly to support and facilitate the next steps in
+          their care.
+          <br />
+          <em>We look forward to connecting soon.</em>
+        </>,
       );
+      setShowThankYou(true);
+      scrollToMessage();
 
       // ✅ reset only existing fields (district/dateOfBirth removed)
       setFormData({
@@ -249,213 +255,211 @@ const AppointmentSection = () => {
         </div>
 
         {/* FORM START */}
-        <form
-          onSubmit={handleSubmit}
-          className="appointment-form text-start mx-auto"
-          style={{ maxWidth: '1000px' }}
-        >
-          {/* Refer to */}
-          <div className="card p-3 mb-3">
-            <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
-              <h6 className="mb-0 form-label">Refer to:</h6>
-
+        {!showThankYou && (
+          <form
+            onSubmit={handleSubmit}
+            className="appointment-form text-start mx-auto"
+            style={{ maxWidth: '1000px' }}
+          >
+            {/* Refer to */}
+            <div className="card p-3 mb-3">
               <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
-                {(['Bnoon – Jeddah', 'Bnoon – Riyadh', 'Bnoon – Al Ahsa'] as const).map(
-                  (branch) => (
-                    <label key={branch} className="form-check-label mb-0 d-flex align-items-center">
-                      <input
-                        type="radio"
-                        name="referTo"
-                        className="form-check-input me-2"
-                        value={branch}
-                        checked={formData.referTo === branch}
-                        onChange={(e) =>
-                          setField('referTo', e.target.value as ReferralFormData['referTo'])
-                        }
-                      />
-                      {branch}
-                    </label>
-                  ),
-                )}
+                <h6 className="mb-0 form-label">Refer to:</h6>
+
+                <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
+                  {(['Bnoon – Jeddah', 'Bnoon – Riyadh', 'Bnoon – Al Ahsa'] as const).map(
+                    (branch) => (
+                      <label
+                        key={branch}
+                        className="form-check-label mb-0 d-flex align-items-center"
+                      >
+                        <input
+                          type="radio"
+                          name="referTo"
+                          className="form-check-input me-2"
+                          value={branch}
+                          checked={formData.referTo === branch}
+                          onChange={(e) =>
+                            setField('referTo', e.target.value as ReferralFormData['referTo'])
+                          }
+                        />
+                        {branch}
+                      </label>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Referring Physician Information */}
-          <h5 className="mb-3 text-size">Referring Physician Information</h5>
-          <div className="card p-3 mb-3">
-            <div className="mb-3">
-              <label className="form-label">Physician Name *</label>
-              <input
-                className="form-control"
-                value={formData.physicianName}
-                onChange={(e) => setField('physicianName', e.target.value)}
-                type="text"
-              />
-            </div>
+            {/* Referring Physician Information */}
+            <h5 className="mb-3 text-size">Referring Physician Information</h5>
+            <div className="card p-3 mb-3">
+              <div className="mb-3">
+                <label className="form-label">Physician Name *</label>
+                <input
+                  className="form-control"
+                  value={formData.physicianName}
+                  onChange={(e) => setField('physicianName', e.target.value)}
+                  type="text"
+                />
+              </div>
 
-            <div className="mb-3">
-              <label className="form-label">Phone *</label>
-              <input
-                className="form-control"
-                value={formData.physicianPhone}
-                onChange={(e) => setField('physicianPhone', e.target.value)}
-                type="tel"
-              />
-            </div>
+              <div className="mb-3">
+                <label className="form-label">Phone *</label>
+                <input
+                  className="form-control"
+                  value={formData.physicianPhone}
+                  onChange={(e) => setField('physicianPhone', e.target.value)}
+                  type="tel"
+                />
+              </div>
 
-            <div className="mb-3">
-              <label className="form-label">Email Address</label>
-              <input
-                className="form-control"
-                value={formData.physicianEmail}
-                onChange={(e) => setField('physicianEmail', e.target.value)}
-                type="email"
-              />
-            </div>
+              <div className="mb-3">
+                <label className="form-label">Email Address</label>
+                <input
+                  className="form-control"
+                  value={formData.physicianEmail}
+                  onChange={(e) => setField('physicianEmail', e.target.value)}
+                  type="email"
+                />
+              </div>
 
-            <div className="mb-3">
-              <label className="form-label">Healthcare Facility Name</label>
-              <input
-                className="form-control"
-                value={formData.healthcareFacilityName}
-                onChange={(e) => setField('healthcareFacilityName', e.target.value)}
-                type="text"
-              />
-            </div>
+              <div className="mb-3">
+                <label className="form-label">Healthcare Facility Name</label>
+                <input
+                  className="form-control"
+                  value={formData.healthcareFacilityName}
+                  onChange={(e) => setField('healthcareFacilityName', e.target.value)}
+                  type="text"
+                />
+              </div>
 
-            <div className="mb-3">
-              <label className="form-label">Organization City</label>
-              <select
-                className="form-select form-control"
-                value={formData.organizationCity}
-                onChange={(e) => setField('organizationCity', e.target.value)}
-              >
-                <option value="">Select City</option>
+              <div className="mb-3">
+                <label className="form-label">Organization City</label>
+                <select
+                  className="form-select form-control"
+                  value={formData.organizationCity}
+                  onChange={(e) => setField('organizationCity', e.target.value)}
+                >
+                  <option value="">Select City</option>
 
-                {SAUDI_CITIES.map((city) => (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Referred Patient Information */}
-          <h5 className="mb-3 text-size">Referred Patient Information</h5>
-          <div className="card p-3 mb-3">
-            <div className="mb-3">
-              <label className="form-label">Patient Name *</label>
-              <input
-                className="form-control"
-                value={formData.patientName}
-                onChange={(e) => setField('patientName', e.target.value)}
-                type="text"
-              />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Patient Phone *</label>
-              <input
-                className="form-control"
-                value={formData.patientPhone}
-                onChange={(e) => setField('patientPhone', e.target.value)}
-                type="tel"
-              />
-            </div>
-
-            <div className="mb-2">
-              <label className="form-label d-block">Gender *</label>
-              <div className="d-flex gap-4 flex-wrap">
-                <label className="form-check-label mb-0">
-                  <input
-                    className="form-check-input me-2"
-                    type="radio"
-                    name="gender"
-                    checked={formData.gender === 'Male'}
-                    onChange={() => setField('gender', 'Male')}
-                  />
-                  Male
-                </label>
-
-                <label className="form-check-label mb-0">
-                  <input
-                    className="form-check-input me-2"
-                    type="radio"
-                    name="gender"
-                    checked={formData.gender === 'Female'}
-                    onChange={() => setField('gender', 'Female')}
-                  />
-                  Female
-                </label>
+                  {SAUDI_CITIES.map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
-          </div>
 
-          {/* Reason for Referring */}
-          <h5 className="mb-3 text-size">Reason for Referring *</h5>
-          <div className="card p-3 mb-3">
-            <div className="row">
-              {REASONS.map((r) => (
-                <div className="col-md-6 mb-2" key={r}>
-                  <label className="form-check-label">
+            {/* Referred Patient Information */}
+            <h5 className="mb-3 text-size">Referred Patient Information</h5>
+            <div className="card p-3 mb-3">
+              <div className="mb-3">
+                <label className="form-label">Patient Name *</label>
+                <input
+                  className="form-control"
+                  value={formData.patientName}
+                  onChange={(e) => setField('patientName', e.target.value)}
+                  type="text"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Patient Phone *</label>
+                <input
+                  className="form-control"
+                  value={formData.patientPhone}
+                  onChange={(e) => setField('patientPhone', e.target.value)}
+                  type="tel"
+                />
+              </div>
+
+              <div className="mb-2">
+                <label className="form-label d-block">Gender *</label>
+                <div className="d-flex gap-4 flex-wrap">
+                  <label className="form-check-label mb-0">
                     <input
                       className="form-check-input me-2"
-                      type="checkbox"
-                      checked={formData.reasons.includes(r)}
-                      onChange={() => toggleReason(r)}
+                      type="radio"
+                      name="gender"
+                      checked={formData.gender === 'Male'}
+                      onChange={() => setField('gender', 'Male')}
                     />
-                    {r}
+                    Male
+                  </label>
+
+                  <label className="form-check-label mb-0">
+                    <input
+                      className="form-check-input me-2"
+                      type="radio"
+                      name="gender"
+                      checked={formData.gender === 'Female'}
+                      onChange={() => setField('gender', 'Female')}
+                    />
+                    Female
                   </label>
                 </div>
-              ))}
+              </div>
             </div>
 
-            <div className="mt-3">
-              <label className="form-label">Insert the medical reason (optional)</label>
-              <textarea
-                className="form-control"
-                rows={4}
-                value={formData.medicalReason}
-                onChange={(e) => setField('medicalReason', e.target.value)}
-                placeholder="Write medical reason..."
+            {/* Reason for Referring */}
+            <h5 className="mb-3 text-size">Reason for Referring *</h5>
+            <div className="card p-3 mb-3">
+              <div className="row">
+                {REASONS.map((r) => (
+                  <div className="col-md-6 mb-2" key={r}>
+                    <label className="form-check-label">
+                      <input
+                        className="form-check-input me-2"
+                        type="checkbox"
+                        checked={formData.reasons.includes(r)}
+                        onChange={() => toggleReason(r)}
+                      />
+                      {r}
+                    </label>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-3">
+                <label className="form-label">Insert the medical reason (optional)</label>
+                <textarea
+                  className="form-control"
+                  rows={4}
+                  value={formData.medicalReason}
+                  onChange={(e) => setField('medicalReason', e.target.value)}
+                  placeholder="Write medical reason..."
+                />
+              </div>
+            </div>
+
+            {/* reCAPTCHA */}
+            <div className="my-3">
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                onChange={(value: string | null) => setField('recaptcha', value || '')}
               />
             </div>
-          </div>
 
-          {/* reCAPTCHA */}
-          <div className="my-3">
-            <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-              onChange={(value: string | null) => setField('recaptcha', value || '')}
-            />
-          </div>
-
-          {/* Submit */}
-          <div className="text-center">
-            <button
-              type="submit"
-              className="btn btn-primary feedback-btn btn-large mt-3"
-              disabled={submitting}
-            >
-              {submitting ? 'Submitting...' : 'Submit'}
-            </button>
-          </div>
-
-          {/* Mid-form message */}
-          {message && (
-            <div ref={messageRef} className="mt-3">
-              {message}
+            {/* Submit */}
+            <div className="text-center">
+              <button
+                type="submit"
+                className="btn btn-primary feedback-btn btn-large mt-3"
+                disabled={submitting}
+              >
+                {submitting ? 'Submitting...' : 'Submit'}
+              </button>
             </div>
-          )}
+          </form>
+        )}
+        {message && (
+          <div ref={messageRef} className="form-message">
+            {message}
+          </div>
+        )}
 
-          {showThankYou && (
-            <div className="alert alert-success mt-3 text-start" role="alert">
-              Thank you! Your referral has been received.
-            </div>
-          )}
-        </form>
         {/* FORM END */}
       </div>
       <style jsx>{`
