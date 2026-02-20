@@ -1,3 +1,9 @@
+## [1.3.22](https://github.com/bnoon-ksa/landing-page/compare/v1.3.21...v1.3.22) (2026-02-20)
+
+### Bug Fixes
+
+* update banner text ([#92](https://github.com/bnoon-ksa/landing-page/issues/92)) ([ee2d02b](https://github.com/bnoon-ksa/landing-page/commit/ee2d02bbff40c953c6fb5937ce41564d7b47aa6d))
+
 ## [1.3.21](https://github.com/bnoon-ksa/landing-page/compare/v1.3.20...v1.3.21) (2026-02-20)
 
 ### Bug Fixes
