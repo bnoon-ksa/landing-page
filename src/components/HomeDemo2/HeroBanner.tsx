@@ -26,7 +26,7 @@ function HeroBanner() {
     },
     {
       video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner2.mp4',
-      title: "<span class='rowdies-font'>*SAUDI FOUNDING DAY OFFER </span>",
+      title: "<span class='rowdies-font'>SAUDI FOUNDING DAY OFFER </span>",
       desc: "Andrology & Men's Infertility Treatments",
       titleColor: '#004E78',
       descColor: '#004E78',
