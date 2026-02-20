@@ -1,3 +1,9 @@
+## [1.3.21](https://github.com/bnoon-ksa/landing-page/compare/v1.3.20...v1.3.21) (2026-02-20)
+
+### Bug Fixes
+
+* update banner video ([#91](https://github.com/bnoon-ksa/landing-page/issues/91)) ([124eaf9](https://github.com/bnoon-ksa/landing-page/commit/124eaf98776d632e3dcb7eab635606f13001c004))
+
 ## [1.3.20](https://github.com/bnoon-ksa/landing-page/compare/v1.3.19...v1.3.20) (2026-02-20)
 
 ### Bug Fixes
