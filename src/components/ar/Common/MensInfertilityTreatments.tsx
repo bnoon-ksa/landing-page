@@ -81,7 +81,7 @@ const NationalDayOffer = () => {
                           style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
-                          <span className="phone-label">بنون - جدة:</span> 012 680 0800
+                          <span className="phone-label">بنون - جدة:</span> 0126800800
                         </span>
                       </div>
                     </div>
