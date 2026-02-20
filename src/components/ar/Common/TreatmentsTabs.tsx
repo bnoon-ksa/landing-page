@@ -381,13 +381,17 @@ const TreatmentsSection: React.FC = () => {
             />
           </div>
           <div className="col-lg-4 col-md-6 image-col">
-            <OptimizedImage
-              imageName={currentContent.imageName}
-              alt={activeTab}
-              className="img-fluid"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-            />
+            {tabs.map((tab) => (
+              <div key={tab} style={{ display: activeTab === tab ? '' : 'none' }}>
+                <OptimizedImage
+                  imageName={tabContents[tab].imageName}
+                  alt={tab}
+                  className="img-fluid"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              </div>
+            ))}
           </div>
         </div>
 
