@@ -88,14 +88,20 @@ export default function OptimizedImage({
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
+          backgroundOrigin: 'content-box',
+          backgroundClip: 'content-box',
         }
       : {};
 
-    const responsiveStyle: React.CSSProperties = {
-      display: 'block',
-      width: '100%',
-      height: 'auto',
-    };
+    // Only apply responsive fluid styles to large images (not small icons)
+    const isSmallIcon =
+      typeof resolvedWidth === 'number' &&
+      typeof resolvedHeight === 'number' &&
+      resolvedWidth <= 48;
+
+    const baseStyle: React.CSSProperties = isSmallIcon
+      ? { display: 'inline-block' }
+      : { display: 'block', width: '100%', height: 'auto' };
 
     return (
       // eslint-disable-next-line @next/next/no-img-element
@@ -109,7 +115,7 @@ export default function OptimizedImage({
         loading={priority ? undefined : (loading ?? 'lazy')}
         decoding="async"
         className={className as string}
-        style={{ ...responsiveStyle, ...blurStyle, ...styleProp }}
+        style={{ ...baseStyle, ...blurStyle, ...styleProp }}
         data-testid="cdn-img"
         {...rest}
       />
