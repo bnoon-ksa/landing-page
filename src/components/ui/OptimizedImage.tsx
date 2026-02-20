@@ -91,6 +91,12 @@ export default function OptimizedImage({
         }
       : {};
 
+    const responsiveStyle: React.CSSProperties = {
+      display: 'block',
+      width: '100%',
+      height: 'auto',
+    };
+
     return (
       // eslint-disable-next-line @next/next/no-img-element
       <img
@@ -103,7 +109,7 @@ export default function OptimizedImage({
         loading={priority ? undefined : (loading ?? 'lazy')}
         decoding="async"
         className={className as string}
-        style={{ ...blurStyle, ...styleProp }}
+        style={{ ...responsiveStyle, ...blurStyle, ...styleProp }}
         data-testid="cdn-img"
         {...rest}
       />
