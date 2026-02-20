@@ -31,13 +31,19 @@ export interface ImageCatalogEntry {
 
   /** Grouping tag for filtering and reporting. */
   readonly category:
-    | "banner"
-    | "benefit"
-    | "blog"
-    | "doctor"
-    | "service"
-    | "about"
-    | "misc";
+    | 'banner'
+    | 'benefit'
+    | 'blog'
+    | 'doctor'
+    | 'service'
+    | 'about'
+    | 'treatment'
+    | 'fertility-guide'
+    | 'visit'
+    | 'location'
+    | 'icon'
+    | 'campaign'
+    | 'misc';
 }
 
 /** Auto-generated manifest entry produced by the build script. */
@@ -64,7 +70,7 @@ export interface ImageManifestEntry {
   readonly blurDataURL: string;
 
   /** Category from the catalog. */
-  readonly category: ImageCatalogEntry["category"];
+  readonly category: ImageCatalogEntry['category'];
 
   /**
    * Pre-built CDN `srcSet` string for native `<img>` delivery.
