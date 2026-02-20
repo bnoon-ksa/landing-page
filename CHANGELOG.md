@@ -1,3 +1,9 @@
+## [1.3.29](https://github.com/bnoon-ksa/landing-page/compare/v1.3.28...v1.3.29) (2026-02-20)
+
+### Performance Improvements
+
+* serve all images via Azure CDN — zero /_next/image requests ([#98](https://github.com/bnoon-ksa/landing-page/issues/98)) ([7c228b5](https://github.com/bnoon-ksa/landing-page/commit/7c228b5c27ef5f8144062ade7ec99c475034545b))
+
 ## [1.3.28](https://github.com/bnoon-ksa/landing-page/compare/v1.3.27...v1.3.28) (2026-02-20)
 
 ### Bug Fixes
