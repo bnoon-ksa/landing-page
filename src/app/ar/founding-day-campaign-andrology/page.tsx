@@ -13,7 +13,7 @@ export default function FoundingDayDiscountPage() {
     <>
       <Navbar />
       <div style={{ position: 'relative' }}>
-        <OptimizedPageBanner imageName="ivf-banner-ar" />
+        <OptimizedPageBanner imageName="ivf-banner-ar" bannerPosition="0% 10%"/>
         <div className="container">
           <div
             className="second-banner-content reveal-text text-banner"
@@ -25,7 +25,7 @@ export default function FoundingDayDiscountPage() {
             }}
           >
             <h1 style={{ color: '#004E78' }}>
-              <span className="rowdies-font text-size">عرض يوم التأسيس لعلاجات<br /> أمراض الذكورة</span>
+               <span className="rowdies-font text-size">عرض يوم التأسيس<br /> لعلاجات أمراض الذكورة</span>
             </h1>
 
             <p style={{ color: '#fff' }} className="special-desc"></p>
