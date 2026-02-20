@@ -15,7 +15,7 @@ function HeroBanner() {
     {
       video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner1.mp4',
       title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
-      desc: '*Benefit from our Founding Day Special IVF Offer ',
+      desc: 'Benefit from our Founding Day Special IVF Offer ',
       titleColor: '#004E78',
       descColor: '#004E78',
       extra: '',
