@@ -26,7 +26,7 @@ function HeroBanner() {
     },
     {
       video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner2.mp4',
-      title: "<span class='rowdies-font'>SAUDI FOUNDING DAY OFFER </span>",
+      title: "<span class='rowdies-font campagin-banner'>SAUDI FOUNDING DAY OFFER </span>",
       desc: "Andrology & Men's Infertility Treatments",
       titleColor: '#004E78',
       descColor: '#004E78',
@@ -196,7 +196,7 @@ function HeroBanner() {
       {/* 🔹 Text Content */}
       <div className="container">
         <div
-          className={`second-banner-content campagin-banner ${
+          className={`second-banner-content ${
             animate ? 'reveal-text' : 'hidden-text'
           }`}
         >
@@ -284,7 +284,7 @@ function HeroBanner() {
             border-radius: 6px;
           }
           .campagin-banner {
-            width: 60%;
+            width: 58%;
           }
         }
       `}</style>
