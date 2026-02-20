@@ -14,7 +14,7 @@ function HeroBanner() {
   const slides = [
     {
       video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner1.mp4',
-      title: "<span class='rowdies-font'>BRINGING YOUR DREAM CLOSER</span>",
+      title: "BRINGING YOUR DREAM CLOSER",
       desc: 'Benefit from our Founding Day Special IVF Offer ',
       titleColor: '#004E78',
       descColor: '#004E78',
@@ -26,7 +26,7 @@ function HeroBanner() {
     },
     {
       video: 'https://bnoon-website.b-cdn.net/videos/banner/en/banner2.mp4',
-      title: "<span class='rowdies-font campagin-banner'>SAUDI FOUNDING DAY OFFER </span>",
+      title: "SAUDI FOUNDING DAY OFFER",
       desc: "Andrology & Men's Infertility Treatments",
       titleColor: '#004E78',
       descColor: '#004E78',
