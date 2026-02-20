@@ -2219,4 +2219,15 @@ export const IMAGE_MANIFEST: ImageManifest = {
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/bnoon-patients-rights.pdf',
   },
+   "ivf-banner-en": {
+  src: "https://bnoon-website.b-cdn.net/images/banner/en/ivf-banner-en.jpg",
+  width: 0,
+  height: 0,
+  sizes: '',
+  alt: "IVF Banner - Bnoon",
+  blurDataURL: '',
+  category: 'misc',
+  cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/banner/en/ivf-banner-en.jpg',
+},
 };
