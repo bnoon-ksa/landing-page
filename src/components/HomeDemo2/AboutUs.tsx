@@ -1,13 +1,9 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 interface AboutItem {
   id: number;
-  icon: {
-    src: string;
-    alt: string;
-  };
+  imageName: string;
   title: string;
   description: string;
   text?: string;
@@ -17,53 +13,45 @@ interface AboutData {
   title: string;
   subtitle: string;
   items: AboutItem[];
-  button: {
-    text: string;
-    href: string;
-  };
 }
 
 const aboutData: AboutData = {
-  title: "Bnoon in Numbers",
-  subtitle: "Bnoon in Numbers",
+  title: 'Bnoon in Numbers',
+  subtitle: 'Bnoon in Numbers',
   items: [
     {
       id: 1,
-      icon: { src: "/images/icons/icon-1.png", alt: "icon" },
-      title: "+5000",
-      description: "No. of IVF Cycles Annually",
+      imageName: 'icon-1',
+      title: '+5000',
+      description: 'No. of IVF Cycles Annually',
     },
     {
       id: 2,
-      icon: { src: "/images/icons/icon-2.png", alt: "icon" },
-      title: "+80",
-      description: "No. of Clinicians",
+      imageName: 'icon-2',
+      title: '+80',
+      description: 'No. of Clinicians',
     },
     {
       id: 3,
-      icon: { src: "/images/icons/icon-3.png", alt: "icon" },
-      title: "+150",
-      description: "No. of Staff",
+      imageName: 'icon-3',
+      title: '+150',
+      description: 'No. of Staff',
     },
     {
       id: 4,
-      icon: { src: "/images/icons/icon-4.png", alt: "icon" },
-      title: "+5", // dummy title (rendering time par overwrite karenge)
-    description:
-    'Riyadh | Jeddah | Al Ahsa |<br><span class="under-construction">Abha - under construction</span>',
-},
+      imageName: 'icon-4',
+      title: '+5', // dummy title (rendering time par overwrite karenge)
+      description:
+        'Riyadh | Jeddah | Al Ahsa |<br><span class="under-construction">Abha - under construction</span>',
+    },
     {
       id: 5,
-      icon: { src: "/images/icons/icon-5.png", alt: "icon" },
-      title: "+60%",
-      description: "Success Rates",
-      text: "On par with international success rates",
+      imageName: 'icon-5',
+      title: '+60%',
+      description: 'Success Rates',
+      text: 'On par with international success rates',
     },
   ],
-  button: {
-    text: "Learn More About Us",
-    href: "about-us",
-  },
 };
 
 function AboutUs() {
@@ -79,14 +67,12 @@ function AboutUs() {
 
           <div className="col-xl-12 col-md-12">
             <div className="second-about-items d-flex flex-nowrap justify-content-center overflow-hidden">
-
-
               {aboutData.items.map((item) => {
                 // 👇 item id ke hisaab se width set
-                let boxWidth = "250px";
-                if (item.id === 2 || item.id === 3) boxWidth = "170px";
-                if (item.id === 4) boxWidth = "250px";
-                if (item.id === 5) boxWidth = "300px";
+                let boxWidth = '250px';
+                if (item.id === 2 || item.id === 3) boxWidth = '170px';
+                if (item.id === 4) boxWidth = '250px';
+                if (item.id === 5) boxWidth = '300px';
 
                 return (
                   <div
@@ -95,14 +81,14 @@ function AboutUs() {
                     style={{
                       minWidth: boxWidth,
                       maxWidth: boxWidth,
-                      flex: "0 0 auto"
+                      flex: '0 0 auto',
                     }}
                   >
                     <div className="item">
                       <div className="icon mb-3">
-                        <Image
-                          src={item.icon.src}
-                          alt={item.icon.alt}
+                        <OptimizedImage
+                          imageName={item.imageName}
+                          alt="icon"
                           width={120}
                           height={120}
                           loading="lazy"
@@ -112,7 +98,8 @@ function AboutUs() {
                       {item.id === 4 ? (
                         <>
                           <div className="justify-content-center align-items-center gap-2 text-margin">
-                            <h3>{item.title || "+5"}</h3> {/* title agar available ho to use kare */}
+                            <h3>{item.title || '+5'}</h3>{' '}
+                            {/* title agar available ho to use kare */}
                             <p className="mb-0 text-color">No. of Locations</p>
                           </div>
                         </>
@@ -124,7 +111,6 @@ function AboutUs() {
 
                       {item.text && <p className="text">{item.text}</p>}
                     </div>
-
                   </div>
                 );
               })}

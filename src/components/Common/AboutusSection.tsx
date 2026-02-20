@@ -1,16 +1,10 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import { motion, Easing, easeOut } from "framer-motion";
+import React from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { motion, Easing, easeOut } from 'framer-motion';
 const AboutusSection = () => {
-  const values = [
-    "Compassion ",
-    "Integrity ",
-    "Innovation ",
-    "Collaboration ",
-    "Leadership ",
-  ];
+  const values = ['Compassion ', 'Integrity ', 'Innovation ', 'Collaboration ', 'Leadership '];
   // ⭐ Animation variant
   const slideInRight = {
     hidden: { opacity: 0, x: -80 },
@@ -34,7 +28,9 @@ const AboutusSection = () => {
                   viewport={{ once: true, amount: 0.3 }}
                   variants={slideInRight}
                 >
-                  To transform care across the region and become a global leader in fertility and women’s health. We will achieve this by focusing on research and innovation, collaborating with world-renowned institutions, and putting patients first.
+                  To transform care across the region and become a global leader in fertility and
+                  women’s health. We will achieve this by focusing on research and innovation,
+                  collaborating with world-renowned institutions, and putting patients first.
                 </motion.p>
               </div>
             </div>
@@ -63,18 +59,13 @@ const AboutusSection = () => {
                   viewport={{ once: true, amount: 0.3 }}
                   variants={slideInRight}
                 >
-                  We are defined and driven by our values including: </motion.p>
+                  We are defined and driven by our values including:{' '}
+                </motion.p>
                 <ul className="values-list mt-3">
                   {values.map((value, index) => (
                     <li key={index} className="d-flex align-items-center mb-2">
                       {/* Icon */}
-                      <Image
-                        src="/images/icons/bnoon-symbol.avif" // aapka custom icon
-                        alt="icon"
-                        width={20}
-                        height={20}
-                        className="me-2"
-                      />
+                      <OptimizedImage imageName="bnoon-symbol" className="me-2" alt="icon" />
                       {value}
                     </li>
                   ))}

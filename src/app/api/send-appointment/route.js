@@ -1,6 +1,6 @@
-import { connectDB } from "../../../lib/mongodb";
-import AppointmentEN from "../../../models/AppointmentEN";
-import nodemailer from "nodemailer";
+import { connectDB } from '../../../lib/mongodb';
+import AppointmentEN from '../../../models/AppointmentEN';
+import nodemailer from 'nodemailer';
 
 export async function POST(req) {
   try {
@@ -9,17 +9,17 @@ export async function POST(req) {
     await connectDB();
     const saved = await AppointmentEN.create(data);
 
-  const recipient =
- data.branch === "Riyadh"
-    ? "appointments@bnoon.sa"
-    : data.branch === "Jeddah"
-    ? "appointments.jeddah@bnoon.sa"
-    : data.branch === "Al Ahsa"
-    ? "callcenter.alahsa@bnoon.sa"
-    : "";
+    const recipient =
+      data.branch === 'Riyadh'
+        ? 'appointments@bnoon.sa'
+        : data.branch === 'Jeddah'
+          ? 'appointments.jeddah@bnoon.sa'
+          : data.branch === 'Al Ahsa'
+            ? 'callcenter.alahsa@bnoon.sa'
+            : '';
 
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      service: 'gmail',
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -51,16 +51,11 @@ export async function POST(req) {
     });
 
     return Response.json(
-      { success: true, message: "Saved & email sent successfully!" },
-      { status: 200 }
+      { success: true, message: 'Saved & email sent successfully!' },
+      { status: 200 },
     );
   } catch (error) {
-    console.error("❌ API Error:", error);
-    return Response.json(
-      { success: false, error: error.message },
-      { status: 500 }
-    );
+    console.error('❌ API Error:', error);
+    return Response.json({ success: false, error: error.message }, { status: 500 });
   }
 }
-
-

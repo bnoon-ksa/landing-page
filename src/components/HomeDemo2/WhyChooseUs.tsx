@@ -1,24 +1,23 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import { getCdnUrl } from '@/lib/cdn-utils';
+import { CheckIcon } from '@/components/icons';
 
 function WhyChooseUs() {
   // Define the reasons data
   const reasons = [
     {
       id: 1,
-      iconSrc: "/images/icons/check.svg",
-      iconAlt: "check",
-      title: "500+ Licensed Doctors",
+      icon: <CheckIcon width={43} height={43} style={{ color: '#336AEA' }} />,
+      title: '500+ Licensed Doctors',
       description:
-        "Every Doutor visit connects you with a certified medical professional—no chatbots.",
+        'Every Doutor visit connects you with a certified medical professional—no chatbots.',
     },
     {
       id: 2,
-      iconSrc: "/images/icons/check.svg",
-      iconAlt: "check",
-      title: "8.2 M+ Virtual Consultations Completed",
+      icon: <CheckIcon width={43} height={43} style={{ color: '#336AEA' }} />,
+      title: '8.2 M+ Virtual Consultations Completed',
       description:
-        "Our experience speaks for itself. From urgent care to therapy, Doutor has successfully completed over a million secure video sessions.",
+        'Our experience speaks for itself. From urgent care to therapy, Doutor has successfully completed over a million secure video sessions.',
     },
   ];
 
@@ -27,8 +26,8 @@ function WhyChooseUs() {
       <div
         className="choose-us-area"
         style={{
-          backgroundImage: `url(/images/choose-bg.jpg)`,
-          backgroundAttachment: "fixed",
+          backgroundImage: `url(${getCdnUrl('choose-bg') || '/images/choose-bg.jpg'})`,
+          backgroundAttachment: 'fixed',
         }}
       >
         <div className="container">
@@ -40,14 +39,7 @@ function WhyChooseUs() {
             <div className="items">
               {reasons.map((reason) => (
                 <div key={reason.id} className="item">
-                  <div className="icon">
-                    <Image
-                      src={reason.iconSrc}
-                      alt={reason.iconAlt}
-                      width={43}
-                      height={43}
-                    />
-                  </div>
+                  <div className="icon">{reason.icon}</div>
                   <div className="title">
                     <h3>{reason.title}</h3>
                     <p>{reason.description}</p>

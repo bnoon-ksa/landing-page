@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+build
+public
+package-lock.json
+tsconfig.tsbuildinfo
+playwright-report
+test-results
+*.css

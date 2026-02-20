@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/Layout/PageBanner";
-import Navbar from "@/components/Layout/Navbar";
-import FeedbackSection from "@/components/Common/FeedbackSection";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/Layout/Navbar';
+import FeedbackSection from '@/components/Common/FeedbackSection';
 
 export const metadata: Metadata = {
-  title: "Bnoon – We’d Love to Hear From You ",
-  description: "Share your experience with Bnoon. Your feedback and suggestions help us improve our services and provide the best healthcare for you.",
+  title: 'Bnoon – We’d Love to Hear From You ',
+  description:
+    'Share your experience with Bnoon. Your feedback and suggestions help us improve our services and provide the best healthcare for you.',
 };
 
 export default function SubmitFeedbackServer() {
@@ -13,7 +14,7 @@ export default function SubmitFeedbackServer() {
     <>
       <Navbar />
 
-      <PageBanner bgImage="/images/feedback-banner.jpg" />
+      <OptimizedPageBanner imageName="feedback-banner" />
 
       <FeedbackSection />
     </>

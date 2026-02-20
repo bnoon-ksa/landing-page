@@ -1,32 +1,32 @@
 // Required
-@import "../node_modules/bootstrap/scss/functions";
+@import '../node_modules/bootstrap/scss/functions';
 
 // Default variable overrides
-@import "./variables";
+@import './variables';
 
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/variables-dark";
-@import "../node_modules/bootstrap/scss/mixins";
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/variables-dark';
+@import '../node_modules/bootstrap/scss/mixins';
 
 // Create your own map
 $custom-colors: (
-  "paragraph": $bodyTextColor,
-  "primary": $primary,
+  'paragraph': $bodyTextColor,
+  'primary': $primary,
 );
 
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Required
-@import "../node_modules/bootstrap/scss/maps";
-@import "../node_modules/bootstrap/scss/root";
+@import '../node_modules/bootstrap/scss/maps';
+@import '../node_modules/bootstrap/scss/root';
 
 // Optional Bootstrap components here
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/type";
+@import '../node_modules/bootstrap/scss/reboot';
+@import '../node_modules/bootstrap/scss/type';
 
 // Required
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import '../node_modules/bootstrap/scss/bootstrap';
 
 /*
 @File: Doutor. Template Styles
@@ -179,7 +179,8 @@ img {
 }
 
 .linear-gradient-inner-wrap {
-  background: linear-gradient(181deg, #f5f5f5 0.88%, #fffbe8 99.37%),
+  background:
+    linear-gradient(181deg, #f5f5f5 0.88%, #fffbe8 99.37%),
     linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
 }
 
@@ -917,10 +918,10 @@ Responsive Sidebar Menu Area CSS
           }
           &::before {
             position: absolute;
-            content: "\ea4e";
+            content: '\ea4e';
             right: 0;
             top: 2.5px;
-            font-family: "remixicon";
+            font-family: 'remixicon';
             font-size: 20px;
             transition: $transition;
             color: $bodyTextColor;
@@ -1244,7 +1245,7 @@ Main Banner Area CSS
       }
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         right: -60px;
         top: 50%;
         transform: translateY(-50%);
@@ -1287,7 +1288,9 @@ Benefits Area CSS
 
   .icon {
     margin-bottom: 70px;
-    transition: transform 0.4s ease, color 0.4s ease;
+    transition:
+      transform 0.4s ease,
+      color 0.4s ease;
   }
   h3 {
     font-size: 24px;
@@ -1299,17 +1302,13 @@ Benefits Area CSS
     transition: color 0.3s ease;
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
-      rgba($primary, 0.15) 0%,
-      transparent 70%
-    );
+    background: radial-gradient(circle, rgba($primary, 0.15) 0%, transparent 70%);
     transform: scale(0);
     transition: transform 0.5s ease;
     border-radius: 50%;
@@ -1502,17 +1501,13 @@ Services Area CSS
     }
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
-      rgba($primary, 0.15) 0%,
-      transparent 70%
-    );
+    background: radial-gradient(circle, rgba($primary, 0.15) 0%, transparent 70%);
     transform: scale(0);
     transition: transform 0.5s ease;
     border-radius: 50%;
@@ -1707,17 +1702,13 @@ Services Area CSS
     }
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
-      rgba($primary, 0.2) 0%,
-      transparent 100%
-    );
+    background: radial-gradient(circle, rgba($primary, 0.2) 0%, transparent 100%);
     transform: scale(0);
     transition: transform 0.5s ease;
     border-radius: 50%;
@@ -1888,17 +1879,13 @@ Doctors Area CSS
     }
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
-      rgba($primary, 0.25) 0%,
-      transparent 95%
-    );
+    background: radial-gradient(circle, rgba($primary, 0.25) 0%, transparent 95%);
     transform: scale(0);
     transition: transform 0.5s ease;
     border-radius: 50%;
@@ -2063,7 +2050,10 @@ Feedback Area CSS
   background: $whiteColor;
   padding: 45px;
   border-radius: 15px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
 
   .info {
     display: flex;
@@ -2129,7 +2119,9 @@ Feedback Area CSS
     transform: translateY(-8px) scale(1.1);
     position: relative;
     z-index: 11;
-    transition: transform 0.4s ease, box-shadow 0.4s ease,
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease,
       border-color 0.4s ease;
   }
 }
@@ -2567,11 +2559,11 @@ FAQ Area CSS
 
         &::before {
           position: absolute;
-          content: "\ea13";
+          content: '\ea13';
           top: 50%;
           transform: translateY(-50%);
           right: 20px;
-          font-family: "remixicon";
+          font-family: 'remixicon';
           font-size: 20px;
           color: $blackColor;
           font-weight: 400;
@@ -2585,7 +2577,7 @@ FAQ Area CSS
           color: $whiteColor;
 
           &::before {
-            content: "\f1af";
+            content: '\f1af';
             color: $whiteColor;
           }
         }
@@ -2791,7 +2783,9 @@ Blog Area CSS
       font-size: 25px;
       margin-bottom: 0;
       line-height: 1.5;
-      transition: color 0.3s ease, transform 0.3s ease;
+      transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 
       &:hover {
         transform: translateX(5px);
@@ -2867,7 +2861,7 @@ Second Banner Area CSS
   }
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     right: 0;
     bottom: 0;
@@ -3000,7 +2994,7 @@ Second Banner Area CSS
   }
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     right: 0;
     bottom: -15px;
@@ -3061,7 +3055,7 @@ Second Banner Area CSS
   }
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     right: 0;
     bottom: -15px;
@@ -3131,17 +3125,13 @@ Second About Area CSS
       margin-bottom: 0;
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: -50%;
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(
-        circle,
-        rgba($primary, 0.25) 0%,
-        transparent 95%
-      );
+      background: radial-gradient(circle, rgba($primary, 0.25) 0%, transparent 95%);
       transform: scale(0);
       transition: transform 0.5s ease;
       border-radius: 50%;
@@ -3185,17 +3175,13 @@ How It Works Area CSS
     margin-bottom: 0;
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
-      rgba($primary, 0.25) 0%,
-      transparent 95%
-    );
+    background: radial-gradient(circle, rgba($primary, 0.25) 0%, transparent 95%);
     transform: scale(0);
     transition: transform 0.5s ease;
     border-radius: 50%;
@@ -3385,17 +3371,13 @@ Features Area CSS
       }
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       top: -50%;
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(
-        circle,
-        rgba($primary, 0.25) 0%,
-        transparent 95%
-      );
+      background: radial-gradient(circle, rgba($primary, 0.25) 0%, transparent 95%);
       transform: scale(0);
       transition: transform 0.5s ease;
       border-radius: 50%;
@@ -3740,8 +3722,8 @@ Page Banner Area CSS
       }
       &::before {
         position: absolute;
-        content: "\ea6e";
-        font-family: "remixicon" !important;
+        content: '\ea6e';
+        font-family: 'remixicon' !important;
         right: -32px;
         top: 50%;
         transform: translateY(-50%);
@@ -3959,17 +3941,13 @@ Service Key Area CSS
     margin-bottom: 15px;
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
-      rgba($primary, 0.25) 0%,
-      transparent 95%
-    );
+    background: radial-gradient(circle, rgba($primary, 0.25) 0%, transparent 95%);
     transform: scale(0);
     transition: transform 0.5s ease;
     border-radius: 50%;
@@ -4199,17 +4177,13 @@ Review Area CSS
     }
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
-      rgba($primary, 0.25) 0%,
-      transparent 95%
-    );
+    background: radial-gradient(circle, rgba($primary, 0.25) 0%, transparent 95%);
     transform: scale(0);
     transition: transform 0.5s ease;
     border-radius: 50%;
@@ -4295,7 +4269,7 @@ Profile Authentication Area CSS
       align-items: center;
       justify-content: space-between;
 
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         margin-right: 8px;
         accent-color: $primary;
       }
@@ -4600,17 +4574,13 @@ Contact Info Area CSS
     }
   }
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
-      rgba($primary, 0.25) 0%,
-      transparent 95%
-    );
+    background: radial-gradient(circle, rgba($primary, 0.25) 0%, transparent 95%);
     transform: scale(0);
     transition: transform 0.5s ease;
     border-radius: 50%;
@@ -5135,7 +5105,7 @@ Doctor Profile Area CSS
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     right: 0;
     top: 0;
@@ -5269,7 +5239,7 @@ Doctor Profile Area CSS
           }
           &::before {
             position: absolute;
-            content: "";
+            content: '';
             right: -20px;
             top: 50%;
             transform: translateY(-50%);
@@ -5330,7 +5300,7 @@ Doctor Profile Area CSS
 
           &::before {
             position: absolute;
-            content: "";
+            content: '';
             left: 0;
             bottom: 0;
             width: 0;
@@ -5457,7 +5427,7 @@ Doctor Profile Area CSS
           position: relative;
 
           &::before {
-            content: "✔";
+            content: '✔';
             color: $primary;
             transition: $transition;
           }
@@ -5675,9 +5645,12 @@ Filter Wrapper CSS
 .filter-wrapper {
   background-color: $whiteColor;
   border: 1px solid #eaf2ff;
-  box-shadow: 0 344px 96px 0 rgba(0, 0, 0, 0),
-    0 220px 88px 0 rgba(0, 0, 0, 0.01), 0 124px 74px 0 rgba(0, 0, 0, 0.03),
-    0 55px 55px 0 rgba(0, 0, 0, 0.05), 0 14px 30px 0 rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 344px 96px 0 rgba(0, 0, 0, 0),
+    0 220px 88px 0 rgba(0, 0, 0, 0.01),
+    0 124px 74px 0 rgba(0, 0, 0, 0.03),
+    0 55px 55px 0 rgba(0, 0, 0, 0.05),
+    0 14px 30px 0 rgba(0, 0, 0, 0.06);
   padding: 30px;
   border-radius: 15px;
   position: sticky;
@@ -5744,7 +5717,7 @@ Filter Wrapper CSS
             margin-bottom: 0;
           }
         }
-        input[type="checkbox"] {
+        input[type='checkbox'] {
           margin-right: 8px;
           transform: scale(1.1);
           accent-color: $primary;
@@ -5761,11 +5734,11 @@ Filter Wrapper CSS
 
           &::before {
             position: absolute;
-            content: "\ea4e";
+            content: '\ea4e';
             right: 0;
             top: 50%;
             transform: translateY(-50%);
-            font-family: "remixicon" !important;
+            font-family: 'remixicon' !important;
             font-size: 20px;
           }
         }
@@ -6426,7 +6399,7 @@ Footer Area Area CSS
       }
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         right: -28px;
         top: 50%;
         transform: translateY(-50%);

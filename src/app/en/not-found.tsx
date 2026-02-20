@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Navbar from "@/components/Layout/Navbar";
+import Link from 'next/link';
+import Navbar from '@/components/Layout/Navbar';
 
 export default function EnglishNotFound() {
   return (
@@ -13,11 +13,11 @@ export default function EnglishNotFound() {
           <div className="not-found-content text-center">
             <div
               style={{
-                fontSize: "6rem",
+                fontSize: '6rem',
                 fontWeight: 700,
-                color: "#336AEA",
+                color: '#336AEA',
                 lineHeight: 1,
-                marginBottom: "1.5rem",
+                marginBottom: '1.5rem',
               }}
             >
               404
@@ -26,9 +26,9 @@ export default function EnglishNotFound() {
             <h3>Oops! That Page Can&apos;t Be Found</h3>
             <p
               style={{
-                color: "#5A6A85",
-                marginBottom: "2rem",
-                fontSize: "1rem",
+                color: '#5A6A85',
+                marginBottom: '2rem',
+                fontSize: '1rem',
               }}
             >
               Sorry, the page you are looking for does not exist or has been moved.

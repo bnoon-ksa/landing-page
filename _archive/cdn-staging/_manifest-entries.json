@@ -1,0 +1,189 @@
+[
+  {
+    "key": "fb-icon",
+    "src": "/images/icons/fb-icon.avif",
+    "width": 26,
+    "height": 26,
+    "sizes": "24px",
+    "alt": "Facebook",
+    "blurDataURL": "data:image/webp;base64,UklGRrYBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSEgBAAABkGzbtmk78+z9XmzbScmupuUDbNu2XUfZtsup2SXbNg/2XmvN4CciIjxcGdQYtuXWh/d3D4yshVLnHHypG3DFSFWj3R7tnPeuBMtzhihBSGPY5BPvsZKSqynl3Zt3v4SbUYJBhaZG5cNJzRo22saCU1H7BqOaxO894T3mMOXN+sMoDBq425Ut7TX+NEPk1D1UiZpzHdA70KjCM/dowWLBDcAsZqQqv30WiZp/5SpgsnwNVBP7IVH0RbdWNZKSmp1anWBQkecMgXdrIXE+QeWzFNWvh/8/a9uqiUPNNj1eMyrPj2JmLN6ki4Dx2Qc1ZlxS7xZzi4GrgSmMYsGetMREZiH+4nJgMlPTnPPhsZEx/uYKYCpFf/NoWVcmqbBVNeVqYDxT4dGqcElpSenk58b1wGzKowVlkhIg8SVoMOXKDGDM7WXNUM4DVlA4IEgAAACwAwCdASoUABQAPx10rlOtJqQit+gBoCOJaQAAe1Q6DNIx4gFxAAD+yfR78MHaD3QFNZdyQkeOC+Kt+DCkbi5BsT8yRZYAAAA=",
+    "category": "icon",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fb-icon-26x26-1kb.webp 26w"
+  },
+  {
+    "key": "linkedin-icon",
+    "src": "/images/icons/linkdin-icon.avif",
+    "width": 26,
+    "height": 26,
+    "sizes": "24px",
+    "alt": "LinkedIn",
+    "blurDataURL": "data:image/webp;base64,UklGRtIBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSFsBAAABkHPbtrG94s9zny+2bdtGZ9tmZyeV1TrpjM62bdt28uDinLuDiEgVZs5MBQduf8Xybue4ohSqUGXLHKqBd+Eh4j2ejQvDjCBLZpqfIrHC3iUGWJOVlKJFYP0TIp6ttxprSdEAa82c1ufg2FkW1hhPhS4CDyrRDMTCzMZZ3C/eE4axc9Z7ePz3nGLkWjDLuX0fv2w5/H7toksQh93Xwfy7Ga07TvkqE+U+CuPffoTIr5a0/Wgu6ri8LE2CFn4DwbeGtPUElb6P6TRca+gzYPnRiLadocqvsZSGi3NvV8Hx71a0/WzmKs+xlEZ4hx3dEPmfTWnDcSr1FAtoGCcYmvs40mhsnYNXmvd8jg015ya4VIDaRGJ/R+Li2On0d2RkKGWiiWDNIt7DeytYRhkqE02JoY2z1rFDOo8CpTJnDrofMoB4gC/3C4IwIFJZKH/nlVc+vb+1vld+ygiCAABWUDggUAAAAPADAJ0BKhQAFAA/HXSuU60mpCK36AGgI4lpAACI7O4cE0AIi56OY0AA/uIzT6rLJMk5WA7XGtfPT1+BGHss198cBN5dI7dh4igbSNnTgAAA",
+    "category": "icon",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/linkedin-icon-26x26-1kb.webp 26w"
+  },
+  {
+    "key": "instagram-icon",
+    "src": "/images/icons/instagram-icon.avif",
+    "width": 26,
+    "height": 26,
+    "sizes": "24px",
+    "alt": "Instagram",
+    "blurDataURL": "data:image/webp;base64,UklGRuYBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSG0BAAABkCvbtmlbc+OeG9o2Ij3btm3btm3btm0ztW1vrT3XGr8RERGkUYCiOx746PLrYx2jKDhAmmaQ2eUplGJfKTxtpRuGppO+GML2pVLs/GeeQZqu0TK4PpTv+6zg2phLJvXGXzwb2KBO/Tr16w9/rVzZkeIfMR4ndl2/euu2lbt6pj4FLkR2gkDHwZAAY/3m/j0h0H4flFVxJ5wZOXkrlizdW9NV2PIB+FHyACZmHDmavgg7K/xTeGSz+lnsuMw9BxxMx5Gy/5X72WL+mX/ayboPXE51j1b6J+TnZ+BfJfejbcUXj0p1x54KFvjhTsi/ZQ/ga5uMxDa/sL2+I7CiDVw0nwwff/+CMbID/qNp1EPgTtTsU+evXj9zamzyfeBKCLWUDm5XL16sqKh4yYZ34LkNKYgmQbD89fXb1+8/IDyMJl3TaaIFjwFACljDyTTIMLUWFwUgFUu+1oBMXSfSAhTeZO3DL5/vr2wQRoZBBABWUDggUgAAAJADAJ0BKhQAFAA/HXSvU60mpCK36AGgI4lpAACrW4O34K1SPwAA/u+T5+RQLrBUf+wdbfZOyZx/yylkHfHGD2FsGUBynujL2jhRqSK/MZMAAAA=",
+    "category": "icon",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/instagram-icon-26x26-1kb.webp 26w"
+  },
+  {
+    "key": "x-icon",
+    "src": "/images/icons/x-icon.avif",
+    "width": 26,
+    "height": 26,
+    "sizes": "24px",
+    "alt": "X (Twitter)",
+    "blurDataURL": "data:image/webp;base64,UklGRsoBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSEcBAAABkKttt2k7Y+Kck6R2bieVbdtJadu2bdtdKtu2nSyMMeb4g5uIiPDeVVGtDrue5vxsf4/6VOkdhehi99swQJPhXnfvIoUQZgqYDUBZKM8h5yppLtRgBk2aSsZcCtQlJfn+5RMSROWzJPSgOjdQYH3rQTtRpF8jH6DA5Zp9wYLXPS+0vAobthSafqPbDnBiHB95rg2mjAdEchx8CrFkGLdjR4MpmZYijGdqapbwfsjtpoeRiYgkMdNUIMPKhre6fUD5//dzqGqBB8OHbN4+AaWq4OkxsBmy9vvR4fzIUyiV9UBflGLFgLXA1S5XunxIzOha9wZ+Yv9cmGD3oLab8Rs36lBXKL6XKqr48PkXF+hNVTQPoiy5ssHyEgupwrm4uETKRQ2cmc4jH513odttGNiAdKlHoEBVMUSq123Hozx/dqBHLarhvAMAVlA4IFwAAAAQBACdASoUABQAPyF2slOtJySit+gBoCQJaQAAefpaHl6NNxA3fRawAAD+m9dDH6Um+X9iIcHtsVovI9ACPYUfme10KXrjRouqiGbwf25X/BI5t7c74M+DQAAAAA==",
+    "category": "icon",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/x-icon-26x26-1kb.webp 26w"
+  },
+  {
+    "key": "ivm",
+    "src": "/images/ivm.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "IVM treatment at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoUAA8APzmEuVOvKKWisAgB4CcJbACdMoRwABhjGONUBDEvUAD33rPUYoctSY1bX3kUfFoOJyBZbWu5jCn653K9x+4tAs5ayE4vVU0yxWlr9Ixq0rXkIPH5/t2MLpvejvoHvD0/3hDBglSHXngfStKT5CqDcREgACclcXW5Ajl6XAXZia/d83RXg9hDIUaAAAA=",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/ivm-286x210-22kb.webp 286w"
+  },
+  {
+    "key": "pgs",
+    "src": "/images/pgs.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "PGS screening at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwAwCdASoUAA8APzmEuVOvKKWisAgB4CcJagCw7BLZBMwoAA+sJgD9rdd3QAbg9kbz34XK9AcvNFH9tz6w5GSn67ZVVFFH+9y0SHDEpXS6hIM1f0s45LFXCBGsd9E4B/4AAA==",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pgs-286x210-18kb.webp 286w"
+  },
+  {
+    "key": "pgd",
+    "src": "/images/pgd.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "PGD diagnostic at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoUAA8APzmEuVOvKKWisAgB4CcJZgCdLwABZEhOsYXKAAD3Spt2E1Ag+pJFAZ1fBBXfGCcNrfrbQ1JyUM3SNDqcNFtTvodgS4obuiIA",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pgd-286x210-24kb.webp 286w"
+  },
+  {
+    "key": "sperm-freezing",
+    "src": "/images/sperm-freezing.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "Sperm freezing services at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoUAA8APzmEuVOvKKWisAgB4CcJbACw/f/gJBUPMjGP3dEgAP4zIlLcS6HSTbzkraUwjze5ufzgsZM1GlklIOzoSVqNGp7V3AdPWgD5mtqczfZcsvJvn2SCZtIIZFDV8+0fUiTjZYMHNZ2mZWmgG3A1gAA=",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/sperm-freezing-286x210-18kb.webp 286w"
+  },
+  {
+    "key": "fbgs",
+    "src": "/images/fbgs.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "Family Balance Gender Selection at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoUAA8APzmEuVOvKKWisAgB4CcJbACdMoABO1MnK7QAANt4TxgPWOqGTZh644WnCxd6bRZCWn8HbkTgxNuq1Ff83PI/sibIoOFFU3CDAvtjTq5Mb4uAAA==",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fbgs-286x210-18kb.webp 286w"
+  },
+  {
+    "key": "ovulation-induction",
+    "src": "/images/ovulation-induction.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "Ovulation induction at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACQAwCdASoUAA8APzmEuVOvKKWisAgB4CcJZACdABd2Pa4dKD8AAPiOPC++RnllJhZp6rO56iZyLux8hV5Tc7MCkulx6YLL8XwP5/6jq4WJosAA",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/ovulation-induction-286x210-14kb.webp 286w"
+  },
+  {
+    "key": "intrauterine-insemination",
+    "src": "/images/intrauterine-insemination.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "Intrauterine insemination at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQBACdASoUAA8APzmEuVOvKKWisAgB4CcJZACdMoADTOUE3iFHOV6DwAD9C23NLSbtQZlOz1WeWMNJgbrgh3e9t6inIAQA",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/intrauterine-insemination-286x210-16kb.webp 286w"
+  },
+  {
+    "key": "recurrent-miscarriage",
+    "src": "/images/recurrent-miscarriage.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "Recurrent miscarriage support at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoUAA8APzmGuVOvKSWisAgB4CcJaACdMoABeE44IeqAAP7RpJwksJAvyjWm9ZsNzWtNtcXOWELYg2eCnRTsMU4wAnjmf3bs+36/XzwszWdaXTGxw/3AAA==",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/recurrent-miscarriage-286x210-35kb.webp 286w"
+  },
+  {
+    "key": "antenatal-care",
+    "src": "/images/antenatal-care-deliveries.jpg",
+    "width": 286,
+    "height": 210,
+    "sizes": "(max-width: 768px) 50vw, 286px",
+    "alt": "Antenatal care and deliveries at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoUAA8APzmEuVOvKKWisAgB4CcJbACdMoMh1EmnpCmG4E+Ie+kbTwAAy0LfVtswKP1gtlLh7bErjnwql5DURY/Mn/3s92ZDRYvR2i/3oeqnEfi0WgbBJ3LgB6tEbNl7ueG5BRmKoLUzUPyeJldi3JSM2b1hPAjTObcoAA==",
+    "category": "service",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/antenatal-care-286x210-21kb.webp 286w"
+  },
+  {
+    "key": "ivf-cycles",
+    "src": "/images/national-day/ivf-cycles.jpg",
+    "width": 450,
+    "height": 380,
+    "sizes": "(max-width: 768px) 100vw, 450px",
+    "alt": "IVF/ICSI Cycles offer at Bnoon",
+    "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoUABEAPzmSv1mvKaajqAgB4CcJZQDG9BaiMjg/3cAA/uWr5NsC/31ov9Dv2z4aesbWKLXVj53mqoLgkim+M3/3IlwAAAAA",
+    "category": "campaign",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/ivf-cycles-450x380-25kb.webp 450w"
+  },
+  {
+    "key": "pdf-1",
+    "src": "/pdf/pdf-1.jpg",
+    "width": 1000,
+    "height": 1400,
+    "sizes": "(max-width: 768px) 95vw, 900px",
+    "alt": "Patient Rights page 1",
+    "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA",
+    "category": "misc",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pdf-1-576x806-116kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pdf-1-1000x1400-273kb.webp 1000w"
+  },
+  {
+    "key": "pdf-2",
+    "src": "/pdf/pdf-2.jpg",
+    "width": 1000,
+    "height": 1400,
+    "sizes": "(max-width: 768px) 95vw, 900px",
+    "alt": "Patient Rights page 2",
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwAwCdASoUABwAPzmUwVmvKicjqAgB4CcJZQDG9BaiJefhHkAA/uyt1reqkMoIwV9i+aVPuIMt9iIH83Gwl4PEWZu59H7p5FknZEWcPf8ngAAA",
+    "category": "misc",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pdf-2-576x806-126kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pdf-2-1000x1400-293kb.webp 1000w"
+  },
+  {
+    "key": "shape-services",
+    "src": "/images/services/shape.png",
+    "width": 159,
+    "height": 135,
+    "sizes": "159px",
+    "alt": "Decorative shape",
+    "blurDataURL": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4WAoAAAAQAAAAEwAAEAAAQUxQSHcAAAABuTJE9D80bhtJchxqkX+wWpOvP4B+vD1Ym4exCQYgzYgJmIBBboeW/sCJbWxz19bEkSXZiMw9jY1AkMBZB/4kI1tCGQ6mwJJNzrdSQoRkZwUphRCWcnSvDxjZ7yze8elNbEWQR4+kzrbyeK3feVP4uSLKdCntCABWUDggMAAAAFADAJ0BKhQAEQA/HXKuU60mpCK36AGgI4lpAACI5gNVhyYQAP7tM5/jOhfcjoAAAA==",
+    "category": "misc",
+    "cdnSrcSet": "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/shape-services-159x135-1kb.webp 159w"
+  }
+]

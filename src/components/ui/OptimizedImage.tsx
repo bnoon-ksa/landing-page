@@ -1,7 +1,10 @@
-import Image, { type ImageProps } from "next/image";
-import { IMAGE_MANIFEST } from "@/lib/image-manifest";
+import Image, { type ImageProps } from 'next/image';
+import { IMAGE_MANIFEST } from '@/lib/image-manifest';
 
-interface OptimizedImageProps extends Omit<ImageProps, "src" | "alt" | "placeholder" | "blurDataURL"> {
+interface OptimizedImageProps extends Omit<
+  ImageProps,
+  'src' | 'alt' | 'placeholder' | 'blurDataURL'
+> {
   /** Alt text override (defaults to manifest value). */
   readonly alt?: string;
 
@@ -22,6 +25,7 @@ interface OptimizedImageProps extends Omit<ImageProps, "src" | "alt" | "placehol
 
 /**
  * Drop-in `next/image` wrapper that automatically applies:
+ *   - CDN `srcSet` delivery when the manifest has `cdnSrcSet` (bypasses `/_next/image`)
  *   - `placeholder="blur"` with a pre-generated LQIP data URI
  *   - Responsive `sizes` attribute from the manifest
  *
@@ -36,6 +40,10 @@ export default function OptimizedImage({
   alt: altProp,
   width: widthProp,
   height: heightProp,
+  className,
+  loading,
+  priority,
+  style: styleProp,
   ...rest
 }: OptimizedImageProps) {
   const entry = IMAGE_MANIFEST[imageName];
@@ -43,9 +51,9 @@ export default function OptimizedImage({
   // ── Fallback: key not in manifest ─────────────────────────────────
   if (!entry) {
     if (!fallbackSrc) {
-      if (process.env.NODE_ENV === "development") {
+      if (process.env.NODE_ENV === 'development') {
         console.warn(
-          `[OptimizedImage] "${imageName}" not found in manifest and no fallbackSrc provided.`
+          `[OptimizedImage] "${imageName}" not found in manifest and no fallbackSrc provided.`,
         );
       }
       return null;
@@ -54,28 +62,70 @@ export default function OptimizedImage({
     return (
       <Image
         src={fallbackSrc}
-        alt={altProp ?? ""}
+        alt={altProp ?? ''}
         width={widthProp}
         height={heightProp}
         sizes={sizesProp}
+        className={className}
+        loading={loading}
+        priority={priority}
+        style={styleProp}
         {...rest}
       />
     );
   }
 
-  // ── Manifest hit — apply blur + sizes ─────────────────────────────
-  const blurProps: Pick<ImageProps, "placeholder" | "blurDataURL"> =
-    entry.blurDataURL
-      ? { placeholder: "blur", blurDataURL: entry.blurDataURL }
+  const resolvedAlt = altProp ?? entry.alt;
+  const resolvedWidth = widthProp ?? entry.width;
+  const resolvedHeight = heightProp ?? entry.height;
+  const resolvedSizes = sizesProp ?? entry.sizes;
+
+  // ── CDN path: native <img> with srcSet ────────────────────────────
+  if (entry.cdnSrcSet) {
+    const blurStyle: React.CSSProperties = entry.blurDataURL
+      ? {
+          backgroundImage: `url(${entry.blurDataURL})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }
       : {};
+
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        srcSet={entry.cdnSrcSet}
+        sizes={resolvedSizes}
+        src={entry.cdnSrcSet.split(', ').pop()?.split(' ')[0]}
+        alt={resolvedAlt}
+        width={typeof resolvedWidth === 'number' ? resolvedWidth : undefined}
+        height={typeof resolvedHeight === 'number' ? resolvedHeight : undefined}
+        loading={priority ? undefined : (loading ?? 'lazy')}
+        decoding="async"
+        className={className as string}
+        style={{ ...blurStyle, ...styleProp }}
+        data-testid="cdn-img"
+        {...rest}
+      />
+    );
+  }
+
+  // ── Standard next/image path ──────────────────────────────────────
+  const blurProps: Pick<ImageProps, 'placeholder' | 'blurDataURL'> = entry.blurDataURL
+    ? { placeholder: 'blur', blurDataURL: entry.blurDataURL }
+    : {};
 
   return (
     <Image
       src={entry.src}
-      alt={altProp ?? entry.alt}
-      width={widthProp ?? entry.width}
-      height={heightProp ?? entry.height}
-      sizes={sizesProp ?? entry.sizes}
+      alt={resolvedAlt}
+      width={resolvedWidth}
+      height={resolvedHeight}
+      sizes={resolvedSizes}
+      className={className}
+      loading={loading}
+      priority={priority}
+      style={styleProp}
       {...blurProps}
       {...rest}
     />

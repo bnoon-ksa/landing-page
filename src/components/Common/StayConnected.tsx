@@ -1,35 +1,34 @@
-"use client"; // Client-side component for form handling
+'use client'; // Client-side component for form handling
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const HowItWorks = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
- const handleContact = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+  const handleContact = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  try {
-    const res = await fetch("/api/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (data.success) {
-      setMessage("✅ Thank you for subscribing!");
-      setEmail("");
-    } else {
-      setMessage("❌ " + (data.error || "Something went wrong"));
+      if (data.success) {
+        setMessage('✅ Thank you for subscribing!');
+        setEmail('');
+      } else {
+        setMessage('❌ ' + (data.error || 'Something went wrong'));
+      }
+    } catch (err) {
+      console.error(err);
+      setMessage('⚠️ Server error. Please try again later.');
     }
-  } catch (err) {
-    console.error(err);
-    setMessage("⚠️ Server error. Please try again later.");
-  }
-};
-
+  };
 
   return (
     <div className="stay-area ptb-140 pt-5">
@@ -45,8 +44,8 @@ const HowItWorks = () => {
             <div className="col-lg-12">
               <div className="right">
                 <p>
-                  Want to be the first to hear from us about new doctors,
-                  service updates, announcements, and expert health insights?
+                  Want to be the first to hear from us about new doctors, service updates,
+                  announcements, and expert health insights?
                 </p>
               </div>
             </div>
@@ -73,10 +72,7 @@ const HowItWorks = () => {
                   />
 
                   {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="btn btn-primary px-5 py-2 rounded-lg mail-btn"
-                  >
+                  <button type="submit" className="btn btn-primary px-5 py-2 rounded-lg mail-btn">
                     Submit
                   </button>
                 </div>
@@ -85,28 +81,22 @@ const HowItWorks = () => {
             </div>
 
             {/* ✅ P Below Form */}
-                 <p className="mt-3 ">
-  You can unsubscribe at any time by emailing<br />
- <a 
-  href="mailto:communications@bnoon.sa" 
-  className="email-link"
->
-  communications@bnoon.sa
-</a>
-
-</p>
-
-            
+            <p className="mt-3 ">
+              You can unsubscribe at any time by emailing
+              <br />
+              <a href="mailto:communications@bnoon.sa" className="email-link">
+                communications@bnoon.sa
+              </a>
+            </p>
           </div>
         </div>
       </div>
-           {/* ✅ CSS in same page */}
+      {/* ✅ CSS in same page */}
       <style jsx>{`
-      a.email-link {
-    color: #404040;
-    text-decoration: underline !important;
-}
-      
+        a.email-link {
+          color: #404040;
+          text-decoration: underline !important;
+        }
       `}</style>
     </div>
   );

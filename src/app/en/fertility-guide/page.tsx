@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/Layout/PageBanner";
-import Navbar from "@/components/Layout/Navbar";
-import FertilityTabs from "@/components/Common/FertilityTabs";
-import CustomList from "@/components/Common/CustomList";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/Layout/Navbar';
+import FertilityTabs from '@/components/Common/FertilityTabs';
+import CustomList from '@/components/Common/CustomList';
 
 export const metadata: Metadata = {
-  title: "Bnoon - All Your Need to Know About Your Fertility ",
-  description: "A comprehensive fertility guide from Bnoon. Reliable medical information on causes of infertility, available treatments, and tips to improve conception.",
+  title: 'Bnoon - All Your Need to Know About Your Fertility ',
+  description:
+    'A comprehensive fertility guide from Bnoon. Reliable medical information on causes of infertility, available treatments, and tips to improve conception.',
 };
 
 export default function FertilityGuidePage() {
@@ -15,10 +16,8 @@ export default function FertilityGuidePage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="/images/fertility-guid-banner.jpg" />
-     <FertilityTabs />
-
-     
+      <OptimizedPageBanner imageName="fertility-guide-banner" />
+      <FertilityTabs />
     </>
   );
 }

@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/Layout/PageBanner";
-import Navbar from "@/components/Layout/Navbar";
-import TreatmentsSection from "@/components/Common/TreatmentsSection";
-import TreatmentsTabs from "@/components/Common/TreatmentsTabs";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/Layout/Navbar';
+import TreatmentsSection from '@/components/Common/TreatmentsSection';
+import TreatmentsTabs from '@/components/Common/TreatmentsTabs';
 
 export const metadata: Metadata = {
-  title: "Bnoon- IVF, ICSI, Male Infertility, PGT, Gyne Laproscopy|KSA ",
-  description: "Explore Bnoon's fertility treatments: IVF, ICSI, male infertility, preimplantation genetic testing, and gynecological laparoscopy in Saudi Arabia.",
+  title: 'Bnoon- IVF, ICSI, Male Infertility, PGT, Gyne Laproscopy|KSA ',
+  description:
+    "Explore Bnoon's fertility treatments: IVF, ICSI, male infertility, preimplantation genetic testing, and gynecological laparoscopy in Saudi Arabia.",
 };
 
 export default function TreatmentsPage() {
@@ -15,9 +16,9 @@ export default function TreatmentsPage() {
       <Navbar />
 
       {/* PageBanner with static content */}
-      <PageBanner bgImage="/images/treatments-banner.jpg" />
+      <OptimizedPageBanner imageName="treatments-banner" />
       <TreatmentsSection />
-     <TreatmentsTabs />
+      <TreatmentsTabs />
     </>
   );
 }

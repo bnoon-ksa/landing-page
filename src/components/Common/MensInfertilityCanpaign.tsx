@@ -1,32 +1,31 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { PhoneIcon } from '@/components/icons';
 
 const NationalDayOffer = () => {
-  const leftCardImg = "/images/national-day/men-infertility.jpg";
-
   const includesList = [
-    "Ovulation monitoring via ultrasound",
-    "Hormonal tests during treatment cycle",
+    'Ovulation monitoring via ultrasound',
+    'Hormonal tests during treatment cycle',
   ];
 
-  const excludesList = ["Medications", "Genetic Testing"];
+  const excludesList = ['Medications', 'Genetic Testing'];
 
   return (
     <div className="founding-offer-page">
       <section className="offer-section">
         <div className="container">
-          {/* ✅ CARD */}
+          {/* CARD */}
           <div className="offer-card">
             <div className="row g-0 align-items-stretch">
-              {/* ✅ IMAGE (Desktop left, Mobile bottom) */}
+              {/* IMAGE (Desktop left, Mobile bottom) */}
               <div className="col-lg-6 col-md-6 order-2 order-lg-1 mb-3">
                 <div className="left-img-wrap">
                   <div className="img-shadow-box ">
-                    <Image
-                      src={leftCardImg}
+                    <OptimizedImage
+                      imageName="men-infertility"
                       alt="IVF/ICSI Offer"
                       width={900}
                       height={700}
@@ -36,12 +35,14 @@ const NationalDayOffer = () => {
                 </div>
               </div>
 
-              {/* ✅ CONTENT (Desktop right, Mobile top) */}
+              {/* CONTENT (Desktop right, Mobile top) */}
               <div className="col-lg-6 col-md-6 order-1 order-lg-2">
                 <div className="right-content">
                   <div className="offer-heading-block">
                     <h2 className="offer-title">
-                      <span className="offer-strong">Discount on Andrology & Men’s Infertility Treatments </span>
+                      <span className="offer-strong">
+                        Discount on Andrology & Men&apos;s Infertility Treatments{' '}
+                      </span>
                     </h2>
 
                     <div className="offer-subtitle">
@@ -50,18 +51,15 @@ const NationalDayOffer = () => {
                   </div>
 
                   <p className="offer-desc">
-                   Celebrating Saudi Founding Day, we’re pleased to offer <strong>20% OFF*</strong> on Andrology & Men’s Infertility Treatments at Bnoon in Jeddah and Riyadh, {" "}
-                  
+                    Celebrating Saudi Founding Day, we&apos;re pleased to offer{' '}
+                    <strong>20% OFF*</strong> on Andrology & Men&apos;s Infertility Treatments at
+                    Bnoon in Jeddah and Riyadh,{' '}
                   </p>
-
-               
-
-                
 
                   <p className="dates">
                     The offer is valid from <strong> February 12 to March 2, 2026</strong>.
                     <br />
-                   The offer is not applicable on consultations.  
+                    The offer is not applicable on consultations.
                   </p>
 
                   <div className="cta-row">
@@ -76,37 +74,33 @@ const NationalDayOffer = () => {
                     </span>
                   </div>
 
-                  {/* ✅ Phones */}
+                  {/* Phones */}
                   <div className="phones">
                     <div className="phone-col">
                       <div className="phone-item">
-                        <Image
-                          src="/images/icons/phone.svg"
-                          alt="Phone"
+                        <PhoneIcon
                           width={14}
                           height={14}
                           className="phone-icon"
+                          style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
-                          <span className="phone-label">Bnoon – Jeddah:</span> 012 680 0800  
+                          <span className="phone-label">Bnoon – Jeddah:</span> 012 680 0800
                         </span>
                       </div>
 
                       <div className="phone-item">
-                        <Image
-                          src="/images/icons/phone.svg"
-                          alt="Phone"
+                        <PhoneIcon
                           width={14}
                           height={14}
                           className="phone-icon"
+                          style={{ color: 'rgb(0,78,120)' }}
                         />
                         <span>
-                          <span className="phone-label">Bnoon – Riyadh:</span> 0114448080 
+                          <span className="phone-label">Bnoon – Riyadh:</span> 0114448080
                         </span>
                       </div>
                     </div>
-
-                 
                   </div>
 
                   <div className="spacer" />
@@ -129,9 +123,8 @@ const NationalDayOffer = () => {
           overflow: hidden;
         }
 
-        /* ✅ IMAGE WRAP (same as Arabic design) */
+        /* IMAGE WRAP (same as Arabic design) */
         .left-img-wrap {
-         
           display: flex;
           align-items: center;
           justify-content: center;
@@ -145,7 +138,7 @@ const NationalDayOffer = () => {
           max-width: 520px;
           width: 100%;
           background: #fff;
-          margin:20px 0px 60px 60px;
+          margin: 20px 0px 60px 60px;
         }
 
         .left-img {
@@ -155,7 +148,7 @@ const NationalDayOffer = () => {
           object-fit: cover;
         }
 
-        /* ✅ CONTENT */
+        /* CONTENT */
         .right-content {
           padding: 78px 28px 22px;
           height: 100%;
@@ -180,7 +173,7 @@ const NationalDayOffer = () => {
           font-weight: 700;
           letter-spacing: 1px;
           padding: 0px 0px 5px;
-    font-size: 16px;
+          font-size: 16px;
         }
 
         .locations {
@@ -320,7 +313,7 @@ const NationalDayOffer = () => {
           align-items: center;
           gap: 8px;
           margin-bottom: 6px;
-          font-size:16px;
+          font-size: 16px;
         }
 
         .phone-icon {
@@ -336,10 +329,10 @@ const NationalDayOffer = () => {
           height: 4px;
         }
 
-        /* ✅ Mobile */
+        /* Mobile */
         @media (max-width: 767px) {
           .left-img-wrap {
-            padding: 18px 16px 50px 40px
+            padding: 18px 16px 50px 40px;
           }
 
           .img-shadow-box {
@@ -347,9 +340,9 @@ const NationalDayOffer = () => {
             max-width: 100%;
             margin: 0px 0px 6px 0px;
           }
-.offer-strong{
-font-size: 16px;
-}
+          .offer-strong {
+            font-size: 16px;
+          }
           .right-content {
             padding: 18px 16px 16px;
           }
@@ -361,27 +354,27 @@ font-size: 16px;
           .brand-name {
             font-size: 14px;
           }
-.offer-desc{
-font-size: 14px !important;
-}
-.dates{
-font-size: 14px !important;
-}
-.terms{
-font-size: 14px;
-}
+          .offer-desc {
+            font-size: 14px !important;
+          }
+          .dates {
+            font-size: 14px !important;
+          }
+          .terms {
+            font-size: 14px;
+          }
           .locations {
             font-size: 14px;
           }
-.phone-item{
-font-size: 14px;
-}
+          .phone-item {
+            font-size: 14px;
+          }
           .phones {
             grid-template-columns: 1fr;
           }
         }
 
-        /* ✅ iPad Mini / iPad */
+        /* iPad Mini / iPad */
         @media (min-width: 768px) and (max-width: 1024px) {
           .offer-title {
             font-size: 22px;
@@ -397,7 +390,3 @@ font-size: 14px;
 };
 
 export default NationalDayOffer;
-
-
-
-

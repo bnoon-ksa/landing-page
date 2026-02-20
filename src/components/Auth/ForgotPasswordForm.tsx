@@ -1,13 +1,12 @@
-"use client";
-import React from "react";
-import Link from "next/link";
-import { redirect } from "next/navigation";
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
 
 async function handleForgot(formData: FormData) {
-  
-  const email = String(formData.get("email") || "").trim();
+  const email = String(formData.get('email') || '').trim();
   // TODO: Implement sending reset email
-  redirect("/thank-you");
+  redirect('/thank-you');
 }
 
 const ForgotPasswordForm = () => {
@@ -19,19 +18,18 @@ const ForgotPasswordForm = () => {
             <div className="content">
               <h3>Forgot Password</h3>
               <p>
-                Enter your email address below and we&apos;ll send you a link to
-                reset your password.
+                Enter your email address below and we&apos;ll send you a link to reset your
+                password.
               </p>
               <div className="info-text">
                 <p>
-                  Make sure you enter the email address associated with your
-                  account. If you no longer have access to that email, please
-                  contact our <Link href="/contact-us">support team</Link> for
-                  help recovering your account.
+                  Make sure you enter the email address associated with your account. If you no
+                  longer have access to that email, please contact our{' '}
+                  <Link href="/contact-us">support team</Link> for help recovering your account.
                 </p>
                 <p>
-                  We take your security seriously. Your information is protected
-                  and will never be shared.
+                  We take your security seriously. Your information is protected and will never be
+                  shared.
                 </p>
               </div>
             </div>

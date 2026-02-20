@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/ar/Layout/PageBanner";
-import Navbar from "@/components/ar/Layout/Navbar";
-import AppointmentSection from "@/components/ar/Common/AppointmentSection";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/ar/Layout/Navbar';
+import AppointmentSection from '@/components/ar/Common/AppointmentSection';
 
 export const metadata: Metadata = {
-  title: "طلب موعد مع طبيب – بنون في الرياض وجدة ",
-  description: "احجزوا موعدكم مع أطباء بنون في الرياض أو جدة أو الأحساء. حجز سهل وسريع لاستشارات الإخصاب وصحة المرأة.",
+  title: 'طلب موعد مع طبيب – بنون في الرياض وجدة ',
+  description:
+    'احجزوا موعدكم مع أطباء بنون في الرياض أو جدة أو الأحساء. حجز سهل وسريع لاستشارات الإخصاب وصحة المرأة.',
 };
 
 export default function RequestAppointmentPage() {
@@ -13,7 +14,7 @@ export default function RequestAppointmentPage() {
     <>
       <Navbar />
 
-      <PageBanner bgImage="/images/request-an-appointment-ar.jpg" />
+      <OptimizedPageBanner imageName="request-appointment-banner-ar" />
 
       <AppointmentSection />
     </>

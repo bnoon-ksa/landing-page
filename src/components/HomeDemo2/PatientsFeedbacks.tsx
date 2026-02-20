@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper/modules";
+import React from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 // Define types for our data
 interface FeedbackItem {
@@ -13,14 +13,14 @@ interface FeedbackItem {
   comment: string;
   patientName: string;
   location: string;
-  image: string;
+  imageName: string;
 }
 
 interface FeedbackStats {
   satisfactionRate: number;
   reviewCount: string;
   platform: string;
-  platformImage: string;
+  platformImageName: string;
 }
 
 interface PatientsFeedbacksProps {
@@ -99,18 +99,13 @@ function PatientsFeedbacks({
                   <span>Patient Satisfaction</span>
                 </div>
                 <div className="image">
-                  <Image
-                    src="/images/feedback/rating.png"
-                    alt="rating"
-                    width={185}
-                    height={183}
-                  />
+                  <OptimizedImage imageName="feedback-rating" alt="rating" />
                 </div>
                 <div className="review">
                   <div className="left">
                     <span>Review on</span>
-                    <Image
-                      src={stats.platformImage}
+                    <OptimizedImage
+                      imageName={stats.platformImageName}
                       alt={stats.platform}
                       width={73}
                       height={22}
@@ -122,12 +117,7 @@ function PatientsFeedbacks({
                   </div>
                 </div>
                 <div className="wrap-shape">
-                  <Image
-                    src="/images/feedback/shape.png"
-                    alt="shape"
-                    width={170}
-                    height={156}
-                  />
+                  <OptimizedImage imageName="feedback-shape" alt="shape" />
                 </div>
               </div>
             </div>
@@ -152,8 +142,8 @@ function PatientsFeedbacks({
                       </p>
                       <div className="info">
                         <div className="image">
-                          <Image
-                            src={feedback.image}
+                          <OptimizedImage
+                            imageName={feedback.imageName}
                             alt={feedback.patientName}
                             width={57}
                             height={57}
@@ -183,27 +173,27 @@ const defaultFeedbacks: FeedbackItem[] = [
     rating: 4.5,
     comment:
       "I honestly didn't expect virtual healthcare to feel this personal. The doctor took the time to listen to every concern I had and explained things in a way I could understand. It felt just like sitting in a clinic—except I never had to leave my flat. Doutor is the future of healthcare.",
-    patientName: "Emily Robinson",
-    location: "London, UK",
-    image: "/images/users/user1.png",
+    patientName: 'Emily Robinson',
+    location: 'London, UK',
+    imageName: 'user-1',
   },
   {
     id: 2,
     rating: 4.5,
     comment:
       "I honestly didn't expect virtual healthcare to feel this personal. The doctor took the time to listen to every concern I had and explained things in a way I could understand. It felt just like sitting in a clinic—except I never had to leave my flat. Doutor is the future of healthcare.",
-    patientName: "Carlos Martínez",
-    location: "Madrid, Spain",
-    image: "/images/users/user2.png",
+    patientName: 'Carlos Martínez',
+    location: 'Madrid, Spain',
+    imageName: 'user-2',
   },
   // Add more default feedback items as needed
 ];
 
 const defaultStats: FeedbackStats = {
   satisfactionRate: 99,
-  reviewCount: "1500+",
-  platform: "Clutch",
-  platformImage: "/images/feedback/clutch.png",
+  reviewCount: '1500+',
+  platform: 'Clutch',
+  platformImageName: 'feedback-clutch',
 };
 
 export default PatientsFeedbacks;

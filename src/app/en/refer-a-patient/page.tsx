@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/Layout/PageBanner";
-import Navbar from "@/components/Layout/Navbar";
-import ReferaPatient from "@/components/Common/ReferaPatient";
-import { CDN_URL } from "../../../utils/cdn";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/Layout/Navbar';
+import ReferaPatient from '@/components/Common/ReferaPatient';
+import { CDN_URL } from '../../../utils/cdn';
 export const metadata: Metadata = {
-  title: "Refer a Patient – Bnoon | Riyadh & Jeddah",
-  description: "Learn about Bnoon, Saudi Arabia's leading fertility and women's health network. Advanced IVF and reproductive medicine across Riyadh, Jeddah, and Al Ahsa.",
+  title: 'Refer a Patient – Bnoon | Riyadh & Jeddah',
+  description:
+    "Learn about Bnoon, Saudi Arabia's leading fertility and women's health network. Advanced IVF and reproductive medicine across Riyadh, Jeddah, and Al Ahsa.",
 };
 
 export default function ReferaPatientPage() {
@@ -13,10 +14,8 @@ export default function ReferaPatientPage() {
     <>
       <Navbar />
 
-        <PageBanner bgImage="/images/refer-a-paitent.jpg" />
+      <OptimizedPageBanner imageName="refer-patient-banner" />
       <ReferaPatient />
-     
     </>
   );
 }
-

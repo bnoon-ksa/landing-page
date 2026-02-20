@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import CustomList from "@/components/Common/CustomList";
-import Image from "next/image";
+import React, { useState, useEffect } from 'react';
+import CustomList from '@/components/Common/CustomList';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 interface TabContent {
   text: string;
-  image: string;
+  imageName: string;
   bottomText: string;
   bottomTextList?: string[];
   secondlist?: string[];
@@ -31,32 +31,32 @@ interface TabContent {
 const tabToHash = (tab: string) =>
   tab
     .toLowerCase()
-    .replace(/[’']/g, "")   // apostrophe remove
-    .replace(/\s+/g, "-");  // spaces → dash
+    .replace(/[’']/g, '') // apostrophe remove
+    .replace(/\s+/g, '-'); // spaces → dash
 
 const FertilityTabs: React.FC = () => {
   const tabs = [
-    "Helpful Tips for Fertility",
-    "Foods that Boost Fertility",
-    "Causes of Male Infertility",
-    "Causes of Female Infertility",
-    "Woman’s Biologic Clock",
-    "Ovulatory Dysfunction",
-    "Endometriosis",
-    "Ovarian Cysts",
-    "Uterine Fibroids & Infertility",
-    "Recurrent Miscarriage",
-    "Recurrent IVF Failure",
+    'Helpful Tips for Fertility',
+    'Foods that Boost Fertility',
+    'Causes of Male Infertility',
+    'Causes of Female Infertility',
+    'Woman’s Biologic Clock',
+    'Ovulatory Dysfunction',
+    'Endometriosis',
+    'Ovarian Cysts',
+    'Uterine Fibroids & Infertility',
+    'Recurrent Miscarriage',
+    'Recurrent IVF Failure',
   ];
 
   const tabContents: Record<string, TabContent> = {
-    "Helpful Tips for Fertility": {
+    'Helpful Tips for Fertility': {
       text: `
         It should come as no surprise that the lifestyle you lead directly affects your fertility. From making healthy lifestyle choices to supplementing your intake of important nutrients, there are many things you can do outside of the clinic to improve and maintain your chances of becoming pregnant.
         Whether you are in the beginning stages of family planning or are currently seeking assistance from a fertility clinic, simple lifestyle adjustments and extra daily supplements can promote fertility.
         There are several important changes you and your partner can make before and during fertility treatments to increase the chance of successful conception. We recommend making these lifestyle modifications if you are considering becoming pregnant.
       `,
-      image: "/images/fertility-guide/Helpful-Tips-for-Fertility.avif",
+      imageName: 'fertility-helpful-tips',
       bottomText: `
         <strong>​ALCOHOL</strong><br />Avoid alcohol use. Alcohol has been shown to cause birth defects in fetuses. In addition, patients who drink have a decrease in fertility rates, particularly with IVF and miscarriage rates have been shown to double compared to those who don’t drink alcohol. This has also similar effect on your husband.<br /><br />
         <strong>SMOKING</strong><br />Stop smoking and stay away from anyone who is smoking. Smoking has been implicated in infertility and earlier menopause. Smoking reduces success with IVF by about 50% and passive smoking has similar effects. This has also similar effect on your husband.<br /><br />
@@ -65,13 +65,13 @@ const FertilityTabs: React.FC = () => {
         <strong>Exercise for Enhancing Fertility</strong> <br />A healthy lifestyle where exercise is routine aids in successful conception in both men and women. Choose a moderate and consistent exercise routine that you can stick with. Since strenuous exercise can have a negative impact on achieving a successful pregnancy for the female. Moderate aerobic activities are advisable. Exercise enough to raise your heart rate, which decreases oxidative stress and increases blood flow without fully taxing your body.
       `,
       secondlist: [
-        "Walking – Brisk, 30-minute walks 5-6 times per week burn calories and increase blood flow without stressing the body too harshly.",
-        "Swimming – This whole-body workout strengthens your core without placing too much stress on your joints. Keep an eye on your pace; your goal is to maintain a comfortable rhythm for at least 20 minutes that leaves you feeling invigorated, not gasping for breath.",
-        "Other Light Cardio – Light elliptical workouts, easy bicycling, or slow jogging are all great ways to get your heart pumping. But keep your resistance and speed moderate; a good pace is when you can still hold a full conversation during your workout."
+        'Walking – Brisk, 30-minute walks 5-6 times per week burn calories and increase blood flow without stressing the body too harshly.',
+        'Swimming – This whole-body workout strengthens your core without placing too much stress on your joints. Keep an eye on your pace; your goal is to maintain a comfortable rhythm for at least 20 minutes that leaves you feeling invigorated, not gasping for breath.',
+        'Other Light Cardio – Light elliptical workouts, easy bicycling, or slow jogging are all great ways to get your heart pumping. But keep your resistance and speed moderate; a good pace is when you can still hold a full conversation during your workout.',
       ],
     },
 
-    "Foods that Boost Fertility": {
+    'Foods that Boost Fertility': {
       text: `
         Changing your diet can increase your fertility and can positively affect your chances of becoming pregnant. There are several foods you can add or remove from your diet that can impact your overall chances of becoming pregnant.<br /><br />
         <strong>THINGS TO EAT AND THINGS TO AVOID</strong><br />
@@ -79,18 +79,18 @@ const FertilityTabs: React.FC = () => {
         Overcooking foods should be avoided.<br />
         Many delicious foods are high in antioxidants and should be incorporated into your regular diet. Here are some other popular foods that have naturally high antioxidant content:
       `,
-      image: "/images/fertility-guide/Foods-that-Boost-Fertility.avif",
+      imageName: 'fertility-foods-boost',
       bottomText: ``,
       secondlist: [
-        "Blackberries",
-        "Blueberries",
-        "Strawberries",
-        "Pomegranates",
-        "Cranberries",
-        "Raspberries",
-        "Dark chocolate (low sugar)",
-        "Artichokes (cooked)",
-        "Spices (ex. ginger, oregano, turmeric, cumin)"
+        'Blackberries',
+        'Blueberries',
+        'Strawberries',
+        'Pomegranates',
+        'Cranberries',
+        'Raspberries',
+        'Dark chocolate (low sugar)',
+        'Artichokes (cooked)',
+        'Spices (ex. ginger, oregano, turmeric, cumin)',
       ],
       secondText: `<strong>GREEN </strong>
       <br />
@@ -103,24 +103,24 @@ const FertilityTabs: React.FC = () => {
       Other nutritional supplements have antioxidant properties and increase blood flow, helping to promote healthy conditions for eggs and embryos.
       `,
       extraList: [
-        "Prenatal vitamin tablets are good idea to use few months before thinking of infertility treatment.",
-        "Omega-3 may improve success in embryo implantation, decrease premature labor and have positive effects on fetal brain development.",
-        "Folic acid is found naturally in dark, leafy greens (i.e., spinach, broccoli, avocado, and fortified cereals). Prenatal vitamins usually contain 400-800 micrograms of Folic Acid per day to reduce the risk of a small, but very important, group of fetal abnormalities (Skull, Spines and heart).",
-      ]
+        'Prenatal vitamin tablets are good idea to use few months before thinking of infertility treatment.',
+        'Omega-3 may improve success in embryo implantation, decrease premature labor and have positive effects on fetal brain development.',
+        'Folic acid is found naturally in dark, leafy greens (i.e., spinach, broccoli, avocado, and fortified cereals). Prenatal vitamins usually contain 400-800 micrograms of Folic Acid per day to reduce the risk of a small, but very important, group of fetal abnormalities (Skull, Spines and heart).',
+      ],
     },
 
-    "Causes of Male Infertility": {
+    'Causes of Male Infertility': {
       text: `
         Similar to female’s contribution to infertility, male infertility factors contribute to approximately 40% of all infertility cases. 
         There are four main causes of infertility in males:<br />
       `,
-      image: "/images/fertility-guide/Causes-of-Male-Infertility.avif",
+      imageName: 'fertility-male-infertility',
       bottomText: ``,
       secondlist: [
-        "Hypothalamic/Pituitary disorders (1-5%)",
-        "Gonad disorders (35%)",
-        "Sperm transport disorder (15%)",
-        "Unknown causes (45%)"
+        'Hypothalamic/Pituitary disorders (1-5%)',
+        'Gonad disorders (35%)',
+        'Sperm transport disorder (15%)',
+        'Unknown causes (45%)',
       ],
       secondText: `
         Male infertility usually occurs because of problems in sperm production or sperm transport. 
@@ -128,104 +128,104 @@ const FertilityTabs: React.FC = () => {
         Sperm abnormalities may be caused by one or more of the following:
       `,
       extraList: [
-        "Inflammation of the testes",
-        "Swollen veins in the scrotum (varicocele)",
-        "Underdeveloped testes",
+        'Inflammation of the testes',
+        'Swollen veins in the scrotum (varicocele)',
+        'Underdeveloped testes',
       ],
       thirdText: `
         Reasons for a low sperm count or lack of sperm include one or more of the followings:
       `,
       thirdList: [
-        "A pre-existing genetic condition",
-        "Use of alcohol, tobacco or other drugs",
-        "Severe mumps infection after puberty",
-        "Hernia repairs",
-        "Hormonal disorders",
-        "Exposure to poisonous chemicals",
-        "Exposure to radiation",
-        "Blockage caused from a previous infection",
-        "Wearing restrictive or tight underwear",
-        "Injury to the groin area"
+        'A pre-existing genetic condition',
+        'Use of alcohol, tobacco or other drugs',
+        'Severe mumps infection after puberty',
+        'Hernia repairs',
+        'Hormonal disorders',
+        'Exposure to poisonous chemicals',
+        'Exposure to radiation',
+        'Blockage caused from a previous infection',
+        'Wearing restrictive or tight underwear',
+        'Injury to the groin area',
       ],
       fourText: `
       Male infertility can also occur when there are problems with ejaculation. Ejaculation problems may include any of the followings:
       `,
-        fourList: [
-        "Premature ejaculation",
-        "Retrograde ejaculation, which occurs when the semen is forced back into the bladder",
-        "Erection dysfunctions",
-        "Complications from radiation therapy or surgery"
-        ],
-         fiveText: `
+      fourList: [
+        'Premature ejaculation',
+        'Retrograde ejaculation, which occurs when the semen is forced back into the bladder',
+        'Erection dysfunctions',
+        'Complications from radiation therapy or surgery',
+      ],
+      fiveText: `
      Other causes of male infertility can include:
       `,
-        fiveList: [
-        "History of STD’s",
-        "Urinary tract infections",
-        "Use of certain types of medications"
-        ],
-         sixText: `
+      fiveList: [
+        'History of STD’s',
+        'Urinary tract infections',
+        'Use of certain types of medications',
+      ],
+      sixText: `
       Assess the likelihood of infertility:<br /><br />
       Potential male infertility will be assessed as part of a thorough evaluation. The evaluation will include reviewing the medical history regarding potential contributing factors. Your Physician (Andrologist) may use one or more of the following tests to assess fertility:
       `,
-        sixList: [
-        "Semen analysis to determine the number and quality of sperm",
-        "Blood test to check for infections or hormone problems. Hormone levels are just as important in male fertility as they are in female fertility",
-        "Making a culture of fluid from the penis to check for infections",
-        "Physical examination of the penis, scrotum and prostate"
+      sixList: [
+        'Semen analysis to determine the number and quality of sperm',
+        'Blood test to check for infections or hormone problems. Hormone levels are just as important in male fertility as they are in female fertility',
+        'Making a culture of fluid from the penis to check for infections',
+        'Physical examination of the penis, scrotum and prostate',
       ],
-           sevenText: `
+      sevenText: `
       When semen analysis is done, your health care provider will be looking for some specific markers to access fertility.
       `,
-        sevenList: [
-        "Total amount or volume of semen – 2 milliliters is considered normal. A lower amount may indicate an issue with the seminal vesicles, blocked ducts or a prostate gland issue.",
-        "Sperm count – 15 million or more per milliliter is considered normal range for sperm counts. Below 10 million is considered “poor.”",
-        "Morphology – the size and shape of the sperm affect the sperms’ ability to reach and fertilize an egg. At least 4% of sperms of normal shape in the sample is considered normal.",
-        "Motility – movement and number of active sperms. At least 32% of sperms should have forward active movement to be considered normal."
+      sevenList: [
+        'Total amount or volume of semen – 2 milliliters is considered normal. A lower amount may indicate an issue with the seminal vesicles, blocked ducts or a prostate gland issue.',
+        'Sperm count – 15 million or more per milliliter is considered normal range for sperm counts. Below 10 million is considered “poor.”',
+        'Morphology – the size and shape of the sperm affect the sperms’ ability to reach and fertilize an egg. At least 4% of sperms of normal shape in the sample is considered normal.',
+        'Motility – movement and number of active sperms. At least 32% of sperms should have forward active movement to be considered normal.',
       ],
-           eightText: `
+      eightText: `
       How is male infertility treated?<br /><br />
       Male infertility is most often treated by conventional methods that include one or more of the following:
       `,
-        eightList: [
-        "Taking medications to help increase sperm production",
-        "Taking antibiotics to heal an infection",
-        "Taking hormones to improve hormone imbalance",
-        "Avoiding taking long hot showers, using hot tubs or saunas",
-        "Wearing looser underwear such as boxer shorts versus jockey shorts"
+      eightList: [
+        'Taking medications to help increase sperm production',
+        'Taking antibiotics to heal an infection',
+        'Taking hormones to improve hormone imbalance',
+        'Avoiding taking long hot showers, using hot tubs or saunas',
+        'Wearing looser underwear such as boxer shorts versus jockey shorts',
       ],
-           nineText: `
+      nineText: `
       Sperm production may also improve by taking clinically proven supplements. Anything that increases the number of healthy sperm increases the chances of conception.<br /><br />
       Intrauterine insemination is an option if the man’s sperm count or movement is slightly low. In this procedure, sperm is collected through multiple ejaculations. Then after washing and concentrating the samples will be placed in the female’s uterus.<br /><br />
       In vitro fertilization is another and better option that can be used to overcome male infertility factors. In this procedure, the sperm and egg are fertilized in a laboratory after which the fertilized egg (formed embryo) is placed in the female’s uterus.<br /><br />
       There is usually nothing that can be done to prevent male infertility caused by genetic problems or illness. However, there are actions that men can take to decrease the possibility of infertility. These include:
       `,
-        nineList: [
-        "Avoiding sexually transmitted diseases",
-        "Avoiding illicit drugs",
-        "Avoiding radiation when possible",
-        "Avoiding exposure to chemicals toxic substances",
-        "Avoiding use of alcohol",
-        "Observing good personal hygiene and health practices",
-        "Avoiding long, hot baths, hot tubs or saunas",
-        "Wearing loose-fitting underwear"
+      nineList: [
+        'Avoiding sexually transmitted diseases',
+        'Avoiding illicit drugs',
+        'Avoiding radiation when possible',
+        'Avoiding exposure to chemicals toxic substances',
+        'Avoiding use of alcohol',
+        'Observing good personal hygiene and health practices',
+        'Avoiding long, hot baths, hot tubs or saunas',
+        'Wearing loose-fitting underwear',
       ],
     },
-    "Causes of Female Infertility": {
+    'Causes of Female Infertility': {
       text: `
        A variety of factors can impact fertility in women and men. Generally speaking, it is recommended that a woman under 35 who has been trying to get pregnant for a year, or a woman over 35 who has been trying for six months, consult with a fertility specialist to determine the best course of action. Women who have had more than three recurrent miscarriages should also seek the care of a specialist. Many women who have had miscarriages go on to have healthy pregnancies, but it could signal a fertility problem. Keep in mind that infertility issues are common, one in eight couples have trouble conceiving.<br />
        Female infertility is quite common, which is not surprising given the complex set of the normal events that must occur in order to give birth. Female infertility factors contribute to approximately 40% of all infertility cases. Normally, a woman’s body must:
       `,
-      image: "/images/fertility-guide/Causes-of-Female-Infertility.avif",
+      imageName: 'fertility-female-infertility',
       bottomText: ``,
       secondlist: [
-        "Have a good reserve of healthy eggs",
-        "Mature the eggs properly within the ovaries at the right time and pace",
-        "Have clear fallopian tubes so that both the egg and sperm can enter and meet",
-        "Develop a normal lining in the uterus at the right time to welcome an embryo",
-        "Allow proper implantation of the embryo",
-        "Fully nourish the fetus throughout its development during pregnancy",
-        "Carry it for the full term"
+        'Have a good reserve of healthy eggs',
+        'Mature the eggs properly within the ovaries at the right time and pace',
+        'Have clear fallopian tubes so that both the egg and sperm can enter and meet',
+        'Develop a normal lining in the uterus at the right time to welcome an embryo',
+        'Allow proper implantation of the embryo',
+        'Fully nourish the fetus throughout its development during pregnancy',
+        'Carry it for the full term',
       ],
       secondText: `
         It is a complicated process that does not always go as planned. However, our physicians, along with cutting-edge technology and advanced medical techniques, can help resolve a large number of fertility issues.<br /><br />
@@ -233,43 +233,42 @@ const FertilityTabs: React.FC = () => {
         Ovulation problems may be caused by one or more of the following:
       `,
       extraList: [
-        "A hormone imbalance",
-        "A tumor or cyst in the ovaries",
-        "Eating disorders such as anorexia or bulimia",
-        "Alcohol or drug use",
-        "Thyroid gland problems",
-        "Excess weight",
-        "Stress",
-        "Intense exercise that causes a significant loss of body fat below normal",
-        "Extremely brief menstrual cycles",
+        'A hormone imbalance',
+        'A tumor or cyst in the ovaries',
+        'Eating disorders such as anorexia or bulimia',
+        'Alcohol or drug use',
+        'Thyroid gland problems',
+        'Excess weight',
+        'Stress',
+        'Intense exercise that causes a significant loss of body fat below normal',
+        'Extremely brief menstrual cycles',
       ],
       thirdText: `
         Damage to the fallopian tubes or uterus can be caused by one or more of the following:
       `,
       thirdList: [
-        "Pelvic inflammatory disease",
-        "A previous infection",
-        "Polyps in the uterus",
-        "Endometriosis or fibroids",
-        "Scar tissue or adhesions",
-        "Chronic medical illnesses",
-        "A previous ectopic (tubal) pregnancy",
-        "Congenital anomalies of the genital trac"
+        'Pelvic inflammatory disease',
+        'A previous infection',
+        'Polyps in the uterus',
+        'Endometriosis or fibroids',
+        'Scar tissue or adhesions',
+        'Chronic medical illnesses',
+        'A previous ectopic (tubal) pregnancy',
+        'Congenital anomalies of the genital trac',
       ],
       fourText: `
       Abnormal cervical mucus can also cause infertility. Abnormal cervical mucus can prevent the sperm from reaching the egg or make it more difficult for the sperm to penetrate the egg.
       `,
-     
     },
-     "Woman’s Biologic Clock": {
+    'Woman’s Biologic Clock': {
       text: `
       We believe that every woman needs the facts about her biological clock. Start here to learn more about fertility age and how time really affects your ability to have a healthy baby.<br /><br />
       Not every egg leads to a baby, no matter how young you are. It’s a common misconception that we have a 100% chance of pregnancy each time we ovulate (i.e., each month). Because a certain percentage of our eggs are abnormal at any age, and because fertilization has to happen within a narrow window after ovulation occurs, even a young, healthy woman trying to get pregnant has only about a 20% chance each month.<br /><br />
       Fertility goes into a sharper decline around age of 35 – over 10 years before reaching menopause.
       `,
-      image: "/images/fertility-guide/Womans-Biologic-Clock.avif",
+      imageName: 'fertility-biologic-clock',
       bottomText: ``,
-     
+
       secondText: `
         As women, our reproductive life begins when we get our first period, usually around age 12 (puberty), and lasts until our last menstrual period, usually around age 52 (menopause). But because egg count (ovarian reserve) and egg quality decline as we age, we don’t remain fertile for the entirety of this timespan.<br /><br />
         Women under the age of 35 have about a 20% chance of getting pregnant naturally each cycle. By the age of 40, the chance of getting pregnant naturally each month is just 5%. After that, natural conception declines faster.<br /><br />
@@ -281,31 +280,30 @@ const FertilityTabs: React.FC = () => {
         If you are ready to get proactive about your fertility future, you can schedule a fertility assessment today at Bnoon Medical Center to meet one of our fertility experts.
       `,
     },
-         "Ovulatory Dysfunction": {
+    'Ovulatory Dysfunction': {
       text: `
       Ovulation is the release of an egg from the ovary. This must happen in order to achieve pregnancy naturally. If ovulation is irregular, but not completely absent, this is called oligoovulation. Complete absence of ovulation is called anovulation. Ovulatory dysfunction is a common cause of female infertility, occurring in up to 40 percent of infertile women.<br /><br />
        Usually, women with ovulatory dysfunction will have irregular periods. In the worst case, they may not get their cycles at all. If your cycle occurs shorter than 21 days, or longer than 36 days, you may have ovulatory dysfunction. If your cycles fall within the normal range of 21 to 36 days, but the length of your cycles blood flow varies widely from month to month, that may also be a sign of ovulatory dysfunction.
       `,
-      image: "/images/fertility-guide/Ovulatory-Dysfunction.avif",
+      imageName: 'fertility-ovulatory-dysfunction',
       bottomText: ``,
-  
     },
-        "Endometriosis": {
+    Endometriosis: {
       text: `
      Endometriosis occurs when endometrial tissue, which normally lines the uterus, is found elsewhere in the body. The most common sites of endometriosis include ovaries, Fallopian tubes and pelvic cavity. This tissue starts to act just like normal uterine tissue. During menstruation the tissue starts to bleed. As this happens, scar tissue starts to form, usually in the pelvic region. The scar tissue and endometriosis can then lead to potential problems and cause infertility.<br /><br />
      Endometriosis<br /><br />
      Endometriosis is a common condition and associated with increased chance of having trouble with conceiving. Common signs and symptoms of endometriosis may include:
       `,
-      image: "/images/fertility-guide/Endometriosis.avif",
+      imageName: 'fertility-endometriosis',
       bottomText: ``,
-        secondlist: [
-        "Painful periods. Pelvic pain and cramping may begin before your period and extend several days during your period. You may also have low back and abdominal pain.",
-        "Deep pain in the vagina with deep intercourse.",
-        "Pain with bowel movements or urination.",
-        "Excessive bleeding during periods.",
-        "Infertility. Endometriosis may be first diagnosed in some women who are seeking treatment for infertility.",
-        "Other symptoms. You may also experience fatigue, diarrhea, constipation, bloating or nausea, especially during menstrual periods.",
-        "Some women with endometriosis don’t have such symptoms."
+      secondlist: [
+        'Painful periods. Pelvic pain and cramping may begin before your period and extend several days during your period. You may also have low back and abdominal pain.',
+        'Deep pain in the vagina with deep intercourse.',
+        'Pain with bowel movements or urination.',
+        'Excessive bleeding during periods.',
+        'Infertility. Endometriosis may be first diagnosed in some women who are seeking treatment for infertility.',
+        'Other symptoms. You may also experience fatigue, diarrhea, constipation, bloating or nausea, especially during menstrual periods.',
+        'Some women with endometriosis don’t have such symptoms.',
       ],
       secondText: `
         There are other conditions may have similar symptoms but it is not endometriosis.<br />
@@ -313,10 +311,10 @@ const FertilityTabs: React.FC = () => {
         Endometriosis symptoms usually affect women who have never had children. The disease has a strong genetic link. If one of your relatives has endometriosis, then you are six times more likely to have endometriosis, too. Other factors for endometriosis to occur include:
       `,
       extraList: [
-        "Menstrual cycles that occur in less than 28 days",
-        "Menstrual bleeding lasting more than 5 days",
-        "Congenital abnormality of the uterus",
-        "Abnormally tight cervical opening",
+        'Menstrual cycles that occur in less than 28 days',
+        'Menstrual bleeding lasting more than 5 days',
+        'Congenital abnormality of the uterus',
+        'Abnormally tight cervical opening',
       ],
       thirdText: `
         Diagnosis of endometriosis<br /><br />
@@ -327,32 +325,32 @@ const FertilityTabs: React.FC = () => {
         One important issue for women who are known to have endometriosis and difficulty in conceiving is consult as early as possible a fertility expert to discuss her management plan and treatment options since her ovarian reserve may worsen faster than usual compared to other women without endometriosis.
       `,
     },
-      "Ovarian Cysts": {
+    'Ovarian Cysts': {
       text: `
      An ovarian cyst is a fluid-filled sac that develops on a woman’s ovary. They’re very common and don’t usually cause any symptoms. Ovarian cysts may affect both ovaries at the same time, or they may only affect one. Most ovarian cysts occur naturally and disappear in a few months without needing any treatment. Most ovarian cysts develop as a result of your menstrual cycle (functional cysts) and considered to be a normal phenomenon. Other types of cysts are much less common.<br /><br />
      Functional cysts are usually harmless, rarely cause pain, and often disappear on their own within two or three menstrual cycles. There are two types of functional cysts:
       `,
-      image: "/images/fertility-guide/Ovarian-Cysts.avif",
+      imageName: 'fertility-ovarian-cysts',
       bottomText: ``,
-        secondlist: [
-        "Follicular cyst which begins when the follicle doesn’t rupture and release the egg.",
-        "Corpus luteum cyst which forms after rupture and releasing the egg and, therefore, fluid accumulates inside the follicle, causing the corpus luteum to grow into a cyst."
+      secondlist: [
+        'Follicular cyst which begins when the follicle doesn’t rupture and release the egg.',
+        'Corpus luteum cyst which forms after rupture and releasing the egg and, therefore, fluid accumulates inside the follicle, causing the corpus luteum to grow into a cyst.',
       ],
       secondText: `
        Other types of cysts include:
       `,
       extraList: [
-        "Hemorrhagic cysts are blood-filled cysts that occur when the wall of a cyst ruptures. This rupture can cause bleeding into the cyst resulting in a  hemorrhagic cyst. This is also a normal phenomenon and often disappears by itself.",
-        "Dermoid cysts which contain tissue, such as hair, skin or teeth, because they form from embryonic cells. They’re rarely cancerous.",
-        "Endometriomas which develop as a result of endometriosis.",
+        'Hemorrhagic cysts are blood-filled cysts that occur when the wall of a cyst ruptures. This rupture can cause bleeding into the cyst resulting in a  hemorrhagic cyst. This is also a normal phenomenon and often disappears by itself.',
+        'Dermoid cysts which contain tissue, such as hair, skin or teeth, because they form from embryonic cells. They’re rarely cancerous.',
+        'Endometriomas which develop as a result of endometriosis.',
       ],
       thirdText: `
       The vast majority of ovarian cysts are non-cancerous (benign) and a small number are cancerous. Cancerous cysts are more common in women who have been through the menopause.<br /><br />
       Complications associated with ovarian cysts include:
       `,
       thirdList: [
-        "Ovarian twisting which occurs as a result of enlarged cyst and cause abrupt onset of severe pelvic pain, nausea and vomiting. Ovarian twisting can interrupt the blood flow going to the ovary and affect its function.",
-        "Cyst Rupture which causes severe pain and internal bleeding."
+        'Ovarian twisting which occurs as a result of enlarged cyst and cause abrupt onset of severe pelvic pain, nausea and vomiting. Ovarian twisting can interrupt the blood flow going to the ovary and affect its function.',
+        'Cyst Rupture which causes severe pain and internal bleeding.',
       ],
       fourText: `
      <strong>Treatment of ovarian cysts</strong><br /><br />
@@ -361,16 +359,15 @@ const FertilityTabs: React.FC = () => {
      If ovarian cyst twisting is suspected, your physician may need to perform surgery on your ovary to restore back and remove the cyst.<br />
      Remember that each kind of cyst is treated differently. Accurate diagnosis leads to proper treatment.
       `,
-     
     },
-          "Uterine Fibroids & Infertility": {
+    'Uterine Fibroids & Infertility': {
       text: `
      The uterus is composed of a thick layer called ‘myometrium’ surrounding a thin lining called ‘endometrium’ into which the embryo implants and which serves to protect and nourish a growing pregnancy. It is the endometrium which is shed each month during the menstruation.<br /><br />
      It is very common condition and, approximately, 50% of all reproductive age women will develop benign growths of the myometrium, called fibroid tumors. These tumors are rarely malignant. They can be located in the wall of the uterus, on the outside surface of the uterus or within the uterine cavity.<br /><br />
      Most fibroids start as very small lesions and they can grow to large size.<br />
      Symptoms
       `,
-      image: "/images/fertility-guide/Uterine-Fibroids-Infertility.avif",
+      imageName: 'fertility-uterine-fibroids',
       bottomText: ``,
 
       secondText: `
@@ -383,55 +380,55 @@ const FertilityTabs: React.FC = () => {
        If you suffer infertility and fibroid, fertility experts are the best physicians to consult. They, often, discuss informed choices and which surgical intervention works better for your condition.
       `,
     },
-      "Recurrent Miscarriage": {
+    'Recurrent Miscarriage': {
       text: `
      Recurrent miscarriage is defined as the loss of three or more consecutive pregnancies in the first few months of gestation. Generally, the risk of miscarriage in any given pregnancy is about 15-20%. Following three consecutive miscarriages, the risk of further miscarriage is about 40%. Furthermore, women may develop recurrent miscarriage after a successful pregnancy.<br /><br />
      Recurrent miscarriage often leaves patients feeling disheartened and frustrated about their situations and more stressful if it is combined with infertility. Both infertility and recurrent miscarriage may have overlapping causative factors.<br /><br />
      Causes of recurrent miscarriages may include:
       `,
-      image: "/images/fertility-guide/Recurrent-Miscarriage.avif",
+      imageName: 'fertility-recurrent-miscarriage',
       bottomText: ``,
-        secondlist: [
-        "Advanced maternal age",
-        "Chromosomal abnormality",
-         "Antiphospholipid syndrome",
-          "Uterine congenital anomalies",
-           "Intrauterine Scar tissue",
-            "Multiple intramural and submucosal fibroids",
-             "Cervical incompetence",
-              "Polycystic ovary syndrome",
-               "Uncontrolled diabetes mellitus",
-                 "Thyroid Disease",
-                "Immunological factors",
-                 "Inherited thrombophilia",
-                  "Infections"
+      secondlist: [
+        'Advanced maternal age',
+        'Chromosomal abnormality',
+        'Antiphospholipid syndrome',
+        'Uterine congenital anomalies',
+        'Intrauterine Scar tissue',
+        'Multiple intramural and submucosal fibroids',
+        'Cervical incompetence',
+        'Polycystic ovary syndrome',
+        'Uncontrolled diabetes mellitus',
+        'Thyroid Disease',
+        'Immunological factors',
+        'Inherited thrombophilia',
+        'Infections',
       ],
       secondText: `
        Accurate history and relevant investigations may identify factors contributing to recurrent miscarriage and help in the treatment plan of future pregnancy. Treatment is suggested according to the cause or possible cause of recurrent miscarriage.<br /><br />
        Losing a pregnancy can make you worry, wondering if you will ever be able to get pregnant again or have a healthy baby. You may even be asking yourself if you did something wrong or could have prevented this somehow. 50% of all miscarriages, the cause is never determined. But on the bright side, most women who experience one or several miscarriages will ultimately go on to have healthy babies.
       `,
     },
-      "Recurrent IVF Failure": {
+    'Recurrent IVF Failure': {
       text: `
      Recurrent IVF failure is defined when a patient undergoes multiple cycles of embryo transfer without resulting pregnancy. This is one of the most frustrating and stressful conditions for both patient and physician.<br /><br />
      Several reasons may explain failed implantation. It could be due to the embryo or endometrium or both. Other co-factors may be involved. However, in many cases we cannot explain the reason for recurrent IVF failure.<br /><br />
      The most known causes of IVF failure are:
       `,
-      image: "/images/fertility-guide/Recurrent-IVF-Failure.avif",
+      imageName: 'fertility-recurrent-ivf-failure',
       bottomText: ``,
-        secondlist: [
-        "Advanced maternal age",
-        "Slow embryo development in the IVF Lab",
-         "Thick shell on the embryo and difficulty in hatching",
-          "Intrauterine abnormalities like; polyp, fibroid, scaring or inflammation.",
-           "Fluid collection inside Fallopian tubes",
-            "Fluid collection inside uterine cavity",
-             "Difficult embryo transfer technique",
-              "Immunological factors",
-               "Chromosomal abnormalities in the embryos",
-                 "Maternal medical illnesses",
-                "Suboptimal ovarian stimulation during IVF cycle",
-                 "Poor sperm quality"
+      secondlist: [
+        'Advanced maternal age',
+        'Slow embryo development in the IVF Lab',
+        'Thick shell on the embryo and difficulty in hatching',
+        'Intrauterine abnormalities like; polyp, fibroid, scaring or inflammation.',
+        'Fluid collection inside Fallopian tubes',
+        'Fluid collection inside uterine cavity',
+        'Difficult embryo transfer technique',
+        'Immunological factors',
+        'Chromosomal abnormalities in the embryos',
+        'Maternal medical illnesses',
+        'Suboptimal ovarian stimulation during IVF cycle',
+        'Poor sperm quality',
       ],
       secondText: `
        Examinations<br />
@@ -439,28 +436,28 @@ const FertilityTabs: React.FC = () => {
        Common investigations include:
       `,
       thirdList: [
-        "Thyroid Function",
-        "Thrombophilia screen",
-        "Immunological testing",
-        "Hysteroscopy",
-        "Chromosomal testing",
-        "Diabetes Screen",
-        "Endometrial Receptivity Array (ERA)"
+        'Thyroid Function',
+        'Thrombophilia screen',
+        'Immunological testing',
+        'Hysteroscopy',
+        'Chromosomal testing',
+        'Diabetes Screen',
+        'Endometrial Receptivity Array (ERA)',
       ],
       fourText: `
       Usually, the management is directed towards the cause if recognized. However, commencing treatment improves the outcome but it doesn’t always mean the pregnancy will occur. In many circumstances, no cause is identified (unexplained recurrent IVF failure) but your physician may try empiric therapy hoping it may improve the outcome. <br /><br />
       Treatment modalities <br /><br />
       The following treatment modalities are widely used for recurrent IVF failure based on your assessment by your physician:
       `,
-        fourList: [
-        "Endometrial scratching",
-        "Endometrial receptivity array (ERA)",
-        "Prednisolone",
-        "Intralipid therapy",
-        "Freezing all Day 5 embryos in fresh cycle and replacing them in non-stimulated cycle",
-        "Proper management of male factor by an andrologist to improve sperm quality before attempting IVF cycle"
-        ],
-         fiveText: `
+      fourList: [
+        'Endometrial scratching',
+        'Endometrial receptivity array (ERA)',
+        'Prednisolone',
+        'Intralipid therapy',
+        'Freezing all Day 5 embryos in fresh cycle and replacing them in non-stimulated cycle',
+        'Proper management of male factor by an andrologist to improve sperm quality before attempting IVF cycle',
+      ],
+      fiveText: `
      Not all women with recurrent IVF failure are the same. Therefore, planning future IVF cycle with your physician depends on careful review of your condition and the records of your previous cycles.
       `,
     },
@@ -477,53 +474,51 @@ const FertilityTabs: React.FC = () => {
           {tabs.map((tab) => (
             <button
               key={tab}
-              className={`tabs-btn ${activeTab === tab ? "active" : ""}`}
-             onClick={() => {
-  setActiveTab(tab);
-  const hash = tabToHash(tab);
-  history.replaceState(null, "", `#${hash}`);
-}}
-
+              className={`tabs-btn ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => {
+                setActiveTab(tab);
+                const hash = tabToHash(tab);
+                history.replaceState(null, '', `#${hash}`);
+              }}
             >
               {tab}
             </button>
           ))}
         </div>
-<style jsx>{`
-  @media (max-width: 768px) {
-    .tabs-row-container {
-      flex-wrap: nowrap !important;      /* ek line me rakhe */
-      overflow-x: auto;                  /* scroll allow kare */
-      justify-content: flex-start !important; /* scroll start se */
-      -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
-    }
+        <style jsx>{`
+          @media (max-width: 768px) {
+            .tabs-row-container {
+              flex-wrap: nowrap !important; /* ek line me rakhe */
+              overflow-x: auto; /* scroll allow kare */
+              justify-content: flex-start !important; /* scroll start se */
+              -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+            }
 
-    .tabs-row-container .tabs-btn {
-      flex: 0 0 auto;   /* button shrink na ho */
-      margin-right: 10px; /* buttons ke beech gap */
-    }
-        .image-col {
-      order: -1; /* image ko top pe le aao */
-      width: 100%; /* full width */
-      margin-bottom: 15px;
-    }
-      .tabs-container {
-    border: 1px solid #0000003d;
-    padding: 10px 10px !important;
-        margin: 0px 10px;
-        width: 355px;
-}
-      .treatment-text{
-    font-size: 14px !important;
-    }
-      .tabs-btn.active
- {
-    background-color: #004E78 !important;
-    color: #fff !important;
-    font-size: 14px !important;
-}
-  }
-`}</style>
+            .tabs-row-container .tabs-btn {
+              flex: 0 0 auto; /* button shrink na ho */
+              margin-right: 10px; /* buttons ke beech gap */
+            }
+            .image-col {
+              order: -1; /* image ko top pe le aao */
+              width: 100%; /* full width */
+              margin-bottom: 15px;
+            }
+            .tabs-container {
+              border: 1px solid #0000003d;
+              padding: 10px 10px !important;
+              margin: 0px 10px;
+              width: 355px;
+            }
+            .treatment-text {
+              font-size: 14px !important;
+            }
+            .tabs-btn.active {
+              background-color: #004e78 !important;
+              color: #fff !important;
+              font-size: 14px !important;
+            }
+          }
+        `}</style>
         {/* Tabs Content */}
         <div className="row justify-content-center align-items-center g-4">
           <div className="col-lg-8 col-md-6">
@@ -534,11 +529,15 @@ const FertilityTabs: React.FC = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 image-col ">
-            <Image
-              src={currentContent.image}
-              alt={activeTab}
-              className="img-fluid fertilitytabs-image"
-             width={420} height={200} />
+            {tabs.map((tab) => (
+              <div key={tab} style={{ display: activeTab === tab ? '' : 'none' }}>
+                <OptimizedImage
+                  imageName={tabContents[tab].imageName}
+                  alt={tab}
+                  className="img-fluid fertilitytabs-image"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
@@ -566,49 +565,49 @@ const FertilityTabs: React.FC = () => {
             )}
 
             <CustomList items={currentContent.extraList} />
-              {currentContent.thirdText && (
+            {currentContent.thirdText && (
               <div
                 className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.thirdText }}
               />
             )}
             <CustomList items={currentContent.thirdList} />
-             {currentContent.fourText && (
+            {currentContent.fourText && (
               <div
                 className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.fourText }}
               />
             )}
             <CustomList items={currentContent.fourList} />
-             {currentContent.fiveText && (
+            {currentContent.fiveText && (
               <div
                 className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.fiveText }}
               />
             )}
             <CustomList items={currentContent.fiveList} />
-             {currentContent.sixText && (
+            {currentContent.sixText && (
               <div
                 className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.sixText }}
               />
             )}
             <CustomList items={currentContent.sixList} />
-             {currentContent.sevenText && (
+            {currentContent.sevenText && (
               <div
                 className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.sevenText }}
               />
             )}
             <CustomList items={currentContent.sevenList} />
-             {currentContent.eightText && (
+            {currentContent.eightText && (
               <div
                 className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.eightText }}
               />
             )}
             <CustomList items={currentContent.eightList} />
-             {currentContent.nineText && (
+            {currentContent.nineText && (
               <div
                 className="mt-3 treatment-text"
                 dangerouslySetInnerHTML={{ __html: currentContent.nineText }}

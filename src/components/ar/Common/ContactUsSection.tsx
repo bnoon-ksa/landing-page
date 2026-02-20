@@ -1,10 +1,8 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { getBookNowUrl } from "@/utils/booking";
-
-
+'use client';
+import { useEffect, useRef, useState } from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import Link from 'next/link';
+import { getBookNowUrl } from '@/utils/booking';
 
 const ContactUsSection = () => {
   const leftRef = useRef<HTMLDivElement>(null);
@@ -20,7 +18,7 @@ const ContactUsSection = () => {
           observerLeft.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     const observerRight = new IntersectionObserver(
@@ -30,7 +28,7 @@ const ContactUsSection = () => {
           observerRight.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (leftRef.current) observerLeft.observe(leftRef.current);
@@ -54,14 +52,19 @@ const ContactUsSection = () => {
               </div>
               <div className="left text-center mt-2">
                 <p>
-                  .ندرك في "بنون" أن الطريق نحو الأبوة أو الأمومة هو رحلة شديدة الخصوصية، وغالباً ما تكون محمّلة بالأسئلة والتحديات   </p>
-                <p>
-                  سواء كنتم تواجهون صعوبات في الحمل، أو تبحثون عن دعم لحالات صحية نسائية أو علاجات لأمراض الذكورة، أو تخطّطون لحمل صحي وآمن، فنحن هنا معكم — بالعلم، والخبرة، والرعاية الصادقة۔
-
+                  .ندرك في "بنون" أن الطريق نحو الأبوة أو الأمومة هو رحلة شديدة الخصوصية، وغالباً ما
+                  تكون محمّلة بالأسئلة والتحديات{' '}
                 </p>
                 <p>
-
-                  يضم "بنون" فريقاً متعدد التخصصات يُقدّم خطط علاج مبنية على الأدلة، ومصمّمة لتتناسب مع احتياجات كل حالة — بدءاً من علاجات الخصوبة المتقدمة، مروراً بصحة الهرمونات، ووصولاً إلى رعاية الحمل والولادة وأمراض النساء۔</p>
+                  سواء كنتم تواجهون صعوبات في الحمل، أو تبحثون عن دعم لحالات صحية نسائية أو علاجات
+                  لأمراض الذكورة، أو تخطّطون لحمل صحي وآمن، فنحن هنا معكم — بالعلم، والخبرة،
+                  والرعاية الصادقة۔
+                </p>
+                <p>
+                  يضم "بنون" فريقاً متعدد التخصصات يُقدّم خطط علاج مبنية على الأدلة، ومصمّمة لتتناسب
+                  مع احتياجات كل حالة — بدءاً من علاجات الخصوبة المتقدمة، مروراً بصحة الهرمونات،
+                  ووصولاً إلى رعاية الحمل والولادة وأمراض النساء۔
+                </p>
               </div>
             </div>
           </div>
@@ -70,41 +73,35 @@ const ContactUsSection = () => {
         {/* New Section with 2 Divs in one row */}
         <div className="row justify-content-center text-center g-4">
           {/* First Div */}
-          <div className={`col-lg-6 col-md-8 animate-left ${leftVisible ? "show" : ""}`} ref={leftRef}>
+          <div
+            className={`col-lg-6 col-md-8 animate-left ${leftVisible ? 'show' : ''}`}
+            ref={leftRef}
+          >
             <div className="p-4 contact-border h-100">
-              <Image
-                src="/images/icons/c3.png"
-                alt="Icon 1"
-                width={80}
-                height={80}
-                className="mb-3"
-              />
+              <OptimizedImage imageName="icon-c3" className="mb-3" alt="Icon 1" />
               <h5 className="mb-3 loc-text">احجزوا موعدكم </h5>
-              <Link href={getBookNowUrl("ar")} className="btn btn-primary mb-3 contact-btn">
+              <Link href={getBookNowUrl('ar')} className="btn btn-primary mb-3 contact-btn">
                 انقر هنا
               </Link>
               <p className="text-center">
-                يرجى تعبئة نموذج "طلب موعد"، وسيقوم أحد منسقي رعاية المرضى بالتواصل معكم خلال 48 ساعة لتأكيد الموعد والإجابة عن أي استفسارات أولية۔
+                يرجى تعبئة نموذج "طلب موعد"، وسيقوم أحد منسقي رعاية المرضى بالتواصل معكم خلال 48
+                ساعة لتأكيد الموعد والإجابة عن أي استفسارات أولية۔
               </p>
             </div>
           </div>
 
           {/* Second Div */}
-          <div className={`col-lg-6 col-md-8 animate-right ${rightVisible ? "show" : ""}`} ref={rightRef}>
-
+          <div
+            className={`col-lg-6 col-md-8 animate-right ${rightVisible ? 'show' : ''}`}
+            ref={rightRef}
+          >
             <div className="p-4 contact-border h-100">
-              <Image
-                src="/images/icons/recruiting-icons.png"
-                alt="Icon 2"
-                width={80}
-                height={80}
-                className="mb-3"
-              />
+              <OptimizedImage imageName="icon-recruiting" className="mb-3" alt="Icon 2" />
               <h5 className="mb-3 loc-text">تفضلون التحدث معنا مباشرة؟ </h5>
-              <Link href={getBookNowUrl("ar")} className="btn btn-primary mb-3 contact-btn">
+              <Link href={getBookNowUrl('ar')} className="btn btn-primary mb-3 contact-btn">
                 اتصلوا بنا
               </Link>
-              <p className="text-center" style={{ direction: "ltr", textAlign: "left" }}>
+              <p className="text-center" style={{ direction: 'ltr', textAlign: 'left' }}>
                 +966 11 444 8080 :بنون – الرياض
                 <br />
                 +966 12 680 0800  :بنون – جدة
@@ -121,7 +118,8 @@ const ContactUsSection = () => {
               </div>
               <div className="left text-center mt-2">
                 <p className=" text-center">
-                 نُدير في "بنون" مراكز خصوبة رائدة في المملكة، صُمّمت بعناية لتوفّر أعلى درجات الراحة والخصوصية والنتائج المثلى:
+                  نُدير في "بنون" مراكز خصوبة رائدة في المملكة، صُمّمت بعناية لتوفّر أعلى درجات
+                  الراحة والخصوصية والنتائج المثلى:
                 </p>
               </div>
             </div>
@@ -134,9 +132,10 @@ const ContactUsSection = () => {
           <div className="col-lg-6 col-md-8">
             <div className="p-0 p-lg-4 location-border h-100">
               <h5 className="mb-3 fw-bold">بنون - الرياض</h5>
-              <p className="text-center" style={{ direction: "ltr" }}>
+              <p className="text-center" style={{ direction: 'ltr' }}>
                 شارع أبي جعفر بن منصور  <br />
-                حي الشهداء، 13241 الرياض، المملكة العربية السعودية<br />
+                حي الشهداء، 13241 الرياض، المملكة العربية السعودية
+                <br />
                 +966 11 444 8080
               </p>
 
@@ -153,21 +152,23 @@ const ContactUsSection = () => {
                 ></iframe>
               </div>
               <p className="map-text">
-                أوقات العمل:<br />
-                من السبت إلى الخميس – 9:00 صباحاً حتى 2:30 ظهراً<br />
+                أوقات العمل:
+                <br />
+                من السبت إلى الخميس – 9:00 صباحاً حتى 2:30 ظهراً
+                <br />
                 الجمعة: مغلق
               </p>
             </div>
           </div>
 
-
           {/* Second Div */}
           <div className="col-lg-6 col-md-8">
             <div className="p-0 p-lg-4 location-border h-100 text-center">
               <h5 className="mb-3  fw-bold">بنون - جدة</h5>
-              <p className="text-center" style={{ direction: "ltr" }}>
+              <p className="text-center" style={{ direction: 'ltr' }}>
                 مبنى كوارتز 3340، طريق الكورنيش، حي الشاطئ، جدة 23412 <br />
-                المملكة العربية السعودية<br />
+                المملكة العربية السعودية
+                <br />
                 +966 12 680 0800
               </p>
 
@@ -185,7 +186,6 @@ const ContactUsSection = () => {
               </div>
               <p className="map-text">
                 أوقات العمل:
-
                 <br />
                 من السبت إلى الخميس – 9:00 صباحاً حتى 8:30 مساءً <br />
                 الجمعة: مغلق
@@ -217,7 +217,6 @@ const ContactUsSection = () => {
               </div>
               <p className="map-text">
                 أوقات العمل:
-
                 <br />
                 من السبت إلى الخميس – 9:00 صباحاً حتى 8 مساءً <br />
                 الجمعة: مغلق
@@ -232,22 +231,22 @@ const ContactUsSection = () => {
                 </div>
                 <div className="left text-center mt-2">
                   <p className="text-center">
-                    في بنون، رأيكم يهمنا. نحن ملتزمون بتقديم أعلى معايير الرعاية، وملاحظاتكم تساعدنا على التطور والتحسّن لخدمتكم بشكل أفضل. سواء كانت ملاحظة، اقتراح، قصة، أو تقييم بسيط — نشكركم على تخصيص وقتكم لمشاركة تجربتكم معنا۔  </p>
+                    في بنون، رأيكم يهمنا. نحن ملتزمون بتقديم أعلى معايير الرعاية، وملاحظاتكم تساعدنا
+                    على التطور والتحسّن لخدمتكم بشكل أفضل. سواء كانت ملاحظة، اقتراح، قصة، أو تقييم
+                    بسيط — نشكركم على تخصيص وقتكم لمشاركة تجربتكم معنا۔{' '}
+                  </p>
                 </div>
-                <div className="mt-4"><Link href="submit-feedback" className="btn btn-primary mb-3 contact-btn">
-                  اضغط هنا
-                </Link></div>
+                <div className="mt-4">
+                  <Link href="submit-feedback" className="btn btn-primary mb-3 contact-btn">
+                    اضغط هنا
+                  </Link>
+                </div>
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
-
   );
 };
 

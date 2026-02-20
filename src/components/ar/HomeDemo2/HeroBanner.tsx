@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect, useRef } from "react";
-import { getBookNowUrl } from "@/utils/booking";
+import React, { useState, useEffect, useRef } from 'react';
+import { getBookNowUrl } from '@/utils/booking';
 
 function HeroBannerAr() {
   const [bgPosition, setBgPosition] = useState(0);
@@ -12,79 +12,80 @@ function HeroBannerAr() {
 
   // ✅ Slides (video + text + buttonLink)
   const slides = [
-   {
-      video: "/images/banner-video/banner4.mp4",
-    title: 'حلمكم ما هو بعيد ',
+    {
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner4.mp4',
+      title: 'حلمكم ما هو بعيد ',
 
-      desc: "استفيدوا من عرض يوم التأسيس الخاص <br>بالحقن المجهري* في بنون ",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      extra: "",
-      buttonLink: "ar/founding-day-campaign-ivf",
-      buttonText: "استكشفوا المزيد",
-      objectPosition: "0% 20%",  // ✅ LEFT shift
+      desc: 'استفيدوا من عرض يوم التأسيس الخاص <br>بالحقن المجهري* في بنون ',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      extra: '',
+      buttonLink: 'ar/founding-day-campaign-ivf',
+      buttonText: 'استكشفوا المزيد',
+      objectPosition: '0% 20%', // ✅ LEFT shift
     },
     {
-      video: "/images/banner-video/ar-banner1.mp4",
-      title: "عرض يوم التأسيس* ",
-      desc: " خدمات وإجراءات أمراض الذكورة والعقم لدى الرجال  ",
-       titleColor: "#004E78",
-      descColor: "#004E78",
-      buttonLink: "ar/founding-day-campaign-andrology",
-      buttonText: "استكشفوا المزيد ",
-      objectPosition: "0% 20%", // ✅ LEFT shift
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/ar-banner1.mp4',
+      title: 'عرض يوم التأسيس* ',
+      desc: ' خدمات وإجراءات أمراض الذكورة والعقم لدى الرجال  ',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      buttonLink: 'ar/founding-day-campaign-andrology',
+      buttonText: 'استكشفوا المزيد ',
+      objectPosition: '0% 20%', // ✅ LEFT shift
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/2.mp4",
-    title: '<span class="font-program">برنامج</span> وعد بنون',
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/2.mp4',
+      title: '<span class="font-program">برنامج</span> وعد بنون',
 
-      desc: "الحمل أو استرداد الرسوم:<br>راحة بال. توتر أقل.",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      extra: "تطبق الشروط والأحكام",
-      buttonLink: "ar/waad-bnoon-program",
-      buttonText: "استكشفوا المزيد",
+      desc: 'الحمل أو استرداد الرسوم:<br>راحة بال. توتر أقل.',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      extra: 'تطبق الشروط والأحكام',
+      buttonLink: 'ar/waad-bnoon-program',
+      buttonText: 'استكشفوا المزيد',
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/3.mp4",
-      title: "المستقبل الواعد في <br>مجال علاجات الإخصاب",
-      desc: "الآن في الرياض وجدة والأحساء  ",
-      buttonLink: getBookNowUrl("ar"),
-      buttonText: "احجز الآن",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/3.mp4',
+      title: 'المستقبل الواعد في <br>مجال علاجات الإخصاب',
+      desc: 'الآن في الرياض وجدة والأحساء  ',
+      buttonLink: getBookNowUrl('ar'),
+      buttonText: 'احجز الآن',
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/4.mp4",
-      title: "من الحلم إلى <br>البدايات الجديدة",
-      desc: "الأمل يبدأ مع بنون",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      buttonLink: getBookNowUrl("ar"),
-      buttonText: "احجز الآن",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/4.mp4',
+      title: 'من الحلم إلى <br>البدايات الجديدة',
+      desc: 'الأمل يبدأ مع بنون',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      buttonLink: getBookNowUrl('ar'),
+      buttonText: 'احجز الآن',
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/5.mp4",
-      title: 'تقديم الرعاية لأكثر من <br><span class="highlight-number">5000</span> من الأزواج سنويًا',
-      desc: "لتحقيق حلمهم في الأمومة والأبوة",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      buttonLink: getBookNowUrl("ar"),
-      buttonText: "احجز الآن",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/5.mp4',
+      title:
+        'تقديم الرعاية لأكثر من <br><span class="highlight-number">5000</span> من الأزواج سنويًا',
+      desc: 'لتحقيق حلمهم في الأمومة والأبوة',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      buttonLink: getBookNowUrl('ar'),
+      buttonText: 'احجز الآن',
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/6.mp4",
-      title: "الجيل القادم من <br>علاجات الإخصاب",
-      desc: "الآن في السعودية",
-      buttonLink: getBookNowUrl("ar"),
-      buttonText: "احجز الآن",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/6.mp4',
+      title: 'الجيل القادم من <br>علاجات الإخصاب',
+      desc: 'الآن في السعودية',
+      buttonLink: getBookNowUrl('ar'),
+      buttonText: 'احجز الآن',
     },
     {
-      video: "https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/7.mp4",
-      title: "ابدأوا رحلتكم نحو الأمومة <br>والأبوة مع بنون",
-      desc: "احجزوا موعدكم معنا اليوم",
-      titleColor: "#004E78",
-      descColor: "#004E78",
-      buttonLink: getBookNowUrl("ar"),
-      buttonText: "احجز الآن",
+      video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/7.mp4',
+      title: 'ابدأوا رحلتكم نحو الأمومة <br>والأبوة مع بنون',
+      desc: 'احجزوا موعدكم معنا اليوم',
+      titleColor: '#004E78',
+      descColor: '#004E78',
+      buttonLink: getBookNowUrl('ar'),
+      buttonText: 'احجز الآن',
     },
   ];
 
@@ -111,8 +112,8 @@ function HeroBannerAr() {
     // Preload next slide's video
     const nextIndex = (currentSlide + 1) % slides.length;
     const nextVideo = videoRefs.current[nextIndex];
-    if (nextVideo && nextVideo.preload === "none") {
-      nextVideo.preload = "metadata";
+    if (nextVideo && nextVideo.preload === 'none') {
+      nextVideo.preload = 'metadata';
     }
   }, [currentSlide, slides.length]);
 
@@ -123,14 +124,17 @@ function HeroBannerAr() {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        if (!bannerRef.current) { ticking = false; return; }
+        if (!bannerRef.current) {
+          ticking = false;
+          return;
+        }
         const speed = 0.2;
         setBgPosition(-(window.scrollY * speed));
         ticking = false;
       });
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // ✅ Trigger reveal animation on slide change
@@ -146,12 +150,12 @@ function HeroBannerAr() {
       className="second-banner-area"
       dir="rtl"
       style={{
-        position: "relative",
-        width: "100%",
-        height: "521px",
-        overflow: "hidden",
+        position: 'relative',
+        width: '100%',
+        height: '521px',
+        overflow: 'hidden',
         backgroundPosition: `center ${bgPosition}px`,
-        backgroundAttachment: "fixed",
+        backgroundAttachment: 'fixed',
       }}
     >
       {/* 🔹 Video Background Slider — all slides stay in DOM to prevent re-fetch */}
@@ -163,23 +167,25 @@ function HeroBannerAr() {
         return (
           <video
             key={index}
-            ref={(el) => { videoRefs.current[index] = el; }}
+            ref={(el) => {
+              videoRefs.current[index] = el;
+            }}
             loop
             muted
             playsInline
-            preload={isActive ? "auto" : isAdjacent ? "metadata" : "none"}
+            preload={isActive ? 'auto' : isAdjacent ? 'metadata' : 'none'}
             style={{
-              position: "absolute",
+              position: 'absolute',
               top: 0,
               left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: slide.objectPosition || "50% center",
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: slide.objectPosition || '50% center',
               zIndex: -1,
               opacity: isActive ? 1 : 0,
-              transition: "opacity 1s ease-in-out",
-              visibility: isActive || isAdjacent ? "visible" : "hidden",
+              transition: 'opacity 1s ease-in-out',
+              visibility: isActive || isAdjacent ? 'visible' : 'hidden',
             }}
           >
             <source src={slide.video} type="video/mp4" />
@@ -189,29 +195,27 @@ function HeroBannerAr() {
 
       {/* 🔹 Text Content */}
       <div className="container">
-        <div
-          className={`second-banner-content ${
-            animate ? "reveal-text" : "hidden-text"
-          }`}
-        >
-        <h1
-  style={{ color: slides[currentSlide].titleColor || "#fff" }}
-  dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
-  className="animated-heading"
-/>
+        <div className={`second-banner-content ${animate ? 'reveal-text' : 'hidden-text'}`}>
+          <h1
+            style={{ color: slides[currentSlide].titleColor || '#fff' }}
+            dangerouslySetInnerHTML={{ __html: slides[currentSlide].title }}
+            className="animated-heading"
+          />
 
           <p
             className="animated-desc"
             dangerouslySetInnerHTML={{
               __html: slides[currentSlide].desc,
             }}
-            style={{ color: slides[currentSlide].descColor || "#fff" }}
+            style={{ color: slides[currentSlide].descColor || '#fff' }}
           />
 
           <div className="banner-btn">
             <a
               href={slides[currentSlide].buttonLink}
-              {...(slides[currentSlide].buttonLink.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              {...(slides[currentSlide].buttonLink.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
               className="btn btn-success btn-appointment explore-btn btn-banner"
             >
               {slides[currentSlide].buttonText}
@@ -221,10 +225,10 @@ function HeroBannerAr() {
           <p
             className="terms-text"
             dangerouslySetInnerHTML={{
-              __html: slides[currentSlide].extra || "",
+              __html: slides[currentSlide].extra || '',
             }}
             style={{
-              color: slides[currentSlide].descColor || "#fff",
+              color: slides[currentSlide].descColor || '#fff',
             }}
           />
         </div>
@@ -233,12 +237,12 @@ function HeroBannerAr() {
       {/* 🔹 Dots */}
       <div
         style={{
-          position: "absolute",
-          bottom: "20px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          display: "flex",
-          gap: "8px",
+          position: 'absolute',
+          bottom: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          gap: '8px',
         }}
       >
         {slides.map((_, index) => (
@@ -246,24 +250,23 @@ function HeroBannerAr() {
             key={index}
             onClick={() => setCurrentSlide(index)}
             style={{
-              width: "12px",
-              height: "12px",
-              borderRadius: "50%",
-              background:
-                currentSlide === index ? "white" : "rgba(255,255,255,0.5)",
-              cursor: "pointer",
-              transition: "background 0.3s",
+              width: '12px',
+              height: '12px',
+              borderRadius: '50%',
+              background: currentSlide === index ? 'white' : 'rgba(255,255,255,0.5)',
+              cursor: 'pointer',
+              transition: 'background 0.3s',
             }}
           />
         ))}
       </div>
 
-     {/* 🔹 Reveal Animation CSS */}
+      {/* 🔹 Reveal Animation CSS */}
       <style jsx global>{`
-      .font-program{
-      color:#808080 !important;
-    font-size: 50px !important;
-      }
+        .font-program {
+          color: #808080 !important;
+          font-size: 50px !important;
+        }
         .hidden-text {
           opacity: 0;
           transform: translateX(80px);
@@ -273,19 +276,16 @@ function HeroBannerAr() {
           transform: translateX(0);
           transition: all 1.5s ease;
         }
-          @media (max-width: 768px) {
- .font-program{
-    
-    font-size: 13px !important;
-      }
-    .explore-btn{
-    width: 100px;
-        border-radius: 6px !important;
-    }
-      }
+        @media (max-width: 768px) {
+          .font-program {
+            font-size: 13px !important;
+          }
+          .explore-btn {
+            width: 100px;
+            border-radius: 6px !important;
+          }
+        }
       `}</style>
-    
-    
     </div>
   );
 }

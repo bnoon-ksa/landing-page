@@ -1,6 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { CircleDecoration } from '@/components/icons';
 
 function HeroBanner() {
   return (
@@ -10,17 +11,11 @@ function HeroBanner() {
           <div className="row justify-content-center g-4">
             <div className="col-xxl-8 col-md-12">
               <div className="main-banner-content section-title-animation animation-style1">
-               
-
                 <h1 className="title-animation">
-                  Experience World-Class <span>Virtual Healthcare</span> From
-                  Certified Doctors
+                  Experience World-Class <span>Virtual Healthcare</span> From Certified Doctors
                 </h1>
 
-                <p>
-                  Get expert medical advice, prescriptions, and
-                  referrals—anytime, anywhere.
-                </p>
+                <p>Get expert medical advice, prescriptions, and referrals—anytime, anywhere.</p>
 
                 <div className="banner-btn">
                   <Link href="/register" className="default-btn">
@@ -59,24 +54,9 @@ function HeroBanner() {
                 <div className="banner-bottom">
                   <div className="info">
                     <div className="image d-flex align-items-center">
-                      <Image
-                        src="/images/users/user1.png"
-                        alt="user1"
-                        width={41}
-                        height={41}
-                      />
-                      <Image
-                        src="/images/users/user2.png"
-                        alt="user2"
-                        width={41}
-                        height={41}
-                      />
-                      <Image
-                        src="/images/users/user3.png"
-                        alt="user3"
-                        width={41}
-                        height={41}
-                      />
+                      <OptimizedImage imageName="users-user1" alt="user1" />
+                      <OptimizedImage imageName="users-user2" alt="user2" />
+                      <OptimizedImage imageName="users-user3" alt="user3" />
                     </div>
                     <div className="content">
                       <div className="d-flex align-items-center">
@@ -88,12 +68,7 @@ function HeroBanner() {
                   </div>
                   <div className="wrap">
                     <Link href="/services">
-                      <Image
-                        src="/images/banner/circle.svg"
-                        alt="circle"
-                        width={122}
-                        height={122}
-                      />
+                      <CircleDecoration width={122} height={122} />
                       <i className="ri-arrow-down-long-line"></i>
                     </Link>
                   </div>
@@ -104,12 +79,7 @@ function HeroBanner() {
             <div className="col-xxl-4 col-md-12">
               <div className="main-banner-image">
                 <div className="image">
-                  <Image
-                    src="/images/banner/banner.jpg"
-                    alt="banner"
-                    width={1200}
-                    height={1320}
-                  />
+                  <OptimizedImage imageName="banner-hero" alt="banner" />
                 </div>
 
                 <div className="fun-items">
@@ -131,20 +101,10 @@ function HeroBanner() {
 
                   {/* Shape Image */}
                   <div className="shape1">
-                    <Image
-                      src="/images/banner/shape1.png"
-                      alt="shape1"
-                      width={139}
-                      height={86}
-                    />
+                    <OptimizedImage imageName="banner-shape1" alt="shape1" />
                   </div>
                   <div className="shape2">
-                    <Image
-                      src="/images/banner/shape2.png"
-                      alt="shape2"
-                      width={163}
-                      height={164}
-                    />
+                    <OptimizedImage imageName="banner-shape2" alt="shape2" />
                   </div>
                 </div>
               </div>

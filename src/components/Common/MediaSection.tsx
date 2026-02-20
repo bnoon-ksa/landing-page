@@ -1,13 +1,12 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
 
 const AboutusSection = () => {
   const values = [
-    "Patient-Centered Care",
-    "Innovation & Research",
-    "Collaboration & Teamwork",
-    "Integrity & Transparency",
-    "Excellence in Service",
+    'Patient-Centered Care',
+    'Innovation & Research',
+    'Collaboration & Teamwork',
+    'Integrity & Transparency',
+    'Excellence in Service',
   ];
 
   return (
@@ -17,20 +16,17 @@ const AboutusSection = () => {
           <div className="row justify-content-center align-items-center g-4">
             <div className="col-lg-12 col-md-12">
               <div className="left text-center  mt-3">
-                <h2>Media or Corporate Inquiries?  </h2>
+                <h2>Media or Corporate Inquiries? </h2>
               </div>
               <div className="left text-center mt-2">
                 <p>
-                 For press inquiries or business partnerships, please contact us at: communications@bnoon.sa
+                  For press inquiries or business partnerships, please contact us at:
+                  communications@bnoon.sa
                 </p>
               </div>
-             
             </div>
-            
           </div>
-          
-        </div> 
-         
+        </div>
       </div>
     </div>
   );

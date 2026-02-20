@@ -1,10 +1,8 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const TreatmentsSection = () => {
- 
-
   return (
     <>
       {/* Existing Paragraph Section */}
@@ -14,15 +12,17 @@ const TreatmentsSection = () => {
             <div className="col-lg-12 col-md-12">
               <div className="left">
                 <p>
-                  At Bnoon, every service is designed with one goal in mind: personalized care that puts you first. Across our specialized centers, you’ll find expert teams, advanced technologies, and a patient-centered approach that ensures every step of your journey is supported, seamless, and focused on achieving the best possible outcomes for your health and well-being. 
+                  At Bnoon, every service is designed with one goal in mind: personalized care that
+                  puts you first. Across our specialized centers, you’ll find expert teams, advanced
+                  technologies, and a patient-centered approach that ensures every step of your
+                  journey is supported, seamless, and focused on achieving the best possible
+                  outcomes for your health and well-being.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-     
     </>
   );
 };

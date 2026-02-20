@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 // Doctor data structure
 interface Doctor {
@@ -11,7 +11,7 @@ interface Doctor {
   experience: string;
   rating: number;
   reviews: number;
-  imageUrl: string;
+  imageName: string;
   profileLink: string;
 }
 
@@ -19,25 +19,25 @@ const OurDoctorsStyle2 = () => {
   const doctorsData: Doctor[] = [
     {
       id: 1,
-      name: "Dr. Aisha Rahman",
-      qualification: "MBBS, FCPS (Medicine)",
-      specialization: "Internal Medicine",
-      experience: "12+ Years of Experience",
+      name: 'Dr. Aisha Rahman',
+      qualification: 'MBBS, FCPS (Medicine)',
+      specialization: 'Internal Medicine',
+      experience: '12+ Years of Experience',
       rating: 4.9,
       reviews: 3560,
-      imageUrl: "/images/doctors/doctor1.png",
-      profileLink: "/doctors/profile",
+      imageName: 'doctor-grid-1',
+      profileLink: '/doctors/profile',
     },
     {
       id: 2,
-      name: "Dr. Mark Davis",
-      qualification: "MD, Psychiatry",
-      specialization: "Mental Health",
-      experience: "8+ Years of Experience",
+      name: 'Dr. Mark Davis',
+      qualification: 'MD, Psychiatry',
+      specialization: 'Mental Health',
+      experience: '8+ Years of Experience',
       rating: 4.8,
       reviews: 2350,
-      imageUrl: "/images/doctors/doctor2.png",
-      profileLink: "/doctors/profile",
+      imageName: 'doctor-grid-2',
+      profileLink: '/doctors/profile',
     },
     // ... baki doctorsData same
   ];
@@ -75,10 +75,7 @@ const OurDoctorsStyle2 = () => {
             <div className="col-lg-6 col-md-12">
               <div className="left">
                 <span className="sub wrap2">Our Doctors</span>
-                <h2>
-                  Meet the Licensed Doctors Who Power Doutor&apos;s Virtual
-                  Care
-                </h2>
+                <h2>Meet the Licensed Doctors Who Power Doutor&apos;s Virtual Care</h2>
               </div>
             </div>
             <div className="col-lg-6 col-md-12">
@@ -109,12 +106,10 @@ const OurDoctorsStyle2 = () => {
               <div className="doctor-card">
                 <div className="image">
                   <Link href={doctor.profileLink}>
-                    <Image
-                      src={doctor.imageUrl}
+                    <OptimizedImage
+                      imageName={doctor.imageName}
                       alt={doctor.name}
-                      width={340}
-                      height={340}
-                      style={{ borderRadius: "50%" }}
+                      style={{ borderRadius: '50%' }}
                     />
                   </Link>
                 </div>

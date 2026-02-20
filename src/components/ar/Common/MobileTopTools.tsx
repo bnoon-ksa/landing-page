@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { getBookNowUrl } from "@/utils/booking";
+import React from 'react';
+import { getBookNowUrl } from '@/utils/booking';
 
 const MobileTopTools: React.FC = () => {
   return (
@@ -31,11 +31,11 @@ const MobileTopTools: React.FC = () => {
         >
           <path d="M154.708 115.415a80.404 80.404 0 0 1-17.641-4.416c-6.242-2.359-13.345-.836-18.104 3.896l-6.198 6.229a101.805 101.805 0 0 1-33.919-34.089l6.205-6.237c4.695-4.773 6.21-11.918 3.865-18.193a81.55 81.55 0 0 1-4.401-17.771C83.323 36.349 76.039 30 67.572 30l-.168.001H47.635c-.515 0-1.033.023-1.53.07-4.561.414-8.69 2.589-11.625 6.125-2.937 3.538-4.326 8.015-3.908 12.667C32.79 69.86 40 90.325 51.401 108.016c10.361 16.39 24.455 30.558 40.73 40.953 17.546 11.437 37.809 18.683 58.672 20.961.515.046 1.031.069 1.534.069h.077c9.456-.039 17.118-7.808 17.081-17.302v-19.825c.19-8.733-6.144-16.231-14.787-17.457zm6.845 17.412v19.887c.02 5.1-4.094 9.265-9.173 9.286-.294-.002-.58-.012-.793-.03-19.563-2.137-38.629-8.955-55.17-19.736-15.327-9.79-28.576-23.108-38.334-38.543C47.34 87.021 40.557 67.769 38.477 48.08a9.218 9.218 0 0 1 2.098-6.752 9.138 9.138 0 0 1 7.06-3.326h19.808c.032-.002.062-.002.092-.002 4.566 0 8.476 3.404 9.111 7.918a89.669 89.669 0 0 0 4.834 19.497c1.259 3.366.445 7.194-2.055 9.736l-8.369 8.412a4.022 4.022 0 0 0-.646 4.812c9.73 17.199 23.917 31.461 41.028 41.241a3.948 3.948 0 0 0 4.766-.647l8.353-8.396a9.212 9.212 0 0 1 9.728-2.08 88.214 88.214 0 0 0 19.35 4.85c4.63.656 8.034 4.691 7.918 9.386v.098z"></path>
         </svg>
-        جدة 
+        جدة
       </a>
 
       {/* Book Appointment */}
-      <a href={getBookNowUrl("ar")} className="tool-btn">
+      <a href={getBookNowUrl('ar')} className="tool-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="29.5 29.5 141 141"
@@ -45,61 +45,60 @@ const MobileTopTools: React.FC = () => {
         >
           <path d="M156.48 107.01v46.292c0 9.483-7.715 17.198-17.198 17.198H46.698c-9.483 0-17.198-7.715-17.198-17.198V60.718c0-9.483 7.715-17.198 17.198-17.198H92.99a3.972 3.972 0 0 1 0 7.944H46.698c-5.103 0-9.254 4.151-9.254 9.254v92.583c0 5.103 4.151 9.254 9.254 9.254h92.583c5.103 0 9.254-4.151 9.254-9.254V107.01a3.972 3.972 0 0 1 7.945 0zm8.756-46.79-62.825 62.825a3.964 3.964 0 0 1-1.845 1.045l-26.452 6.613a3.964 3.964 0 0 1-3.771-1.046 3.968 3.968 0 0 1-1.045-3.771l6.613-26.452a3.972 3.972 0 0 1 1.045-1.845l62.825-62.825c7.017-7.019 18.439-7.019 25.456 0 7.018 7.018 7.018 18.438-.001 25.456zm-2.672-12.728a9.993 9.993 0 0 0-2.945-7.111c-1.9-1.899-4.425-2.945-7.111-2.945s-5.211 1.046-7.111 2.945l-62.046 62.047-4.741 18.962 18.962-4.741 62.047-62.046a9.992 9.992 0 0 0 2.945-7.111z"></path>
         </svg>
-       احجز
+        احجز
       </a>
 
-     <style jsx>{`
-  .mobile-tools {
-    display: none;
-    justify-content: center;
-    gap: 0;
-    flex-wrap: wrap;
-    padding: 5px 0;
-  }
+      <style jsx>{`
+        .mobile-tools {
+          display: none;
+          justify-content: center;
+          gap: 0;
+          flex-wrap: wrap;
+          padding: 5px 0;
+        }
 
-  .tool-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-    text-align: center;
-    color: #000;
-    background: #fff;
-    font-size: 13px;
-    border-left: 1px solid #ccc;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    gap: 8px;
-  }
+        .tool-btn {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 0;
+          text-align: center;
+          color: #000;
+          background: #fff;
+          font-size: 13px;
+          border-left: 1px solid #ccc;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          gap: 8px;
+        }
 
-  .tool-btn:last-child {
-    border-left: none;
-  }
+        .tool-btn:last-child {
+          border-left: none;
+        }
 
-  svg {
-    color: #39bced;
-  }
+        svg {
+          color: #39bced;
+        }
 
-  .tool-btn:hover {
-    background-color: #f4f4f4;
-  }
+        .tool-btn:hover {
+          background-color: #f4f4f4;
+        }
 
-  @media (max-width: 768px) {
-    .mobile-tools {
-      display: flex;
-      justify-content: center;
-      background-color: #fff;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      border-top: 1px solid #ddd;
-    }
-  }
-`}</style>
-
+        @media (max-width: 768px) {
+          .mobile-tools {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            border-top: 1px solid #ddd;
+          }
+        }
+      `}</style>
     </div>
   );
 };

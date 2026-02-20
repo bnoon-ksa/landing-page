@@ -1,12 +1,10 @@
-"use client";
-import React, { useRef, useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { getBookNowUrl } from "@/utils/booking";
+'use client';
+import React, { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { getBookNowUrl } from '@/utils/booking';
 
-const DrRazanGhaith  = () => {
-  const imageRiyadh = "/images/doctors/dr-razan-ghaith.avif";
-
+const DrRazanGhaith = () => {
   const contentRefRiyadh = useRef<HTMLDivElement>(null);
   const imageRefRiyadh = useRef<HTMLDivElement>(null);
   const contentRefKing = useRef<HTMLDivElement>(null);
@@ -25,7 +23,7 @@ const DrRazanGhaith  = () => {
           observerContentRiyadh.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (contentRefRiyadh.current) observerContentRiyadh.observe(contentRefRiyadh.current);
 
@@ -36,7 +34,7 @@ const DrRazanGhaith  = () => {
           observerImageRiyadh.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (imageRefRiyadh.current) observerImageRiyadh.observe(imageRefRiyadh.current);
 
@@ -47,7 +45,7 @@ const DrRazanGhaith  = () => {
           observerContentKing.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (contentRefKing.current) observerContentKing.observe(contentRefKing.current);
 
@@ -58,7 +56,7 @@ const DrRazanGhaith  = () => {
           observerImageKing.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (imageRefKing.current) observerImageKing.observe(imageRefKing.current);
 
@@ -73,7 +71,6 @@ const DrRazanGhaith  = () => {
   return (
     <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
-
         {/* Breadcrumbs */}
         <nav aria-label="breadcrumb" className="mb-4">
           <ol className="breadcrumb">
@@ -84,28 +81,23 @@ const DrRazanGhaith  = () => {
               <Link href="our-experts">Our Experts</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              Dr. Razan Ghaith 
+              Dr. Razan Ghaith
             </li>
           </ol>
         </nav>
 
         {/* Riyadh Section */}
         <div className="row g-4 mt-lg-5">
-
           <div className="col-xl-7 col-md-12">
             <div className="doctors-overview-content">
               <h2
                 ref={contentRefRiyadh}
-                className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
+                className={`animate-left ${contentVisibleRiyadh ? 'show' : ''}`}
               >
-
-
-             Dr. Razan Ghaith 
+                Dr. Razan Ghaith
               </h2>
-              <p className="profile-text">
-              Consultant, Obstetrics, Gynecology and Infertility </p>
-              <p className="profile-text">
-           Location: Bnoon – Jeddah  </p>
+              <p className="profile-text">Consultant, Obstetrics, Gynecology and Infertility </p>
+              <p className="profile-text">Location: Bnoon – Jeddah </p>
               <p className="profile-text-last">
                 Languages:
                 <span className="lang-box">English</span>
@@ -113,36 +105,38 @@ const DrRazanGhaith  = () => {
               </p>
 
               <p>
-             Dr. Razan Ghaith is a Consultant in Obstetrics, Gynecology, and Infertility at Bnoon – Jeddah (formerly known as HealthPlus Fertility Center in Jeddah) since 2021. She has worked with numerous medical organizations both in Saudi Arabia and abroad.   </p>
+                Dr. Razan Ghaith is a Consultant in Obstetrics, Gynecology, and Infertility at Bnoon
+                – Jeddah (formerly known as HealthPlus Fertility Center in Jeddah) since 2021. She
+                has worked with numerous medical organizations both in Saudi Arabia and abroad.{' '}
+              </p>
               <p>
-            Dr. Ghaith earned her Medical Degree (M.D) from King Abdulaziz University in 2009, completed her residency in Obstetrics & Gynecology at National Guard Hospital in Jeddah, and then pursued a Master’s degree in Clinical Embryology at Monash University in Melbourne, Australia. Dr. Ghaith specializes in managing delayed fertility cases and oversees general obstetrics and gynecological care, including antenatal care, deliveries, and surgical procedures. Dr. Ghaith is committed to addressing each couple’s unique needs and concerns. Her goal is to provide comprehensive treatment options and help couples achieve the best possible outcomes.  </p>
+                Dr. Ghaith earned her Medical Degree (M.D) from King Abdulaziz University in 2009,
+                completed her residency in Obstetrics & Gynecology at National Guard Hospital in
+                Jeddah, and then pursued a Master’s degree in Clinical Embryology at Monash
+                University in Melbourne, Australia. Dr. Ghaith specializes in managing delayed
+                fertility cases and oversees general obstetrics and gynecological care, including
+                antenatal care, deliveries, and surgical procedures. Dr. Ghaith is committed to
+                addressing each couple’s unique needs and concerns. Her goal is to provide
+                comprehensive treatment options and help couples achieve the best possible
+                outcomes.{' '}
+              </p>
             </div>
           </div>
 
-
-
-
           <div className="col-xl-5 col-md-12 image-column">
             <div>
-              <Image
+              <OptimizedImage
+                imageName="dr-razan-ghaith"
                 className="doctors-overview-image"
-                src={imageRiyadh}
                 alt="Bnoon Riyadh"
-                width={502}
-                height={625}
               />
             </div>
             <div className="text-center mt-3">
-              <a
-                href={getBookNowUrl("en")}
-                className="btn btn-success doctor-profile-btn"
-              >
+              <a href={getBookNowUrl('en')} className="btn btn-success doctor-profile-btn">
                 Request an Appointment
               </a>
             </div>
           </div>
-        
-       
         </div>
       </div>
     </div>

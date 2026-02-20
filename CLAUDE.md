@@ -98,8 +98,9 @@ src/
 ### Path Alias
 
 Use `@/` to reference `src/`:
+
 ```ts
-import { something } from "@/utils/booking";
+import { something } from '@/utils/booking';
 ```
 
 ### API Routes
@@ -135,6 +136,7 @@ RECAPTCHA_SECRET_KEY=     # reCAPTCHA v2 secret key (server)
 ```
 
 Additional server-side variables (set in Azure App Settings):
+
 - `USE_NEW_BOOKING_APP` — `"true"` to redirect appointment pages to book.bnoon.sa
 - `STANDALONE` — `"true"` for standalone Next.js output mode
 - `PORT` — server port (default 3000)
@@ -166,6 +168,7 @@ Three GitHub Actions workflows in `.github/workflows/`:
 3. **rollback.yml** — Manual rollback capability
 
 PR pipeline runs these jobs in order:
+
 1. Setup (install + cache)
 2. Parallel: lint, typecheck, unit tests, security audit, build
 3. E2E tests (after all parallel jobs pass)
@@ -222,16 +225,16 @@ A full code audit is documented in `AUDIT.md`. Below is a summary of the most im
 
 ### Open Issues
 
-| Issue | Description |
-|-------|-------------|
-| [#67](https://github.com/bnoon-ksa/landing-page/issues/67) | Runtime feature flag for booking redirect |
-| [#65](https://github.com/bnoon-ksa/landing-page/issues/65) | Add refer-a-patient page |
-| [#26](https://github.com/bnoon-ksa/landing-page/issues/26) | Comprehensive code audit report |
-| [#7](https://github.com/bnoon-ksa/landing-page/issues/7) | Self-host Arabic fonts, remove test artifacts |
-| [#6](https://github.com/bnoon-ksa/landing-page/issues/6) | Azure infrastructure details in README |
-| [#5](https://github.com/bnoon-ksa/landing-page/issues/5) | Restore local images, branch-specific booking URLs |
-| [#3](https://github.com/bnoon-ksa/landing-page/issues/3) | PR validation CI pipeline |
-| [#2](https://github.com/bnoon-ksa/landing-page/issues/2) | Security, performance, SEO, error handling overhaul |
-| [#1](https://github.com/bnoon-ksa/landing-page/issues/1) | Book appointment redirect |
+| Issue                                                      | Description                                         |
+| ---------------------------------------------------------- | --------------------------------------------------- |
+| [#67](https://github.com/bnoon-ksa/landing-page/issues/67) | Runtime feature flag for booking redirect           |
+| [#65](https://github.com/bnoon-ksa/landing-page/issues/65) | Add refer-a-patient page                            |
+| [#26](https://github.com/bnoon-ksa/landing-page/issues/26) | Comprehensive code audit report                     |
+| [#7](https://github.com/bnoon-ksa/landing-page/issues/7)   | Self-host Arabic fonts, remove test artifacts       |
+| [#6](https://github.com/bnoon-ksa/landing-page/issues/6)   | Azure infrastructure details in README              |
+| [#5](https://github.com/bnoon-ksa/landing-page/issues/5)   | Restore local images, branch-specific booking URLs  |
+| [#3](https://github.com/bnoon-ksa/landing-page/issues/3)   | PR validation CI pipeline                           |
+| [#2](https://github.com/bnoon-ksa/landing-page/issues/2)   | Security, performance, SEO, error handling overhaul |
+| [#1](https://github.com/bnoon-ksa/landing-page/issues/1)   | Book appointment redirect                           |
 
 For the full prioritized TODO checklist with file-level references, see `AUDIT.md`.

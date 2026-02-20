@@ -1,10 +1,10 @@
-import { NextResponse } from "next/server";
-import packageJson from "../../../../package.json";
+import { NextResponse } from 'next/server';
+import packageJson from '../../../../package.json';
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 interface HealthResponse {
-  status: "healthy";
+  status: 'healthy';
   version: string;
   uptime: number;
   timestamp: string;
@@ -12,7 +12,7 @@ interface HealthResponse {
 
 export async function GET(): Promise<NextResponse<HealthResponse>> {
   return NextResponse.json({
-    status: "healthy",
+    status: 'healthy',
     version: packageJson.version,
     uptime: Math.floor(process.uptime()),
     timestamp: new Date().toISOString(),

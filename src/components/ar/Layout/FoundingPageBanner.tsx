@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 type Props = {
   bgImage: string;
@@ -11,7 +11,6 @@ export default function FoundingDayBanner({ bgImage }: Props) {
         className="founding-banner-area"
         style={{
           backgroundImage: `url(${bgImage})`,
-        
         }}
       />
 
@@ -26,7 +25,7 @@ export default function FoundingDayBanner({ bgImage }: Props) {
         }
            .text-size{
               font-size: 44px !important;
-             
+
           }
         @media (max-width: 768px) {
           .founding-banner-area {
@@ -37,14 +36,13 @@ export default function FoundingDayBanner({ bgImage }: Props) {
                 font-size: 13px !important;
         line-height: 16px;
         font-weight: 700;
-              
+
           }
                 .text-banner{
-              
+
               }
         }
       `}</style>
     </>
   );
 }
-

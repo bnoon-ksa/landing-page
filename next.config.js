@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: process.env.STANDALONE === "true" ? "standalone" : undefined,
+  output: process.env.STANDALONE === 'true' ? 'standalone' : undefined,
   reactStrictMode: true,
   images: {
     minimumCacheTTL: 2592000,
@@ -27,21 +27,15 @@ const nextConfig = {
     return [
       {
         source: '/images/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=2592000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, immutable' }],
       },
       {
         source: '/optimized/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/_next/static/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
         source: '/_next/image',
@@ -51,9 +45,7 @@ const nextConfig = {
       },
       {
         source: '/api/health',
-        headers: [
-          { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
-        ],
+        headers: [{ key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' }],
       },
     ];
   },
@@ -61,8 +53,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/",
-        destination: "/ar",
+        source: '/',
+        destination: '/ar',
         permanent: false,
       },
     ];

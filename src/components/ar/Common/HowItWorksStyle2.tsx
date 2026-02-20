@@ -1,37 +1,41 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+'use client';
+import React, { useState, useEffect } from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 const HowItWorksSlider = () => {
   const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const steps = [
-    { id: 1, imageSrc: "/images/fertility-counselling.jpg", title: "استشارات الخصوبة وتحاليل الهرمونات " },
-    { id: 2, imageSrc: "/images/intrauterine-insemination.jpg", title: " (IUI) التلقيح داخل الرحم" },
-    { id: 3, imageSrc: "/images/ivf.jpg", title: " (IVF) أطفال الأنابيب" },
-    { id: 4, imageSrc: "/images/ivm.jpg", title: "(IVM) نضوج البويضات خارج الجسم" },
-    { id: 5, imageSrc: "/images/icsi.jpg", title: "  (ICSI) الحقن المجهري" },
-    { id: 6, imageSrc: "/images/ovulation-induction.jpg", title: "تحفيز الإباضة " },
-    { id: 7, imageSrc: "/images/pgs.jpg", title: "  (PGS) الفحص الوراثي للأجنة" },
-    { id: 8, imageSrc: "/images/pgd.jpg", title: " (PGD) الفحص الوراثي للأجنة" },
-    { id: 9, imageSrc: "/images/egg-freezing.jpg", title: "تجميد البويضات" },
-    { id: 10, imageSrc: "/images/sperm-freezing.jpg", title: "تجميدُ النطف " },
-    { id: 11, imageSrc: "/images/embryo-freezing.jpg", title: "تجميد الأجنة " },
-    { id: 12, imageSrc: "/images/male-fertility.jpg", title: "تقييم وعلاج خصوبة الرجال (أمراض الذكورة والمسالك) " },
-    { id: 13, imageSrc: "/images/ivf.jpg", title: "سحب الحيوانات المنوية جراحياً " },
-    { id: 14, imageSrc: "/images/fbgs.jpg", title: "التوازن الأسري - جنس المولود " },
-    { id: 15, imageSrc: "/images/recurrent-miscarriage.jpg", title: "​حالات الإجهاض المتكرر " },
-    { id: 16, imageSrc: "/images/antenatal-care-deliveries.jpg", title: "متابعة الحمل ورعاية ما قبل الولادة " },
+    { id: 1, imageName: 'fertility-counselling', title: 'استشارات الخصوبة وتحاليل الهرمونات ' },
+    { id: 2, imageName: 'intrauterine-insemination', title: ' (IUI) التلقيح داخل الرحم' },
+    { id: 3, imageName: 'ivf', title: ' (IVF) أطفال الأنابيب' },
+    { id: 4, imageName: 'ivm', title: '(IVM) نضوج البويضات خارج الجسم' },
+    { id: 5, imageName: 'icsi', title: '  (ICSI) الحقن المجهري' },
+    { id: 6, imageName: 'ovulation-induction', title: 'تحفيز الإباضة ' },
+    { id: 7, imageName: 'pgs', title: '  (PGS) الفحص الوراثي للأجنة' },
+    { id: 8, imageName: 'pgd', title: ' (PGD) الفحص الوراثي للأجنة' },
+    { id: 9, imageName: 'egg-freezing', title: 'تجميد البويضات' },
+    { id: 10, imageName: 'sperm-freezing', title: 'تجميدُ النطف ' },
+    { id: 11, imageName: 'embryo-freezing', title: 'تجميد الأجنة ' },
+    {
+      id: 12,
+      imageName: 'male-fertility',
+      title: 'تقييم وعلاج خصوبة الرجال (أمراض الذكورة والمسالك) ',
+    },
+    { id: 13, imageName: 'ivf', title: 'سحب الحيوانات المنوية جراحياً ' },
+    { id: 14, imageName: 'fbgs', title: 'التوازن الأسري - جنس المولود ' },
+    { id: 15, imageName: 'recurrent-miscarriage', title: '​حالات الإجهاض المتكرر ' },
+    { id: 16, imageName: 'antenatal-care', title: 'متابعة الحمل ورعاية ما قبل الولادة ' },
   ];
-// Detect mobile screen
+  // Detect mobile screen
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
+    handleResize();
+    window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Slice logic for mobile
@@ -51,12 +55,12 @@ const HowItWorksSlider = () => {
         </div>
 
         <div className="row g-4">
-          {visibleSteps.map((step) =>  (
+          {visibleSteps.map((step) => (
             <div key={step.id} className="col-lg-3 col-md-4 col-sm-6">
               <div className="how-it-work-card">
                 <div className="image">
-                  <Image
-                    src={step.imageSrc}
+                  <OptimizedImage
+                    imageName={step.imageName}
                     alt={step.title}
                     width={350}
                     height={300}
@@ -68,21 +72,16 @@ const HowItWorksSlider = () => {
             </div>
           ))}
         </div>
-               {/* Read More / Less button - mobile only */}
+        {/* Read More / Less button - mobile only */}
         {isMobile && (
           <div className="text-center mt-1 pb-3">
-            <button
-              className="btn btn-success btn-blog"
-              onClick={() => setShowAll(!showAll)}
-            >
-              {showAll ? "اقرأ أقل" : "المزيد"}
+            <button className="btn btn-success btn-blog" onClick={() => setShowAll(!showAll)}>
+              {showAll ? 'اقرأ أقل' : 'المزيد'}
             </button>
           </div>
         )}
       </div>
-             <style jsx>{`
-        
-      `}</style>
+      <style jsx>{``}</style>
     </div>
   );
 };

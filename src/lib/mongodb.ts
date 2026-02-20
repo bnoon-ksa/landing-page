@@ -1,4 +1,4 @@
-import mongoose, { type Mongoose } from "mongoose";
+import mongoose, { type Mongoose } from 'mongoose';
 
 interface MongooseCache {
   conn: Mongoose | null;
@@ -13,7 +13,7 @@ declare global {
 function getMongoURI(): string {
   const uri = process.env.MONGODB_URI;
   if (!uri) {
-    throw new Error("MONGODB_URI environment variable is not set");
+    throw new Error('MONGODB_URI environment variable is not set');
   }
   return uri;
 }
@@ -32,7 +32,7 @@ export async function connectDB(): Promise<Mongoose> {
       .connect(getMongoURI(), { bufferCommands: false })
       .then((connection) => connection)
       .catch((err: unknown) => {
-        console.error("MongoDB connection error:", err);
+        console.error('MongoDB connection error:', err);
         throw err;
       });
   }

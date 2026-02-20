@@ -1,10 +1,8 @@
 /**
  * Image optimization pipeline types.
  *
- * These interfaces are shared between:
- *   - src/config/image.config.ts  (catalog definition)
- *   - scripts/optimize-images.ts  (build script)
- *   - src/lib/image-manifest.ts   (auto-generated output)
+ * Used by:
+ *   - src/lib/image-manifest.ts   (static manifest)
  *   - src/components/ui/OptimizedImage.tsx (runtime consumer)
  */
 
@@ -33,13 +31,19 @@ export interface ImageCatalogEntry {
 
   /** Grouping tag for filtering and reporting. */
   readonly category:
-    | "banner"
-    | "benefit"
-    | "blog"
-    | "doctor"
-    | "service"
-    | "about"
-    | "misc";
+    | 'banner'
+    | 'benefit'
+    | 'blog'
+    | 'doctor'
+    | 'service'
+    | 'about'
+    | 'treatment'
+    | 'fertility-guide'
+    | 'visit'
+    | 'location'
+    | 'icon'
+    | 'campaign'
+    | 'misc';
 }
 
 /** Auto-generated manifest entry produced by the build script. */
@@ -66,7 +70,18 @@ export interface ImageManifestEntry {
   readonly blurDataURL: string;
 
   /** Category from the catalog. */
-  readonly category: ImageCatalogEntry["category"];
+  readonly category: ImageCatalogEntry['category'];
+
+  /**
+   * Pre-built CDN `srcSet` string for native `<img>` delivery.
+   * When present, `<OptimizedImage>` renders a native `<img srcSet>` instead
+   * of `next/image`, bypassing server-side image processing.
+   *
+   * Empty string means CDN is not configured — falls back to `next/image`.
+   *
+   * @example "https://cdn.../optimized/benefit-1-576x461-32kb.webp 576w, ...1200x960-85kb.webp 1200w"
+   */
+  readonly cdnSrcSet: string;
 }
 
 /** The full manifest keyed by image name. */

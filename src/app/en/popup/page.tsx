@@ -1,10 +1,8 @@
-"use client";
-import Popup from "@/components/Common/Popup";
+'use client';
+import Popup from '@/components/Common/Popup';
 export default function Page() {
   return (
     <>
-     
-
       <Popup />
     </>
   );

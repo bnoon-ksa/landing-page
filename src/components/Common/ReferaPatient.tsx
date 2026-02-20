@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { useMemo, useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useMemo, useRef, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 type ReferralFormData = {
-  referTo: "" | "Bnoon – Jeddah" | "Bnoon – Riyadh" | "Bnoon – Al Ahsa";
+  referTo: '' | 'Bnoon – Jeddah' | 'Bnoon – Riyadh' | 'Bnoon – Al Ahsa';
 
   physicianName: string;
   physicianPhone: string;
@@ -14,7 +14,7 @@ type ReferralFormData = {
 
   patientName: string;
   patientPhone: string;
-  gender: "" | "Male" | "Female";
+  gender: '' | 'Male' | 'Female';
 
   reasons: string[]; // mandatory (at least one)
   medicalReason: string; // optional
@@ -24,22 +24,22 @@ type ReferralFormData = {
 
 const AppointmentSection = () => {
   const [formData, setFormData] = useState<ReferralFormData>({
-    referTo: "",
+    referTo: '',
 
-    physicianName: "",
-    physicianPhone: "",
-    physicianEmail: "",
-    healthcareFacilityName: "",
-    organizationCity: "",
+    physicianName: '',
+    physicianPhone: '',
+    physicianEmail: '',
+    healthcareFacilityName: '',
+    organizationCity: '',
 
-    patientName: "",
-    patientPhone: "",
-    gender: "",
+    patientName: '',
+    patientPhone: '',
+    gender: '',
 
     reasons: [],
-    medicalReason: "",
+    medicalReason: '',
 
-    recaptcha: "",
+    recaptcha: '',
   });
 
   const messageRef = useRef<HTMLDivElement | null>(null);
@@ -49,61 +49,60 @@ const AppointmentSection = () => {
 
   const REASONS = useMemo(
     () => [
-      "Consultation",
-      "Genetic Testing (PGT-A/PGT-M)",
-      "IVF/ICSI",
-      "Unexplained Infertility",
-      "Male Factor Infertility",
-      "Ovulation Induction",
-      "Previous Vasectomy",
-      "Fertility Preservation for Medical Reason",
-      "Recurrent Pregnancy Loss",
-      "Other",
+      'Consultation',
+      'Genetic Testing (PGT-A/PGT-M)',
+      'IVF/ICSI',
+      'Unexplained Infertility',
+      'Male Factor Infertility',
+      'Ovulation Induction',
+      'Previous Vasectomy',
+      'Fertility Preservation for Medical Reason',
+      'Recurrent Pregnancy Loss',
+      'Other',
     ],
-    []
+    [],
   );
 
-const SAUDI_CITIES = useMemo(
-  () => [
-    "Riyadh",
-    "Jeddah",
-    "Makkah",
-    "Madinah",
-    "Dammam",
-    "Khobar",
-    "Dhahran",
-    "Al Ahsa",
-    "Qatif",
-    "Jubail",
-    "Taif",
-    "Abha",
-    "Khamis Mushait",
-    "Jazan",
-    "Najran",
-    "Al Baha",
-    "Buraidah",
-    "Unaizah",
-    "Hail",
-    "Tabuk",
-    "Sakakah",
-    "Arar",
-    "Yanbu",
-    "Al Qunfudhah",
-    "Ar Rass",
-    "Zulfi",
-    "Wadi ad-Dawasir",
-    "Bisha",
-    "Al Qurayyat",
-    "Rabigh",
-    "Al Kharj",
-  ],
-  []
-);
-
+  const SAUDI_CITIES = useMemo(
+    () => [
+      'Riyadh',
+      'Jeddah',
+      'Makkah',
+      'Madinah',
+      'Dammam',
+      'Khobar',
+      'Dhahran',
+      'Al Ahsa',
+      'Qatif',
+      'Jubail',
+      'Taif',
+      'Abha',
+      'Khamis Mushait',
+      'Jazan',
+      'Najran',
+      'Al Baha',
+      'Buraidah',
+      'Unaizah',
+      'Hail',
+      'Tabuk',
+      'Sakakah',
+      'Arar',
+      'Yanbu',
+      'Al Qunfudhah',
+      'Ar Rass',
+      'Zulfi',
+      'Wadi ad-Dawasir',
+      'Bisha',
+      'Al Qurayyat',
+      'Rabigh',
+      'Al Kharj',
+    ],
+    [],
+  );
 
   const scrollToMessage = () => {
     setTimeout(() => {
-      messageRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      messageRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 50);
   };
 
@@ -125,16 +124,17 @@ const SAUDI_CITIES = useMemo(
     const errors: string[] = [];
 
     // Mandatory only:
-    if (!formData.physicianName.trim()) errors.push("Physician Name is required.");
-    if (!formData.physicianPhone.trim()) errors.push("Physician Phone is required.");
+    if (!formData.physicianName.trim()) errors.push('Physician Name is required.');
+    if (!formData.physicianPhone.trim()) errors.push('Physician Phone is required.');
 
-    if (!formData.patientName.trim()) errors.push("Patient Name is required.");
-    if (!formData.patientPhone.trim()) errors.push("Patient Phone is required.");
-    if (!formData.gender) errors.push("Gender is required.");
+    if (!formData.patientName.trim()) errors.push('Patient Name is required.');
+    if (!formData.patientPhone.trim()) errors.push('Patient Phone is required.');
+    if (!formData.gender) errors.push('Gender is required.');
 
-    if (formData.reasons.length === 0) errors.push("Please select at least one reason for referring.");
+    if (formData.reasons.length === 0)
+      errors.push('Please select at least one reason for referring.');
 
-    if (!formData.recaptcha) errors.push("Please complete reCAPTCHA.");
+    if (!formData.recaptcha) errors.push('Please complete reCAPTCHA.');
 
     return errors;
   };
@@ -154,7 +154,7 @@ const SAUDI_CITIES = useMemo(
               <li key={x}>{x}</li>
             ))}
           </ul>
-        </div>
+        </div>,
       );
       scrollToMessage();
       return;
@@ -163,9 +163,9 @@ const SAUDI_CITIES = useMemo(
     try {
       setSubmitting(true);
 
-      const res = await fetch("/api/referrals", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+      const res = await fetch('/api/referrals', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
@@ -173,45 +173,45 @@ const SAUDI_CITIES = useMemo(
 
       if (!res.ok) {
         const msg =
-          (data?.errors && Array.isArray(data.errors) && data.errors.join(", ")) ||
+          (data?.errors && Array.isArray(data.errors) && data.errors.join(', ')) ||
           data?.message ||
-          "Submission failed. Please try again.";
+          'Submission failed. Please try again.';
         setMessage(
           <div className="alert alert-danger text-start" role="alert">
             {msg}
-          </div>
+          </div>,
         );
         scrollToMessage();
         return;
       }
 
-    setMessage(
-  <>
-    <strong>Thank you! Your referral has been received.</strong>
-    <br />
-    Our team will contact the patient shortly to support and facilitate the next steps in their care.
-    <br />
-    <em>We look forward to connecting soon.</em>
-  </>
-);
-setShowThankYou(true);
-scrollToMessage();
-
+      setMessage(
+        <>
+          <strong>Thank you! Your referral has been received.</strong>
+          <br />
+          Our team will contact the patient shortly to support and facilitate the next steps in
+          their care.
+          <br />
+          <em>We look forward to connecting soon.</em>
+        </>,
+      );
+      setShowThankYou(true);
+      scrollToMessage();
 
       // ✅ reset only existing fields (district/dateOfBirth removed)
       setFormData({
-        referTo: "",
-        physicianName: "",
-        physicianPhone: "",
-        physicianEmail: "",
-        healthcareFacilityName: "",
-        organizationCity: "",
-        patientName: "",
-        patientPhone: "",
-        gender: "",
+        referTo: '',
+        physicianName: '',
+        physicianPhone: '',
+        physicianEmail: '',
+        healthcareFacilityName: '',
+        organizationCity: '',
+        patientName: '',
+        patientPhone: '',
+        gender: '',
         reasons: [],
-        medicalReason: "",
-        recaptcha: "",
+        medicalReason: '',
+        recaptcha: '',
       });
 
       scrollToMessage();
@@ -219,7 +219,7 @@ scrollToMessage();
       setMessage(
         <div className="alert alert-danger text-start" role="alert">
           Network error. Please try again.
-        </div>
+        </div>,
       );
       scrollToMessage();
     } finally {
@@ -240,14 +240,15 @@ scrollToMessage();
 
             <div className="text-space">
               <p className="text-center">
-                Thank you for placing your trust in Bnoon and for referring your patient for fertility care. Please
-                note that this form is intended to be completed exclusively by licensed medical practitioners.
+                Thank you for placing your trust in Bnoon and for referring your patient for
+                fertility care. Please note that this form is intended to be completed exclusively
+                by licensed medical practitioners.
                 <br />
-                Kindly complete the form below, and a member of our healthcare team will contact the patient promptly
-                to support and facilitate the next steps in their care.
+                Kindly complete the form below, and a member of our healthcare team will contact the
+                patient promptly to support and facilitate the next steps in their care.
                 <br />
-                Should you wish to discuss a case or speak directly with one of our physicians prior to making a
-                referral, please contact us at 920010022.
+                Should you wish to discuss a case or speak directly with one of our physicians prior
+                to making a referral, please contact us at 920010022.
               </p>
             </div>
           </div>
@@ -255,221 +256,230 @@ scrollToMessage();
 
         {/* FORM START */}
         {!showThankYou && (
-        <form onSubmit={handleSubmit} className="appointment-form text-start mx-auto" style={{ maxWidth: "1000px" }}>
-          {/* Refer to */}
-          <div className="card p-3 mb-3">
-          <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
-  <h6 className="mb-0 form-label">Refer to:</h6>
+          <form
+            onSubmit={handleSubmit}
+            className="appointment-form text-start mx-auto"
+            style={{ maxWidth: '1000px' }}
+          >
+            {/* Refer to */}
+            <div className="card p-3 mb-3">
+              <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
+                <h6 className="mb-0 form-label">Refer to:</h6>
 
-  <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
-    {(["Bnoon – Jeddah", "Bnoon – Riyadh", "Bnoon – Al Ahsa"] as const).map((branch) => (
-      <label key={branch} className="form-check-label mb-0 d-flex align-items-center">
-        <input
-          type="radio"
-          name="referTo"
-          className="form-check-input me-2"
-          value={branch}
-          checked={formData.referTo === branch}
-          onChange={(e) => setField("referTo", e.target.value as ReferralFormData["referTo"])}
-        />
-        {branch}
-      </label>
-    ))}
-  </div>
-</div>
-
-          </div>
-
-          {/* Referring Physician Information */}
-          <h5 className="mb-3 text-size">Referring Physician Information</h5>
-          <div className="card p-3 mb-3">
-            <div className="mb-3">
-              <label className="form-label">Physician Name *</label>
-              <input
-                className="form-control"
-                value={formData.physicianName}
-                onChange={(e) => setField("physicianName", e.target.value)}
-                type="text"
-              />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Phone *</label>
-              <input
-                className="form-control"
-                value={formData.physicianPhone}
-                onChange={(e) => setField("physicianPhone", e.target.value)}
-                type="tel"
-              />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Email Address</label>
-              <input
-                className="form-control"
-                value={formData.physicianEmail}
-                onChange={(e) => setField("physicianEmail", e.target.value)}
-                type="email"
-              />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Healthcare Facility Name</label>
-              <input
-                className="form-control"
-                value={formData.healthcareFacilityName}
-                onChange={(e) => setField("healthcareFacilityName", e.target.value)}
-                type="text"
-              />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Organization City</label>
-            <select
-  className="form-select form-control"
-  value={formData.organizationCity}
-  onChange={(e) => setField("organizationCity", e.target.value)}
->
-  <option value="">Select City</option>
-
-  {SAUDI_CITIES.map((city) => (
-    <option key={city} value={city}>
-      {city}
-    </option>
-  ))}
-</select>
-
-            </div>
-          </div>
-
-          {/* Referred Patient Information */}
-          <h5 className="mb-3 text-size">Referred Patient Information</h5>
-          <div className="card p-3 mb-3">
-            <div className="mb-3">
-              <label className="form-label">Patient Name *</label>
-              <input
-                className="form-control"
-                value={formData.patientName}
-                onChange={(e) => setField("patientName", e.target.value)}
-                type="text"
-              />
-            </div>
-
-            <div className="mb-3">
-              <label className="form-label">Patient Phone *</label>
-              <input
-                className="form-control"
-                value={formData.patientPhone}
-                onChange={(e) => setField("patientPhone", e.target.value)}
-                type="tel"
-              />
-            </div>
-
-            <div className="mb-2">
-              <label className="form-label d-block">Gender *</label>
-              <div className="d-flex gap-4 flex-wrap">
-                <label className="form-check-label mb-0">
-                  <input
-                    className="form-check-input me-2"
-                    type="radio"
-                    name="gender"
-                    checked={formData.gender === "Male"}
-                    onChange={() => setField("gender", "Male")}
-                  />
-                  Male
-                </label>
-
-                <label className="form-check-label mb-0">
-                  <input
-                    className="form-check-input me-2"
-                    type="radio"
-                    name="gender"
-                    checked={formData.gender === "Female"}
-                    onChange={() => setField("gender", "Female")}
-                  />
-                  Female
-                </label>
+                <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
+                  {(['Bnoon – Jeddah', 'Bnoon – Riyadh', 'Bnoon – Al Ahsa'] as const).map(
+                    (branch) => (
+                      <label
+                        key={branch}
+                        className="form-check-label mb-0 d-flex align-items-center"
+                      >
+                        <input
+                          type="radio"
+                          name="referTo"
+                          className="form-check-input me-2"
+                          value={branch}
+                          checked={formData.referTo === branch}
+                          onChange={(e) =>
+                            setField('referTo', e.target.value as ReferralFormData['referTo'])
+                          }
+                        />
+                        {branch}
+                      </label>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Reason for Referring */}
-          <h5 className="mb-3 text-size">Reason for Referring *</h5>
-          <div className="card p-3 mb-3">
-            <div className="row">
-              {REASONS.map((r) => (
-                <div className="col-md-6 mb-2" key={r}>
-                  <label className="form-check-label">
+            {/* Referring Physician Information */}
+            <h5 className="mb-3 text-size">Referring Physician Information</h5>
+            <div className="card p-3 mb-3">
+              <div className="mb-3">
+                <label className="form-label">Physician Name *</label>
+                <input
+                  className="form-control"
+                  value={formData.physicianName}
+                  onChange={(e) => setField('physicianName', e.target.value)}
+                  type="text"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Phone *</label>
+                <input
+                  className="form-control"
+                  value={formData.physicianPhone}
+                  onChange={(e) => setField('physicianPhone', e.target.value)}
+                  type="tel"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Email Address</label>
+                <input
+                  className="form-control"
+                  value={formData.physicianEmail}
+                  onChange={(e) => setField('physicianEmail', e.target.value)}
+                  type="email"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Healthcare Facility Name</label>
+                <input
+                  className="form-control"
+                  value={formData.healthcareFacilityName}
+                  onChange={(e) => setField('healthcareFacilityName', e.target.value)}
+                  type="text"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Organization City</label>
+                <select
+                  className="form-select form-control"
+                  value={formData.organizationCity}
+                  onChange={(e) => setField('organizationCity', e.target.value)}
+                >
+                  <option value="">Select City</option>
+
+                  {SAUDI_CITIES.map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Referred Patient Information */}
+            <h5 className="mb-3 text-size">Referred Patient Information</h5>
+            <div className="card p-3 mb-3">
+              <div className="mb-3">
+                <label className="form-label">Patient Name *</label>
+                <input
+                  className="form-control"
+                  value={formData.patientName}
+                  onChange={(e) => setField('patientName', e.target.value)}
+                  type="text"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label className="form-label">Patient Phone *</label>
+                <input
+                  className="form-control"
+                  value={formData.patientPhone}
+                  onChange={(e) => setField('patientPhone', e.target.value)}
+                  type="tel"
+                />
+              </div>
+
+              <div className="mb-2">
+                <label className="form-label d-block">Gender *</label>
+                <div className="d-flex gap-4 flex-wrap">
+                  <label className="form-check-label mb-0">
                     <input
                       className="form-check-input me-2"
-                      type="checkbox"
-                      checked={formData.reasons.includes(r)}
-                      onChange={() => toggleReason(r)}
+                      type="radio"
+                      name="gender"
+                      checked={formData.gender === 'Male'}
+                      onChange={() => setField('gender', 'Male')}
                     />
-                    {r}
+                    Male
+                  </label>
+
+                  <label className="form-check-label mb-0">
+                    <input
+                      className="form-check-input me-2"
+                      type="radio"
+                      name="gender"
+                      checked={formData.gender === 'Female'}
+                      onChange={() => setField('gender', 'Female')}
+                    />
+                    Female
                   </label>
                 </div>
-              ))}
+              </div>
             </div>
 
-            <div className="mt-3">
-              <label className="form-label">Insert the medical reason (optional)</label>
-              <textarea
-                className="form-control"
-                rows={4}
-                value={formData.medicalReason}
-                onChange={(e) => setField("medicalReason", e.target.value)}
-                placeholder="Write medical reason..."
+            {/* Reason for Referring */}
+            <h5 className="mb-3 text-size">Reason for Referring *</h5>
+            <div className="card p-3 mb-3">
+              <div className="row">
+                {REASONS.map((r) => (
+                  <div className="col-md-6 mb-2" key={r}>
+                    <label className="form-check-label">
+                      <input
+                        className="form-check-input me-2"
+                        type="checkbox"
+                        checked={formData.reasons.includes(r)}
+                        onChange={() => toggleReason(r)}
+                      />
+                      {r}
+                    </label>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-3">
+                <label className="form-label">Insert the medical reason (optional)</label>
+                <textarea
+                  className="form-control"
+                  rows={4}
+                  value={formData.medicalReason}
+                  onChange={(e) => setField('medicalReason', e.target.value)}
+                  placeholder="Write medical reason..."
+                />
+              </div>
+            </div>
+
+            {/* reCAPTCHA */}
+            <div className="my-3">
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                onChange={(value: string | null) => setField('recaptcha', value || '')}
               />
             </div>
-          </div>
 
-          {/* reCAPTCHA */}
-          <div className="my-3">
-            <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-              onChange={(value: string | null) => setField("recaptcha", value || "")}
-            />
-          </div>
-
-          {/* Submit */}
-          <div className="text-center">
-            <button type="submit" className="btn btn-primary feedback-btn btn-large mt-3" disabled={submitting}>
-              {submitting ? "Submitting..." : "Submit"}
-            </button>
-          </div>
-
-        
-
-        
-        </form>
-    )}
+            {/* Submit */}
+            <div className="text-center">
+              <button
+                type="submit"
+                className="btn btn-primary feedback-btn btn-large mt-3"
+                disabled={submitting}
+              >
+                {submitting ? 'Submitting...' : 'Submit'}
+              </button>
+            </div>
+          </form>
+        )}
         {message && (
-  <div ref={messageRef} className="form-message">
-    {message}
-  </div>
-)}
+          <div ref={messageRef} className="form-message">
+            {message}
+          </div>
+        )}
 
         {/* FORM END */}
       </div>
-        <style jsx>{`
-.text-space {
-    margin: 10px;
-}
-    .text-size{
-font-size: 20px;
-color:#000;
+      <style jsx>{`
+        .text-space {
+          margin: 10px;
         }
- @media (max-width: 767px) {
-.text-size{
-font-size: 16px;
-color:#000;
+        .text-size {
+          font-size: 20px;
+          color: #000;
         }
-.form-control{
-    padding: 0.2rem 0.75rem !important;
-}
+        @media (max-width: 767px) {
+          .text-size {
+            font-size: 16px;
+            color: #000;
+          }
+          .form-control {
+            padding: 0.2rem 0.75rem !important;
+          }
         }
-         `}</style>
+      `}</style>
     </div>
   );
 };

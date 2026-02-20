@@ -1,24 +1,25 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 
 const PaitentRights: React.FC = () => {
   const pages = [
-    "/pdf/pdf-1.jpg",
-    "/pdf/pdf-2.jpg",
-    // jitne pages hon utne add kar dein
+    { imageName: 'pdf-1', alt: 'Patient Rights Page 1' },
+    { imageName: 'pdf-2', alt: 'Patient Rights Page 2' },
   ];
 
   return (
     <div className="pdf-pages-wrapper">
-      {pages.map((src, index) => (
-        <Image
+      {pages.map((page, index) => (
+        <OptimizedImage
           key={index}
-          src={src}
-          alt={`Patient Rights Page ${index + 1}`}
+          imageName={page.imageName}
+          alt={page.alt}
           className="pdf-page"
-         width={1000} height={1400} />
+          width={1000}
+          height={1400}
+        />
       ))}
 
       <style jsx>{`

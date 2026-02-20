@@ -1,12 +1,12 @@
-import React from "react";
-import Image from "next/image";
-import { redirect } from "next/navigation";
+import React from 'react';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { redirect } from 'next/navigation';
 
 async function handleSubscribe(formData: FormData) {
-  "use client";
-  const email = String(formData.get("email") || "").trim();
+  'use client';
+  const email = String(formData.get('email') || '').trim();
   // TODO: Wire up to email marketing service
-  redirect("/thank-you");
+  redirect('/thank-you');
 }
 
 const SubscribeForm = () => {
@@ -17,9 +17,8 @@ const SubscribeForm = () => {
           <div className="subscribe-content">
             <h2>Subscribe to Our Newsletter</h2>
             <p>
-              Get expert health tips, product updates, and exclusive
-              telemedicine insights delivered straight to your inbox—no spam,
-              ever.
+              Get expert health tips, product updates, and exclusive telemedicine insights delivered
+              straight to your inbox—no spam, ever.
             </p>
           </div>
 
@@ -81,7 +80,13 @@ const SubscribeForm = () => {
         </div>
 
         <div className="subscribe-shape">
-          <Image src="/images/shape.png" alt="image" width={260} height={202} />
+          <OptimizedImage
+            imageName="subscribe-shape"
+            fallbackSrc="/images/shape.png"
+            alt="Decorative shape"
+            width={260}
+            height={202}
+          />
         </div>
       </div>
     </>

@@ -1,49 +1,49 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styles/style.css";
-import "../../styles/responsive.css";
-import localFont from "next/font/local";
-import Footer from "@/components/Layout/Footer";
-import GoTop from "@/components/Layout/GoTop";
-import SetLocaleAttrs from "@/components/SetLocaleAttrs";
-import Script from "next/script";
-import type { Metadata } from "next";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../styles/style.css';
+import '../../styles/responsive.css';
+import localFont from 'next/font/local';
+import Footer from '@/components/Layout/Footer';
+import GoTop from '@/components/Layout/GoTop';
+import SetLocaleAttrs from '@/components/SetLocaleAttrs';
+import Script from 'next/script';
+import type { Metadata } from 'next';
 
 const plusJakartaSans = localFont({
   src: [
     {
-      path: "../../fonts/plus-jakarta-sans-latin.woff2",
-      style: "normal",
+      path: '../../fonts/plus-jakarta-sans-latin.woff2',
+      style: 'normal',
     },
     {
-      path: "../../fonts/plus-jakarta-sans-latin-ext.woff2",
-      style: "normal",
+      path: '../../fonts/plus-jakarta-sans-latin-ext.woff2',
+      style: 'normal',
     },
   ],
-  variable: "--font-plus-jakarta-sans",
-  display: "swap",
+  variable: '--font-plus-jakarta-sans',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bnoon.sa"),
+  metadataBase: new URL('https://bnoon.sa'),
   icons: {
-    icon: "/images/fav.png",
+    icon: '/images/fav.png',
   },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://bnoon.sa/en",
-    siteName: "Bnoon",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://bnoon.sa/en',
+    siteName: 'Bnoon',
     images: [
       {
-        url: "/images/og-image.png",
+        url: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/og-image-1200x630-23kb.webp',
         width: 1200,
         height: 630,
-        alt: "Bnoon - Fertility & Women Health Centers",
+        alt: 'Bnoon - Fertility & Women Health Centers',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
   },
 };
 
@@ -51,7 +51,11 @@ export default function EnglishLayout({ children }: { children: React.ReactNode 
   return (
     <div className={`${plusJakartaSans.variable}`}>
       <SetLocaleAttrs lang="en" dir="ltr" />
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG" strategy="afterInteractive" />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG"
+        strategy="afterInteractive"
+      />
       <Script
         id="ga-init"
         strategy="afterInteractive"

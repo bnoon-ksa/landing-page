@@ -1,12 +1,10 @@
-"use client";
-import React, { useRef, useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { getBookNowUrl } from "@/utils/booking";
+'use client';
+import React, { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { getBookNowUrl } from '@/utils/booking';
 
 const DrMayaAlbezreh = () => {
-  const imageRiyadh = "/images/doctors/dr-maya-albezreh.avif";
-
   const contentRefRiyadh = useRef<HTMLDivElement>(null);
   const imageRefRiyadh = useRef<HTMLDivElement>(null);
   const contentRefKing = useRef<HTMLDivElement>(null);
@@ -25,7 +23,7 @@ const DrMayaAlbezreh = () => {
           observerContentRiyadh.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (contentRefRiyadh.current) observerContentRiyadh.observe(contentRefRiyadh.current);
 
@@ -36,7 +34,7 @@ const DrMayaAlbezreh = () => {
           observerImageRiyadh.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (imageRefRiyadh.current) observerImageRiyadh.observe(imageRefRiyadh.current);
 
@@ -47,7 +45,7 @@ const DrMayaAlbezreh = () => {
           observerContentKing.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (contentRefKing.current) observerContentKing.observe(contentRefKing.current);
 
@@ -58,7 +56,7 @@ const DrMayaAlbezreh = () => {
           observerImageKing.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
     if (imageRefKing.current) observerImageKing.observe(imageRefKing.current);
 
@@ -73,7 +71,6 @@ const DrMayaAlbezreh = () => {
   return (
     <div className="doctors-overview-area mb-5 mt-3">
       <div className="container">
-
         {/* Breadcrumbs */}
         <nav aria-label="breadcrumb" className="mb-4">
           <ol className="breadcrumb">
@@ -84,28 +81,25 @@ const DrMayaAlbezreh = () => {
               <Link href="our-experts">Our Experts</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              Dr. Maya Albezreh 
+              Dr. Maya Albezreh
             </li>
           </ol>
         </nav>
 
         {/* Riyadh Section */}
         <div className="row g-4 mt-lg-5">
-
           <div className="col-xl-7 col-md-12">
             <div className="doctors-overview-content">
               <h2
                 ref={contentRefRiyadh}
-                className={`animate-left ${contentVisibleRiyadh ? "show" : ""}`}
+                className={`animate-left ${contentVisibleRiyadh ? 'show' : ''}`}
               >
-
-
-              Dr. Maya Albezreh 
+                Dr. Maya Albezreh
               </h2>
               <p className="profile-text">
-              Consultant, Obstetrics, Gynecology,  Reproductive Endocrinology & Infertility (IVF)</p>
-              <p className="profile-text">
-             Location: Bnoon – Jeddah </p>
+                Consultant, Obstetrics, Gynecology, Reproductive Endocrinology & Infertility (IVF)
+              </p>
+              <p className="profile-text">Location: Bnoon – Jeddah </p>
               <p className="profile-text-last">
                 Languages:
                 <span className="lang-box">English</span>
@@ -113,36 +107,43 @@ const DrMayaAlbezreh = () => {
               </p>
 
               <p>
-              Dr. Maya Albezreh serves as the Assistant Obstetrics & Gynecology Consultant at Bnoon - Jeddah. Prior to joining Bnoon (formerly known as HealthPlus Fertility Center in Jeddah), Dr. Maya garnered valuable experience from various reputable medical organizations in Saudi Arabia. Dr. Maya received her Medical Degree (MD) from Damascus University, where she achieved the top rank among her colleagues. She completed her residency training in Obstetrics and Gynecology in Saudi Arabia and is currently board-certified in the field by the Saudi, Arab, and Syrian boards. </p>
+                Dr. Maya Albezreh serves as the Assistant Obstetrics & Gynecology Consultant at
+                Bnoon - Jeddah. Prior to joining Bnoon (formerly known as HealthPlus Fertility
+                Center in Jeddah), Dr. Maya garnered valuable experience from various reputable
+                medical organizations in Saudi Arabia. Dr. Maya received her Medical Degree (MD)
+                from Damascus University, where she achieved the top rank among her colleagues. She
+                completed her residency training in Obstetrics and Gynecology in Saudi Arabia and is
+                currently board-certified in the field by the Saudi, Arab, and Syrian boards.{' '}
+              </p>
               <p>
-             Dr. Maya specializes in providing comprehensive medical care for pregnancy, childbirth, and gynecological diseases, particularly those impacting the reproductive system. She has presented scientific papers at numerous local conferences, showcasing her dedication to advancing medical knowledge in her field. Dr. Maya Albezreh's achievements include being recognized as the top-ranking student in her graduating class at Damascus University. She is a member of three prestigious medical boards in Obstetrics and Gynecology, reflecting her commitment to maintaining high standards of professional practice. Dr. Maya's fluency in Arabic and English enhances her ability to provide compassionate care and effective communication with her patients. </p>
+                Dr. Maya specializes in providing comprehensive medical care for pregnancy,
+                childbirth, and gynecological diseases, particularly those impacting the
+                reproductive system. She has presented scientific papers at numerous local
+                conferences, showcasing her dedication to advancing medical knowledge in her field.
+                Dr. Maya Albezreh's achievements include being recognized as the top-ranking student
+                in her graduating class at Damascus University. She is a member of three prestigious
+                medical boards in Obstetrics and Gynecology, reflecting her commitment to
+                maintaining high standards of professional practice. Dr. Maya's fluency in Arabic
+                and English enhances her ability to provide compassionate care and effective
+                communication with her patients.{' '}
+              </p>
             </div>
           </div>
 
-
-
-
           <div className="col-xl-5 col-md-12 image-column">
             <div>
-              <Image
+              <OptimizedImage
+                imageName="dr-maya-albezreh"
                 className="doctors-overview-image"
-                src={imageRiyadh}
                 alt="Bnoon Riyadh"
-                width={502}
-                height={625}
               />
             </div>
             <div className="text-center mt-3">
-              <a
-                href={getBookNowUrl("en")}
-                className="btn btn-success doctor-profile-btn"
-              >
+              <a href={getBookNowUrl('en')} className="btn btn-success doctor-profile-btn">
                 Request an Appointment
               </a>
             </div>
           </div>
-        
-       
         </div>
       </div>
     </div>

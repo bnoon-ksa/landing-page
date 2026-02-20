@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import PageBanner from "@/components/ar/Layout/PageBanner";
-import Navbar from "@/components/ar/Layout/Navbar";
-import FeedbackSection from "@/components/ar/Common/FeedbackSection";
+import type { Metadata } from 'next';
+import OptimizedPageBanner from '@/components/ui/OptimizedPageBanner';
+import Navbar from '@/components/ar/Layout/Navbar';
+import FeedbackSection from '@/components/ar/Common/FeedbackSection';
 
 export const metadata: Metadata = {
-  title: "بنون – شاركونا تجربتكم ",
-  description: "شاركونا تجربتكم مع مراكز بنون. ملاحظاتكم واقتراحاتكم تساعدنا في تحسين خدماتنا وتقديم أفضل رعاية صحية لكم.",
+  title: 'بنون – شاركونا تجربتكم ',
+  description:
+    'شاركونا تجربتكم مع مراكز بنون. ملاحظاتكم واقتراحاتكم تساعدنا في تحسين خدماتنا وتقديم أفضل رعاية صحية لكم.',
 };
 
 export default function SubmitFeedbackPage() {
@@ -13,7 +14,7 @@ export default function SubmitFeedbackPage() {
     <>
       <Navbar />
 
-      <PageBanner bgImage="/images/feedback-banner-ar.jpg" />
+      <OptimizedPageBanner imageName="feedback-banner-ar" />
 
       <FeedbackSection />
     </>

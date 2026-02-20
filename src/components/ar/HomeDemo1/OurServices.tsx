@@ -1,86 +1,82 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { getCdnUrl } from '@/lib/cdn-utils';
+import {
+  Service1Icon,
+  Service2Icon,
+  Service3Icon,
+  Service4Icon,
+  Service5Icon,
+  Service6Icon,
+  LayerIcon,
+} from '@/components/icons';
 
 function OurServices() {
   // Dynamic data for services
   const servicesData = [
     {
       id: 1,
-      icon: "/images/icons/service1.svg",
-      title: "General Care",
+      icon: <Service1Icon width={60} height={60} />,
+      title: 'General Care',
       description:
-        "Consult with doctors for non-emergency medical conditions—fast and stress-free.",
-      features: ["Colds", "Flu", "Allergies", "Infections"],
-      link: "/services/details",
+        'Consult with doctors for non-emergency medical conditions—fast and stress-free.',
+      features: ['Colds', 'Flu', 'Allergies', 'Infections'],
+      link: '/services/details',
     },
     {
       id: 2,
-      icon: "/images/icons/service2.svg",
-      title: "Mental Health",
+      icon: <Service2Icon width={60} height={60} />,
+      title: 'Mental Health',
       description:
-        "Your emotional well-being matters—get the support you need privately and securely.",
-      features: [
-        "Therapy Sessions",
-        "Anxiety",
-        "Depression",
-        "Stress Management",
-      ],
-      link: "/services/details",
+        'Your emotional well-being matters—get the support you need privately and securely.',
+      features: ['Therapy Sessions', 'Anxiety', 'Depression', 'Stress Management'],
+      link: '/services/details',
     },
     {
       id: 3,
-      icon: "/images/icons/service3.svg",
-      title: "Skin Health",
+      icon: <Service3Icon width={60} height={60} />,
+      title: 'Skin Health',
       description:
-        "Receive expert advice and prescriptions without waiting weeks for an in-person visit.",
-      features: ["Acne", "Eczema", "Skin Rashes", "Prescriptions"],
-      link: "/services/details",
+        'Receive expert advice and prescriptions without waiting weeks for an in-person visit.',
+      features: ['Acne', 'Eczema', 'Skin Rashes', 'Prescriptions'],
+      link: '/services/details',
     },
     {
       id: 4,
-      icon: "/images/icons/service4.svg",
-      title: "Child Care",
-      description:
-        "We care for your little ones with trusted doctors and family-friendly support.",
-      features: ["Fevers", "Coughs & Colds", "Rashes", "Development Concerns"],
-      link: "/services/details",
+      icon: <Service4Icon width={60} height={60} />,
+      title: 'Child Care',
+      description: 'We care for your little ones with trusted doctors and family-friendly support.',
+      features: ['Fevers', 'Coughs & Colds', 'Rashes', 'Development Concerns'],
+      link: '/services/details',
     },
     {
       id: 5,
-      icon: "/images/icons/service5.svg",
-      title: "Rx Refills",
-      description:
-        "Stay consistent with treatment—no need to revisit the clinic every time.",
-      features: [
-        "Blood Pressure Meds",
-        "Diabetes Meds",
-        "Asthma Inhalers",
-        "Allergy Medications",
-      ],
-      link: "/services/details",
+      icon: <Service5Icon width={60} height={60} />,
+      title: 'Rx Refills',
+      description: 'Stay consistent with treatment—no need to revisit the clinic every time.',
+      features: ['Blood Pressure Meds', 'Diabetes Meds', 'Asthma Inhalers', 'Allergy Medications'],
+      link: '/services/details',
     },
     {
       id: 6,
-      icon: "/images/icons/service6.svg",
-      title: "Chronic Care",
-      description:
-        "Manage long-term conditions with routine virtual check-ins and follow-ups.",
-      features: ["Diabetes", "Hypertension", "Asthma", "Thyroid Disorders"],
-      link: "/services/details",
+      icon: <Service6Icon width={60} height={60} />,
+      title: 'Chronic Care',
+      description: 'Manage long-term conditions with routine virtual check-ins and follow-ups.',
+      features: ['Diabetes', 'Hypertension', 'Asthma', 'Thyroid Disorders'],
+      link: '/services/details',
     },
   ];
 
   // Dynamic data for the large image section
   const largeImageData = {
-    backgroundImage: "/images/services/service.jpg",
-    layerImage: "/images/services/layer.svg",
-    description: "Explore even more ways we can support your health",
+    backgroundImage: getCdnUrl('service-bg') || '/images/services/service.jpg',
+    layerImage: <LayerIcon width={60} height={67} />,
+    description: 'Explore even more ways we can support your health',
     link: {
-      href: "/services",
-      text: "View More Services",
+      href: '/services',
+      text: 'View More Services',
     },
-    shapeImage: "/images/services/shape.png",
   };
 
   return (
@@ -98,9 +94,8 @@ function OurServices() {
               <div className="col-lg-5 col-md-12">
                 <div className="right">
                   <p>
-                    We offer a full suite of virtual care options designed to
-                    support your well-being—because your health needs don&apos;t
-                    stop, and neither do we.
+                    We offer a full suite of virtual care options designed to support your
+                    well-being—because your health needs don&apos;t stop, and neither do we.
                   </p>
                 </div>
               </div>
@@ -112,14 +107,7 @@ function OurServices() {
               <div key={index} className="col-xl-3 col-md-6">
                 <div className="service-card">
                   <div className="top">
-                    <div className="icon">
-                      <Image
-                        src={service.icon}
-                        alt="icon"
-                        width={60}
-                        height={60}
-                      />
-                    </div>
+                    <div className="icon">{service.icon}</div>
                     <h3>
                       <Link href={service.link}>{service.title}</Link>
                     </h3>
@@ -180,14 +168,7 @@ function OurServices() {
                 }}
               >
                 <div className="wrap-content">
-                  <div className="image">
-                    <Image
-                      src={largeImageData.layerImage}
-                      alt="layer"
-                      width={60}
-                      height={67}
-                    />
-                  </div>
+                  <div className="image">{largeImageData.layerImage}</div>
                   <p>{largeImageData.description}</p>
                   <Link href={largeImageData.link.href} className="link-btn">
                     {largeImageData.link.text}
@@ -205,9 +186,9 @@ function OurServices() {
                     </svg>
                   </Link>
                   <div className="shape">
-                    <Image
-                      src={largeImageData.shapeImage}
-                      alt="shape"
+                    <OptimizedImage
+                      imageName="shape-services"
+                      alt="Decorative shape"
                       width={159}
                       height={135}
                     />
