@@ -174,10 +174,6 @@ const OurExperts = () => {
       location: 'Al Ahsa',
     },
   ];
-  // Filtered doctors
-  const filteredDoctors =
-    filter === 'ALL' ? doctorsData : doctorsData.filter((doc) => doc.location === filter);
-
   return (
     <div>
       <div className="container ptb-140 doctors-container">
@@ -222,8 +218,10 @@ const OurExperts = () => {
 
         <div className="doctors-scroll-container">
           <div className="row g-4">
-            {filteredDoctors.map((doctor) => (
-              <div key={doctor.id} className="col-xl-3 col-md-6">
+            {doctorsData.map((doctor) => {
+              const isVisible = filter === 'ALL' || doctor.location === filter;
+              return (
+              <div key={doctor.id} className="col-xl-3 col-md-6" style={{ display: isVisible ? '' : 'none' }}>
                 <div className="doctor-card">
                   <div className="image-wrapper" style={{ position: 'relative' }}>
                     <OptimizedImage
@@ -381,7 +379,8 @@ const OurExperts = () => {
                   }
                 `}</style>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
