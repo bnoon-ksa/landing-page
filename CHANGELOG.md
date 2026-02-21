@@ -1,3 +1,9 @@
+## [1.3.48](https://github.com/bnoon-ksa/landing-page/compare/v1.3.47...v1.3.48) (2026-02-21)
+
+### Bug Fixes
+
+* referral form ([#122](https://github.com/bnoon-ksa/landing-page/issues/122)) ([d23cf2d](https://github.com/bnoon-ksa/landing-page/commit/d23cf2d95697d5d8064252fc27e0c6c0c8eed4ce))
+
 ## [1.3.47](https://github.com/bnoon-ksa/landing-page/compare/v1.3.46...v1.3.47) (2026-02-21)
 
 ### Bug Fixes
