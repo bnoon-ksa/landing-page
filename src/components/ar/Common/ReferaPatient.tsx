@@ -179,7 +179,7 @@ const handleChange = (
     try {
       setSubmitting(true);
 
-      const response = await fetch("/api/send-appointment-ar", {
+      const response = await fetch("/api/referrals-ar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
