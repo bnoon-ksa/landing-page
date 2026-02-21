@@ -1740,24 +1740,24 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
   'icon-recruiting': {
     src: '/images/icons/recruiting-icons.png',
-    width: 210,
-    height: 199,
+    width: 50,
+    height: 50,
     sizes: '200px',
     alt: 'Recruiting',
     blurDataURL:
-      'data:image/webp;base64,UklGRrQBAABXRUJQVlA4WAoAAAAQAAAAEwAAEgAAQUxQSBoBAAABkKRt27E31/u+X2zbtm3btpORrR9JatvGKMc/Lvbg7qDTbiCz6scWImICMDtydKAzf2BcdBFK2dP7vKat9f/mppaK87uAYqsNhXlB/DVX3Z2blz+art25ffvWPYMbGolXV40R6Wkx8WmpqanpEbo1NOKv6cuRmJcUnTNXiUQAAknpWTOGcqZaiF/3YaKdknNoJFwzFjqefkH3u12c/qD4PBrxVw3ldJYRPulOewUlZ7Ej77q+Aol5SeEJibdOanRl2EuhFCiN1J9HoaZQ9IMoKfhf0rc7e+9WMvGvnz4SsU/vm30bx8ivBaD2Rty7Kq/gwMDAIAcUw8/RmLj3NhPJ/0IgSXSRmD6FooRZACkg4nUAEqsF+PggsRVWUDggdAAAAPADAJ0BKhQAEwA/OX67VC8npiMwGAwB4CcJbACw7A8v11UHvKfbH0AA/nLxy3c6wAQAACnw2KltbANNo+fUdWJZJqXVVPX0whcxeUW9DfWHHZTfS+If//AKDiUmTxSw+0nPM57jrDNQZ/S8CTnXdQZ8qgAA',
+    '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-recruiting-210x199-4kb.webp 210w',
   },
   'icon-c3': {
     src: '/images/icons/c3.png',
-    width: 341,
-    height: 291,
+    width: 50,
+    height: 50,
     sizes: '80px',
     alt: 'C3 certification',
     blurDataURL:
-      'data:image/webp;base64,UklGRowBAABXRUJQVlA4WAoAAAAQAAAAEwAAEAAAQUxQSPMAAAABgKxt2xnn/f9gjExt23a7tG27Scbmqlvb++667tlldAgRMQEAQAlNSCjiU3RpEFfXCyYe2/o03T8yPDzcP/tSzysoDsXPo/mV5eXl+ZOf8yNQALwfy2YQALBswK8BAK3XaBEsgkUQLJYMo1evYL9cst1qs9psVrvk/GEVOjcAjrIMZQkPlz6OCwz+RmPOrc/Wf+IwJACaLWVFObX6NjjjOfnfyquB0+3xUPUDccRzkTVhumygo2Ml/xTOeE7On3faNDMPSgCXXqFxcNdFga7NPVAATgVBuJ8vMORYhJLiktyBAOLkX1olqyRbRVEULwtBkF4AVlA4IHIAAACQAwCdASoUABEAPzmUv1mvKaalKAgB4CcJbAC7L8CApZ8Kst6gAP6eyaIJnwCT8IkO+11ZFAp0hbr6ASe1j88J1TI9nafQvSkIxXJt338WMq3xw1757/ByZZfM6ck2a+qrdR21NkER3Hm/7aSqtzCgAAA=',
+     '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-c3-341x291-4kb.webp 341w',
@@ -1769,7 +1769,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     sizes: '40px',
     alt: 'Contact icon',
     blurDataURL:
-      'data:image/webp;base64,UklGRmgBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSKEAAAABcF3bVuJcyPdMd3GpyOrwctzTxfCAG8FKiAgFbtsoY97BLwC0UI13byOv7aSCVgCURudBT5Ke925ACnN6K570Yj3nSgUslhFa4QIaA4pnAr1wgOpExyQ6HusJLTNoOd6UwCrYlXP3hgXYSBGUOeuSkmXZoLK3Qp/ism+qMaWxiawJ3l5hQW/F0bv4j6A02rf4L2/hXwIa9XhzaprjelL/GQBWUDggoAAAABAFAJ0BKhQAFAA/OZbCWa8qpyOoCAHgJwlsAJ0ygVaSAloUFGzT4PMRRQJ+cvfFLwAA/p+9SCNnWvvdtkabpoqRwSjgZjKG3q4WFd/JUf5+U77dNVhUnGilhJIvCtCcuaVvp9QGqZuCnr2DNW1wQL4RlKsESDUCQMqwKvjuOflu5D5OVpS/zgq5IApepLnkrxzQsKZEpOZv50nM4CYAAAA=',
+      '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-contact-128x128-4kb.webp 128w',
@@ -1781,7 +1781,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     sizes: '40px',
     alt: 'Location icon',
     blurDataURL:
-      'data:image/webp;base64,UklGRnYBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSKQAAAABcB3Zdtrcp/wr1TGoJTttYDnM6cJ+8rsBg0qICAVu2yhj3sEvAPTgw+6t+toGDycAxGH8pJGk8TGpkciSFtVI02jMRSDIqJENjMocDnOqsQVNOYU/s2IrVjz6wMgOjFxsUmBd29XlHkomYKFJ8Ehx9kklq5ACIe2t0t5UkLFse/uy9vYiOS1qRas0GjMRgTgMrs2/vI/rHwwHv9iciuK4Cf0/A1ZQOCCsAAAAkAUAnQEqFAAUAD85lMFZryonI6gIAeAnCWwAnTKDyg7TaJI4+MJNdmxZlr8ymCdzEYRK/wAA/rptQkxMbS5UiApYYV5PbR5AYuOBsRmU/+DZGkSdlWBe0Kyv7PwsUBtGtIWRb5WwKscuZg2euYJRazQrwmhbOK5xsaSTTF96NOlJkgOSdIaHBU666Mosbo9WtlVl+ujNcsLfg1GF8M7bgxV/3nLyrcMcQGcgAA==',
+    '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-location-png-128x128-4kb.webp 128w',
@@ -1793,7 +1793,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     sizes: '40px',
     alt: 'Mail icon',
     blurDataURL:
-      'data:image/webp;base64,UklGRnQBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSKQAAAABcB3Zdtrcp/wr1TGoJTttYDnM6cJ+8rsBg0qICAVu2yhj3sEvAPTgw+6t+toGDycAxGH8pJGk8TGpkciSFtVI02jMRSDIqJENjMocDnOqsQVNOYU/s2IrVjz6wMgOjFxsUmBd29XlHkomYKFJ8Ehx9kklq5ACIe2t0t5UkLFse/uy9vYiOS1qRas0GjMRgTgMrs2/vI/rHwwHv9iciuK4Cf0/A1ZQOCCqAAAAMAUAnQEqFAAUAD85kr9Zrymmo6gIAeAnCWwAnTKDzOaXaJICnHzizEvjonjNmKIDMywA/sxVM2a7+WnG/cTaRAgmaJI/MOqOJt6zxLtNdqW/YJTKnLK4Snyit2cSq3sFyfi+VsCuQtpWNxNUphDrRCJceE6YAbGE4jGeIm5+9o+eh6Fi+uvKLTEmAG9bkPI0mPHyKuWVmgTTWunE7cmtol5Vp7OmFwQAAAA=',
+    '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-mail-png-128x128-4kb.webp 128w',
@@ -1805,7 +1805,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     sizes: '60px',
     alt: 'Website icon 1',
     blurDataURL:
-      'data:image/webp;base64,UklGRoABAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSMQAAAABgFzbdirkJsEdOnJ3dy8BSrACXOYOXbi7M7KpDt9LLv4pISImAIBDbOH49uPT/mxlAhy+O2TvMJBk4GkZnAEsBjy9+BC8KDkIC4t+qvJXFY7AIl994B+DshFujco/e56nFDMworJtlBJtbpM+iufBA0OUwOfH/3jboY/ieTxFiaJcrqaP1he/T/2b510WqqnhL0HYC4tBiv/NCydgYDHCoOJD8KKBUzHGAA51NwwkGXjfBWsAGIeU1sXDl/fj1d5MOAMAVlA4IJYAAADQBACdASoUABQAPzmOuFcvKaSjqA1R4CcJbACdMw4+AdA0hX/+3ioukHuaBEmTNAD+nPBqJMKQbg+J1YX4QAGvElfXIJim/jpFcXymARXC6LZPYBJ1QTkygRN2vCXc3PaiUlPS2PeGWvFYNLwMQo9hSr+I9Ou3pVrc6OrN2I8D/Imlf9woURVLg519/QdSm4SYbRZAAAA=',
+    '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-1-576x576-40kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-1-1141x1141-53kb.webp 1141w',
@@ -1817,7 +1817,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     sizes: '60px',
     alt: 'Website icon 2',
     blurDataURL:
-      'data:image/webp;base64,UklGRnQBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSL4AAAABgGNrezLl/RNc1+Qu5QwVLEO34FJBNf2sA3cotYeKMvm+B88WImICJEW1ju4fvb4e74+1Kupn1MAZDuBcDCpKClpyLJm7JcNXFBS0TM787jmzpqAJN+efbkyq9YzMvzNn7XMYhcbcAakkc3iFlRhHb3jZ43uZ83SPlRinDXJJplHHSoz57gfsf8ZDr2pk/49n6gpaJ9lflthSqEK1iedkuKXs7IRKqqJqTziA81zXD1VR/QvN24+Pu+Ziv6IkVlA4IJAAAAAQBQCdASoUABQAPzmWwlmvKqcjqAgB4CcJbACdMwS9OQAAON2qx8j70CubRgUz2SgIAP55pPCtZqs27VWxGUEATCD1s2Yr7npx6LV2m3A84PrW/JlF38BfZfJlEcNjwoBsg08IunC7LumbOgMZmacxiuLjkxIBzKjb5N+rEbGZvbD6WeyBuKrfII5v6XeYAAA=',
+    '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-2-576x576-31kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-2-1142x1142-44kb.webp 1142w',
@@ -1829,7 +1829,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     sizes: '60px',
     alt: 'Website icon 3',
     blurDataURL:
-      'data:image/webp;base64,UklGRnwBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSMYAAAABgJtt27Hn/vDHHMeq2CadkzbZwLaqPwtYvZ3a9hJ8nve9qw8jRMQEAI6LnJatz9/v16WGdHgA4Lho/KIlScuHWniA4/hJWhVLa8SQ/XDhIEkxDFRhN1y0USxDWrVVyH+jYWjlhd9BZUTLqu1owvkv2ijKPWFkw8v/WN5poyh31qhRhFONNFEsK7LuaMIp9x3UU20YY3+L4WKMokFi2AUPLoZII2qMiuF/J1wAHqovaUnS8rQAHgA4HtLqFk/ubg8WKn14AABWUDggkAAAAHAEAJ0BKhQAFAA/OZTBWa8qJyOoCAHgJwlqAJ0ygAGAUmpLs6N3kAzK+9IAAP7QPzgoeabwr5qNAOGD+04MYzR4IjeC7e234J7FPM151KT1T+LpwL4ON6zmI+90UFAMz4guKouaI/qbTGD1ewblqIlPTOLx7ySnwFrSIAmIG4FDMaJigLk2u8K5Xfr3AAAAAA==',
+   '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-3-576x576-25kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-3-1143x1143-17kb.webp 1143w',
@@ -1841,7 +1841,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     sizes: '60px',
     alt: 'Website icon 4',
     blurDataURL:
-      'data:image/webp;base64,UklGRnwBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSMMAAAABgGJbeyLpS6pBcfeOwPXpDYDjBdAqWqGaMwo9S2Yex3bknJFJ/m84tYSIUOC2jTLmHfwCUBqJ+trDx/v9YiWGAPjFtVcKSQpvSj+kVGRKsUZEnHHkEBoKcxrHP2gt+wjQpBH+gyK2iPwrf9n/mNzTXVp60LG44QfD0RvFB5Y7Qvqdi3AQytleD1USalAh9+J/q12NhvdNTQEKU9/b96CVCsYUa5xz1jhKH/rXX1af//7lVenPBwdIVpfOnx6OFsrxHwYAVlA4IJIAAACQBACdASoUABQAPzmUwVmvKicjqAgB4CcJagCdMsvBp9ABqrm3S9paI3NdMgAA/tA/OCh5ysw9Hf88WdV3/h0tSzFbIJcbZ1QcFRrSWO+8AX061CYH8SILm0wGQy10MzdeIlfRuHPSFwL01RqFA67DMj1lb5RNJs3ROAaowp8PICUKraHD3JA0rNnzG8U/VsAAAA==',
+   '',
     category: 'icon',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-4-576x576-39kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-4-1141x1141-50kb.webp 1141w',
