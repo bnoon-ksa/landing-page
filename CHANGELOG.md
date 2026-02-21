@@ -1,3 +1,9 @@
+## [1.3.55](https://github.com/bnoon-ksa/landing-page/compare/v1.3.54...v1.3.55) (2026-02-21)
+
+### Bug Fixes
+
+* add cdn images ([#129](https://github.com/bnoon-ksa/landing-page/issues/129)) ([8c376dd](https://github.com/bnoon-ksa/landing-page/commit/8c376dd20388ccd075a6da867956e5efe5062bd3))
+
 ## [1.3.54](https://github.com/bnoon-ksa/landing-page/compare/v1.3.53...v1.3.54) (2026-02-21)
 
 ### Bug Fixes
