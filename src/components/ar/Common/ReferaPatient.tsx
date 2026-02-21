@@ -8,25 +8,19 @@ import ReCAPTCHA from "react-google-recaptcha";
 type FormData = {
   // Branch
   branch: string;
-
   // Referring Physician
   referringPhysicianName: string;
   referringPhysicianPhone: string;
   referringPhysicianEmail: string;
   facilityName: string;
   organizationCity: string;
-  district: string;
-
   // Patient
   patientName: string;
   patientPhone: string;
-  dateOfBirth: string;
   gender: string;
-
   // Reason
   reason: string;
   otherReasonText: string;
-
   // reCAPTCHA
   recaptcha: string | null;
 };
@@ -75,13 +69,9 @@ const AppointmentSection = () => {
     referringPhysicianEmail: "",
     facilityName: "",
     organizationCity: "",
-    district: "",
-
     patientName: "",
     patientPhone: "",
-    dateOfBirth: "",
     gender: "",
-
     reason: "",
     otherReasonText: "",
 
@@ -140,7 +130,6 @@ const handleChange = (
       "referringPhysicianEmail",
       "patientName",
       "patientPhone",
-      "dateOfBirth",
       "gender",
       "reason",
     ];
@@ -213,22 +202,16 @@ setSubmitted(false);
 
       setFormData({
         branch: "",
-
         referringPhysicianName: "",
         referringPhysicianPhone: "",
         referringPhysicianEmail: "",
         facilityName: "",
         organizationCity: "",
-        district: "",
-
         patientName: "",
         patientPhone: "",
-        dateOfBirth: "",
         gender: "",
-
         reason: "",
         otherReasonText: "",
-
         recaptcha: null,
       });
 
