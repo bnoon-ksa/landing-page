@@ -1739,7 +1739,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/users-user3-41x41-2kb.webp 41w',
   },
   'icon-recruiting': {
-    src: '/images/icons/recruiting-icons.png',
+    src: 'https://bnoon-website.b-cdn.net/images/icons/icon-recruiting.webp',
     width: 50,
     height: 50,
     sizes: '200px',
@@ -1748,10 +1748,10 @@ export const IMAGE_MANIFEST: ImageManifest = {
     '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-recruiting-210x199-4kb.webp 210w',
+      'https://bnoon-website.b-cdn.net/images/icons/icon-recruiting.webp 210w',
   },
   'icon-c3': {
-    src: '/images/icons/c3.png',
+    src: 'https://bnoon-website.b-cdn.net/images/icons/icon-c3.webp',
     width: 50,
     height: 50,
     sizes: '80px',
@@ -1760,7 +1760,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
      '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-c3-341x291-4kb.webp 341w',
+      'https://bnoon-website.b-cdn.net/images/icons/icon-c3.webp 341w',
   },
   'icon-contact': {
     src: '/images/icons/contact.png',
@@ -1772,7 +1772,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-contact-128x128-4kb.webp 128w',
+      'https://bnoon-website.b-cdn.net/images/icons/contact.png 128w',
   },
   'icon-location-png': {
     src: '/images/icons/location.png',
@@ -1784,7 +1784,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-location-png-128x128-4kb.webp 128w',
+      'https://bnoon-website.b-cdn.net/images/icons/location.png 128w',
   },
   'icon-mail-png': {
     src: '/images/icons/mail.png',
@@ -1796,7 +1796,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-mail-png-128x128-4kb.webp 128w',
+      'https://bnoon-website.b-cdn.net/images/icons/mail.png 128w',
   },
   'website-icon-1': {
     src: '/images/icons/Website-Icons_1.png',
@@ -1808,7 +1808,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-1-576x576-40kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-1-1141x1141-53kb.webp 1141w',
+      'https://bnoon-website.b-cdn.net/images/icons/website-icon-1.webp 576w, https://bnoon-website.b-cdn.net/images/icons/website-icon-1.webp 1141w',
   },
   'website-icon-2': {
     src: '/images/icons/Website-Icons_2.png',
@@ -1820,7 +1820,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
     '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-2-576x576-31kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-2-1142x1142-44kb.webp 1142w',
+      'https://bnoon-website.b-cdn.net/images/icons/website-icon-2.webp 576w, https://bnoon-website.b-cdn.net/images/icons/website-icon-2.webp 1142w',
   },
   'website-icon-3': {
     src: '/images/icons/Website-Icons_3.png',
@@ -1832,7 +1832,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
    '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-3-576x576-25kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-3-1143x1143-17kb.webp 1143w',
+      'https://bnoon-website.b-cdn.net/images/icons/website-icon-3.webp 576w, https://bnoon-website.b-cdn.net/images/icons/website-icon-3.webp 1143w',
   },
   'website-icon-4': {
     src: '/images/icons/Website-Icons_4.png',
@@ -1844,7 +1844,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
    '',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-4-576x576-39kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/website-icon-4-1141x1141-50kb.webp 1141w',
+      'https://bnoon-website.b-cdn.net/images/icons/website-icon-4.webp 576w, https://bnoon-website.b-cdn.net/images/icons/website-icon-4.webp 1141w',
   },
   'icon-1': {
     src: '/images/icons/icon-1.png',
