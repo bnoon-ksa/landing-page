@@ -10,11 +10,9 @@ const ReferralARSchema = new mongoose.Schema(
 
     facilityName: { type: String, default: "" },
     organizationCity: { type: String, default: "" },
-    district: { type: String, default: "" },
 
     patientName: { type: String, required: true },
     patientPhone: { type: String, required: true },
-    dateOfBirth: { type: String, required: true },
     gender: { type: String, required: true },
 
     reason: { type: String, required: true },
@@ -25,5 +23,9 @@ const ReferralARSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.models.ReferralAR ||
-  mongoose.model("ReferralAR", ReferralARSchema);
+// ✅ IMPORTANT: delete cached model if exists (dev fix)
+if (mongoose.models.ReferralAR) {
+  delete mongoose.models.ReferralAR;
+}
+
+export default mongoose.model("ReferralAR", ReferralARSchema);
