@@ -572,7 +572,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAgCdASoUAAQAPzmGuVOvKSWkMAgB4CcJZwAAK5SpQAD+jhf2bj9Yor2NBA8o+ly2nZIg/rT64k0AAAA=',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/refer-patient-banner-576x129-15kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/refer-patient-banner-768x172-22kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/refer-patient-banner-992x222-32kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/refer-patient-banner-1200x269-42kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/refer-patient-banner-1400x313-53kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/refer-patient-banner-1470x329-57kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/en/referapatient-en.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/en/referapatient-en.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/en/referapatient-en.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/en/referapatient-en.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/en/referapatient-en.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/en/referapatient-en.jpg',
   },
   'waad-bnoon-banner': {
     src: '/images/waad-bnoon-banner.png',
@@ -2242,5 +2242,17 @@ export const IMAGE_MANIFEST: ImageManifest = {
     category: 'campaign',
     cdnSrcSet:
       'https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/ivf-banner-ar.jpg 2941w',
+  },
+   'referpaitent-banner-ar': {
+    src: 'https://bnoon-website.b-cdn.net/images/banner/ar/referpaitent-banner-ar.jpg',
+    width: 2941,
+    height: 659,
+    sizes: '100vw',
+    alt: 'بنون — حملة يوم التأسيس',
+    blurDataURL:
+      'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAgCdASoUAAQAPzmGuVOvKSWisAgB4CcJZQAAeyAA/uSWNQ0Wu/CdnmsNjcU0svDxIAAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/banner/ar/referpaitent-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/referpaitent-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/referpaitent-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/referpaitent-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/referpaitent-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/referpaitent-banner-ar.jpg 2941w',
   },
 };
