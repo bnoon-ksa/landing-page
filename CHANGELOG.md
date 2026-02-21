@@ -1,3 +1,9 @@
+## [1.3.53](https://github.com/bnoon-ksa/landing-page/compare/v1.3.52...v1.3.53) (2026-02-21)
+
+### Bug Fixes
+
+* blur images ([#127](https://github.com/bnoon-ksa/landing-page/issues/127)) ([03f49cd](https://github.com/bnoon-ksa/landing-page/commit/03f49cdda121eaa428004be36f19e90e3a973d98))
+
 ## [1.3.52](https://github.com/bnoon-ksa/landing-page/compare/v1.3.51...v1.3.52) (2026-02-21)
 
 ### Bug Fixes
