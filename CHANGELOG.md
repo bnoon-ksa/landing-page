@@ -1,3 +1,9 @@
+## [1.3.54](https://github.com/bnoon-ksa/landing-page/compare/v1.3.53...v1.3.54) (2026-02-21)
+
+### Bug Fixes
+
+* form test ([#128](https://github.com/bnoon-ksa/landing-page/issues/128)) ([fe30385](https://github.com/bnoon-ksa/landing-page/commit/fe3038577b454aa3fa956b4511d64cc13114ca65))
+
 ## [1.3.53](https://github.com/bnoon-ksa/landing-page/compare/v1.3.52...v1.3.53) (2026-02-21)
 
 ### Bug Fixes
