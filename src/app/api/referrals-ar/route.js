@@ -1,12 +1,11 @@
 import { connectDB } from "../../../lib/mongodb";
-import ReferralAR from "../../../models/ReferralAR"; // ✅ create this model
+import ReferralAR from "../../../models/ReferralAR";
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
   try {
     const data = await req.json();
 
-    // ✅ (Optional) basic validation
     const requiredFields = [
       "branch",
       "referringPhysicianName",
@@ -14,7 +13,6 @@ export async function POST(req) {
       "referringPhysicianEmail",
       "patientName",
       "patientPhone",
-      "dateOfBirth",
       "gender",
       "reason",
       "recaptcha",
@@ -22,20 +20,12 @@ export async function POST(req) {
 
     const hasEmpty = requiredFields.some((f) => !String(data?.[f] ?? "").trim());
     if (hasEmpty) {
-      return Response.json(
-        { success: false, error: "Missing required fields" },
-        { status: 400 }
-      );
+      return Response.json({ success: false, error: "Missing required fields" }, { status: 400 });
     }
 
-    // ✅ DB connect + save
     await connectDB();
     const saved = await ReferralAR.create(data);
 
-    // ✅ Recipient
-    const recipient = "zulaikhakhalid18@gmail.com";
-
-    // ✅ Nodemailer transporter (same as EN)
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -44,17 +34,15 @@ export async function POST(req) {
       },
     });
 
-    // ✅ Email body (Arabic)
     await transporter.sendMail({
       from: `"طلب تحويل مريض" <${process.env.SMTP_USER}>`,
-      to: recipient,
-      replyTo: data.referringPhysicianEmail, // ✅ optional (recommended)
+      to: "zulaikhakhalid18@gmail.com",
+      replyTo: data.referringPhysicianEmail,
       subject: `طلب تحويل مريض - ${data.branch || "N/A"} - ${data.patientName || ""}`,
       html: `
         <div dir="rtl" style="font-family: Arial, sans-serif; line-height:1.8">
           <h3>تفاصيل طلب تحويل مريض</h3>
 
-         
           <p><b>التحويل إلى:</b> ${data.branch || "-"}</p>
 
           <h4>معلومات الطبيب المحوّل</h4>
@@ -63,12 +51,10 @@ export async function POST(req) {
           <p><b>البريد الإلكتروني:</b> ${data.referringPhysicianEmail || "-"}</p>
           <p><b>اسم المنشأة الطبية:</b> ${data.facilityName || "-"}</p>
           <p><b>المدينة:</b> ${data.organizationCity || "-"}</p>
-          <p><b>الحي / المنطقة:</b> ${data.district || "-"}</p>
 
           <h4>معلومات المريض</h4>
           <p><b>اسم المريض/المريضة:</b> ${data.patientName || "-"}</p>
           <p><b>رقم الهاتف:</b> ${data.patientPhone || "-"}</p>
-          <p><b>تاريخ الميلاد:</b> ${data.dateOfBirth || "-"}</p>
           <p><b>الجنس:</b> ${data.gender || "-"}</p>
 
           <h4>السبب الطبي للتحويل</h4>
@@ -88,9 +74,6 @@ export async function POST(req) {
     );
   } catch (error) {
     console.error("❌ API Error:", error);
-    return Response.json(
-      { success: false, error: error.message || "Server error" },
-      { status: 500 }
-    );
+    return Response.json({ success: false, error: error.message || "Server error" }, { status: 500 });
   }
 }
