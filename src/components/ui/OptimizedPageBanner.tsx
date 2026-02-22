@@ -109,7 +109,7 @@ export default function OptimizedPageBanner({
         sizes={entry.sizes}
         style={{
           objectFit: 'cover',
-          objectPosition: bannerPosition ?? 'center',
+          objectPosition: bannerPosition ?? '85%',
         }}
         priority
         {...blurProps}
