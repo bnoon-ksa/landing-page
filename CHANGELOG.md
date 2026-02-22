@@ -1,3 +1,9 @@
+## [1.3.62](https://github.com/bnoon-ksa/landing-page/compare/v1.3.61...v1.3.62) (2026-02-22)
+
+### Bug Fixes
+
+* mail changes ([#136](https://github.com/bnoon-ksa/landing-page/issues/136)) ([c9f3f02](https://github.com/bnoon-ksa/landing-page/commit/c9f3f0211bcf66ffba711560c4a54df910d3b352))
+
 ## [1.3.61](https://github.com/bnoon-ksa/landing-page/compare/v1.3.60...v1.3.61) (2026-02-22)
 
 ### Bug Fixes
