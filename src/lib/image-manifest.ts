@@ -1404,12 +1404,12 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
   'logo-mob': {
     src: '/images/logo-mob.avif',
-    width: 192,
+    width: 150,
     height: 79,
     sizes: '150px',
     alt: 'Bnoon mobile logo',
     blurDataURL:
-      'data:image/webp;base64,UklGRh4BAABXRUJQVlA4WAoAAAAQAAAAEwAABwAAQUxQSKEAAAAAAAQDAAACAgEHGQABAAlGRQgAAAAAGy0uWA0AAAowHgQJvf//uQgAASIeLoKAUi0xQnZrAGL/SEr/XgAEJ15WQ5pkSlBNSmAAcv8WGv9vAAQIckUQLQAAAAAAEgAd5ff44RgAAS6TXUVCSEtJTEZTAQAljIoaaZQGNHWFanVxcYBnhVkdAAIAAADU/yEPRjIcGDsuKT0aHAoAAgMEAC5CAABWUDggVgAAAFADAJ0BKhQACAA/OYa5U68pJaKwCAHgJwlmAABBGn2IzBAAAP5xKtjp/vGqrH1tJjFYgKobwo2tv6MCOQw4kQ9BxLv3sCFofrkpfLMPFJojvrPj+KAA',
+      '',
     category: 'misc',
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/logo-mob-192x79-9kb.webp 192w',
@@ -1572,8 +1572,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
   arrow: {
     src: '/images/arrow.png',
-    width: 30,
-    height: 30,
+    width: 12,
+    height: 12,
     sizes: '50px',
     alt: 'Decorative arrow',
     blurDataURL:
