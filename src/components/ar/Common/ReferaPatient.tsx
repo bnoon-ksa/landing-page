@@ -193,7 +193,7 @@ setMessage(
     شكراً لكم على إرسال طلب تحويل مريض إلى بنون.
     <br />
     سيقوم فريقنا بالتواصل خلال 48 ساعة لاستكمال الخطوات اللازمة.
-    <br />
+
     نتطلّع إلى التواصل معكم قريباً.
   </div>
 );
@@ -246,13 +246,13 @@ setSubmitted(false);
             </div>
 
            
-              <p className="text-center">
+              <p className="text-center text-space">
                 نشكركم على ثقتكم بنا وتحويل المريض لغرض الخصوبة. يجب تعبئة هذه الاستمارة من
                 قبل ممارس طبي فقط.
                 <br />
                 الرجاء تعبئة النموذج أدناه، وسيقوم أحد أعضاء فريقنا بالتواصل مع المريض خلال
                 فترة وجيزة لتقديم المساعدة وحجز الموعد المطلوب.
-                <br />
+               
                 في حال رغبتك بالتحدث إلى فريقنا الطبي قبل تحويل المريض، يرجى الاتصال بالرقم
                 920010022.
               </p>
@@ -271,7 +271,7 @@ setSubmitted(false);
           {/* التحويل إلى */}
           <div className="card p-3 mb-3">
            <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap gap-3 gap-md-4">
-  <h6 className="mb-0 form-label text-size">التحويل إلى: *</h6>
+  <h6 className="mb-0 form-label form-label-space text-size">التحويل إلى: *</h6>
 
   <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2 gap-sm-3 gap-md-4 flex-wrap">
     {['بنون – جدة', 'بنون – الرياض', 'بنون – الأحساء'].map((b) => (
@@ -551,6 +551,12 @@ setSubmitted(false);
         label.form-check-label {
     font-size: 12px;
 }
+  .text-space{
+    margin: 10px 0px;
+    }
+    .form-label-space{
+    margin: 0px 0px !important;
+    }
      .form-control {
             padding: 0.2rem 0.75rem !important;
           }
