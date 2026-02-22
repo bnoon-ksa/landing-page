@@ -1,5 +1,5 @@
 import { connectDB } from "../../../lib/mongodb";
-import ReferralEN from "../../../models/ReferralEN"; // <-- apna model yahan set karein
+import ReferralEN from "../../../models/ReferralEN";
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
@@ -10,10 +10,17 @@ export async function POST(req) {
     await connectDB();
     const saved = await ReferralEN.create(data);
 
-    // ✅ Recipient (direct aapka email)
-    const recipient = "zulaikhakhalid18@gmail.com";
+    // ✅ Recipient mapping based on selected branch
+    const RECIPIENTS = {
+      "Bnoon – Jeddah": "zulaikhakhalid18@gmail.com",
+      "Bnoon – Riyadh": "zulaikhakhalid541@gmail.com",
+      "Bnoon – Al Ahsa": "websitedesignbahrain@gmail.com",
+    };
 
-    // ✅ Nodemailer transporter (same as your example)
+    // default fallback (optional)
+    const recipient = RECIPIENTS[data?.referTo] || "zulaikhakhalid18@gmail.com";
+
+    // ✅ Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -29,10 +36,7 @@ export async function POST(req) {
       subject: `New Patient Referral - Website (${data.referTo || "N/A"})`,
       html: `
         <h3>Referral Details</h3>
-
-        <h4>Refer To</h4>
-        <p><b>Branch:</b> ${data.referTo || "-"}</p>
-
+        <p><b>Refer To:</b> ${data.referTo || "-"}</p>
         <h4>Referring Physician Information</h4>
         <p><b>Physician Name:</b> ${data.physicianName || "-"}</p>
         <p><b>Physician Phone:</b> ${data.physicianPhone || "-"}</p>
@@ -46,7 +50,9 @@ export async function POST(req) {
         <p><b>Gender:</b> ${data.gender || "-"}</p>
 
         <h4>Reason(s) for Referring</h4>
-        <p><b>Selected Reasons:</b> ${(data.reasons && data.reasons.length) ? data.reasons.join(", ") : "-"}</p>
+        <p><b>Selected Reasons:</b> ${
+          data.reasons && data.reasons.length ? data.reasons.join(", ") : "-"
+        }</p>
 
         <h4>Medical Reason (Optional)</h4>
         <p>${data.medicalReason ? data.medicalReason.replace(/\n/g, "<br/>") : "-"}</p>
