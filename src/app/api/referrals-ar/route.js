@@ -26,6 +26,16 @@ export async function POST(req) {
     await connectDB();
     const saved = await ReferralAR.create(data);
 
+    // ✅ Recipient mapping based on selected branch (Arabic form)
+    const RECIPIENTS = {
+      "Bnoon – Jeddah": "zulaikhakhalid18@gmail.com",
+      "Bnoon – Riyadh": "zulaikhakhalid541@gmail.com",
+      "Bnoon – Al Ahsa": "websitedesignbahrain@gmail.com",
+    };
+
+    // default fallback (optional)
+    const recipient = RECIPIENTS[data?.branch] || "zulaikhakhalid18@gmail.com";
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -36,7 +46,7 @@ export async function POST(req) {
 
     await transporter.sendMail({
       from: `"طلب تحويل مريض" <${process.env.SMTP_USER}>`,
-      to: "zulaikhakhalid18@gmail.com",
+      to: recipient, // ✅ dynamic
       replyTo: data.referringPhysicianEmail,
       subject: `طلب تحويل مريض - ${data.branch || "N/A"} - ${data.patientName || ""}`,
       html: `
@@ -74,6 +84,9 @@ export async function POST(req) {
     );
   } catch (error) {
     console.error("❌ API Error:", error);
-    return Response.json({ success: false, error: error.message || "Server error" }, { status: 500 });
+    return Response.json(
+      { success: false, error: error.message || "Server error" },
+      { status: 500 }
+    );
   }
 }
