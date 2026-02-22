@@ -12,13 +12,13 @@ export async function POST(req) {
 
     // ✅ Recipient mapping based on selected branch
     const RECIPIENTS = {
-      "Bnoon – Jeddah": "zulaikhakhalid18@gmail.com",
-      "Bnoon – Riyadh": "zulaikhakhalid541@gmail.com",
-      "Bnoon – Al Ahsa": "websitedesignbahrain@gmail.com",
+      "Bnoon – Jeddah": "referral.jeddah@bnoon.sa",
+      "Bnoon – Riyadh": "referral.riyadh@bnoon.sa",
+      "Bnoon – Al Ahsa": "referral.alahsa@bnoon.sa",
     };
 
     // default fallback (optional)
-    const recipient = RECIPIENTS[data?.referTo] || "zulaikhakhalid18@gmail.com";
+    const recipient = RECIPIENTS[data?.referTo] || "referral.jeddah@bnoon.sa";
 
     // ✅ Nodemailer transporter
     const transporter = nodemailer.createTransport({
