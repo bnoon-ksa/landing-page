@@ -82,7 +82,7 @@ export default function OptimizedPageBanner({
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: bannerPosition ?? 'center',
+            objectPosition: bannerPosition ?? '85%',
             ...blurBg,
           }}
           data-testid="cdn-banner-img"
