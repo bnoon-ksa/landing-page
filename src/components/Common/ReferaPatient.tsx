@@ -262,11 +262,11 @@ const AppointmentSection = () => {
             style={{ maxWidth: '1000px' }}
           >
             {/* Refer to */}
-            <div className="card p-3 mb-3">
-              <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
-                <h6 className="mb-0 form-label">Refer to:</h6>
+                <div className="card p-3 mb-3">
+              <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center gap-3 gap-md-5">
+                <h6 className="mb-0 form-label text-size">Refer to:</h6>
 
-                <div className="d-flex align-items-center flex-wrap gap-2 gap-md-5">
+                <div className="d-flex flex-column flex-md-row gap-2 gap-md-5">
                   {(['Bnoon – Jeddah', 'Bnoon – Riyadh', 'Bnoon – Al Ahsa'] as const).map(
                     (branch) => (
                       <label
@@ -292,10 +292,10 @@ const AppointmentSection = () => {
             </div>
 
             {/* Referring Physician Information */}
-            <h5 className="mb-3 text-size">Referring Physician Information</h5>
+            <h5 className="mb-3 text-size title-size">Referring Physician Information</h5>
             <div className="card p-3 mb-3">
               <div className="mb-3">
-                <label className="form-label">Physician Name *</label>
+                <label className="form-label text-size">Physician Name *</label>
                 <input
                   className="form-control"
                   value={formData.physicianName}
@@ -305,7 +305,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Phone *</label>
+                <label className="form-label text-size">Phone *</label>
                 <input
                   className="form-control"
                   value={formData.physicianPhone}
@@ -315,7 +315,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Email Address</label>
+                <label className="form-label text-size">Email Address</label>
                 <input
                   className="form-control"
                   value={formData.physicianEmail}
@@ -325,7 +325,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Healthcare Facility Name</label>
+                <label className="form-label text-size">Healthcare Facility Name</label>
                 <input
                   className="form-control"
                   value={formData.healthcareFacilityName}
@@ -335,7 +335,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Organization City</label>
+                <label className="form-label text-size">Organization City</label>
                 <select
                   className="form-select form-control"
                   value={formData.organizationCity}
@@ -353,10 +353,10 @@ const AppointmentSection = () => {
             </div>
 
             {/* Referred Patient Information */}
-            <h5 className="mb-3 text-size">Referred Patient Information</h5>
+            <h5 className="mb-3 text-size title-size">Referred Patient Information</h5>
             <div className="card p-3 mb-3">
               <div className="mb-3">
-                <label className="form-label">Patient Name *</label>
+                <label className="form-label text-size">Patient Name *</label>
                 <input
                   className="form-control"
                   value={formData.patientName}
@@ -366,7 +366,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mb-3">
-                <label className="form-label">Patient Phone *</label>
+                <label className="form-label text-size">Patient Phone *</label>
                 <input
                   className="form-control"
                   value={formData.patientPhone}
@@ -376,7 +376,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mb-2">
-                <label className="form-label d-block">Gender *</label>
+                <label className="form-label d-block text-size">Gender *</label>
                 <div className="d-flex gap-4 flex-wrap">
                   <label className="form-check-label mb-0">
                     <input
@@ -404,7 +404,7 @@ const AppointmentSection = () => {
             </div>
 
             {/* Reason for Referring */}
-            <h5 className="mb-3 text-size">Reason for Referring *</h5>
+            <h5 className="mb-3 text-size title-size">Reason for Referring *</h5>
             <div className="card p-3 mb-3">
               <div className="row">
                 {REASONS.map((r) => (
@@ -423,7 +423,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mt-3">
-                <label className="form-label">Insert the medical reason (optional)</label>
+                <label className="form-label text-size">Insert the medical reason (optional)</label>
                 <textarea
                   className="form-control"
                   rows={4}
@@ -463,20 +463,30 @@ const AppointmentSection = () => {
         {/* FORM END */}
       </div>
       <style jsx>{`
-        .text-space {
+           .text-space {
           margin: 10px;
         }
         .text-size {
+          font-size: 16px;
+          color: #000;
+        }
+          .title-size {
           font-size: 20px;
+          font-weight:600;
           color: #000;
         }
         @media (max-width: 767px) {
           .text-size {
-            font-size: 16px;
+            font-size: 14px !important;
+            font-weight:600;
             color: #000;
           }
+            .form-check-label{
+            font-size: 12px;
+            }
           .form-control {
             padding: 0.2rem 0.75rem !important;
+            font-size: 12px;
           }
         }
       `}</style>
