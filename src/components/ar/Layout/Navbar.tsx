@@ -343,7 +343,7 @@ ul.dropdown-menu.contactus-menu {
     text-align: right;
     background-color: #000;
 }
-    a.text-decoration-none.d-
+    a.text-decoration-none.d-block
  {
     color: #004e78;
 }
