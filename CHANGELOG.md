@@ -1,3 +1,9 @@
+## [1.3.89](https://github.com/bnoon-ksa/landing-page/compare/v1.3.88...v1.3.89) (2026-02-23)
+
+### Bug Fixes
+
+* layout url ([#166](https://github.com/bnoon-ksa/landing-page/issues/166)) ([b2d9c4e](https://github.com/bnoon-ksa/landing-page/commit/b2d9c4eb8c318df761cf2445384b01aa0c1b4b9d))
+
 ## [1.3.88](https://github.com/bnoon-ksa/landing-page/compare/v1.3.87...v1.3.88) (2026-02-23)
 
 ### Bug Fixes
