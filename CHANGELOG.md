@@ -1,3 +1,9 @@
+## [1.3.78](https://github.com/bnoon-ksa/landing-page/compare/v1.3.77...v1.3.78) (2026-02-23)
+
+### Bug Fixes
+
+* change text ([#154](https://github.com/bnoon-ksa/landing-page/issues/154)) ([481626f](https://github.com/bnoon-ksa/landing-page/commit/481626f33ce35aad5b6ffb7851e359cb575ee643))
+
 ## [1.3.77](https://github.com/bnoon-ksa/landing-page/compare/v1.3.76...v1.3.77) (2026-02-23)
 
 ### Bug Fixes
