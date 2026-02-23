@@ -59,6 +59,12 @@ export const menus: MenuItem[] = [
        { title: 'Refer a Patient', href: '/en/refer-a-patient' },
     ],
   },
+   {
+    id: 'referapatient',
+    title: 'Refer a Patient',
+    href: '/en/refer-a-patient', // placeholder — we'll handle navigation dynamically
+    className: 'mobile-only',
+  },
   {
     id: 'arabic',
     title: 'العربية',
