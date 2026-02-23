@@ -188,7 +188,7 @@ function Navbar() {
                 </Link>
               )}
 
-              <a href={getBookNowUrl('en')} className="btn btn-success btn-appointment">
+              <a href={getBookNowUrl('en')} className="btn btn-success book-appoinment-btn btn-appointment">
                 Book an Appointment
               </a>
             </div>
@@ -370,7 +370,7 @@ function Navbar() {
       <style jsx global>{`
       .dropdown-contact{
       padding: 4px 4px 0px 0px;
-    margin: -5px 0px 0px 0px;
+    margin: 4px 0px 0px 0px;
       }
     .contactus-btn{
     border:none;
@@ -414,8 +414,11 @@ function Navbar() {
     padding: 4px 10px;
     font-size: 16px;
 }
+  .navbar .navbar-nav .nav-item .nav-link{
+  padding-right: 6px !important;
+  }
     .btn-appointment {
-   
+    padding: 8px 0px !important;
     white-space: nowrap;
 }
 .dropdown-menu {
@@ -425,10 +428,7 @@ function Navbar() {
     -webkit-backdrop-filter: blur(20px)!important;
     backdrop-filter: blur(20px) !important;
 }
-         a.btn.btn-outline-secondary.btn-language {
-   
-    font-size: 19px;
-}
+       
         .offcanvas {
           height: 100vh !important;
           overflow: visible !important;
@@ -484,7 +484,7 @@ function Navbar() {
           display: none !important;
         }
         .dropdown-menu .dropdown-item {
-          background: hsl(0deg 0% 31.5%); /* Har item ka apna background */
+          background: gray; /* Har item ka apna background */
           backdrop-filter: blur(20px);
           margin: 6px 0px 0px; /* Items ke beech gap */
           padding: 6px 45px; /* Andar spacing */
