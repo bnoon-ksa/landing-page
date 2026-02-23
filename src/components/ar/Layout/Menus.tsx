@@ -34,11 +34,21 @@ export const menus = [
     title: 'زيارتك لنا ',
     href: '/ar/your-visit',
   },
-  {
-    id: 'contact',
-    title: 'اتصل بنا',
-    href: '/ar/contact-us',
-  },
+{
+  id: 'contact',
+  title: 'اتصل بنا',
+  href: '/ar/contact-us',
+  dropdown: [
+    {
+      title: 'اتصل بنا',
+      href: '/ar/contact-us',
+    },
+    {
+      title: 'طلب تحويل مريض',
+      href: '/ar/refer-a-patient',
+    },
+  ],
+},
   {
     id: 'english',
     title: 'English',
