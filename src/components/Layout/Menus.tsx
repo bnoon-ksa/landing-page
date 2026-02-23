@@ -2,9 +2,9 @@ export type MenuItem = {
   id: string;
   title: string;
   href: string;
-  className?: string; // 👈 OPTIONAL property add ki
+  className?: string;
+  children?: { title: string; href: string }[]; // ✅ add
 };
-
 export const menus: MenuItem[] = [
   {
     id: 'Home',
@@ -48,10 +48,16 @@ export const menus: MenuItem[] = [
     title: 'Your Visit',
     href: '/en/your-visit',
   },
-  {
+ {
     id: 'contact',
     title: 'Contact Us',
-    href: '/en/contact-us',
+    href: '/en/contact-us', // fallback
+    children: [
+     
+     
+      { title: 'Contact Us', href: '/en/contact-us' },
+       { title: 'Refer a Patient', href: '/en/refer-a-patient' },
+    ],
   },
   {
     id: 'arabic',
