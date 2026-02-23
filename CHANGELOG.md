@@ -1,3 +1,9 @@
+## [1.3.91](https://github.com/bnoon-ksa/landing-page/compare/v1.3.90...v1.3.91) (2026-02-23)
+
+### Bug Fixes
+
+* add footer item ([#168](https://github.com/bnoon-ksa/landing-page/issues/168)) ([6bd400b](https://github.com/bnoon-ksa/landing-page/commit/6bd400b48b800df0e910af71bc6e3a8a3f88681d))
+
 ## [1.3.90](https://github.com/bnoon-ksa/landing-page/compare/v1.3.89...v1.3.90) (2026-02-23)
 
 ### Bug Fixes
