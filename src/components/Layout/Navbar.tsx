@@ -205,7 +205,7 @@ function Navbar() {
     return (
       <li key={menu.id} className={`nav-item dropdown dropdown-contact ${menu.className || ''}`}>
         <button
-          className={`btn btn-primary dropdown-toggle btn-dropdown d-flex align-items-center justify-content-between ${
+          className={`btn btn-primary dropdown-toggle contactus-btn d-flex align-items-center justify-content-between ${
             active ? 'active-btn' : ''
           }`}
           type="button"
@@ -215,14 +215,7 @@ function Navbar() {
           style={{ padding: '3px 7px' }} // optional, match your btn sizing
         >
           <div className="d-flex align-items-center gap-2">
-            <FaPhone
-              style={{
-                color: 'white',
-                transform: 'scaleX(-1)',
-                width: '15px',
-                height: '15px',
-              }}
-            />
+       
             {menu.title}
           </div>
 
@@ -377,8 +370,16 @@ function Navbar() {
       <style jsx global>{`
       .dropdown-contact{
       padding: 4px 4px 0px 0px;
-    margin: -10px 0px 0px 0px;
+    margin: -5px 0px 0px 0px;
       }
+    .contactus-btn{
+    border:none;
+    background-color: #00000000;
+    }
+       .contactus-btn:hover{
+    border:none;
+    background-color: #00000000;
+    }
   .dropdown-menu .dropdown-text{
     padding: 3px 10px !important;
     font-size: 16px;
@@ -407,9 +408,16 @@ function Navbar() {
     width: 223px;
     border-radius: 10px;
     height: 42px;
-    padding: 10px;
+        padding: 8px !important;
     font-size: 18px;
     white-space: nowrap;
+}
+.dropdown-menu {
+    padding: 0 !important;
+    background-color: hsl(0deg 0% 100% / 0%) !important;
+    color: #fff !important;
+    -webkit-backdrop-filter: blur(20px)!important;
+    backdrop-filter: blur(20px) !important;
 }
          a.btn.btn-outline-secondary.btn-language {
     font-family: Alexandria !important;
