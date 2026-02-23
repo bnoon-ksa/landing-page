@@ -145,7 +145,7 @@ function Navbar() {
                   {/* ⭐ Custom Dropdown Arrow Icon */}
                   <DropArrowIcon width={22} height={22} />
                 </button>
-                <ul className="dropdown-menu text-center" aria-labelledby="extraDropdown">
+                <ul className="dropdown-menu contactus-drop text-center" aria-labelledby="extraDropdown">
                   <li>
                     <Link
                       className="dropdown-item"
@@ -191,18 +191,43 @@ function Navbar() {
             {/* Navigation Menu */}
             <div className="collapse navbar-collapse justify-content-start">
               <ul className="navbar-nav">
-                {menus
-                  .filter((item) => item.id !== 'english') // 👈 desktop se English hide
-                  .map((item) => (
-                    <li key={item.id} className="nav-item">
-                      <Link
-                        href={item.href || '#'}
-                        className={`nav-link ${isActive(item.href || '') ? 'active' : ''}`}
-                      >
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
+            {menus
+  .filter((item) => item.id !== 'english')
+  .map((item) =>
+    item.dropdown ? (
+      <li key={item.id} className="nav-item dropdown contactus-drpdown-btn">
+    
+<button
+  className="nav-link dropdown-toggle bg-transparent border-0 d-flex align-items-center gap-1"
+  data-bs-toggle="dropdown"
+  type="button"
+>
+  <span className="d-flex align-items-center gap-1">
+    {item.title}
+    <DropArrowIcon width={18} height={18} />
+  </span>
+</button>
+        <ul className="dropdown-menu contactus-menu">
+          {item.dropdown.map((subItem, index) => (
+            <li key={index}>
+              <Link className="dropdown-item contactus-btn" href={subItem.href}>
+                {subItem.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+    ) : (
+      <li key={item.id} className="nav-item">
+        <Link
+          href={item.href || '#'}
+          className={`nav-link ${isActive(item.href || '') ? 'active' : ''}`}
+        >
+          {item.title}
+        </Link>
+      </li>
+    )
+  )}
               </ul>
             </div>
           </div>
@@ -287,19 +312,43 @@ function Navbar() {
           background: #115479ff; /* click color (light) */
           color: #ffffff !important;
         }
-
+ul.dropdown-menu.contactus-menu {
+       width: 100px !important;
+    margin-left: -75px !important;
+    backdrop-filter: none !important;
+    background-color: #00000000 !important;
+     
+}
+    .contactus-drpdown-btn{
+    margin:-5px 0px;
+    }
         .active-btn {
           background: #004e78; /* active page color (dark) */
           color: #ffffff !important;
           font-weight: 600;
         }
-
+.contactus-btn{
+    background: gray;
+}
+    .dropdown-menu{
+    backdrop-filter: none !important;
+    }
+    a.dropdown-item.contactus-btn {
+    font-size: 12px;
+    text-align: right;
+    background-color: gray;
+}
+      a.dropdown-item.contactus-btn:hover {
+    font-size: 14px;
+    text-align: right;
+    background-color: #000;
+}
         .dropdown-menu .dropdown-item {
           background: hsla(0, 0%, 100%, 0.2);
           -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
           margin: 6px 0px 0px;
-          padding: 6px 45px;
+          padding: 5px 5px;
           -webkit-border-radius: 6px;
           -moz-border-radius: 6px;
           border-radius: 6px;
@@ -307,6 +356,7 @@ function Navbar() {
           -moz-transition: background.3s ease;
           -o-transition: background.3s ease;
           transition: background 0.3s ease;
+          color: #fff !important;
         }
         ul.dropdown-menu.show {
           -webkit-border-radius: 8px;
@@ -315,8 +365,6 @@ function Navbar() {
           width: 100%;
           padding: 0px;
           background-color: hsla(0, 0%, 100%, 0) !important;
-          -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px) !important;
           border: 1px !important;
           margin: 0px;
         }
@@ -356,7 +404,7 @@ function Navbar() {
           background-color: #fff;
         }
         .navbar .navbar-nav .nav-item .nav-link {
-          padding-right: 51px !important;
+          padding-right: 35px !important;
           padding-top: 20px !important;
           padding-bottom: 0px !important;
         }
