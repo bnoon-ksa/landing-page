@@ -1,6 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../styles/style.css';
-import '../../styles/responsive.css';
 import localFont from 'next/font/local';
 import Footer from '@/components/Layout/Footer';
 import GoTop from '@/components/Layout/GoTop';
@@ -50,6 +48,16 @@ export const metadata: Metadata = {
 export default function EnglishLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`${plusJakartaSans.variable}`}>
+        <head>
+      <link
+        rel="stylesheet"
+        href="https://landingpagecdn.b-cdn.net/style.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://landingpagecdn.b-cdn.net/responsive.css"
+      />
+    </head>
       <SetLocaleAttrs lang="en" dir="ltr" />
       <Script
         async
