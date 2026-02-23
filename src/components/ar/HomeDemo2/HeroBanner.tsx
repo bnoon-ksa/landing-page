@@ -16,7 +16,7 @@ function HeroBannerAr() {
       video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/banner/banner4.mp4',
       title: 'حلمكم ما هو بعيد ',
 
-      desc: 'استفيدوا من عرض يوم التأسيس الخاص <br>بالحقن المجهري* في بنون ',
+      desc: 'استفيدوا من عرض يوم التأسيس الخاص <br>بالحقن المجهري في بنون ',
       titleColor: '#004E78',
       descColor: '#004E78',
       extra: '',
@@ -26,7 +26,7 @@ function HeroBannerAr() {
     },
     {
       video: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/videos/ar-banner/ar-banner1.mp4',
-      title: 'عرض يوم التأسيس* ',
+      title: 'عرض يوم التأسيس ',
       desc: ' خدمات وإجراءات أمراض الذكورة والعقم لدى الرجال  ',
       titleColor: '#004E78',
       descColor: '#004E78',
