@@ -125,6 +125,7 @@ const footerData: FooterData = {
         { text: 'Contact Us', url: '/en/contact-us' },
         { text: 'Book an Appointment', url: getBookNowUrl('en') },
         { text: 'Submit Your Feedback', url: '/en/submit-feedback' },
+        { text: 'Refer a Patient', url: '/en/refer-a-patient' },
       ],
     },
   ],
