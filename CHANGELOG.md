@@ -1,3 +1,9 @@
+## [1.3.70](https://github.com/bnoon-ksa/landing-page/compare/v1.3.69...v1.3.70) (2026-02-23)
+
+### Bug Fixes
+
+* Update Menus ([#145](https://github.com/bnoon-ksa/landing-page/issues/145)) ([92388b2](https://github.com/bnoon-ksa/landing-page/commit/92388b2dee3079bdf2cc521bde83d24c35e7bb80))
+
 ## [1.3.69](https://github.com/bnoon-ksa/landing-page/compare/v1.3.68...v1.3.69) (2026-02-22)
 
 ### Bug Fixes
