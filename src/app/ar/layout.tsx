@@ -1,6 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../styles/arabic.css';
-import '../../styles/arabic-responsive.css';
 import localFont from 'next/font/local';
 import Footer from '@/components/ar/Layout/Footer';
 import GoTop from '@/components/ar/Layout/GoTop';
@@ -43,27 +41,39 @@ export const metadata: Metadata = {
 
 export default function ArabicLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${cairo.variable} arabic`}>
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG"
-        strategy="afterInteractive"
-      />
-      <Script
-        id="ga-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+    <>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://landingpagecdn.b-cdn.net/arabic.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://landingpagecdn.b-cdn.net/arabic-responsive.css"
+        />
+      </head>
+      <div className={`${cairo.variable} arabic`}>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-6CDMTCELGG"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-6CDMTCELGG');
             `,
-        }}
-      />
-      {children}
-      <Footer />
-      <GoTop />
-    </div>
+          }}
+        />
+        {children}
+        <Footer />
+        <GoTop />
+      </div>
+    </>
   );
 }
