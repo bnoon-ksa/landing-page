@@ -51,7 +51,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-xl sticky" id="navbar">
+      <nav className="navbar navbar-expand-xl sticky" id="navbar" dir="ltr">
         <div className="container d-flex justify-content-between align-items-center">
           {/* Left side: Logo + Mobile Language + Menu icon */}
           <div className="d-flex align-items-center">
