@@ -195,16 +195,69 @@ function Navbar() {
 
             <div className="collapse navbar-collapse justify-content-end">
               <ul className="navbar-nav d-none d-xl-flex">
-                {menus.map((menu) => (
-                  <li key={menu.id} className={`nav-item ${menu.className || ''}`}>
-                    <Link
-                      href={menu.href}
-                      className={`nav-link ${isActive(menu.href) ? 'active-btn' : ''}`}
-                    >
-                      {menu.title}
-                    </Link>
-                  </li>
-                ))}
+             {menus.map((menu) => {
+  const active =
+    pathname === menu.href ||
+    (menu.children ? menu.children.some((c) => pathname === c.href) : false);
+
+  // ✅ Dropdown menu
+  if (menu.id === 'contact' && menu.children?.length) {
+    return (
+      <li key={menu.id} className={`nav-item dropdown dropdown-contact ${menu.className || ''}`}>
+        <button
+          className={`btn btn-primary dropdown-toggle btn-dropdown d-flex align-items-center justify-content-between ${
+            active ? 'active-btn' : ''
+          }`}
+          type="button"
+          id="contactDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style={{ padding: '3px 7px' }} // optional, match your btn sizing
+        >
+          <div className="d-flex align-items-center gap-2">
+            <FaPhone
+              style={{
+                color: 'white',
+                transform: 'scaleX(-1)',
+                width: '15px',
+                height: '15px',
+              }}
+            />
+            {menu.title}
+          </div>
+
+          <DropArrowIcon width={22} height={22} style={{ margin: '0px 0px 0px 0px' }} />
+        </button>
+
+        <ul className="dropdown-menu dropdown-menu-item" aria-labelledby="contactDropdown">
+          {menu.children.map((child) => (
+            <li key={child.href}>
+              {/* external / internal both work */}
+              {child.href.startsWith('http') ? (
+                <a className="dropdown-item dropdown-text" href={child.href}>
+                  {child.title}
+                </a>
+              ) : (
+                <Link className="dropdown-item dropdown-text" href={child.href}>
+                  {child.title}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
+      </li>
+    );
+  }
+
+  // ✅ Normal items
+  return (
+    <li key={menu.id} className={`nav-item ${menu.className || ''}`}>
+      <Link href={menu.href} className={`nav-link ${active ? 'active-btn' : ''}`}>
+        {menu.title}
+      </Link>
+    </li>
+  );
+})}
               </ul>
             </div>
           </div>
@@ -322,6 +375,51 @@ function Navbar() {
 
       {/* 🌐 Custom Styles */}
       <style jsx global>{`
+      .dropdown-contact{
+      padding: 4px 4px 0px 0px;
+    margin: -10px 0px 0px 0px;
+      }
+  .dropdown-menu .dropdown-text{
+    padding: 3px 10px !important;
+    font-size: 16px;
+    }
+      .navbar .navbar-nav .nav-item .dropdown-menu{
+       background-color:#00000000;
+      width:100px;
+          padding: 3px 5px !important;
+          backdrop-filter: none !important;
+          margin-top:-10px;
+          margin-left:-10px
+      }
+          .dropdown-text{
+          padding:0px;
+          }
+          ul.dropdown-menu-item.show a {
+   
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 16px;
+}
+    .btn-appointment {
+    background-color: #39bced !important;
+    border: none !important;
+    font-weight: 600 !important;
+    width: 223px;
+    border-radius: 10px;
+    height: 42px;
+    padding: 10px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+         a.btn.btn-outline-secondary.btn-language {
+    font-family: Alexandria !important;
+    font-weight: 400 !important;
+    width: 110px;
+    border-radius: 10px;
+    height: 42px;
+    padding: 8px;
+    font-size: 19px;
+}
         .offcanvas {
           height: 100vh !important;
           overflow: visible !important;
@@ -357,7 +455,12 @@ function Navbar() {
         .offcanvas-backdrop.show {
           opacity: 0.8;
         }
-
+.navbar .navbar-nav .nav-item
+ {
+    position: relative;
+    margin-left: 16px !important;
+    margin-right: 8px;
+}
         .offcanvas-header .btn-close {
           position: absolute;
           right: 20px;
@@ -415,7 +518,10 @@ function Navbar() {
             padding-right: 0px;
             margin: 0;
           }
-
+a.btn.btn-outline-secondary.btn-language {
+  
+    font-size: 14px;
+}
           .mob-lang-switch {
             font-family: Alexandria !important;
             font-size: 16px !important;
