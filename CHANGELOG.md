@@ -1,3 +1,9 @@
+## [1.3.81](https://github.com/bnoon-ksa/landing-page/compare/v1.3.80...v1.3.81) (2026-02-23)
+
+### Bug Fixes
+
+* text margin ([#157](https://github.com/bnoon-ksa/landing-page/issues/157)) ([735e58f](https://github.com/bnoon-ksa/landing-page/commit/735e58f3ef089bff382fa1b829c0e122db5edf4c))
+
 ## [1.3.80](https://github.com/bnoon-ksa/landing-page/compare/v1.3.79...v1.3.80) (2026-02-23)
 
 ### Bug Fixes
