@@ -82,6 +82,9 @@ export interface ImageManifestEntry {
    * @example "https://cdn.../optimized/benefit-1-576x461-32kb.webp 576w, ...1200x960-85kb.webp 1200w"
    */
   readonly cdnSrcSet: string;
+  
+  // ✅ ADD THIS
+  readonly bannerPosition?: string;
 }
 
 /** The full manifest keyed by image name. */
