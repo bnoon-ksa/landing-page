@@ -1,3 +1,9 @@
+## [1.3.85](https://github.com/bnoon-ksa/landing-page/compare/v1.3.84...v1.3.85) (2026-02-23)
+
+### Bug Fixes
+
+* add item ([#162](https://github.com/bnoon-ksa/landing-page/issues/162)) ([9f99e4e](https://github.com/bnoon-ksa/landing-page/commit/9f99e4e3f961fc5628e1b52c0c699c2e3636e452))
+
 ## [1.3.84](https://github.com/bnoon-ksa/landing-page/compare/v1.3.83...v1.3.84) (2026-02-23)
 
 ### Bug Fixes
