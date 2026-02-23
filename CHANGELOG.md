@@ -1,3 +1,9 @@
+## [1.3.79](https://github.com/bnoon-ksa/landing-page/compare/v1.3.78...v1.3.79) (2026-02-23)
+
+### Bug Fixes
+
+* btn color ([#155](https://github.com/bnoon-ksa/landing-page/issues/155)) ([cb02b2e](https://github.com/bnoon-ksa/landing-page/commit/cb02b2eb0410146d92fea19f1d4f9e24e8fdb50b))
+
 ## [1.3.78](https://github.com/bnoon-ksa/landing-page/compare/v1.3.77...v1.3.78) (2026-02-23)
 
 ### Bug Fixes
