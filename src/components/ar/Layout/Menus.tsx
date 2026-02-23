@@ -51,6 +51,11 @@ export const menus = [
 },
   {
     id: 'english',
+    title: 'طلب تحويل مريض',
+    href: '/ar/refer-a-patient',
+  },
+  {
+    id: 'english',
     title: 'English',
     href: 'switch-to-english',
   },
