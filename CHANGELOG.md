@@ -1,3 +1,10 @@
+## [1.3.74](https://github.com/bnoon-ksa/landing-page/compare/v1.3.73...v1.3.74) (2026-02-23)
+
+### Bug Fixes
+
+* Update image ([#150](https://github.com/bnoon-ksa/landing-page/issues/150)) ([1bc9093](https://github.com/bnoon-ksa/landing-page/commit/1bc90936cd214a66be9cf28f7ca5cee720db81dd))
+* Update OptimizedPageBanner ([#149](https://github.com/bnoon-ksa/landing-page/issues/149)) ([e492ab5](https://github.com/bnoon-ksa/landing-page/commit/e492ab56ea9fef3e2f514644bdd1d596371b4b93))
+
 ## [1.3.73](https://github.com/bnoon-ksa/landing-page/compare/v1.3.72...v1.3.73) (2026-02-23)
 
 ### Bug Fixes
