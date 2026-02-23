@@ -91,7 +91,6 @@ export default function OptimizedPageBanner({
       </div>
     );
   }
-
   // ── Standard next/image path ──────────────────────────────────────
   const blurProps: Pick<ImageProps, 'placeholder' | 'blurDataURL'> = entry.blurDataURL
     ? { placeholder: 'blur', blurDataURL: entry.blurDataURL }
