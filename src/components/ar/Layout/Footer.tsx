@@ -124,6 +124,7 @@ const footerData: FooterData = {
         { text: 'تواصل معنا', url: '/ar/contact-us' },
         { text: 'طلب موعد', url: getBookNowUrl('ar') },
         { text: 'شاركونا تجربتكم', url: '/ar/submit-feedback' },
+         { text: 'طلب تحويل مريض', url: '/ar/refer-a-patient' },
       ],
     },
   ],
