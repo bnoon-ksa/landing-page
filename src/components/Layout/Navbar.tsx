@@ -205,7 +205,7 @@ function Navbar() {
     return (
       <li key={menu.id} className={`nav-item dropdown dropdown-contact ${menu.className || ''}`}>
         <button
-          className={`btn btn-primary dropdown-toggle contactus-btn d-flex align-items-center justify-content-between ${
+          className={`btn btn-primary dropdown-toggle contactus-btn d-flex align-items-center nav-link justify-content-between ${
             active ? 'active-btn' : ''
           }`}
           type="button"
@@ -376,6 +376,12 @@ function Navbar() {
     border:none;
     background-color: #00000000;
     }
+    .btn:first-child:active{
+    background-color: #00000000;
+    }
+    button#contactDropdown {
+    background-color: #00000000;
+}
        .contactus-btn:hover{
     border:none;
     background-color: #00000000;
@@ -384,9 +390,16 @@ function Navbar() {
     padding: 3px 10px !important;
     font-size: 16px;
     }
+    .dropdown-menu .dropdown-item:hover{
+    background: #000 !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    }
       .navbar .navbar-nav .nav-item .dropdown-menu{
        background-color:#00000000;
       width:100px;
+      box-shadow: none !important;
           padding: 3px 5px !important;
           backdrop-filter: none !important;
           margin-top:-10px;
@@ -402,14 +415,7 @@ function Navbar() {
     font-size: 16px;
 }
     .btn-appointment {
-    background-color: #39bced !important;
-    border: none !important;
-    font-weight: 600 !important;
-    width: 223px;
-    border-radius: 10px;
-    height: 42px;
-        padding: 8px !important;
-    font-size: 18px;
+   
     white-space: nowrap;
 }
 .dropdown-menu {
@@ -420,12 +426,7 @@ function Navbar() {
     backdrop-filter: blur(20px) !important;
 }
          a.btn.btn-outline-secondary.btn-language {
-    font-family: Alexandria !important;
-    font-weight: 400 !important;
-    width: 110px;
-    border-radius: 10px;
-    height: 42px;
-    padding: 8px;
+   
     font-size: 19px;
 }
         .offcanvas {
@@ -483,7 +484,7 @@ function Navbar() {
           display: none !important;
         }
         .dropdown-menu .dropdown-item {
-          background: hsla(0, 0%, 100%, 0.2); /* Har item ka apna background */
+          background: hsl(0deg 0% 31.5%); /* Har item ka apna background */
           backdrop-filter: blur(20px);
           margin: 6px 0px 0px; /* Items ke beech gap */
           padding: 6px 45px; /* Andar spacing */
