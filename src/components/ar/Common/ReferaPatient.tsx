@@ -446,7 +446,7 @@ setSubmitted(false);
                 "الإجهاض المتكرر",
                 "أسباب أخرى",
               ].map((r) => (
-                <div className="col-md-6 mb-2" key={r}>
+                <div className=" mb-2" key={r}>
                   <label className="form-check-label form-lable mb-0 d-flex align-items-center">
                     <input
                       className={`form-check-input ms-2 ${isFieldInvalid("reason") ? "is-invalid" : ""}`}
