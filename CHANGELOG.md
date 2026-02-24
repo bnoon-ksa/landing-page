@@ -1,3 +1,9 @@
+## [1.3.111](https://github.com/bnoon-ksa/landing-page/compare/v1.3.110...v1.3.111) (2026-02-24)
+
+### Bug Fixes
+
+* css path ([#189](https://github.com/bnoon-ksa/landing-page/issues/189)) ([3d32911](https://github.com/bnoon-ksa/landing-page/commit/3d32911bf998f53cf5c4a0dc43c445316cabc638))
+
 ## [1.3.110](https://github.com/bnoon-ksa/landing-page/compare/v1.3.109...v1.3.110) (2026-02-24)
 
 ### Bug Fixes
