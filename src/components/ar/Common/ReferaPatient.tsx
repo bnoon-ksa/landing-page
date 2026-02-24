@@ -265,7 +265,7 @@ setSubmitted(false);
   {!showThankYou && (
         <form
           onSubmit={handleSubmit}
-          className="appointment-form mx-auto"
+          className="appointment-form refer-form mx-auto"
           style={{ maxWidth: "1000px", direction: "rtl", textAlign: "right" }}
         >
           {/* التحويل إلى */}
@@ -537,30 +537,7 @@ setSubmitted(false);
         {/* FORM END */}
       </div>
           <style jsx>{`
-  .form-lable {
-    font-family: 'Alexandria' !important;
-}
-        label.form-check-label {
-    font-size: 14px;
-}
-        @media (max-width: 767px) {
-         .text-size{
-      font-size:12px;
-      font-weight:700;
-      }
-        label.form-check-label {
-    font-size: 12px;
-}
-  .text-space{
-    margin: 10px 0px;
-    }
-    .form-label-space{
-    margin: 0px 0px !important;
-    }
-     .form-control {
-            padding: 0.2rem 0.75rem !important;
-          }
-        }
+ 
       `}</style>
     </div>
   );
