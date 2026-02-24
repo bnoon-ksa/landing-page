@@ -632,7 +632,7 @@ const AppointmentSection = () => {
     margin: 0 0 10px !important;
     text-align: center !important;
     font-size: 38px !important;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     line-height: 1.15 !important;
     letter-spacing: 0.2px !important;
     color: #0d4f75 !important;
