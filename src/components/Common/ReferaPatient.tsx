@@ -234,7 +234,7 @@ const AppointmentSection = () => {
           <div className="row justify-content-center align-items-center g-4">
             <div className="col-lg-12 col-md-12">
               <div className="left">
-                <h2 className="">Refer a Patient</h2>
+               
               </div>
             </div>
 
