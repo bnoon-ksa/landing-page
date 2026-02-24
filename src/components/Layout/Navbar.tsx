@@ -484,7 +484,7 @@ function Navbar() {
           display: none !important;
         }
         .dropdown-menu .dropdown-item {
-          background: gray; /* Har item ka apna background */
+          background: #3f3f3f;
           backdrop-filter: blur(20px);
           margin: 6px 0px 0px; /* Items ke beech gap */
           padding: 6px 45px; /* Andar spacing */
