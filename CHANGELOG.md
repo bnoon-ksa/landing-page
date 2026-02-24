@@ -1,3 +1,9 @@
+## [1.3.96](https://github.com/bnoon-ksa/landing-page/compare/v1.3.95...v1.3.96) (2026-02-24)
+
+### Bug Fixes
+
+* color change ([#173](https://github.com/bnoon-ksa/landing-page/issues/173)) ([6366304](https://github.com/bnoon-ksa/landing-page/commit/6366304beaf3274edc65f12a23abd3a6212191b7))
+
 ## [1.3.95](https://github.com/bnoon-ksa/landing-page/compare/v1.3.94...v1.3.95) (2026-02-24)
 
 ### Bug Fixes
