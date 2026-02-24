@@ -626,7 +626,7 @@ const AppointmentSection = () => {
 
 /* ===== Refer-to section styling (CSS-only) ===== */
 /* Highlight the first card (Refer to) */
-.appointment-form .card:first-of-type {
+.appointment-form .card {
     border-left: 4px solid #0b6aa2 !important;
     background: linear-gradient(135deg, #f5fbff 0%, #ffffff 55%, #f5fbff 100%) !important;
 }
