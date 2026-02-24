@@ -1,3 +1,9 @@
+## [1.3.102](https://github.com/bnoon-ksa/landing-page/compare/v1.3.101...v1.3.102) (2026-02-24)
+
+### Bug Fixes
+
+* btn margin ([#180](https://github.com/bnoon-ksa/landing-page/issues/180)) ([c486242](https://github.com/bnoon-ksa/landing-page/commit/c4862428bfbee36e1a705e94c9668cbbbcd251c6))
+
 ## [1.3.101](https://github.com/bnoon-ksa/landing-page/compare/v1.3.100...v1.3.101) (2026-02-24)
 
 ### Bug Fixes
