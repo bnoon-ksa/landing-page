@@ -1,3 +1,9 @@
+## [1.3.98](https://github.com/bnoon-ksa/landing-page/compare/v1.3.97...v1.3.98) (2026-02-24)
+
+### Bug Fixes
+
+* banner position ([#175](https://github.com/bnoon-ksa/landing-page/issues/175)) ([54f1a3d](https://github.com/bnoon-ksa/landing-page/commit/54f1a3d5a6b4cecb678139b118dda9790177ff14))
+
 ## [1.3.97](https://github.com/bnoon-ksa/landing-page/compare/v1.3.96...v1.3.97) (2026-02-24)
 
 ### Bug Fixes
