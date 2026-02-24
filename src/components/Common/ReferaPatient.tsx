@@ -258,7 +258,7 @@ const AppointmentSection = () => {
         {!showThankYou && (
           <form
             onSubmit={handleSubmit}
-            className="appointment-form text-start mx-auto"
+            className="appointment-form text-start mx-auto refer-form"
             style={{ maxWidth: '1000px' }}
           >
             {/* Refer to */}
@@ -408,7 +408,7 @@ const AppointmentSection = () => {
             <div className="card p-3 mb-3">
               <div className="row">
                 {REASONS.map((r) => (
-                  <div className="col-md-6 mb-2" key={r}>
+                  <div className="mb-2" key={r}>
                     <label className="form-check-label">
                       <input
                         className="form-check-input me-2"
@@ -463,32 +463,210 @@ const AppointmentSection = () => {
         {/* FORM END */}
       </div>
       <style jsx>{`
-           .text-space {
-          margin: 10px;
-        }
-        .text-size {
-          font-size: 16px;
-          color: #000;
-        }
-          .title-size {
-          font-size: 20px;
-          font-weight:600;
-          color: #000;
-        }
-        @media (max-width: 767px) {
-          .text-size {
-            font-size: 14px !important;
-            font-weight:600;
-            color: #000;
-          }
-            .form-check-label{
-            font-size: 12px;
-            }
-          .form-control {
-            padding: 0.2rem 0.75rem !important;
-            font-size: 12px;
-          }
-        }
+          /* Hard override: affects only the referral form, not navbar or global layout */
+           .refer-form{
+      border: none;
+    border-radius: 0px;
+    padding: 0px;
+      }
+.appointment-form,
+.appointment-form * {
+    box-sizing: border-box !important;
+}
+
+.appointment-form {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    color: #163246 !important;
+}
+
+.appointment-form .card {
+    background: #ffffff !important;
+    border: 1px solid #d8e4ee !important;
+    border-radius: 12px !important;
+    padding: 18px !important;
+    margin-bottom: 16px !important;
+    box-shadow: 0 6px 18px rgba(11, 50, 78, 0.06) !important;
+}
+
+.appointment-form .title-size {
+    color: #0f4e72 !important;
+    margin: 22px 0 10px !important;
+    font-size: 21px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+}
+
+.appointment-form .form-label {
+    display: block !important;
+    margin-bottom: 8px !important;
+    color: #1e3748 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+}
+
+.appointment-form .form-control,
+.appointment-form .form-select,
+.appointment-form input[type="text"],
+.appointment-form input[type="email"],
+.appointment-form input[type="tel"],
+.appointment-form textarea,
+.appointment-form select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    border: 1px solid #cfdeea !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    color: #132f41 !important;
+    padding: 10px 12px !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.appointment-form select,
+.appointment-form .form-select {
+    padding-right: 36px !important;
+    background-image: linear-gradient(45deg, transparent 50%, #4d6679 50%), linear-gradient(135deg, #4d6679 50%, transparent 50%) !important;
+    background-position: calc(100% - 16px) calc(50% - 2px), calc(100% - 11px) calc(50% - 2px) !important;
+    background-size: 5px 5px, 5px 5px !important;
+    background-repeat: no-repeat !important;
+}
+
+.appointment-form textarea,
+.appointment-form textarea.form-control {
+    min-height: 110px !important;
+    resize: vertical !important;
+    padding-top: 10px !important;
+}
+
+.appointment-form .form-control:hover,
+.appointment-form .form-select:hover,
+.appointment-form input:hover,
+.appointment-form textarea:hover,
+.appointment-form select:hover {
+    border-color: #b8cfdf !important;
+}
+
+.appointment-form .form-control:focus,
+.appointment-form .form-select:focus,
+.appointment-form input:focus,
+.appointment-form textarea:focus,
+.appointment-form select:focus,
+.appointment-form .form-check-input:focus,
+.appointment-form .btn:focus {
+    outline: none !important;
+    border-color: #0b6aa2 !important;
+    box-shadow: 0 0 0 3px #8dc8e8 !important;
+}
+
+.appointment-form .form-check-label {
+    color: #1d3748 !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+}
+
+.appointment-form .form-check-input,
+.appointment-form input[type="radio"],
+.appointment-form input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 8px !important;
+    accent-color: #0b6aa2 !important;
+    box-shadow: none !important;
+    vertical-align: middle !important;
+}
+
+.appointment-form .row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px 16px !important;
+    margin: 0 !important;
+}
+
+.appointment-form .btn,
+.appointment-form button[type="submit"] {
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 12px 26px !important;
+    cursor: pointer !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    text-decoration: none !important;
+}
+
+.appointment-form .btn-primary,
+.appointment-form button[type="submit"] {
+    background: #0b6aa2 !important;
+    color: #ffffff !important;
+}
+
+.appointment-form .btn-primary:hover,
+.appointment-form button[type="submit"]:hover {
+    background: #085b8b !important;
+}
+
+.appointment-form .feedback-btn {
+    min-width: 200px !important;
+}
+
+.appointment-form .mb-0 { margin-bottom: 0 !important; }
+.appointment-form .mb-2 { margin-bottom: 8px !important; }
+.appointment-form .mb-3 { margin-bottom: 16px !important; }
+.appointment-form .mt-3 { margin-top: 16px !important; }
+
+/* Header text styling (scoped to this section only) */
+.container > .section-title {
+    margin-bottom: 18px !important;
+}
+
+.container > .section-title h2.left {
+    margin: 0 0 10px !important;
+    text-align: center !important;
+    font-size: 38px !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.2px !important;
+    color: #0d4f75 !important;
+}
+
+.container > .section-title .text-space {
+    max-width: 960px !important;
+    margin: 0 auto !important;
+}
+
+.container > .section-title .text-space p.text-center {
+    margin: 0 auto 22px !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+    color: #4c6273 !important;
+}
+
+@media (max-width: 768px) {
+    .appointment-form .row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .appointment-form .d-flex.flex-column.flex-md-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .appointment-form .feedback-btn,
+    .appointment-form button[type="submit"] {
+        width: 100% !important;
+    }
+}
       `}</style>
     </div>
   );
