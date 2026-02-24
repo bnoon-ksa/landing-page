@@ -343,23 +343,23 @@ ul.dropdown-menu.contactus-menu {
     font-size: 14px;
     text-align: right;
     background-color: gray;
-        padding: 12px;
+        padding: 14px;
 }
       a.dropdown-item.contactus-btn:hover {
     font-size: 14px;
     text-align: right;
-    background-color: #000;
+    background-color: #3f3f3f;
 }
     a.text-decoration-none.d-block
  {
     color: #004e78;
 }
         .dropdown-menu .dropdown-item {
-          background: hsla(0, 0%, 100%, 0.2);
+          background: gray;
           -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
           margin: 6px 0px 0px;
-          padding: 12px 5px;
+          padding: 14px 5px;
           -webkit-border-radius: 6px;
           -moz-border-radius: 6px;
           border-radius: 6px;
@@ -369,6 +369,12 @@ ul.dropdown-menu.contactus-menu {
           transition: background 0.3s ease;
           color: #fff !important;
         }
+           .dropdown-menu .dropdown-item:hover {
+          background: #3f3f3f;
+        }
+          ul.dropdown-menu.show li:hover a{
+          background: #3f3f3f;
+          }
         ul.dropdown-menu.show {
           -webkit-border-radius: 8px;
           -moz-border-radius: 8px;
