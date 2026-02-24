@@ -1,7 +1,4 @@
 "use client";
-
-
-
 import React, { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -240,7 +237,7 @@ setSubmitted(false);
                   ref={headerRef}
                   className={`left animate-left ${headerVisible ? "show" : ""}`}
                 >
-                  طلب تحويل مريض
+                  
                 </h2>
               </div>
             </div>
@@ -274,7 +271,7 @@ setSubmitted(false);
   <h6 className="mb-0 form-label form-label-space text-size">التحويل إلى: *</h6>
 
   <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2 gap-sm-3 gap-md-4 flex-wrap">
-    {['بنون – جدة', 'بنون – الرياض', 'بنون – الأحساء'].map((b) => (
+   {['بنـــون – جدة', 'بنـــون – الرياض', 'بنـــون – الأحساء'].map((b) => (
       <label key={b} className="form-check-label form-lable mb-0 d-flex align-items-center">
         <input
           type="radio"
