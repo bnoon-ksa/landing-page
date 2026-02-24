@@ -50,7 +50,7 @@ export const menus = [
   ],
 },
   {
-    id: 'english',
+    id: 'referapatient',
     title: 'طلب تحويل مريض',
     href: '/ar/refer-a-patient',
   },
