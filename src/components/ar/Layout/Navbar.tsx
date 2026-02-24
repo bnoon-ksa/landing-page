@@ -343,7 +343,7 @@ ul.dropdown-menu.contactus-menu {
     font-size: 14px;
     text-align: right;
     background-color: gray;
-        padding: 14px;
+        padding: 12px;
 }
       a.dropdown-item.contactus-btn:hover {
     font-size: 14px;
@@ -359,7 +359,7 @@ ul.dropdown-menu.contactus-menu {
           -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
           margin: 6px 0px 0px;
-          padding: 14px 5px;
+          padding: 12px 5px;
           -webkit-border-radius: 6px;
           -moz-border-radius: 6px;
           border-radius: 6px;
@@ -479,7 +479,7 @@ ul.dropdown-menu.contactus-menu {
             height: 70px;
           }
           li.itmes {
-            font-size: 14px !important;
+            font-size: 16px !important;
           }
           .navbar .navbar-brand {
             padding-left: 0px;
