@@ -463,8 +463,8 @@ const AppointmentSection = () => {
         {/* FORM END */}
       </div>
       <style jsx>{`
-          /* Hard override: affects only the referral form, not navbar or global layout */
-           .refer-form{
+         /* Hard override: affects only the referral form, not navbar or global layout */
+  .refer-form{
       border: none;
     border-radius: 0px;
     padding: 0px;
@@ -477,6 +477,7 @@ const AppointmentSection = () => {
 .appointment-form {
     max-width: 1000px !important;
     margin: 0 auto !important;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif !important;
     color: #163246 !important;
 }
 
@@ -623,6 +624,58 @@ const AppointmentSection = () => {
 .appointment-form .mb-3 { margin-bottom: 16px !important; }
 .appointment-form .mt-3 { margin-top: 16px !important; }
 
+/* ===== Refer-to section styling (CSS-only) ===== */
+/* Highlight the first card (Refer to) */
+.appointment-form .card:first-of-type {
+    border-left: 4px solid #0b6aa2 !important;
+    background: linear-gradient(135deg, #f5fbff 0%, #ffffff 55%, #f5fbff 100%) !important;
+}
+
+/* Make the radio options look like pills */
+.appointment-form .card:first-of-type .d-flex.flex-column.flex-md-row.gap-2.gap-md-5 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+}
+
+.appointment-form .card:first-of-type .form-check-label {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 7px 16px !important;
+    border-radius: 999px !important;
+    border: 1px solid #cfdeea !important;
+    background: #f6fbff !important;
+    color: #0f4e72 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2px !important;
+    cursor: pointer !important;
+    transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease !important;
+}
+
+.appointment-form .card:first-of-type .form-check-label:hover {
+    border-color: #b3ccdd !important;
+    box-shadow: 0 6px 14px rgba(15, 80, 128, 0.12) !important;
+}
+
+/* Hide the native radio circle inside the pill (keep it clickable via the label) */
+.appointment-form .card:first-of-type .form-check-input {
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Use :has to color the active pill when its radio is checked (no HTML change needed) */
+.appointment-form .card:first-of-type .form-check-label:has(input[type="radio"]:checked) {
+    border-color: #0b6aa2 !important;
+    background: linear-gradient(135deg, #0b6aa2, #0f86c0) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 18px rgba(5, 84, 134, 0.35) !important;
+}
+
 /* Header text styling (scoped to this section only) */
 .container > .section-title {
     margin-bottom: 18px !important;
@@ -666,6 +719,15 @@ const AppointmentSection = () => {
     .appointment-form button[type="submit"] {
         width: 100% !important;
     }
+         .refer-form {
+       
+        padding: 0px !important;
+    }
+        .container > .section-title h2.left {
+   
+    font-size: 22px !important;
+}
+
 }
       `}</style>
     </div>
