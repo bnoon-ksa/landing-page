@@ -1,3 +1,9 @@
+## [1.3.103](https://github.com/bnoon-ksa/landing-page/compare/v1.3.102...v1.3.103) (2026-02-24)
+
+### Bug Fixes
+
+* remove class ([#181](https://github.com/bnoon-ksa/landing-page/issues/181)) ([8897f54](https://github.com/bnoon-ksa/landing-page/commit/8897f54910f6e3b0129cb70065f7d22334d54035))
+
 ## [1.3.102](https://github.com/bnoon-ksa/landing-page/compare/v1.3.101...v1.3.102) (2026-02-24)
 
 ### Bug Fixes
