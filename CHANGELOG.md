@@ -1,3 +1,9 @@
+## [1.3.94](https://github.com/bnoon-ksa/landing-page/compare/v1.3.93...v1.3.94) (2026-02-24)
+
+### Bug Fixes
+
+* change cdn ([#171](https://github.com/bnoon-ksa/landing-page/issues/171)) ([4a89221](https://github.com/bnoon-ksa/landing-page/commit/4a8922175e5978a5a4b04aeba9d5f5f75188f9fb))
+
 ## [1.3.93](https://github.com/bnoon-ksa/landing-page/compare/v1.3.92...v1.3.93) (2026-02-24)
 
 ### Bug Fixes
