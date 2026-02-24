@@ -44,7 +44,7 @@ const NationalDayOffer = () => {
                     </h2>
 
                     <div className="offer-subtitle">
-                      <div className="brand-name">BNOON Riyadh | Jeddah | Al Ahsa</div>
+                      <div className="brand-name">Bnoon Riyadh | Jeddah | Al Ahsa</div>
                     </div>
                   </div>
 
