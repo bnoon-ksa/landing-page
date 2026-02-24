@@ -1,3 +1,9 @@
+## [1.3.92](https://github.com/bnoon-ksa/landing-page/compare/v1.3.91...v1.3.92) (2026-02-24)
+
+### Bug Fixes
+
+* mobile canva ([#169](https://github.com/bnoon-ksa/landing-page/issues/169)) ([b5cb4e5](https://github.com/bnoon-ksa/landing-page/commit/b5cb4e5d37b317a82834fc9bb64571b596a12aa9))
+
 ## [1.3.91](https://github.com/bnoon-ksa/landing-page/compare/v1.3.90...v1.3.91) (2026-02-23)
 
 ### Bug Fixes
