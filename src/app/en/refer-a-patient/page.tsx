@@ -16,36 +16,25 @@ export default function ReferaPatientPage() {
 
       <div style={{ position: 'relative' }}>
         <OptimizedPageBanner imageName="refer-patient-banner" />
-
+ <div className="container">
         <div
+         className="second-banner-content reveal-text text-banner"
           style={{
             position: 'absolute',
             top: '50%',
-            left: 0,
-            width: '100%',
             transform: 'translateY(-50%)',
-            textAlign: 'left',
-            color: '#004E78 !important',
-            zIndex: 2,
-            pointerEvents: 'none',
+            zIndex: 10,
           }}
         >
-          <div className="container ">
-           <h2
-  className="section-title"
-  style={{
-    fontSize: 'clamp(14px, 5vw, 55px)',
-    fontWeight: 600,
-    margin: 0,
-    color: '#004E78',
-  }}
->
-  REFER A PATIENT
+          
+           <h2 style={{ color: '#004E78' }}>
+             <span className="rowdies-font text-size">
+  REFER A PATIENT</span>
 </h2>
-          </div>
+         
         </div>
       </div>
-
+</div>
       <ReferaPatient />
     </>
   );
