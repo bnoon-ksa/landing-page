@@ -1,3 +1,9 @@
+## [1.3.101](https://github.com/bnoon-ksa/landing-page/compare/v1.3.100...v1.3.101) (2026-02-24)
+
+### Bug Fixes
+
+* text weight ([#179](https://github.com/bnoon-ksa/landing-page/issues/179)) ([6dae0eb](https://github.com/bnoon-ksa/landing-page/commit/6dae0ebb31a733c6fc7d83bb2665014423ae5eb2))
+
 ## [1.3.100](https://github.com/bnoon-ksa/landing-page/compare/v1.3.99...v1.3.100) (2026-02-24)
 
 ### Bug Fixes
