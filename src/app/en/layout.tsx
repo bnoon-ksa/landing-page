@@ -51,11 +51,11 @@ export default function EnglishLayout({ children }: { children: React.ReactNode 
         <head>
       <link
         rel="stylesheet"
-        href="https://landingpagecdn.b-cdn.net/style.css"
+        href="https://bnoon-website.b-cdn.net/assets/style.css"
       />
       <link
         rel="stylesheet"
-        href="https://landingpagecdn.b-cdn.net/responsive.css"
+        href="https://bnoon-website.b-cdn.net/assets/responsive.css"
       />
     </head>
       <SetLocaleAttrs lang="en" dir="ltr" />
