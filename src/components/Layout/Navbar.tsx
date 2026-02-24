@@ -391,7 +391,7 @@ function Navbar() {
     font-size: 16px;
     }
     .dropdown-menu .dropdown-item:hover{
-    background: #000 !important;
+    background: #3f3f3f !important;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     color: #fff;
@@ -484,7 +484,7 @@ function Navbar() {
           display: none !important;
         }
         .dropdown-menu .dropdown-item {
-          background: #3f3f3f;
+          background: gray;
           backdrop-filter: blur(20px);
           margin: 6px 0px 0px; /* Items ke beech gap */
           padding: 6px 45px; /* Andar spacing */
@@ -501,10 +501,19 @@ function Navbar() {
           border: 1px;
           margin: 0px;
         }
+        a.btn.btn-outline-secondary.btn-language {
+    font-size: 18px;
+}
         .dropdown-menu .dropdown-item:hover {
           background: hsla(0, 0%, 100%, 0.2); /* Har item ka apna background */
           backdrop-filter: blur(20px);
         }
+         .dropdown-menu .dropdown-item:hover {
+          background: #3f3f3f;
+        }
+          ul.dropdown-menu.show li:hover a{
+          background: #3f3f3f;
+          }
         .sticky {
           position: fixed !important;
           top: 0;
