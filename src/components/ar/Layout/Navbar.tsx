@@ -266,9 +266,15 @@ function Navbar() {
 
                     handleClose(); // offcanvas band
 
-                    setTimeout(() => {
-                      window.location.href = item.href || '#';
-                    }, 200);
+                   
+                   setTimeout(() => {
+  const targetUrl =
+    item.id === 'english'
+      ? pathname.replace(/^\/ar/, '/en')
+      : item.href || '#';
+
+  window.location.href = targetUrl;
+}, 200);
                   }}
                 >
                   {item.title}
