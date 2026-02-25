@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const ReferralARSchema = new mongoose.Schema(
   {
-    branch: { type: String, default: "" },
+    branch: { type: String, required: true },
 
     referringPhysicianName: { type: String, required: true },
     referringPhysicianPhone: { type: String, required: true },
@@ -29,3 +29,4 @@ if (mongoose.models.ReferralAR) {
 }
 
 export default mongoose.model("ReferralAR", ReferralARSchema);
+
