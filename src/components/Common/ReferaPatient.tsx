@@ -148,7 +148,7 @@ const AppointmentSection = () => {
     if (errors.length) {
       setMessage(
         <div className="alert alert-danger text-start" role="alert">
-          <strong>Please fix the following:</strong>
+          <strong>They should fill it in order to submit:</strong>
           <ul className="mb-0">
             {errors.map((x) => (
               <li key={x}>{x}</li>
