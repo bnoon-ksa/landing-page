@@ -125,6 +125,7 @@ const handleChange = (
       "referringPhysicianPhone",
       "patientName",
       "patientPhone",
+       "recaptcha",
     ];
 
     const hasEmpty = requiredFields.some((field) => !String(formData[field] ?? "").trim());
