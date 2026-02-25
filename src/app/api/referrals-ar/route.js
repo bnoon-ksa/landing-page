@@ -25,7 +25,7 @@ export async function POST(req) {
 
     // ✅ Recipient mapping based on selected branch (Arabic form)
    const RECIPIENTS = {
-  "بنـــون – جدة": "websitedesignbahrain@gmail.com",
+  "بنـــون – جدة": "referral.jeddah@bnoon.sa",
   "بنـــون – الرياض": "referral.riyadh@bnoon.sa",
   "بنـــون – الأحساء": "referral.alahsa@bnoon.sa",
 };
