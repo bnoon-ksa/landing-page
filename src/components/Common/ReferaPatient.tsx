@@ -128,16 +128,7 @@ const AppointmentSection = () => {
     setShowThankYou(false);
 
  
-  // ✅ Validation before submission
-  if (formData.reasons.length === 0) {
-    setMessage(
-      <div className="alert alert-danger text-start">
-        Please select at least one reason for referring.
-      </div>,
-    );
-    scrollToMessage();
-    return;
-  }
+
 
 
     try {
