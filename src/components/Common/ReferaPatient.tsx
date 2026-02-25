@@ -238,8 +238,8 @@ const AppointmentSection = () => {
               </div>
             </div>
 
-            <div className="text-space">
-              <p className="text-center">
+            <div className="left">
+              <p >
                 Thank you for placing your trust in Bnoon and for referring your patient for
                 fertility care. Please note that this form is intended to be completed exclusively
                 by licensed medical practitioners.
