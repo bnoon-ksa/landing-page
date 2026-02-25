@@ -49,11 +49,12 @@ export const menus = [
     },
   ],
 },
-  {
-    id: 'english',
-    title: 'طلب تحويل مريض',
-    href: '/ar/refer-a-patient',
-  },
+ {
+  id: 'referapatient',
+  title: 'طلب تحويل مريض',
+  href: '/ar/refer-a-patient',
+  mobileOnly: true,
+},
   {
     id: 'english',
     title: 'English',
