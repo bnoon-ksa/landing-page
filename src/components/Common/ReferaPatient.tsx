@@ -16,7 +16,7 @@ type ReferralFormData = {
   patientPhone: string;
   gender: '' | 'Male' | 'Female';
 
-  reasons: string[]; // mandatory (at least one)
+  reasons: string; // mandatory (at least one)
   medicalReason: string; // optional
 
   recaptcha: string; // mandatory
@@ -36,7 +36,7 @@ const AppointmentSection = () => {
     patientPhone: '',
     gender: '',
 
-    reasons: [],
+    reasons: '',
     medicalReason: '',
 
     recaptcha: '',
@@ -110,55 +110,12 @@ const AppointmentSection = () => {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
-  const toggleReason = (reason: string) => {
-    setFormData((prev) => {
-      const exists = prev.reasons.includes(reason);
-      return {
-        ...prev,
-        reasons: exists ? prev.reasons.filter((r) => r !== reason) : [...prev.reasons, reason],
-      };
-    });
-  };
 
-  const validate = (): string[] => {
-    const errors: string[] = [];
-
-    // Mandatory only:
-    if (!formData.physicianName.trim()) errors.push('Physician Name is required.');
-    if (!formData.physicianPhone.trim()) errors.push('Physician Phone is required.');
-
-    if (!formData.patientName.trim()) errors.push('Patient Name is required.');
-    if (!formData.patientPhone.trim()) errors.push('Patient Phone is required.');
-    if (!formData.gender) errors.push('Gender is required.');
-
-    if (formData.reasons.length === 0)
-      errors.push('Please select at least one reason for referring.');
-
-    if (!formData.recaptcha) errors.push('Please complete reCAPTCHA.');
-
-    return errors;
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMessage(null);
     setShowThankYou(false);
-
-    const errors = validate();
-    if (errors.length) {
-      setMessage(
-        <div className="alert alert-danger text-start" role="alert">
-          <strong>They should fill it in order to submit:</strong>
-          <ul className="mb-0">
-            {errors.map((x) => (
-              <li key={x}>{x}</li>
-            ))}
-          </ul>
-        </div>,
-      );
-      scrollToMessage();
-      return;
-    }
 
     try {
       setSubmitting(true);
@@ -209,7 +166,7 @@ const AppointmentSection = () => {
         patientName: '',
         patientPhone: '',
         gender: '',
-        reasons: [],
+        reasons: '',
         medicalReason: '',
         recaptcha: '',
       });
@@ -301,6 +258,7 @@ const AppointmentSection = () => {
                   value={formData.physicianName}
                   onChange={(e) => setField('physicianName', e.target.value)}
                   type="text"
+                  required
                 />
               </div>
 
@@ -311,6 +269,7 @@ const AppointmentSection = () => {
                   value={formData.physicianPhone}
                   onChange={(e) => setField('physicianPhone', e.target.value)}
                   type="tel"
+                  required
                 />
               </div>
 
@@ -362,6 +321,7 @@ const AppointmentSection = () => {
                   value={formData.patientName}
                   onChange={(e) => setField('patientName', e.target.value)}
                   type="text"
+                  required
                 />
               </div>
 
@@ -372,6 +332,7 @@ const AppointmentSection = () => {
                   value={formData.patientPhone}
                   onChange={(e) => setField('patientPhone', e.target.value)}
                   type="tel"
+                  required
                 />
               </div>
 
@@ -385,6 +346,7 @@ const AppointmentSection = () => {
                       name="gender"
                       checked={formData.gender === 'Male'}
                       onChange={() => setField('gender', 'Male')}
+                      required
                     />
                     Male
                   </label>
@@ -396,6 +358,7 @@ const AppointmentSection = () => {
                       name="gender"
                       checked={formData.gender === 'Female'}
                       onChange={() => setField('gender', 'Female')}
+                      required
                     />
                     Female
                   </label>
@@ -410,12 +373,15 @@ const AppointmentSection = () => {
                 {REASONS.map((r) => (
                   <div className="mb-2" key={r}>
                     <label className="form-check-label">
-                      <input
-                        className="form-check-input me-2"
-                        type="checkbox"
-                        checked={formData.reasons.includes(r)}
-                        onChange={() => toggleReason(r)}
-                      />
+                     <input
+            className="form-check-input me-2"
+            type="radio"
+            name="reason"
+            value={r}
+            checked={formData.reasons === r}
+            onChange={(e) => setField('reasons', e.target.value)}
+            required
+          />
                       {r}
                     </label>
                   </div>
