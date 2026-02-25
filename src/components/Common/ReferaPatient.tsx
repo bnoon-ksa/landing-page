@@ -16,7 +16,7 @@ type ReferralFormData = {
   patientPhone: string;
   gender: '' | 'Male' | 'Female';
 
-  reasons: string; // mandatory (at least one)
+  reasons: string[]; // mandatory (at least one)
   medicalReason: string; // optional
 
   recaptcha: string; // mandatory
@@ -36,7 +36,7 @@ const AppointmentSection = () => {
     patientPhone: '',
     gender: '',
 
-    reasons: '',
+    reasons: [],
     medicalReason: '',
 
     recaptcha: '',
@@ -110,12 +110,24 @@ const AppointmentSection = () => {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
+  const toggleReason = (reason: string) => {
+    setFormData((prev) => {
+      const exists = prev.reasons.includes(reason);
+      return {
+        ...prev,
+        reasons: exists ? prev.reasons.filter((r) => r !== reason) : [...prev.reasons, reason],
+      };
+    });
+  };
+
 
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMessage(null);
     setShowThankYou(false);
+
+ 
 
     try {
       setSubmitting(true);
@@ -166,7 +178,7 @@ const AppointmentSection = () => {
         patientName: '',
         patientPhone: '',
         gender: '',
-        reasons: '',
+        reasons: [],
         medicalReason: '',
         recaptcha: '',
       });
@@ -373,15 +385,13 @@ const AppointmentSection = () => {
                 {REASONS.map((r) => (
                   <div className="mb-2" key={r}>
                     <label className="form-check-label">
-                     <input
-            className="form-check-input me-2"
-            type="radio"
-            name="reason"
-            value={r}
-            checked={formData.reasons === r}
-            onChange={(e) => setField('reasons', e.target.value)}
-            required
-          />
+                      <input
+                        className="form-check-input me-2"
+                        type="checkbox"
+                        checked={formData.reasons.includes(r)}
+                        onChange={() => toggleReason(r)}
+                        required
+                      />
                       {r}
                     </label>
                   </div>
