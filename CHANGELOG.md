@@ -1,3 +1,10 @@
+## [1.3.131](https://github.com/bnoon-ksa/landing-page/compare/v1.3.130...v1.3.131) (2026-02-25)
+
+### Bug Fixes
+
+* form backend ([#212](https://github.com/bnoon-ksa/landing-page/issues/212)) ([52ec921](https://github.com/bnoon-ksa/landing-page/commit/52ec9219c9b2e63448e902f9d71ee056579ab159))
+* mongodb update ([#213](https://github.com/bnoon-ksa/landing-page/issues/213)) ([1396824](https://github.com/bnoon-ksa/landing-page/commit/1396824c1d3a75896d85dd434f2a94035ed0717a))
+
 ## [1.3.130](https://github.com/bnoon-ksa/landing-page/compare/v1.3.129...v1.3.130) (2026-02-25)
 
 ### Bug Fixes
