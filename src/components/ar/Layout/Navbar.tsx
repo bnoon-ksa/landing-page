@@ -192,7 +192,7 @@ function Navbar() {
             <div className="collapse navbar-collapse justify-content-start">
               <ul className="navbar-nav">
             {menus
-  .filter((item) => item.id !== 'english')
+  .filter((item) => item.id !== 'english' && !item.mobileOnly)
   .map((item) =>
     item.dropdown ? (
       <li key={item.id} className="nav-item dropdown contactus-drpdown-btn">
