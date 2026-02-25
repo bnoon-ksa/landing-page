@@ -1,3 +1,9 @@
+## [1.3.127](https://github.com/bnoon-ksa/landing-page/compare/v1.3.126...v1.3.127) (2026-02-25)
+
+### Bug Fixes
+
+* form fields ([#207](https://github.com/bnoon-ksa/landing-page/issues/207)) ([22c5c3d](https://github.com/bnoon-ksa/landing-page/commit/22c5c3decc887c186a17b910c05aa9ad127ccc17))
+
 ## [1.3.126](https://github.com/bnoon-ksa/landing-page/compare/v1.3.125...v1.3.126) (2026-02-25)
 
 ### Bug Fixes
