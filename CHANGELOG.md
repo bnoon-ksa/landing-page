@@ -1,3 +1,9 @@
+## [1.3.122](https://github.com/bnoon-ksa/landing-page/compare/v1.3.121...v1.3.122) (2026-02-25)
+
+### Bug Fixes
+
+* form style ([#201](https://github.com/bnoon-ksa/landing-page/issues/201)) ([71a6540](https://github.com/bnoon-ksa/landing-page/commit/71a65406323d61aeec75eabc4062fd714bb28067))
+
 ## [1.3.121](https://github.com/bnoon-ksa/landing-page/compare/v1.3.120...v1.3.121) (2026-02-25)
 
 ### Bug Fixes
