@@ -1,3 +1,9 @@
+## [1.3.120](https://github.com/bnoon-ksa/landing-page/compare/v1.3.119...v1.3.120) (2026-02-25)
+
+### Bug Fixes
+
+* error field ([#199](https://github.com/bnoon-ksa/landing-page/issues/199)) ([a999adb](https://github.com/bnoon-ksa/landing-page/commit/a999adb5268c763fa72927b845740280a9c96b2b))
+
 ## [1.3.119](https://github.com/bnoon-ksa/landing-page/compare/v1.3.118...v1.3.119) (2026-02-25)
 
 ### Bug Fixes
