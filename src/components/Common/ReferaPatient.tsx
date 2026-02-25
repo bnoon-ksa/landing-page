@@ -360,7 +360,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mb-2">
-                <label className="form-label d-block text-size">Gender *</label>
+                <label className="form-label d-block text-size">Gender</label>
                 <div className="d-flex gap-4 flex-wrap">
                   <label className="form-check-label mb-0">
                     <input
@@ -369,7 +369,7 @@ const AppointmentSection = () => {
                       name="gender"
                       checked={formData.gender === 'Male'}
                       onChange={() => setField('gender', 'Male')}
-                      required
+                     
                     />
                     Male
                   </label>
@@ -381,7 +381,7 @@ const AppointmentSection = () => {
                       name="gender"
                       checked={formData.gender === 'Female'}
                       onChange={() => setField('gender', 'Female')}
-                      required
+                     
                     />
                     Female
                   </label>
@@ -390,7 +390,7 @@ const AppointmentSection = () => {
             </div>
 
             {/* Reason for Referring */}
-            <h5 className="mb-3 text-size title-size">Reason for Referring *</h5>
+            <h5 className="mb-3 text-size title-size">Reason for Referring</h5>
             <div className="card p-3 mb-3">
               <div className="row">
                 {REASONS.map((r) => (
