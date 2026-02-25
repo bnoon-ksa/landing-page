@@ -127,18 +127,6 @@ const AppointmentSection = () => {
     setMessage(null);
     setShowThankYou(false);
 
- 
-  // ✅ Validation before submission
-  if (formData.reasons.length === 0) {
-    setMessage(
-      <div className="alert alert-danger text-start">
-        Please select at least one reason for referring.
-      </div>,
-    );
-    scrollToMessage();
-    return;
-  }
-
 
     try {
       setSubmitting(true);
@@ -360,7 +348,7 @@ const AppointmentSection = () => {
               </div>
 
               <div className="mb-2">
-                <label className="form-label d-block text-size">Gender *</label>
+                <label className="form-label d-block text-size">Gender</label>
                 <div className="d-flex gap-4 flex-wrap">
                   <label className="form-check-label mb-0">
                     <input
@@ -369,7 +357,7 @@ const AppointmentSection = () => {
                       name="gender"
                       checked={formData.gender === 'Male'}
                       onChange={() => setField('gender', 'Male')}
-                      required
+                     
                     />
                     Male
                   </label>
@@ -381,7 +369,7 @@ const AppointmentSection = () => {
                       name="gender"
                       checked={formData.gender === 'Female'}
                       onChange={() => setField('gender', 'Female')}
-                      required
+                      
                     />
                     Female
                   </label>
