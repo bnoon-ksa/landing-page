@@ -121,14 +121,10 @@ const handleChange = (
     setMessage(null);
 
     const requiredFields: (keyof FormData)[] = [
-      "branch",
       "referringPhysicianName",
       "referringPhysicianPhone",
-      "referringPhysicianEmail",
       "patientName",
       "patientPhone",
-      "gender",
-      "reason",
     ];
 
     const hasEmpty = requiredFields.some((field) => !String(formData[field] ?? "").trim());
@@ -142,25 +138,7 @@ const handleChange = (
       return;
     }
 
-    if (formData.reason === "أسباب أخرى" && !formData.otherReasonText.trim()) {
-      setMessage(
-        <div className="alert alert-danger text-end" role="alert">
-          ❌ الرجاء تحديد السبب الطبي (أسباب أخرى).
-        </div>
-      );
-     
-      return;
-    }
-
-    if (!formData.recaptcha) {
-      setMessage(
-        <div className="alert alert-danger text-end" role="alert">
-          ❌ الرجاء التحقق من reCAPTCHA قبل الإرسال.
-        </div>
-      );
-      
-      return;
-    }
+  
 
     try {
       setSubmitting(true);
@@ -268,7 +246,7 @@ setSubmitted(false);
           {/* التحويل إلى */}
           <div className="card p-3 mb-3">
            <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap gap-3 gap-md-4">
-  <h6 className="mb-0 form-label form-label-space text-size">التحويل إلى: *</h6>
+  <h6 className="mb-0 form-label form-label-space text-size">التحويل إلى:</h6>
 
   <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2 gap-sm-3 gap-md-4 flex-wrap">
    {['بنـــون – جدة', 'بنـــون – الرياض', 'بنـــون – الأحساء'].map((b) => (
@@ -276,7 +254,7 @@ setSubmitted(false);
         <input
           type="radio"
           name="branch"
-          className={`form-check-input ms-2 ${isFieldInvalid('branch') ? 'is-invalid' : ''}`}
+          className={`form-check-input ms-2 `}
           value={b}
           checked={formData.branch === b}
           onChange={(e) =>
@@ -292,11 +270,7 @@ setSubmitted(false);
   </div>
 </div>
 
-            {isFieldInvalid("branch") && (
-              <div className="invalid-feedback d-block text-end mt-2">
-                الرجاء اختيار الفرع.
-              </div>
-            )}
+         
           </div>
 
           {/* معلومات الطبيب المحوّل */}
@@ -310,6 +284,7 @@ setSubmitted(false);
                 value={formData.referringPhysicianName}
                 onChange={handleChange}
                 type="text"
+                required
                 style={{ direction: "rtl", textAlign: "right" }}
               />
             </div>
@@ -322,14 +297,15 @@ setSubmitted(false);
                 value={formData.referringPhysicianPhone}
                 onChange={handleChange}
                 type="tel"
+                required
                 style={{ direction: "rtl", textAlign: "right" }}
               />
             </div>
 
             <div className="mb-3">
-              <label className="form-label text-size">البريد الإلكتروني *</label>
+              <label className="form-label text-size">البريد الإلكتروني </label>
               <input
-                className={`form-control ${isFieldInvalid("referringPhysicianEmail") ? "is-invalid" : ""}`}
+                className={`form-control `}
                 name="referringPhysicianEmail"
                 value={formData.referringPhysicianEmail}
                 onChange={handleChange}
@@ -383,6 +359,7 @@ setSubmitted(false);
                 value={formData.patientName}
                 onChange={handleChange}
                 type="text"
+                required
                 style={{ direction: "rtl", textAlign: "right" }}
               />
             </div>
@@ -395,18 +372,19 @@ setSubmitted(false);
                 value={formData.patientPhone}
                 onChange={handleChange}
                 type="tel"
+                required
                 style={{ direction: "rtl", textAlign: "right" }}
               />
             </div>
 
 
             <div className="mb-0">
-              <label className="form-label text-size d-block">الجنس *</label>
+              <label className="form-label text-size d-block">الجنس</label>
               <div className="d-flex gap-4 flex-wrap">
                 {["ذكر", "أنثى"].map((g) => (
                   <label key={g} className="form-check-label form-lable mb-0 d-flex align-items-center">
                     <input
-                      className={`form-check-input ms-2 ${isFieldInvalid("gender") ? "is-invalid" : ""}`}
+                      className={`form-check-input ms-2`}
                       type="radio"
                       name="gender"
                       checked={formData.gender === g}
@@ -419,16 +397,12 @@ setSubmitted(false);
                 ))}
               </div>
 
-              {isFieldInvalid("gender") && (
-                <div className="invalid-feedback d-block text-end mt-2">
-                  الرجاء اختيار الجنس.
-                </div>
-              )}
+          
             </div>
           </div>
 
           {/* السبب الطبي للتحويل */}
-          <h5 className="mb-3 text-size" >السبب الطبي للتحويل *</h5>
+          <h5 className="mb-3 text-size" >السبب الطبي للتحويل</h5>
           <div className="card p-3 mb-3">
             <div className="row">
               {[
@@ -446,7 +420,7 @@ setSubmitted(false);
                 <div className=" mb-2" key={r}>
                   <label className="form-check-label form-lable mb-0 d-flex align-items-center">
                     <input
-                      className={`form-check-input ms-2 ${isFieldInvalid("reason") ? "is-invalid" : ""}`}
+                      className={`form-check-input ms-2`}
                       type="radio"
                       name="reason"
                       value={r}
@@ -464,11 +438,7 @@ setSubmitted(false);
               ))}
             </div>
 
-            {isFieldInvalid("reason") && (
-              <div className="invalid-feedback d-block text-end mt-2">
-                الرجاء اختيار السبب الطبي.
-              </div>
-            )}
+           
 
             {formData.reason === "أسباب أخرى" && (
               <div className="mt-3">
