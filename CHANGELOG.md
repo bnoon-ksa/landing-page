@@ -1,3 +1,10 @@
+## [1.3.128](https://github.com/bnoon-ksa/landing-page/compare/v1.3.127...v1.3.128) (2026-02-25)
+
+### Bug Fixes
+
+* backend mail ([#208](https://github.com/bnoon-ksa/landing-page/issues/208)) ([9684af8](https://github.com/bnoon-ksa/landing-page/commit/9684af81b843e10303db864414b2648fbc3c2a65))
+* form fields ([#209](https://github.com/bnoon-ksa/landing-page/issues/209)) ([649a1f3](https://github.com/bnoon-ksa/landing-page/commit/649a1f3d1dcc950352ee720705e28c7312a66bce))
+
 ## [1.3.127](https://github.com/bnoon-ksa/landing-page/compare/v1.3.126...v1.3.127) (2026-02-25)
 
 ### Bug Fixes
