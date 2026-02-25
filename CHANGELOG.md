@@ -1,3 +1,9 @@
+## [1.3.129](https://github.com/bnoon-ksa/landing-page/compare/v1.3.128...v1.3.129) (2026-02-25)
+
+### Bug Fixes
+
+* mongodb update ([#210](https://github.com/bnoon-ksa/landing-page/issues/210)) ([4e20dcf](https://github.com/bnoon-ksa/landing-page/commit/4e20dcf1050edc0fdb29bb35d1124e4d46642012))
+
 ## [1.3.128](https://github.com/bnoon-ksa/landing-page/compare/v1.3.127...v1.3.128) (2026-02-25)
 
 ### Bug Fixes
