@@ -7,6 +7,7 @@ export async function POST(req) {
     const data = await req.json();
 
     const requiredFields = [
+       "branch",
       "referringPhysicianName",
       "referringPhysicianPhone",
       "patientName",
@@ -23,11 +24,11 @@ export async function POST(req) {
     const saved = await ReferralAR.create(data);
 
     // ✅ Recipient mapping based on selected branch (Arabic form)
-    const RECIPIENTS = {
-      "Bnoon – Jeddah": "zulaikhakhalid18@gmail.com",
-      "Bnoon – Riyadh": "referral.riyadh@bnoon.sa",
-      "Bnoon – Al Ahsa": "referral.alahsa@bnoon.sa",
-    };
+   const RECIPIENTS = {
+  "بنـــون – جدة": "websitedesignbahrain@gmail.com",
+  "بنـــون – الرياض": "referral.riyadh@bnoon.sa",
+  "بنـــون – الأحساء": "referral.alahsa@bnoon.sa",
+};
 
     // default fallback (optional)
     const recipient = RECIPIENTS[data?.branch] || "referral.jeddah@bnoon.sa";
@@ -49,7 +50,7 @@ export async function POST(req) {
 <div dir="rtl" style="font-family: Arial, sans-serif; line-height:1.8">
   <h3>تفاصيل طلب تحويل مريض</h3>
 
-  ${data.branch ? `<p><b>التحويل إلى:</b> ${data.branch}</p>` : ""}
+  <p><b>التحويل إلى:</b> ${data.branch}</p>
 
   <h4>معلومات الطبيب المحوّل</h4>
 
