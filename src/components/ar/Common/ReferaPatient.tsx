@@ -121,6 +121,7 @@ const handleChange = (
     setMessage(null);
 
     const requiredFields: (keyof FormData)[] = [
+      "branch",
       "referringPhysicianName",
       "referringPhysicianPhone",
       "patientName",
@@ -247,7 +248,7 @@ setSubmitted(false);
           {/* التحويل إلى */}
           <div className="card p-3 mb-3">
            <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap gap-3 gap-md-4">
-  <h6 className="mb-0 form-label form-label-space text-size">التحويل إلى:</h6>
+  <h6 className="mb-0 form-label form-label-space text-size">التحويل إلى: *</h6>
 
   <div className="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2 gap-sm-3 gap-md-4 flex-wrap">
    {['بنـــون – جدة', 'بنـــون – الرياض', 'بنـــون – الأحساء'].map((b) => (
@@ -257,12 +258,14 @@ setSubmitted(false);
           name="branch"
           className={`form-check-input ms-2 `}
           value={b}
+          required
           checked={formData.branch === b}
           onChange={(e) =>
             setFormData((prev) => ({
               ...prev,
               branch: (e.target as HTMLInputElement).value,
             }))
+            
           }
         />
         {b}
