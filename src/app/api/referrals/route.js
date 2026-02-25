@@ -34,15 +34,15 @@ export async function POST(req) {
       from: `"Referral Request" <${process.env.SMTP_USER}>`,
       to: recipient,
       subject: `New Patient Referral - Website (${data.referTo || "N/A"})`,
-   html: `
+html: `
 <h3>Referral Details</h3>
 
 <p><b>Refer To:</b> ${data.referTo || "-"}</p>
 
 <h4>Referring Physician Information</h4>
 
-<p><b>Physician Name:</b> ${data.physicianName || "-"}</p>
-<p><b>Physician Phone:</b> ${data.physicianPhone || "-"}</p>
+<p><b>Physician Name:</b> ${data.physicianName}</p>
+<p><b>Physician Phone:</b> ${data.physicianPhone}</p>
 
 ${data.physicianEmail ? `<p><b>Physician Email:</b> ${data.physicianEmail}</p>` : ""}
 
@@ -53,15 +53,16 @@ ${data.organizationCity ? `<p><b>Organization City:</b> ${data.organizationCity}
 
 <h4>Referred Patient Information</h4>
 
-<p><b>Patient Name:</b> ${data.patientName || "-"}</p>
-<p><b>Patient Phone:</b> ${data.patientPhone || "-"}</p>
-<p><b>Gender:</b> ${data.gender || "-"}</p>
+<p><b>Patient Name:</b> ${data.patientName}</p>
+<p><b>Patient Phone:</b> ${data.patientPhone}</p>
+
+${data.gender ? `<p><b>Gender:</b> ${data.gender}</p>` : ""}
 
 
 <h4>Reason(s) for Referring</h4>
 
 <p><b>Selected Reasons:</b> ${
-  data.reasons && data.reasons.length ? data.reasons.join(", ") : "-"
+  data.reasons?.length ? data.reasons.join(", ") : "-"
 }</p>
 
 
@@ -70,7 +71,7 @@ ${data.medicalReason ? `
 <p>${data.medicalReason.replace(/\n/g, "<br/>")}</p>
 ` : ""}
 
-`
+`,
     });
 
     return Response.json(
