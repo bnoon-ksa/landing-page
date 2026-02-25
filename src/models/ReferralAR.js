@@ -2,20 +2,20 @@ import mongoose from "mongoose";
 
 const ReferralARSchema = new mongoose.Schema(
   {
-    branch: { type: String, required: true },
+    branch: { type: String, default: "" },
 
     referringPhysicianName: { type: String, required: true },
     referringPhysicianPhone: { type: String, required: true },
-    referringPhysicianEmail: { type: String, required: true },
+    referringPhysicianEmail: { type: String, default: "" },
 
     facilityName: { type: String, default: "" },
     organizationCity: { type: String, default: "" },
 
     patientName: { type: String, required: true },
     patientPhone: { type: String, required: true },
-    gender: { type: String, required: true },
+    gender: { type: String, default: "" },
 
-    reason: { type: String, required: true },
+    reason: { type: String, default: "" },
     otherReasonText: { type: String, default: "" },
 
     recaptcha: { type: String, default: "" },
