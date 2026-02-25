@@ -1,3 +1,9 @@
+## [1.3.126](https://github.com/bnoon-ksa/landing-page/compare/v1.3.125...v1.3.126) (2026-02-25)
+
+### Bug Fixes
+
+* error message ([#206](https://github.com/bnoon-ksa/landing-page/issues/206)) ([49cbfd5](https://github.com/bnoon-ksa/landing-page/commit/49cbfd5d3dff9cea0060597ae030cfbd7706efeb))
+
 ## [1.3.125](https://github.com/bnoon-ksa/landing-page/compare/v1.3.124...v1.3.125) (2026-02-25)
 
 ### Bug Fixes
