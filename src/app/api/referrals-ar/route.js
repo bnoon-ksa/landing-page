@@ -7,14 +7,10 @@ export async function POST(req) {
     const data = await req.json();
 
     const requiredFields = [
-      "branch",
       "referringPhysicianName",
       "referringPhysicianPhone",
-      "referringPhysicianEmail",
       "patientName",
       "patientPhone",
-      "gender",
-      "reason",
       "recaptcha",
     ];
 
@@ -28,7 +24,7 @@ export async function POST(req) {
 
     // ✅ Recipient mapping based on selected branch (Arabic form)
     const RECIPIENTS = {
-      "Bnoon – Jeddah": "referral.jeddah@bnoon.sa",
+      "Bnoon – Jeddah": "zulaikhakhalid18@gmail.com",
       "Bnoon – Riyadh": "referral.riyadh@bnoon.sa",
       "Bnoon – Al Ahsa": "referral.alahsa@bnoon.sa",
     };
@@ -49,33 +45,49 @@ export async function POST(req) {
       to: recipient, // ✅ dynamic
       replyTo: data.referringPhysicianEmail,
       subject: `طلب تحويل مريض - ${data.branch || "N/A"} - ${data.patientName || ""}`,
-      html: `
-        <div dir="rtl" style="font-family: Arial, sans-serif; line-height:1.8">
-          <h3>تفاصيل طلب تحويل مريض</h3>
+  html: `
+<div dir="rtl" style="font-family: Arial, sans-serif; line-height:1.8">
+  <h3>تفاصيل طلب تحويل مريض</h3>
 
-          <p><b>التحويل إلى:</b> ${data.branch || "-"}</p>
+  ${data.branch ? `<p><b>التحويل إلى:</b> ${data.branch}</p>` : ""}
 
-          <h4>معلومات الطبيب المحوّل</h4>
-          <p><b>اسم الطبيب:</b> ${data.referringPhysicianName || "-"}</p>
-          <p><b>رقم الهاتف:</b> ${data.referringPhysicianPhone || "-"}</p>
-          <p><b>البريد الإلكتروني:</b> ${data.referringPhysicianEmail || "-"}</p>
-          <p><b>اسم المنشأة الطبية:</b> ${data.facilityName || "-"}</p>
-          <p><b>المدينة:</b> ${data.organizationCity || "-"}</p>
+  <h4>معلومات الطبيب المحوّل</h4>
 
-          <h4>معلومات المريض</h4>
-          <p><b>اسم المريض/المريضة:</b> ${data.patientName || "-"}</p>
-          <p><b>رقم الهاتف:</b> ${data.patientPhone || "-"}</p>
-          <p><b>الجنس:</b> ${data.gender || "-"}</p>
+  <p><b>اسم الطبيب:</b> ${data.referringPhysicianName}</p>
+  <p><b>رقم الهاتف:</b> ${data.referringPhysicianPhone}</p>
 
-          <h4>السبب الطبي للتحويل</h4>
-          <p><b>السبب:</b> ${data.reason || "-"}</p>
-          ${
-            data.reason === "أسباب أخرى"
-              ? `<p><b>تفاصيل أخرى:</b> ${(data.otherReasonText || "-").replace(/\n/g, "<br/>")}</p>`
-              : ""
-          }
-        </div>
-      `,
+  ${data.referringPhysicianEmail ? `
+    <p><b>البريد الإلكتروني:</b> ${data.referringPhysicianEmail}</p>
+  ` : ""}
+
+  ${data.facilityName ? `
+    <p><b>اسم المنشأة الطبية:</b> ${data.facilityName}</p>
+  ` : ""}
+
+  ${data.organizationCity ? `
+    <p><b>المدينة:</b> ${data.organizationCity}</p>
+  ` : ""}
+
+  <h4>معلومات المريض</h4>
+
+  <p><b>اسم المريض/المريضة:</b> ${data.patientName}</p>
+  <p><b>رقم الهاتف:</b> ${data.patientPhone}</p>
+
+  ${data.gender ? `
+    <p><b>الجنس:</b> ${data.gender}</p>
+  ` : ""}
+
+  ${(data.reason && data.reason !== "أسباب أخرى") ? `
+    <h4>السبب الطبي للتحويل</h4>
+    <p><b>السبب:</b> ${data.reason}</p>
+  ` : ""}
+
+  ${data.reason === "أسباب أخرى" && data.otherReasonText ? `
+    <h4>السبب الطبي للتحويل</h4>
+    <p><b>تفاصيل أخرى:</b> ${data.otherReasonText.replace(/\n/g, "<br/>")}</p>
+  ` : ""}
+</div>
+`,
     });
 
     return Response.json(
