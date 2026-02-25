@@ -1,3 +1,9 @@
+## [1.3.125](https://github.com/bnoon-ksa/landing-page/compare/v1.3.124...v1.3.125) (2026-02-25)
+
+### Bug Fixes
+
+* backend mail ([#205](https://github.com/bnoon-ksa/landing-page/issues/205)) ([366ee4b](https://github.com/bnoon-ksa/landing-page/commit/366ee4bdaa3ce7166df8ce321712e48d8ecbdb77))
+
 ## [1.3.124](https://github.com/bnoon-ksa/landing-page/compare/v1.3.123...v1.3.124) (2026-02-25)
 
 ### Bug Fixes
