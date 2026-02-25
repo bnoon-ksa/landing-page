@@ -1,3 +1,10 @@
+## [1.3.117](https://github.com/bnoon-ksa/landing-page/compare/v1.3.116...v1.3.117) (2026-02-25)
+
+### Bug Fixes
+
+* filter ([#195](https://github.com/bnoon-ksa/landing-page/issues/195)) ([d21e1e4](https://github.com/bnoon-ksa/landing-page/commit/d21e1e4b5a836c1826c9fbffc50043f672aef786))
+* menu item ([#196](https://github.com/bnoon-ksa/landing-page/issues/196)) ([702f791](https://github.com/bnoon-ksa/landing-page/commit/702f791415b09db6ed3c46e17926031fc4904c5b))
+
 ## [1.3.116](https://github.com/bnoon-ksa/landing-page/compare/v1.3.115...v1.3.116) (2026-02-25)
 
 ### Bug Fixes
