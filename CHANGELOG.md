@@ -1,3 +1,9 @@
+## [1.3.130](https://github.com/bnoon-ksa/landing-page/compare/v1.3.129...v1.3.130) (2026-02-25)
+
+### Bug Fixes
+
+* form feild ([#211](https://github.com/bnoon-ksa/landing-page/issues/211)) ([de16a11](https://github.com/bnoon-ksa/landing-page/commit/de16a1164e4415a42b159a8db25276bd514f1918))
+
 ## [1.3.129](https://github.com/bnoon-ksa/landing-page/compare/v1.3.128...v1.3.129) (2026-02-25)
 
 ### Bug Fixes
