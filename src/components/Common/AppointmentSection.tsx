@@ -1335,7 +1335,7 @@ const AppointmentSection = () => {
                     overflowY: "auto",
                   }}
                 >
-                  {['Google', 'Search', 'Instagram', 'Snapchat', 'Facebook', 'Tiktok', 'Referred by a Friend', 'Referred by a Doctor', 'Newspaper', 'Magazine', 'Event', 'Lecture', 'Billboard Advertisement', 'Radio', 'TV', 'Word of Mouth ', 'Other'].map((item) => (
+                  {['Google Search', 'Instagram', 'Snapchat', 'Facebook', 'Tiktok', 'Referred by a Friend', 'Referred by a Doctor', 'Newspaper', 'Magazine', 'Event', 'Lecture', 'Billboard Advertisement', 'Radio', 'TV', 'Word of Mouth ', 'Other'].map((item) => (
                     <li
                       key={item}
                       onClick={() => {
