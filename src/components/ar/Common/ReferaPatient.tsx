@@ -278,7 +278,7 @@ setSubmitted(false);
           </div>
 
           {/* معلومات الطبيب المحوّل */}
-          <h5 className="mb-3 text-size">معلومات الطبيب المحوّل</h5>
+          <h5 className="mb-3 text-size title-size">معلومات الطبيب المحوّل</h5>
           <div className="card p-3 mb-3">
             <div className="mb-3">
               <label className="form-label text-size">اسم الطبيب *</label>
@@ -353,7 +353,7 @@ setSubmitted(false);
           </div>
 
           {/* معلومات المريض */}
-          <h5 className="mb-3 text-size">معلومات المريض</h5>
+          <h5 className="mb-3 text-size title-size">معلومات المريض</h5>
           <div className="card p-3 mb-3">
             <div className="mb-3">
               <label className="form-label text-size">اسم المريض/المريضة *</label>
@@ -406,7 +406,7 @@ setSubmitted(false);
           </div>
 
           {/* السبب الطبي للتحويل */}
-          <h5 className="mb-3 text-size" >السبب الطبي للتحويل</h5>
+          <h5 className="mb-3 text-size title-size" >السبب الطبي للتحويل</h5>
           <div className="card p-3 mb-3">
             <div className="row">
               {[
