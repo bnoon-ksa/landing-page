@@ -238,7 +238,7 @@ setSubmitted(false);
         </div>
 
         {/* FORM START */}
-        <div className="d-flex justify-content-center align-items-center mb-5 pbt-140">
+        <div className="">
   {!showThankYou && (
         <form
           onSubmit={handleSubmit}
