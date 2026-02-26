@@ -1,3 +1,9 @@
+## [1.3.133](https://github.com/bnoon-ksa/landing-page/compare/v1.3.132...v1.3.133) (2026-02-26)
+
+### Bug Fixes
+
+* text space ([#215](https://github.com/bnoon-ksa/landing-page/issues/215)) ([4925767](https://github.com/bnoon-ksa/landing-page/commit/4925767dfdf1f31f85a0aafdacb0a05e459ededa))
+
 ## [1.3.132](https://github.com/bnoon-ksa/landing-page/compare/v1.3.131...v1.3.132) (2026-02-25)
 
 ### Bug Fixes
