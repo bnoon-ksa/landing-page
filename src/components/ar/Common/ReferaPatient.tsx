@@ -222,8 +222,8 @@ setSubmitted(false);
               </div>
             </div>
 
-           
-              <p className="text-center text-space">
+            <div className="left">
+              <p className="text-center">
                 نشكركم على ثقتكم بنا وتحويل المريض لغرض الخصوبة. يجب تعبئة هذه الاستمارة من
                 قبل ممارس طبي فقط.
                 <br />
@@ -233,7 +233,7 @@ setSubmitted(false);
                 في حال رغبتك بالتحدث إلى فريقنا الطبي قبل تحويل المريض، يرجى الاتصال بالرقم
                 920010022.
               </p>
-            
+            </div>
           </div>
         </div>
 
