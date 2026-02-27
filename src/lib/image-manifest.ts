@@ -198,7 +198,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAgCdASoUAAMAPzmGulQ0qSWjMAgCkCcJZQC/OC0kAAD+2cE4IgV8jlftBAV4m7DvxcJw+AA=',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/aboutus-banner-ar-576x92-15kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/aboutus-banner-ar-768x123-23kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/aboutus-banner-ar-992x159-33kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/aboutus-banner-ar-1200x192-42kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/aboutus-banner-ar-1400x224-52kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/aboutus-banner-ar-1470x235-54kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/aboutus-ar-banner.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/aboutus-ar-banner.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/aboutus-ar-banner.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/aboutus-ar-banner.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/aboutus-ar-banner.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/aboutus-ar-banner.jpg 1470w',
     bannerPosition: '85%'
     },
   'clinics-banner-ar': {
@@ -211,7 +211,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAAAQAwCdASoUAAQAPzmGu1Q0qSYjMAgCkCcJQBOmUACOOAAA/utWkCgwxWIMA2HzGleAbo2n9d6GAAAA',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/clinics-banner-ar-576x129-26kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/clinics-banner-ar-768x172-42kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/clinics-banner-ar-992x222-66kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/clinics-banner-ar-1200x269-91kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/clinics-banner-ar-1400x313-117kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/clinics-banner-ar-1470x329-120kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/clinics-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/clinics-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/clinics-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/clinics-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/clinics-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/clinics-banner-ar.jpg 1470w',
     bannerPosition: '85%'
     },
   'experts-banner-ar': {
@@ -224,7 +224,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAgCdASoUAAQAPzmGuVO/qSWisAgD8CcJZwCw7C0kAAD+5OnVFu59StOiu7AA',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/experts-banner-ar-576x129-16kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/experts-banner-ar-768x172-24kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/experts-banner-ar-992x222-34kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/experts-banner-ar-1200x269-45kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/experts-banner-ar-1400x313-56kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/experts-banner-ar-1470x329-56kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/experts-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/experts-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/experts-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/experts-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/experts-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/experts-banner-ar.jpg 1470w',
    bannerPosition: '85%'
     },
   'contact-us-banner-ar': {
@@ -237,7 +237,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAgCdASoUAAQAPzmGuVOvKSWisAgB4CcJZwC7ADBsAAD+q73yby7nZvfCuLCVOkOFXwAA',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/contact-us-banner-ar-576x129-22kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/contact-us-banner-ar-768x172-33kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/contact-us-banner-ar-992x222-47kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/contact-us-banner-ar-1200x269-62kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/contact-us-banner-ar-1400x313-76kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/contact-us-banner-ar-1470x329-77kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/contactus-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/contactus-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/contactus-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/contactus-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/contactus-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/contactus-banner-ar.jpg 1470w',
   bannerPosition: '85%'
   
     },
@@ -251,7 +251,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAgCdASoUAAQAPzmGuVO/qSWisAgD8CcJZwAAeyAA/ujD5NJ1O0TrRBL3J+iMAAA=',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/feedback-banner-ar-576x129-18kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/feedback-banner-ar-768x172-28kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/feedback-banner-ar-992x222-40kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/feedback-banner-ar-1200x269-52kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/feedback-banner-ar-1400x313-65kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/feedback-banner-ar-1470x329-65kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/feedback-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/feedback-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/feedback-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/feedback-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/feedback-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/feedback-banner-ar.jpg 1470w',
   bannerPosition: '85%'
     },
   'fertility-guide-banner-ar': {
@@ -264,7 +264,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAgCdASoUAAQAPzmGulQvKSWjMAgB4CcJZQC06C0kAAD+kz3Kj3EaGdC41MB01CzDNz3oFFeAAA==',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-guide-banner-ar-576x129-15kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-guide-banner-ar-768x172-22kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-guide-banner-ar-992x222-32kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-guide-banner-ar-1200x269-42kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-guide-banner-ar-1400x313-51kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-guide-banner-ar-1470x329-51kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/fertility-guid-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/fertility-guid-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/fertility-guid-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/fertility-guid-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/fertility-guid-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/fertility-guid-banner-ar.jpg 1470w',
     bannerPosition: '85%'
     },
   'join-team-banner-ar': {
@@ -277,7 +277,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAAAwAwCdASoUAAQAPzmEuVOvKKWisAgB4CcJZwDG9BtkH9/gAPVBvjIfdAEMPv8ihQAAAA==',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/join-team-banner-ar-576x129-18kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/join-team-banner-ar-768x172-25kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/join-team-banner-ar-992x222-36kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/join-team-banner-ar-1200x269-48kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/join-team-banner-ar-1400x313-60kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/join-team-banner-ar-1470x329-60kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/join-our-team-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/join-our-team-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/join-our-team-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/join-our-team-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/join-our-team-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/join-our-team-ar.jpg 1470w',
   bannerPosition: '85%'
     },
   'bg-doctors': {
@@ -472,7 +472,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABQAwCdASoUAAQAPzmGuVOvKSWisAgB4CcJZQCw7BiunVN0AAD90hGepHDK5h0nN+Tm0RWE/kVyGdj3B1pEEAAA',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatments-banner-ar-576x129-18kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatments-banner-ar-768x172-26kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatments-banner-ar-992x222-38kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatments-banner-ar-1200x269-51kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatments-banner-ar-1400x313-64kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatments-banner-ar-1470x329-64kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/treatments-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/treatments-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/treatments-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/treatments-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/treatments-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/treatments-banner-ar.jpg 1470w',
     bannerPosition: '85%'
     },
   'visit-banner': {
@@ -497,7 +497,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACQAwCdASoUAAQAPzmGuVOvKSWisAgB4CcJZQAAXn62TiNFEjLgAMxDr7EaGMWEkTsts/jcSWlIiWPbJ2wv6RLfl4AAAA==',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-banner-ar-576x129-22kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-banner-ar-768x172-32kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-banner-ar-992x222-47kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-banner-ar-1200x269-62kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-banner-ar-1400x313-77kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-banner-ar-1470x329-79kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/visit-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/visit-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/visit-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/visit-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/visit-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/visit-banner-ar.jpg 1470w',
   bannerPosition: '85%'
     },
   'success-banner': {
@@ -522,7 +522,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAwCdASoUAAQAPzmGuVOvKSWisAgB4CcJZQCdABO/gd+pgAD+jhwxGeVUACOqi0FlJ2Hom6Rx2W7pQnm8QlPZm9OQZ7uHjdK+AAAA',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/success-banner-ar-576x129-24kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/success-banner-ar-768x172-37kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/success-banner-ar-992x222-58kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/success-banner-ar-1200x269-78kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/success-banner-ar-1400x313-99kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/success-banner-ar-1470x329-102kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/success-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/success-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/success-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/success-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/success-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/success-banner-ar.jpg 1470w',
   bannerPosition: '85%'
     },
   'telemedicine-banner': {
@@ -547,7 +547,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAwCdASoUAAQAPzmGulQvKSWjMAgB4CcJZwAAWq0ZAcIAAP6OJbSoZQlE+N0yYDT14W86TxSeYNn+9dyb8AAA',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/telemedicine-banner-ar-576x129-20kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/telemedicine-banner-ar-768x172-30kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/telemedicine-banner-ar-992x222-43kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/telemedicine-banner-ar-1200x269-56kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/telemedicine-banner-ar-1400x313-69kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/telemedicine-banner-ar-1470x329-66kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/telemidicine-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/telemidicine-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/telemidicine-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/telemidicine-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/telemidicine-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/telemidicine-ar.jpg 1470w',
   },
   'request-appointment-banner': {
     src: '/images/request-an-appointment.jpg',
@@ -571,7 +571,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoUAAQAPzmGuVOvKSWisAgB4CcJYwCdACPgCaP6oAAA/scYw5MMv33vvTXAPdVEhsXYWxHHPGxWwQFhhEYgAA==',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/request-appointment-banner-ar-576x129-24kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/request-appointment-banner-ar-768x172-36kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/request-appointment-banner-ar-992x222-54kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/request-appointment-banner-ar-1200x269-72kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/request-appointment-banner-ar-1400x313-91kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/request-appointment-banner-ar-1470x329-93kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/request-an-appointment-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/request-an-appointment-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/request-an-appointment-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/request-an-appointment-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/request-an-appointment-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/request-an-appointment-ar.jpg 1470w',
   bannerPosition: '85%'
   
     },
@@ -609,7 +609,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABQAwCdASoUAAQAPzmEuVOvKKWisAgB4CcJZwAAV9/XkuZwAADOCJjwzn4cdVIWcA2V1VQfodO3604UnEQAAA==',
     category: 'banner',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/waad-bnoon-banner-ar-576x129-16kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/waad-bnoon-banner-ar-768x172-23kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/waad-bnoon-banner-ar-992x222-32kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/waad-bnoon-banner-ar-1200x269-41kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/waad-bnoon-banner-ar-1400x313-50kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/waad-bnoon-banner-ar-1470x329-52kb.webp 1470w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/waad-bnoon-banner-ar.png 576w, https://bnoon-website.b-cdn.net/images/banner/ar/waad-bnoon-banner-ar.png 768w, https://bnoon-website.b-cdn.net/images/banner/ar/waad-bnoon-banner-ar.png 992w, https://bnoon-website.b-cdn.net/images/banner/ar/waad-bnoon-banner-ar.png 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/waad-bnoon-banner-ar.png 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/waad-bnoon-banner-ar.png 1470w',
   },
   'static-banner-en': {
     src: '/images/static-banner-en.jpeg',
@@ -633,7 +633,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAACwAgCdASoUAAQAPzmGuVOvKSWisAgB4CcJZQAAeyAA/uSWNQ0Wu/CdnmsNjcU0svDxIAAA',
     category: 'campaign',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/static-banner-ar-576x129-11kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/static-banner-ar-768x172-17kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/static-banner-ar-992x222-25kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/static-banner-ar-1200x269-34kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/static-banner-ar-1400x314-44kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/static-banner-ar-2941x659-158kb.webp 2941w',
+      'https://bnoon-website.b-cdn.net/images/banner/ar/static-banner-ar.jpg 576w, https://bnoon-website.b-cdn.net/images/banner/ar/static-banner-ar.jpg 768w, https://bnoon-website.b-cdn.net/images/banner/ar/static-banner-ar.jpg 992w, https://bnoon-website.b-cdn.net/images/banner/ar/static-banner-ar.jpg 1200w, https://bnoon-website.b-cdn.net/images/banner/ar/static-banner-ar.jpg 1400w, https://bnoon-website.b-cdn.net/images/banner/ar/static-banner-ar.jpg 2941w',
   },
   'doctor-grid-1': {
     src: '/images/doctors/1.jpg',
