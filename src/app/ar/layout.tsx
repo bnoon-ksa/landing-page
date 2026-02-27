@@ -45,11 +45,11 @@ export default function ArabicLayout({ children }: { children: React.ReactNode }
       <head>
         <link
           rel="stylesheet"
-          href="https://bnoon-website.b-cdn.net/assets/arabic.css"
+          href="https://bnoon-website.b-cdn.net/assets/css/arabic.css"
         />
         <link
           rel="stylesheet"
-          href="https://bnoon-website.b-cdn.net/assets/arabic-responsive.css"
+          href="https://bnoon-website.b-cdn.net/assets/css/arabic-responsive.css"
         />
       </head>
       <div className={`${cairo.variable} arabic`}>
