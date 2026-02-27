@@ -65,7 +65,7 @@ export default function OptimizedPageBanner({
 
     return (
       <div
-        className={className ?? 'page-banner-area container-fluid'}
+        className={className ?? 'page-banner-area'}
         style={{ position: 'relative', overflow: 'hidden', ...style }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -77,7 +77,6 @@ export default function OptimizedPageBanner({
           decoding="async"
           loading="eager"
           style={{
-            position: 'absolute',
             inset: 0,
             width: '100%',
             height: '100%',
