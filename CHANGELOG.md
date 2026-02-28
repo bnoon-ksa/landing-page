@@ -1,3 +1,9 @@
+## [1.3.148](https://github.com/bnoon-ksa/landing-page/compare/v1.3.147...v1.3.148) (2026-02-28)
+
+### Bug Fixes
+
+* cdn url ([#230](https://github.com/bnoon-ksa/landing-page/issues/230)) ([4ea2705](https://github.com/bnoon-ksa/landing-page/commit/4ea270555ceb0d1774cd017c2c427b2216a3c09f))
+
 ## [1.3.147](https://github.com/bnoon-ksa/landing-page/compare/v1.3.146...v1.3.147) (2026-02-28)
 
 ### Bug Fixes
