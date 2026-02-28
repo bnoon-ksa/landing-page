@@ -350,7 +350,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRrQAAABXRUJQVlA4WAoAAAAQAAAAEwAAFAAAQUxQSFAAAAAFTyAQIPjfsuYhIhIXGNW2reS99Qt4ACWAB9ACmgAq/Ark5k6ZR/R/At7yzA19y310EVzH1gSwzmPtwdA0WoMqBqWA01pJYJVkBoZYEhT011ZQOCA+AAAAEAMAnQEqFAAVAD8xhLJTrqiqIrAMAdAmCWcAyFwqOXu+AP7hn/AMD/7VkFlGZZJBzJb+gGXog3QdOFZfAAA=',
     category: 'about',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-doc-517x547-77kb.webp 517w',
+      'https://bnoon-website.b-cdn.net/images/about/fertility-doc.avif 517w',
   },
   ivf: {
     src: '/images/ivf.jpg',
@@ -1365,7 +1365,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoUAA4APzmGuVOvKSWisAgB4CcJZACdLwABYhKXsSjFSBzgAP5V2n2a1IUvMCBetqCzpcj60Kv+NnZ72HdVu9SPQ4VVOpJ3Nj+7C5u0zi5YEDseYAA=',
     category: 'location',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/location-riyadh-570x396-72kb.webp 570w',
+      'https://bnoon-website.b-cdn.net/images/clinics/bnoon-riyadh.avif 570w',
   },
   'location-north-riyadh': {
     src: '/images/locations/bnoon-north-riiyadh.avif',
@@ -1377,7 +1377,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQAwCdASoUABAAPzmEuVOvKKWisAgB4CcJYgCdACIfJDP+WoJXMUAA8cWgR9bDQ8tnX9IeNcVLkYNHwI+3BwE8CSLUD23pWCS0sZ6qXV6VvYmSz9zpm2xUaAA=',
     category: 'location',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/location-north-riyadh-560x456-81kb.webp 560w',
+      'https://bnoon-website.b-cdn.net/images/clinics/bnoon-north-riiyadh.avif 560w',
   },
   'location-jeddah': {
     src: '/images/locations/bnoon-jeddah.avif',
@@ -1389,7 +1389,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADwAwCdASoUAA8APzmEuVOvKKWisAgB4CcJZgCdABikmoOp1ca8dElgAP7Dmai4L/SSCMpXyUQv63s+NEDXrwwsnQ5h+8GrAATcr5c6SOqNSF5TaoXzYZl7Gy5BRh9HoHgIWAUigA69IHu2KIAAAA==',
     category: 'location',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/location-jeddah-578x426-87kb.webp 578w',
+      'https://bnoon-website.b-cdn.net/images/clinics/bnoon-jeddah.avif 578w',
   },
   'location-alahsa': {
     src: '/images/locations/bnoon-alahsa.jpg',
@@ -1401,7 +1401,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAwCdASoUAA0APzmGulQvKSWjMAgB4CcJQBfJA113ZUcAAPZ8yn92/Yx51S3pZgoYLFE8Ybs+NZ1O7j6TBrABruw+w3WkCobw41JWbtwAAA==',
     category: 'location',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/location-alahsa-576x387-104kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/location-alahsa-684x460-127kb.webp 684w',
+      'https://bnoon-website.b-cdn.net/images/clinics/bnoon-alahsa.jpg 576w, https://bnoon-website.b-cdn.net/images/clinics/bnoon-alahsa.jpg 684w',
   },
   'bnoon-logo': {
     src: '/images/bnoon-logo.avif',
@@ -1473,7 +1473,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACwBACdASoUABUAPzmUwVmvKicjqAgB4CcJZQAAHFb/Ib3eAnpFAzbOXaSsG6cAAP6Sm3cQKx183dzW5L0+9H0UvxHz8SgpEezbCFOOGe48p76qQbFz5u+pr650eXP5gWOhm81tCzX+O3OgApnRnDUozVW8Jkk4VsiBma0gHvmELudXBpsgHYIAAAA=',
     category: 'about',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/who-we-are-488x511-63kb.webp 488w',
+      'https://bnoon-website.b-cdn.net/images/about/who-we-are.avif 488w',
   },
   'commitment-saudization': {
     src: '/images/commitment-saudization.avif',
@@ -1629,7 +1629,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRuIBAABXRUJQVlA4WAoAAAAQAAAAEwAAEQAAQUxQSPsAAAABkHLbtqq3E1r73Hs/slFxHJURxUmZK5m5Vay4mpmZNZNrbUd/ADMzM/cUvhcRE5BkwULKpRTIlilYBFA+ZOREID9x66G1HShDGJVnfvhvf7cEy1DguH//8uKn/55OLJMPDHnnj2e0bfvhFyoJ/ynHCvcFhHTO3/cgIlCe9f5pOIl9/rU30VCyxNwffraC/s/8RhMmy6VijFU33S+ffPfdd8dSIZqUQ4x96b/9t5+vxRQtpCQi/U/feX5xfQPd5vVEUk4oT7GxuTrQ67E/GEwQAqKAHEv9lW8kUd5itMSoL/5pItHKSUKEyYenxahiOWQggJCwDMxAKZcEAABWUDggwAAAAFAFAJ0BKhQAEgA/OZTBWa8qJyOoCAHgJwlsAHcDSAYVILWlKtLw5JKmUmk4HUW5OBslAAD+wkcwN1SInN0FoLW6e/NAUxju7PaU74oLCmI3UE0dHK360SW+Z+DWwcb/lZaMaLP/tGrn5Jgsuo/gaspPv5TiQF8EnIvEFasFNxECkWkPAjSgBsWXh+stktQuK07tsDb96DSx2kXuCodnGlRZ0bBi2v8U7zsWDrRm1JCtFthdRprqe2WHd9GpUQgAAA==',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/bnoon-symbol-24x22-1kb.webp 24w',
+      'https://bnoon-website.b-cdn.net/images/icons/bnoon-symbol.avif 24w',
   },
   'icon-fb': {
     src: '/images/icons/fb-icon.avif',
@@ -1931,7 +1931,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRrYBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSEgBAAABkGzbtmk78+z9XmzbScmupuUDbNu2XUfZtsup2SXbNg/2XmvN4CciIjxcGdQYtuXWh/d3D4yshVLnHHypG3DFSFWj3R7tnPeuBMtzhihBSGPY5BPvsZKSqynl3Zt3v4SbUYJBhaZG5cNJzRo22saCU1H7BqOaxO894T3mMOXN+sMoDBq425Ut7TX+NEPk1D1UiZpzHdA70KjCM/dowWLBDcAsZqQqv30WiZp/5SpgsnwNVBP7IVH0RbdWNZKSmp1anWBQkecMgXdrIXE+QeWzFNWvh/8/a9uqiUPNNj1eMyrPj2JmLN6ki4Dx2Qc1ZlxS7xZzi4GrgSmMYsGetMREZiH+4nJgMlPTnPPhsZEx/uYKYCpFf/NoWVcmqbBVNeVqYDxT4dGqcElpSenk58b1wGzKowVlkhIg8SVoMOXKDGDM7WXNUM4DVlA4IEgAAACwAwCdASoUABQAPx10rlOtJqQit+gBoCOJaQAAe1Q6DNIx4gFxAAD+yfR78MHaD3QFNZdyQkeOC+Kt+DCkbi5BsT8yRZYAAAA=',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fb-icon-26x26-1kb.webp 26w',
+      'https://bnoon-website.b-cdn.net/images/icons/fb-icon.avif 26w',
   },
   'linkedin-icon': {
     src: '/images/icons/linkdin-icon.avif',
@@ -1943,7 +1943,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRtIBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSFsBAAABkHPbtrG94s9zny+2bdtGZ9tmZyeV1TrpjM62bdt28uDinLuDiEgVZs5MBQduf8Xybue4ohSqUGXLHKqBd+Eh4j2ejQvDjCBLZpqfIrHC3iUGWJOVlKJFYP0TIp6ttxprSdEAa82c1ufg2FkW1hhPhS4CDyrRDMTCzMZZ3C/eE4axc9Z7ePz3nGLkWjDLuX0fv2w5/H7toksQh93Xwfy7Ga07TvkqE+U+CuPffoTIr5a0/Wgu6ri8LE2CFn4DwbeGtPUElb6P6TRca+gzYPnRiLadocqvsZSGi3NvV8Hx71a0/WzmKs+xlEZ4hx3dEPmfTWnDcSr1FAtoGCcYmvs40mhsnYNXmvd8jg015ya4VIDaRGJ/R+Li2On0d2RkKGWiiWDNIt7DeytYRhkqE02JoY2z1rFDOo8CpTJnDrofMoB4gC/3C4IwIFJZKH/nlVc+vb+1vld+ygiCAABWUDggUAAAAPADAJ0BKhQAFAA/HXSuU60mpCK36AGgI4lpAACI7O4cE0AIi56OY0AA/uIzT6rLJMk5WA7XGtfPT1+BGHss198cBN5dI7dh4igbSNnTgAAA',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/linkedin-icon-26x26-1kb.webp 26w',
+      'https://bnoon-website.b-cdn.net/images/icons/linkdin-icon.avif 26w',
   },
   'instagram-icon': {
     src: '/images/icons/instagram-icon.avif',
@@ -1955,7 +1955,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRuYBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSG0BAAABkCvbtmlbc+OeG9o2Ij3btm3btm3btm0ztW1vrT3XGr8RERGkUYCiOx746PLrYx2jKDhAmmaQ2eUplGJfKTxtpRuGppO+GML2pVLs/GeeQZqu0TK4PpTv+6zg2phLJvXGXzwb2KBO/Tr16w9/rVzZkeIfMR4ndl2/euu2lbt6pj4FLkR2gkDHwZAAY/3m/j0h0H4flFVxJ5wZOXkrlizdW9NV2PIB+FHyACZmHDmavgg7K/xTeGSz+lnsuMw9BxxMx5Gy/5X72WL+mX/ayboPXE51j1b6J+TnZ+BfJfejbcUXj0p1x54KFvjhTsi/ZQ/ga5uMxDa/sL2+I7CiDVw0nwwff/+CMbID/qNp1EPgTtTsU+evXj9zamzyfeBKCLWUDm5XL16sqKh4yYZ34LkNKYgmQbD89fXb1+8/IDyMJl3TaaIFjwFACljDyTTIMLUWFwUgFUu+1oBMXSfSAhTeZO3DL5/vr2wQRoZBBABWUDggUgAAAJADAJ0BKhQAFAA/HXSvU60mpCK36AGgI4lpAACrW4O34K1SPwAA/u+T5+RQLrBUf+wdbfZOyZx/yylkHfHGD2FsGUBynujL2jhRqSK/MZMAAAA=',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/instagram-icon-26x26-1kb.webp 26w',
+      'https://bnoon-website.b-cdn.net/images/icons/instagram-icon.avif 26w',
   },
   'x-icon': {
     src: '/images/icons/x-icon.avif',
@@ -1967,7 +1967,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRsoBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSEcBAAABkKttt2k7Y+Kck6R2bieVbdtJadu2bdtdKtu2nSyMMeb4g5uIiPDeVVGtDrue5vxsf4/6VOkdhehi99swQJPhXnfvIoUQZgqYDUBZKM8h5yppLtRgBk2aSsZcCtQlJfn+5RMSROWzJPSgOjdQYH3rQTtRpF8jH6DA5Zp9wYLXPS+0vAobthSafqPbDnBiHB95rg2mjAdEchx8CrFkGLdjR4MpmZYijGdqapbwfsjtpoeRiYgkMdNUIMPKhre6fUD5//dzqGqBB8OHbN4+AaWq4OkxsBmy9vvR4fzIUyiV9UBflGLFgLXA1S5XunxIzOha9wZ+Yv9cmGD3oLab8Rs36lBXKL6XKqr48PkXF+hNVTQPoiy5ssHyEgupwrm4uETKRQ2cmc4jH513odttGNiAdKlHoEBVMUSq123Hozx/dqBHLarhvAMAVlA4IFwAAAAQBACdASoUABQAPyF2slOtJySit+gBoCQJaQAAefpaHl6NNxA3fRawAAD+m9dDH6Um+X9iIcHtsVovI9ACPYUfme10KXrjRouqiGbwf25X/BI5t7c74M+DQAAAAA==',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/x-icon-26x26-1kb.webp 26w',
+      'https://bnoon-website.b-cdn.net/images/icons/x-icon.avif 26w',
   },
   ivm: {
     src: '/images/ivm.jpg',
