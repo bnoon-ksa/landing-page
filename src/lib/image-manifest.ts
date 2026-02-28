@@ -1041,7 +1041,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABQAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJaQAAXE8GwuktwAD+5x8gJ8pgdk3SNaTO/6XGSTlSJcV0b4AAAA==',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-ovulation-induction-388x212-8kb.webp 388w',
+      'https://bnoon-website.b-cdn.net/images/treatments/ovulation-induction.jpg 388w',
   },
   'treatment-intrauterine-insemination': {
     src: '/images/treatments/intrauterine-insemination.jpg',
@@ -1053,7 +1053,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAQAwCdASoUAAsAPzmGulOvKSWisAgB4CcJaQAAWk5QghAA/ucgKPAm9JYHI2kBIjS6Efbck2MAAA==',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-intrauterine-insemination-386x222-10kb.webp 386w',
+      'https://bnoon-website.b-cdn.net/images/treatments/intrauterine-insemination.jpg 386w',
   },
   'treatment-swim-up': {
     src: '/images/treatments/swim-up.jpg',
@@ -1065,7 +1065,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAAAwAwCdASoUAAwAPzmGulQvKSWjMAgB4CcJaQAAW+v1yB7gAP7nGeI9VAAESyWR8mtiQAAA',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-swim-up-388x224-9kb.webp 388w',
+      'https://bnoon-website.b-cdn.net/images/treatments/swim-up.jpg 388w',
   },
   'treatment-ivf': {
     src: '/images/treatments/ivf.jpg',
@@ -1077,7 +1077,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABwAwCdASoUAAwAPzmEuVOvKKWisAgB4CcJaQAAXGul4VIPlgAA/ucgWghQcNc4B4ycaPghSDs0p53yH+UAAAAA',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-ivf-388x236-10kb.webp 388w',
+      'https://bnoon-website.b-cdn.net/images/treatments/ivf.jpg 388w',
   },
   'treatment-ivm': {
     src: '/images/treatments/ivm.jpg',
@@ -1089,7 +1089,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAwCdASoUAAwAPzmGuVQvKSWjMAgB4CcJaQAAQl2znqgAAP7nO8K0KPQmLc16HOiCAXrgq/vD+c00bq+AAAAA',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-ivm-362x211-10kb.webp 362w',
+      'https://bnoon-website.b-cdn.net/images/treatments/ivm-treatment.jpg 362w',
   },
   'treatment-sperm-freezing': {
     src: '/images/treatments/sperm-freezing.jpg',
@@ -1101,7 +1101,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABwAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJaQAAWsfc6Oa4PAAA/ucb8OzQwWYeCVwdGB7cN3aKzUdnieeAAAAA',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-sperm-freezing-394x224-8kb.webp 394w',
+      'https://bnoon-website.b-cdn.net/images/treatments/sperm-freezing.jpg 394w',
   },
   'treatment-egg-freezing': {
     src: '/images/treatments/egg-freezing.jpg',
@@ -1113,7 +1113,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAgCdASoUAAwAPzmEuVOvKKWisAgB4CcJaQAAeyAA/u2HAbb9iKg8r6K7cNWZubSZ+HzVJTZInDTvT4AAAA==',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-egg-freezing-389x238-8kb.webp 389w',
+      'https://bnoon-website.b-cdn.net/images/treatments/egg-freezing.jpg 389w',
   },
   'treatment-pgs': {
     src: '/images/treatments/pgs.jpg',
@@ -1125,7 +1125,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABQAwCdASoUAAsAPzmGulQvKSWjMAgB4CcJaQAAUqvcd+L4AAD+5z8ljcIQGSQGZ3pDH4oEN1LwTCmcM9ToAAAA',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-pgs-403x224-13kb.webp 403w',
+      'https://bnoon-website.b-cdn.net/images/treatments/pgs.jpg 403w',
   },
   'treatment-recurrent-miscarriage': {
     src: '/images/treatments/recurrent-miscarriage.jpg',
@@ -1137,7 +1137,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABQAwCdASoUAAwAPzmGulQvKSWjMAgB4CcJaQAAWlpb0wCkAAD+5zhf4sCI8LOQJdOFOYGsBz4v3UtAAAA=',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-recurrent-miscarriage-382x232-14kb.webp 382w',
+      'https://bnoon-website.b-cdn.net/images/treatments/recurrent-miscarriage.jpg 382w',
   },
   'treatment-fertility-counselling': {
     src: '/images/treatments/fertility-counselling.jpg',
@@ -1149,7 +1149,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJZwAAQ9iCj57YAAD+5z4dKHWHRbfdqgfSf7uyRqco5VbefXTDGBeCNo32obdlc4D+RXZ3effg6RoJiEGyC5urtAAAAA==',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-fertility-counselling-418x233-7kb.webp 418w',
+      'https://bnoon-website.b-cdn.net/images/treatments/fertility-counselling.jpg 418w',
   },
   'treatment-antenatal-care': {
     src: '/images/treatments/antenatal-care-deliveries.jpg',
@@ -1161,7 +1161,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAAAwAwCdASoUAAgAPzmGuVOvKSWisAgB4CcJaQAAWlW8t5gAAP7nH7hH1JUqN9dr9u+y+AAA',
     category: 'treatment',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/treatment-antenatal-care-427x175-5kb.webp 427w',
+      'https://bnoon-website.b-cdn.net/images/treatments/antenatal-care-deliveries.jpg 427w',
   },
   'fertility-helpful-tips': {
     src: '/images/fertility-guide/Helpful-Tips-for-Fertility.avif',
@@ -1173,7 +1173,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoUAAoAPzmGuVOvKSWisAgB4CcJZwAu/8BrOfvQg51cFqoniAD2JnmVg/3nPv4vMPyeY+dnbgfMJQ26Q9tS2oHssG6SQr9D6cN0l01h/54AhgBm5ek76jKkcAA=',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-helpful-tips-420x201-23kb.webp 420w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/helpful-tips-for-fertility.avif 420w',
   },
   'fertility-foods-boost': {
     src: '/images/fertility-guide/Foods-that-Boost-Fertility.avif',
@@ -1185,7 +1185,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoUAAoAPzmIulQvKSWjMAgB4CcJZQC2yCLBzXMz9wAA/KZz5jjbm8AhqCNTiuBwTfjGaS49/dBi+s+2ClBprAAA',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-foods-boost-420x206-16kb.webp 420w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/foods-that-boost-fertility.avif 420w',
   },
   'fertility-male-infertility': {
     src: '/images/fertility-guide/Causes-of-Male-Infertility.avif',
@@ -1197,7 +1197,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJYwC06Bl1EtSicKrJ49zAAP5hT9/URzvRCX5q84dXdKl7ALBcBsmVrkTYhMfUiWW4XmB1Sf7m3BcjcffP9HxksjhA4AQkaIAAAA==',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-male-infertility-439x241-25kb.webp 439w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/causes-of-male-infertility.avif 439w',
   },
   'fertility-female-infertility': {
     src: '/images/fertility-guide/Causes-of-Female-Infertility.avif',
@@ -1209,7 +1209,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQAwCdASoUAAoAPzmGuVOvKSWisAgB4CcJZQC+SBuK+97ZYsAuDpQA/PqeAQJ5iQ2W4++YNxwHIA5VMNEnac9z5zejZhSl5F+jqPzMal71PEKfVQAAAA==',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-female-infertility-420x214-21kb.webp 420w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/causes-of-female-infertility.avif 420w',
   },
   'fertility-biologic-clock': {
     src: '/images/fertility-guide/Womans-Biologic-Clock.avif',
@@ -1221,7 +1221,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoUAAwAPzmGuVOvKSWisAgB4CcJYgC7ABmRv6WlFmD0s5J8AAD74ONZFUphya907FNgM98o6cH4YzrpyrEpjkoHI9FfgHQ5fBzHbG1bkDe4At+zLz3/56hi3uHHAPxi55LsAA==',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-biologic-clock-431x250-41kb.webp 431w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/womans-biologic-clock.avif 431w',
   },
   'fertility-ovulatory-dysfunction': {
     src: '/images/fertility-guide/Ovulatory-Dysfunction.avif',
@@ -1233,7 +1233,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAADwAwCdASoUAAsAPzmGulQvKSWjMAgB4CcJZQAATvrhw+hTwHilG60AAP7nQKampZAjiyld0sur7+6Sqj9lryW3UxvCJxtoSLEz5stb3Y9C1X6tJWIvEAAA',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-ovulatory-dysfunction-431x232-13kb.webp 431w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/ovulatory-dysfunction.avif 431w',
   },
   'fertility-endometriosis': {
     src: '/images/fertility-guide/Endometriosis.avif',
@@ -1245,7 +1245,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoUAAsAPzmGuVOvKSWisAgB4CcJQBAAAKoKwoWUu9slwAD+Ake2uPs4PmX8o7cQkdy7E3hJDR83qQ1FV22pITQKO3n2wJxEj9SPLZYLdvlNoF/umrozIAAA',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-endometriosis-425x232-24kb.webp 425w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/endometriosis.avif 425w',
   },
   'fertility-ovarian-cysts': {
     src: '/images/fertility-guide/Ovarian-Cysts.avif',
@@ -1257,7 +1257,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoUAAwAPzmGulOvKSWisAgB4CcJQBdgBFmjmHr+b6dlaAD+xyop5KmWiYqBfj0TkNkk1/2zaTtKCj+zcP5fhn3sS5bJPktLz9MMRBIBv2QWNijYjcZFXkcxjCWFIQDwAAA=',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-ovarian-cysts-419x250-20kb.webp 419w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/ovarian-cysts.avif 419w',
   },
   'fertility-uterine-fibroids': {
     src: '/images/fertility-guide/Uterine-Fibroids-Infertility.avif',
@@ -1269,7 +1269,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQAwCdASoUAA0APzmEuVOvKKWisAgB4CcJYwCo9B03fJL4BStAAM39jSi8oPqEGzjTYyOP2eMdc1U23E3OsAKdCAL0Sgbx7aB4DxPrETgO+jOk93NKNNZ7wRme00c0AriADRfBokvq/2mjQAA=',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-uterine-fibroids-425x270-34kb.webp 425w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/uterine-fibroids-infertility.avif 425w',
   },
   'fertility-recurrent-miscarriage': {
     src: '/images/fertility-guide/Recurrent-Miscarriage.avif',
@@ -1281,7 +1281,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACQAwCdASoUAA0APzmEuVOvKKWisAgB4CcJYwC7ACHct+PXhwwAAPiMQfbo/aAzocCDlFOFlf+i6jLg6GOAAA==',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-recurrent-miscarriage-431x270-27kb.webp 431w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/recurrent-miscarriage.avif 431w',
   },
   'fertility-recurrent-ivf-failure': {
     src: '/images/fertility-guide/Recurrent-IVF-Failure.avif',
@@ -1293,7 +1293,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACQAwCdASoUAAwAPzmGuVOvKSWisAgB4CcJYwCw7A198RqrDigwAP60Dn19ZbG6CD+IkRNJaTyA0en5x2mea/iUlo6oEE6bSTg/a2G09mYKgWfBj9EQPzAdV6OJ7UPyzsAAAA==',
     category: 'fertility-guide',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-recurrent-ivf-failure-419x257-25kb.webp 419w',
+      'https://bnoon-website.b-cdn.net/images/fertilities/recurrent-ivf-failure.avif 419w',
   },
   'visit-first-clinic': {
     src: '/images/visit/First-Clinic-Visit.avif',
@@ -1305,7 +1305,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAABQAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJaQAAPHqGvNQrAAD64Z55PwXveTjFUTPqmaLwngmNgBhAY7wdlTjCGV1GtQF+L/JzK9DKrBa/3dV82ho42QAA',
     category: 'visit',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-first-clinic-466x249-39kb.webp 466w',
+      'https://bnoon-website.b-cdn.net/images/clinic-visit/clinic-visit.avif 466w',
   },
   'visit-out-of-town': {
     src: '/images/visit/Out-of-Town-Patients.avif',
@@ -1317,7 +1317,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAwCdASoUAAsAPzmGulOvKKWisAgB4CcJaQAATE23uAMd4AD9RAP0VQwo6zTULyGqr19kVhbF6t84EREkX4x7iHvT/fd3QLVlwOAA',
     category: 'visit',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-out-of-town-466x249-33kb.webp 466w',
+      'https://bnoon-website.b-cdn.net/images/clinic-visit/town-patients.avif 466w',
   },
   'visit-ivf-monitoring': {
     src: '/images/visit/Causes-of-Male-Infertility.avif',
@@ -1329,7 +1329,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoUAAoAPzmGuVOvKSWisAgB4CcJYwC06Be2AhKOXyBoQYhfAAD98DbKNnz8emrcHj9omv5t6fTv5t+tLdk37e7X9wU9W3InACjK39R8/cC3gnJIU3FaGqefo0QAAA==',
     category: 'visit',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-ivf-monitoring-466x244-26kb.webp 466w',
+      'https://bnoon-website.b-cdn.net/images/clinic-visit/male-infertility.avif 466w',
   },
   'visit-egg-collection': {
     src: '/images/visit/Uterine-Fibroids-Infertility.avif',
@@ -1341,7 +1341,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADwAwCdASoUAAsAPzmEuVOvKKWisAgB4CcJQBOgBBzB7M8OV1gOED4AAMv1YMB8UZogZ8Sulux3g1kqz0sOzDJz5YzdJ2VV+ayYr90g/F7FwNkhqZiHYcdgJzVW/BIRJ8cD2t34AAA=',
     category: 'visit',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-egg-collection-472x269-37kb.webp 472w',
+      'https://bnoon-website.b-cdn.net/images/clinic-visit/fibroids-infertility.avif 472w',
   },
   'visit-embryo-transfer': {
     src: '/images/visit/Helpful-Tips-for-Fertility.avif',
@@ -1353,7 +1353,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwAwCdASoUAA0APzmIuVQvKSWjMAgB4CcJZwAAXdD9UelUD9Ts2AD9/SOM0PujwcQh8JIwVWKA7apWb6Ri9zgWgznJcbYKx/AyKBLrHVGnkofERf8iHD748Q9pR8Ddg5B7dq9sMAA=',
     category: 'visit',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/visit-embryo-transfer-483x313-32kb.webp 483w',
+      'https://bnoon-website.b-cdn.net/images/clinic-visit/tips-for-fertility.avif 483w',
   },
   'location-riyadh': {
     src: '/images/locations/bnoon-riyadh.avif',
