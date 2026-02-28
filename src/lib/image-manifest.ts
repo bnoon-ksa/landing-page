@@ -837,7 +837,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABwBACdASoUABkAPzmIvVavKKYjsBgIAeAnCUAX5wGOzB2Co5aKQOFB/gm4AAD9z2CZD4+rC5bAwPZFWO+6AQ4dGM4RH/TLZkrnTO2v4TNiDt/QY/ZiBhVFtdnxDYZ5BM2eYbCjr49eBD8WSIbPADIAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-abdulaziz-502x626-40kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-abdulaziz.avif 502w',
   },
   'dr-fawad': {
     src: '/images/doctors/dr-fawad.avif',
@@ -849,7 +849,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASoUABkAPzmMwlavKSejqAqp4CcJYwDH5AxI2Euii+ZDj4IJwFbL0fciAAD9z2CYBo0s8QQjUMYSF4Edo2L7I44sf6LJkMJ3whkq7CRX7sSUrB3C8eUj6UdSvw18RI6AAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-fawad-502x626-36kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-fawad.avif 502w',
   },
   'dr-bassam': {
     src: '/images/doctors/dr-bassam.jpg',
@@ -861,7 +861,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABwBACdASoUABkAPzmQvVevKaYjqAqp4CcJZQCqXBDliNyO/wZ5pN/bw+yZoAD9zIVQ/NvSnu+GVJf6kjoMQtVhUVr5pZbR5vFOqNs9+OrSWR3edZoHVkZdU6lsKaoBDZMP0/IV0pYGio/AAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-bassam-502x626-40kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-bassam.jpg 502w',
   },
   'dr-asim': {
     src: '/images/doctors/dr-asim.avif',
@@ -873,7 +873,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoUABkAPzmSv1mvKaajqAgB4CcJZQDA3A8pbrLZwsq2cmbAAP3Nsgp1urfeLAioxnjDG6+kc/CL/yefWTRDLSyRAUDLYG6aRM6RRwAA',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-asim-502x626-31kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-asim.avif 502w',
   },
   'dr-ahmed-bekar': {
     src: '/images/doctors/dr-ahmed-bekar.avif',
@@ -885,7 +885,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASoUABkAPzmOuVWvKiWjMBgIAeAnCWMAsR9VwIXfoPxKFbYaOT9EMQAA/c9VrfMRvGWU/58LdKKQCR9xZ8NU8+V+2pDjoE2EpG9VeSjrRRJGf5ucQ7uTEUfD65dD/9I9j9vp7M+UgAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-ahmed-bekar-502x626-39kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-ahmed-bekar.avif 502w',
   },
   'dr-wajdi': {
     src: '/images/doctors/dr-wajdi.avif',
@@ -897,7 +897,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAACwBACdASoUABkAPzmOwFevKacjqAqp4CcJZQDNhAxbL/SOyoXraJWdlEAgMCQAAP3N9j88JifHTCJn2wFfaya6sbif4nL3Jhh3WSL1ZvYuNJTnUyjxCiJ5rFO8OxYJCL98dI/mBDJ4iaiNCX3EBsAAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-wajdi-502x626-33kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-wajdi.avif 502w',
   },
   'dr-dalia': {
     src: '/images/doctors/dr-dalia.avif',
@@ -909,7 +909,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABQBACdASoUABkAPzmGu1OvKSYisBgMAeAnCWMAAC51VUZlsIgOlOLe9AlIAP3JPQVGf27er8A1rc5TWPrIz0WmPspcq4qLTHKZUELTEKym7iggAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-dalia-502x626-48kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-dalia.avif 502w',
   },
   'dr-haroun': {
     src: '/images/doctors/dr-haroun.avif',
@@ -921,7 +921,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQBACdASoUABkAPzmOwlcvKaejqAqp4CcJYwC8pBDP0zfz5naeMzDnmcOz3z0IAAD9zCNBA1FQ35A5Ar57QB9y1yJ3D4NwV7VV+KarWuQK7O1FKbazn/U3ubelk1nPJpJHBT3GcWAAAA==',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-haroun-502x626-44kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-haroun.avif 502w',
   },
   'dr-moussa': {
     src: '/images/doctors/dr-moussa.avif',
@@ -933,7 +933,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwBACdASoUABkAPzmWwlmvKqcjqAgB4CcJZQC7AA6y8kXAnrsZZHuC9+aOAAD9z1owikyzihigZ0llPA4fcOsRDRGe+ACzRkM39eII+AFAMOJooHtHFCU4xzN0YI4AAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-moussa-502x626-42kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-moussa.avif 502w',
   },
   'dr-maya-albezreh': {
     src: '/images/doctors/dr-maya-albezreh.avif',
@@ -945,7 +945,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAAAwBACdASoUABkAPzmOvFYvKiYjsBgIAeAnCWUAtDQQ3WI9ABV7FyycQAAA/cyCctS9Y0JlSbv19kyY/uPoop7zgDFGcIZhk5lZJXiCJRLm4iAA',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-maya-albezreh-502x626-39kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-maya-albezreh.avif 502w',
   },
   'dr-razan-ghaith': {
     src: '/images/doctors/dr-razan-ghaith.avif',
@@ -957,7 +957,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACwBACdASoUABkAPzmOu1WvKiYjMBgIAeAnCWUAwNwQqWVRJAS3HiLLZkPymy9AAP3M9ewV5PFRdt+/gEe6ZE92uf9WdTl2gsRN5wnY9wOwwQBr1bRzSmA7MEjQOxJFn2jSDcAAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-razan-ghaith-502x626-37kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-razan-ghaith.avif 502w',
   },
   'dr-mazin-bishra': {
     src: '/images/doctors/dr-mazin-bishra.avif',
@@ -969,7 +969,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACQBACdASoUABkAPzGCslOuqKSisAwB0CYJYwDIXCHfglgSxNIkT8ACGVbFC4AA/cj9Xz33I2b4oNLMKwwJ36Lv8FY68e46urU5zj4uGlTkTVhlH17aNTzWjOr4AAAA',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-mazin-bishra-502x626-36kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-mazin-bishra.avif 502w',
   },
   'dr-hussein': {
     src: '/images/doctors/dr-hussein.avif',
@@ -993,7 +993,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBQCdASoUABkAPzmQvlevKaYjqAqp4CcJQBdgAhyxV7JHib/37Kskv65B4suPI6RAAP3M+KB9hcLoBKNX7A9I4q9mn1ckZ1WZ+ltnEvOhZ5jdUgzLzfWIYupnIPdhmDA3psTxRtkOqIfvKU4oBi2bo8adpPj4uvCsBY8AAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-maram-502x626-49kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-maram.avif 502w',
   },
   'dr-rania': {
     src: '/images/doctors/dr-rania.jpg',
@@ -1005,7 +1005,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADwBACdASoUABkAPzWGulOvKSYisBgMAeAmiWUAxNgQ9Sn/FB8s+D6lWZtxtTZFmwAA/cwYA9NLW2T9C0AACR+N4LDAE+WGiQ7pKHiaPzBX07K6wn1kdiqbWMlOmwQmUgQaVwAA',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-rania-502x626-44kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-rania.jpg 502w',
   },
   'dr-nowasser': {
     src: '/images/doctors/dr-nowasser.jpg',
@@ -1017,7 +1017,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQBACdASoUABkAPzmQwFevKaajqAqp4CcJZQDI1BDRbuH9f50MZrEFgo1qn45QAAD9zGSjakQ9eADP6+DZovFtu6PGCADHNWHeWMiWBMvajVNIM2GsCbD6fJ6nAH0bSVQsAA==',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-nowasser-502x626-37kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-nowasser.jpg 502w',
   },
   'dr-median': {
     src: '/images/doctors/dr-median.jpg',
@@ -1029,7 +1029,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoUABkAPzmQvVgvKaYjqAqp4CcJYwDI1A5F7DFfHNwULAAA/c7hAyL1T5dyzeemiXaCUYMeQwutgfK9a3O+4Zx+2UOx5jLORZlskrvqAwLPQfB18Q+1L/gAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/dr-median-502x626-41kb.webp 502w',
+      'https://bnoon-website.b-cdn.net/images/doctors/dr-median.jpg 502w',
   },
   'treatment-ovulation-induction': {
     src: '/images/treatments/ovulation-induction.jpg',
@@ -1485,7 +1485,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoUAA4APzmEuVOvKKWisAgB4CcJYwCw7ywBauB+0xEF9YNaAAD+ZoCDhgua4j+QN0B3h+E2J7C/Xd/i7GiS2xFI90CxWjFFEc+tOA7K/AM1SZwpcSejtyVBQlUL8Ecj+j/w/goaucDdNQrqdIUlgJwjAzGlhtAa8IAAAA==',
     category: 'about',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/commitment-saudization-485x349-62kb.webp 485w',
+      'https://bnoon-website.b-cdn.net/images/join-our-team/commitment-saudization.avif 485w',
   },
   'app-screenshot': {
     src: '/images/app/app.png',
@@ -1593,7 +1593,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRrYAAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSGkAAAABYBXZVptDMdEM4Ia/ohIBKeLaJRMFEaG2bRsmlUC2nMFvab+1WYeh4FbhKHOsjpYx49HwKjztiOS9K1r6nnGEm8oBhyXdfDth4U1l4EXnhBFUfjGftZ75+SLFbXtZMgTs+uNXwofi9wQAVlA4ICYAAADQAgCdASoUABQAPzmYw1ovKqekKAgB4CcJaQAAPaOgAP7vckAAAA==',
     category: 'misc',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/arrow-30x30-0kb.webp 30w',
+      'https://bnoon-website.b-cdn.net/images/icons/arrow.png 30w',
   },
   'banner-shape1': {
     src: '/images/banner/shape1.png',
@@ -2087,7 +2087,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABwAwCdASoUABEAPzmSv1mvKaajqAgB4CcJZQDG9BaiMjg/3cAA/uWr5NsC/31ov9Dv2z4aesbWKLXVj53mqoLgkim+M3/3IlwAAAAA',
     category: 'campaign',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/ivf-cycles-450x380-25kb.webp 450w',
+      'https://bnoon-website.b-cdn.net/images/national-day/ivf-cycles.jpg 450w',
   },
   'pdf-1': {
     src: '/pdf/pdf-1.jpg',
@@ -2183,7 +2183,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAwCdASoUABEAPzmUwFmvKiajqAgB4CcJZQAALo3LLQQH8iDLAYAA/oxAk3fHlwzC5JXopfsRuvxNz5eAOtXz4n5V6LXgH3F5ZMAAAAA=',
     category: 'campaign',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/men-infertility-450x380-13kb.webp 450w',
+      'https://bnoon-website.b-cdn.net/images/national-day/men-infertility.jpg 450w',
   },
   'feedback-clutch': {
     src: '/images/feedback/clutch.png',
