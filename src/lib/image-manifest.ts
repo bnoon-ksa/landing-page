@@ -645,7 +645,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQBACdASoUABEAPzmQvlevKaYjqAqp4CcJQBWGcdgnJ2o0B03agbXW+c9QAP3NpqX4aZQIhczidgkeIlB2Hx9LCpB0SxsRplWZsUywi0i3g3+QklfaWXycfhq/VjWAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-1-275x236-12kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/1.jpg 275w',
   },
   'doctor-grid-2': {
     src: '/images/doctors/2.jpg',
@@ -657,7 +657,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQBACdASoUABEAPzmSv1mvKaYjqAgB4CcJYwDImAxJLhwMcZVGZ0MLgAD9z1hmyh8r0PZLDX2K9w+DS1lbi+v5iLIfplrOvkorF93BpQm+Xb+LV6mEMAAA',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-2-275x236-11kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/2.jpg 275w',
   },
   'doctor-grid-3': {
     src: '/images/doctors/3.jpg',
@@ -669,7 +669,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQBACdASoUABEAPzmUwVovKackKAgB4CcJZQDH5BEcsFS0WOTs9EaAuP5gAP3I/TCZ1HiEZltLNlRFj+XBqDBpQFjhp4AQD1gAAA==',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-3-275x236-10kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/3.jpg 275w',
   },
   'doctor-grid-4': {
     src: '/images/doctors/4.jpg',
@@ -681,7 +681,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwBACdASoUABEAPzmQvFgvKaWjqAqp4CcJZQDA3A8trsWYjfZjOzsD0R2tTVpAAP3Q804IV8y2wMEuSKJpL2ETfOwfbrfVGBB+Rrc7LnIAAAAA',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-4-275x236-11kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/4.jpg 275w',
   },
   'doctor-grid-6': {
     src: '/images/doctors/6.jpg',
@@ -693,7 +693,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwBACdASoUABEAPzmOuFcvKaSjqA1R4CcJZQC7AA5F6+q5QMo3GL37zSAA/c9VsWS/2Vs/yfRP1sCAev31a+uUW36VXhVExSIohJWuCPTc2Oy41UYH5gNOrloIXjEECzTgV5AAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-6-275x236-11kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/6.jpg 275w',
   },
   'doctor-grid-7': {
     src: '/images/doctors/7.jpg',
@@ -705,7 +705,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoUABEAPzmUwVmvKicjqAgB4CcJZQAAIQ7bg5riPbVmOx6FDAD9zfVfs6w2zNQEJVrcgVCp6GyuZQIcfhKQLunq/giBWgWvZUDDgWksO3z7clI6JzpK/6yZwAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-7-275x236-10kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/7.jpg 275w',
   },
   'doctor-grid-8': {
     src: '/images/doctors/8.jpg',
@@ -717,7 +717,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQBACdASoUABEAPzmUwVovKickKAgB4CcJZwDImBDQtYAcYybiebda4AD9zH3ti5zScCNH/IjxOcMmW4S9H15zm11vF+magiPAapy02AA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-8-275x236-13kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/8.jpg 275w',
   },
   'doctor-grid-9': {
     src: '/images/doctors/9.jpg',
@@ -729,7 +729,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoUABEAPzmUwVmvKicjqAgB4CcJZQDMWAw0HJzPuC96UkZEAAD9zrXSIkW4oTev/OvjEWfoPqYs/WBlL3lL2tur8Ph4cSHX5bPp16nO5rjtyQlFwAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-9-275x236-13kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/9.jpg 275w',
   },
   'doctor-grid-10': {
     src: '/images/doctors/10.jpg',
@@ -741,7 +741,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQBACdASoUABEAPzmQulivKaUjqAqp4CcJZQC+SAyWd2mXPgWQOkY+eG4AAP3Nsif/SPj8k2ytouCO9W3FJS86jPShgLjR59jpS/ArUflRntYg0MKpECNwAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-10-275x236-13kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/10.jpg 275w',
   },
   'doctor-grid-11': {
     src: '/images/doctors/11.jpg',
@@ -753,7 +753,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwBACdASoUABEAPzmUwFmvKiajqAgB4CcJZQDKtBEI6goVXHQW2VOK/eAA/cyCc9EDaFkp6waOrvs5pHzv+O7M/6uDsFgQg6AAAA==',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-11-275x236-11kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/11.jpg 275w',
   },
   'doctor-grid-12': {
     src: '/images/doctors/12.jpg',
@@ -765,7 +765,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQBACdASoUABEAPzmMuVavKSUjqA1R4CcJZwDGfBDhvlYGoqcPfFTuZhYAAP3M+Hq8B79hSrSxPgquleyCQVOXkSYIGeP9O1zq7WEA0hFh+cR0wCYQAA==',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-12-275x236-11kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/12.jpg 275w',
   },
   'doctor-grid-13': {
     src: '/images/doctors/13.jpg',
@@ -777,7 +777,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQBACdASoUABEAPzmOv1cvKaajqAqp4CcJQigAcx8LaetUaaGkGb4km9jwAP3M7ar5mcGUh7MrPkE7pM7L+yYZQLbHgjUDZ6QIDf+K3KNQcyl+K8vXQxA64nGJZHBJfIuYc7Og9q6oW9EnCTAaoEUz2hluwR+PWdTqSg97gAAAAA==',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-13-275x236-14kb.webp 275w',
+      'https://bnoon-website.b-cdn.net/images/doctors/13.jpg 275w',
   },
   'doctor-grid-14': {
     src: '/images/doctors/14.jpg',
@@ -789,7 +789,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQBACdASoUABEAPzmMwVcvKSejqAqp4CcJZQCsM6HBoq6Vl7qYF63ABlwGugAA/cx+PqaC6+6Yvep634GyMOhPNehdUJLgUTXy9NxOnTGxN/04cFXpzEAAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-14-268x230-11kb.webp 268w',
+      'https://bnoon-website.b-cdn.net/images/doctors/14.jpg 268w',
   },
   'doctor-grid-15': {
     src: '/images/doctors/15.jpg',
@@ -801,7 +801,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoUABEAPzmKu1WvKSYjKA1R4CcJZQCw7BDP0byR+9qGa5tcwAD9zIR3wXvLjnF+My835jIlapWeNgsPFfe8i5agXWBAYc0AK9mJmMBG5RATGDApYy2qMyAAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-15-268x230-12kb.webp 268w',
+      'https://bnoon-website.b-cdn.net/images/doctors/15.jpg 268w',
   },
   'doctor-grid-16': {
     src: '/images/doctors/16.jpg',
@@ -813,7 +813,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwBACdASoUABEAPzmOvlevKaYjqAqp4CcJZQC+SBDQuycv4m1uhccq9GPwIAD9zCmhWUfen4YarmpQVJriZrvEH/jivuJMo+UK4MuBfGJroXpFki++s6kAbqL2sngAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-16-268x230-11kb.webp 268w',
+      'https://bnoon-website.b-cdn.net/images/doctors/16.jpg 268w',
   },
   'doctor-grid-17': {
     src: '/images/doctors/17.jpg',
@@ -825,7 +825,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoUABEAPzmUwVmvKicjqAgB4CcJYwDE2Aw2yMA4WA8kWrlAAP3O4QMi9VHFA307DgobzB9dWSdgFZoqukeqJ8Y4+/+1ofyrh877aInV+4NsSAcQooTJGAAAAAA=',
     category: 'doctor',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/doctor-grid-17-268x230-11kb.webp 268w',
+      'https://bnoon-website.b-cdn.net/images/doctors/17.jpg 268w',
   },
   'dr-abdulaziz': {
     src: '/images/doctors/dr-abdulaziz.avif',
