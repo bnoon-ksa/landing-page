@@ -18,7 +18,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADwAwCdASoUABAAPzmQvlWvKqajMAgB4CcJZwAAWlxta9QQgKFVnJ7AAP6uq5GklyHRmctHUn3D9AAA',
     category: 'benefit',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/benefit-1-544x436-40kb.webp 544w',
+      'https://bnoon-website.b-cdn.net/images/benefits/benefit1.jpg 544w',
   },
   'benefit-2': {
     src: '/images/benefit2.jpg',
@@ -30,7 +30,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAQBACdASoUABAAPzmYvlYvLCajsAgB4CcJZwDG9CHhmE18el4LkzxOAAD+3syeNknmaazi/vEV2+zdCAAAAA==',
     category: 'benefit',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/benefit-2-544x436-59kb.webp 544w',
+      'https://bnoon-website.b-cdn.net/images/benefits/benefit2.jpg 544w',
   },
   'benefit-3': {
     src: '/images/benefit3.jpg',
@@ -42,7 +42,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAABwAwCdASoUABAAPzmGuVO0qSWisAgCkCcJYwCdMoAE6/vfUAAA/t8jKrPD/IquRRcsBX0WE8C8AA==',
     category: 'benefit',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/benefit-3-544x436-38kb.webp 544w',
+      'https://bnoon-website.b-cdn.net/images/benefits/benefit3.jpg 544w',
   },
   'blog-riyadh': {
     src: '/images/blog/bnoon-riyadh.avif',
@@ -54,7 +54,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAADQAgCdASoUAAsAPzmIuVQ/qSWjMAgD8CcJQBOgBbHAAP7UKTvSLdIFOE/w0BExLg51CaWUp7QZqAAA',
     category: 'blog',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/blog-riyadh-378x204-31kb.webp 378w',
+      'https://bnoon-website.b-cdn.net/images/locations/bnoon-riyadh.avif 378w',
   },
   'blog-jeddah': {
     src: '/images/blog/bnoon-jeddah.avif',
@@ -66,7 +66,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAwCdASoUAAsAPzmQvlWvKqajMAgB4CcJYwCsABuyF3qvBilMC4AA/ow0w5+k8ks2549j2LwHTraJMAA=',
     category: 'blog',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/blog-jeddah-375x208-32kb.webp 375w',
+      'https://bnoon-website.b-cdn.net/images/locations/bnoon-jeddah.avif 375w',
   },
   'blog-king-salman': {
     src: '/images/blog/king-salman.avif',
@@ -78,7 +78,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAgCdASoUAAsAPzmGulO/qSWisAgD8CcJYwCdAC0kAAD9/4rtJMchH/fkA62PRudyGYp8cAAAAA==',
     category: 'blog',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/blog-king-salman-378x205-28kb.webp 378w',
+      'https://bnoon-website.b-cdn.net/images/locations/king-salman.avif 378w',
   },
   'blog-alahsa': {
     src: '/images/blog/bnoon-alahsa-img.jpg',
@@ -90,7 +90,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAAAQAwCdASoUAAwAPzmMu1SvKaYosAgB4CcJZQDA3BsHwIAAwtYZeqzwSnsVh9ObAIrOEFd4AAA=',
     category: 'blog',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/blog-alahsa-418x250-50kb.webp 418w',
+      'https://bnoon-website.b-cdn.net/images/locations/bnoon-alahsa-img.jpg 418w',
   },
   'banner-bg': {
     src: '/images/banner/banner-bg.jpg',
@@ -302,7 +302,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAABQAwCdASoUAA8APzmIvlSvKSajMAgB4CcJZwDKACzbpTgFUAD+6CLvhoFNMG6txa/9LR/AAAA=',
     category: 'about',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/hear-patient-576x445-88kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/hear-patient-768x594-157kb.webp 768w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/hear-patient-992x767-261kb.webp 992w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/hear-patient-1200x928-384kb.webp 1200w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/hear-patient-1400x1082-511kb.webp 1400w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/hear-patient-1920x1484-785kb.webp 1920w',
+      'https://bnoon-website.b-cdn.net/images/feedback/hear-patient.jpg 576w, https://bnoon-website.b-cdn.net/images/feedback/hear-patient.jpg 768w, https://bnoon-website.b-cdn.net/images/feedback/hear-patient.jpg 992w, https://bnoon-website.b-cdn.net/images/feedback/hear-patient.jpg 1200w, https://bnoon-website.b-cdn.net/images/feedback/hear-patient.jpg 1400w, https://bnoon-website.b-cdn.net/images/feedback/hear-patient.jpg 1920w',
   },
   'fertility-women': {
     src: '/images/fertility-women.jpg',
@@ -362,7 +362,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAwCdASoUAA8APzmGulO/qKWisAgD8CcJZACw7DZufAAA/Hsjw29GJI6tpg7PvwbJGlT2WGMP5Be9bUuG2gAA',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/ivf-286x210-26kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/ivf.jpg 286w',
   },
   icsi: {
     src: '/images/icsi.jpg',
@@ -374,7 +374,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACQAwCdASoUAA8APzmKulQ+qaWjMAgD0CcJQBOmUADRFRQDiZQAAPx1CdTlEE/bC94dkbOtE4Xl56gugAA=',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icsi-286x210-20kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/icsi.jpg 286w',
   },
   'egg-freezing': {
     src: '/images/egg-freezing.jpg',
@@ -386,7 +386,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAgCdASoUAA8APzmGuVOvKSWisAgB4CcJQBdgAH9wAPGxxqFgFwgMV3natebE7DCJ1ffBqAHXLVLQAAA=',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/egg-freezing-286x210-21kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/egg-freezing.jpg 286w',
   },
   'embryo-freezing': {
     src: '/images/embryo-freezing.jpg',
@@ -398,7 +398,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAwAwCdASoUAA8APzmGulQvKSWjMAgB4CcJZACdACzcfUAAAP7hFGEqNVlqIcj+vWlubhP0biFFgAx54q90AAAA',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/embryo-freezing-286x210-24kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/embryo-freezing.jpg 286w',
   },
   'fertility-counselling': {
     src: '/images/fertility-counselling.jpg',
@@ -410,7 +410,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAgCdASoUAA8APzmGulO+qSWisAgD0CcJQBOmUACNQAD+46Rm8rKDtdTYTH7xNI1Qy3N11gAAAA==',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fertility-counselling-286x210-20kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/fertility-counselling.jpg 286w',
   },
 
   // ── Phase 2: Remaining images (auto-generated, quality 100) ──────
@@ -1449,7 +1449,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAACwBACdASoUABQAPzmUwVmvKicjqAgB4CcJQBgFAZDeIAa7E6uRsSdDOodCuGwAAP7e7H244XsiCgLU/y//rprJHBTIrB9TRo7G9Ym0M5w9s4sgRnw9XXxxWlFGf4MtZ0kH3oZzs0kXremVukAYokEYp3Cxde4hb81smopiNf9hVK9mMTN0INcBWnkFPz0AAAA=',
     category: 'misc',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/faqs-bg-576x576-106kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/faqs-bg-1080x1080-299kb.webp 1080w',
+      'https://bnoon-website.b-cdn.net/images/faq/faqs.jpg 576w, https://bnoon-website.b-cdn.net/images/faq/faqs.jpg 1080w',
   },
   'about-image': {
     src: '/images/about/about.png',
@@ -1713,7 +1713,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoUAA8APzmGuVOvKSWisAgB4CcJZgC+aExCZ23QmJBsXwQA+NL1oUaZEThf86rKs86VGFsI5mXA2TrhJ0AGkxe7B5exjDtZdwrnIh0A2zuEKL/jEjz2hjbyazvYvE7XPiesdxBu2zMYUiaMvqy0NFrpWRjrgAAA',
     category: 'misc',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/male-fertility-286x210-19kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/male-fertility.jpg 286w',
   },
   'users-user1': {
     src: '/images/users/user1.png',
@@ -1869,7 +1869,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRpwBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSNEAAAABkCPbtmpV69yDew/ctR3u7hGNIKJogbs7ETGxRRo5pO5u95y94Mu9XYiICQCURmjh0O7N2dZ4aRgcBUApVO1RSFJ4WA1HQSG6k7SuFbGuFfZoKAfT/DbCf4px2QMHhWKFHsVlK4I2aenZ8jQmnyLeaFnZQ0OfhgObtP5Wbih+LHcu/BlurNL6W+6g8dee+UbxJvzKxRRdby7ngLQbGi+GZ4nQqDHiyr/E5UceNDRqHynmn5Z3RdAANFJmnymk8H0xBQ7+doDYxq7FpaG2JCgNAABWUDggpAAAAHAEAJ0BKhQAFAA/OZTBWa8qJyOoCAHgJwlAFSTl+C+nXvjyzNOkX0E0+OcAAM2a9doKFx6/5pNdO1SRovP28gqD7hybv+oaHIbG4EKNVwmWLiozykj7iINnhCsqyoapq7FgKiINzRlADYwi7e+QRo4pbLZ5/4/qc73L5v9/oan0kY6KJ+DgVSw/8YxkS93rE2ZsDA5tzQdRR+j9JC/JUmPw+oAA',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-1-366x366-29kb.webp 366w',
+      'https://bnoon-website.b-cdn.net/images/icons/icon-1.png 366w',
   },
   'icon-2': {
     src: '/images/icons/icon-2.png',
@@ -1881,7 +1881,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRn4BAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSMUAAAABgFvbtmpln/c+Erl3QDdEDCJ315SQjNwhdZdIS6AB98wd7rln4/eXEBETAEiMvOalg5e3y62uYkQCQCLUXNFI0njdlwKBSMoITZ2Rpuq5kQ0RTPLD80//wY1UoJXO+N8PDqDonJ7/Nt6XtFMZ6Ni/GabcvaOFGG+MSTSflAtaiPFsihqiXCijD6tJ36P/n+d+Nkqp9h9zrEWEQTr9Sx3HIJB4iF7Vk17VOJ76Q6ThjEaSxv0KEQEgMXJqV869Hk6XZyAWAABWUDggkgAAANAEAJ0BKhQAFAA/OZTBWa8qJyOoCAHgJwljAKknL8FGQhuXGudjC0R0h5mKgJeAAP7EVV/5Jkvj+LAFrPARls5YMAQOrlZBI/YDlCZp1A3kkQKBIPiNZeWUFubP7UEK1IDrsZRsWGbn3akRSuKeohbJhAuS5Gp13Pq3zeWL2qoQ6Js7G3eCaCq+2fjErJ2798AA',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-2-364x366-30kb.webp 364w',
+      'https://bnoon-website.b-cdn.net/images/icons/icon-2.png 364w',
   },
   'icon-3': {
     src: '/images/icons/icon-3.png',
@@ -1893,7 +1893,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRpYBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSMIAAAABgGLb2rLlPi/adD7uDtUh/VMgEd29WXWpRHeiuycGwPs878U/hhAREwBIHNJia2/BXldjGXACQBwa7xhIMvChCU4g4oYYVAMZvAZOxIkIhuiVv6rnIBzqqIF/DMpapJ7R+GfjSUozlRGVLbP/sXDPEMV4/RaNfH/5l2NaFOP1JDWKcqaGFsVYkXxI/ZtyOx411PAXs1ACQQ+9/qbKNjgI2knzaqbe6FshgDgU7/HnsJ4Jh+8OCYUDm7d3e6N58XACAFZQOCCuAAAAEAUAnQEqFAAUAD85kLxYLymlo6gKqeAnCWIAv2rfAcW7uBDno1sKbIMoG/tD5UQlAAD+1OQNFD5fUq1aL6KVGAA9P9UWuY1QutYmoSniLd0yFGM7dVGT53pkA6TDv8eZ/y0fZGB7gn58t+RjxMpjuK64y3T7bxJvynNYfmjX+hqSBHH+L/Ha8Mv29dFrPfZ0+xcufPKiOpol5HEbUYLzpqxiXJQJSm6qM1jX+kAA',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-3-372x372-31kb.webp 372w',
+      'https://bnoon-website.b-cdn.net/images/icons/icon-3.png 372w',
   },
   'icon-4': {
     src: '/images/icons/icon-4.png',
@@ -1905,7 +1905,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRoYBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSMwAAAABgCPZtmpl//s+LqNwizWDyN0lJbaQjNghd3em4KRuA3B3O/fejb7HECJiAgAohJZOX5iPo75MPxz8dJC9S0uSlisZcAAotFoabUkrhh+NUFBoo9b8UwyboFBObejSGMlC5AE1XWtuBFRR06NhQb83zZ49Gm9L57ReDHeP/2NzjcaL5mI7xYuwJUVo3Vk+J2OS4k44DCTdULvRPI+Bgzpasb9ZoZRAQaH+gVa0MaItb0qgADhInHsjScun0Wg4+KmA5MaJ9ZXhhij4FABWUDgglAAAAJAEAJ0BKhQAFAA/OZK6WK8qJSOoCqngJwljALbIDe0Cx1eUhFbyVHQDuPuBQAD+052ELoEUa5O/VfRkCROPriIvPbe7bBalJVo95L6N7uOiF/8XjnAciRzQnspY6IY4YAXNI/UL9BANenDOqBfFoxeTuBvSTz0C8OsC7lPvqyQ0vr6Fw6Hc8RSocN4lQyTmIBYAAAA=',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-4-372x370-27kb.webp 372w',
+      'https://bnoon-website.b-cdn.net/images/icons/icon-4.png 372w',
   },
   'icon-5': {
     src: '/images/icons/icon-5.png',
@@ -1917,7 +1917,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRpgBAABXRUJQVlA4WAoAAAAQAAAAEwAAEwAAQUxQSP0AAAABkCPbtmor6937o5/innkP3N29EQ6ZWweoH+EQueXumjlk7u56zl4zOK8eXYiICZBUq23CtjvvPz85uqBdtcpaQ6+CAXNnsmpJlRb/I1LYThlWq1KlJUQ2zXNmhSqN+uugxfDfkdIZEi1nzjWGhd0aZtI6Mv+Z2HqiiYuIMARXLhI0dSTK4OGF4s9HjF/dffQFB7cOks3ft0DH+BljrhGZY8vIQDbpys0rS3/ixKoB3zAYMC9OYvNziHaRKB3ZhsR+qd9zclEGmbf9VWvCD1K4cCT+zFKlWhNf4fiXUgrzaqIqSbV6drzDYD5t66taZdVQp9mb9+3Zsqi7GpUkAFZQOCB0AAAAUAQAnQEqFAAUAD85jLpWLyklo6gNUeAnCWMAqPQRHI1tuL1/H2uPaYIk4AD+3pnSIr17etlGNw5vqTtKFDr6Xh/8e8ONn7OXnFpSvfDlhFlVrWUKVgKrNbjAxy4tvaQ5a4oulRZi1omyUcluTh08kVAAAAA=',
     category: 'icon',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/icon-5-370x368-30kb.webp 370w',
+      'https://bnoon-website.b-cdn.net/images/icons/icon-5.png 370w',
   },
 
   // ── Phase 3D: Social icons, treatment grid, misc ──────────────────
@@ -1979,7 +1979,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoUAA8APzmEuVOvKKWisAgB4CcJbACdMoRwABhjGONUBDEvUAD33rPUYoctSY1bX3kUfFoOJyBZbWu5jCn653K9x+4tAs5ayE4vVU0yxWlr9Ixq0rXkIPH5/t2MLpvejvoHvD0/3hDBglSHXngfStKT5CqDcREgACclcXW5Ajl6XAXZia/d83RXg9hDIUaAAAA=',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/ivm-286x210-22kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/ivm.jpg 286w',
   },
   pgs: {
     src: '/images/pgs.jpg',
@@ -1991,7 +1991,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwAwCdASoUAA8APzmEuVOvKKWisAgB4CcJagCw7BLZBMwoAA+sJgD9rdd3QAbg9kbz34XK9AcvNFH9tz6w5GSn67ZVVFFH+9y0SHDEpXS6hIM1f0s45LFXCBGsd9E4B/4AAA==',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pgs-286x210-18kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/pgs.jpg 286w',
   },
   pgd: {
     src: '/images/pgd.jpg',
@@ -2003,7 +2003,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoUAA8APzmEuVOvKKWisAgB4CcJZgCdLwABZEhOsYXKAAD3Spt2E1Ag+pJFAZ1fBBXfGCcNrfrbQ1JyUM3SNDqcNFtTvodgS4obuiIA',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pgd-286x210-24kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/pgd.jpg 286w',
   },
   'sperm-freezing': {
     src: '/images/sperm-freezing.jpg',
@@ -2015,7 +2015,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADwAwCdASoUAA8APzmEuVOvKKWisAgB4CcJbACw/f/gJBUPMjGP3dEgAP4zIlLcS6HSTbzkraUwjze5ufzgsZM1GlklIOzoSVqNGp7V3AdPWgD5mtqczfZcsvJvn2SCZtIIZFDV8+0fUiTjZYMHNZ2mZWmgG3A1gAA=',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/sperm-freezing-286x210-18kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/sperm-freezing.jpg 286w',
   },
   fbgs: {
     src: '/images/fbgs.jpg',
@@ -2027,7 +2027,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoUAA8APzmEuVOvKKWisAgB4CcJbACdMoABO1MnK7QAANt4TxgPWOqGTZh644WnCxd6bRZCWn8HbkTgxNuq1Ff83PI/sibIoOFFU3CDAvtjTq5Mb4uAAA==',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/fbgs-286x210-18kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/fbgs.jpg 286w',
   },
   'ovulation-induction': {
     src: '/images/ovulation-induction.jpg',
@@ -2039,7 +2039,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACQAwCdASoUAA8APzmEuVOvKKWisAgB4CcJZACdABd2Pa4dKD8AAPiOPC++RnllJhZp6rO56iZyLux8hV5Tc7MCkulx6YLL8XwP5/6jq4WJosAA',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/ovulation-induction-286x210-14kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/ovulation-induction.jpg 286w',
   },
   'intrauterine-insemination': {
     src: '/images/intrauterine-insemination.jpg',
@@ -2051,7 +2051,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQBACdASoUAA8APzmEuVOvKKWisAgB4CcJZACdMoADTOUE3iFHOV6DwAD9C23NLSbtQZlOz1WeWMNJgbrgh3e9t6inIAQA',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/intrauterine-insemination-286x210-16kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/intrauterine-insemination.jpg 286w',
   },
   'recurrent-miscarriage': {
     src: '/images/recurrent-miscarriage.jpg',
@@ -2063,7 +2063,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoUAA8APzmGuVOvKSWisAgB4CcJaACdMoABeE44IeqAAP7RpJwksJAvyjWm9ZsNzWtNtcXOWELYg2eCnRTsMU4wAnjmf3bs+36/XzwszWdaXTGxw/3AAA==',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/recurrent-miscarriage-286x210-35kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/recurrent-miscarriage.jpg 286w',
   },
   'antenatal-care': {
     src: '/images/antenatal-care-deliveries.jpg',
@@ -2075,7 +2075,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAACQBACdASoUAA8APzmEuVOvKKWisAgB4CcJbACdMoMh1EmnpCmG4E+Ie+kbTwAAy0LfVtswKP1gtlLh7bErjnwql5DURY/Mn/3s92ZDRYvR2i/3oeqnEfi0WgbBJ3LgB6tEbNl7ueG5BRmKoLUzUPyeJldi3JSM2b1hPAjTObcoAA==',
     category: 'service',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/antenatal-care-286x210-21kb.webp 286w',
+      'https://bnoon-website.b-cdn.net/images/specialized/antenatal-care-deliveries.jpg 286w',
   },
   'ivf-cycles': {
     src: '/images/national-day/ivf-cycles.jpg',
