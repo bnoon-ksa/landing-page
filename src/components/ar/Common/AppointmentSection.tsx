@@ -6,6 +6,9 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { Placeholder } from 'react-bootstrap';
 import OptimizedImage from '@/components/ui/OptimizedImage';
 const AppointmentSection = () => {
+  useEffect(() => {
+  sessionStorage.removeItem("bnoon_booking_tracked");
+}, []);
   const [formData, setFormData] = useState({
     interest: '',
     branch: '',
@@ -482,6 +485,19 @@ const AppointmentSection = () => {
       });
 
       if (response.ok) {
+     if (typeof window !== "undefined") {
+
+  window.dataLayer = window.dataLayer || [];
+
+  if (!sessionStorage.getItem("bnoon_booking_tracked")) {
+
+    window.dataLayer.push({
+      event: "book_appointment"
+    });
+
+    sessionStorage.setItem("bnoon_booking_tracked", "true");
+  }
+}
         setMessage(
           <>
             شكراً لكم على إرسال طلب حجز موعد في بنون.
@@ -563,7 +579,7 @@ const AppointmentSection = () => {
               style={{ maxWidth: '800px', width: '100%' }}
             >
               {/* I am interested in */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div
                   className="custom-dropdown mb-3"
                   style={{ position: 'relative', padding: '0px' }}
@@ -642,7 +658,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Select Branch */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div
                   className="custom-dropdown mb-3"
                   style={{ position: 'relative', padding: '0px' }}
@@ -715,7 +731,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Select Visit Type */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div
                   className="custom-dropdown mb-3"
                   style={{ position: 'relative', padding: '0px' }}
@@ -890,7 +906,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Your Name */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12 mb-3" style={{ position: 'relative', padding: '0px' }}>
                   <label className="appointmentform-label">
                     الاسم الكامل
@@ -909,7 +925,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Is this appointment for you */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12 mb-3">
                   <label className="appointmentform-label d-block mb-2">
                     هل الموعد لك شخصيًا؟
@@ -950,7 +966,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Nationality */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12 mb-3" style={{ position: 'relative', padding: '0px' }}>
                   <label className="appointmentform-label">
                     الجنسية
@@ -1018,7 +1034,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Country of Residence */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12 mb-3" style={{ position: 'relative', padding: '0px' }}>
                   <label className="appointmentform-label">
                     بلد الإقامة
@@ -1088,7 +1104,7 @@ const AppointmentSection = () => {
 
               {/* City – show only if Saudi Arabia selected */}
               {formData.countryOfResidence === 'المملكة العربية السعودية' && (
-                <div className="mb-3">
+                <div className="row g-3">
                   <div className="col-md-12 mb-3" style={{ position: 'relative', padding: '0px' }}>
                     <label className="appointmentform-label">
                       إذا كنت تعيش في المملكة العربية السعودية، يرجى ذكر المدينة.{' '}
@@ -1184,7 +1200,7 @@ const AppointmentSection = () => {
               )}
 
               {/* Gender */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12 mb-3">
                   <label className="appointmentform-label">
                     الجنس
@@ -1226,7 +1242,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Mobile */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12 mb-3">
                   <label className="appointmentform-label">
                     رقم الجوال
@@ -1245,7 +1261,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Email */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12 mb-3">
                   <label className="appointmentform-label">
                     البريد الإلكتروني
@@ -1264,7 +1280,7 @@ const AppointmentSection = () => {
               </div>
 
               {/* Preferred Date */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12 mb-3">
                   <label className="appointmentform-label">
                     اختر التاريخ المفضل للموعد
@@ -1404,7 +1420,7 @@ const AppointmentSection = () => {
 
               {/* How did you hear about us */}
               {/* How did you hear about us */}
-              <div className="mb-3">
+              <div className="row g-3">
                 <div className="col-md-12" style={{ position: 'relative' }}>
                   <label className="appointmentform-label">
                     كيف سمعت عنا؟
