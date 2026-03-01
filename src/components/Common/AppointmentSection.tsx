@@ -4,7 +4,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import OptimizedImage from '@/components/ui/OptimizedImage';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { CgEnter } from 'react-icons/cg';
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 const AppointmentSection = () => {
+    useEffect(() => {
+    sessionStorage.removeItem("bnoon_booking_tracked");
+  }, []);
   const [formData, setFormData] = useState({
     interest: '',
     branch: '',
@@ -493,17 +501,21 @@ const AppointmentSection = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // ✅ Google Tag Manager Booking Tracking
-if (!sessionStorage.getItem("bnoon_booking_tracked")) {
+         // ✅ Google Tag Manager Tracking (Fire only once)
+  if (typeof window !== "undefined") {
 
-  window.dataLayer = window.dataLayer || [];
+    if (!sessionStorage.getItem("bnoon_booking_tracked")) {
 
-  window.dataLayer.push({
-    event: "book_appointment"
-  });
+      window.dataLayer = window.dataLayer || [];
 
-  sessionStorage.setItem("bnoon_booking_tracked", "true");
-}
+      window.dataLayer.push({
+        event: "book_appointment"
+      });
+
+      sessionStorage.setItem("bnoon_booking_tracked", "true");
+    }
+  }
+
         setMessage(
           <>
             <strong>Thank you for submitting your appointment request.</strong>
