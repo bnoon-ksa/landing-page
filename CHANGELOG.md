@@ -1,3 +1,9 @@
+## [1.3.151](https://github.com/bnoon-ksa/landing-page/compare/v1.3.150...v1.3.151) (2026-03-01)
+
+### Bug Fixes
+
+* footer code ([#233](https://github.com/bnoon-ksa/landing-page/issues/233)) ([16d1bc2](https://github.com/bnoon-ksa/landing-page/commit/16d1bc2395fe2dd8d1099eb5a8237fa58db4a330))
+
 ## [1.3.150](https://github.com/bnoon-ksa/landing-page/compare/v1.3.149...v1.3.150) (2026-03-01)
 
 ### Bug Fixes
