@@ -7,7 +7,7 @@ import MobileTopTools from '@/components/Common/MobileTopTools'; // ye aapka cus
 import { getBookNowUrl } from '@/utils/booking';
 import { GooglePlayBadge, AppStoreBadge } from '@/components/icons';
 import 'remixicon/fonts/remixicon.css';
-
+import { useEffect } from 'react';
 // Define interfaces for our data structure
 interface SocialLink {
   platform: string;
@@ -155,6 +155,31 @@ const footerData: FooterData = {
 };
 
 function Footer() {
+ useEffect(() => {
+  const handleClick = () => {
+    if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
+      (window as any).gtag('event', 'click_whatsapp', {
+        event_category: 'Engagement',
+        event_label: 'WhatsApp Click'
+      });
+    }
+  };
+
+  const links = document.querySelectorAll(
+    "a[href*='wa.me'], a[href*='api.whatsapp.com']"
+  );
+
+  links.forEach((link) => {
+    link.addEventListener("click", handleClick);
+  });
+
+  return () => {
+    links.forEach((link) => {
+      link.removeEventListener("click", handleClick);
+    });
+  };
+
+}, []);
   return (
     <footer className="footer-area">
       <div className="ptb-50">
@@ -292,6 +317,7 @@ function Footer() {
           }
         }
       `}</style>
+    
     </footer>
   );
 }
