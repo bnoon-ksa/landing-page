@@ -1,3 +1,9 @@
+## [1.3.154](https://github.com/bnoon-ksa/landing-page/compare/v1.3.153...v1.3.154) (2026-03-01)
+
+### Bug Fixes
+
+* appointment row ([#237](https://github.com/bnoon-ksa/landing-page/issues/237)) ([afafb70](https://github.com/bnoon-ksa/landing-page/commit/afafb705e09aebc0cdd9b496ee06c830e25fe5ce))
+
 ## [1.3.153](https://github.com/bnoon-ksa/landing-page/compare/v1.3.152...v1.3.153) (2026-03-01)
 
 ### Bug Fixes
