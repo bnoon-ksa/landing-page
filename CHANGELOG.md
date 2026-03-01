@@ -1,3 +1,9 @@
+## [1.3.155](https://github.com/bnoon-ksa/landing-page/compare/v1.3.154...v1.3.155) (2026-03-01)
+
+### Bug Fixes
+
+* tracking code ([#238](https://github.com/bnoon-ksa/landing-page/issues/238)) ([3183f68](https://github.com/bnoon-ksa/landing-page/commit/3183f682a94a24e44eb0acf9a616a76f06c52d32))
+
 ## [1.3.154](https://github.com/bnoon-ksa/landing-page/compare/v1.3.153...v1.3.154) (2026-03-01)
 
 ### Bug Fixes
