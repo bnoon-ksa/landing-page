@@ -493,6 +493,17 @@ const AppointmentSection = () => {
       const data = await response.json();
 
       if (response.ok) {
+        // ✅ Google Tag Manager Booking Tracking
+if (!sessionStorage.getItem("bnoon_booking_tracked")) {
+
+  window.dataLayer = window.dataLayer || [];
+
+  window.dataLayer.push({
+    event: "book_appointment"
+  });
+
+  sessionStorage.setItem("bnoon_booking_tracked", "true");
+}
         setMessage(
           <>
             <strong>Thank you for submitting your appointment request.</strong>
