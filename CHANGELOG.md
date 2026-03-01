@@ -1,3 +1,9 @@
+## [1.3.150](https://github.com/bnoon-ksa/landing-page/compare/v1.3.149...v1.3.150) (2026-03-01)
+
+### Bug Fixes
+
+* meta and tiktok ([#232](https://github.com/bnoon-ksa/landing-page/issues/232)) ([fb71d2c](https://github.com/bnoon-ksa/landing-page/commit/fb71d2cd45984d7668cbdcb26c0d37cb38b42d55))
+
 ## [1.3.149](https://github.com/bnoon-ksa/landing-page/compare/v1.3.148...v1.3.149) (2026-02-28)
 
 ### Bug Fixes
