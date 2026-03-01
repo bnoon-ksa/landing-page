@@ -1,3 +1,9 @@
+## [1.3.153](https://github.com/bnoon-ksa/landing-page/compare/v1.3.152...v1.3.153) (2026-03-01)
+
+### Bug Fixes
+
+* appointment code ([#236](https://github.com/bnoon-ksa/landing-page/issues/236)) ([23c98b5](https://github.com/bnoon-ksa/landing-page/commit/23c98b53f63d3ae8ec61137ca7e94f7bb9d19414))
+
 ## [1.3.152](https://github.com/bnoon-ksa/landing-page/compare/v1.3.151...v1.3.152) (2026-03-01)
 
 ### Bug Fixes
