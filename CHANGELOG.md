@@ -1,3 +1,9 @@
+## [1.3.160](https://github.com/bnoon-ksa/landing-page/compare/v1.3.159...v1.3.160) (2026-03-02)
+
+### Bug Fixes
+
+* add image url ([#243](https://github.com/bnoon-ksa/landing-page/issues/243)) ([25c3aca](https://github.com/bnoon-ksa/landing-page/commit/25c3aca3287ca12fd01ec2fdb2889658318dddce))
+
 ## [1.3.159](https://github.com/bnoon-ksa/landing-page/compare/v1.3.158...v1.3.159) (2026-03-02)
 
 ### Bug Fixes
