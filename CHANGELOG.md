@@ -1,3 +1,9 @@
+## [1.3.157](https://github.com/bnoon-ksa/landing-page/compare/v1.3.156...v1.3.157) (2026-03-02)
+
+### Bug Fixes
+
+* logo url ([#240](https://github.com/bnoon-ksa/landing-page/issues/240)) ([e6badc4](https://github.com/bnoon-ksa/landing-page/commit/e6badc4acb4c327ba8058905626e61348c4cafc4))
+
 ## [1.3.156](https://github.com/bnoon-ksa/landing-page/compare/v1.3.155...v1.3.156) (2026-03-02)
 
 ### Bug Fixes
