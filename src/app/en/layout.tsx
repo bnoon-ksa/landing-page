@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Bnoon',
     images: [
       {
-        url: 'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/og-image-1200x630-23kb.webp',
+        url: 'https://bnoon-website.b-cdn.net/images/logo/bnoon-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Bnoon - Fertility & Women Health Centers',
