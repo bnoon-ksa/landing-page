@@ -2219,7 +2219,7 @@ export const IMAGE_MANIFEST: ImageManifest = {
       'data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAgCdASoUAAsAPzmEuVOvKKWkMAgB4CcJZACw7C5JAAD+3QsTapnO8v7GID09WPulhDdljoaNQxFNaEtusi8AAAA=',
     category: 'misc',
     cdnSrcSet:
-      'https://bnoon-website.b-cdn.net/images/logo/bnoon-og-image.png 576w, https://bnoon-website.b-cdn.net/images/logo/bnoon-og-image.png 1200w',
+      'https://bnoon-website.b-cdn.net/images/logo/bnoon-og.jpg 576w, https://bnoon-website.b-cdn.net/images/logo/bnoon-og.jpg 1200w',
   },
   'patients-rights-pdf': {
     src: '/images/pdf/bnoon-patients-rights.pdf',
