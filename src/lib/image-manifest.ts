@@ -2211,15 +2211,15 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
   'og-image': {
     src: '/images/og-image.png',
-    width: 1200,
-    height: 630,
+    width: 183,
+    height: 79,
     sizes: '1200px',
     alt: 'Bnoon OpenGraph image',
     blurDataURL:
       'data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAgCdASoUAAsAPzmEuVOvKKWkMAgB4CcJZACw7C5JAAD+3QsTapnO8v7GID09WPulhDdljoaNQxFNaEtusi8AAAA=',
     category: 'misc',
     cdnSrcSet:
-      'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/og-image-576x302-10kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/og-image-1200x630-23kb.webp 1200w',
+      'https://bnoon-website.b-cdn.net/images/logo/bnoon-logo.svg 576w, https://bnoon-website.b-cdn.net/images/logo/bnoon-logo.svg 1200w',
   },
   'patients-rights-pdf': {
     src: '/images/pdf/bnoon-patients-rights.pdf',
