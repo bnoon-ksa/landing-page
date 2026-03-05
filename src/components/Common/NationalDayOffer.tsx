@@ -80,7 +80,7 @@ const NationalDayOffer = () => {
                   </div>
 
                   <p className="dates">
-                    The offer is valid from <strong>February 12 to March 18, 2026</strong>.
+                    The offer is valid from <strong>February 12 to March 18, 2026.</strong>
                     <br />
                     Last day to start treatment is <strong>April 2, 2026.</strong>
                   </p>
