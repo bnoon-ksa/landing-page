@@ -30,8 +30,8 @@ export default function NationalDayOfferPage() {
             }}
           >
             <h1 style={{ color: '#004E78' }}>
-              <span className="rowdies-font text-size">
-                FOUNDING DAY OFFER IN <br/>ANDROLOGY & MALE <br/>INFERTILITY SERVICES
+              <span className="rowdies-font text-size banner-text-size">
+                FOUNDING DAY OFFER ON <br/>ANDROLOGY & MALE <br/>INFERTILITY SERVICES
               </span>
             </h1>
           </div>
