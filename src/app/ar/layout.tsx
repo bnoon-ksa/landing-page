@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 export default function ArabicLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+   <html lang="ar" dir="rtl">
       <head>
         <link
           rel="stylesheet"
@@ -52,6 +52,7 @@ export default function ArabicLayout({ children }: { children: React.ReactNode }
           href="https://bnoon-website.b-cdn.net/assets/css/arabic-responsive.css"
         />
       </head>
+     <body dir="rtl">
       <div className={`${cairo.variable} arabic`}>
         <Script
           async
@@ -73,7 +74,9 @@ export default function ArabicLayout({ children }: { children: React.ReactNode }
         {children}
         <Footer />
         <GoTop />
-      </div>
-    </>
+        </div>
+        </body>
+         </html>
+    
   );
 }
