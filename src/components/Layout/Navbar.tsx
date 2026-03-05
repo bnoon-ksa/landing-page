@@ -464,12 +464,7 @@ function Navbar() {
         .offcanvas-backdrop.show {
           opacity: 0.8;
         }
-.navbar .navbar-nav .nav-item
- {
-    position: relative;
-    margin-left: 16px !important;
-    margin-right: 8px;
-}
+
         .offcanvas-header .btn-close {
           position: absolute;
           right: 20px;
