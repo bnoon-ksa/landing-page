@@ -1,3 +1,9 @@
+## [1.3.167](https://github.com/bnoon-ksa/landing-page/compare/v1.3.166...v1.3.167) (2026-03-05)
+
+### Bug Fixes
+
+* change text ([#250](https://github.com/bnoon-ksa/landing-page/issues/250)) ([710a364](https://github.com/bnoon-ksa/landing-page/commit/710a36489e2be1f22bbe21cd040e4bbf2d7e4a81))
+
 ## [1.3.166](https://github.com/bnoon-ksa/landing-page/compare/v1.3.165...v1.3.166) (2026-03-05)
 
 ### Bug Fixes
