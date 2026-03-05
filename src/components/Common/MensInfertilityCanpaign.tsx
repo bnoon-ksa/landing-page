@@ -57,7 +57,7 @@ const NationalDayOffer = () => {
                   </p>
 
                   <p className="dates">
-                    The offer is valid from <strong> February 12 to March 2, 2026</strong>.
+                    The offer is valid from <strong> March 4 to March 18, 2026</strong>.
                     <br />
                     The offer is not applicable on consultations.
                   </p>
