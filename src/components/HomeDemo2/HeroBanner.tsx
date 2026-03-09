@@ -217,7 +217,7 @@ function HeroBanner() {
               {...(slides[currentSlide].buttonLink.startsWith('http')
                 ? { target: '_blank', rel: 'noopener noreferrer' }
                 : {})}
-              className="btn btn-success btn-appointment explore-appointment btn-banner"
+              className="btn btn-success btn-appointment explore-appointment btn-banner book-appointment-btn"
             >
               {slides[currentSlide].buttonText}
             </a>
