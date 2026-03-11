@@ -211,7 +211,7 @@ const AppointmentSection = () => {
 
             <div className="left">
               <p >
-                Thank you for placing your trust in Bnoon. <br>Kindly complete the form below, and a member of our healthcare team will contact the patient promptly to support and facilitate the next steps in their care.
+                Thank you for placing your trust in Bnoon.  <br />Kindly complete the form below, and a member of our healthcare team will contact the patient promptly to support and facilitate the next steps in their care.
               </p>
             </div>
           </div>
