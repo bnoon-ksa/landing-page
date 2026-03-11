@@ -211,15 +211,7 @@ const AppointmentSection = () => {
 
             <div className="left">
               <p >
-                Thank you for placing your trust in Bnoon and for referring your patient for
-                fertility care. Please note that this form is intended to be completed exclusively
-                by licensed medical practitioners.
-                <br />
-                Kindly complete the form below, and a member of our healthcare team will contact the
-                patient promptly to support and facilitate the next steps in their care.
-                <br />
-                Should you wish to discuss a case or speak directly with one of our physicians prior
-                to making a referral, please contact us at 920010022.
+                Thank you for placing your trust in Bnoon. Kindly complete the form below, and a member of our healthcare team will contact the patient promptly to support and facilitate the next steps in their care.
               </p>
             </div>
           </div>
