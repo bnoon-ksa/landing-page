@@ -1,3 +1,9 @@
+## [1.3.198](https://github.com/bnoon-ksa/landing-page/compare/v1.3.197...v1.3.198) (2026-03-12)
+
+### Bug Fixes
+
+* add page ([#284](https://github.com/bnoon-ksa/landing-page/issues/284)) ([b330987](https://github.com/bnoon-ksa/landing-page/commit/b3309873ac624f3622c38d1c1cb222f471ccc6ee))
+
 ## [1.3.197](https://github.com/bnoon-ksa/landing-page/compare/v1.3.196...v1.3.197) (2026-03-12)
 
 ### Bug Fixes
