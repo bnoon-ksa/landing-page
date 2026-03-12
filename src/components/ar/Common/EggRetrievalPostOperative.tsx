@@ -6,7 +6,7 @@ import OptimizedImage from '@/components/ui/OptimizedImage';
 const PaitentRights: React.FC = () => {
   const pages = [
     { imageName: 'post-eeg-retrieval-pdf-1', alt: 'Post EEg Retrieval Page 1' },
-    { imageName: 'post-eeg-retrieval-pdf-1', alt: 'Post EEg Retrieval Page 2' },
+    { imageName: 'post-eeg-retrieval-pdf-2', alt: 'Post EEg Retrieval Page 2' },
   ];
 
   return (
