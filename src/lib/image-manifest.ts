@@ -2103,8 +2103,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
   'pdf-2': {
     src: '/pdf/pdf-2.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Patient Rights page 2',
     blurDataURL:
@@ -2115,8 +2115,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
       'pre-eeg-retrieval-pdf-1': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Pre EEg Retrieval Page 1',
     blurDataURL:
@@ -2127,8 +2127,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
     'pre-eeg-retrieval-pdf-2': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Pre EEg Retrieval Page 2',
     blurDataURL:
@@ -2139,8 +2139,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
      'post-eeg-retrieval-pdf-1': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Post EEg Retrieval Page 1',
     blurDataURL:
@@ -2151,8 +2151,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
      'post-eeg-retrieval-pdf-2': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Post EEg Retrieval Page 1',
     blurDataURL:
@@ -2163,8 +2163,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
      'embryo-transfer-pre-pdf-1': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Embryo Transfer Pre Pdf 1',
     blurDataURL:
@@ -2175,8 +2175,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
      'embryo-transfer-pre-pdf-2': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Embryo Transfer Pre Pdf 2',
     blurDataURL:
@@ -2187,8 +2187,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
        'embryo-transfer-post-pdf-1': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Embryo Transfer Post Pdf 1',
     blurDataURL:
@@ -2199,8 +2199,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
      'embryo-transfer-post-pdf-2': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Embryo Transfer Post Pdf 2',
     blurDataURL:
@@ -2211,8 +2211,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
        'semen-collection-pdf-1': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Semen Collection Instructions',
     blurDataURL:
@@ -2223,8 +2223,8 @@ export const IMAGE_MANIFEST: ImageManifest = {
   },
          'semen-collection-pdf-2': {
     src: '/pdf/pdf-1.jpg',
-    width: 1000,
-    height: 1400,
+    width: 787,
+    height: 1117,
     sizes: '(max-width: 768px) 95vw, 900px',
     alt: 'Semen Collection Instructions',
     blurDataURL:
