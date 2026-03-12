@@ -1,3 +1,9 @@
+## [1.3.201](https://github.com/bnoon-ksa/landing-page/compare/v1.3.200...v1.3.201) (2026-03-12)
+
+### Bug Fixes
+
+* change size ([#287](https://github.com/bnoon-ksa/landing-page/issues/287)) ([b3658eb](https://github.com/bnoon-ksa/landing-page/commit/b3658ebc0bc13132acdc097dbed4725e1867e779))
+
 ## [1.3.200](https://github.com/bnoon-ksa/landing-page/compare/v1.3.199...v1.3.200) (2026-03-12)
 
 ### Bug Fixes
