@@ -1,3 +1,9 @@
+## [1.3.199](https://github.com/bnoon-ksa/landing-page/compare/v1.3.198...v1.3.199) (2026-03-12)
+
+### Bug Fixes
+
+* file upload ([#285](https://github.com/bnoon-ksa/landing-page/issues/285)) ([6722d00](https://github.com/bnoon-ksa/landing-page/commit/6722d00499a9f643df7cec8e176f94d437ec17aa))
+
 ## [1.3.198](https://github.com/bnoon-ksa/landing-page/compare/v1.3.197...v1.3.198) (2026-03-12)
 
 ### Bug Fixes
