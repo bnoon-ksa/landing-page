@@ -1,3 +1,9 @@
+## [1.3.209](https://github.com/bnoon-ksa/landing-page/compare/v1.3.208...v1.3.209) (2026-03-12)
+
+### Bug Fixes
+
+* add font ([#296](https://github.com/bnoon-ksa/landing-page/issues/296)) ([24860ff](https://github.com/bnoon-ksa/landing-page/commit/24860ff6228972bcc06c8e761df096d33714c6be))
+
 ## [1.3.208](https://github.com/bnoon-ksa/landing-page/compare/v1.3.207...v1.3.208) (2026-03-12)
 
 ### Bug Fixes
