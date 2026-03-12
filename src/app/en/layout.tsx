@@ -57,6 +57,10 @@ export default function EnglishLayout({ children }: { children: React.ReactNode 
         rel="stylesheet"
         href="https://bnoon-website.b-cdn.net/assets/css/responsive.css"
       />
+           <link
+    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
     </head>
       <SetLocaleAttrs lang="en" dir="ltr" />
       <Script
