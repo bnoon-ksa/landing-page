@@ -17,8 +17,6 @@ const PaitentRights: React.FC = () => {
           imageName={page.imageName}
           alt={page.alt}
           className="pdf-page"
-          width={1000}
-          height={1400}
         />
       ))}
 
