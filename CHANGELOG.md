@@ -1,3 +1,9 @@
+## [1.3.211](https://github.com/bnoon-ksa/landing-page/compare/v1.3.210...v1.3.211) (2026-03-12)
+
+### Bug Fixes
+
+* add pre page ([#298](https://github.com/bnoon-ksa/landing-page/issues/298)) ([1d2a035](https://github.com/bnoon-ksa/landing-page/commit/1d2a035cb1a1a010361efd1434432beacf981287))
+
 ## [1.3.210](https://github.com/bnoon-ksa/landing-page/compare/v1.3.209...v1.3.210) (2026-03-12)
 
 ### Bug Fixes
