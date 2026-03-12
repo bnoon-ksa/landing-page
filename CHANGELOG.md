@@ -1,3 +1,9 @@
+## [1.3.188](https://github.com/bnoon-ksa/landing-page/compare/v1.3.187...v1.3.188) (2026-03-12)
+
+### Bug Fixes
+
+* egg pre ([#274](https://github.com/bnoon-ksa/landing-page/issues/274)) ([4a80495](https://github.com/bnoon-ksa/landing-page/commit/4a8049561cd43d5cd771665f9043bf5069296fc2))
+
 ## [1.3.187](https://github.com/bnoon-ksa/landing-page/compare/v1.3.186...v1.3.187) (2026-03-12)
 
 ### Bug Fixes
