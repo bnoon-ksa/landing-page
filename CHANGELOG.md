@@ -1,3 +1,9 @@
+## [1.3.192](https://github.com/bnoon-ksa/landing-page/compare/v1.3.191...v1.3.192) (2026-03-12)
+
+### Bug Fixes
+
+* embryo pre ([#278](https://github.com/bnoon-ksa/landing-page/issues/278)) ([c5ec3b3](https://github.com/bnoon-ksa/landing-page/commit/c5ec3b3b43c050809ef77825f34119c91db54f07))
+
 ## [1.3.191](https://github.com/bnoon-ksa/landing-page/compare/v1.3.190...v1.3.191) (2026-03-12)
 
 ### Bug Fixes
