@@ -1,3 +1,9 @@
+## [1.3.190](https://github.com/bnoon-ksa/landing-page/compare/v1.3.189...v1.3.190) (2026-03-12)
+
+### Bug Fixes
+
+* post egg ([#276](https://github.com/bnoon-ksa/landing-page/issues/276)) ([dcca4be](https://github.com/bnoon-ksa/landing-page/commit/dcca4be89dd25ecca56629b603ddd50b705325a0))
+
 ## [1.3.189](https://github.com/bnoon-ksa/landing-page/compare/v1.3.188...v1.3.189) (2026-03-12)
 
 ### Bug Fixes
