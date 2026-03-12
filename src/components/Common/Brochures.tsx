@@ -8,13 +8,7 @@ const brochures = [
     section_en: "Egg Retrieval",
     section_ar: "سحب البويضات",
     items: [
-      {
-        title_en: "PRE-OPERATIVE INSTRUCTIONS: EGG RETRIEVAL",
-        title_ar: "تعـليـمـات مـا قبل سحـب البـويـضـات ",
-        image: "https://bnoon-website.b-cdn.net/images/brochures/pre-egg-retrieval.jpg",
-        pdf: "/en/egg-retrieval-pre-operative",
-        downloadpdf: "/pdf/pre-operative-instructions-egg-retrieval.pdf",
-      },
+   
       {
         title_en: "POST-OPERATIVE INSTRUCTIONS: EGG RETRIEVAL",
         title_ar: "تـعـلـيـمات ما بعد سحـب البـويـضـات",
@@ -22,25 +16,33 @@ const brochures = [
         pdf: "/en/egg-retrieval-post-operative",
         downloadpdf: "/pdf/post-operative-instructions-egg-retrieval.pdf",
       },
+         {
+        title_en: "PRE-OPERATIVE INSTRUCTIONS: EGG RETRIEVAL",
+        title_ar: "تعـليـمـات مـا قبل سحـب البـويـضـات ",
+        image: "https://bnoon-website.b-cdn.net/images/brochures/pre-egg-retrieval.jpg",
+        pdf: "/en/egg-retrieval-pre-operative",
+        downloadpdf: "/pdf/pre-operative-instructions-egg-retrieval.pdf",
+      },
     ],
   },
   { 
     section_en: "Embryo Transfer",
     section_ar: "نقل الأجنة",
     items: [
-      {
-        title_en: "PRE-OPERATIVE INSTRUCTIONS: EMBRYO TRANSFER ",
-        title_ar: "تعـليـمـات مـا قبل إرجـــاع األجـــنـــة",
-        image: "https://bnoon-website.b-cdn.net/images/brochures/pre-embryo-transfer.jpg",
-        pdf: "/en/embryo-transfer-pre-operative",
-        downloadpdf: "/pdf/pre-operative-instructions-enbryo-transfer.pdf",
-      },
+  
       {
         title_en: "POST-OPERATIVE INSTRUCTIONS: EMBRYO TRANSFER",
         title_ar: "تـعـلـيـمات ما بعد إرجـــاع األجـــنـــة",
         image: "https://bnoon-website.b-cdn.net/images/brochures/post-embryo-transfer.jpg",
         pdf: "/en/embryo-transfer-post-operative",
         downloadpdf: "/pdf/post-operative-instructions-enbryo-transfer.pdf",
+      },
+          {
+        title_en: "PRE-OPERATIVE INSTRUCTIONS: EMBRYO TRANSFER ",
+        title_ar: "تعـليـمـات مـا قبل إرجـــاع األجـــنـــة",
+        image: "https://bnoon-website.b-cdn.net/images/brochures/pre-embryo-transfer.jpg",
+        pdf: "/en/embryo-transfer-pre-operative",
+        downloadpdf: "/pdf/pre-operative-instructions-enbryo-transfer.pdf",
       },
     ],
   },
