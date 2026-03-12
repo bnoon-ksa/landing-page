@@ -2113,6 +2113,126 @@ export const IMAGE_MANIFEST: ImageManifest = {
     cdnSrcSet:
       'https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pdf-2-576x806-126kb.webp 576w, https://bnoonsa-bjftd5h4a7bae0ce.z02.azurefd.net/website/optimized/pdf-2-1000x1400-293kb.webp 1000w',
   },
+      'pre-eeg-retrieval-pdf-1': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Pre EEg Retrieval Page 1',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/pre-eeg-retrieval-pdf-1.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/pre-eeg-retrieval-pdf-1.jpg 1000w',
+  },
+    'pre-eeg-retrieval-pdf-2': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Pre EEg Retrieval Page 2',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/pre-eeg-retrieval-pdf-2.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/pre-eeg-retrieval-pdf-2.jpg 1000w',
+  },
+     'post-eeg-retrieval-pdf-1': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Post EEg Retrieval Page 1',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/post-eeg-retrieval-pdf-1.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/post-eeg-retrieval-pdf-1.jpg 1000w',
+  },
+     'post-eeg-retrieval-pdf-2': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Post EEg Retrieval Page 1',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/post-eeg-retrieval-pdf-2.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/post-eeg-retrieval-pdf-2.jpg 1000w',
+  },
+     'embryo-transfer-pre-pdf-1': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Embryo Transfer Pre Pdf 1',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/embryo-transfer-pre-pdf-1.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/embryo-transfer-pre-pdf-1.jpg 1000w',
+  },
+     'embryo-transfer-pre-pdf-2': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Embryo Transfer Pre Pdf 2',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/embryo-transfer-pre-pdf-2.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/embryo-transfer-pre-pdf-2.jpg 1000w',
+  },
+       'embryo-transfer-post-pdf-1': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Embryo Transfer Post Pdf 1',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/embryo-transfer-post-pdf-1.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/embryo-transfer-post-pdf-1.jpg 1000w',
+  },
+     'embryo-transfer-post-pdf-2': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Embryo Transfer Post Pdf 2',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/embryo-transfer-post-pdf-2.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/embryo-transfer-post-pdf-2.jpg 1000w',
+  },
+       'semen-collection-pdf-1': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Semen Collection Instructions',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/semen-collection-pdf-1.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/semen-collection-pdf-1.jpg 1000w',
+  },
+         'semen-collection-pdf-2': {
+    src: '/pdf/pdf-1.jpg',
+    width: 1000,
+    height: 1400,
+    sizes: '(max-width: 768px) 95vw, 900px',
+    alt: 'Semen Collection Instructions',
+    blurDataURL:
+      'data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQBACdASoUABwAPzGGslOuqaQisAwB0CYJZ2kfW4gTLW/+/mlrPBpWAAD+7YMa6fMKwTUiXpT8P5QUPHBvLjbMwtWE4J/n8ft26AAA',
+    category: 'misc',
+    cdnSrcSet:
+      'https://bnoon-website.b-cdn.net/images/pdf/semen-collection-pdf-2.jpg 576w, https://bnoon-website.b-cdn.net/images/pdf/semen-collection-pdf-2.jpg 1000w',
+  },
   'shape-services': {
     src: '/images/services/shape.png',
     width: 159,
