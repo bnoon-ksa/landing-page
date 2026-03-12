@@ -1,3 +1,9 @@
+## [1.3.197](https://github.com/bnoon-ksa/landing-page/compare/v1.3.196...v1.3.197) (2026-03-12)
+
+### Bug Fixes
+
+* upload post enbryo ([#283](https://github.com/bnoon-ksa/landing-page/issues/283)) ([e84ba2a](https://github.com/bnoon-ksa/landing-page/commit/e84ba2ab0cc5880c450573ca839c9b7dc72e4fd3))
+
 ## [1.3.196](https://github.com/bnoon-ksa/landing-page/compare/v1.3.195...v1.3.196) (2026-03-12)
 
 ### Bug Fixes
