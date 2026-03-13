@@ -1,3 +1,9 @@
+## [1.3.220](https://github.com/bnoon-ksa/landing-page/compare/v1.3.219...v1.3.220) (2026-03-13)
+
+### Bug Fixes
+
+* changes ([#307](https://github.com/bnoon-ksa/landing-page/issues/307)) ([fe9d2b2](https://github.com/bnoon-ksa/landing-page/commit/fe9d2b2c1ec90fe7c46180dd925171ca47b267c7))
+
 ## [1.3.219](https://github.com/bnoon-ksa/landing-page/compare/v1.3.218...v1.3.219) (2026-03-13)
 
 ### Bug Fixes
