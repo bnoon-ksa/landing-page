@@ -94,27 +94,22 @@ const Brochures = () => {
                           className="img-fluid rounded"
                         />
                       </div>
-<div className="d-flex justify-content-between align-items-center" dir="ltr">
+<div className="text-center">
 
-  <div className="text-start">
-    <a
-      href={item.pdf}
-      className="text-link"
-    >
-      <h6 className="fw-semibold mb-1 brochures">{item.title_ar}</h6>
-      <h6 className="fw-semibold mb-1 brochures">{item.title_en}</h6>
-    </a>
-  </div>
-
-  <a
-    href={item.downloadpdf}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="download-icon"
-  >
-   <img src="https://bnoon-website.b-cdn.net/images/icons/downloading.png" alt="download" />
+  <a href={item.pdf} className="text-link">
+    <h6 className="fw-semibold mb-1 brochures">{item.title_ar}</h6>
+    <h6 className="fw-semibold mb-3 brochures">{item.title_en}</h6>
   </a>
 
+<a
+  href={item.downloadpdf}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="download-btn"
+>Download PDF
+  <img src="https://bnoon-website.b-cdn.net/images/icons/download-icon.png" alt="download" />
+  
+</a>
 </div>
                     </div>
                   </motion.div>
@@ -155,6 +150,27 @@ const Brochures = () => {
         .brochure-card:hover .brochure-image :global(img) {
           transform: scale(1.05);
         }
+          .download-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2c7fb1;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-btn img{
+  width: 18px;
+}
+
+.download-btn:hover{
+  background:#004E78;
+}
         h2 {
           font-size: 22px;
           color: #2c2c2c;
