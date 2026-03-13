@@ -69,7 +69,7 @@ const Brochures = () => {
     <div className="fertility-area bg-color" dir="rtl">
       <div className="container mt-5 mb-5 ">
         {brochures.map((section, i) => (
-          <div key={i} className="section-title mb-5">
+          <div key={i} className="section-title mt-5 mb-5">
             <div key={i} className="left">
               {/* Arabic Heading */}
               <h2 className="mb-1 fw-bold text-center">{section.section_ar}</h2>
@@ -172,7 +172,13 @@ const Brochures = () => {
   width: 35px;
   margin-left: 10px;
 }
-
+.download-icon img{
+  width: 35px;
+  transition: 0.3s;
+}
+.download-icon:hover img{
+  filter: brightness(0) saturate(100%) invert(37%) sepia(93%) saturate(451%) hue-rotate(165deg);
+}
 .download-icon:hover {
   color: #0a6ea8;
 }
