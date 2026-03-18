@@ -20,14 +20,14 @@ export async function POST(req) {
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
-      auth: {
-        user: "bnooninfo@gmail.com",
-        pass: "vpupjvfrntavidhw",
+       auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"طلب موعد" <bnooninfo@gmail.com>`,
+      from: `"طلب موعد" <${process.env.SMTP_USER}>`,
       to: recipient,
       subject: `طلب جديد لحجز موعد - ويبسايت ${data.branch}`,
       html: `<h3>تفاصيل الموعد</h3>
