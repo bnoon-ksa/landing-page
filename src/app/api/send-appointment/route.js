@@ -18,14 +18,16 @@ export async function POST(req) {
             ? 'callcenter.alahsa@bnoon.sa'
             : '';
 
-  const transporter = nodemailer.createTransport({
+ const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 587,
-  secure: false, // TLS
-   auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
+  secure: false,
+  auth: {
+    user: "bnooninfo@gmail.com",
+    pass: "vpupjvfrntavidhw",
+  },
+  logger: true,
+  debug: true,
 });
 
     await transporter.sendMail({
