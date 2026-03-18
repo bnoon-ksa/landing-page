@@ -11,7 +11,7 @@ export async function POST(req) {
 
     const recipient =
       data.branch === 'Riyadh'
-        ? 'appointments@bnoon.sa'
+        ? 'websitedesignbahrain@gmail.com'
         : data.branch === 'Jeddah'
           ? 'appointments.jeddah@bnoon.sa'
           : data.branch === 'Al Ahsa'
@@ -21,13 +21,13 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: "bnooninfo@gmail.com",
-        pass: "vydxquzqzibdmjle",
+        user: "websitedesignbahrain@gmail.com",
+        pass: "dzbfunsarqkxxuan",
       },
     });
 
     await transporter.sendMail({
-      from: `"Appointment Request" <bnooninfo@gmail.com>`,
+      from: `"Appointment Request" <websitedesignbahrain@gmail.com>`,
       to: recipient,
       subject: `New Appointment Request - Website (${data.branch})`,
       html: `
