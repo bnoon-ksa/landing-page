@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               };
 
               ttq.load('D6ES013C77UAAN0097SG');
-              ttq.page();
+               // ttq.page();  // temporarily disable
             }(window, document, 'ttq');
           `}
         </Script>
