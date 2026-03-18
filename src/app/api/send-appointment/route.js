@@ -21,18 +21,18 @@ export async function POST(req) {
  const transporter = nodemailer.createTransport({
       service: "gmail",
      auth: {
-        user: "bnooninfo@gmail.com",
-        pass: "vpupjvfrntavidhw",
+        user: "Bnooninfo@bnoon.sa",
+        pass: "Bnoon@7866",
       },
     });
 // ✅ TEST EMAIL (optional) 
     await transporter.sendMail({
-      from: "bnooninfo@gmail.com", 
+      from: "Bnooninfo@bnoon.sa", 
       to: "appointments.jeddah@bnoon.sa", 
       subject: "Test", text: "Test email", 
     });
     await transporter.sendMail({
-      from: `"Appointment Request" <${process.env.SMTP_USER}>`,
+      from: `"Appointment Request" <Bnooninfo@bnoon.sa>`,
       to: recipient,
       subject: `New Appointment Request - Website (${data.branch})`,
       html: `
