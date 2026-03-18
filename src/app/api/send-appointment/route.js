@@ -26,7 +26,7 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: `"Appointment Request" <${process.env.SMTP_USER}>`,
+      from: `"Appointment Request" <bnooninfo@gmail.com>`,
       to: recipient,
       subject: `New Appointment Request - Website (${data.branch})`,
       html: `
