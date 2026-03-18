@@ -49,7 +49,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             fbq('track', 'PageView');
           `}
         </Script>
+  {/* ✅ TikTok Pixel */}
+        <Script strategy="afterInteractive" id="tiktok-pixel">
+          {`
+            !function (w, d, t) {
+              w.TiktokAnalyticsObject=t;
+              var ttq=w[t]=w[t]||[];
+              ttq.methods=["page","track","identify","ready"];
+              ttq.load=function(e){
+                var s=d.createElement("script");
+                s.src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid="+e+"&lib="+t;
+                s.async=true;
+                d.getElementsByTagName("head")[0].appendChild(s);
+              };
 
+              ttq.load('D6ES013C77UAAN0097SG');
+              ttq.page();
+            }(window, document, 'ttq');
+          `}
+        </Script>
   
 
         {/* ✅ NoScript GTM */}
