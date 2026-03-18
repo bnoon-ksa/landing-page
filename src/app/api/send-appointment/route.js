@@ -5,8 +5,15 @@ import nodemailer from 'nodemailer';
 export async function POST(req) {
   try {
     const data = await req.json();
-    await connectDB();
-    await AppointmentEN.create(data);
+        // ✅ DB SAFE
+    try {
+      await connectDB();
+      await AppointmentEN.create(data);
+      console.log("✅ Data saved to MongoDB");
+    } catch (dbError) {
+      console.error("❌ DB ERROR:", dbError);
+    }
+
 
     const recipient =
       data.branch === 'Riyadh'
@@ -37,7 +44,7 @@ export async function POST(req) {
     // });
 
     await transporter.sendMail({
-      from: `"Appointment Request" <bnooninfo@bnoon.sa>`,
+      from: `"Appointment Request" <${process.env.SMTP_USER}>`,
       to: recipient,
       subject: `New Appointment Request - Website (${data.branch})`,
       html: `
