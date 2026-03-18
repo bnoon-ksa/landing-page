@@ -25,7 +25,7 @@ export async function POST(req) {
     });
 
     await transporter.sendMail({
-      from: `"طلب موعد" <${process.env.SMTP_USER}>`,
+      from: `"طلب موعد" <bnooninfo@gmail.com>`,
       to: recipient,
       subject: `طلب جديد لحجز موعد - ويبسايت ${data.branch}`,
       html: `<h3>تفاصيل الموعد</h3>
