@@ -22,14 +22,14 @@ export async function POST(req) {
   host: "smtp.gmail.com",
   port: 587,
   secure: false, // TLS
-  auth: {
-    user: "bnooninfo@gmail.com",
-    pass: "vpupjvfrntavidhw",
-  },
+   auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
 });
 
     await transporter.sendMail({
-      from: `"Appointment Request" <bnooninfo@gmail.com>`,
+      from: `"Appointment Request" <${process.env.SMTP_USER}>`,
       to: recipient,
       subject: `New Appointment Request - Website (${data.branch})`,
       html: `
