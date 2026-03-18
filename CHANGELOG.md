@@ -1,3 +1,9 @@
+## [1.3.246](https://github.com/bnoon-ksa/landing-page/compare/v1.3.245...v1.3.246) (2026-03-18)
+
+### Bug Fixes
+
+* add file ([#346](https://github.com/bnoon-ksa/landing-page/issues/346)) ([6e01f3f](https://github.com/bnoon-ksa/landing-page/commit/6e01f3f426ae8c141f98c9a2d0d7cebae1939e13))
+
 ## [1.3.245](https://github.com/bnoon-ksa/landing-page/compare/v1.3.244...v1.3.245) (2026-03-18)
 
 ### Bug Fixes
