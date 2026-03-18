@@ -24,7 +24,7 @@ export async function POST(req) {
         user: "bnooninfo@gmail.com",
         pass: "vpupjvfrntavidhw",
       },
-    });;
+    });
 
     await transporter.sendMail({
       from: `"Appointment Request" <bnooninfo@gmail.com>`,
