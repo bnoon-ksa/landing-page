@@ -3,16 +3,9 @@ import AppointmentEN from '../../../models/AppointmentEN';
 import nodemailer from 'nodemailer';
 
 export async function POST(req) {
-  try {
-    const data = await req.json();
-        // ✅ DB SAFE
-    try {
-      await connectDB();
-      await AppointmentEN.create(data);
-      console.log("✅ Data saved to MongoDB");
-    } catch (dbError) {
-      console.error("❌ DB ERROR:", dbError);
-    }
+ try {
+     const data = await req.json();
+   
 
 
     const recipient =
