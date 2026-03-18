@@ -6,8 +6,6 @@ export async function POST(req) {
   try {
     const data = await req.json();
 
-    await connectDB();
-    await AppointmentEN.create(data);
 
     const recipient =
       data.branch === 'Riyadh'
