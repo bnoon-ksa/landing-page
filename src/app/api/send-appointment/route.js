@@ -5,11 +5,12 @@ import nodemailer from 'nodemailer';
 export async function POST(req) {
   try {
     const data = await req.json();
-
+    await connectDB();
+    await AppointmentEN.create(data);
 
     const recipient =
       data.branch === 'Riyadh'
-        ? 'rizno1@gmail.com'
+        ? 'appointments@bnoon.sa'
         : data.branch === 'Jeddah'
         ? 'appointments.jeddah@bnoon.sa'
         : data.branch === 'Al Ahsa'
@@ -20,16 +21,13 @@ export async function POST(req) {
       throw new Error("No recipient email defined for this branch");
     }
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.office365.com",
-      port: 587,
-      secure: false,
+   const transporter = nodemailer.createTransport({
+      service: "gmail",
       auth: {
-        user: "bnooninfo@bnoon.sa",
-        pass: "Bnoon@7866",
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
-    });
-
+          });
     // Optional test email (remove in production)
     // await transporter.sendMail({
     //   from: "bnooninfo@bnoon.sa",
