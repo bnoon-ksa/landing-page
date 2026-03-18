@@ -19,16 +19,12 @@ export async function POST(req) {
             : '';
 
  const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: "bnooninfo@gmail.com",
-    pass: "vpupjvfrntavidhw",
-  },
-  logger: true,
-  debug: true,
-});
+      service: "gmail",
+      auth: {
+        user: "bnooninfo@gmail.com",
+        pass: "vpupjvfrntavidhw",
+      },
+    });;
 
     await transporter.sendMail({
       from: `"Appointment Request" <bnooninfo@gmail.com>`,
