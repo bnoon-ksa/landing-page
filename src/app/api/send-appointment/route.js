@@ -11,7 +11,7 @@ export async function POST(req) {
 
     const recipient =
       data.branch === 'Riyadh'
-        ? 'appointments@bnoon.sa'
+        ? 'rizno1@gmail.com'
         : data.branch === 'Jeddah'
           ? 'appointments.jeddah@bnoon.sa'
           : data.branch === 'Al Ahsa'
