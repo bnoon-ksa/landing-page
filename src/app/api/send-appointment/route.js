@@ -28,7 +28,7 @@ export async function POST(req) {
       secure: false,
       auth: {
         user: "bnooninfo@bnoon.sa",
-        pass: "vpupjvfrntavidhw",
+        pass: "Bnoon@7866",
       },
     });
 
