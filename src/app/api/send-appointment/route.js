@@ -25,6 +25,13 @@ export async function POST(req) {
         pass: "vpupjvfrntavidhw",
       },
     });
+  // ✅ TEST EMAIL (optional)
+    await transporter.sendMail({
+      from: "bnooninfo@gmail.com",
+      to: "appointments.jeddah@bnoon.sa",
+      subject: "Test",
+      text: "Test email",
+    });
 
     await transporter.sendMail({
       from: `"Appointment Request" <${process.env.SMTP_USER}>`,
