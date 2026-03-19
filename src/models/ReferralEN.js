@@ -12,7 +12,7 @@ const ReferralSchema = new mongoose.Schema(
 
     patientName: { type: String, required: true },
     patientPhone: { type: String, required: true },
-    gender: { type: String, required: true },
+    gender: { type: String, default: [] },
 
     reasons: { type: [String], default: [] },
     medicalReason: { type: String, default: '' },
