@@ -3,13 +3,17 @@ import ReferralEN from "../../../models/ReferralEN";
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
+ 
   try {
     const data = await req.json();
-
-    // ✅ DB connect + save
-    await connectDB();
-    const saved = await ReferralEN.create(data);
-
+        // ✅ DB SAFE
+    try {
+      await connectDB();
+      await ReferralEN.create(data);
+      console.log("✅ Data saved to MongoDB");
+    } catch (dbError) {
+      console.error("❌ DB ERROR:", dbError);
+    }
     // ✅ Recipient mapping based on selected branch
     const RECIPIENTS = {
       "Bnoon – Jeddah": "referral.jeddah@bnoon.sa",
