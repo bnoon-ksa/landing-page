@@ -5,9 +5,14 @@ import nodemailer from 'nodemailer';
 export async function POST(req) {
   try {
     const data = await req.json();
-
-    await connectDB();
-    const saved = await AppointmentAR.create(data);
+        // ✅ DB SAFE
+    try {
+      await connectDB();
+      await AppointmentEN.create(data);
+      console.log("✅ Data saved to MongoDB");
+    } catch (dbError) {
+      console.error("❌ DB ERROR:", dbError);
+    }
 
     let recipient = '';
     if (data.branch === 'Riyadh' || data.branch === 'الرياض') {
